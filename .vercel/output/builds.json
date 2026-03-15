@@ -3,7 +3,7 @@
   "target": "production",
   "argv": [
     "/usr/bin/node",
-    "/home/anthony/.npm-global/bin/vercel",
+    "/usr/bin/vercel",
     "build",
     "--prod",
     "--token",
@@ -14,7 +14,7 @@
   "builds": [
     {
       "require": "@vercel/next",
-      "requirePath": "/home/anthony/.npm-global/lib/node_modules/vercel/node_modules/@vercel/next/dist/index",
+      "requirePath": "/usr/lib/node_modules/vercel/node_modules/@vercel/next/dist/index",
       "apiVersion": 2,
       "src": "package.json",
       "use": "@vercel/next",

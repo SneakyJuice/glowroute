@@ -10,7 +10,7 @@ import Pagination from '@/components/Pagination'
 import BottomCTA from '@/components/BottomCTA'
 import Footer from '@/components/Footer'
 import { FilterState, Clinic } from '@/types/clinic'
-import { featuredClinic, standardClinics } from '@/data/fl-clinics'
+import { featuredClinic, standardClinics } from '@/data/all-clinics'
 
 const DEFAULT_FILTERS: FilterState = {
   treatmentTypes: [],
