@@ -95,9 +95,9 @@ export default function ClinicsPage() {
       <HeroSearch clinicCount={60} defaultCity="Tampa, FL" />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
-        <div className="flex gap-6">
+        <div className="flex flex-col md:flex-row gap-6">
           {/* Sidebar */}
-          <div className="w-64 flex-shrink-0">
+          <div className="hidden md:block w-64 flex-shrink-0">
             <FilterSidebar filters={filters} onChange={handleFilterChange} />
           </div>
 

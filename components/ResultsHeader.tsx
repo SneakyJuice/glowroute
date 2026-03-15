@@ -2,7 +2,7 @@
 interface Props { count: number; city: string; activeFilters?: string[]; view: 'grid'|'list'; sort: string; onViewChange: (v: 'grid'|'list') => void; onSortChange: (s: string) => void }
 export default function ResultsHeader({ count, city, view, sort, onViewChange, onSortChange }: Props) {
   return (
-    <div className="flex items-center justify-between mb-4 flex-wrap gap-2.5">
+    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4 gap-2.5">
       <div>
         <div className="text-[15px] text-gray-700"><strong className="font-bold text-navy">{count} clinics</strong> found near {city}</div>
         <div className="text-xs text-gray-400 mt-0.5">Showing verified clinics · sorted by best match</div>
