@@ -24,6 +24,7 @@ export interface Clinic {
   bookingUrl?: string
   instagram?: string
   mapsUrl?: string
+  brandValues?: string[]
 }
 
 export interface FilterState {

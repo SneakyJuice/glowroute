@@ -10,7 +10,7 @@ import Pagination from '@/components/Pagination'
 import BottomCTA from '@/components/BottomCTA'
 import Footer from '@/components/Footer'
 import { FilterState, Clinic } from '@/types/clinic'
-import { featuredClinic, standardClinics } from '@/data/tampa-clinics'
+import { featuredClinic, standardClinics } from '@/data/fl-clinics'
 
 const DEFAULT_FILTERS: FilterState = {
   treatmentTypes: [],
@@ -92,7 +92,7 @@ export default function ClinicsPage() {
   return (
     <div className="min-h-screen bg-cream font-sans">
       <Navbar />
-      <HeroSearch clinicCount={60} defaultCity="Tampa, FL" />
+      <HeroSearch clinicCount={292} defaultCity="Tampa, FL" />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
         <div className="flex flex-col md:flex-row gap-6">

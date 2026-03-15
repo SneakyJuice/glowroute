@@ -2,7 +2,7 @@
 import { useState } from 'react'
 
 interface HeroSearchProps { clinicCount?: number; defaultCity?: string }
-export default function HeroSearch({ clinicCount = 277, defaultCity = 'Tampa, FL' }: HeroSearchProps) {
+export default function HeroSearch({ clinicCount = 292, defaultCity = 'Tampa, FL' }: HeroSearchProps) {
   const [treatment, setTreatment] = useState('')
   const [city, setCity] = useState(defaultCity)
   const [distance, setDistance] = useState('10')
