@@ -3,18 +3,16 @@
   "target": "production",
   "argv": [
     "/usr/bin/node",
-    "/usr/bin/vercel",
+    "/home/anthony/.npm-global/bin/vercel",
     "build",
     "--prod",
-    "--token",
-    "REDACTED",
     "--yes"
   ],
   "cliVersion": "50.32.5",
   "builds": [
     {
       "require": "@vercel/next",
-      "requirePath": "/usr/lib/node_modules/vercel/node_modules/@vercel/next/dist/index",
+      "requirePath": "/home/anthony/.npm-global/lib/node_modules/vercel/node_modules/@vercel/next/dist/index",
       "apiVersion": 2,
       "src": "package.json",
       "use": "@vercel/next",
