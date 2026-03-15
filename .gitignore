@@ -1,0 +1,6 @@
+node_modules/
+.next/
+.env*.local
+*.gpg
+GlowRoute_BRD_v1.md
+GlowRoute_SearchPage_Ark.html
