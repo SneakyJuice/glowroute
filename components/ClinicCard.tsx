@@ -4,6 +4,10 @@ import { Clinic } from '@/types/clinic'
 import TreatmentTag, { getTagVariant } from './TreatmentTag'
 import VerifiedBadge from './VerifiedBadge'
 
+function citySlug(city: string) {
+  return city.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
+}
+
 interface ClinicCardProps { clinic: Clinic }
 
 function StarRating({ rating }: { rating: number }) {
@@ -37,7 +41,7 @@ export function FeaturedClinicCard({ clinic }: ClinicCardProps) {
                 <span className="bg-gold text-white text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full">⭐ Featured</span>
               </div>
               <div className="text-lg font-bold text-navy tracking-tight">
-                <a href={`/clinics/${clinic.city.toLowerCase()}/${clinic.slug}`} className="hover:text-teal transition-colors">{clinic.name}</a>
+                <a href={`/clinics/${citySlug(clinic.city)}/${clinic.slug}`} className="hover:text-teal transition-colors">{clinic.name}</a>
               </div>
             </div>
             <button onClick={() => setSaved(!saved)} className={`w-9 h-9 rounded-full bg-white border border-gray-200 flex items-center justify-center transition-colors flex-shrink-0 ${saved ? 'text-red-400' : 'text-gray-400 hover:text-red-400'}`}>
@@ -69,7 +73,7 @@ export function FeaturedClinicCard({ clinic }: ClinicCardProps) {
           </div>
           {clinic.description && <p className="text-sm text-gray-500 leading-relaxed flex-1">{clinic.description}</p>}
           <div className="flex items-center gap-2.5 mt-auto">
-            <a href={`/clinics/${clinic.city.toLowerCase()}/${clinic.slug}`} className="inline-block bg-teal text-white text-sm font-semibold px-5 py-2.5 rounded hover:bg-navy transition-colors">View Full Profile</a>
+            <a href={`/clinics/${citySlug(clinic.city)}/${clinic.slug}`} className="inline-block bg-teal text-white text-sm font-semibold px-5 py-2.5 rounded hover:bg-navy transition-colors">View Full Profile</a>
             {clinic.bookingUrl
               ? <a href={clinic.bookingUrl} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-teal bg-teal/[0.08] border border-teal/20 px-4 py-2.5 rounded hover:bg-teal/[0.15] transition-colors">Book Consultation</a>
               : <button className="text-sm font-semibold text-teal bg-teal/[0.08] border border-teal/20 px-4 py-2.5 rounded hover:bg-teal/[0.15] transition-colors">Book Consultation</button>
@@ -111,7 +115,7 @@ export default function ClinicCard({ clinic }: ClinicCardProps) {
       </div>
       <div className="p-4 flex-1 flex flex-col gap-2.5">
         <div className="text-[15px] font-bold text-navy tracking-tight leading-snug">
-          <a href={`/clinics/${clinic.city.toLowerCase()}/${clinic.slug}`} className="hover:text-teal transition-colors">{clinic.name}</a>
+          <a href={`/clinics/${citySlug(clinic.city)}/${clinic.slug}`} className="hover:text-teal transition-colors">{clinic.name}</a>
         </div>
         <div className="flex items-center gap-1.5">
           <StarRating rating={clinic.googleRating} />
@@ -139,7 +143,7 @@ export default function ClinicCard({ clinic }: ClinicCardProps) {
         )}
       </div>
       <div className="flex items-center gap-2 px-4 py-3 border-t border-gray-100">
-        <a href={`/clinics/${clinic.city.toLowerCase()}/${clinic.slug}`} className="flex-1 text-center text-sm font-semibold text-white bg-teal px-3.5 py-2 rounded hover:bg-navy transition-colors">View Profile</a>
+        <a href={`/clinics/${citySlug(clinic.city)}/${clinic.slug}`} className="flex-1 text-center text-sm font-semibold text-white bg-teal px-3.5 py-2 rounded hover:bg-navy transition-colors">View Profile</a>
         {clinic.bookingUrl
           ? <a href={clinic.bookingUrl} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-teal bg-teal/[0.08] border border-teal/20 px-3.5 py-2 rounded hover:bg-teal/[0.15] transition-colors">Book</a>
           : <button className="text-sm font-semibold text-teal bg-teal/[0.08] border border-teal/20 px-3.5 py-2 rounded hover:bg-teal/[0.15] transition-colors">Book</button>
