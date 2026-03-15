@@ -8,7 +8,11 @@ export default function MapStrip({ city, radius }: Props) {
   return (
     <div className="bg-white border border-gray-200 rounded-2xl px-4 py-3.5 flex flex-col sm:flex-row sm:items-center sm:justify-between mb-5 gap-3">
       <div className="flex items-center gap-2.5 min-w-0">
-        <span className="text-lg flex-shrink-0">🗺️</span>
+        <svg className="w-[18px] h-[18px] text-teal flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/>
+            <line x1="9" y1="3" x2="9" y2="18"/>
+            <line x1="15" y1="6" x2="15" y2="21"/>
+          </svg>
         <span className="text-[13px] text-gray-700 truncate">
           <strong className="font-semibold text-navy">{city}</strong> — showing results within {radius} miles
         </span>

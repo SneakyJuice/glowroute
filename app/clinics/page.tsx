@@ -33,12 +33,11 @@ export default function ClinicsPage() {
   const [page, setPage] = useState(1)
   const [searchTreatment, setSearchTreatment] = useState('')
   const [searchCity, setSearchCity] = useState('Tampa')
-  const [searchDistance, setSearchDistance] = useState('25')
 
-  const handleSearch = (treatment: string, city: string, distance: string) => {
+
+  const handleSearch = (treatment: string, city: string) => {
     setSearchTreatment(treatment.toLowerCase().trim())
     setSearchCity(city.toLowerCase().replace(',', '').trim())
-    setSearchDistance(distance)
     setPage(1)
   }
 
@@ -102,6 +101,10 @@ export default function ClinicsPage() {
     return result
   }, [filters, sort, searchTreatment, searchCity])
 
+  // Featured clinic is Tampa-only — hide when user has searched for another city
+  const showFeatured = !searchCity || searchCity.toLowerCase().includes('tampa')
+  const resultCount = filteredClinics.length + (showFeatured ? 1 : 0)
+
   const totalPages = Math.ceil(filteredClinics.length / ITEMS_PER_PAGE)
   const pagedClinics = filteredClinics.slice((page - 1) * ITEMS_PER_PAGE, page * ITEMS_PER_PAGE)
 
@@ -137,7 +140,7 @@ export default function ClinicsPage() {
             <MapStrip city={displayCity} radius={filters.distanceMiles} />
 
             <ResultsHeader
-              count={filteredClinics.length + 1}
+              count={resultCount}
               city={displayCity}
               view={view}
               sort={sort}
@@ -146,8 +149,8 @@ export default function ClinicsPage() {
             />
 
             <div className={`grid gap-5 ${view === 'grid' ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3' : 'grid-cols-1'}`}>
-              {/* Featured card always first, full width */}
-              <FeaturedClinicCard clinic={featuredClinic} />
+              {/* Featured card — only shown when city context matches Tampa */}
+              {showFeatured && <FeaturedClinicCard clinic={featuredClinic} />}
 
               {/* Standard clinic cards */}
               {pagedClinics.map((clinic: Clinic) => (
