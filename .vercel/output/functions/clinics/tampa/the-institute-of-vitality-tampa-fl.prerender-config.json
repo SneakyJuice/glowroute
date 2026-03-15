@@ -3,7 +3,7 @@
   "expiration": false,
   "sourcePath": "/clinics/[city]/[slug]",
   "group": 28,
-  "bypassToken": "2b128b42b5ed74602f5512803b5c9ff6",
+  "bypassToken": "9ed4d08d2fd43b888f553106590c9f15",
   "experimentalBypassFor": [
     {
       "type": "header",
