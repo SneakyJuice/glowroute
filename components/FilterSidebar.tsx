@@ -4,12 +4,23 @@ import { FilterState } from '@/types/clinic'
 const TREATMENT_TYPES = ['All Treatments', 'Injectables', 'Body Contouring', 'Laser & Skin', 'Weight Loss', 'Peptide Therapy', 'IV Therapy', 'Hair Restoration', "Men's Health"]
 const RATINGS = [{ label: '4.5+ ★', value: 4.5 }, { label: '4.0+ ★', value: 4.0 }, { label: '3.5+ ★', value: 3.5 }, { label: 'Any', value: 0 }]
 const PRICE_TIERS = ['$', '$$', '$$$', '$$$$']
+const DISTANCE_OPTIONS = [5, 10, 25, 50]
 
 interface Props { filters: FilterState; onChange: (f: FilterState) => void }
 export default function FilterSidebar({ filters, onChange }: Props) {
   return (
     <aside className="hidden md:block bg-white rounded-2xl border border-gray-200 p-6 sticky top-20">
       <div className="text-[13px] font-bold text-gray-500 uppercase tracking-[0.6px] mb-4">Filters</div>
+      <div className="mb-6 pb-6 border-b border-gray-100">
+        <span className="block text-[13px] font-semibold text-navy mb-2.5">Distance</span>
+        <div className="flex flex-wrap gap-1.5">
+          {DISTANCE_OPTIONS.map(d => (
+            <button key={d} onClick={() => onChange({ ...filters, distanceMiles: d })} className={`text-[12px] font-medium px-2.5 py-1 rounded-full border transition-all ${filters.distanceMiles === d ? 'bg-teal/10 border-teal text-teal font-semibold' : 'bg-gray-100 border-gray-200 text-gray-700 hover:bg-cream-dark hover:border-teal hover:text-teal'}`}>
+              {d === 50 ? 'Any' : `${d} mi`}
+            </button>
+          ))}
+        </div>
+      </div>
       <div className="mb-6 pb-6 border-b border-gray-100">
         <span className="block text-[13px] font-semibold text-navy mb-2.5">Treatment Type</span>
         <div className="flex flex-wrap gap-1.5">
