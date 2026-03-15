@@ -31,9 +31,39 @@ export default function ClinicsPage() {
   const [view, setView] = useState<'grid' | 'list'>('grid')
   const [sort, setSort] = useState('Best Match')
   const [page, setPage] = useState(1)
+  const [searchTreatment, setSearchTreatment] = useState('')
+  const [searchCity, setSearchCity] = useState('')
+
+  const handleSearch = (treatment: string, city: string) => {
+    setSearchTreatment(treatment)
+    setSearchCity(city)
+    setPage(1)
+  }
 
   const filteredClinics = useMemo(() => {
     let result = [...standardClinics]
+
+    // Text search — treatment query against name, treatments, description, category
+    if (searchTreatment) {
+      const q = searchTreatment.toLowerCase()
+      result = result.filter(c => {
+        const allTreatments = [...(c.treatments || []), ...(c.specialtyTreatments || [])].join(' ').toLowerCase()
+        return (
+          c.name.toLowerCase().includes(q) ||
+          allTreatments.includes(q) ||
+          (c.description || '').toLowerCase().includes(q)
+        )
+      })
+    }
+
+    // City filter
+    if (searchCity) {
+      const cityQ = searchCity.toLowerCase().replace(/,.*$/, '').trim()
+      result = result.filter(c =>
+        (c.city || '').toLowerCase().includes(cityQ) ||
+        (c.address || '').toLowerCase().includes(cityQ)
+      )
+    }
 
     // Filter by minimum rating
     if (filters.minRating > 0) {
@@ -50,7 +80,7 @@ export default function ClinicsPage() {
       result = result.filter(c => c.verified)
     }
 
-    // Filter by treatment type (simplified — matches against treatments array)
+    // Filter by treatment type from sidebar
     if (filters.treatmentTypes.length > 0 && !filters.treatmentTypes.includes('All Treatments')) {
       result = result.filter(c => {
         const allTreatments = [...(c.treatments || []), ...(c.specialtyTreatments || [])]
@@ -74,7 +104,7 @@ export default function ClinicsPage() {
     }
 
     return result
-  }, [filters, sort])
+  }, [filters, sort, searchTreatment, searchCity])
 
   const totalPages = Math.ceil(filteredClinics.length / ITEMS_PER_PAGE)
   const pagedClinics = filteredClinics.slice((page - 1) * ITEMS_PER_PAGE, page * ITEMS_PER_PAGE)
@@ -92,7 +122,7 @@ export default function ClinicsPage() {
   return (
     <div className="min-h-screen bg-cream font-sans">
       <Navbar />
-      <HeroSearch clinicCount={292} defaultCity="Tampa, FL" />
+      <HeroSearch clinicCount={292} defaultCity="Tampa, FL" onSearch={handleSearch} />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
         <div className="flex flex-col md:flex-row gap-6">
