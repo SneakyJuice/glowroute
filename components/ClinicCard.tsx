@@ -26,8 +26,8 @@ export function FeaturedClinicCard({ clinic }: ClinicCardProps) {
     <div className="col-span-full">
       <div className="bg-white rounded-2xl border border-gold/35 shadow-featured hover:shadow-featured-hover hover:-translate-y-0.5 transition-all overflow-hidden grid grid-cols-1 md:grid-cols-[300px_1fr]">
         <div className="h-[220px] bg-gradient-to-br from-[#bdd4e7] to-[#d4ecf5] flex items-center justify-center text-5xl">
-          {clinic.imageUrl
-            ? <img src={clinic.imageUrl} alt={clinic.name} className="w-full h-full object-cover" />
+          {clinic.imageUrl || clinic.images?.[0]
+            ? <img src={clinic.imageUrl || clinic.images?.[0]} alt={clinic.name} className="w-full h-full object-cover" />
             : clinic.logo
               ? <img src={clinic.logo} alt={clinic.name} className="max-w-[60%] max-h-[60%] object-contain opacity-80" />
               : '✨'
@@ -100,8 +100,8 @@ export default function ClinicCard({ clinic }: ClinicCardProps) {
         : 'border border-gray-200 shadow-sm hover:shadow-lg hover:border-teal/25'
     }`}>
       <div className="h-[168px] relative overflow-hidden bg-gradient-to-br from-[#c9d8e8] to-[#e0eff7]">
-        {clinic.imageUrl
-          ? <img src={clinic.imageUrl} alt={clinic.name} className="w-full h-full object-cover" />
+        {clinic.imageUrl || clinic.images?.[0]
+          ? <img src={clinic.imageUrl || clinic.images?.[0]} alt={clinic.name} className="w-full h-full object-cover" />
           : clinic.logo
             ? <img src={clinic.logo} alt={clinic.name} className="w-full h-full object-contain p-8" />
             : <div className="w-full h-full flex items-center justify-center text-4xl">🏥</div>
