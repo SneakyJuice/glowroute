@@ -1,0 +1,28 @@
+{
+  "type": "Prerender",
+  "expiration": false,
+  "sourcePath": "/clinics/[city]/[slug]",
+  "group": 282,
+  "bypassToken": "2b128b42b5ed74602f5512803b5c9ff6",
+  "experimentalBypassFor": [
+    {
+      "type": "header",
+      "key": "Next-Action"
+    },
+    {
+      "type": "header",
+      "key": "content-type",
+      "value": "multipart/form-data;.*"
+    }
+  ],
+  "fallback": {
+    "type": "FileFsRef",
+    "mode": 33188,
+    "fsPath": "my-skin-dealer-boca-raton-fl.prerender-fallback.html"
+  },
+  "initialHeaders": {
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/clinics/layout,_N_T_/clinics/[city]/layout,_N_T_/clinics/[city]/[slug]/layout,_N_T_/clinics/[city]/[slug]/page,_N_T_/clinics/boca-raton/my-skin-dealer-boca-raton-fl",
+    "vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch"
+  },
+  "allowQuery": []
+}

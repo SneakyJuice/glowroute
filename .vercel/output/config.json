@@ -124,10 +124,18 @@
       "status": 404
     },
     {
+      "src": "^/clinics/(?<nxtPcity>[^/]+?)/(?<nxtPslug>[^/]+?)(?:\\.rsc)(?:/)?$",
+      "dest": "/clinics/[city]/[slug].rsc?nxtPcity=$nxtPcity&nxtPslug=$nxtPslug"
+    },
+    {
+      "src": "^/clinics/(?<nxtPcity>[^/]+?)/(?<nxtPslug>[^/]+?)(?:/)?$",
+      "dest": "/clinics/[city]/[slug]?nxtPcity=$nxtPcity&nxtPslug=$nxtPslug"
+    },
+    {
       "handle": "hit"
     },
     {
-      "src": "/_next/static/(?:[^/]+/pages|pages|chunks|runtime|css|image|media|TcqFUWvMZmRQ73WgCuFWE)/.+",
+      "src": "/_next/static/(?:[^/]+/pages|pages|chunks|runtime|css|image|media|ug9hvMXQA60pttJvfYVZk)/.+",
       "headers": {
         "cache-control": "public,max-age=31536000,immutable"
       },
@@ -211,12 +219,12 @@
       "path": "500",
       "contentType": "text/html; charset=utf-8"
     },
-    "_error.rsc.json": {
-      "path": "_error.rsc",
-      "contentType": "application/json"
-    },
     "_app.rsc.json": {
       "path": "_app.rsc",
+      "contentType": "application/json"
+    },
+    "_error.rsc.json": {
+      "path": "_error.rsc",
       "contentType": "application/json"
     },
     "_document.rsc.json": {

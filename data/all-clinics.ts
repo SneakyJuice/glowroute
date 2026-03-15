@@ -9,7 +9,7 @@ export const allClinics: Clinic[] = [
     address: '3200 Henderson Blvd FLOOR 2, Tampa, FL 33609',
     phone: '(813) 579-4100',
     website: 'https://biodesignmen.com/locations/testosterone-replacement-tampa/',
-    googleRating: 5,
+    googleRating: 5.0,
     googleReviewCount: 1033,
     treatments: ["Testosterone Replacement (TRT)", "Peptide Therapy"],
     specialtyTreatments: ["Peptide Therapy", "Semaglutide Weight Loss"],
@@ -28,7 +28,7 @@ export const allClinics: Clinic[] = [
     website: 'http://www.northtampachiropractor.com/',
     googleRating: 4.9,
     googleReviewCount: 997,
-    treatments: ["Aesthetics", "Wellness"],
+    treatments: ["Acupuncture", "Wellness"],
     verified: false,
     featured: true,
     priceTier: '$$$',
@@ -82,7 +82,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: 'Looking for a med spa in Tampa or Odessa?  Skin NV is your single-stop destination for all your Tampa medical spa treatments and now Odessa!  We specialize in non-surgical cosmetic & skin rejuvenation treatments in a chic, modern spa setting.',
+    description: 'Looking for a med spa in Tampa or Odessa?  Skin NV is your single-stop destination for all your Tampa medical spa treatments and now Odessa!  We specialize in non-surgical cosmetic & skin rejuvenation',
   },
   {
     id: 'caribbean-mystique-massage-wellness-spa-tampa-fl',
@@ -99,23 +99,23 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: 'LeafFounded by a Local Tampa Bay Massage Therapist, who’s also a Skincare Specialist and Nail Technician.  We would LOVE to share our Island Vibes Culture with you!  Stop in and Meet our Wonderful TEAM…..',
+    description: 'LeafFounded by a Local Tampa Bay Massage Therapist, whos also a Skincare Specialist and Nail Technician.  We would LOVE to share our Island Vibes Culture with you!  Stop in and Meet our Wonderful TEAM',
   },
   {
     id: 'lan-aesthetics-tampa-fl',
-    name: 'ÉLAN Aesthetics',
+    name: 'LAN Aesthetics',
     slug: 'lan-aesthetics-tampa-fl',
     city: 'Tampa',
     address: '1503 W Swann Ave, Tampa, FL 33606',
     phone: '(813) 440-8743',
     website: 'http://elan-aesthetics.com/',
-    googleRating: 5,
+    googleRating: 5.0,
     googleReviewCount: 428,
     treatments: ["Anti-Aging"],
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: 'At ÉLAN Aesthetics, our goal is to help our clients feel more confident through results-driven treatments.  Every appointment is held with importance as an integral part of your journey.  It’s not a 20-minute injection and you’re out the door.',
+    description: 'At LAN Aesthetics, our goal is to help our clients feel more confident through results-driven treatments.  Every appointment is held with importance as an integral part of your journey.  Its not a 20-',
   },
   {
     id: 'erasable-med-spa-tampa-fl',
@@ -131,7 +131,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: 'Time has a way of taking a toll on your skin.  Sun exposure, environmental pollutants, and the aging process itself can leave you looking older than you feel.  With Erasable Med Spa, you can turn back the effects of time and get back to feeling like yourself again.',
+    description: 'Time has a way of taking a toll on your skin.  Sun exposure, environmental pollutants, and the aging process itself can leave you looking older than you feel.  With Erasable Med Spa, you can turn back',
   },
   {
     id: 'cell-renew-medical-spa-downtown-tampa-fl',
@@ -147,7 +147,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: 'Here at Cell Renew Medical Spa, our Mission is to empower individuals to feel more confident, happier and over all better about themselves by providing cutting-edge Facial rejuvenation protocols that combine innovative therapies for optimal results.',
+    description: 'Here at Cell Renew Medical Spa, our Mission is to empower individuals to feel more confident, happier and over all better about themselves by providing cutting-edge Facial rejuvenation protocols that ',
   },
   {
     id: 'the-bowman-institute-for-dermatologic-surgery-tampa-fl',
@@ -163,7 +163,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: '“Excellent care, excellent staff.  Dr.  Bowman is a wonderful surgeon.',
+    description: 'Excellent care, excellent staff.  Dr.  Bowman is a wonderful surgeon.',
   },
   {
     id: 'the-aesthetics-lab-tampa-fl',
@@ -195,7 +195,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: 'AR Aesthetics stands at the forefront of medical spas, committed to authentic beauty enhancement through an artful combination of advanced injectables, comprehensive skin therapy, holistic wellness, and rejuvenation treatments.  We understand that true radiance emerges when inner wellness aligns with outer beauty.',
+    description: 'AR Aesthetics stands at the forefront of medical spas, committed to authentic beauty enhancement through an artful combination of advanced injectables, comprehensive skin therapy, holistic wellness, a',
   },
   {
     id: 'tao-wellness-med-spa-tampa-fl',
@@ -222,7 +222,7 @@ export const allClinics: Clinic[] = [
     address: '18043 Highwoods Preserve Pkwy, Tampa, FL 33647',
     phone: '(813) 463-8039',
     website: 'https://newtampasmile.com/?utm_source=GMBListing&utm_medium=Organic',
-    googleRating: 5,
+    googleRating: 5.0,
     googleReviewCount: 320,
     treatments: ["Wellness Consultations"],
     verified: false,
@@ -254,13 +254,13 @@ export const allClinics: Clinic[] = [
     address: '2605 S MacDill Ave Suite C, Tampa, FL 33629',
     phone: '(813) 765-4416',
     website: 'http://elevatetpa.com/',
-    googleRating: 5,
+    googleRating: 5.0,
     googleReviewCount: 260,
     treatments: ["Botox", "Dermal Fillers", "Lip Augmentation", "Laser Hair Removal"],
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: 'Elevate is a boutique medical spa dedicated to providing a truly elevated aesthetic experience.  Our skilled practitioners combine artistry and medicine for the best possible results.  We offer a variety of the industry\'s most effective treatments to renew your confidence and take your beauty to the next level.',
+    description: 'Elevate is a boutique medical spa dedicated to providing a truly elevated aesthetic experience.  Our skilled practitioners combine artistry and medicine for the best possible results.  We offer a vari',
   },
   {
     id: 'iv-joint-tampa-fl',
@@ -280,20 +280,20 @@ export const allClinics: Clinic[] = [
   },
   {
     id: 'lineless-aesthetics-south-tampa-injectables-studio-tampa-fl',
-    name: 'Lineless Aesthetics – South Tampa Injectables Studio',
+    name: 'Lineless Aesthetics  South Tampa Injectables Studio',
     slug: 'lineless-aesthetics-south-tampa-injectables-studio-tampa-fl',
     city: 'Tampa',
     address: '2003 W Kennedy Blvd B, Tampa, FL 33606',
     phone: '(813) 503-9088',
     website: 'http://www.linelessaesthetics.com/',
-    googleRating: 5,
+    googleRating: 5.0,
     googleReviewCount: 248,
     treatments: ["Botox", "Dermal Fillers", "Lip Augmentation", "Medical Weight Loss"],
     specialtyTreatments: ["Peptide Therapy"],
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: 'Welcome to Lineless Aesthetics, South Tampa’s boutique injectable studio dedicated to the refined art of injectables.  Here, we believe in celebrating what makes you uniquely beautiful.  Our skilled use of dermal fillers, neurotoxins, and advanced treatments like facial contouring, lip flip, and masseter Botox.',
+    description: 'Welcome to Lineless Aesthetics, South Tampas boutique injectable studio dedicated to the refined art of injectables.  Here, we believe in celebrating what makes you uniquely beautiful.  Our skilled us',
   },
   {
     id: 'marijuana-doctor-wesley-chapel-tampa-fl',
@@ -319,13 +319,13 @@ export const allClinics: Clinic[] = [
     address: '2111 W Swann Ave, Tampa, FL 33606',
     phone: '(813) 771-2061',
     website: 'https://www.museaestheticsandlaser.com/',
-    googleRating: 5,
+    googleRating: 5.0,
     googleReviewCount: 226,
     treatments: ["Botox", "Dermal Fillers", "Lip Augmentation", "Laser Hair Removal"],
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: 'Muse Aesthetics & Laser is South Tampa’s premier medical spa, dedicated to delivering natural results that you’ll love.  At Muse, we specialize in advanced, minimally invasive facial treatments designed to enhance your natural beauty.  Whether you’re addressing a specific concern or focusing on overall anti-aging and self-care, our team will provide you with a personalized treatment plan tailored to your goals, so you can become your own muse.',
+    description: 'Muse Aesthetics & Laser is South Tampas premier medical spa, dedicated to delivering natural results that youll love.  At Muse, we specialize in advanced, minimally invasive facial treatments designed',
   },
   {
     id: 'the-bay-aesthetics-tampa-fl',
@@ -335,13 +335,13 @@ export const allClinics: Clinic[] = [
     address: '4230 S MacDill Ave suite i, Tampa, FL 33611',
     phone: '(813) 374-3872',
     website: 'http://www.thebayaesthetics.com/',
-    googleRating: 5,
+    googleRating: 5.0,
     googleReviewCount: 213,
     treatments: ["Laser Hair Removal", "Acne Treatment"],
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: 'a certified master esthetician and laser expert.  As a self-made businesswoman, Dasha’s unparalleled passion for aesthetics drives her to deliver exceptional care in every treatment, session, and plan.  With her love and dedication, she has crafted a system that consistently provides top-notch experiences for her clients.',
+    description: 'a certified master esthetician and laser expert.  As a self-made businesswoman, Dashas unparalleled passion for aesthetics drives her to deliver exceptional care in every treatment, session, and plan.',
   },
   {
     id: 'slae-aesthetics-wellness-tampa-fl',
@@ -351,14 +351,14 @@ export const allClinics: Clinic[] = [
     address: '2201 W Swann Ave Suite 100, Tampa, FL 33606',
     phone: '(813) 418-0861',
     website: 'http://www.slaeaesthetics.com/',
-    googleRating: 5,
+    googleRating: 5.0,
     googleReviewCount: 166,
     treatments: ["Botox", "Dermal Fillers", "Medical Weight Loss", "Facial Treatments"],
     specialtyTreatments: ["Peptide Therapy"],
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: 'At SLAE Aesthetics & Wellness, we believe in crafting your unique glow.  Serving Tampa Bay with top-tier, safe anti-aging, weight loss and skincare services, we tailor every treatment to suit your individual aspirations.  We’re beyond excited to join you on your path to beauty and wellness.',
+    description: 'At SLAE Aesthetics & Wellness, we believe in crafting your unique glow.  Serving Tampa Bay with top-tier, safe anti-aging, weight loss and skincare services, we tailor every treatment to suit your ind',
   },
   {
     id: 'the-dripbar-new-tampa-tampa-fl',
@@ -375,7 +375,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: 'The DRIPBaR is dedicated to supporting cellular wellness through professional, efficient, and client-focused care.  Our clean, modern lounges offer a range of services, including IV vitamin drips, IM shots, and additional therapies designed to help you feel your best.  Each visit is structured to provide a supportive environment where your health and comfort are the top priorities.',
+    description: 'The DRIPBaR is dedicated to supporting cellular wellness through professional, efficient, and client-focused care.  Our clean, modern lounges offer a range of services, including IV vitamin drips, IM ',
   },
   {
     id: 'vivify-med-spa-tampa-fl',
@@ -385,13 +385,13 @@ export const allClinics: Clinic[] = [
     address: '1000 W Kennedy Blvd #202, Tampa, FL 33606',
     phone: '(813) 588-5150',
     website: 'https://www.vivifyps.com/vivify-medspa/?utm_source=GMBlisting&utm_medium=organic&utm_campaign=gmb-medspa',
-    googleRating: 5,
+    googleRating: 5.0,
     googleReviewCount: 160,
     treatments: ["Botox", "Dermal Fillers", "PRP Therapy", "Medical Weight Loss"],
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: 'At VIVIFY Medspa in Tampa, our top priority is helping our patients achieve their cosmetic goals and leave our spa feeling confident and rejuvenated.  Our attentive staff is dedicated to providing personalized care and exceptional service to ensure that our clients receive the best possible experience.',
+    description: 'At VIVIFY Medspa in Tampa, our top priority is helping our patients achieve their cosmetic goals and leave our spa feeling confident and rejuvenated.  Our attentive staff is dedicated to providing per',
   },
   {
     id: 'heightened-aesthetics-in-seminole-heights-tampa-and-lakewood-ranch-tampa-fl',
@@ -401,13 +401,13 @@ export const allClinics: Clinic[] = [
     address: '5606 N Nebraska Ave Suite B, Tampa, FL 33604',
     phone: '(813) 415-4993',
     website: 'http://www.heightenedaesthetics.com/',
-    googleRating: 5,
+    googleRating: 5.0,
     googleReviewCount: 155,
     treatments: ["Botox", "Dermal Fillers", "PRP Therapy", "Lip Augmentation"],
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: 'Tired of your skin looking as dull as a Monday morning?  It’s time for a glow-up!  At Heightened Aesthetics, I believe your skin deserves the ultimate pampering.',
+    description: 'Tired of your skin looking as dull as a Monday morning?  Its time for a glow-up!  At Heightened Aesthetics, I believe your skin deserves the ultimate pampering.',
   },
   {
     id: 'the-institute-of-vitality-tampa-fl',
@@ -434,14 +434,14 @@ export const allClinics: Clinic[] = [
     address: '19040 Bruce B Downs Blvd, Tampa, FL 33647',
     phone: '(813) 565-7740',
     website: 'https://4everyoungantiaging.com/newtampa/',
-    googleRating: 5,
+    googleRating: 5.0,
     googleReviewCount: 122,
     treatments: ["Botox", "Dermal Fillers", "Lip Augmentation", "Semaglutide / Ozempic"],
     specialtyTreatments: ["Peptide Therapy"],
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: '“Dealing with hair loss was a major concern for me, but hormone replacement therapy at 4Ever Young has made a remarkable difference.  Not only has it slowed down the hair loss, but I’ve also noticed new growth.  I’m feeling more confident and happier with my appearance.',
+    description: 'Dealing with hair loss was a major concern for me, but hormone replacement therapy at 4Ever Young has made a remarkable difference.  Not only has it slowed down the hair loss, but Ive also noticed new',
   },
   {
     id: 'artisan-aesthetics-plastic-surgery-dr-stan-castor-md-tampa-fl',
@@ -467,14 +467,14 @@ export const allClinics: Clinic[] = [
     address: '1701 N 14th St, Tampa, FL 33605',
     phone: '(813) 618-3119',
     website: 'https://kiyanimedspa.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp',
-    googleRating: 5,
+    googleRating: 5.0,
     googleReviewCount: 119,
     treatments: ["Botox", "Dermal Fillers", "PRP Therapy", "Medical Weight Loss"],
     specialtyTreatments: ["Peptide Therapy"],
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: 'Taylor is a true professional!  I am new to all things aesthetic and Taylor made me feel so comfortable with choosing the treatments that would be best for me.  I feel so much more confident in my skin now after my treatments and would strongly encourage anyone looking to feel the same to check out Kiyani Aesthetics!',
+    description: 'Taylor is a true professional!  I am new to all things aesthetic and Taylor made me feel so comfortable with choosing the treatments that would be best for me.  I feel so much more confident in my ski',
   },
   {
     id: '18th-main-tampa-fl',
@@ -500,14 +500,14 @@ export const allClinics: Clinic[] = [
     address: '720 W Dr Martin Luther King Jr Blvd # C, Tampa, FL 33603',
     phone: '(813) 533-6000',
     website: 'http://www.blueskyehealth.com/',
-    googleRating: 5,
+    googleRating: 5.0,
     googleReviewCount: 112,
     treatments: ["Medical Weight Loss", "Testosterone Replacement (TRT)", "Wellness Consultations", "Anti-Aging"],
     specialtyTreatments: ["Peptide Therapy"],
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: 'At Blue Skye Health & Wellness, Jaclyn Shedden, MSN, FNP leads a dedicated team committed to helping patients achieve balance, vitality, and lasting wellness.  Combining integrative and functional medicine, we provide personalized care tailored to your unique health goals.',
+    description: 'At Blue Skye Health & Wellness, Jaclyn Shedden, MSN, FNP leads a dedicated team committed to helping patients achieve balance, vitality, and lasting wellness.  Combining integrative and functional med',
   },
   {
     id: 'venus-med-spa-tampa-fl',
@@ -523,7 +523,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: 'An inviting, elegant environment to elevate your appearance, enhance your look and experience the very best in personal aesthetic care.  Venus Med Spa was created just for you, where we listen to your unique needs, provide solutions tailored to your beauty goals and engage the most current and effective treatments available to achieve them.  You want to put your best face forward, and we are here to make it possible.',
+    description: 'An inviting, elegant environment to elevate your appearance, enhance your look and experience the very best in personal aesthetic care.  Venus Med Spa was created just for you, where we listen to your',
   },
   {
     id: 'refresh-tampa-medical-aesthetics-formerly-ideal-image-tampa-fl',
@@ -540,7 +540,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'Achieve natural-looking results with expert care in a serene, luxurious setting.  From facial rejuvenation to body contouring and holistic wellness, we’re here to help you look and feel your absolute best.',
+    description: 'Achieve natural-looking results with expert care in a serene, luxurious setting.  From facial rejuvenation to body contouring and holistic wellness, were here to help you look and feel your absolute b',
   },
   {
     id: 'the-woman-s-group-tampa-fl',
@@ -590,7 +590,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'Since beginning therapy at IMI I have noticed higher energy levels, quality sleep, improved mental clarity and an overall sense of well-being.  I would fully recommend IMI for others who have aging issues related to low testosterone.  The staff is friendly, professional and well trained.',
+    description: 'Since beginning therapy at IMI I have noticed higher energy levels, quality sleep, improved mental clarity and an overall sense of well-being.  I would fully recommend IMI for others who have aging is',
   },
   {
     id: 'evo-medical-spa-tampa-fl',
@@ -600,14 +600,14 @@ export const allClinics: Clinic[] = [
     address: '1001 W Cleveland St, Tampa, FL 33606',
     phone: '(813) 425-5005',
     website: 'https://www.evomedicalspa.com/',
-    googleRating: 5,
+    googleRating: 5.0,
     googleReviewCount: 95,
     treatments: ["Medical Weight Loss", "Peptide Therapy", "IV Therapy", "Laser Hair Removal"],
     specialtyTreatments: ["Peptide Therapy"],
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'At EVO, we bridge modern medicine and aesthetic care to help you look and feel your best — inside and out.  Our medically guided programs combine advanced treatments, peptides, and technology-driven weight loss solutions designed for real, measurable results.',
+    description: 'At EVO, we bridge modern medicine and aesthetic care to help you look and feel your best  inside and out.  Our medically guided programs combine advanced treatments, peptides, and technology-driven we',
   },
   {
     id: 'roots-wellness-and-medspa-tampa-fl',
@@ -634,14 +634,14 @@ export const allClinics: Clinic[] = [
     address: '2915 N Blvd, Tampa, FL 33602',
     phone: '(813) 602-7072',
     website: 'https://alonso-aesthetics.com/',
-    googleRating: 5,
+    googleRating: 5.0,
     googleReviewCount: 81,
     treatments: ["Botox", "Dermal Fillers", "Semaglutide / Ozempic", "Tirzepatide / Mounjaro"],
     specialtyTreatments: ["Peptide Therapy"],
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'We offer a comprehensive range of services designed to enhance both your aesthetic appearance and overall well-being.  Our services include advanced skincare treatments, personalized wellness programs, and injectables tailored to meet the unique needs of each client.',
+    description: 'We offer a comprehensive range of services designed to enhance both your aesthetic appearance and overall well-being.  Our services include advanced skincare treatments, personalized wellness programs',
   },
   {
     id: 'pure-health-hormone-center-tampa-fl',
@@ -651,7 +651,7 @@ export const allClinics: Clinic[] = [
     address: '5004 S MacDill Ave Unit B, Tampa, FL 33611',
     phone: '(813) 333-5335',
     website: 'https://www.purehh.com/',
-    googleRating: 5,
+    googleRating: 5.0,
     googleReviewCount: 76,
     treatments: ["Botox", "Dermal Fillers", "Medical Weight Loss", "Testosterone Replacement (TRT)"],
     specialtyTreatments: ["Peptide Therapy", "Testosterone Therapy"],
@@ -690,7 +690,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'Goldfingers Aesthetics provides an everyday indulgence that leaves you feeling invigorated with smoother, refreshed skin and an overall healthier YOU.  These subtle, understated changes create the most dramatic differences.  Our professional staff of highly trained skin care specialists and doctors use their creative abilities, specialties, and licensed training to give you the highest quality in cosmetic enhancement services.',
+    description: 'Goldfingers Aesthetics provides an everyday indulgence that leaves you feeling invigorated with smoother, refreshed skin and an overall healthier YOU.  These subtle, understated changes create the mos',
   },
   {
     id: 'addicted-to-skin-the-beauty-aesthetics-studio-tampa-fl',
@@ -706,7 +706,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'We believe that performing with professionalism at our studio is a sure way of quickly establishing your personal beauty and wellness goals along with our unique goals within the company.  We strive to build life long relationships, customer satisfaction and trust.',
+    description: 'We believe that performing with professionalism at our studio is a sure way of quickly establishing your personal beauty and wellness goals along with our unique goals within the company.  We strive t',
   },
   {
     id: 'artisan-aesthetics-plastic-surgery-laser-center-tampa-fl',
@@ -739,7 +739,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$',
-    description: 'Health and Glow – The Leading Primary Care, IV Therapy and Weight Loss Med Spa in Tampa',
+    description: 'Health and Glow  The Leading Primary Care, IV Therapy and Weight Loss Med Spa in Tampa',
   },
   {
     id: 'kerry-med-spa-tampa-fl',
@@ -755,7 +755,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$',
-    description: 'Your Trusted Medical Spa in Tampa, FL — Offering Honest Guidance, Advanced Treatments, and Beauty That Feels Like You.',
+    description: 'Your Trusted Medical Spa in Tampa, FL  Offering Honest Guidance, Advanced Treatments, and Beauty That Feels Like You.',
   },
   {
     id: 'emerald-compounding-pharmacy-tampa-fl',
@@ -792,19 +792,19 @@ export const allClinics: Clinic[] = [
   },
   {
     id: 'ves-medspa-tampa-fl',
-    name: 'VESÉ Medspa',
+    name: 'VES Medspa',
     slug: 'ves-medspa-tampa-fl',
     city: 'Tampa',
     address: '611 W Bay St Suite 2K, Tampa, FL 33606',
     phone: '(813) 486-8264',
     website: 'https://www.vesemedspa.com/',
-    googleRating: 5,
+    googleRating: 5.0,
     googleReviewCount: 39,
     treatments: ["Facials", "Injectables", "Laser & Skin"],
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '1.  Go to Wix. com \\ Subscriptions Domains 2.',
+    description: '1.  Go to Wix. com \ Subscriptions Domains 2.',
   },
   {
     id: 'devoteddoc-suboxone-urgent-care-and-functional-medicine-doctor-tampa-fl',
@@ -814,7 +814,7 @@ export const allClinics: Clinic[] = [
     address: '7320 E Fletcher Ave, Tampa, FL 33637',
     phone: '(813) 791-7550',
     website: 'https://www.devoteddoc.com/',
-    googleRating: 5,
+    googleRating: 5.0,
     googleReviewCount: 26,
     treatments: ["Semaglutide / Ozempic", "Tirzepatide / Mounjaro", "Medical Weight Loss", "Peptide Therapy"],
     specialtyTreatments: ["Peptide Therapy"],
@@ -831,14 +831,14 @@ export const allClinics: Clinic[] = [
     address: '375 S 12th St unit 3, Tampa, FL 33602',
     phone: '(813) 202-1414',
     website: 'http://sybhealth.com/',
-    googleRating: 5,
+    googleRating: 5.0,
     googleReviewCount: 24,
     treatments: ["Dermal Fillers", "PRP Therapy", "Lip Augmentation", "Medical Weight Loss"],
     specialtyTreatments: ["Peptide Therapy", "Testosterone Therapy"],
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'Discover the power of personalized hormone optimization protocols at Save Your Body Hormone & BioClinic.  Our expert team will work closely with you to analyze your unique hormonal needs to create a tailored plan that addresses your specific health concerns.  With our support, including the use of peptides and advancements in regenerative medicine, you can regain balance and revitalization in your life.',
+    description: 'Discover the power of personalized hormone optimization protocols at Save Your Body Hormone & BioClinic.  Our expert team will work closely with you to analyze your unique hormonal needs to create a t',
   },
   {
     id: 'ax-body-bar-health-wellness-center-tampa-fl',
@@ -848,7 +848,7 @@ export const allClinics: Clinic[] = [
     address: undefined,
     phone: '(813) 790-8469',
     website: 'http://ax-body-bar.com/',
-    googleRating: 5,
+    googleRating: 5.0,
     googleReviewCount: 23,
     treatments: ["Facials", "Injectables", "Laser & Skin"],
     specialtyTreatments: ["Peptide Therapy"],
@@ -865,14 +865,14 @@ export const allClinics: Clinic[] = [
     address: '5386 Primrose Lake Cir, Tampa, FL 33647',
     phone: '(689) 219-4121',
     website: 'http://www.smilecotampapalms.com/',
-    googleRating: 5,
+    googleRating: 5.0,
     googleReviewCount: 22,
     treatments: ["IV Therapy", "Hormone Replacement"],
     specialtyTreatments: ["Peptide Therapy"],
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'Smile, Co.  Tampa Palms, we’re redefining what it means to go to the dentist.  Led by Dr.',
+    description: 'Smile, Co.  Tampa Palms, were redefining what it means to go to the dentist.  Led by Dr.',
   },
   {
     id: 'premiere-peptides-and-wellness-tampa-fl',
@@ -882,7 +882,7 @@ export const allClinics: Clinic[] = [
     address: '3702 W Spruce St #1466, Tampa, FL 33607',
     phone: '(813) 694-3559',
     website: 'http://premierepeptidesandwellness.com/',
-    googleRating: 5,
+    googleRating: 5.0,
     googleReviewCount: 17,
     treatments: ["Tirzepatide / Mounjaro", "Medical Weight Loss", "Peptide Therapy", "Anti-Aging"],
     specialtyTreatments: ["Peptide Therapy"],
@@ -898,7 +898,7 @@ export const allClinics: Clinic[] = [
     city: 'Tampa',
     address: '18061 Highwoods Preserve Pkwy, Tampa, FL 33647',
     phone: '(813) 502-3059',
-    googleRating: 5,
+    googleRating: 5.0,
     googleReviewCount: 3,
     treatments: ["Aesthetics", "Wellness"],
     verified: false,
@@ -920,7 +920,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$',
-    description: 'Shaina is a highly skilled, licensed Medical Aesthetician, with extensive experience working in dermatology.  After moving to Florida, she attended the University of South Florida to complete her Bachelor’s in Health Sciences.  Her interest in skincare and aesthetics began while working in dermatology offices, where she saw the importance and benefits associated with quality skincare.',
+    description: 'Shaina is a highly skilled, licensed Medical Aesthetician, with extensive experience working in dermatology.  After moving to Florida, she attended the University of South Florida to complete her Bach',
   },
   {
     id: 'dr-syeda-kareem-tampa-fl',
@@ -929,7 +929,7 @@ export const allClinics: Clinic[] = [
     city: 'Tampa',
     address: '18101 Highwoods Preserve Pkwy Suite 120, Tampa, FL 33647',
     phone: '(813) 510-6090',
-    googleRating: 5,
+    googleRating: 5.0,
     googleReviewCount: 1,
     treatments: ["Aesthetics", "Wellness"],
     verified: false,
@@ -945,7 +945,7 @@ export const allClinics: Clinic[] = [
     address: '7320 E Fletcher Ave, Tampa, FL 33637',
     phone: '(813) 896-5957',
     website: 'http://www.devoteddoc.com/',
-    googleRating: 5,
+    googleRating: 5.0,
     googleReviewCount: 1,
     treatments: ["Semaglutide / Ozempic", "Tirzepatide / Mounjaro", "Medical Weight Loss", "Peptide Therapy"],
     specialtyTreatments: ["Peptide Therapy"],
@@ -999,7 +999,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: 'èí;;`Àp¼<0S¾j)Â«@ðd»ÿÂ qüæÕä ú¾t»MÆH¹iÀ%~øÃª®uNMúnï[ò¨9ßtt#>.%ÃeÙ¸}8ÆÙavYPmX±ÇÇÂ ,éy£8ãzå¤7åÃÙÅàÛí!YîzP ö øãC-Ø¼Àßë9k~ÝgÍ¯·PnªÓ%Á. !ÑÿD9÷³÷ØÚ¦nEGs 2?º]7$¥4ò1È>óµÕ¶¸Ö i¼g§}gÚáçàÝÓ?ïßêq%FO\\,ýþ*R~ñÚ9v òM ]ÜuÉ{ Ùm {²3pKê¡ØÎuÂÎé½®SºJËeíÈis¡V£tÍÚÏâå#¸øúW ¥;b5¹©_ ÃQJC²âq öÿY¬ÞùIJ|Ã9ò3qþìÐæ )ß¨ì®¾j4MÏ?óKäÐo_(?â*ñ*k11)«gé!Ç®R^ÇjþiÃêJ(»ÎI}­?',
+    description: 'LUXE Med Spa Aesthetics is a medspa and aesthetic wellness clinic in Orlando, FL.',
   },
   {
     id: 'sanctuary-salon-med-spa-orlando-fl',
@@ -1015,7 +1015,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: '��=%=��k8���r �dil��7�(^�u}��~{�Hi u���\'�K�� ����#Z#:rE�������~D!ȃ� ��ڙ���FuX^0󟫩< �:W���=(��M{LC0�9��J?�}�4@�$ R8�t�0��Z? a��ߒ� �� O^uL�k#M���Ғ���x���k�_�J �FpC�2=H?� �����ߏ���O�?',
+    description: 'Sanctuary Salon & Med Spa is a medspa and aesthetic wellness clinic in Orlando, FL.',
   },
   {
     id: 'the-vanity-room-orlando-fl',
@@ -1031,7 +1031,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: 'L@��Zѓv����h�Nx�89�a���Y�yJc�m샒�� /��@>)����D�a���fb\\`Z���S���B�=�� �{��� �{C�f|`��z��o��c����X�1�lQ(f���&*��\' �� ьZ �ci�� e/ �����r�S���u(�h4���Ukx�ٗ\'�Wb � Ӟm\'�b����K6���i�k ;e���x*ՙ}g\'�b�/ ֋F��p�E|���oʎaKNi>�bnJ�ʁc,�B���.tYi��4���Y�u}Ľ5�ʞ�SR �\\ s*��y�j� �9!���| >�y\\��e� ���,R��X���:ޣ�=j�;#X]��֝���? )^�L �o�{�Ŕ�>L��p��0 ����s� -źql܁ƥP�΄��)�@LI��&v�xE�eJ�`awH���7FL�T��D������#����F�"�7E\'�1�lQ���?�l��{�Tkt�� ���(��A�?V�znB����J t,���$G ��D��� �)�񃥦\\���}��pM�L�p�1 ;� �͛��Xt�/��� ��S��t ��ʽx�q��j��f:���c=Z{jz��K��n�:��*�gv��&�!',
+    description: 'The Vanity Room is a medspa and aesthetic wellness clinic in Orlando, FL.',
   },
   {
     id: 'evolving-aesthetics-orlando-fl',
@@ -1047,7 +1047,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: '�(�����q�j����\\���:�7��N�Ƽ"6��(r�6�j�^;Ĩ0;���S��N��<�cE&m�k[.mQ��^��\\�v�aY�ʢM<�]#7�e5�:!���~#�R�I���*���A��<Ȭ@&����T ���nGhjO��W~�~1)s]8��� @�wPo]�.����6�>e����D��� �P\'� x�����a_�����Z���㴀<ʂ� �fkf�Cώ��� o�J�`�w��<��U����W�9t����k��v}���p�k����? g����ҘOm�Ӆ0��� � �1 uҸ�1�1�]ώ��*(���$?]��9 ����q5�X!1�8�� W4�]O�ڂ�-�`bVal\\-n&4k �̬J]�� -յ���\\&�\'|̘�4�^���2#��2��g�i4͐c ,�G�����Y���ti(uU�����m��૎tW�U�V�Z�Ǝ\'�P��u��5��a���!',
+    description: 'Evolving Aesthetics is a medspa and aesthetic wellness clinic in Orlando, FL.',
   },
   {
     id: '4ever-young-anti-aging-wellness-center-orlando-fl',
@@ -1064,7 +1064,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: '��aZ���_ ����|kD���3� y��o{o���A��o{�<�< �c�9��sC���m��@n]��U��Bo�s�;x#G ��᪻��>* �ԳKs�zk˫�4�Dǩ�6&@� �� ����<��8�����W�3� ] ��c 6��NH�R\' :3 ��䵆ƿ���C�g��Q�k1ت`w�W�}��s�H 2�Y�((�����e� q�1?C˓=�JV@����� ���n��Rl����"C̭\'�.E��+:[��<�� �`�� n����v�����-,�%��/� eN#˞�9��M��TX��(x�Rq! ޹ #&�W���h�����Q��� �Ф��m�Q��V8C��K��Ȣ0g@�9@9C�!C�%��4�O�!',
+    description: '4Ever Young Anti-Aging & Wellness Center is a medspa and aesthetic wellness clinic in Orlando, FL.',
   },
   {
     id: 'universal-dental-spa-orlando-fl',
@@ -1080,7 +1080,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: 'Dentist in Orlando, FL | Universal Dental Spa Skip to Content Previous Next Best Dentist in Orlando, FL Orlando, FL Request an Appointment How can we make you smile? Invisalign Teeth Whitening Cosmetic Dentistry Universal Dental Spa Welcome to Universal Dental Spa, where your dental health is our top priority! Margarita Rivera in October 2019, our practice takes pride in offering the latest advancements in dental technology, from digital X-rays to intraoral cameras.',
+    description: 'Dentist in Orlando, FL | Universal Dental Spa Skip to Content Previous Next Best Dentist in Orlando, FL Orlando, FL Request an Appointment How can we make you smile? Invisalign Teeth Whitening Cosmeti',
   },
   {
     id: 'modern-beauty-bar-orlando-fl',
@@ -1096,7 +1096,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: '"\'�M~� N҂7ǵ ���9�Lt�x ~^�w�\\�l���x��L 3�} L����� ��v�l��l ��Lt���kn+�Dcζ�;ݬ4�� x�z0�s� �+�����L+� ������8��a>�P�@ ��N ��]�4� ]G��٢aH�P���>�������vVS\\\'�|/? ��&�Y,��b�5 ��� eNf�v�T�%�-Ƣ�X`U #y �T�1�a�, ���<��ب*`D_%a�hL��\\dgA|#��3� �D�aܻ�����8rbT�hq�B%�UC�&j��1�A5���1� ��"�q�L�ja��+�� �*���tR� �0 :b\\� |C�p�4r\\ �T�5,�q�.~�r�h 5K���)B�H��b������� I-a��`fy�| m��Ls3@���%�=մ��٭E�x��r���: ,��m�[#�B�, čQG 7��(�����!9�ɪ�عT�q!*2�*�O�j�*��`F��0�\'�Ğ�FUA`?',
+    description: 'Modern Beauty Bar is a medspa and aesthetic wellness clinic in Orlando, FL.',
   },
   {
     id: 'one-aesthetics-orlando-fl',
@@ -1112,11 +1112,11 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: '�\'Y1��ϳ�O�up�T�Ib0K��{F�E�-G.1�,4��,�SD �>�K t=!_!.��s���!�� �tK��?πϠ����i: 4()�4"�c_R����H�0�|t�#�#xH�gQ��`?��O�&?�P�Q ĲQW}�aһu-N�#&�=%>�n����ݩ�l�<ć䱎%���b�IR��e4�$-�$)� ��xye=��5:��h��Y[�Q� fE�Y>:��7����a? �i��Bt�Q� �&#���<�z��.�& �smF����Lzj�-�Hn��:�Ȧ:��.',
+    description: 'One Aesthetics is a medspa and aesthetic wellness clinic in Orlando, FL.',
   },
   {
     id: 'nectar-aesthetics-med-spa-orlando-orlando-fl',
-    name: 'Nectar Aesthetics® Med Spa - Orlando',
+    name: 'Nectar Aesthetics Med Spa - Orlando',
     slug: 'nectar-aesthetics-med-spa-orlando-orlando-fl',
     city: 'Orlando',
     address: '361 N Rosalind Ave Suite 10, Orlando, FL 32801',
@@ -1128,7 +1128,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: '� �7�����_Y��q�n���|�Bu���2�|�t�# �v � ���c� �n�����{��������� �}Uae�!|�s*��ul=^�a@��������>�;�p�Zk�jb/�r����S��S��H� ��TZ�b �·4��4���b4KS���Qg�!�;�c��6;(\\�� 5,�%1S^� �m��gr(�Y�5�c㾏 ڪ zJzlu���0�9n�� �>X��&`��"��~b�P*��1�B�ݯ��F����)�-��T��2�u�4�ɺy�����\'�XF�5���h���-��E�- �h/�im�Ån}:�du\\�. >_��\\��/���y ���y�: �OS�\' �XTۧ�ăkg���e�j��� �8й��7�Z%֗���Z �զ|������ z��R�\\�W�V�s����^W��%��� ~Jk@V�\\mʴ���c��� ��^, �Vnܙt>$�y��F1� ~����pZ��A�g�G�V�S~7������4:B�:�\'pŤ��ܭuho�9Ö�R�h�ސ��9<�@=�\\�A��=�)�����J@�/]=��S�/%TQ�X�3��|����R�e[� �9�냿��_�ؘ����&� ��; �Ϳ}��F_pT� \'�I���\'7&���ms�#��1b;��(S��3��&�2�/���K� �Ƈ�.',
+    description: 'Nectar Aesthetics Med Spa - Orlando is a medspa and aesthetic wellness clinic in Orlando, FL.',
   },
   {
     id: 'zen-brazil-orlando-orlando-fl',
@@ -1144,7 +1144,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: '�� eО�hqǟ4 XPK S�[�@~�Oc,8��eI�<�۪kƜF���?͇e�P3/�o�/���p���e��ҋ�zN%����� I�C��!@���"�m�$!lq G�L|̽���Zd!��h6,��3���_׏��LR���\'�%7K���ڴe ��|�9YJ�7��X�K a� ; �_b��#J��i����]�q��0dK�q��(v+���ݜ;-�!',
+    description: 'Zen Brazil Orlando is a medspa and aesthetic wellness clinic in Orlando, FL.',
   },
   {
     id: 'vio-med-spa-orlando-fl',
@@ -1160,7 +1160,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: 'oڷ�Gm��r�)�`7QO���с� cr,�~����v�N�T^�Q��.K�6� ��v���+x~eDD��� �ʈ0� !�Eya�� Ub�U!�W�3�!�Op��ir^ zg��� �L�6�ٛ�� :�� G��fD�px< jE`��bl������"MX�>�j��!W�-��4� �kEY�^,Gx��k�Gx�l �Q�hx�����3��`�� پ�އx�Z� ��� �ʠ���|D�П Z9��n����(��~%`6"������0>pR��P��|t.',
+    description: 'VIO Med Spa is a medspa and aesthetic wellness clinic in Orlando, FL.',
   },
   {
     id: 'restore-hyper-wellness-orlando-fl',
@@ -1177,7 +1177,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: 'We are proud to be a member of the Nona community and support the wellness culture with cryotherapy, red light, infrared sauna, IV drips, CryoSkin and Hydrafacial. No matter what your do more goal, Restore Hyper Wellness Orlando, FL - Nona is here to support you every step of the way. Get guidance from our experts, inform your path forward with data, and access the most cutting-edge modalities in wellness.',
+    description: 'We are proud to be a member of the Nona community and support the wellness culture with cryotherapy, red light, infrared sauna, IV drips, CryoSkin and Hydrafacial. No matter what your do more goal, Re',
   },
   {
     id: 'angel-aesthetics-med-spa-orlando-fl',
@@ -1193,7 +1193,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: '�fN�[v�j����O�at�����ֶ I���T>�}.(��%~���3f�� ��@��g �C��:υ�xp�`�wVDI��H� �Cv��O�]��*`3��<��S% �yzcĜ+��҄��(�ZҐ=ƚsC�"��}K�w�m(��b�em��i� ��,�\\�����4,������١3o��s!J<�%E��bc3�,���i\\GS HGD����;PtQ=[� �R�L�0���f��x��ie[�:����Xs" bL�R(5J�!WM� �S�䀤�+q ׻z�ZK.c�隐���s@ �D+1�R2dK;��J<����v��I. �~��e(����P�c���95qeg�ė���q��b�:�~% �f!-Όq.@�!%>���=Tޤ[�K{m��K��U~�����q��9���ˑte�>P����TSޥ��6�=�ʵ��sa&��t���ʄ#�F���!�9`���+���] ^?۹c�o\'@� ��p�$%��1�����ì]� p�t|S)>J���Cg:x+�a��F�"�� K��gUo���� qv� ��� g\' �lr�7Ђq 4H��oCf�Z �� a � }� �!3�ŕi��f���#.� z/��(\\F ����Gl�.',
+    description: 'Angel Aesthetics Med Spa is a medspa and aesthetic wellness clinic in Orlando, FL.',
   },
   {
     id: 'spa-vita-orlando-fl',
@@ -1209,7 +1209,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: '�H&�Ví�,n��56������ �"��%հ��+�%vc���?k� ��F ���*[��.u���,C�u�����838�? �]c �*�L�y:����He_���p�,��� ��/�Q�jH���T�ɚ1����u�lƕ�2��HJ���>�n�]b�zŨ "���(.',
+    description: 'Spa Vita is a medspa and aesthetic wellness clinic in Orlando, FL.',
   },
   {
     id: 'sand-lake-medspa-orlando-fl',
@@ -1242,7 +1242,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: '�G�`� �%�E��9��E ��a��&&_�� <άpvaE�1;��K2�ߪ�hr=/�~ӿ���u�� {K�\'�t�u��针\\�_�S�V���J��/�E�#hVj��*(T)�i�� �� ����y<_�-� G�L����p��� ��;�a�;����χ�ے�i�������I��9�^���C��Ǔn�F��D ����s���1�� :�l.T�_W�1�Ag\'GQQ�!��KqY�j1-� jԩ�|j�r/! :���J�?�dΈ��I׬��ٲs�7�N��M5A�ݨ�=��^]N}�*�������y� InʡgZt.',
+    description: 'BioDesign Men\'s Clinic of Orlando is a medspa and aesthetic wellness clinic in Orlando, FL.',
   },
   {
     id: 'elevate-aesthetics-orlando-fl',
@@ -1258,7 +1258,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: '<"$m� (=H\'�Y��}B������^�G�mAA�}����s��`}sf�{| ��]� �P���5u Ҕ�P���<����=���dĺ7�f? � �A=�9�fͬx:�R�Ǐ�`�u�b`���ړN��t�A`H�8���,�p�( #��$� �� #=�Lm$�ǯf���V�$˜y I ��(2�`W�"X �D0� ���B��4� Eh7�f�T�u4@4�!@-Z�\\�����6�^4�|�΄9F�m�"�R!',
+    description: 'Elevate Aesthetics is a medspa and aesthetic wellness clinic in Orlando, FL.',
   },
   {
     id: 'beauty-refined-orlando-fl',
@@ -1275,7 +1275,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: 'Y��k���S𷾣I�+Ħ� h5�B-�@�� �) +��U�~ [�at���Et�a��^G0��n�pV�����[� �f~��i(i����j���I�NI��~�Cs&��~3�^g �v�zL<�X��zC�N5xb9 Sg�Ж���CI#��)�����Y]��r@�Jn!C�Y"� ��- �Iv)�G��n�. � �=>9 ��r`SeQ���v 緆�;t�v*|J�k�,G��M��h-��BUҰ�����׉�2l���ty+�m�3O�y?',
+    description: 'Beauty Refined is a medspa and aesthetic wellness clinic in Orlando, FL.',
   },
   {
     id: 'vitaluxx-med-spa-orlando-fl',
@@ -1326,7 +1326,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: 'Juliana Frois Ir para o conteúdo Agende sua consulta Conheça o Membership Agende sua consulta Conheça o Membership Protocolo de Emagrecimento Mounjaro Saiba mais Seja membro e tenha acesso a Benefícios Exclusivos! Protocolo de Emagrecimento Mounjaro Saiba mais Seja membro e tenha acesso a Benefícios Exclusivos!',
+    description: 'Juliana Frois Ir para o contedo Agende sua consulta Conhea o Membership Agende sua consulta Conhea o Membership Protocolo de Emagrecimento Mounjaro Saiba mais Seja membro e tenha acesso a Benefcios Ex',
   },
   {
     id: 'vitality-wellness-spa-llc-orlando-fl',
@@ -1343,7 +1343,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '���UO���+�^J)���(k�u}��P��$A�f)��^XBNY� ;n����~����q �&1s��C�� g�Ff3��$��0���_bld� ��wO�ZI3*bрS�^ ��aY $��"F��Xu��i�Q�[�5Kf���x\\2C�<�I�SEޒ? �� ��b.&zN���t�� K��cی2��Oʭ������f��!�w�,��Ynל�q2>4^[��:���;����g�6��6#� �HvRlE$���!D\'ѐ G%���\\D|����~g_ ���Q!�0��R�� �}�Տ�z�� .���ˍ�X�6wOL�`�8����Dr�S �3�ܭQ�e��$�HWg?��G��*�O�a 圆����=�V�  �{+��  n���  X�o ��>�@9����<�����x1���e/��Ӣ� W�}2�˲����ZT�E��dB�����3��6�v��?�0I=,��&����r�+��\',�aj"T O���V��� ��c�s/?',
+    description: 'Vitality Wellness Spa LLC is a medspa and aesthetic wellness clinic in Orlando, FL.',
   },
   {
     id: 'touch-massage-by-andrea-oliveira-orlando-fl',
@@ -1374,7 +1374,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'E� ��A��ź���� �S֣ �����-�&o��N�5��W T�*���7�8�TŦ�,�������;�O�<��]1�  �CTvq��e\'4P�M�o���� 5�Xx$  �:�oe�l�Ļ�̎� m8�x���`�����ʜ��(�. �=����� *Xw=^F��nX�!���Ls��� �4�o�g&5�y\\��+���{D4缳�(�0\'��|ܪ���u�7�����~����h�C\' �ܔp�9�z �~�"@r!BU��fB�Q,Tt�j���^�8@U��·�g�Q�y�y4F�O�7��B�S،�QD����/{��t�� ��x�:� f�3l��� ��rn��۫� ~�0�� �F��}��=�Am6��W7q�/(1�.:� 8V!W���t8�4M �j��X�K����t��������ϐ�LzŐ�������\'r���I dL2 � �{Cʙ �?�8���a5�B؏!',
+    description: 'Nona Med Spa is a medspa and aesthetic wellness clinic in Orlando, FL.',
   },
   {
     id: 'evolve-aesthetics-by-dr-iggy-orlando-fl',
@@ -1407,7 +1407,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '�8��� ����h �v�$�1���=)X~aNl|�6 �N۶XM��e �k���J�@���9a����*���I �9�@�\'X��!/�`j 21b�Z ]�h�<�#��pȻ�T�p�U RY�v�SB��� ̇\\V�=��咺��X� �7ϯ �1��LB �#3~�MO�86���4a f\\��:3. ��&JF�%R3Ƿu݃����cW9��G�Rފ� ���_>����|� �����us�^�95��1t�Id< �� 1���#�V�a�x�͓X��ʃP�q*��ú��-TwmkV��F�z�LϽ���U��r��|��h EϒH:�n�����~.a�\\wxC0�@4SXW��WgW { �ǭ�Q��P�^Ѭ���8� �p݉E���B3�04� %\\� ���>\\J= t���/%�%�|�K�G� E2�Թ�����.�|������� �]��>�& �mǜ5~����y��m�u\'� *O��}mb\\ ���ӱJ��7����',
+    description: 'Enhance Biomed Aesthetics is a medspa and aesthetic wellness clinic in Orlando, FL.',
   },
   {
     id: 'glam-life-med-spa7-orlando-fl',
@@ -1423,7 +1423,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '� e��"Mڙ��PA�U���K!1L@=y� ���BX�mbN:>��G�vQ+�4���~��^�. ����_a�(O�\\�k-I�`& L�C��-4��VE ������b�t{\'�<������t�|�Dw����}����E��H���s! �?',
+    description: 'Glam Life Med Spa7 is a medspa and aesthetic wellness clinic in Orlando, FL.',
   },
   {
     id: 'reviva-wellness-center-orlando-fl',
@@ -1440,7 +1440,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'q���QH^[xDa Veळ� �#u�ϟ�b �����O�������+�l ��)F�4I��� oW7� Ѯ��] " (**��I�-_��4��<��ًC��a��� ���L�k����3. �6X����j߇q]-�v�.�P��7���dRK;W��B�+\\��-��,�BZ��(��CR���FE�y�\'? {�<������+�z��N�H\\�d�>@�4�^ DJ~�e�\'9�Z�.��^�&g�p���6/�@)�U�?�{E �R>��;��Rv�Gy>�<N�N�� iPϊώ��&��<`��!У�Y����OҾ��� 3 6ĸ�� ��W��fiRbk8�佬O ^��;�Ձ�^�bX�%On �dX�ɤ��]B��a����幢�N�?��j��0�p?',
+    description: 'Reviva Wellness Center is a medspa and aesthetic wellness clinic in Orlando, FL.',
   },
   {
     id: 'spartan-medical-group-orlando-fl',
@@ -1457,7 +1457,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'Us9Z4B�:���($o�?�!\'�  U��� V����N` ����`4�-V���t�=<��}|���g�Z�ki�:�n�L� ���ĝ8�����I�2.HBb�`�d��[w�x��� ՚��y�� �Vu�5���= |�d 6���`��gXc Rw�O ���K�,�=��nM��&@� �p���l��|� �?H�B��� �͐ä{��t�߁ߟ�~��&ȟч�m�&o���.',
+    description: 'Spartan Medical Group is a medspa and aesthetic wellness clinic in Orlando, FL.',
   },
   {
     id: 'orlando-dermatology-orlando-fl',
@@ -1473,7 +1473,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$',
-    description: 'We here at Orlando Dermatology Inc strive to deliver the best care possible for your skin. This means specialized attention and care for all of our patients, as everybody has unique skin which requires personalized treatment and care routines to keep healthy. Between our highly trained doctors and dedicated support staff, we always aim to give our patients high-quality care with comfort and ease on our client’s part.',
+    description: 'We here at Orlando Dermatology Inc strive to deliver the best care possible for your skin. This means specialized attention and care for all of our patients, as everybody has unique skin which require',
   },
   {
     id: 'soft-aesthetics-skincare-clinic-orlando-fl',
@@ -1489,7 +1489,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$',
-    description: 'j_�1�?,�j} O�n���pCg�4�7v©o �E8�\'W�~�����Ws�����~�=��8��x!pn�]9x���ͪ$���{W�zr\'%Ȯgy#@���wuW:� ������\'�5��.��a��E ��� Mp�1Ƴ���-t֯g�R�!�k���t���������0� r&4#�үgB�B�f��$�����m���G��k��6�de��,2ę.��&G��2\'��y�. ,�栃��搃�����o���ޢ0aiP ��v�ֆ>��gW%��z� ]L�cR��y� �&y�PZ \\�l���" Q��4�*<�*9 �9�8ʔp�}��U�J�=�]�Ѽ@���1&8� S�Lhi�|2�x�忎��8v ���ğ`��?D�?',
+    description: 'Soft Aesthetics SkinCare Clinic is a medspa and aesthetic wellness clinic in Orlando, FL.',
   },
   {
     id: 'vida-health-centre-llc-orlando-fl',
@@ -1537,7 +1537,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'Hayati Aesthetics & Laser - Orlando FL | Vagaro  Search  Back   Cancel   Submit  Type of Service:  At Business  Mobile Service  Live Stream Search Country United Sates Select Location   Cancel  Online Scheduling for Salons and Spas. Salon Software | Salon Appointment Software | Vagaro Inc." title="Online Scheduling for Salons and Spas.',
+    description: 'Hayati Aesthetics & Laser - Orlando FL | Vagaro  Search  Back   Cancel   Submit  Type of Service:  At Business  Mobile Service  Live Stream Search Country United Sates Select Location   Cancel  Online',
   },
   {
     id: 'pelham-medical-consulting-aesthetic-lounge-llc-orlando-fl',
@@ -1554,7 +1554,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'q���QH�y=|D�����t�PG�?��8��:��}����ϗP{\\if[�f��G�4I��>��<.�6�ހ&F�H2�1�����_2�-;���d&�"��JS�db�E���7_s���r��Fg+�FD�1������T�( �����O�[ʧ�m�}S�Q�5�s��N�:o��d�����~U�@���"%�Ԃ]C9����b�lH�z �N�F�}F=�h�O�E�1&�. �B�ear���.�j� 9�=0�9* � �υ�B��f!s�,�� ���\\�,L.x6" �cY�>�!',
+    description: 'Pelham Medical Consulting & Aesthetic Lounge, LLC is a medspa and aesthetic wellness clinic in Orlando, FL.',
   },
   {
     id: 'the-aesthetics-lounge-and-spa-downtown-orlando-orlando-fl',
@@ -1570,7 +1570,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'Downtown Orlando Medical (Med) Spa: Lip & Dermal Fillers, Chemical Peels, Laser Hair Removal, Lip Filler Injections Orlando FL - The Aesthetics Lounge and Spa Downtown Orlando The Aesthetics Lounge and Spa Downtown Orlando Confidence. Invest in yourself with treatments that amplify your beauty, boost your confidence, and elevate your everyday glow. From advanced injectables and results-driven skincare to cutting-edge lasers and whole-self wellness, every treatment is designed to elevate your natural beauty and nourish your spirit.',
+    description: 'Downtown Orlando Medical (Med) Spa: Lip & Dermal Fillers, Chemical Peels, Laser Hair Removal, Lip Filler Injections Orlando FL - The Aesthetics Lounge and Spa Downtown Orlando The Aesthetics Lounge an',
   },
   {
     id: 'loren-marsura-medspa-orlando-fl',
@@ -1586,7 +1586,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'T1����(.�� Cбx � �pm,�[��E�r�_*�G 1�� �۝�}���x�-^�)�NO� ����\'��zq ��7�X��#�p� %N2|:>-�|��4��.�eF��.��i"��I�Q=�K���,�@ukiC����NV&P�D�����ᖽ�eh퓷��:%?`�}��v! kЀ0��:��bO9�DM%� 2H�{Ȍ ���,����4��h�Ԡ�$��5�CB�D )�2���Z���S�l����� �=�C �X�C$@9B�Lm�E ��3 ��*�VȨP��� !yV��"�p��Ϻ���)#ŏ�5�����V__���#�ӏ��Ӌ���p�fZ}���F�>�"�8�"�H���Ʌ�� =�l�[(���H` �n�]�x�"��~<���FP��weY>�Q��~&���{i����ѝ��9N�гS=Ȝ�7v�=t¢� ��z= %�W>��x_׽b�Rx�ɕ�y.',
+    description: 'Loren Marsura Medspa is a medspa and aesthetic wellness clinic in Orlando, FL.',
   },
   {
     id: 'le-spa-by-rosi-orlando-fl',
@@ -1636,7 +1636,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '����]��������{d� �NE�(��\\�E/\\CJ��(�rʺ����R{EΎ˕4ɵx."���0 �s,��W��#fP��\\��t��Y��g��:�ϛ�v�X2��ٺZ4��  �14�5.��1 \'}^�? ,�Ǥ���s ��&q\\�n��73伲���A�]rB�U����2�Y��J�q�ֽ��q�)U]w$�=%\\e���o0��vq �� �u.Z��XםU������%�5��. �$9�Bw����pݹ� �8����� �5 a�;� ������3{���OĘ;�ʞ�w�r����J�.M��������C�~"L�]�_�� [5$lx" �N 5j��H��Y� ��g���ϲ�%:�^s�4в^�� r��!�E?',
+    description: 'Thrive Beyond Wellness, LLC is a medspa and aesthetic wellness clinic in Orlando, FL.',
   },
   {
     id: 'aura-medical-wellness-orlando-fl',
@@ -1653,7 +1653,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '�O#������^�#7�|�p��N���9`p��#(X#L�i� X�� ����vp��ׂ!h����U�v0pA��|��騾�s ���1L�^0��Z/攣v}��ґU�i_���[��[�x\\�YH�мj��� z�k�d� .',
+    description: 'Aura Medical Wellness is a medspa and aesthetic wellness clinic in Orlando, FL.',
   },
   {
     id: 'aesthetica-advanced-skincare-studio-orlando-fl',
@@ -1684,7 +1684,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '���ms�����w՜���ueVɺ��i]i�CJ� ���3@����g���T�������߂�h�3��=���0���&�ko ��o.��F� ��j��>y����6=V�����q�b�~��� F���e�z ��FSHD��jy9��-�u���oɭ�9���:�hn��V} � R����\'ܤj G��� -���\\J�< ʿ��-�A{�" j+6G��AB��� u�b����J�M�D�T� )� �؈m�S����jqQ����B��',
+    description: 'Ingrid Miller Advanced Aesthetics is a medspa and aesthetic wellness clinic in Orlando, FL.',
   },
   {
     id: 'orlando-center-of-medical-aesthetics-ocma-orlando-fl',
@@ -1700,7 +1700,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'K�x(# f���!��e �� ��[v4�=ٿ S��Bx��a�p7M�zƲ9��`���6 �n*lbi���"��ō����6EW�v����&���k�����%1S�nf~��+��`� � �T�%ߜ�g ��aɄ�N^.',
+    description: 'Orlando Center of Medical Aesthetics (OCMA) is a medspa and aesthetic wellness clinic in Orlando, FL.',
   },
   {
     id: 'true-u-medical-spa-orlando-fl',
@@ -1717,7 +1717,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'oyC�<�\'E)� 6�g��p[� y\\dw%�?#9i�I���b#���+z ,.��l�����:�� b�@-����zN !xp�x�-���4�7��W"��e� �@ ��I���� �NL����k8���w�P�oa�4�Vz�\'t�J���ۜ ��q� L�\\�:�]%���T�� ?\\.=eH1������T@�NNWh��In����N;�L� ���c�K�e? �n�\'�2�;�>�Ի;$N����5�� ����i�"��d �nB�΅� @ �������Kl-��r�C��{�џ9�� �fP�0x�{��@!����u2J���$I��͙�hu��/��b��̶ �G���|�l���.',
+    description: 'True U Medical Spa is a medspa and aesthetic wellness clinic in Orlando, FL.',
   },
   {
     id: 'the-medical-concierge-aesthetics-orlando-fl',
@@ -1750,7 +1750,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'q���QH^[xDa Veळ� �#u�ϟ�b �����O�������+�l ��)F�4I��� oW7� Ѯ��] " (**��I�-_��4��<��ًC��a��� ���L�k����3. �6X����j߇q]-�v�.�P��7���dRK;W��B�+\\��-��,�BZ��(��CR���FE�y�\'? {�<������+�z��N�H\\�d�>@�4�^ DJ~�e�\'9�Z�.��^�&g�p���6/�@)�U�?�{E �R>��;��Rv�Gy>�<N�N�� iPϊώ��&��<`��!У�Y����OҾ��� 3 6ĸ�� ��W��fiRbk8�佬O ^��;�Ձ�^�bX�%On �dX�ɤ��]B��a����幢�N�?��j��0�p?',
+    description: 'Renata Orna, DO is a medspa and aesthetic wellness clinic in Orlando, FL.',
   },
   {
     id: 'hair-specialist-lucas-fustinoni-vq-clinic-trichologist-orlando-orlando-fl',
@@ -1814,7 +1814,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'Orlando Concierge Medicine Skip to content Search for: Search Tired of seeing different providers or feeling rushed during your doctor visits? At Orlando Concierge Medicine, we prioritize your needs and deliver a superior healthcare experience—offering personalized care and ample time for you. Concierge medical care in Orlando is an option based on personalized primary physician care with: 01.',
+    description: 'Orlando Concierge Medicine Skip to content Search for: Search Tired of seeing different providers or feeling rushed during your doctor visits? At Orlando Concierge Medicine, we prioritize your needs a',
   },
   {
     id: 'renew-vitality-testosterone-clinic-of-orlando-orlando-fl',
@@ -1831,7 +1831,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'Testosterone Replacement Therapy Clinic in Orlando, FL - Renew Vitality Renew Vitality Testosterone Clinic in Orlando, FL All of Renew Vitality’s treatment programs are custom tailored to the individual by an experienced medical expert in our nationwide network. This men’s health clinic offers a comfortable and secure environment focused on improving men’s health and vitality through specific treatments overseen by our testosterone specialists. Renew Vitality’s mission is to unlock the potential and enhance the quality of life for men who have to deal with the effects that come with low testosterone.',
+    description: 'Testosterone Replacement Therapy Clinic in Orlando, FL - Renew Vitality Renew Vitality Testosterone Clinic in Orlando, FL All of Renew Vitalitys treatment programs are custom tailored to the individua',
   },
   {
     id: 'biohp-med-spa-wellness-orlando-fl',
@@ -1848,7 +1848,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '��%�T_��<:����˛���7GQX.��×� ��@�g��D@K �T7�� am�-����;���Tս�sX�^���m��H��n��o� ����?�`a��K� jikm��ғ��u�ٍ��F(d��B���~]���y*�C֞�ؒ��z�bK�#~g�m!���(��+}�8\\����8SE5',
+    description: 'BioHp Med Spa & Wellness is a medspa and aesthetic wellness clinic in Orlando, FL.',
   },
   {
     id: 'elements-rejuvenating-med-spa-orlando-orlando-fl',
@@ -1896,7 +1896,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '[ �V�����@򔼊xDLO� �mh�cr���$��}q �"5� #�(�����g�Mڲ.�OO���bb ��{�O���iH����6&55������ek&8�GP�k��E����"@�^Ǵ��@ѽ+wL ��0��:���Z�7ڞr�6�FG��y�gO\'��! GH&1A"(wJ��������h�]�J�L�[�:��:Q�Ѣ��| ���� >�x��c���.�1�yH=�Ɯ�W&r!s.',
+    description: 'Reign Medical Aesthetics & Wellness - Windermere is a medspa and aesthetic wellness clinic in Orlando, FL.',
   },
   {
     id: 'windermere-aesthetics-orlando-fl',
@@ -1928,7 +1928,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'l�S� �إd��Z�u?M�k�&Ħ�B�-��9����ʣx�0l¢�^Z��^����M�l ��:�Ǚ ���� �����$�f7A8 ��S�P �c��ud"� 5���#c�LD�0����� Ք��)3VG�j�Èq����� < �F�� &�f�0�"��x��q@yP}?���9ͤa��5 ���b���T�PC���/a �_\\�2�w�\\א}[t������EHV�]���B]�@eub�ΆU��"P\'/������鈼#Q����w�紊��G�b��D��׮ ����O� �R5 Ur`F�k��� QSv�C��.',
+    description: 'Crown & Ryxes: Hair Restoration & Men\'s Sexual Wellness is a medspa and aesthetic wellness clinic in Orlando, FL.',
   },
   {
     id: 'beau-terre-medspa-orlando-fl',
@@ -1944,7 +1944,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'We here at Orlando Dermatology Inc strive to deliver the best care possible for your skin. This means specialized attention and care for all of our patients, as everybody has unique skin which requires personalized treatment and care routines to keep healthy. Between our highly trained doctors and dedicated support staff, we always aim to give our patients high-quality care with comfort and ease on our client’s part.',
+    description: 'We here at Orlando Dermatology Inc strive to deliver the best care possible for your skin. This means specialized attention and care for all of our patients, as everybody has unique skin which require',
   },
   {
     id: 'orlando-medical-center-orlando-fl',
@@ -1975,7 +1975,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: 'Lux MedSpa Brickell, Miami | Best Facials & Massages Miami’s Best Facial, Massage & Couples Massage You Day Spa - Inside the SLS LUX Hotel, Brickell — custom facials with HydraFacial, lymphatic drainage massage , couples massage , metabolic peels, microneedling with EMS & LED therapy, and Ultraformer MPT . Designed by Alan Araujo — quiet luxury, clinical results. ♛ Award-Winning Excellence Validating The Vision of Alan Araujo Gold Winner Best Med Spa Gold Winner Best Day Spa Gold Winner Best Hotel Spa CEO Times Best Facial 2025 "We are not just a spa.',
+    description: 'Lux MedSpa Brickell, Miami | Best Facials & Massages Miamis Best Facial, Massage & Couples Massage You Day Spa - Inside the SLS LUX Hotel, Brickell  custom facials with HydraFacial, lymphatic drainage',
   },
   {
     id: 'dolce-medical-spa-miami-miami-fl',
@@ -1991,7 +1991,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: '!#��A)f"�����ع�Q!���RU� �aV��Q����f�s%�^&� ,eu]����KL(&�N��J�á��р��T)�񗕘�Û�z�7�b  ݷ-z�#/"X����Zg>���u7{=�����~��Bt(Ԭ(��`Zi��4E�gP}��� � .���Ӷ�� ��ֺ��a��m���Lj���-��# þ�N�ǚI�@m!-zFa��ɐ�~���V�<',
+    description: 'Dolce Medical Spa - Miami is a medspa and aesthetic wellness clinic in Miami, FL.',
   },
   {
     id: '4ever-young-med-spa-wellness-center-miami-midtown-miami-fl',
@@ -2008,7 +2008,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: 'E��^�k��ƌW���=�z�SqRr!�qU� %�Q���WBuM!',
+    description: '4Ever Young Med Spa & Wellness Center Miami Midtown is a medspa and aesthetic wellness clinic in Miami, FL.',
   },
   {
     id: 'no-filter-medical-spa-miami-fl',
@@ -2024,7 +2024,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: '%�JOċ|uX}8*@�\'@�$�:O�~q쿜 ����uд��iꍷx���0���#���N�7z��ݓ�0M6 �P�œ�|6��` 3ҭ,_=y�Ʀ`��p-גh���C̀���/粬�Գ~5A����.j���VO r�.\'(��NOq��C�Ƀ�R�T $�c�Y�~�\'���� f� ߅ۥn3z��&�Q4�TC*����h_�\\e. �㱯�J�����Y�n����-\'�w�) +���UF��npt�ޫ�Y}����d�)xٳz��/m����3|fR��C;:#���*!��^� Ȝ�Z!{��f}F���eIH���U�1�M%s�m��&,� �Vi m���Hn�B6fuz� �`�&� � �Z.',
+    description: 'No Filter Medical Spa is a medspa and aesthetic wellness clinic in Miami, FL.',
   },
   {
     id: 'caruna-med-spa-laser-center-miami-fl',
@@ -2056,7 +2056,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: 'Monaco Medical Spa \'s Miami Best Cosmetic Med Spa Call 786-536-6117 Monaco MedSpa in Miami, FL Where A Passion For Beauty And Aesthetics Meet! The Best Med Spa in Miami staffed by the Best Cosmetic Doctor in Miami: Dr. Barrueta Monaco MedSpa March Specials PRP & PRF Valentine\'s Specials!',
+    description: 'Monaco Medical Spa \'s Miami Best Cosmetic Med Spa Call 786-536-6117 Monaco MedSpa in Miami, FL Where A Passion For Beauty And Aesthetics Meet! The Best Med Spa in Miami staffed by the Best Cosmetic Do',
   },
   {
     id: 'blonde-girl-aesthetics-by-dr-alex-dnp-miami-fl',
@@ -2072,7 +2072,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: 'MedSpa A boutique medspa focusing on cosmetic dermatology and aesthetic wellness. Our commitment is not just to enhance your natural beauty but to uplift your overall well-being, making Blonde Girl Aesthetics the premier destination for compassionate and effective aesthetic care. Alex is not only the blonde girl behind the business name, but she is also a highly qualified, doctoral-prepared aesthetic nurse practitioner with over a decade of experience in the medical industry.',
+    description: 'MedSpa A boutique medspa focusing on cosmetic dermatology and aesthetic wellness. Our commitment is not just to enhance your natural beauty but to uplift your overall well-being, making Blonde Girl Ae',
   },
   {
     id: 'bella-vida-aesthetics-wellness-miami-fl',
@@ -2089,7 +2089,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: '=r�������S�f#6Hk����]�m̧�"b��F A�F����t��G۠��V��˝H ��̔�Լ �Gσاz-==� &tj�m�t���w�p��N`fV�×> z�m ����@W��~/����O0� ^-c��������24�h�j��PGK�O3>. �X^>��7Cݟ�e}  r��������m���\\���3�#U�N|A^Z�_a�Mw,lc����w\\�Uj�ؕ�c�j�TvC?����M�BD�� Wx�AA���AX��zJq�@�J�Gh�wP��e���Y=� }[j�����#ӧ�#�G�s���=:�$ u]핆�˰U��C�u�3���F(�s � �����}h�/^ _�P�a�t�Z����UW��V0]�_Ł����.',
+    description: 'Bella Vida Aesthetics & Wellness is a medspa and aesthetic wellness clinic in Miami, FL.',
   },
   {
     id: 'miami-skin-spa-aesthetics-wellness-miami-fl',
@@ -2106,7 +2106,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: 'U��9aO{1 f#���pZPs��PG�?���� ���? �&��j�;��]\\��=<��}|�����������w����\\���c� I�IHɟ�[�J�@��*ن��f�7������ӵӿp�������*���ߋe����K�E��{(�?��/Vh���1 �!9b�j�ܑ��I�(���[Zn� �3 9qd(c��L�D�/Ǒ��%�｝���GU��9U������A�{ qp������_� xb��q gEr�_��:��= "� �$:�w����p�lC���H6R�PA�TYfM&E�"�߲��tw �����MAV! b� �r� �Ã���1�+W��c#)�U(��G]U>�/ɔa�Ct�˳5�r��W�4zu�Y�\\���6�)ˌIVy;_�����\'���N����C������K��z6��Io�O� _a��~��8A��N\\ _a]je ]b���X����K��wxH�ŏHs�&�sr�R5��U��y�\\��� ���A}�dP_���"�A���2r> �Na�֙Tyҙݧ�(Yd�n�,���Q���<*���� hYI����З���X��.��[��kl�l0��ES����馮o�����H������� �YH ó��G��� �,c�|lЇ0�9�>ƽ>�sƾwБ-�?5L�B�!',
+    description: 'Miami Skin Spa Aesthetics & Wellness is a medspa and aesthetic wellness clinic in Miami, FL.',
   },
   {
     id: 'the-clinic-usa-training-academy-miami-fl',
@@ -2122,7 +2122,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: '��N=~=�Y8��� � G�}y$�� �����&K\'��b �������%N/�`�zM�b���y){#gM>1[��@8�9���K9�y�d�S�F^�X��Ҳ�\\�]Z"׸��+��_�z?�O�3��hO�:WںK�PiVՅ��Ug�!��/�O����􏖝�� �9? kc���q��t���)3[_�#��Gv_�g� �E( 3��ӟ �(�֩���"~R�J[F���"�� �x� ��pJ�҇�G>�C0 fS �ع�� ��z7�-`��nI2+As�����Z+g��b�\\�)�JW�_���q�$�܁M.A�{ ����/D>�� VʼahZL2��vw&F�P��d�e=f�o6��[�g�f S��&� ���q\'MB��7^V¤ O�Mz0�8[J��\'yd���`��ji�(bIb��L��Ty�� � IIp���>C��Yi���-��ӌ�^�2?',
+    description: 'The Clinic USA (Training Academy) is a medspa and aesthetic wellness clinic in Miami, FL.',
   },
   {
     id: 'alicia-med-spa-miami-fl',
@@ -2155,7 +2155,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: 'M��n��� >��p�R-�"�-�m����� � �i����)%���h� z��8; E�-�aR(:<��R�Ӥ�Ƙ�f��R�� ���V�"��p1�b�7���?�ɳV+B��#�h�ƔM�F��*�Ҙ0�\\�s�4p����~ŕ���? &���&)�+�`�j��l>+��"/ )i����y�W+&�^N��"9�Pq��h`� ; �1�(��Q�8J�.Ȕ%��X� r` �\\�_l�쯊��`vDY�Fs`�P)W�B*,a�5�.�(�R&Cg��R�\'S����!',
+    description: 'SKIN INSTITUTE OF AESTHETICS WELLNESS AND CONCIERGE is a medspa and aesthetic wellness clinic in Miami, FL.',
   },
   {
     id: 'skinlocal-midtown-miami-miami-fl',
@@ -2171,7 +2171,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: '�_]DT�~P� s��K��63��?U��q� ���f뚭��tyy +�� ����~Y�Y"i0� �gX�{�{���%BEU:��+���3�����WU���@�P҃@r���Q?Y��^�r��=� ������s|���8�h�� ;\\9h��? �v��"���ԫ��M?�e�/ �i�l��`���65g��M��ִ�� �g�; �Q�W�0�0%� ���?� ��n�)�1�1�<�i��fޡ�� ���5vQe,;�QSD�����Zq�ʴV��e�DI4�Y,|�Obk ���J%٭� X���1HJ ���U��D��pG� ��:XƆp\\�O��0���f�?m|�s� e��l �@ � &��EOYA@_Hv�ٺ�a@ Cs��kAh4�i܇� ����@z��C�H�C��޹� K��� H �4v,�~Z� H V9Mo��%.�gV��ّ�(���Ud ���4�O� ����M!',
+    description: 'SkinLocal Midtown Miami is a medspa and aesthetic wellness clinic in Miami, FL.',
   },
   {
     id: 'skinspirit-miami-fl',
@@ -2187,7 +2187,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: 'Botox, Fillers & Facials in Miami | SkinSpirit Refer a friend & Earn $50 in FAB rewards! Safe & trusted treatments Noticeable results Highly trained Experts Information Miami World Center 851 NE 1st Ave. Every treatment and procedure we offer has been carefully evaluated by our in-house medical advisory board for safety and effectiveness, and our providers are constantly learning new ways to administer them to minimize healing time and level of invasiveness.',
+    description: 'Botox, Fillers & Facials in Miami | SkinSpirit Refer a friend & Earn $50 in FAB rewards! Safe & trusted treatments Noticeable results Highly trained Experts Information Miami World Center 851 NE 1st A',
   },
   {
     id: 'glowvita-med-spa-edgewater-miami-fl',
@@ -2236,11 +2236,11 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '_�3� N?b�BE�2��Ndٵ ��$);� V8�ѷ#����P,7�N\'%7����1N-&�^l��;�I]f�Q[��H�W����H����$v���C&\'�/Y�Z�\\H_����f>j2�$"��ly�&<�w���v#�1{2��CLˏ�{���`_�S�o�y����|�H4�X�^7e��� 9A,�KTv�*��ؒ��Ru���kb�ž�퇦�=v��+�i"L�`#V�{�#� /���5���~D���/Xb�s�� 2������n ��Yj �`�f�뺒:�F�)����K��� �j�)P . �[����N��U�5L�$�� ^����y �� �Lh�c!�F�u��fVt޵cCd��`I�"� �8��g-v��:6� ��q:��o�\\�tO���y�@�HvϾ�"[V�h���a<�Gg���xf�U-Y;�%kT��ם�]ܑ-����ԇ~��OƩ� ��nџ�Yci�<�`� Y%���t��C��z�dm��(�r" ���,�bY����J�lwu�I�F%��t/! ����YvU��+��.',
+    description: 'Arviv Medical Aesthetics Miami is a medspa and aesthetic wellness clinic in Miami, FL.',
   },
   {
     id: 'miami-aesthetic-pat-pazmi-o-md-facs-miami-fl',
-    name: 'Miami Aesthetic - Pat Pazmiño, MD, FACS',
+    name: 'Miami Aesthetic - Pat Pazmio, MD, FACS',
     slug: 'miami-aesthetic-pat-pazmi-o-md-facs-miami-fl',
     city: 'Miami',
     address: '848 Brickell Ave STE 820, Miami, FL 33131',
@@ -2252,7 +2252,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '��Cq�a���ۇ_,�_x�۴\'�*����O;��������c{�xs��./�� ~B�x���|�iZM�=QE��ᥫ�9B}}��ٵC#P] �~�WZ6,^��w�?�92ω�/4�� �Ƌ�,�gz"�t-{�N�hB;TqW� r ��<4��M,�"�v�V=oV���!��]"`�/]�s=���Ƌ� �[7wXj,2�ҍ��2XStj6^�e��g�����C�| _�No�!l�;G��5㈌a3�vjvMt��!',
+    description: 'Miami Aesthetic - Pat Pazmio, MD, FACS is a medspa and aesthetic wellness clinic in Miami, FL.',
   },
   {
     id: 'facial-mania-med-spa-midtown-miami-fl',
@@ -2268,7 +2268,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'Facial Mania Med Spa | Botox, Fillers & Laser Treatments Trusted by 50,000+ patients Your Med Spa Lifestyle Rejuvenation at Its Finest: Trust your skin to the expertise of our professional skincare team. Discover comprehensive care at Facial Mania, your premier one-stop Med Spa. We combine luxury with advanced, top-quality treatments to offer you a transformative beauty journey.',
+    description: 'Facial Mania Med Spa | Botox, Fillers & Laser Treatments Trusted by 50,000+ patients Your Med Spa Lifestyle Rejuvenation at Its Finest: Trust your skin to the expertise of our professional skincare te',
   },
   {
     id: 'dinstyle-aesthetics-services-brickell-miami-fl',
@@ -2300,7 +2300,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'Madera / Wood Therapy $85 Advanced body sculpting and contouring treatments to enhance your shape. Facial $79 Customized skin treatments for a healthy glow. Body Contouring​ $85 Non-invasive treatments to shape, tone, and tighten the body.',
+    description: 'Madera / Wood Therapy $85 Advanced body sculpting and contouring treatments to enhance your shape. Facial $79 Customized skin treatments for a healthy glow. Body Contouring $85 Non-invasive treatments',
   },
   {
     id: 'face-and-body-concept-miami-fl',
@@ -2333,7 +2333,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '�6X�+��j_Ÿ��d; ]d(���o14����.U!���� W;v˼>K����Q�Q�!)�GJ�"���3�=`�ു�J�u��[��z�M$. �rQ��b�X�e�l)hL �l���;)Rޝ@搋���wC�@ �3X�sݫ:* ��?_p��w�?',
+    description: 'Vikara Esthetics is a medspa and aesthetic wellness clinic in Miami, FL.',
   },
   {
     id: 'dermacaremd-brickell-miami-fl',
@@ -2365,7 +2365,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '��L�d�1w.��a�����x۸ �c�BcB ��,_#F� ��h>�~^�0�(.�u�� P��B �#+�݇L/j��MQ��V&�r T�H��>�O�gD��0 x�VZ�@���w2�1U � �K\'~��p�Wa7M\\u=��c\\4�x�ꁡq]w*T=ʑ#���w�f�jۿ�DMm �p� 1�n�Ե^I"�$�Z��pmK&� ��S���q�@#{jϞ\'ۮ h��f����G1�<�d�~a* ß �� �|�� |����y�8��9��lӀ�?�X�x~�n�$S���,� �� ��+�5pmVm���F��. ���̹m�mJ�X���  m�D���p��l��z��;C�!�z�r�3��V� ��� x�ٔ9GL�OI&��ۡ�_�e���±_�t�BK�dWZ@[���z�4��w&��1%a8 ��m|;�(��� �gs��l�p2 5�b�i*��?�}��b�E� ����O��N�r��ɑ�b�>}\\����!g<=7����t� - g�mA`п�@��p{����Oh=�H5G�rl0���Id��A��e�(���͌���cndhV  ���~ p(t�رB\\��&�H}�Ã ��Q���o�8#%�� 5H\'<c��q�B`|lmm?ib�OVN 9�����*d!',
+    description: 'Eco Beauty Med Spa - Miami is a medspa and aesthetic wellness clinic in Miami, FL.',
   },
   {
     id: 'infinity-beauty-lab-med-spa-miami-fl',
@@ -2381,7 +2381,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'Every client receives hands-on, personalized care directly from Dana herself — blending the art of beauty with the science of results. Meet Dana BEFORE AND AFTER RESULTS Explore real client transformations at Infinity Beauty Lab. For anything else, our team is ready to assist.',
+    description: 'Every client receives hands-on, personalized care directly from Dana herself  blending the art of beauty with the science of results. Meet Dana BEFORE AND AFTER RESULTS Explore real client transformat',
   },
   {
     id: 'zia-medical-aesthetics-miami-fl',
@@ -2397,7 +2397,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'Cutting edge collagen-stimulating treatments that smooth texture, tighten skin, restore youthful radiance, treat acne and pigmentation issues, through medical-grade technologies and advanced regenerative skin therapies. Body Contouring & Tightening Physician-supervised weight-loss programs using evidence-based medications and metabolic optimization to support sustainable fat reduction, appetite control, and long-term wellness. Weight Loss Premium IV infusions and vitamin injections that boost energy, immunity, metabolism, cellular health, and skin radiance using high-quality medical-grade formulations.',
+    description: 'Cutting edge collagen-stimulating treatments that smooth texture, tighten skin, restore youthful radiance, treat acne and pigmentation issues, through medical-grade technologies and advanced regenerat',
   },
   {
     id: 'face-by-alexandra-francesca-miami-fl',
@@ -2413,7 +2413,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'Face By Alexandra Francesca Our mission is to enhance your natural beauty with the use of injectables in a holistic way. Prior to opening Face By Alexandra Francesca in Miami - she opened SOWA MedSpa in Boston, est in 2019. Alexandra nursing experience includes developing her clinical expertise at Boston Medical Center and Massachusetts General Hospital – two of Boston’s most reputable institutions.',
+    description: 'Face By Alexandra Francesca Our mission is to enhance your natural beauty with the use of injectables in a holistic way. Prior to opening Face By Alexandra Francesca in Miami - she opened SOWA MedSpa ',
   },
   {
     id: 'mdw-aesthetics-miami-miami-fl',
@@ -2429,7 +2429,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'Miami Premium Botox, Fillers, Microneedling | MDW Aesthetics Now Booking August Appointments – Limited Spots Available Contact Medical Spa Miami: MDW Aesthetic Experience tailored treatments that elevate your natural beauty and celebrate your confidence — because looking refreshed never goes out of style. Book Your Appointment Premium Lip Filler Treatments for Plump, Natural Lips in Miami, FL Welcome to MDW Aesthetic—honestly, it\'s become Miami\'s go-to spot for when you want to treat yourself to some serious luxury spa time! Living here in Miami, we all know how the humidity and beach lifestyle can do a number on your skin, but this place really gets what it means to help you feel amazing in your own skin.',
+    description: 'Miami Premium Botox, Fillers, Microneedling | MDW Aesthetics Now Booking August Appointments  Limited Spots Available Contact Medical Spa Miami: MDW Aesthetic Experience tailored treatments that eleva',
   },
   {
     id: 'beautyfix-miami-miami-fl',
@@ -2445,7 +2445,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'l�ю�H�<1�u����/�!�� �R��e��� Ag���)�i����8 H�B3LH�ɡH4���8�s ! e��O�}1��I�^��I� ���Yۊ�������&j#M%!; {�C-�,�� �JV��6�b�z�3�=�.',
+    description: 'BeautyFix Miami is a medspa and aesthetic wellness clinic in Miami, FL.',
   },
   {
     id: 'flawless-aesthetics-miami-fl',
@@ -2477,7 +2477,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$',
-    description: '�F ��-� �w�^�v���b�{�M/>����iIw�V�X�[�W���)\\|h8` �lV9�$9`�>�)z�7����� ̗��㸠>ԅV���p�0��Q�ڮ��5�6��\'��)��5.;�v+la��=�n��1��A=��b+Ms��le� X��Q�t��7���`������� �JS�Nw �`�`��U��H� /u � �s�!',
+    description: 'Solea Brickell Spa is a medspa and aesthetic wellness clinic in Miami, FL.',
   },
   {
     id: 'dermanova-medspa-miami-fl',
@@ -2493,7 +2493,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$',
-    description: '��ŗ|w�L3�P�� Dt`�،��7%��"Yx<"s�� (e�W�rW�A`Qz�k� ����۽h�.�*6oH�55�}�9���aww��4�$�]�o������������c*��z9^nn�8NkJ�B�ZJ��?��~t}�{3���I������(Y/wA��|���ʝ�a [}u�=}� ����3���N�_����c��k �|j�X|���-��&��rS�������t�Q�������ϋ��K��|=�//�E�M�qq��� ]�  ʡYY�����`�M0bU jפlfi��"��ls���xx���I�? ����3��Q$���0vS5c�z;k����ݡ��P��""��ދ�0�N�@�Ě���� ]`t5n��kc�m7�(�� .͜!',
+    description: 'Dermanova MedSpa is a medspa and aesthetic wellness clinic in Miami, FL.',
   },
   {
     id: 'dolce-vita-aesthetics-miami-fl',
@@ -2509,7 +2509,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'dolce vita aesthetics 0 “enhancing the true beauty and confidence in our clients by helping them achieve their goals. creating individualized treatment plans using the highest quality cosmetic procedures and products to achieve realistic noticeable results”. — Pravitha Hansraj Skin Lab Jump start your skin journey today, with a complimentary skin analysis.',
+    description: 'dolce vita aesthetics 0 enhancing the true beauty and confidence in our clients by helping them achieve their goals. creating individualized treatment plans using the highest quality cosmetic procedur',
   },
   {
     id: 'eph-esthetic-for-men-miami-fl',
@@ -2525,7 +2525,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: ',D%HEM�P�&l�[s���`�z XcQ4%As *D� ֝����9���ӂ�|��fs�6���q��nxH1$ ^/���������<�w6� �_�Q� �Z^i Ew�̗;��&�VV. ��9�̲@�p�p���Ã���Sl����Q�9����=P�z��Ue�iI �&h��9L9��U�V�C���u0W�r 0M��Q� ��Tβ0��`j�Nr_.',
+    description: 'EPH - Esthetic For Men is a medspa and aesthetic wellness clinic in Miami, FL.',
   },
   {
     id: 'ym-aesthetics-clinic-miami-miami-fl',
@@ -2541,7 +2541,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'Miami’s Leading Aesthetic Experts Currently Being Refreshed Our website is undergoing a brief refresh to better reflect the level of care and quality you receive in our clinic.',
+    description: 'Miamis Leading Aesthetic Experts Currently Being Refreshed Our website is undergoing a brief refresh to better reflect the level of care and quality you receive in our clinic.',
   },
   {
     id: 'novaskin-med-spa-laser-center-miami-fl',
@@ -2558,7 +2558,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '����� c���,�񩍃��6�cIq 2�ܬ�����Vс� =����s�iĆY >P�\'OӉ M�o�8�eW�m��"�7����P#b��̜�2�� ѳ�r�eJ�B�}�Z)�C���{9< �  KM�%U!',
+    description: 'Novaskin Med Spa & Laser Center is a medspa and aesthetic wellness clinic in Miami, FL.',
   },
   {
     id: 'rituals-aesthetics-miami-fl',
@@ -2574,7 +2574,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '�U��w��ݝ �u[ p���7��>���ui-�u�/���v| �ђ���ɇ����;���ߏ���>�0��[��硷��OmU��,;�-f�<6���? �r��R��hF϶B��~�Y;� [���C�6u�քZ� � j���l��,��[�� x5�\\ �P�]=[�t�zjM��y3��1H0AV ̀Ұ��I������g��g}VNng�� Y��/� O�.c�Ms�˖���ɸN��2�dl�o�� ��AdI�!O��c0.',
+    description: 'Rituals Aesthetics is a medspa and aesthetic wellness clinic in Miami, FL.',
   },
   {
     id: 'lavish-laser-med-spa-midtown-miami-miami-fl',
@@ -2590,7 +2590,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '>eK^�%3 ���zp�S�r��R �B�d��tFuу���S>�ب��m9��ܱ� ^������������`�S!� *_��������L�!@�6%���b K;V�T�q� ��+����nס�h/ ���4�b�ҥ�A[ܝ��������_GOQ�C\'p 3Ҝ��x����G4t"uV ����� �z�0l�Q7�Sb�>������p=Re���Bc��,���ws v ��܇��ص@�]�4L"�8�`�W)��,$��9�`��>)�2 �仾;�%���� �� ��z��^r�|�׀ �~7}��ĿR���} P��6��/�.X�! =�B� �Ȃ�C ��KȚFm�%j紐�M���t I�C��8R�"�uP�t����M��� �� � OA�����|:<�x����]�C%J�D����P��eln���.W�n��|t>v�ڮu�`y(eM7��w?­�9\\2�a��(�?7 <�. ��be�O��9�=�͑ ꒶NY�M�uC�$ ��(_bd�D��|�u&@�z� V FTʉf5*�\'@O��s=FC� �z�Q� _�wj���Ӣ(,-�����f�Ρ��U���I���MMpX*c����7nM�H �ς`�b�9���=?',
+    description: 'Lavish Laser Med Spa Midtown Miami is a medspa and aesthetic wellness clinic in Miami, FL.',
   },
   {
     id: 'mm-medspa-laser-center-miami-fl',
@@ -2621,7 +2621,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '�i0��\\ f�ycM �%"\'��:,���j/f ��S��ͦ���,p:����jͶ�7��A|S�������j��q� d�S_��x:� Y�3�9�)Q�;t�Ȕ<8 R�s���`� d�{ ��Y� �m%�.�O�+�`HS�9o���:%� "xТ2Y\'��]z4��{��C�>� �bQ���n��@��L (�OU��s � ���_�p�P~�J7���� ���}����a.H���!m� *b���y. 8{r�= �i yl8�n�&�\'bj����t㛋[]�S�kݠ2u �}Po���ӣ�v�z��#��֗�^�&o�@���}�wY>�ބ6��;��^����s���T{��D���u������w��9E~A�z�GI ��I�٩+#s�6�W��dM� �Ue,j~r(5�dk: �� �����?�_N� �� �fn�,���[v6TVVtzf����ALU�M��T�U��<2 ���� $��i�m�?',
+    description: 'PRN Aesthetics is a medspa and aesthetic wellness clinic in Miami, FL.',
   },
   {
     id: 'aesthetic-medicine-institute-of-miami-miami-fl',
@@ -2637,7 +2637,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'q����A�� �$���8� �31� ���Ͽ����X����}��{���)��e;�V�i�?�r�ݫ��y$��  �(����W���Ns��5S%�J׽_߸Ƹy��\\! �V���J��ֿ�Y3���ǵ����n����M��,��9��aTV��g�ݩ�6bR�ԇ�x��GH�4��#��!�(9њ�V�8������ � 6��>�mN�x�Y�6���uطľ]�X�<67Q9�_� ��+�\'��D!',
+    description: 'Aesthetic Medicine Institute of Miami is a medspa and aesthetic wellness clinic in Miami, FL.',
   },
   {
     id: 'z-d-health-miami-fl',
@@ -2654,7 +2654,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '6&�r��.���N���i9$0� (�>�P�]�B\'R�Iy�Q�@I� k���n�����4wWL%Od[�� �Z ��X�� i�����h�� � X_wp�\\O_:���+2aZ�W��ً\\���d�+��qts�8X� -��./ 4>q� O�E1�P*? �U��F���83@��(�QJV�ԡ���pj��#�3���a A#B���#�#/xL&��� ��J�T͗� ��=�qF�.',
+    description: 'Z & D Health is a medspa and aesthetic wellness clinic in Miami, FL.',
   },
   {
     id: 'the-estie-licensed-medical-esthetician-miami-fl',
@@ -2670,7 +2670,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '���8<�`0$\'e���ha��WQ#���L����8q � Ic �ޠ�)�9`��V���A]���o��̵8\'r��k���xۗR�l�^a���v�������v����V�B���8\\1F��z�v*T ����K։ڝ1Ӻ����]VםqB"p�ƷN�+�ӄ��� p��w���ُJ� ��L���I�p;g�O|ª+��a7��c�x%X27�<u��!�9Z1���2ԝ$qR5>�3�c�DZ��"�Z\\ճT018�t���v]���<���jX�y�(_ 1~#��Ξ��]|����V�ї �M �e�@S�̀I��!',
+    description: 'The Estie - Licensed Medical Esthetician is a medspa and aesthetic wellness clinic in Miami, FL.',
   },
   {
     id: 'miami-drip-med-spa-miami-fl',
@@ -2701,7 +2701,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'T��2bs��� �6 @�K�7���@�߰J��K��_OӸ��0� �zV�#t �=��#� 5��!��2 ��؟t��2̥��}�[""ހp��J�D �\'�� ܨ��Ԟ{�^@������� �C�O�,t��,���=5 q0��;gQ��ˏ\'C�G�! �|8�q����m�����z`uW�����jUO���d��]=?����7�G/ww?0N�GN�x��bƖՅ�s���tVǨ���΋A�ڱ.b|]��q�5dw�?1�F���j����pԜ�Ԛ\\d�4ۖ�Z����]Nͦ�/{W�{����k�ړ����t8���x��9���/ϳU�NPm��v@�� ��U�����y���|���ם�̶9����v��{�4M��E��ٮ�q��xq�ۡ��[_��X/��������0|f�Oэ��(\'�,� 2~��\'��l������ϋ�":j��2 ��5� �2�C)s����ˬ�:g�*�!',
+    description: 'Brickell Clinical is a medspa and aesthetic wellness clinic in Miami, FL.',
   },
   {
     id: 'jv-aesthetic-lab-miami-fl',
@@ -2749,7 +2749,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '{���������̨6Wp� T_��&���<}L�?F��7N�֚F��q�@f�1��6c��6cxܤ��`~6���a.I���둓hF( 0�q��+�;�M�S1�m�vÜ��u� ��i*a�.',
+    description: 'Bare Medspa is a medspa and aesthetic wellness clinic in Miami, FL.',
   },
   {
     id: 'medluxe-spa-miami-fl',
@@ -2765,7 +2765,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '���M+=�f���6�����l��g" ̝� ��.�3��O��[J&ɛ�~�Z{��d ��f�Kh�0؎0�S��(w��gv��O0�#��5μ���(k:j�M�$���O!fp=Ykqw���1f)���?�:�Fkv"�H�/�l-�!Nm� ,�!�6� ����G?͇? �&/o���G�i%:�i��3JM�\'ɣZ���Y�P�����lD � ]������|�z� ��ެ j+������;:y����ψ��֒(�--CY��q:; ] �ǩ�������> ׁ� ��{���.��[;�ڭ�f���R �G�(�բ� � B�9i*� c���X�<�ˈ�r�}8f7�C��~���tY=p���&;&�E�6��$r ?hˈM� Q�K��� !',
+    description: 'MedLuxe Spa is a medspa and aesthetic wellness clinic in Miami, FL.',
   },
   {
     id: 'vital-essence-med-spa-miami-fl',
@@ -2797,7 +2797,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'LEADING EXPERTS IN NATURAL ESTHETICS The Center for Advanced Rejuvenation and Esthetics (CARE) focuses on natural approaches to anti-aging regenerative treatments. Our world-class experts in facial esthetics and leading researchers in platelet concentrates (PRP/PRF) and laser therapy offer all-natural rejuvenation procedures to create beautiful, natural-looking results. View Procedures Forever Young-Forever Natural HAIR LOSS FACE SCARS SKIN BODY FACE HAIR LOSS SCARS SKIN BODY HOLISTIC * NATURAL * MINIMALLY INVASIVE MEET THE TEAM The CARE Esthetics team is continuously growing, with more than 100 clinics across the country.',
+    description: 'LEADING EXPERTS IN NATURAL ESTHETICS The Center for Advanced Rejuvenation and Esthetics (CARE) focuses on natural approaches to anti-aging regenerative treatments. Our world-class experts in facial es',
   },
   {
     id: 'liquivida-wellness-center-lauderdale-beach-fort-lauderdale-fl',
@@ -2809,7 +2809,7 @@ export const allClinics: Clinic[] = [
     website: 'https://www.liquivida.com/fort-lauderdale',
     googleRating: 4.8,
     googleReviewCount: 1255,
-    treatments: ["Facials", "Injectables", "Laser & Skin", "Skin Treatments"],
+    treatments: ["Facials", "Injectables", "Laser & Skin", "IV Therapy"],
     specialtyTreatments: ["Peptide Therapy"],
     verified: false,
     featured: true,
@@ -2830,7 +2830,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: '�[�m � ����� ����^\'�$����ݒJW��A�3� k$2�Y<˶:"��B��nܪi��a홉��v��� !n15��f����DZjm&¦�l*�}�W��� ��b�����R��z�:�m��V %? z̔Bl�UqБ� �(ul���X%w���t� AОLc�۶e4�d� �ڭS����R8M� �Yߝ[\'�X��2Y�*!��<;��m��~h��:�wI$pq];�j�dk�� �emF�pªCQxVY�/) � � ���U��ك^}HsuF�W7��W��{�и�S�Ӳ�Sf��c���<.) �l�55y3|m�ዂ��=�8��)���gntWHg-�e��|hjVH#��_G!',
+    description: 'The Beauty Clinic is a medspa and aesthetic wellness clinic in Fort Lauderdale, FL.',
   },
   {
     id: 'las-olas-med-spa-fort-lauderdale-fl',
@@ -2846,7 +2846,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: 'Palladino | Plastic Surgery in Fort Lauderdale, FL Top Aesthetics Plastic Surgery in Fort Lauderdale Enter Med Spa Fort Lauderdale Enter Name* This field is required. Request a Consultation Request a Consultation Luxury Service at an Outstanding Value At Top Aesthetics, we prioritize delivering a high-end surgical experience at a fair price that allows cosmetic transformation to be accessible to a broad population. We want you to feel comfortable and luxurious throughout the process in our state-of-the-art facility, staffed with top board-certified plastic surgeons who use the safest techniques to achieve outstanding results.',
+    description: 'Palladino | Plastic Surgery in Fort Lauderdale, FL Top Aesthetics Plastic Surgery in Fort Lauderdale Enter Med Spa Fort Lauderdale Enter Name* This field is required. Request a Consultation Request a ',
   },
   {
     id: 'refresh-fort-lauderdale-medical-aesthetics-formerly-xs-medspa-fort-lauderdale-fl',
@@ -2863,7 +2863,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: '����諹��5� �(�k�:+�t�S��@�"������� ���(��#������^i�^� �Ø���?�Q���*��xZ�]Z�j+���� 0� c�r�g� �kɪL0 ]����W����� � ��H��-8��m��{7y��L��|�����M���o���P�p���s<�L�f�Se@��.�Zי2 7�0(Q��+7f���1S����8v���:�*_.�͉���R ����]F=B�%;�b�ņP���wV1�H�r��s�縬��n�QP�`���綕4���y֡]�E���� ��[�Y8uh%7�! Nr� ���|L�"��8!�,e������C�RL� \\p����[8�����Dj���k�YA�+( j9t�� � ��V�v�Ã���PD|���A&�c��?0;���_�3*�FR�<!TS�N5( �=8)��řR�M�}נ p�;��L���]�� Ȝ_�;X5�aL Y�1%��!�5�{�̨� d�H� �osfT}WtU���5�"3��sS#Dc��wiȜ_�;��+����@�X�2�a j=�( �=�޶\\n/����x?',
+    description: 'Refresh Fort Lauderdale Medical Aesthetics (formerly XS Medspa) is a medspa and aesthetic wellness clinic in Fort Lauderdale, FL.',
   },
   {
     id: 'dolce-medical-spa-las-olas-facial-skin-tightening-microneedling-fort-lauderdale-fl',
@@ -2895,7 +2895,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: ']�OEW�S���Tt%{j�*�|HuI곑o!���NLCu����P }i�n�4T\']*� .�����>�r� ��s!IH�@� ��$$A �H���$��c����$($A! O} ���� �_�q4�>p��b�؁�-+�o�l1w~��� 0s���)S#��oAڼC�3_���N�:��E�����mϨkU�f�T:�?',
+    description: 'Amaira Med Spa & Surgical is a medspa and aesthetic wellness clinic in Fort Lauderdale, FL.',
   },
   {
     id: 'millennium-wellness-center-fort-lauderdale-fl',
@@ -2912,7 +2912,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: 'Ö¦e;×p Ã]ÜË_ÁXåf"ª|+c)SÀ¬en¹)î Y@Ô×¶$]|G! MUÔ<óÒ8ß5ÂSKû«4ùÆ×ðKWQ#­\\ÁL±îó«hU·RÓJ«~gØïü®Äh`|Á ¿`Z}¢1jÄÞIÜ$_øTm>m|m¡ÝV<Ð£dðj©S W¯X Ñí®­@ë îÜ7 »"°·¾Ê°iO[F¨«÷£t#@êùÇýeÇÑÞÉ<÷¶e2efï\\;ëe .¾nGÂ',
+    description: 'Millennium Wellness Center is a medspa and aesthetic wellness clinic in Fort Lauderdale, FL.',
   },
   {
     id: 'sisu-clinic-fort-lauderdale-fort-lauderdale-fl',
@@ -2944,7 +2944,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: '�V:���wN� sM1YoYj޷;���^�9)ȹ;z���&�+_����z�{�%�6c]�K���t� /���\'��*�/��~c���-���$�1)������y��cU(�Y����O��zG�E�y{��BD8�ķX�C �{ �R�R���o����v�!c,�}��s�c��? z׮�w�������-�[ _�5��,���Z._�=�T\\�����&�ڎ]ؗ�0l��ur��4�� �nY�y1w��~��$}��0���1M,��z�a l?.�^�|�SJ�˧�;� `>��J� +�= ��xW�D .',
+    description: 'Inspire Aesthetics is a medspa and aesthetic wellness clinic in Fort Lauderdale, FL.',
   },
   {
     id: 'healthy-glow-aesthetics-fort-lauderdale-fl',
@@ -2960,7 +2960,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: '�������*u�0���� W�� 0 iQ��"9�W8��+�`�֬qe䢬�J�e�gG n@����a��`�Ņ�b�v�^��&��b�%vm��6lX���Ы���9b�_����AU0���V��Y>W����J]kϔ�c| �n ^��1�A���%�JJ�u� Il��� H�������Ih��±��2��ܷ� 7g)��n/M��>!���q�� a!',
+    description: 'Healthy Glow Aesthetics is a medspa and aesthetic wellness clinic in Fort Lauderdale, FL.',
   },
   {
     id: 'glowing-skin-face-body-care-med-spa-fort-lauderdale-fl',
@@ -2976,7 +2976,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: ']�Q����׈3��i� J�Gv�=� ���T��ǎf7��r^���_�Q3-�q�^CN�ɮ��1�fx��l��/b���o�):+�nnD#+�b*�5Y�.] �9�Y� �C)�����-y�Ư�Ä�(��s"�|:�k �=��d?��N�P�P�z�A�"i�-<�O ̕���`>�\\�� �3�l�>h�g��sxb@����^Ml �C[]������e����6u(:�ӽ-�sP4��ĕ�?z�}�3�X�c{^��\'����fG�?%t]<��[�W�GO^ף}�I҉�x�Q�\'�X_;c�� :F�$�3Ƹ .� � @`�H�8Te. K�����1CQ_ ��7p�n;�t�1��38�&�����[e,G��%�/ (�r_]� =� ��%T��s����no՚!C���D$b�u�r�J�!YPpڬv����F���#:M� �w�R/ :*� �-f���� �x�7+~���?�8�NH�v� �&m���_�:�V�M�=.',
+    description: 'Glowing Skin Face & Body Care Med Spa is a medspa and aesthetic wellness clinic in Fort Lauderdale, FL.',
   },
   {
     id: 'the-remedy-iv-health-wellness-fort-lauderdale-fl',
@@ -2993,7 +2993,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: 'Personalized Wellness, Performance Optimization & Mobile Healthcare | The Remedy IV Health + Wellness ER-Led Wellness & Mobile Medicine Visit our Fort Lauderdale clinic or we’ll come to you. 1 Location 365 Days a Year 3 Counties 10,000+ Patients 35+ Years of Experience Clinical Excellence. Our Story: Born in the Emergency Room, Perfected for Your Performance The Remedy IV Health and Wellness wasn’t founded in a boardroom—it was built on the front lines of emergency medicine.',
+    description: 'Personalized Wellness, Performance Optimization & Mobile Healthcare | The Remedy IV Health + Wellness ER-Led Wellness & Mobile Medicine Visit our Fort Lauderdale clinic or well come to you. 1 Location',
   },
   {
     id: 'the-aesthetic-label-fort-lauderdale-fl',
@@ -3009,7 +3009,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: 'Our mission is simple yet powerful: we are here to prioritize your well-being and deliver stunningly natural results that make you feel like the best version of yourself. Danielle White - MSN, APRN, FNP-C is not just an expert in her field; she is a passionate learner, constantly diving into the latest techniques and innovations. By building a foundation of trust, fostering open communication, and infusing every step with personalized care, we are not just a provider — we are your partner, cheerleader, and confidant in your unique journey towards aesthetic bliss.',
+    description: 'Our mission is simple yet powerful: we are here to prioritize your well-being and deliver stunningly natural results that make you feel like the best version of yourself. Danielle White - MSN, APRN, F',
   },
   {
     id: 'model-citizen-medspa-fort-lauderdale-fl',
@@ -3026,7 +3026,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: 's��j%����΅䘸`,�6�ҽ}.f�r\'EHř��p��� �v��I�{���E���4� �j�X>������G�T�_Z�c�{i���.s!��μ��:S�k�?���Zj_\'� P����ڐ���W�94��W��_r�~�u���l=��� ',
+    description: 'Model Citizen MedSpa is a medspa and aesthetic wellness clinic in Fort Lauderdale, FL.',
   },
   {
     id: 'timeless-beauty-aesthetics-fort-lauderdale-fl',
@@ -3042,7 +3042,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: '�}�w�����ar{��|�Wf�)����*6�*���n&/��t]�� �"�"f��1�q!�Z�N�7�>��J�t:dΓ�lJ�J�Ij�<�vo�>_�h+ ����b��o)ۅ)��4�xw ��[����|�q6f� P�]�~R,���Uk��^�{��W��"�Do�8���������+NN`���M�)=�^�b�/�#|�:k���;(Ћ�? 1"л^S?G]Vp�;?�j�&��?g��O4���E��>Z�F�X�KS� �cF�a4]��8�3t�[�k��]�a5�D�-��j�\'N�ܖ�ix��MȀ25�!',
+    description: 'Timeless Beauty Aesthetics is a medspa and aesthetic wellness clinic in Fort Lauderdale, FL.',
   },
   {
     id: 'medchic-aesthetics-fort-lauderdale-fl',
@@ -3059,7 +3059,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: 'See What Our Clients Have To Say Led by our CEO and expert nurse injector, Tanya Grobman, APRN, our practice is dedicated to delivering exceptional aesthetic care. A master injector with over 20 years of experience, our expert team is committed to delivering honest, results-driven care.',
+    description: 'See What Our Clients Have To Say Led by our CEO and expert nurse injector, Tanya Grobman, APRN, our practice is dedicated to delivering exceptional aesthetic care. A master injector with over 20 years',
   },
   {
     id: 'the-fort-lauderdale-medspa-fort-lauderdale-fl',
@@ -3076,7 +3076,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: '�B��vH/�PRm̓���r���,e����pD-K��y�W� �M���^�hF��zzON! 4�k�ܮ� �D:��������{Z�����1�ۈ�[ ��s�8,� ��⇩����J"6� Bl�[N�����Y�=�֌$EF�>�}�U%�84Ɏr�J�^�l%��]1��UL��  _�E�Œ�V""k���h4��H.��i 0�D ,n�K ����5&����W�)��sh�!ublPK�Q� ��r �R�3�lQ t�s2�=b��ԉ��bVF�4 �� ��cGk��!',
+    description: 'The Fort Lauderdale MedSpa is a medspa and aesthetic wellness clinic in Fort Lauderdale, FL.',
   },
   {
     id: 'fort-lauderdale-dental-aesthetic-center-fort-lauderdale-fl',
@@ -3092,7 +3092,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: '�����@�:Z�C=Oe_��Ω]�I5�~==:5б� ����=�x<��$-��\'�jʇ? �3\\ �,�bQ� �˵���@LU�\\ TU4U������r�> �����i�/����H$�� Wk��\'O�P���Ǌo��?���}u� Dռtg# �Q.k����8 &�#���ζ��`�-�V)������� A��?�ɪY$`�i���" �����(�2�b�� ��S��R��z 쾇y���pAZ.��A#��Zp ��d &�2�N�$z�����j�� :֙� ��&p�K�5y�8p�R � � ,�m�*��i��6���8�\\� �N8s�=�n�n���xY��+ q�]q��=�%���c��ߪF�6����蝐�C�*�Up�є �!(����e�������4o�Q��?Y�@[G!',
+    description: 'Fort Lauderdale Dental Aesthetic Center is a medspa and aesthetic wellness clinic in Fort Lauderdale, FL.',
   },
   {
     id: 'essential-aesthetics-health-fort-lauderdale-fl',
@@ -3108,7 +3108,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: 'z60(e�}}�w��/��� �wӒ�����j [+�6y�h)����v�jó�2��Eg84x��!�x3H�~�\\�ə�/�/$�*M���vR�颀> ��{�Y%�z�FF ]iT͂��m0��twR��8?A��l���F\\�� �� J�/h�6 �Gm��I�𥴊�g�*�� �r��;�� k���rv�=�gC7��>X{w���ܥ�w ����Rt� C�5l���ZŮO/G !����A���|�N�nh���J�� �5�����NGs�q��hV�H� �h�fJ�N�ğUld�(*�T7�{\\.',
+    description: 'Essential Aesthetics & Health is a medspa and aesthetic wellness clinic in Fort Lauderdale, FL.',
   },
   {
     id: '247-med-spa-fort-lauderdale-fl',
@@ -3124,7 +3124,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: '�M���k��p��Y^ \\�OF��Giڒ�f��۲�����c�ϗa��xӤK_�\'C����Z]�  `�`?�� 3Jپ����X�0xÑ��c. �c�\\�P�n����W�����2C��M�&�z�-Q3\\��́�M 9��A �M�� XU�8����%���� �kU:]�k �[}ߙ��(� e���V��G�f+# ��/ǔ���Lp�,�Y^Y[ś�$ْ�ws3�?',
+    description: '247 Med Spa is a medspa and aesthetic wellness clinic in Fort Lauderdale, FL.',
   },
   {
     id: 'angel-aesthetics-wellness-medical-spa-fort-lauderdale-fl',
@@ -3141,7 +3141,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: '���VPʨ�Zpb�1F���Y{����|��y{���~;&[��o��y�x�1��ѳo}8Xzr?���]r;�/�MϺKY7 �v�N7l��h�����<^��������L���{S ��$�OZݜ�v��ۉ 2�D��ǘ�V�����À cN�(W]c����C���&y1���b?����{��tݩځSg���{��t(�s�o��� � �� �uq���j�>��޽ ��z�~\\lw~i��­n�ם�e�H�� �W?���_�����3uoZ�^z��pl�3ހ��0�Q*g���@s,. �h�2������i���Ӧem/4���`8�z�� ��T/����`����H�4U00 ʡ:=!��6$��9��\'7&��� ���T�؍[׆��U ������ )�р4Bфf� )fy۲��/�C~��е��Cm�^)B�IY淧ׄ@�T1�%��F��H��+���������s⌸6{@�x� aJ$�Iշ�%~F�;����5⊁P�+��@)��T���(�N����< �D)�CW�+� Y�u|м� \'f*��Dٗ2?e\\�/���1�H�7M�~?',
+    description: 'Angel Aesthetics & Wellness Medical Spa is a medspa and aesthetic wellness clinic in Fort Lauderdale, FL.',
   },
   {
     id: 'medical-anti-aging-fort-lauderdale-fl',
@@ -3158,7 +3158,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: 'wƹP��>�Bj0�|{�v��^��tϤ�a#�p��R�5��`M,��: �.�:���%�d9�P 5��"<���W� ��� Qq����U4�� ��� �ÑʙI[ pf�B���S�v!N� @����m_���v��R���?:�S���_hW���5�R�5� �w[h��VR�0�J;�ǁ,��\'C ���}pk��B8� Ƀ�Hean\'C͵�g��8�f ˸Ď�` Qv��h�c�{��3�$ �R#�Շ��@y�=��i�m� ��/�?<��/�?e/}s%D��Gz�ĺ��6�l�VlyAA�j|��! � ��e%vf�F�Q�V(����$#��p���}�N� %�᝘9�C��U����a����Y�K�`��|{��A��_��[�������[&$�n&�[�F����:Z�]��,- +ΐAJ�@ ����G{�������%����#� � ��r&�2R͸�M �`�i�"8B�Ɇ@��o��wO�\'�����]oC�6,c�LJ9悬�N��Z�������^�/���F�;R�}q�~_��3s2�,� E(�<0 �S�̫.',
+    description: 'Medical Anti-Aging is a medspa and aesthetic wellness clinic in Fort Lauderdale, FL.',
   },
   {
     id: 'baltic-beauty-cosmedical-centre-fort-lauderdale-fl',
@@ -3174,7 +3174,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: '>\'�  ���5V)Sz㯯h�Ѕ2���Q>�G������r�(�Y���]4q�f��@]�҆��a��nx����.4�6~L���s�U�g��\\�U1���+��� �d1|#��p� -N�" o{Z>G�V�`�=���mDײǦ�8���� �����x�岎��]���z� �#]N7���슇�݊p����}�>}�� �Kf��KQ �ӕ������D�n ���9� ׀~r�h 6���|f_���w�/^��j���i��� 3���߿��ii�m��f4> !{��)�<�-1|v��i����V�h�! q�a8^퀅�׼�V-�Gr n����Z[_��d9J����|$�� >��fr.',
+    description: 'Baltic Beauty Cosmedical Centre is a medspa and aesthetic wellness clinic in Fort Lauderdale, FL.',
   },
   {
     id: 'sanctuary-medical-aesthetic-center-fort-lauderdale-fl',
@@ -3190,7 +3190,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: 'D���7���F�e�%8lRo�� �8N��I{���U�R�e�RaZ�� � �ys������ћ��d ����pۢb^�O����� T�����S�*������7����㾸擘A��I�D�l�8�GJ����xcH�m�=/�i!',
+    description: 'Sanctuary Medical Aesthetic Center is a medspa and aesthetic wellness clinic in Fort Lauderdale, FL.',
   },
   {
     id: 'preferred-men-s-medical-center-fort-lauderdale-fl',
@@ -3206,7 +3206,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'N�ϻ���)�}m=�Ż�)�n�S�&!禿XT)������F�z%�.���C��4R��H�-ѝ>U>��?�\\�KP�7����1>�;RO�����!��̀l�R��1U� lA�J�\'ǵh�Y��! ǋ[�� ���� ز��� ����I��c6]K���bR�FTn�6�a!�f�0j;9.Sx� >�[�߁%�j&J�+0e�ǟB�̢ H`R\'!',
+    description: 'Preferred Men\'s Medical Center is a medspa and aesthetic wellness clinic in Fort Lauderdale, FL.',
   },
   {
     id: 'juvly-aesthetics-fort-lauderdale-fl',
@@ -3223,7 +3223,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'm^Q�!E$����p��"0n�c����l֟M����i�;�i2 ���B2=[~J� FD�<��� �2��<����Y��4�ݳ]�rZ�. ��D��~�f��\\�ŸX�8}��)��Tp���H�ˊ��z�E&�����J�s�$��u�d�,����#Q,��<�$:�NPk�$�rW�,*c�������,%:��>�^Cl�ɼ�AC3��ir���}"@�� �@��+a�x�+���?Y)b� �8 m ���;���c������3� a{��7�e��jc�?',
+    description: 'Juvly Aesthetics is a medspa and aesthetic wellness clinic in Fort Lauderdale, FL.',
   },
   {
     id: 'dr-dan-georgescu-fort-lauderdale-fl',
@@ -3239,7 +3239,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'With surgical excellence and compassion, Dr DAN provides the highest level of care to those South Floridians concerned with a wide range of cosmetic and reconstructive problems of the eyelids and face.',
+    description: 'With surgical excellence and compassion, Dr DAN provides the highest level of care to those South Floridians concerned with a wide range of cosmetic and reconstructive problems of the eyelids and face',
   },
   {
     id: 'infinity-iv-hydration-fort-lauderdale-fl',
@@ -3255,7 +3255,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '�{�[�2�[��%� �P�(��[b��L�*l): ,�\\7�" � �����T���l�����\\7�E \\gԬ�l��oB�F�4���"XS�M�0�,�û]��ѡ? �ReҴp]�o�3�C5���;�f����&ߘz#S���Th����ǻ�������4< v4Z��TpSn$�Y�l6:�J6J�7S� ��:ԙ�Jm�FVC{4s�Ћ �lbY�_�����D �ڡ�Ʉ���7 ���BT䈱<���zTJTPĘH5�n�Y�ZE��ԃP�-���D �|�b�@��_�*B֏PR�1y-$�ZƤD���s�� \\��c�q�w��H($��Z�h�Wp���@ע���*-��R)I���w�.',
+    description: 'Infinity IV Hydration is a medspa and aesthetic wellness clinic in Fort Lauderdale, FL.',
   },
   {
     id: 'jream-natural-aesthetics-fort-lauderdale-fl',
@@ -3271,7 +3271,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'BV>��^QR�z 4R��_�M|��|�����ޛ� �]!Z �ӊ<#{�ߵ�xR���8�F T�ɨj��߾����j9~��Z_�}ơ +]eD"��ZGA\\��h4���0��Q��o��NA�E�_���q�Z�~9�*Ƣ��of���E1�@1 X�<ǳ������bv��$  J`���!�Uy�9^R�����H����!D�L��REg5��ڭ��j�ڏ�!"�.P_C�쯝AX&(FZ�����_=�<��к�9K� �2��,%���t4P?����P��C�\\�U�. :\\;�4���j��D��j�0ZG��\\O��Nb� �j����Z��#zm�xD1Z��. ��Sx�pȓ�T�� O 6����rv�FR��:ϕ?=W��l�|�Z�(?��ۧ1 sV�}\'�#Ud{�����fbiFE[ N��� ��!',
+    description: 'Jream Natural Aesthetics is a medspa and aesthetic wellness clinic in Fort Lauderdale, FL.',
   },
   {
     id: 'silk-laser-aesthetics-centre-fort-lauderdale-fl',
@@ -3287,7 +3287,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'Dysport Treatments Fort Lauderdale | Dermal Fillers | Photofacials SCHEDULE CONSULTATION SIGN UP FOR SPECIALS TEXT US 24/7 (954) 554-5364 HAVE A QUESTION? EMAIL US SCHEDULE CONSULTATION SIGN UP FOR SPECIALS TEXT US 24/7 (954) 554-5364 SEND US AN EMAIL SCHEDULE CONSULTATION SIGN UP FOR SPECIALS TEXT US 24/7 EMAIL US YOU THBACK Let Dr Astaphan use advanced aesthetic techniques to naturally transform YOU to a more YOUthful look. We offer most advanced medical laser and aesthetics technology available, using the most advanced lasers on the market–the Cynosure Apogee Elite, Palomar Vectus and Palomar Icon.',
+    description: 'Dysport Treatments Fort Lauderdale | Dermal Fillers | Photofacials SCHEDULE CONSULTATION SIGN UP FOR SPECIALS TEXT US 24/7 (954) 554-5364 HAVE A QUESTION? EMAIL US SCHEDULE CONSULTATION SIGN UP FOR SP',
   },
   {
     id: 'shining-way-esthetics-ft-lauderdale-fort-lauderdale-fl',
@@ -3303,7 +3303,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'Lauderdale Appointment The path to a better, healthier you. The Art of Beauty and Age Management​ Our Commitment to You Someone once said that ‘beauty is in the eye of the beholder’. We pride ourselves on the art of listening to your needs and concerns so that we are better able to provide you with the goals that you expect to achieve.',
+    description: 'Lauderdale Appointment The path to a better, healthier you. The Art of Beauty and Age Management Our Commitment to You Someone once said that beauty is in the eye of the beholder. We pride ourselves o',
   },
   {
     id: 'viocosmedical-pa-fort-lauderdale-fl',
@@ -3319,7 +3319,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'q���QH�z=<����F$\'�  u�.���� ���������\'?_��3��=b����L����<�eH �pc1��B�J 4�����k�ݚe�v�ҝ��<� 2�M��F��l�]�9 �0{v��>:]�tf&H�\'� BP�J �� �o�2կ���ug� �� I�x�F�����u=3@�  � Y�b�5�Q�����3   H*��v�ߓZ�s\\��sQdl�u��E�itAx��{�Wӥ��Rrȝ+�!$f�ʭ�rs�\'�;�?�� @B3�3�V�\\0J��w$ �7S��r)\\m����m�r�SѤ�E�A:�k��e*���]t. 9���UyWƹ�#>�I�=v��r8��<3�!�-��Җ��d��Qq쁙�",�.©�G }.',
+    description: 'VIOcosmedical PA is a medspa and aesthetic wellness clinic in Fort Lauderdale, FL.',
   },
   {
     id: 'esthetic-skin-institute-fort-lauderdale-fl',
@@ -3335,7 +3335,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '(ESI) has been dedicated to advancing and empowering medical professionals. They were helpful in a very down-to earth way that it made all of us who attended very comfortable. Marianne Ruggiero After attending an Ivy League medical college and having a career in a world renowned hospital, I can say that Dr Lum ranks right up there with some of the greatest physicians and surgeons I have ever worked with; His teaching skills are beyond reproach.',
+    description: '(ESI) has been dedicated to advancing and empowering medical professionals. They were helpful in a very down-to earth way that it made all of us who attended very comfortable. Marianne Ruggiero After ',
   },
   {
     id: 'pure-beauty-center-of-fort-lauderdale-llc-fort-lauderdale-fl',
@@ -3352,7 +3352,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'Get Started Empowering Your Beauty From Within Pure Beauty Center provides advanced therapies and wellness practices to enhance well-being and appearance. Functional Medicine Revitalize from within with custom IV treatments to boost immunity, energy, and overall well-being. Aesthetic Treatments Our advanced aesthetic treatments enhance your natural beauty, leaving you looking and feeling radiant.',
+    description: 'Get Started Empowering Your Beauty From Within Pure Beauty Center provides advanced therapies and wellness practices to enhance well-being and appearance. Functional Medicine Revitalize from within wi',
   },
   {
     id: 'cpw-esthetics-fort-lauderdale-fl',
@@ -3384,7 +3384,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'm�8m6�:|��0QDsq��o�8G�Ys ���4~َ��N���Y����E1��z!�]�Bm����s�� �dƫ��,\'�mù�6t:_^�C���G2O�5 �7� ��� �o �W�Z��¿�;\\�� �s�*���ɀ�4��rZ�Z �a�l�ia5U�͉��0|��8ХL3|2� �ǡ,� PF?~X�e��MZFç�� ��R\'���� 3P�v�)�A*��1��l�q��Ow���ȿC �yt��*������?������:)ϭ4�͡ 1!��F�Hm��x���` Ɠ`�j-q� P������d�',
+    description: 'eSSe Plastic Surgery is a medspa and aesthetic wellness clinic in Fort Lauderdale, FL.',
   },
   {
     id: 'prana-relax-spa-fort-lauderdale-fl',
@@ -3400,7 +3400,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'Spa in Fort Lauderdale | Prana Relax Spa – Rejuvenate & Unwind Book a consultation Skilled therapists, serene ambiance, and a personalized approach. Our Specialities Massages Experience personalized relief with our variety of massages, including Swedish, Deep Tissue, and Reflexology, tailored to rejuvenate your body and mind. Explore Massages Face Treatments Revitalize your skin with our bespoke facial treatments, from anti-aging to hydration solutions, all designed to enhance your natural glow.',
+    description: 'Spa in Fort Lauderdale | Prana Relax Spa  Rejuvenate & Unwind Book a consultation Skilled therapists, serene ambiance, and a personalized approach. Our Specialities Massages Experience personalized re',
   },
   {
     id: 'glowtology-aesthetics-dr-stefani-green-fort-lauderdale-fl',
@@ -3416,7 +3416,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '� cc�(�ǧ� DY Z��c�h��*p���ނ�б+��2ѭ<x�$.|����%\'<6�u]� Ew�J� t� >�+��� ~:�� �A�, ����ևݩ̻�9cs��Q��(��AmBLd�SD5w^!2~��&�r�BX��~�\\��6�A��4��,�޿�c� Qj�B�%)6+2�U�.қdR�{E�����yC�����߈˨u; �Z�! .�a��c�[ ��^�4}/�gU>�$TW���+�UD��g�xc�� ��<_ �Uք��Ln]���B�+��V��Jj������6��.o�&#����6�<Ǐ�L+;�5���$�,���7�Ƨ��vӦL �A�V�0N�R e�ir.',
+    description: 'Glowtology Aesthetics | Dr. Stefani Green is a medspa and aesthetic wellness clinic in Fort Lauderdale, FL.',
   },
   {
     id: 'bodied-by-the-np-aesthetics-wellness-fort-lauderdale-fl',
@@ -3461,11 +3461,11 @@ export const allClinics: Clinic[] = [
     website: 'https://www.newyoumedical.com/',
     googleRating: 5.0,
     googleReviewCount: 21,
-    treatments: ["Laser & Skin", "Facials"],
+    treatments: ["Laser & Skin", "Facials", "IV Therapy", "Wellness"],
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '����<:��|�b#���Zl�*Wp� ��,[��KE�4,@.�`�I�@��0\\��q�N�)�M�P����� Z�C�d�f�5@P�� \\^� C�a.��1� ��������{8�����fX���j B- �J �L�l��!�N��o��4��4O��75�3��D�U�̙U�F�Y�6J��w��� ����"��`L/S� nDZӜpRO��٩��V{�B4b(��C�]���C>S���Ř��0�&ħ� ��#���[�. 8ӃŘ����Ą0�ǀ����O G�� �so㈦��� �|��q�C���Â)l! ��� +,��Q^�����k �A�C���6kA1�6�D��WGX�B@�٠��Ո�| ��v,8��`��E�RB���!@j���1컣l�i�n��՛����te���p U���e7�ۙ����h4~|�aJ�!�# �d|�#��/�?',
+    description: 'New You Medical is a medspa and aesthetic wellness clinic in Fort Lauderdale, FL.',
   },
   {
     id: 'winr-aesthetics-fort-lauderdale-fl',
@@ -3507,11 +3507,11 @@ export const allClinics: Clinic[] = [
     website: 'https://thebodyhackrx.com/',
     googleRating: 5.0,
     googleReviewCount: 10,
-    treatments: ["Facials", "Injectables", "Laser & Skin"],
+    treatments: ["Facials", "Injectables", "Laser & Skin", "IV Therapy"],
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '[:y1aOZ� ��$��@ � ��������u����������~�� ܴP��9������{�O�D  ��h8� N�~?e�l���� �>�{ߕ� �G����< `�L����4͌��)�,�!�O* .ڤ-��.e�clRǓ�� g"���� �E���vr� �>S��k�r������| B cF�G%*� H� f�]�t�׫W�~�a /^�g>�m�Uۅ�=� ধp��{=��h Kx�8�Q���k�\'�h��|�Z�t���B W��$��ǾG7�r6��_h� � �Ƈ�t�kniAᾐ�ƈ�xjo9 �����0�x� � -��#mA���5�J<���_j���ݓ���? v ۰�۵j�.-���WpQg����[����e��l6� Ey �ѻ�V�n-��4ׯ߮7�,ݣo��7g��� ]�AJ:�� P�f>�Ty ZR��������h��u ����HpQ��&m��tcTM���g��N�� b��85 G�$����O��$P�\\�ޔn� -�ʻr�/���8S�t�juz~o�,� �L�>�fn(i�{gbW2]���&e�*.lèfW+�%Z�,�]��J�k�E3Y��m6�$u�]Z��߽ydT��*\\ �i� 3&�D��yq��;����P~����ak.([�ի �=13�8 �q���,+� ',
+    description: 'BodyhackRX Integrative & Aesthetic Medicine is a medspa and aesthetic wellness clinic in Fort Lauderdale, FL.',
   },
   {
     id: 'uptown-clinique-fort-lauderdale-fl',
@@ -3527,7 +3527,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$',
-    description: 'With surgical excellence and compassion, Dr DAN provides the highest level of care to those South Floridians concerned with a wide range of cosmetic and reconstructive problems of the eyelids and face.',
+    description: 'With surgical excellence and compassion, Dr DAN provides the highest level of care to those South Floridians concerned with a wide range of cosmetic and reconstructive problems of the eyelids and face',
   },
   {
     id: 'dew-medspa-fort-lauderdale-fl',
@@ -3543,7 +3543,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '�6�� fA�����q�׈re�f����� �$dWLe|0�� 1hPS��Z�~ Ó� ���˳ ����_�/�|�����ϝ�. �X�e����}���o���[�����{���(��h�6�â�)��|�6�1�d� V�Y$;T�7O�LEBd�?�/�B�}FFB�I� �2��u �y?;+2z����^:o�#��G�k2�P{�B5�/��L��J�� �S���\\��,��e}5DKb����Ϸ%k�� o*l���hȚ���]��-$\\�oa/mm� ֌�u 7� `�.��&� ��M���}?',
+    description: 'Dew Medspa is a medspa and aesthetic wellness clinic in Fort Lauderdale, FL.',
   },
   {
     id: 'zennova-beauty-aesthetics-fort-lauderdale-fl',
@@ -3559,7 +3559,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '�F)������=2C��=��G)�Hz AiRb[-��e� ���ʹ�^I�Ba9v�����~2dj���-�K�*�x� ����Λ ,�J{�O� b�8ѤHA.}��2�h#�E��P�� ��pўL&O�ndV��ħ:�s��6taq��? %l�a;4� 6t���E�%���x�(�&Y�- � x6I5rP+�\'�!�6DE�8�2Y�\'�P�o ;� mr��Q �C��.',
+    description: 'Zennova Beauty & Aesthetics is a medspa and aesthetic wellness clinic in Fort Lauderdale, FL.',
   },
   {
     id: 'prime-body-wellness-fort-lauderdale-fl',
@@ -3576,7 +3576,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '�� l��^�*��=����}���`�KSW(t�� =�ua��n4��z� � 㱫Br�! J��,�#��%3:��p<�� �#�f��dcS2�����:`��9�� ��u ��_� ��ac�w)��Y͈%�Z����zsU����^����l{wZwW���jv���<�>Ȯ�< :���?���R�㏵I���n�e:��1�n?Η�\\}�E|1lR1,�:��V�5= ���s��&��Y:��1����m�y�� �6 1��E�y4��y��R_ ��a��ŴMս||�w�c�����KdOQ��d�� %Z��Z���x �� �IVW6���� �3��G%��d9�� �!',
+    description: 'Prime Body Wellness is a medspa and aesthetic wellness clinic in Fort Lauderdale, FL.',
   },
   {
     id: 'bliss-wellness-and-aesthetic-studios-fort-lauderdale-fl',
@@ -3593,7 +3593,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'G�`���;�"rI�c�����Ch��vʡ�=n*_/���sͼ.�w �!e-H�wS�U���vX���u�؍ {�� D)����!�_sj� j]<8���[c! ��o���k�`����6�C�JLJ:M�I=���R�s���!"`lLďjdy,�������@�ׅ_�㛯��?',
+    description: 'Bliss Wellness and Aesthetic Studios is a medspa and aesthetic wellness clinic in Fort Lauderdale, FL.',
   },
   {
     id: 'park-avenue-dermatology-jacksonville-fl',
@@ -3609,7 +3609,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: 'M��=�NB?���^�[jm�<�����t�T�nY.�u�Z��q��iaݻ�z}� @��X=�7������@��m݅H���p�m$\'9 ���� �i���U}��p9��� �tKZ;:�a�)K(Ͷ�P�RO !R\'N`�e�L��h������::9� �h�N�e�t�J�4�)Z|4�Pr���|B)�ǖ,��2 ,[��d c�! !��n� �Z���7����-(�N��\\ �qHO��A�?��$�"s&�a/[�#iI�Te@Ԁ�Ea{�67�#����Z:����|!?',
+    description: 'Park Avenue Dermatology is a medspa and aesthetic wellness clinic in Jacksonville, FL.',
   },
   {
     id: 'modern-aesthetic-centers-gate-parkway-jacksonville-fl',
@@ -3626,7 +3626,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: '%4 R<»ÒÑÉ¾h¢òñíP û"ÄÞÙý¢ ,¶_îòæåûç_\\ÍDçÄ o¹Ü7¸t¬mèhÀK= û;*O q=EÍ[\\µl«¶Èh¨5Ü+¹? ÚùqÆ¹V.¶ÏÙ:Áè«;MV7íÁè õ]Lmùìv]VËJLëjT×Úð<ö XÌq§1v³ZÓmóÿ]Óë å¢rôû"5¥¨¶Ûw%3{åJTYÍ éU*ÿh¿Í^¬îxåo JÜdæ2¦Å GBG ØW2CÅ [ÿ,fðà£ä»[×.XÖ._*C"»z4#çO©+Íüs $wû;MÌbÞ´)Z5Ü}î6kA) "þ¯Ùùð×»©5Y¹B[äzóxV0XaÌÁXnÈÛ/ÅIBáà%yÔÿÇ]<Û*¦Ð2Ã1ÌÆÐf:×ñ~ÎiSÆrbCQÿ"?',
+    description: 'Modern Aesthetic Centers - Gate Parkway is a medspa and aesthetic wellness clinic in Jacksonville, FL.',
   },
   {
     id: 'the-dripbar-jacksonville-tamaya-market-jacksonville-fl',
@@ -3643,7 +3643,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: 'Our clinic provides a clean, professional, and supportive environment where your health and comfort are our top priorities. Whether you are seeking hydration, immune support, energy, or recovery, our team delivers efficient and personalized care tailored to your needs. Each visit is guided by licensed nurses who listen to your goals and recommend the right options for you.',
+    description: 'Our clinic provides a clean, professional, and supportive environment where your health and comfort are our top priorities. Whether you are seeking hydration, immune support, energy, or recovery, our ',
   },
   {
     id: 'cma-center-for-modern-aesthetic-medicine-jacksonville-fl',
@@ -3659,7 +3659,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: 'Jacksonville Medical Spa & Skin Care Clinic | CMA Medicine Hit enter to search or ESC to close Search Close Search Jacksonville\'s Premier Medical Spa & Skin Care Clinic Aesthetic and skin care treatments to accentuate your natural beauty San Marco Office Jacksonville Beach Office More Than a Med–Spa. A Destination for Advanced Laser & Aesthetic Medicine. Unrivaled in laser technology, aesthetic dermatology, and non-surgical skin rejuvenation, CMA Medicine is led by Dr.',
+    description: 'Jacksonville Medical Spa & Skin Care Clinic | CMA Medicine Hit enter to search or ESC to close Search Close Search Jacksonville\'s Premier Medical Spa & Skin Care Clinic Aesthetic and skin care treatme',
   },
   {
     id: 'kapriz-medical-spa-jacksonville-fl',
@@ -3675,7 +3675,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: 'At Kapriz, we believe that beauty is personal, which is why we specialize in customized treatment plans tailored to meet your unique needs and goals. Our expert team takes the time to understand your concerns, lifestyle, and desired outcomes, crafting a personalized approach that delivers natural, transformative results. By combining cutting-edge technology with individualized care, we ensure every treatment enhances your natural beauty and promotes lasting confidence.',
+    description: 'At Kapriz, we believe that beauty is personal, which is why we specialize in customized treatment plans tailored to meet your unique needs and goals. Our expert team takes the time to understand your ',
   },
   {
     id: 'the-sanctuary-wellness-institute-jacksonville-fl',
@@ -3692,7 +3692,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: 'Our experienced doctors and knowledgeable staff are here to answer your questions and support you on your wellness journey. This is my third experience with The Sanctuary Wellness and they\'ve all been great.️ Keith S. Getting a medical marijuana card is easy: Schedule an appointment with one of our medical marijuana doctors.',
+    description: 'Our experienced doctors and knowledgeable staff are here to answer your questions and support you on your wellness journey. This is my third experience with The Sanctuary Wellness and they\'ve all been',
   },
   {
     id: 'hydro-med-spa-jacksonville-fl',
@@ -3709,7 +3709,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: 'At Hydro Med Spa, our team of medical experts AIM to please with our All-Inclusive Memberships to keep you looking great and feeling incredible. Hydro Med Spa, Jacksonville, FL Hydro Med Spa is the Jacksonville and St. Augustine area’s most advanced functional medicine clinic and medical spa.',
+    description: 'At Hydro Med Spa, our team of medical experts AIM to please with our All-Inclusive Memberships to keep you looking great and feeling incredible. Hydro Med Spa, Jacksonville, FL Hydro Med Spa is the Ja',
   },
   {
     id: 'elase-medical-spa-avondale-jacksonville-fl',
@@ -3725,7 +3725,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: '�A *��1�Ry���L�K�*��H� �:߾���9UN�q|�&G��X#o��2HR8*��f�ܰ�O�PE1S8�.g��+qȢ�� ݹ*���E�,��b��4չv����޷�\'�^\\�t���i #��ɼ�I��X�(Tdv�6��Re��ӂ���U>[S�/����|�$p�M�7�J��E��p�0��� }FL��/Q�M� �������Ӳȷ�ÞX�[�-J<w�ġ��{ �c5��^��2z���\'�����|�"+��Q ���5���B��� 6(� yyI���C�+TC�ƚ��~���E����g��^�����v!',
+    description: 'Elase Medical Spa - Avondale is a medspa and aesthetic wellness clinic in Jacksonville, FL.',
   },
   {
     id: 'concierge-cosmetics-aesthetics-jacksonville-fl',
@@ -3741,7 +3741,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: '���N � �4�T,w�!�C,��D�InRR�m�1�I&4Ύ:�� 玗�1]pyA���x��f#�:��^!k�{��������B:��jD�JZI v-��"����`�X�)ZQ߽�{ �� {q���hK�M�fA�:qFZ���"��A�rc%�ݳoiY  ��E�`S���9=�S�~43�H­1�L��������q0�l�@�ĺe^��̈́�䃤4j��-�� 9�hD� \\��]�>1 �$<)`4� Rp��(��s1��c�G�^D �WISE�/��@�T̤��Ι�wa\'�s}9օ8��b�����5te1��՜�� �g�Ζ� ��i�s ��U��?�E)�. cpb�A@X#\'��^Pt5���{��U��Q,�����O�C�!m8�\\tf�� �G�9!4���a� `�����4iCҞOh��aK����,z��� ܯ�F89���B9Jv��aX�� J��А���q�����r@q7��%�c��\'� y� ��^ ����y��\\�iW\\� �k���k;a�5�P҉3�%Aن�����!�;�avj� sy�B��GUU*�N`8�Ӈ !N!�B�K�q�q�e W�g�ސ�HN���Ԡ�h�jY� ���5ǝ��?0�կ굨��R�%� ��Q B�n�B�J�P�4*-d%,����?��4�h������.',
+    description: 'Concierge Cosmetics & Aesthetics is a medspa and aesthetic wellness clinic in Jacksonville, FL.',
   },
   {
     id: 'anderson-longevity-clinic-jacksonville-fl',
@@ -3758,7 +3758,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: 'Hormone Therapy Clinic in Jacksonville, FL (Sutton Park) — Anderson Longevity Clinic ® 0 Live Your Best Life . Elevate Your Health At Anderson Longevity Clinic Go Beyond Traditional Healthcare. We provide state-of-the-art medical testing and cutting-edge treatments to help you live your best life.',
+    description: 'Hormone Therapy Clinic in Jacksonville, FL (Sutton Park)  Anderson Longevity Clinic  0 Live Your Best Life . Elevate Your Health At Anderson Longevity Clinic Go Beyond Traditional Healthcare. We provi',
   },
   {
     id: 'precision-medicine-and-wellness-by-elizabeth-bagan-aprn-jacksonville-fl',
@@ -3775,7 +3775,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: 'Hormone Replacement | Jacksonville, FL | Precision Medicine and Wellness by Elizabeth Bagan, APRN Jacksonville: 9191 R G Skinner Pkwy, Building 901, Jacksonville, FL 32256 St. Augustine, FL Welcome to Precision Medicine and Wellness Empowering Your Health & Enhancing Your Natural Beauty At Precision Medicine & Wellness by Elizabeth Bagan, APRN, we believe that optimal health and lasting beauty begin with a personalized approach. Our practice specializes in Bioidentical Hormone Replacement Therapy (BHRT) , Regenerative Aesthetics , and Weight Loss Solutions designed to help you restore balance, boost vitality, and reveal a more youthful, vibrant you.',
+    description: 'Hormone Replacement | Jacksonville, FL | Precision Medicine and Wellness by Elizabeth Bagan, APRN Jacksonville: 9191 R G Skinner Pkwy, Building 901, Jacksonville, FL 32256 St. Augustine, FL Welcome to',
   },
   {
     id: 'cardona-direct-primary-care-and-refinemd-aesthetics-jacksonville-fl',
@@ -3791,7 +3791,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: '��:t5>|=�,p�Q��ۿ6l�tίZ3��������3���"IYdŜ�\\�H�� J��+|M��FI��:�� � �ݴ�ɾ����4���MO���q�~? P�f�;����Q� ��!� *D�a����]��`Gqe&I�c@�h���!W�\\�|]E���4��Ŷw����/ Y�1�s����_�ef�o~� �o��� �������z��lMm_�&����xi�w�\\j��H0 )��%X@e�� ����Ȉ�� >ғ �U���g L�?��m�hK7�N(��<�k�J����u �����|sӁ�ѽ��e]N .',
+    description: 'Cardona Direct Primary Care and RefineMD Aesthetics is a medspa and aesthetic wellness clinic in Jacksonville, FL.',
   },
   {
     id: 'aesthetics-by-sash-jacksonville-fl',
@@ -3807,7 +3807,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: '���=)oGe� �\'`�M_��V��� ��9��N��x7M�wT�{�=l�����}#��? ����/���x �� !�j 4�s���xs����+�,������b�[Λ�S��l�G��OV����fʋ<)�k��m�]Z���!�F�3K(ͫ%cK�_�������K�Orǟ|�g��Y`������}z[���Ug?�� ��*�n`�+��he���ܻ�\')���=~�@R�4\'�+G����Ix�_gg���YYIA5+�-AQ ���lՒ-�����>I��z�f� ұ���� � �Ӓ]e��wW:^>1��� ^�6���}�����i 4�!�?',
+    description: 'Aesthetics by Sash is a medspa and aesthetic wellness clinic in Jacksonville, FL.',
   },
   {
     id: 'health-for-all-clinic-jacksonville-jacksonville-fl',
@@ -3824,7 +3824,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: '��ku󓈅~�����ƓF��j<�R4\'� C�^r�0?<�m I���^�� $��q�K� X�Rg���C�9�� �-v�2����O��X|� Q����Έ�.��2����,(��~}p�\'�� � ��䴌o�Ϟ�Ӳp!�^�������G�ZȽ)x�j�G�n����{�US��5�G�/{W#�3p�yU�� � �=����5�Q�րFs6H��ĝ�`��$L�������������~S ؑ�릲LL�z�CL�f x�!? ���i�GW���x��}���������y�%��JeǾ v����H\'/�SU��D� F��q��h�F����Xuf��y$8����q�A=g d�^�K~�DW�< �)��?',
+    description: 'Health For All Clinic Jacksonville is a medspa and aesthetic wellness clinic in Jacksonville, FL.',
   },
   {
     id: 'med-spa-by-voupre-jacksonville-fl',
@@ -3840,7 +3840,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'Jacksonville, FL 32256 PHONE 000-000-000 EMAIL medspabyvupre@gmail.com HOURS Mon - Sat 10:00a - 7:00p Sun 12:00p - 6:00p Book Your Appointment Now DERMATOLOGIST TESTED VouPre provides dermatologist tested products that are designed with effective ingredients to help you to quickly reach your skincare goals.',
+    description: 'Jacksonville, FL 32256 PHONE 000-000-000 EMAIL medspabyvupre@gmail.com HOURS Mon - Sat 10:00a - 7:00p Sun 12:00p - 6:00p Book Your Appointment Now DERMATOLOGIST TESTED VouPre provides dermatologist te',
   },
   {
     id: 'integration-spa-jacksonville-fl',
@@ -3856,7 +3856,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'q���QHU���}�,�\'��:R������q=�y���:��?_�J��#� W1& ��ǊCi��M�m[�X$� �5�j���D�� �f�F�+�.��`*�V��%[�bO�= w�7����agC)�rwI� �P�S����f�|S�ZlD��g�KB\'� ��цg㫪� �u7 4I hR@I#�� �r�4�{�_7���@"g ���.��4;��XEg\\���袀}]^x�h�*���̣��i2h�ɠ� ���2��WUw���l�؋���@ꪬ�~�3� yB��  _�?�O!�u�9�>�a�IÜ=�,� @! bz�,� ���)ķ����:E- a��5Yby�e�lLƴ�W*�S է\\�JSe��^�B�� *k�-��1%�V�0\\��igs�;/�@T�E �� �n�#E" �Gd�����0�^�w����$_o �ER:�@�����<-A�4���W��x�>� ��&���wX�����E\'��|�[�N���]�I�M 7�ާ�`I�Ge����A��"8���4��6��d���6�!,��kJrG����]o���Pm�!',
+    description: 'Integration Spa is a medspa and aesthetic wellness clinic in Jacksonville, FL.',
   },
   {
     id: 'hormone-health-and-weight-loss-jacksonville-jacksonville-fl',
@@ -3873,7 +3873,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'Hormone Therapy Jacksonville, FL | Jacksonville Weight Loss Clinic Near Me To connect you with the right team, select your closest location below! Comprehensive lab work and personalized treatment plan built for your body. CANCEL ANYTIME Three Pillars of Hormone Healing & Long term Success Comprehensive care designed to restore Jacksonville patient\'s balance and optimize health TRANSPARENT PRICES.',
+    description: 'Hormone Therapy Jacksonville, FL | Jacksonville Weight Loss Clinic Near Me To connect you with the right team, select your closest location below! Comprehensive lab work and personalized treatment pla',
   },
   {
     id: 'metabolic-research-center-mandarin-jacksonville-fl',
@@ -3890,7 +3890,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'S����JuKu�o=Y�� M1�;�f���<��gKƃ p����|�}ZI&��4m��a�� ��7(��wF��X�?o� |���R�*W�)t1ţQT��8� �i���6z~����P�����W���: ���0���sj�MG��`�%o�cN�E#Z`K2�h ��` ά�)���^.',
+    description: 'Metabolic Research Center | Mandarin is a medspa and aesthetic wellness clinic in Jacksonville, FL.',
   },
   {
     id: 'tatiesto-jacksonville-fl',
@@ -3922,7 +3922,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'Luxe Aesthetics Jacksonville 0 Helping you feel confident in your skin with expert care, aesthetic treatments, and wellness support. Book Consultation Returning Client Portal Shop ZO Skin Health Rated 5.0 on Google Same-Day Appointments Payment Plans available We believe confidence is the ultimate luxury. We offer elevated, personalized care using cutting-edge technology and curated treatments designed to help you look and feel your best.',
+    description: 'Luxe Aesthetics Jacksonville 0 Helping you feel confident in your skin with expert care, aesthetic treatments, and wellness support. Book Consultation Returning Client Portal Shop ZO Skin Health Rated',
   },
   {
     id: 'aluna-medical-jacksonville-fl',
@@ -3939,7 +3939,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'Aluna Medical | Jacksonville, Florida Premier IV Infusion Therapy “Do today what others don’t so you can do tomorrow what they can’t.” 904-594-4100 Request Appointment IV Therapy MD Evaluation Nutrition Evaluation Peptide Our expertly delivered aesthetic treatments are the best in Jacksonville, FL. This physician-led approach delivers safe, natural-looking Botox and dermal filler results for patients seeking the best expert aesthetic care in Jacksonville, Florida. Patients seeking advanced peptide therapy in Jacksonville, FL benefit from evidence-based protocols designed to optimize performance, resilience, and long-term health.',
+    description: 'Aluna Medical | Jacksonville, Florida Premier IV Infusion Therapy Do today what others dont so you can do tomorrow what they cant. 904-594-4100 Request Appointment IV Therapy MD Evaluation Nutrition E',
   },
   {
     id: 'gobeyond-aesthetics-lifestyle-medicine-jacksonville-fl',
@@ -3956,7 +3956,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'Qec�^�!F����ino������� * �D�4�sR�&�6U�d����� 6��?n����h����ܺ��.P��7�׌ ��d���M���l Y�1�� ty��lc� ��R��R�O�[*� n� � @�W��ŗ۸��zKF �w��=�P�^��jw���5P�b�}�F���fVك�����M�/t���v$Ū)�� C��9��ci���s_�� � Q���X�s��X!j� [#29�� ���#!��u�2�I� !� ��-ٌޓ!���08Џ 9IK"M z2�[�d"-�45nj]�? iP`-��� � A�*H����Xᗹ��ohN �������aC?3�@�;N�W?�-<" @ ��Z�� ͫ�2��j�Qy��t��[��g�yv�����w��<�ә.�|r s]x5����nڴӖ� \'m(�m|L�l�Q?',
+    description: 'GoBeyond Aesthetics & Lifestyle Medicine is a medspa and aesthetic wellness clinic in Jacksonville, FL.',
   },
   {
     id: 'revive-aesthetics-jacksonville-fl',
@@ -3973,7 +3973,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '.d� ��] �x�]��{ m���Cl��� �l�ev�n/_�DX�#�f�y�������=Z4c��M\'JW6j��z�@��m���T��-���S&8�����ͪ4��݂�7:�T���� #�X��}�? ��Q�|���i%�@4�N0�!R�� -��� ��\\��t:�0m�Ū���4r)�o b��o�C� ������pЈ`���,*�[s�!!@3�9��HU�&ME�����h �E�[���k�6Ԩ�$��f�]�8�[Y�N�T<�>m��P�����0\'5��Peie���0�O���س��o��q� 9B��7����7F?I ��Ҟ��ds NC���o~����������Dyy՝��Z�g��� i~u���;�����l>�c�-su�:���Z�^���N#�������}�Tn`pH~Ǣ ,��Ӳ 20h��Ӄ��(Q����/�����v��WX��g����Y5?',
+    description: 'Revive Aesthetics is a medspa and aesthetic wellness clinic in Jacksonville, FL.',
   },
   {
     id: 'ivolve-med-spa-jacksonville-fl',
@@ -3990,7 +3990,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '�\'6�_��E��K7x|Ji h�\\��2 {XI���ݸ��cL~&�Y�:��P��L�~�*OEM�-���3���=�����a��ڒ ��u�83�����[ê�4t�3�j>f�����̢1�y�T�V��D�K���W����\'nE�xi}皬���- r��=�)�u�r_^��hh����"X �.��;�lԥ+H%�^{cTm� �!��ɑ�$S�wJ��U㼻I !�_+����� �S�3Hε.��@#@B�܃3#!� u�H(uTvZ� +Y5�>h�������`��t[J�!',
+    description: 'IVolve Med Spa is a medspa and aesthetic wellness clinic in Jacksonville, FL.',
   },
   {
     id: 'luminess-med-spa-jacksonville-fl',
@@ -4006,7 +4006,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'At Luminess Med Spa, we are dedicated to illuminating your natural beauty, allowing for a brighter you . At Luminess Med Spa, we pride ourselves on taking time with our patients. We strive to build lasting relationships that ensure lasting results by enhancing natural beauty from the inside out.',
+    description: 'At Luminess Med Spa, we are dedicated to illuminating your natural beauty, allowing for a brighter you . At Luminess Med Spa, we pride ourselves on taking time with our patients. We strive to build la',
   },
   {
     id: 'cenegenics-jacksonville-jacksonville-fl',
@@ -4022,7 +4022,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '+�m�� �4&���U賐O������I���V�B��WH��I�pnv�����J�j�ёT3Y��oY4y8�G�o$� �|g��������{D��S���Ï� �Wt:4��.�"�L7ƹ!<\\��� �to/F��k��M���Gʢ)�"L�q:O���b`��\\i�E%�5-��T��V���Ѭ|�a4���a ����J�r�b-F�Oû���&w���y�* �y��V��KGZe���Ǭ�F ��r. կ_�M�\'C��J/=>Ux���n꼡nA�(&�G����Ol� q�D Ґ�K!��u|��]] \\��� ~��9� ��S� < �u���sy��)\'u �%giP�Y�#\\rfaȸ�B�� i\'h讳R�m׋�[��˵@�Ԋ6�����of���؊,�=#����l>�E�D����=�t�����iŨ�]g�=T��r�.n�c����K C/� �ƛ�|�"�Tw���nbf1�� �ږ��mx�^b1�|G&���B4�]/�h�mf�8��c,m�v t�<�9�4Oj�O� �M�����Ov\\�`�琖��=��:��[ՔG�\'�2>� �����4�.',
+    description: 'Cenegenics Jacksonville is a medspa and aesthetic wellness clinic in Jacksonville, FL.',
   },
   {
     id: 'revamp-wellness-center-jacksonville-fl',
@@ -4039,7 +4039,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'Hb@I�澰 Qy;���ܾѻ�R{I�@� ҩY�ힼZ6{�墳O�E {ϋ�X�>���A� �:�-�;rB7��3���2�Hf�kq�F��@k�蒯�������.�Z_aD��ӡF�!%b=#0�˺��6�� �- {+�����J�o ��zq��rS �=����~O���� z�����XZ7�[����*��5��`A|���Ȁ#� @��֗�� O��=�5�e[Ź��I{>���~^�E���2l����W �b��"���5 ���. �ӄ�ĨT���Q7\\Cg�o ���2`���h���޻P�D�1Q���pn4��� ����q�{ �-M�n ��C*���ֽ�9 �Z��s�藘j��/uj 4�^=a2 ��r|��V����� � @ޜ�>A�NmQ ��u�7��0����}�<`߱��������H�Pe֠P ��I�����,��4����dR�$��ٜog#u>2:4V�@�a�pڈ�B h(�U���Lk.',
+    description: 'REVAMP Wellness Center is a medspa and aesthetic wellness clinic in Jacksonville, FL.',
   },
   {
     id: 'avalii-aesthetics-jacksonville-fl',
@@ -4087,7 +4087,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'Med Spa, Facial & Skin Care Jacksonville, FL, Marietta & Alpharetta, GA - Microneedling, Skin Laser Treatments. - OMNI MedSpa Alpharetta, GA (Omni Medspa) (678) 653-8696 Jacksonville, FL (Now Open) (904) 217-3099 Marietta, GA (Omni Medspa) (678) 653-8696 Med Spa, Fac... Time Of Day Submit Watch Video Trusted Med Spa in Jacksonville, Marietta & Alpharetta - Where Art and Science Meet Rejuvenate How You Look and Feel At OMNI Medspa, our trusted medical spa is dedicated to helping patients feel their best from the inside out.',
+    description: 'Med Spa, Facial & Skin Care Jacksonville, FL, Marietta & Alpharetta, GA - Microneedling, Skin Laser Treatments. - OMNI MedSpa Alpharetta, GA (Omni Medspa) (678) 653-8696 Jacksonville, FL (Now Open) (9',
   },
   {
     id: 'thin-md-med-spa-jacksonville-jacksonville-fl',
@@ -4104,7 +4104,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'B�?̧����97O�\\JH� �|r��zs�� ��e r�P��n�^�p��n��g-���&3F6�������&���4�v��Z ^ɜI��EfE�t�+�&�Uqß摪�v ���%�|���4]8���0���lB��D�[u���c_*lS3�z����J�C2_��|�( �<`�0E2�}N�Nl7 8���#>�IR��^�ԋ��3$aH.���� ! �/CB�\'�Iq"�z �\\�y�=�0=�̜�G�)������" ט�Y1x��3wy�י�O��D��\\I렕���t5����P-W�kx Y{P-!',
+    description: 'Thin MD Med Spa Jacksonville is a medspa and aesthetic wellness clinic in Jacksonville, FL.',
   },
   {
     id: 'enriquez-aesthetics-llc-jacksonville-fl',
@@ -4120,7 +4120,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'BEST FACIALS IN JACKSONVILLE FLORIDA CUSTOMIZED SKINCARE ROOTED IN BARRIER REPAIR corrective skincare, customized every visit Jacksonville Florida Facial Clinic. EnriquezAesthetics provides customized CORRECTIVE skin care treatments because no two skin types are the same, which is why no two treatments here are either. Every facial is thoughtfully customized to support your skin barrier, target your complex skin conditions, and deliver REAL lasting results while respecting your skin’s microbiome.',
+    description: 'BEST FACIALS IN JACKSONVILLE FLORIDA CUSTOMIZED SKINCARE ROOTED IN BARRIER REPAIR corrective skincare, customized every visit Jacksonville Florida Facial Clinic. EnriquezAesthetics provides customized',
   },
   {
     id: 'dermanova-spa-jacksonville-jacksonville-fl',
@@ -4136,7 +4136,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '�w�aV]�Y�7��<8 Z�` $�����ZAj��qXn��m��m̆i��υ�dS�?n�c �퀊�w�b N�������(�=�J(g�0�y)�6�2g�� ����m.- �d /\'>hs�VH���%xA��)h�4(F� �C���� ������\\������;�T �s P 0�� R�2@`���Y�G c�@v�j�y! _�;mu�Y��S|�Ge�Eߓ�8ɪ��U��4�j��똄x!���dA�Mq� >C &4u1��!H�c�A��o�Sl�!�BRU��\'�6m �X���⾇">���w���5���~�o���; ���� ���?��ۂ^�rj�R]�7Z��6l���6 ���1ؼ��K��ںMM�C�œ����.�2����|�T׶����E ���7J�)����@7 ƅ��)=-�H��?*�m�.�ܸ�H��V�."$O�ݙ�!',
+    description: 'Dermanova Spa Jacksonville is a medspa and aesthetic wellness clinic in Jacksonville, FL.',
   },
   {
     id: 'rhaine-health-wellness-jacksonville-fl',
@@ -4169,7 +4169,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$',
-    description: 'Fattahi specializes in maxillofacial reconstruction and trauma, as well as facial aesthetic/plastic surgery. He received his dental degree from Howard University College of Dentistry in Washington, DC, and his medical degree from the University of Kentucky College of Medicine in Lexington, Kentucky. He completed his residency in oral and maxillofacial surgery at the University of Kentucky College of Medicine, as well as fellowship training in facial cosmetic surgery at Maxillofacial & Facial Aesthetic Surgery in Columbus, Ohio.',
+    description: 'Fattahi specializes in maxillofacial reconstruction and trauma, as well as facial aesthetic/plastic surgery. He received his dental degree from Howard University College of Dentistry in Washington, DC',
   },
   {
     id: 'jacksonville-concierge-medicine-aesthetics-ent-jacksonville-fl',
@@ -4185,7 +4185,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '�U�F�#�1��S?�X �J~��(��� \'.���X˹N8�u$b��А���m����Y�n>�X�7� p�w�0�2�������"�� � ��.�2��� .Ng�Z��!{e�+ ���G ��H�^�@�!"�A�����}�!���H�n[h�$`�[��B$�]��)�#KD����}T���M��@����5�3}�)}-*ƞ]�Ny���@�A�/����̓���"V^��u��y5�� �Hy��� ���(F�ް>�X�7g�$��� �)�0�Ov~/+}�nw:0�~��W�}��<�%�]�t� ly��\'�ܘ�2p��]�s��Dks���u! I�5J2��`�}�����_4���T�o �\\�g���&��=+9��%dX�� w�W)1._N���)?',
+    description: 'Jacksonville Concierge Medicine - Aesthetics/ENT is a medspa and aesthetic wellness clinic in Jacksonville, FL.',
   },
   {
     id: 'enriquezaestheticsllc-jacksonville-fl',
@@ -4201,7 +4201,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'BEST FACIALS IN JACKSONVILLE FLORIDA CUSTOMIZED SKINCARE ROOTED IN BARRIER REPAIR corrective skincare, customized every visit Jacksonville Florida Facial Clinic. EnriquezAesthetics provides customized CORRECTIVE skin care treatments because no two skin types are the same, which is why no two treatments here are either. Every facial is thoughtfully customized to support your skin barrier, target your complex skin conditions, and deliver REAL lasting results while respecting your skin’s microbiome.',
+    description: 'BEST FACIALS IN JACKSONVILLE FLORIDA CUSTOMIZED SKINCARE ROOTED IN BARRIER REPAIR corrective skincare, customized every visit Jacksonville Florida Facial Clinic. EnriquezAesthetics provides customized',
   },
   {
     id: 'forever-essential-med-spa-jacksonville-fl',
@@ -4217,7 +4217,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'Ҷ� X���F�u� i�^� :���e� \'%P�[�m�$� ��ڐ�� :N��{>X�_j���o�3Zk\'h�OMu�[�tm�wPt0��h������� H@oh �+A;,l���>�X���e��~"�0��e։�-[h��Q7h��x��n��B3g�!j�򁗢殁"�^���MG ���c�Z "0ߦ��Z���  ��@l�A4A ���*��w���Cm�֩�<���2 ��9� Υo��:0p�Q�X�0��g��4p�CC�x�/�O�ݔ�]QA������z_M���Y&>v� �Sy��,��S��/. ʷul�*���L� 6����ݥ���p�RP��g� ������3��N� �I!',
+    description: 'Forever Essential | Med Spa is a medspa and aesthetic wellness clinic in Jacksonville, FL.',
   },
   {
     id: 'intercoastal-health-jacksonville-fl',
@@ -4266,7 +4266,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '����k@�K�$�r=�SL ��R�wv{��Wo�x~��M ���P7�<����z���Q��R�:���������˯��_��O�������� ߿{|:�?�iߕʇ��F�|vˍLĚ����Ie�ԋ� ԛ��݂K0B��A[�m$G ��2ς�!Z� �U�%� #�. a�gH�� �7�{�Ӑՠ x=N� i�� ��)�u�����hv3 ���̸�%��c��a����?|��{J��-vI�� wF��P{ �K� ��^ ���a�YݚJ߿m�|g���&�4c�k����� ��rK\\9+f60�Y=:�:\'���w�L���@�?D���� ��@�Ȥ�n9�7>?���M����t�X5�zj����|ezO{�����=��0��t�F!',
+    description: 'Peptide Testosterone Semaglutide Sermorelin Therapy Clinic is a medspa and aesthetic wellness clinic in Jacksonville, FL.',
   },
   {
     id: 'advanced-trt-clinic-jacksonville-fl',
@@ -4283,7 +4283,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '4�m�R6�XPL���p\\��킴@�q���J�._E�-e3�h�: h>L�8�� ��>J�ˡd�U�r��Zrh!',
+    description: 'Advanced TRT Clinic is a medspa and aesthetic wellness clinic in Jacksonville, FL.',
   },
   {
     id: 'aesthetic-med-spa-jacksonville-fl',
@@ -4315,7 +4315,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'He is also a board-certified plastic and reconstructive surgeon at UF Health Jacksonville. Murray received his medical degree from Emory University in Atlanta, Georgia, and also completed residencies in surgery and plastic surgery there. He specializes in aesthetic surgery, body contouring, breast reconstruction, and reconstruction of traumatic and oncologic defects.',
+    description: 'He is also a board-certified plastic and reconstructive surgeon at UF Health Jacksonville. Murray received his medical degree from Emory University in Atlanta, Georgia, and also completed residencies ',
   },
   {
     id: 'the-biostation-jacksonville-fl',
@@ -4332,7 +4332,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$',
-    description: 'the biostation, a renowned name in cutting-edge healthcare, is a testament to commitment, expertise, and the unwavering pursuit of optimal well-being. At the biostation, we believe that health is not one size fits all, and our mission is to provide a tailored solution that empowers you to live your healthiest life. Pioneering Personalized Health At the heart of the biostation\'s philosophy resides an unwavering commitment to the belief that your health journey is a unique and deeply personal odyssey.',
+    description: 'the biostation, a renowned name in cutting-edge healthcare, is a testament to commitment, expertise, and the unwavering pursuit of optimal well-being. At the biostation, we believe that health is not ',
   },
   {
     id: 'uf-health-aesthetics-and-head-and-neck-surgery-north-jacksonville-fl',
@@ -4348,7 +4348,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'They take the time to listen to your concerns and discuss options to help you determine the best solution to achieve the results you\'re looking for. Costs, billing, and insurance Pay your bill online by logging into MyUFHealth . To make a payment in person, visit our Cashier’s Office located on the first floor near the Emergency Department in the UF Health Jacksonville Clinical Center.',
+    description: 'They take the time to listen to your concerns and discuss options to help you determine the best solution to achieve the results you\'re looking for. Costs, billing, and insurance Pay your bill online ',
   },
   {
     id: 'ls-aesthetic-studio-jacksonville-fl',
@@ -4364,7 +4364,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '}!� ����3��})c F��~$���@�Cc���m��7Q��D�/}�{a�@W֏>Y��Z��\'��D�aG ��"��zA �M G��y�$,^]�@��0g^l1��!�KYh1�D\'�R ��n�;� �Hڏ�Cq��?�owa���ק߿��U�[iu��:�S���uw[? ��d�0K�U�RMX����wp�RO�0��F 43�C &�@�Ie��]�?)��O�[A5��� ����� ����C �rh`��2<c�h㋏AFLNl?��,aA�S ����f�}�8�d?�B��G��8�x ּn�VQ �a3|%k�  � 1�h+ᅅgi G�~q�S���!��I*n���a۪��B��Um,���K�������j��>�4�X/��7���x��� )⨈�p#[�H����0��c�28�/S�uo��1��� SX�Pv���_-c�s>�������|ȡ�� �؎C�L� ��0�J� ��K�f��#`H��l�0���"9�4(.0]�p� �\'?',
+    description: 'LS Aesthetic Studio is a medspa and aesthetic wellness clinic in Jacksonville, FL.',
   },
   {
     id: 'aarx-weight-loss-jacksonville-jacksonville-fl',
@@ -4381,7 +4381,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'ëöX¼: EÍ²b÷¬"611¹¶fË¢Ùk2\\¼6îþksOH¡wôôQ+{b õ! ~< z½ëõExm¥úìenìmu4ÝV5H®5Å%MC\\íücóËqýÍ{ ­T Ç§þx®ÄH^G¨Cý®îeÍÓ¿+é·ÎöÐÖD1ü=yÉ×ýêU´XøPûgéþ!',
+    description: 'AARX Weight Loss Jacksonville is a medspa and aesthetic wellness clinic in Jacksonville, FL.',
   },
   {
     id: 'novi-boca-raton-boca-raton-fl',
@@ -4397,7 +4397,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: 'Novi Boca Raton 0 We Love all Skin and All are welcome. I’m a 35 year old dedicated mother of two little ones with a passion for serving others through my work as a Holistic Facialist in East Boca Raton, Florida. Our treatments are slow, mindful, intentional and always safe .',
+    description: 'Novi Boca Raton 0 We Love all Skin and All are welcome. Im a 35 year old dedicated mother of two little ones with a passion for serving others through my work as a Holistic Facialist in East Boca Rato',
   },
   {
     id: 'core-medical-group-boca-raton-fl',
@@ -4430,7 +4430,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '��  �������q9�kB{�V���yXdEfFv�tfEBF�T7DD����i������/�a~���{��R��Y?I�ȑ������s��D"+��_y�����g�(K�p� g���� �������Wg���2��4�~��3��l��? ��4�4�[p�U��� ׺DY� r�} ��89 5O!�W��D�p� ��Y>�.�� e��Di<�9���I1H˱l��%�`��|@�9Բt��(�s���2-Q��,[�%���bL���1���.Ѣ?�Kۺ?',
+    description: 'Lennox Aesthetics is a medspa and aesthetic wellness clinic in Boca Raton, FL.',
   },
   {
     id: 'impruv-u-boca-raton-fl',
@@ -4462,7 +4462,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: ')�QEj"���EN#ءj&���uFUO(rĹ��B��j��ͷM�P6 -��>u�E׮�{]���T]�������Ԇ��� c.8��n��kbbjLM���i65 �K�4MI�ii95��Mk��6�i^g�~p���]�-�&��>5f�<Յ�����~��}�߅,��v�? �T���iq^[�ܻlv ��1�u_�wǪ=�iWs��d���\\鑰��7�v�B�Z�nK�K�^����f�S3%�3��su���X��L�}��T��{�a�r�R�ف�)]�z�G\'���޳���mq�&� �wNt���bN�ȣ�d"�����r�d)�����\\*d���y��[^R!�Rz|uJ�Jd��hü9Vi��N�:ز��ꄜ\\W�#ו���L� ����#M����ݲZ�y[���`ӊ�0�n��)L{1�M� �@�[\'�df.� �3M�: ��QTeh2���g�62��]��eW \'���.',
+    description: 'Astra Med Spa is a medspa and aesthetic wellness clinic in Boca Raton, FL.',
   },
   {
     id: 'ideal-image-boca-raton-boca-raton-fl',
@@ -4542,7 +4542,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: ' �-�貯\\��� ��4/��|*�b�d�-˃^��u&Y������ �S� #Bc ���7�� cZ��-��4�� ���.WuQK̫i��  w��-��ѓ���ό��>�Qo�>]�F�h�X����0��ľ� M�9]v�&���_����� �� ��L��K�l�]�����6��d״ �� �^�j! �DQTBk�Rsp�oG��X>K �(C�h�)��p��Ͷ�j��䘽p�3��J+�b E���[D��F�2�%P�Ά���J����>Lr ]�"���s����s�MeR�F� �,���CKU�, ]�Q����7���@�m��/�ʟ }A�ҿ7�U���J��u&oU��� ���<�|��ZuM"�����\\�~=����?�Ǥ\\���ӎϞG� �Nf��y?�.&��=��5~���}x|b�B8ۈ��b%�4�+z:����\\GZ�}�x���u�.',
+    description: 'Boca Raton Cosmetic Dermatology is a medspa and aesthetic wellness clinic in Boca Raton, FL.',
   },
   {
     id: 'my-skin-dealer-boca-raton-fl',
@@ -4558,7 +4558,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: '[Y4i�:i�����9  �s��P��1n�_��9�  ����d�Xmv�����������������ݬ��=�4� ;�;#x!@�� %P �ǣXr"p$_K&����f�6۷\\��e���?7��ʋIF�b �!�%;V�d�-%��� 8Y�? �y^��⯖Y��Z+JD�(��OUaM���{?�۫�n�d��p�c�����ۆ�a��E?!',
+    description: 'My Skin Dealer is a medspa and aesthetic wellness clinic in Boca Raton, FL.',
   },
   {
     id: 'bocaskincareclub-boca-raton-fl',
@@ -4605,7 +4605,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'Our licensed team specializes in injectables, laser hair removal, advanced skin resurfacing, and custom facials—so you can look refreshed, natural, and confident.',
+    description: 'Our licensed team specializes in injectables, laser hair removal, advanced skin resurfacing, and custom facialsso you can look refreshed, natural, and confident.',
   },
   {
     id: 'naylan-montes-wellness-spa-boca-raton-fl',
@@ -4621,7 +4621,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '���|� �4�tޏ�q}�|�t3� ab?��g�� T5����x��}��4(����,S���gC�r��8�bh��� ~uz�; t�?�խV���nb�֗jS�|�nV�� ��u�5��8��u��+ɬ�{�)��X�w�)�䡑�G�X W��&�3�|H ���X�V��a����i��)oc �[]O� �x��� ��4:(���\'p���ݯu =�aOHil�u^o���4���ŏ�ڈ�3�r�I�e���2/C�ʀ�j@�/]iKP�/#TQ�X�;m}����J�e[� 8������`0 ��X o Xto�)�My�ї,1�I�! "T#������$Cp�m�t� 9G,b�1 e��vf �dӦ�%�Q�������Ɛ�.',
+    description: 'Naylan Montes Wellness Spa is a medspa and aesthetic wellness clinic in Boca Raton, FL.',
   },
   {
     id: 'injectrx-wellness-mizner-park-boca-raton-fl',
@@ -4637,7 +4637,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'InjectRX Wellness For A Better You Innovative Skincare Treatments Skincare - or the field of skin rejuvenation - have come a long way since your simple facial or massage. ‍ InjectRX Wellness, the best medical spa , prides itself on offering result driven skincare treatments and innovations to our clients. If you\'re looking for the latest cosmetic and wellness treatments in Boca Raton FL, we\'re here for you.',
+    description: 'InjectRX Wellness For A Better You Innovative Skincare Treatments Skincare - or the field of skin rejuvenation - have come a long way since your simple facial or massage.  InjectRX Wellness, the best ',
   },
   {
     id: 'vivae-wellness-boca-raton-fl',
@@ -4653,7 +4653,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '�6�����L�Z�A�l?Hz{��z�b� � ��%oh~�H����=��1\' 1�`q��2�\'�������T��? �*�,�ьF ����C��N����#%�ۀ�\\^?c��\\����� �;�pV�2�p�����9�ꑿ�4�����TL$�*/����$/��}��5�Cl��=W*p��[o��� C �z��h���h�"/�Rw�o(�#��0��3 � �p� oa% iSphBߚ!VpD���A�.',
+    description: 'Vivae Wellness is a medspa and aesthetic wellness clinic in Boca Raton, FL.',
   },
   {
     id: 'everybody-is-beautiful-med-spa-boca-raton-fl',
@@ -4669,7 +4669,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$',
-    description: '���3�84�N<�[(B�f� � ��\' �:ݽ�:��2���\'*��8�<�f��1����f�h�Wy/����EUv��I�0(J�|� \'���&]�_����+@pu� ����RL.�#�LcøfY[<�hZkpz����bM�Y�b�MQ-$׶| � ���V��*�0�`���=�Peë8�2|i��C�y�މn#���Ӵ������i�cw#�l��rhi��,p�S�\\� ¤�7�Ό�VYv� V%�jp�0��+�80��F�c6���-��U��5�N���h�A��;��2#�� u�$@? ��/�:~`�(����,����9�K>:��JX��z��t��c�\'(�P(E���.&����-7/�Hn�li��0 V���[d ���z��ʥ̩\\�����g^�Z�sM(}��ĕX��.',
+    description: 'Everybody Is Beautiful Med Spa is a medspa and aesthetic wellness clinic in Boca Raton, FL.',
   },
   {
     id: 'seen-aesthetics-boca-raton-fl',
@@ -4685,7 +4685,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'SEEN Aesthetics Medical Spa - Boca Raton FL | Vagaro  Search  Back   Cancel   Submit  Type of Service:  At Business  Mobile Service  Live Stream Search Country United Sates Select Location   Cancel  Online Scheduling for Salons and Spas. Salon Software | Salon Appointment Software | Vagaro Inc." title="Online Scheduling for Salons and Spas.',
+    description: 'SEEN Aesthetics Medical Spa - Boca Raton FL | Vagaro  Search  Back   Cancel   Submit  Type of Service:  At Business  Mobile Service  Live Stream Search Country United Sates Select Location   Cancel  O',
   },
   {
     id: '4ever-young-med-spa-wellness-center-boca-raton-boca-raton-fl',
@@ -4702,7 +4702,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: '}V�r 7�o?˓�(�!����dL���R���C�P�|LxT�� Y?���X�G ha�³�ⲘkL�p2���Ee��-`@�<5|Z� �����]�J���lN� bf��03��-�eY�>ڒ�ȄRL"��V�򇤺]>�b��R\\ �0 �$�9a#?',
+    description: '4Ever Young Med Spa & Wellness Center - Boca Raton is a medspa and aesthetic wellness clinic in Boca Raton, FL.',
   },
   {
     id: 'skin-lounge-med-spa-boca-raton-fl',
@@ -4718,7 +4718,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: '���a�P��\'�dE� ٣�aq�\'�� ��A��Q���{DХ�q֑rܜ�׀ W�dMa � >+�G�����<^�=_]����y����*T ?�0�Ss��� |��#4�(�(n���*b�����)b�K�!S����y�8{}>��^� /1���_��[&��J_��E1o]���v5gC��j)c�;�:R�mn%_*#q"+n��1�$_g��:G�Ӏ2 ���KN�$�\'�>L�e����F9\\�s 2��4d�WKx��B�NR�͆���̤�.]<��KNp�d��q倗旪]���@��9 ��������0!�k2���ҐM`��  @?',
+    description: 'Skin Lounge Med Spa is a medspa and aesthetic wellness clinic in Boca Raton, FL.',
   },
   {
     id: 'ora-wellness-and-aesthetics-boca-raton-fl',
@@ -4734,11 +4734,11 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: true,
     priceTier: '$$$',
-    description: '�.�@DE� ��a�?�S�[wWy�?��X�  ݔ�D�\\�J��d�I\\�~ qHB" �cݮ�����ռ�[�����V3��� �D�)i� ���� (Y  ��Q �}�{�C�Jh��$�Lmh� 8,�;p{ (\\ �N�A���sN�bi ���L���F����u}��ED� 5�1�~�23Tr R\'��>����Я^�m�$@M>?0Zl��$0m ���+�شc4`���1�L�׬;a ���3J�a��)�������6#E�W� O�^��3X�O�њF�X��Bj����m�m�cfs%��J��O/W��f���d�}�ѹ�p���۱��n� [����. ;���n�jP߅WFC�����V���X���;�iXL�-y�{<����ʷ���:C�;��v�o87��ፆ[��8�9��"�g�/��f@�\\�����b�8(��T J#���p}���A�\'�g^�Bض���q\\g� ������sE{��N��7#�+ p�!',
+    description: 'Ora Wellness and Aesthetics is a medspa and aesthetic wellness clinic in Boca Raton, FL.',
   },
   {
     id: 'as-ka-medspa-boca-raton-fl',
-    name: 'Asōka MedSpa',
+    name: 'Aska MedSpa',
     slug: 'as-ka-medspa-boca-raton-fl',
     city: 'Boca Raton',
     address: '601 Federal Hwy suite 110, Boca Raton, FL 33432',
@@ -4750,7 +4750,7 @@ export const allClinics: Clinic[] = [
     verified: false,
     featured: false,
     priceTier: '$$',
-    description: 'ASŌKA MEDSPA – Look Younger, Feel Gorgeous Skip to content Welcome Asõka Medspa Rejuvenate – Revive – Thrive Experience clinical-grade body care paired with serenity of a Luxury Spa. Our premiere physician-led treatments delivered efficiently and with exceptional value. It is revered for its healing powers , graceful beauty , and soothing aura .',
+    description: 'ASKA MEDSPA  Look Younger, Feel Gorgeous Skip to content Welcome Aska Medspa Rejuvenate  Revive  Thrive Experience clinical-grade body care paired with serenity of a Luxury Spa. Our premiere physician',
   },
 ]
 

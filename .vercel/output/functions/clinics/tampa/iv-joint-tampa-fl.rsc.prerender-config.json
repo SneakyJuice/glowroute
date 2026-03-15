@@ -1,0 +1,28 @@
+{
+  "type": "Prerender",
+  "expiration": false,
+  "group": 19,
+  "bypassToken": "2b128b42b5ed74602f5512803b5c9ff6",
+  "experimentalBypassFor": [
+    {
+      "type": "header",
+      "key": "Next-Action"
+    },
+    {
+      "type": "header",
+      "key": "content-type",
+      "value": "multipart/form-data;.*"
+    }
+  ],
+  "fallback": {
+    "type": "FileFsRef",
+    "mode": 33188,
+    "fsPath": "iv-joint-tampa-fl.rsc.prerender-fallback.rsc"
+  },
+  "initialHeaders": {
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/clinics/layout,_N_T_/clinics/[city]/layout,_N_T_/clinics/[city]/[slug]/layout,_N_T_/clinics/[city]/[slug]/page,_N_T_/clinics/tampa/iv-joint-tampa-fl",
+    "vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch",
+    "content-type": "text/x-component"
+  },
+  "allowQuery": []
+}
