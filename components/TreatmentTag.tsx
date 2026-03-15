@@ -13,10 +13,20 @@ export default function TreatmentTag({ label, variant = 'default' }: TagProps) {
   )
 }
 
-const SPECIALTY_KEYWORDS = ['peptide', 'semaglutide', 'glp-1', 'glp1', 'ozempic', 'bpc-157', 'sermorelin', 'tirzepatide']
+const GOLD_KEYWORDS = [
+  'peptide', 'semaglutide', 'glp-1', 'glp1', 'ozempic', 'bpc-157',
+  'sermorelin', 'tirzepatide', 'hormone', 'testosterone', 'weight loss',
+  "men's health", 'women\'s health',
+]
+const TEAL_KEYWORDS = [
+  'botox', 'dysport', 'filler', 'dermal', 'kybella', 'restylane',
+  'juvederm', 'sculptra', 'injectable', 'laser', 'microneedling',
+  'iv therapy', 'body contour',
+]
+
 export function getTagVariant(treatment: string): TagVariant {
   const lower = treatment.toLowerCase()
-  if (SPECIALTY_KEYWORDS.some(k => lower.includes(k))) return 'gold'
-  if (['botox', 'dysport', 'filler', 'dermal', 'kybella', 'restylane', 'juvederm', 'sculptra'].some(k => lower.includes(k))) return 'teal'
+  if (GOLD_KEYWORDS.some(k => lower.includes(k))) return 'gold'
+  if (TEAL_KEYWORDS.some(k => lower.includes(k))) return 'teal'
   return 'default'
 }

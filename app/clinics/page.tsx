@@ -10,7 +10,7 @@ import Pagination from '@/components/Pagination'
 import BottomCTA from '@/components/BottomCTA'
 import Footer from '@/components/Footer'
 import { FilterState, Clinic } from '@/types/clinic'
-import { featuredClinic, standardClinics } from '@/data/sample-clinics'
+import { featuredClinic, standardClinics } from '@/data/tampa-clinics'
 
 const DEFAULT_FILTERS: FilterState = {
   treatmentTypes: [],
@@ -92,7 +92,7 @@ export default function ClinicsPage() {
   return (
     <div className="min-h-screen bg-cream font-sans">
       <Navbar />
-      <HeroSearch clinicCount={277} defaultCity="Tampa, FL" />
+      <HeroSearch clinicCount={60} defaultCity="Tampa, FL" />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
         <div className="flex gap-6">
@@ -106,7 +106,7 @@ export default function ClinicsPage() {
             <MapStrip city="Tampa, FL" radius={filters.distanceMiles} />
 
             <ResultsHeader
-              count={filteredClinics.length + 1} // +1 for featured
+              count={filteredClinics.length + 1}
               city="Tampa, FL"
               view={view}
               sort={sort}

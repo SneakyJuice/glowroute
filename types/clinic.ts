@@ -15,8 +15,15 @@ export interface Clinic {
   priceTier?: '$' | '$$' | '$$$' | '$$$$'
   availability?: string
   imageUrl?: string
+  images?: string[]
+  logo?: string
   description?: string
   address?: string
+  phone?: string
+  website?: string
+  bookingUrl?: string
+  instagram?: string
+  mapsUrl?: string
 }
 
 export interface FilterState {
