@@ -4,18 +4,19 @@ import { useState } from 'react'
 interface HeroSearchProps {
   clinicCount?: number
   defaultCity?: string
-  onSearch?: (treatment: string, city: string) => void
+  onSearch?: (treatment: string, city: string, distance: string) => void
 }
 
 export default function HeroSearch({ clinicCount = 292, defaultCity = 'Tampa, FL', onSearch }: HeroSearchProps) {
   const [treatment, setTreatment] = useState('')
   const [city, setCity] = useState(defaultCity)
+  const [distance, setDistance] = useState('25')
 
   const handleSearch = () => {
-    if (onSearch) onSearch(treatment.trim(), city.trim())
+    onSearch?.(treatment, city, distance)
   }
 
-  const handleKeyDown = (e: React.KeyboardEvent) => {
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter') handleSearch()
   }
 
@@ -47,16 +48,34 @@ export default function HeroSearch({ clinicCount = 292, defaultCity = 'Tampa, FL
           <div className="flex items-center gap-2.5 px-4 border-b border-gray-200 md:border-b-0 md:border-r md:max-w-[220px]">
             <svg className="w-4 h-4 text-gray-400 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0116 0z"/><circle cx="12" cy="10" r="3"/></svg>
             <input
+              list="fl-cities"
               value={city}
               onChange={e => setCity(e.target.value)}
               onKeyDown={handleKeyDown}
               className="flex-1 border-none outline-none text-sm text-navy bg-transparent py-[18px] placeholder:text-gray-400 min-w-0"
-              placeholder="City, e.g. Tampa"
+              placeholder="Tampa, FL"
             />
+            <datalist id="fl-cities">
+              <option value="Tampa, FL" />
+              <option value="Miami, FL" />
+              <option value="Orlando, FL" />
+              <option value="Fort Lauderdale, FL" />
+              <option value="Jacksonville, FL" />
+              <option value="Boca Raton, FL" />
+            </datalist>
+          </div>
+          <div className="flex items-center gap-2.5 px-4 border-b border-gray-200 md:border-b-0 md:max-w-[160px]">
+            <svg className="w-4 h-4 text-gray-400 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            <select value={distance} onChange={e => setDistance(e.target.value)} className="flex-1 border-none outline-none text-sm text-navy bg-transparent appearance-none cursor-pointer py-[18px] md:py-0">
+              <option value="5">Within 5 mi</option>
+              <option value="10">Within 10 mi</option>
+              <option value="25">Within 25 mi</option>
+              <option value="50">Any distance</option>
+            </select>
           </div>
           <button
             onClick={handleSearch}
-            className="bg-gradient-to-br from-teal to-teal-light text-white text-[15px] font-semibold px-7 py-4 md:py-0 flex items-center justify-center gap-2 hover:opacity-90 transition-opacity"
+            className="bg-gradient-to-br from-teal to-teal-light text-white text-[15px] font-semibold px-7 py-4 md:py-0 flex items-center justify-center gap-2 hover:opacity-93 transition-opacity"
           >
             <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
             Search

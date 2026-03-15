@@ -32,55 +32,51 @@ export default function ClinicsPage() {
   const [sort, setSort] = useState('Best Match')
   const [page, setPage] = useState(1)
   const [searchTreatment, setSearchTreatment] = useState('')
-  const [searchCity, setSearchCity] = useState('')
+  const [searchCity, setSearchCity] = useState('Tampa')
+  const [searchDistance, setSearchDistance] = useState('25')
 
-  const handleSearch = (treatment: string, city: string) => {
-    setSearchTreatment(treatment)
-    setSearchCity(city)
+  const handleSearch = (treatment: string, city: string, distance: string) => {
+    setSearchTreatment(treatment.toLowerCase().trim())
+    setSearchCity(city.toLowerCase().replace(',', '').trim())
+    setSearchDistance(distance)
     setPage(1)
   }
 
   const filteredClinics = useMemo(() => {
     let result = [...standardClinics]
 
-    // Text search — treatment query against name, treatments, description, category
+    // TEXT SEARCH — treatment keyword against name, treatments, services, description
     if (searchTreatment) {
-      const q = searchTreatment.toLowerCase()
       result = result.filter(c => {
-        const allTreatments = [...(c.treatments || []), ...(c.specialtyTreatments || [])].join(' ').toLowerCase()
-        return (
-          c.name.toLowerCase().includes(q) ||
-          allTreatments.includes(q) ||
-          (c.description || '').toLowerCase().includes(q)
-        )
+        const hay = [
+          c.name,
+          ...(c.treatments || []),
+          ...(c.specialtyTreatments || []),
+          c.description || '',
+        ].join(' ').toLowerCase()
+        return hay.includes(searchTreatment)
       })
     }
 
-    // City filter
-    if (searchCity) {
-      const cityQ = searchCity.toLowerCase().replace(/,.*$/, '').trim()
-      result = result.filter(c =>
-        (c.city || '').toLowerCase().includes(cityQ) ||
-        (c.address || '').toLowerCase().includes(cityQ)
-      )
+    // CITY FILTER — match against clinic city field
+    if (searchCity && searchCity !== 'florida' && searchCity !== 'fl') {
+      result = result.filter(c => {
+        const clinicCity = (c.city || '').toLowerCase()
+        const searchLower = searchCity.toLowerCase().replace(/,?\s*(fl|florida)\s*/g, '').trim()
+        return clinicCity.includes(searchLower) || searchLower.includes(clinicCity)
+      })
     }
 
-    // Filter by minimum rating
+    // Existing filters (rating, price, verified, treatment type)
     if (filters.minRating > 0) {
       result = result.filter(c => c.googleRating >= filters.minRating)
     }
-
-    // Filter by price tier
     if (filters.priceTiers.length > 0) {
       result = result.filter(c => c.priceTier && filters.priceTiers.includes(c.priceTier))
     }
-
-    // Filter by verified only
     if (filters.verifiedOnly) {
       result = result.filter(c => c.verified)
     }
-
-    // Filter by treatment type from sidebar
     if (filters.treatmentTypes.length > 0 && !filters.treatmentTypes.includes('All Treatments')) {
       result = result.filter(c => {
         const allTreatments = [...(c.treatments || []), ...(c.specialtyTreatments || [])]
@@ -119,6 +115,11 @@ export default function ClinicsPage() {
     setPage(1)
   }
 
+  // Display-friendly city label for UI components
+  const displayCity = searchCity
+    ? searchCity.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ') + ', FL'
+    : 'Tampa, FL'
+
   return (
     <div className="min-h-screen bg-cream font-sans">
       <Navbar />
@@ -133,11 +134,11 @@ export default function ClinicsPage() {
 
           {/* Main content */}
           <div className="flex-1 min-w-0">
-            <MapStrip city="Tampa, FL" radius={filters.distanceMiles} />
+            <MapStrip city={displayCity} radius={filters.distanceMiles} />
 
             <ResultsHeader
               count={filteredClinics.length + 1}
-              city="Tampa, FL"
+              city={displayCity}
               view={view}
               sort={sort}
               onViewChange={setView}
