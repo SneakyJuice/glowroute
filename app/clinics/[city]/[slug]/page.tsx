@@ -5,6 +5,7 @@ import TreatmentTag, { getTagVariant } from '@/components/TreatmentTag'
 import VerifiedBadge from '@/components/VerifiedBadge'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import LeadCaptureForm from '@/components/LeadCaptureForm'
 
 /** Normalize a city name to a URL-safe slug */
 function citySlug(city: string) {
@@ -387,13 +388,16 @@ export default function ClinicProfilePage({ params }: PageProps) {
                   Claim your free listing to update your info, respond to leads, and unlock analytics.
                 </p>
                 <a
-                  href={`/claim?slug=${clinic.slug}`}
+                  href={`/claim?clinic=${encodeURIComponent(clinic.name)}`}
                   className="block text-center bg-teal text-white text-sm font-semibold py-2.5 rounded-xl hover:bg-teal/80 transition-colors relative"
                 >
                   Claim This Listing →
                 </a>
               </div>
             )}
+
+            {/* Lead Capture Form */}
+            <LeadCaptureForm clinicName={clinic.name} />
 
             {/* Nearby Clinics (same city) */}
             {nearbyClinics.length > 0 && (
