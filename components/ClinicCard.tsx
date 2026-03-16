@@ -8,7 +8,7 @@ function citySlug(city: string) {
   return city.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
 }
 
-interface ClinicCardProps { clinic: Clinic }
+interface ClinicCardProps { clinic: Clinic; distanceMi?: number }
 
 function StarRating({ rating }: { rating: number }) {
   return (
@@ -91,7 +91,7 @@ export function FeaturedClinicCard({ clinic }: ClinicCardProps) {
   )
 }
 
-export default function ClinicCard({ clinic }: ClinicCardProps) {
+export default function ClinicCard({ clinic, distanceMi }: ClinicCardProps) {
   const [saved, setSaved] = useState(false)
   return (
     <div className={`bg-white rounded-2xl overflow-hidden flex flex-col transition-all hover:-translate-y-[3px] ${
@@ -117,10 +117,15 @@ export default function ClinicCard({ clinic }: ClinicCardProps) {
         <div className="text-[15px] font-bold text-onyx tracking-tight leading-snug">
           <a href={`/clinics/${citySlug(clinic.city)}/${clinic.slug}`} className="hover:text-sage transition-colors">{clinic.name}</a>
         </div>
-        <div className="flex items-center gap-1.5">
+        <div className="flex items-center gap-1.5 flex-wrap">
           <StarRating rating={clinic.googleRating} />
           <span className="text-sm font-bold text-onyx">{clinic.googleRating}</span>
           <span className="text-xs text-gray-400">({clinic.googleReviewCount})</span>
+          {distanceMi != null && (
+            <span className="text-xs text-stone font-medium bg-stone/10 px-2 py-0.5 rounded-full">
+              {distanceMi.toFixed(1)} mi
+            </span>
+          )}
         </div>
         {(clinic.neighborhood || clinic.city) && (
           <div className="flex items-center gap-1 text-xs text-gray-500">

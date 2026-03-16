@@ -5,12 +5,35 @@ interface HeroSearchProps {
   clinicCount?: number
   defaultCity?: string
   onSearch?: (treatment: string, city: string, distance: string) => void
+  onNearMe?: (lat: number, lng: number) => void
 }
 
-export default function HeroSearch({ clinicCount = 292, defaultCity = 'Tampa, FL', onSearch }: HeroSearchProps) {
+export default function HeroSearch({ clinicCount = 292, defaultCity = 'Tampa, FL', onSearch, onNearMe }: HeroSearchProps) {
   const [treatment, setTreatment] = useState('')
   const [city, setCity] = useState(defaultCity)
   const [distance, setDistance] = useState('25')
+  const [locating, setLocating] = useState(false)
+  const [locError, setLocError] = useState('')
+
+  const handleNearMe = () => {
+    if (!navigator.geolocation) {
+      setLocError('Geolocation not supported by your browser')
+      return
+    }
+    setLocating(true)
+    setLocError('')
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        setLocating(false)
+        onNearMe?.(pos.coords.latitude, pos.coords.longitude)
+      },
+      (err) => {
+        setLocating(false)
+        setLocError('Could not get location. Please allow access.')
+      },
+      { timeout: 10000 }
+    )
+  }
 
   const handleSearch = () => {
     onSearch?.(treatment, city, distance)
@@ -89,7 +112,18 @@ export default function HeroSearch({ clinicCount = 292, defaultCity = 'Tampa, FL
               {item}
             </div>
           ))}
+          <button
+            onClick={handleNearMe}
+            disabled={locating}
+            className="flex items-center gap-1.5 text-[12px] font-medium text-sage border border-sage/30 hover:bg-sage/10 rounded-full px-3 py-1.5 transition-colors disabled:opacity-60"
+          >
+            <span>{locating ? '⏳' : '📍'}</span>
+            {locating ? 'Locating…' : 'Near Me'}
+          </button>
         </div>
+        {locError && (
+          <p className="text-center text-[11px] text-red-400 mt-2">{locError}</p>
+        )}
       </div>
     </section>
   )

@@ -14,6 +14,7 @@ import { FilterState, Clinic } from '@/types/clinic'
 import { featuredClinic, standardClinics } from '@/data/all-clinics'
 import { CATEGORIES, matchCategories } from '@/data/categories'
 import type { CategorySlug } from '@/data/categories'
+import { haversine } from '@/lib/geo'
 
 const DEFAULT_FILTERS: FilterState = {
   treatmentTypes: [],
@@ -42,6 +43,16 @@ export default function ClinicsPage() {
   const [page, setPage] = useState(1)
   const [searchTreatment, setSearchTreatment] = useState('')
   const [searchCity, setSearchCity] = useState('Tampa')
+  const [searchDistance, setSearchDistance] = useState('25')
+  const [userLat, setUserLat] = useState<number | null>(null)
+  const [userLng, setUserLng] = useState<number | null>(null)
+
+  const handleNearMe = (lat: number, lng: number) => {
+    setUserLat(lat)
+    setUserLng(lng)
+    setSort('Nearest First')
+    setPage(1)
+  }
 
 
   const handleSearch = (treatment: string, city: string) => {
@@ -108,15 +119,23 @@ export default function ClinicsPage() {
     } else if (sort === 'Most Reviewed') {
       result.sort((a, b) => b.googleReviewCount - a.googleReviewCount)
     } else if (sort === 'Nearest First') {
-      result.sort((a, b) => {
-        const distA = parseFloat(a.distance || '99')
-        const distB = parseFloat(b.distance || '99')
-        return distA - distB
-      })
+      if (userLat !== null && userLng !== null) {
+        result.sort((a, b) => {
+          const distA = a.lat != null && a.lng != null ? haversine(userLat, userLng, a.lat, a.lng) : 9999
+          const distB = b.lat != null && b.lng != null ? haversine(userLat, userLng, b.lat, b.lng) : 9999
+          return distA - distB
+        })
+      } else {
+        result.sort((a, b) => {
+          const distA = parseFloat(a.distance || '99')
+          const distB = parseFloat(b.distance || '99')
+          return distA - distB
+        })
+      }
     }
 
     return result
-  }, [filters, sort, searchTreatment, searchCity])
+  }, [filters, sort, searchTreatment, searchCity, userLat, userLng, activeSpecialty])
 
   // Featured clinic is Tampa-only — hide when user has searched for another city
   const showFeatured = !searchCity || searchCity.toLowerCase().includes('tampa')
@@ -143,7 +162,7 @@ export default function ClinicsPage() {
   return (
     <div className="min-h-screen bg-cream font-sans">
       <Navbar />
-      <HeroSearch clinicCount={292} defaultCity="Tampa, FL" onSearch={handleSearch} />
+      <HeroSearch clinicCount={292} defaultCity="Tampa, FL" onSearch={handleSearch} onNearMe={handleNearMe} />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
         <div className="flex flex-col md:flex-row gap-6">
@@ -183,9 +202,12 @@ export default function ClinicsPage() {
               {showFeatured && <FeaturedClinicCard clinic={featuredClinic} />}
 
               {/* Standard clinic cards */}
-              {pagedClinics.map((clinic: Clinic) => (
-                <ClinicCard key={clinic.id} clinic={clinic} />
-              ))}
+              {pagedClinics.map((clinic: Clinic) => {
+                const distMi = userLat !== null && userLng !== null && clinic.lat != null && clinic.lng != null
+                  ? haversine(userLat, userLng, clinic.lat, clinic.lng)
+                  : undefined
+                return <ClinicCard key={clinic.id} clinic={clinic} distanceMi={distMi} />
+              })}
             </div>
 
             {totalPages > 1 && (
