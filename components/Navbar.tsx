@@ -16,7 +16,7 @@ export default function Navbar() {
         </div>
         <div className="flex items-center gap-2.5 ml-auto">
           <a href="#" className="hidden md:block text-sm font-medium text-white/80 px-3.5 py-1.5 rounded hover:text-white hover:bg-white/10 transition-colors">Sign In</a>
-          <a href="#" className="text-sm font-semibold text-white bg-sage px-4 py-1.5 rounded hover:opacity-90 transition-opacity">Join the Network</a>
+          <a href="/claim" className="text-sm font-semibold text-white bg-sage px-4 py-1.5 rounded hover:opacity-90 transition-opacity">Join the Network</a>
         </div>
       </div>
     </nav>
