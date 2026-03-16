@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import { trackEvent } from '@/lib/analytics'
 
 interface HeroSearchProps {
   clinicCount?: number
@@ -16,6 +17,7 @@ export default function HeroSearch({ clinicCount = 292, defaultCity = 'Tampa, FL
   const [locError, setLocError] = useState('')
 
   const handleNearMe = () => {
+    trackEvent.nearMeClick()
     if (!navigator.geolocation) {
       setLocError('Geolocation not supported by your browser')
       return

@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import type { Metadata } from 'next'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
@@ -6,6 +5,7 @@ import { CATEGORIES } from '@/data/categories'
 import { matchCategories } from '@/data/categories'
 import { allClinics } from '@/data/all-clinics'
 import type { CategorySlug } from '@/data/categories'
+import SpecialtyGrid from '@/components/SpecialtyGrid'
 
 export const metadata: Metadata = {
   title: 'Specialties | GlowRoute',
@@ -50,26 +50,14 @@ export default function SpecialtiesPage() {
 
       {/* Category Grid */}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {CATEGORIES.map(cat => {
-            const count = counts[cat.slug as CategorySlug] ?? 0
-            return (
-              <Link
-                key={cat.slug}
-                href={`/clinics?specialty=${cat.slug}`}
-                className="bg-white border border-stone/20 hover:border-champagne/60 rounded-xl p-6 cursor-pointer transition-all hover:shadow-md hover:-translate-y-0.5 flex flex-col gap-3 group"
-              >
-                <span className="text-3xl">{cat.icon}</span>
-                <div className="flex-1">
-                  <p className="font-semibold text-onyx text-sm leading-snug group-hover:text-sage transition-colors">
-                    {cat.label}
-                  </p>
-                </div>
-                <span className="text-stone text-sm">{count} providers</span>
-              </Link>
-            )
-          })}
-        </div>
+        <SpecialtyGrid
+          categories={CATEGORIES.map(cat => ({
+            slug: cat.slug,
+            icon: cat.icon,
+            label: cat.label,
+            count: counts[cat.slug as CategorySlug] ?? 0,
+          }))}
+        />
       </main>
 
       <Footer />
