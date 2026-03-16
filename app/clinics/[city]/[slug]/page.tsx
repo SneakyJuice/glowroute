@@ -24,15 +24,36 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: PageProps) {
-  const clinic = allClinics.find(c => c.slug === params.slug)
+  const clinic = allClinics.find(
+    c => c.slug === params.slug && citySlug(c.city) === params.city
+  )
   if (!clinic) return { title: 'Clinic Not Found | GlowRoute' }
+
+  const title = `${clinic.name} | GlowRoute`
+  const description =
+    clinic.description ||
+    `Discover ${clinic.name} in ${clinic.city}, FL — ${(clinic.treatments || []).slice(0, 3).join(', ')}. Book a consultation today.`
+  const image =
+    clinic.images?.[0] ||
+    (clinic as any).imageUrl ||
+    clinic.logo ||
+    'https://glowroute.io/og-default.jpg'
+
   return {
-    title: `${clinic.name} | GlowRoute — ${clinic.city}`,
-    description: clinic.description || `${clinic.name} is a medspa and aesthetic clinic in ${clinic.city}. View treatments, reviews, and contact info on GlowRoute.`,
+    title,
+    description,
     openGraph: {
-      title: clinic.name,
-      description: clinic.description || '',
-      images: clinic.images?.[0] ? [clinic.images[0]] : [],
+      title,
+      description,
+      images: [{ url: image, width: 1200, height: 630, alt: clinic.name }],
+      type: 'website',
+      url: `https://glowroute.io/clinics/${params.city}/${params.slug}`,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [image],
     },
   }
 }
