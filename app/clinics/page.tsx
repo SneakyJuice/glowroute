@@ -1,5 +1,6 @@
 'use client'
 import { useState, useMemo } from 'react'
+import { useSearchParams } from 'next/navigation'
 import Navbar from '@/components/Navbar'
 import HeroSearch from '@/components/HeroSearch'
 import FilterSidebar from '@/components/FilterSidebar'
@@ -11,6 +12,8 @@ import BottomCTA from '@/components/BottomCTA'
 import Footer from '@/components/Footer'
 import { FilterState, Clinic } from '@/types/clinic'
 import { featuredClinic, standardClinics } from '@/data/all-clinics'
+import { CATEGORIES, matchCategories } from '@/data/categories'
+import type { CategorySlug } from '@/data/categories'
 
 const DEFAULT_FILTERS: FilterState = {
   treatmentTypes: [],
@@ -27,6 +30,12 @@ const DEFAULT_FILTERS: FilterState = {
 const ITEMS_PER_PAGE = 6
 
 export default function ClinicsPage() {
+  const searchParams = useSearchParams()
+  const specialtyParam = searchParams.get('specialty') as CategorySlug | null
+  const activeSpecialty = specialtyParam
+    ? CATEGORIES.find(c => c.slug === specialtyParam) ?? null
+    : null
+
   const [filters, setFilters] = useState<FilterState>(DEFAULT_FILTERS)
   const [view, setView] = useState<'grid' | 'list'>('grid')
   const [sort, setSort] = useState('Best Match')
@@ -43,6 +52,14 @@ export default function ClinicsPage() {
 
   const filteredClinics = useMemo(() => {
     let result = [...standardClinics]
+
+    // SPECIALTY FILTER — pre-filter by category slug from ?specialty= param
+    if (activeSpecialty) {
+      result = result.filter(c => {
+        const treatments = [...(c.treatments || []), ...(c.specialtyTreatments || [])]
+        return matchCategories(treatments).includes(activeSpecialty.slug as CategorySlug)
+      })
+    }
 
     // TEXT SEARCH — treatment keyword against name, treatments, services, description
     if (searchTreatment) {
@@ -137,6 +154,19 @@ export default function ClinicsPage() {
 
           {/* Main content */}
           <div className="flex-1 min-w-0">
+            {activeSpecialty && (
+              <div className="mb-4 flex items-center gap-2.5">
+                <span className="text-2xl">{activeSpecialty.icon}</span>
+                <div>
+                  <p className="text-xs text-stone uppercase tracking-wider font-medium">Showing results for</p>
+                  <p className="text-base font-semibold text-onyx">{activeSpecialty.label}</p>
+                </div>
+                <a href="/clinics" className="ml-auto text-xs text-stone hover:text-sage border border-stone/20 hover:border-sage/40 rounded-full px-3 py-1 transition-colors">
+                  Clear filter ✕
+                </a>
+              </div>
+            )}
+
             <MapStrip city={displayCity} radius={filters.distanceMiles} />
 
             <ResultsHeader
