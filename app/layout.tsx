@@ -1,18 +1,18 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { DM_Sans } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'] })
+const dmSans = DM_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'GlowRoute — Find Your Medspa & Aesthetic Clinic',
-  description: 'The most comprehensive directory of medspas and aesthetic clinics. Find verified clinics near you with real reviews, treatment filters, and transparent pricing.',
+  title: 'GlowRoute — Discover Aesthetic Wellness',
+  description: 'Discover the most curated aesthetic wellness providers near you — verified clinics, real results.',
   keywords: 'medspa, aesthetic clinic, botox, filler, semaglutide, peptide therapy, IV therapy, Tampa',
   openGraph: {
-    title: 'GlowRoute — Find Your Medspa & Aesthetic Clinic',
-    description: 'Find verified medspas and aesthetic clinics near you.',
+    title: 'GlowRoute — Discover Aesthetic Wellness',
+    description: 'Discover the most curated aesthetic wellness providers near you — verified clinics, real results.',
     type: 'website',
-    url: 'https://glowroute.sealey.ai',
+    url: 'https://glowroute.io',
   },
 }
 
@@ -23,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-cream text-navy`}>{children}</body>
+      <body className={`${dmSans.className} bg-ivory text-onyx`}>{children}</body>
     </html>
   )
 }

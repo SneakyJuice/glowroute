@@ -3,8 +3,8 @@ interface TagProps { label: string; variant?: TagVariant }
 export default function TreatmentTag({ label, variant = 'default' }: TagProps) {
   const styles = {
     default: 'bg-gray-100 border-gray-200 text-gray-600',
-    teal: 'bg-teal/[0.08] border-teal/20 text-teal',
-    gold: 'bg-gold/10 border-gold/30 text-[#B07A00]',
+    teal: 'bg-sage/[0.08] border-sage/20 text-sage',
+    gold: 'bg-champagne/10 border-champagne/30 text-[#8B6914]',
   }
   return (
     <span className={`text-[11px] font-medium px-2 py-0.5 rounded-full border ${styles[variant]}`}>
