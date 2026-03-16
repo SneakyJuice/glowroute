@@ -9,7 +9,7 @@ interface HeroSearchProps {
   onNearMe?: (lat: number, lng: number) => void
 }
 
-export default function HeroSearch({ clinicCount = 292, defaultCity = 'Tampa, FL', onSearch, onNearMe }: HeroSearchProps) {
+export default function HeroSearch({ clinicCount = 939, defaultCity = 'Tampa, FL', onSearch, onNearMe }: HeroSearchProps) {
   const [treatment, setTreatment] = useState('')
   const [city, setCity] = useState(defaultCity)
   const [distance, setDistance] = useState('25')
