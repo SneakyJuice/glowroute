@@ -88,6 +88,32 @@ export default function HeroSearch({ clinicCount = 292, defaultCity = 'Tampa, FL
               <option value="Fort Lauderdale, FL" />
               <option value="Jacksonville, FL" />
               <option value="Boca Raton, FL" />
+              <option value="Clearwater, FL" />
+              <option value="West Palm Beach, FL" />
+              <option value="Sarasota, FL" />
+              <option value="Naples, FL" />
+              <option value="Fort Myers, FL" />
+              <option value="Bradenton, FL" />
+              <option value="Coral Gables, FL" />
+              <option value="Hollywood, FL" />
+              <option value="Pembroke Pines, FL" />
+              <option value="Port St. Lucie, FL" />
+              <option value="Coral Springs, FL" />
+              <option value="Plantation, FL" />
+              <option value="Doral, FL" />
+              <option value="Weston, FL" />
+              <option value="Aventura, FL" />
+              <option value="Delray Beach, FL" />
+              <option value="Boynton Beach, FL" />
+              <option value="Palm Beach Gardens, FL" />
+              <option value="Tallahassee, FL" />
+              <option value="Gainesville, FL" />
+              <option value="Pensacola, FL" />
+              <option value="Daytona Beach, FL" />
+              <option value="Melbourne, FL" />
+              <option value="Lakeland, FL" />
+              <option value="Kissimmee, FL" />
+              <option value="St. Petersburg, FL" />
             </datalist>
           </div>
           <div className="flex items-center gap-2.5 px-4 border-b border-gray-200 sm:border-b-0 sm:max-w-[160px]">

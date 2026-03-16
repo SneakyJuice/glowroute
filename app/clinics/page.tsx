@@ -88,8 +88,14 @@ function ClinicsPageInner() {
     // CITY FILTER — match against clinic city field
     if (searchCity && searchCity !== 'florida' && searchCity !== 'fl') {
       result = result.filter(c => {
-        const clinicCity = (c.city || '').toLowerCase()
-        const searchLower = searchCity.toLowerCase().replace(/,?\s*(fl|florida)\s*/g, '').trim()
+        // Normalize both sides: strip ", FL", replace hyphens with spaces, lowercase
+        const normalize = (s: string) => s.toLowerCase()
+          .replace(/,?\s*(fl|florida)\s*/gi, '')
+          .replace(/-/g, ' ')
+          .replace(/st\.?\s+pete(rsburg)?/gi, 'st. petersburg')
+          .trim()
+        const clinicCity = normalize(c.city || '')
+        const searchLower = normalize(searchCity)
         return clinicCity.includes(searchLower) || searchLower.includes(clinicCity)
       })
     }
@@ -162,7 +168,7 @@ function ClinicsPageInner() {
   return (
     <div className="min-h-screen bg-ivory font-sans">
       <Navbar />
-      <HeroSearch clinicCount={292} defaultCity="Tampa, FL" onSearch={handleSearch} onNearMe={handleNearMe} />
+      <HeroSearch clinicCount={standardClinics.length + 1} defaultCity="Tampa, FL" onSearch={handleSearch} onNearMe={handleNearMe} />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
         <div className="flex flex-col md:flex-row gap-6">
