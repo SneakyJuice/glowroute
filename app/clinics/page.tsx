@@ -1,5 +1,5 @@
 'use client'
-import { useState, useMemo } from 'react'
+import { useState, useMemo, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Navbar from '@/components/Navbar'
 import HeroSearch from '@/components/HeroSearch'
@@ -30,7 +30,7 @@ const DEFAULT_FILTERS: FilterState = {
 
 const ITEMS_PER_PAGE = 6
 
-export default function ClinicsPage() {
+function ClinicsPageInner() {
   const searchParams = useSearchParams()
   const specialtyParam = searchParams.get('specialty') as CategorySlug | null
   const activeSpecialty = specialtyParam
@@ -225,5 +225,13 @@ export default function ClinicsPage() {
 
       <Footer />
     </div>
+  )
+}
+
+export default function ClinicsPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen bg-ivory flex items-center justify-center"><p className="text-stone">Loading...</p></div>}>
+      <ClinicsPageInner />
+    </Suspense>
   )
 }
