@@ -160,7 +160,7 @@ export default function ClinicsPage() {
     : 'Tampa, FL'
 
   return (
-    <div className="min-h-screen bg-cream font-sans">
+    <div className="min-h-screen bg-ivory font-sans">
       <Navbar />
       <HeroSearch clinicCount={292} defaultCity="Tampa, FL" onSearch={handleSearch} onNearMe={handleNearMe} />
 
