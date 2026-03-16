@@ -12,7 +12,8 @@ export async function POST(req: NextRequest) {
 
   if (apiKey) {
     try {
-      const res = await fetch('https://api.resend.com/emails', {
+      // Internal notification to team
+      await fetch('https://api.resend.com/emails', {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${apiKey}`,
@@ -32,10 +33,29 @@ export async function POST(req: NextRequest) {
         }),
       })
 
-      if (!res.ok) {
-        const error = await res.text()
-        console.error('[lead] Resend error:', error)
-      }
+      // Auto-response to visitor
+      await fetch('https://api.resend.com/emails', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${apiKey}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          from: 'GlowRoute <noreply@glowroute.io>',
+          to: [email],
+          subject: `We got your message — a GlowRoute partner will be in touch`,
+          html: `
+            <div style="font-family: sans-serif; max-width: 560px; margin: 0 auto; color: #1a1a1a;">
+              <h2 style="color: #b45e8f;">Hi ${name},</h2>
+              <p>Thanks for reaching out about <strong>${clinicName}</strong> on GlowRoute.</p>
+              <p>Your inquiry has been sent directly to the clinic. You can typically expect a response within 1–2 business days.</p>
+              <p>In the meantime, feel free to explore more wellness options near you at <a href="https://glowroute.sealey.ai" style="color: #b45e8f;">GlowRoute</a>.</p>
+              <br/>
+              <p style="color: #666;">— The GlowRoute Team</p>
+            </div>
+          `,
+        }),
+      })
     } catch (err) {
       console.error('[lead] Failed to send email:', err)
     }

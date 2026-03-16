@@ -12,7 +12,7 @@ export async function POST(req: NextRequest) {
 
   if (apiKey) {
     try {
-      // Team notification
+      // Internal notification to team
       await fetch('https://api.resend.com/emails', {
         method: 'POST',
         headers: {
@@ -21,7 +21,7 @@ export async function POST(req: NextRequest) {
         },
         body: JSON.stringify({
           from: 'GlowRoute <noreply@glowroute.io>',
-          to: ['leads@glowroute.io'],
+          to: ['claims@glowroute.io'],
           subject: `Claim Request: ${clinicName}`,
           html: `
             <h2>New Claim Request</h2>
@@ -34,7 +34,7 @@ export async function POST(req: NextRequest) {
         }),
       })
 
-      // Claimant confirmation
+      // Auto-response to practice owner
       await fetch('https://api.resend.com/emails', {
         method: 'POST',
         headers: {
@@ -44,14 +44,16 @@ export async function POST(req: NextRequest) {
         body: JSON.stringify({
           from: 'GlowRoute <noreply@glowroute.io>',
           to: [email],
-          subject: `Your claim for ${clinicName} is being reviewed`,
+          subject: `Your GlowRoute listing claim is under review`,
           html: `
-            <h2>Thanks, ${yourName}!</h2>
-            <p>We received your request to claim <strong>${clinicName}</strong> on GlowRoute.</p>
-            <p>Our team will verify your ownership and reach out within 1–2 business days.</p>
-            <p>If you have any questions, reply to this email.</p>
-            <br/>
-            <p>— The GlowRoute Team</p>
+            <div style="font-family: sans-serif; max-width: 560px; margin: 0 auto; color: #1a1a1a;">
+              <h2 style="color: #b45e8f;">Hi ${yourName},</h2>
+              <p>We received your request to claim <strong>${clinicName}</strong> on GlowRoute.</p>
+              <p>Our team will verify your ownership and follow up within <strong>1–2 business days</strong> to walk you through next steps — including how to update your profile, manage your listing, and unlock premium placement options.</p>
+              <p>Questions in the meantime? Just reply to this email.</p>
+              <br/>
+              <p style="color: #666;">— The GlowRoute Team</p>
+            </div>
           `,
         }),
       })
