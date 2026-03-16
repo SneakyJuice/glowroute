@@ -4,6 +4,33 @@ import { Clinic } from '@/types/clinic'
 import TreatmentTag, { getTagVariant } from './TreatmentTag'
 import VerifiedBadge from './VerifiedBadge'
 
+function getMapUrl(clinic: Clinic): string {
+  const lat = (clinic as any).lat
+  const lng = (clinic as any).lng
+  if (lat != null && lng != null) {
+    return `https://maps.google.com/?q=${lat},${lng}`
+  }
+  const query = clinic.address || `${clinic.name} ${clinic.city} FL`
+  return `https://maps.google.com/?q=${encodeURIComponent(query)}`
+}
+
+function ViewOnMapButton({ clinic, className = '' }: { clinic: Clinic; className?: string }) {
+  return (
+    <button
+      onClick={() => window.open(getMapUrl(clinic), '_blank')}
+      className={`flex items-center justify-center text-stone hover:text-sage transition-colors ${className}`}
+      title="View on Google Maps"
+      aria-label="View on Google Maps"
+    >
+      <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/>
+        <line x1="9" y1="3" x2="9" y2="18"/>
+        <line x1="15" y1="6" x2="15" y2="21"/>
+      </svg>
+    </button>
+  )
+}
+
 function citySlug(city: string) {
   return city.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
 }
@@ -78,6 +105,7 @@ export function FeaturedClinicCard({ clinic }: ClinicCardProps) {
               ? <a href={clinic.bookingUrl} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-sage bg-sage/[0.08] border border-sage/20 px-4 py-2.5 rounded hover:bg-sage/[0.15] transition-colors">Reserve Consultation</a>
               : <button className="text-sm font-semibold text-sage bg-sage/[0.08] border border-sage/20 px-4 py-2.5 rounded hover:bg-sage/[0.15] transition-colors">Reserve Consultation</button>
             }
+            <ViewOnMapButton clinic={clinic} className="w-9 h-9 border border-stone/20 rounded hover:border-sage/40 hover:bg-sage/5" />
             {clinic.website && (
               <a href={clinic.website} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-gray-400 hover:text-sage transition-colors ml-auto" title="Visit website">
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
@@ -150,9 +178,10 @@ export default function ClinicCard({ clinic, distanceMi }: ClinicCardProps) {
       <div className="flex items-center gap-2 px-4 py-3 border-t border-gray-100">
         <a href={`/clinics/${citySlug(clinic.city)}/${clinic.slug}`} className="flex-1 text-center text-sm font-semibold text-white bg-sage px-3.5 py-2 rounded hover:bg-onyx transition-colors">View Profile</a>
         {clinic.bookingUrl
-          ? <a href={clinic.bookingUrl} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-sage bg-sage/[0.08] border border-sage/20 px-3.5 py-2 rounded hover:bg-sage/[0.15] transition-colors">Reserve Consultation</a>
-          : <button className="text-sm font-semibold text-sage bg-sage/[0.08] border border-sage/20 px-3.5 py-2 rounded hover:bg-sage/[0.15] transition-colors">Reserve Consultation</button>
+          ? <a href={clinic.bookingUrl} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-sage bg-sage/[0.08] border border-sage/20 px-3.5 py-2 rounded hover:bg-sage/[0.15] transition-colors">Reserve</a>
+          : <button className="text-sm font-semibold text-sage bg-sage/[0.08] border border-sage/20 px-3.5 py-2 rounded hover:bg-sage/[0.15] transition-colors">Reserve</button>
         }
+        <ViewOnMapButton clinic={clinic} className="w-8 h-8 border border-stone/20 rounded hover:border-sage/40 hover:bg-sage/5" />
         {clinic.website && (
           <a href={clinic.website} target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center text-gray-400 hover:text-sage transition-colors" title="Visit website">
             <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>

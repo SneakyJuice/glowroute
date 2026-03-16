@@ -1,9 +1,15 @@
+'use client'
+
 interface Props { city: string; radius: number }
 
 export default function MapStrip({ city, radius }: Props) {
   // Build Google Maps search URL for the city
-  const citySlug = city.replace(/,.*$/, '').trim() // "Tampa, FL" → "Tampa"
-  const mapsUrl = `https://www.google.com/maps/search/medspa+clinic+near+${encodeURIComponent(citySlug)}+FL/`
+  const cityName = city.replace(/,.*$/, '').trim() // "Tampa, FL" → "Tampa"
+  const mapsUrl = `https://maps.google.com/?q=${encodeURIComponent(`medspa clinic near ${cityName} FL`)}`
+
+  const handleViewOnMap = () => {
+    window.open(mapsUrl, '_blank')
+  }
 
   return (
     <div className="bg-white border border-gray-200 rounded-2xl px-4 py-3.5 flex flex-col sm:flex-row sm:items-center sm:justify-between mb-5 gap-3">
@@ -17,14 +23,12 @@ export default function MapStrip({ city, radius }: Props) {
           <strong className="font-semibold text-onyx">{city}</strong> — showing results within {radius} miles
         </span>
       </div>
-      <a
-        href={mapsUrl}
-        target="_blank"
-        rel="noopener noreferrer"
+      <button
+        onClick={handleViewOnMap}
         className="text-[13px] font-semibold text-sage border border-sage px-3.5 py-[7px] rounded flex-shrink-0 hover:bg-sage hover:text-white transition-all self-start sm:self-auto"
       >
         View on Map
-      </a>
+      </button>
     </div>
   )
 }
