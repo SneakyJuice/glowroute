@@ -100,6 +100,9 @@ function ClinicsPageInner() {
       })
     }
 
+    // Always exclude clinics with no rating data (broken scrape records)
+    result = result.filter(c => c.googleRating > 0)
+
     // Existing filters (rating, price, verified, treatment type)
     if (filters.minRating > 0) {
       result = result.filter(c => c.googleRating >= filters.minRating)
@@ -121,7 +124,11 @@ function ClinicsPageInner() {
 
     // Sort
     if (sort === 'Highest Rated') {
-      result.sort((a, b) => b.googleRating - a.googleRating)
+      // Weighted score: penalises high rating with 0 reviews (fake/placeholder data)
+      // Score = rating × log10(reviews + 2) — a 4.8/500 review clinic beats 5.0/0 reviews
+      const score = (c: { googleRating: number; googleReviewCount: number }) =>
+        c.googleRating * Math.log10(c.googleReviewCount + 2)
+      result.sort((a, b) => score(b) - score(a))
     } else if (sort === 'Most Reviewed') {
       result.sort((a, b) => b.googleReviewCount - a.googleReviewCount)
     } else if (sort === 'Nearest First') {
