@@ -39,10 +39,10 @@ function ClinicsPageInner() {
 
   const [filters, setFilters] = useState<FilterState>(DEFAULT_FILTERS)
   const [view, setView] = useState<'grid' | 'list'>('grid')
-  const [sort, setSort] = useState('Highest Rated')
+  const [sort, setSort] = useState('Most Reviewed')
   const [page, setPage] = useState(1)
   const [searchTreatment, setSearchTreatment] = useState('')
-  const [searchCity, setSearchCity] = useState('Tampa')
+  const [searchCity, setSearchCity] = useState('Miami')
   const [searchDistance, setSearchDistance] = useState('25')
   const [userLat, setUserLat] = useState<number | null>(null)
   const [userLng, setUserLng] = useState<number | null>(null)
@@ -150,8 +150,10 @@ function ClinicsPageInner() {
     return result
   }, [filters, sort, searchTreatment, searchCity, userLat, userLng, activeSpecialty])
 
-  // Featured clinic is Tampa-only — hide when user has searched for another city
-  const showFeatured = !searchCity || searchCity.toLowerCase().includes('tampa')
+  // Featured clinic — show for Miami (default) or Tampa
+  const showFeatured = !searchCity ||
+    searchCity.toLowerCase().includes('miami') ||
+    searchCity.toLowerCase().includes('tampa')
   const resultCount = filteredClinics.length + (showFeatured ? 1 : 0)
 
   const totalPages = Math.ceil(filteredClinics.length / ITEMS_PER_PAGE)
@@ -170,12 +172,12 @@ function ClinicsPageInner() {
   // Display-friendly city label for UI components
   const displayCity = searchCity
     ? searchCity.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ') + ', FL'
-    : 'Tampa, FL'
+    : 'Miami, FL'
 
   return (
     <div className="min-h-screen bg-ivory font-sans">
       <Navbar />
-      <HeroSearch clinicCount={standardClinics.length + 1} defaultCity="Tampa, FL" onSearch={handleSearch} onNearMe={handleNearMe} />
+      <HeroSearch clinicCount={standardClinics.length + 1} defaultCity="Miami, FL" onSearch={handleSearch} onNearMe={handleNearMe} />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
         <div className="flex flex-col md:flex-row gap-6">
