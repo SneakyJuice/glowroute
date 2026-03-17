@@ -8,8 +8,19 @@ import type { CategorySlug } from '@/data/categories'
 import SpecialtyGrid from '@/components/SpecialtyGrid'
 
 export const metadata: Metadata = {
-  title: 'Specialties | GlowRoute',
+  title: 'Browse by Specialty | GlowRoute',
   description: 'Browse Florida med spas and aesthetic clinics by specialty. Find the exact treatment you need from verified providers.',
+  openGraph: {
+    title: 'Browse by Specialty | GlowRoute',
+    description: 'Browse Florida med spas and aesthetic clinics by specialty. Find the exact treatment you need from verified providers.',
+    type: 'website',
+    siteName: 'GlowRoute',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Browse by Specialty | GlowRoute',
+    description: 'Browse Florida med spas and aesthetic clinics by specialty.',
+  },
 }
 
 function getCategoryCounts(): Record<CategorySlug, number> {

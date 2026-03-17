@@ -16,8 +16,10 @@ function getMapUrl(clinic: Clinic): string {
 
 function ViewOnMapButton({ clinic, className = '' }: { clinic: Clinic; className?: string }) {
   return (
-    <button
-      onClick={() => window.open(getMapUrl(clinic), '_blank')}
+    <a
+      href={getMapUrl(clinic)}
+      target="_blank"
+      rel="noopener noreferrer"
       className={`flex items-center justify-center text-stone hover:text-sage transition-colors ${className}`}
       title="View on Google Maps"
       aria-label="View on Google Maps"
@@ -27,7 +29,7 @@ function ViewOnMapButton({ clinic, className = '' }: { clinic: Clinic; className
         <line x1="9" y1="3" x2="9" y2="18"/>
         <line x1="15" y1="6" x2="15" y2="21"/>
       </svg>
-    </button>
+    </a>
   )
 }
 

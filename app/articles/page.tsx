@@ -7,6 +7,17 @@ import { ARTICLES } from '@/data/articles'
 export const metadata: Metadata = {
   title: 'The GlowRoute Edit | Expert Wellness Insights',
   description: 'Expert insights on modern aesthetics & wellness — curated articles from GlowRoute.',
+  openGraph: {
+    title: 'The GlowRoute Edit | Expert Wellness Insights',
+    description: 'Expert insights on modern aesthetics & wellness — curated articles from GlowRoute.',
+    type: 'website',
+    siteName: 'GlowRoute',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'The GlowRoute Edit | Expert Wellness Insights',
+    description: 'Expert insights on modern aesthetics & wellness — curated articles from GlowRoute.',
+  },
 }
 
 function formatDate(dateStr: string) {

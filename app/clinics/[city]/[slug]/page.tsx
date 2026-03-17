@@ -6,6 +6,7 @@ import VerifiedBadge from '@/components/VerifiedBadge'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import LeadCaptureForm from '@/components/LeadCaptureForm'
+import { SITE_URL } from '@/lib/config'
 
 /** Normalize a city name to a URL-safe slug */
 function citySlug(city: string) {
@@ -37,7 +38,8 @@ export async function generateMetadata({ params }: PageProps) {
     clinic.images?.[0] ||
     (clinic as any).imageUrl ||
     clinic.logo ||
-    'https://glowroute.io/og-default.jpg'
+    `${SITE_URL}/og-default.jpg`
+  const pageUrl = `${SITE_URL}/clinics/${params.city}/${params.slug}`
 
   return {
     title,
@@ -47,13 +49,17 @@ export async function generateMetadata({ params }: PageProps) {
       description,
       images: [{ url: image, width: 1200, height: 630, alt: clinic.name }],
       type: 'website',
-      url: `https://glowroute.io/clinics/${params.city}/${params.slug}`,
+      url: pageUrl,
+      siteName: 'GlowRoute',
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description,
       images: [image],
+    },
+    alternates: {
+      canonical: pageUrl,
     },
   }
 }
