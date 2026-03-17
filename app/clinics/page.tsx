@@ -39,7 +39,7 @@ function ClinicsPageInner() {
 
   const [filters, setFilters] = useState<FilterState>(DEFAULT_FILTERS)
   const [view, setView] = useState<'grid' | 'list'>('grid')
-  const [sort, setSort] = useState('Best Match')
+  const [sort, setSort] = useState('Highest Rated')
   const [page, setPage] = useState(1)
   const [searchTreatment, setSearchTreatment] = useState('')
   const [searchCity, setSearchCity] = useState('Tampa')
