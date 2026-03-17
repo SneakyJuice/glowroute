@@ -24,37 +24,51 @@ export async function generateStaticParams() {
   }))
 }
 
+/** Truncate a string to maxLen, appending suffix if cut */
+function truncate(str: string, maxLen: number, suffix = '…'): string {
+  if (str.length <= maxLen) return str
+  return str.slice(0, maxLen - suffix.length).trimEnd() + suffix
+}
+
 export async function generateMetadata({ params }: PageProps) {
   const clinic = allClinics.find(
     c => c.slug === params.slug && citySlug(c.city) === params.city
   )
   if (!clinic) return { title: 'Clinic Not Found | GlowRoute' }
 
-  const title = `${clinic.name} | GlowRoute`
-  const description =
+  // Page title: full name (browsers handle overflow)
+  const pageTitle = `${clinic.name} | GlowRoute`
+  // OG title: max 70 chars for social share previews
+  const ogTitle = `${truncate(clinic.name, 55)} | GlowRoute`
+
+  const description = truncate(
     clinic.description ||
-    `Discover ${clinic.name} in ${clinic.city}, FL — ${(clinic.treatments || []).slice(0, 3).join(', ')}. Book a consultation today.`
+      `Discover ${clinic.name} in ${clinic.city}, FL — ${(clinic.treatments || []).slice(0, 3).join(', ')}. Book a consultation today.`,
+    160
+  )
+
   const image =
     clinic.images?.[0] ||
     (clinic as any).imageUrl ||
     clinic.logo ||
     `${SITE_URL}/og-default.jpg`
+
   const pageUrl = `${SITE_URL}/clinics/${params.city}/${params.slug}`
 
   return {
-    title,
+    title: pageTitle,
     description,
     openGraph: {
-      title,
+      title: ogTitle,
       description,
-      images: [{ url: image, width: 1200, height: 630, alt: clinic.name }],
+      images: [{ url: image, width: 1200, height: 630, alt: truncate(clinic.name, 100) }],
       type: 'website',
       url: pageUrl,
       siteName: 'GlowRoute',
     },
     twitter: {
       card: 'summary_large_image',
-      title,
+      title: ogTitle,
       description,
       images: [image],
     },
