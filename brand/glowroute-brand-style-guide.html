@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GlowRoute ƒ?" Brand Style Guide v1.0</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --onyx: #0D0D0D;
+      --champagne: #C9A96E;
+      --blush: #E8C4B8;
+      --ivory: #FAF8F5;
+      --stone: #8C8279;
+      --sage: #4A6741;
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-sans: 'DM Sans', system-ui, sans-serif;
+      --font-accent: 'DM Serif Display', Georgia, serif;
+    }
+
+    html { font-size: 16px; scroll-behavior: smooth; }
+
+    body {
+      background: var(--ivory);
+      color: var(--onyx);
+      font-family: var(--font-sans);
+      line-height: 1.6;
+    }
+
+    /* ƒ"?ƒ"? NAV ƒ"?ƒ"? */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--onyx);
+      padding: 0 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 56px;
+      border-bottom: 1px solid rgba(201,169,110,0.2);
+    }
+
+    .nav-logo {
+      font-family: var(--font-serif);
+      font-weight: 300;
+      font-size: 20px;
+      color: var(--champagne);
+      letter-spacing: 0.04em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--stone);
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--champagne); }
+
+    /* ƒ"?ƒ"? HERO ƒ"?ƒ"? */
+    .hero {
+      background: var(--onyx);
+      padding: 96px 48px 80px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -120px;
+      right: -120px;
+      width: 480px;
+      height: 480px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(201,169,110,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-label {
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--champagne);
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-family: var(--font-serif);
+      font-weight: 300;
+      font-size: clamp(48px, 6vw, 80px);
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 span { color: var(--champagne); }
+
+    .hero-sub {
+      font-size: 16px;
+      color: var(--stone);
+      max-width: 480px;
+      line-height: 1.7;
+    }
+
+    .hero-meta {
+      margin-top: 48px;
+      display: flex;
+      gap: 48px;
+    }
+
+    .hero-meta-item label {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--stone);
+      margin-bottom: 4px;
+    }
+
+    .hero-meta-item span {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      color: var(--champagne);
+    }
+
+    /* ƒ"?ƒ"? SECTION LAYOUT ƒ"?ƒ"? */
+    section {
+      padding: 80px 48px;
+      max-width: 1160px;
+      margin: 0 auto;
+    }
+
+    section.dark {
+      background: var(--onyx);
+      max-width: 100%;
+      padding: 80px 48px;
+    }
+
+    section.dark .inner { max-width: 1160px; margin: 0 auto; }
+
+    .section-label {
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--champagne);
+      font-weight: 500;
+      margin-bottom: 12px;
+    }
+
+    .section-label.light { color: var(--champagne); }
+
+    h2.section-title {
+      font-family: var(--font-serif);
+      font-weight: 300;
+      font-size: 42px;
+      line-height: 1.15;
+      margin-bottom: 8px;
+      color: var(--onyx);
+    }
+
+    h2.section-title.light { color: #fff; }
+
+    .section-desc {
+      font-size: 15px;
+      color: var(--stone);
+      margin-bottom: 56px;
+      max-width: 560px;
+    }
+
+    .divider {
+      width: 48px;
+      height: 1px;
+      background: var(--champagne);
+      margin: 20px 0 48px;
+    }
+
+    /* ƒ"?ƒ"? COLORS ƒ"?ƒ"? */
+    .palette-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 20px;
+    }
+
+    .swatch {
+      border-radius: 6px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+
+    .swatch-color {
+      height: 100px;
+      width: 100%;
+    }
+
+    .swatch-info {
+      background: #fff;
+      padding: 14px 16px;
+    }
+
+    .swatch-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--onyx);
+      margin-bottom: 2px;
+    }
+
+    .swatch-hex {
+      font-size: 12px;
+      color: var(--stone);
+      font-family: 'Courier New', monospace;
+    }
+
+    .swatch-role {
+      font-size: 11px;
+      color: var(--stone);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    /* ƒ"?ƒ"? TYPOGRAPHY ƒ"?ƒ"? */
+    .type-specimens { display: flex; flex-direction: column; gap: 48px; }
+
+    .type-row {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 32px;
+      align-items: start;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(140,130,121,0.15);
+    }
+
+    .type-meta label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--stone);
+      display: block;
+    }
+
+    .type-meta .font-name {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--onyx);
+      margin-top: 4px;
+    }
+
+    .type-meta .font-detail {
+      font-size: 12px;
+      color: var(--stone);
+      margin-top: 2px;
+    }
+
+    .type-specimen-h1 {
+      font-family: var(--font-serif);
+      font-weight: 300;
+      font-size: 64px;
+      line-height: 1.05;
+      color: var(--onyx);
+    }
+
+    .type-specimen-h2 {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-size: 42px;
+      line-height: 1.15;
+      color: var(--onyx);
+    }
+
+    .type-specimen-h3 {
+      font-family: var(--font-sans);
+      font-weight: 500;
+      font-size: 26px;
+      color: var(--onyx);
+    }
+
+    .type-specimen-body {
+      font-family: var(--font-sans);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.75;
+      color: var(--onyx);
+      max-width: 540px;
+    }
+
+    .type-specimen-accent {
+      font-family: var(--font-accent);
+      font-style: italic;
+      font-size: 22px;
+      color: var(--champagne);
+    }
+
+    .type-specimen-label {
+      font-family: var(--font-sans);
+      font-weight: 500;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--stone);
+    }
+
+    /* ƒ"?ƒ"? COMPONENTS ƒ"?ƒ"? */
+    .component-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .component-block h3 {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--stone);
+      margin-bottom: 20px;
+      font-weight: 500;
+    }
+
+    /* Buttons */
+    .btn-row { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 28px;
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--sage);
+      color: #fff;
+    }
+
+    .btn-primary:hover { background: #3d5937; }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--champagne);
+      border: 1px solid var(--champagne);
+    }
+
+    .btn-secondary:hover { background: rgba(201,169,110,0.08); }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--onyx);
+      border: 1px solid rgba(13,13,13,0.2);
+    }
+
+    .btn-dark {
+      background: var(--onyx);
+      color: var(--champagne);
+    }
+
+    /* Clinic Card */
+    .clinic-card {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+      max-width: 320px;
+    }
+
+    .clinic-card-image {
+      height: 140px;
+      background: linear-gradient(135deg, #f0ede8, #e8e4de);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--stone);
+      font-size: 13px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .clinic-card-body { padding: 20px 22px; }
+
+    .clinic-card-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(201,169,110,0.1);
+      border: 1px solid rgba(201,169,110,0.3);
+      border-radius: 3px;
+      padding: 3px 10px;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--champagne);
+      letter-spacing: 0.06em;
+      margin-bottom: 12px;
+    }
+
+    .clinic-card-name {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-size: 20px;
+      color: var(--onyx);
+      margin-bottom: 4px;
+    }
+
+    .clinic-card-location {
+      font-size: 13px;
+      color: var(--stone);
+      margin-bottom: 12px;
+    }
+
+    .clinic-card-stars {
+      display: flex;
+      gap: 2px;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .star { color: var(--champagne); font-size: 14px; }
+
+    .rating-count { font-size: 12px; color: var(--stone); margin-left: 6px; }
+
+    .clinic-card-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 18px; }
+
+    .tag {
+      border: 1px solid rgba(140,130,121,0.25);
+      border-radius: 100px;
+      padding: 4px 12px;
+      font-size: 11px;
+      color: var(--stone);
+      letter-spacing: 0.04em;
+    }
+
+    .clinic-card-cta {
+      width: 100%;
+      text-align: center;
+    }
+
+    /* Verified badge */
+    .verified-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--onyx);
+      color: var(--champagne);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 3px;
+    }
+
+    /* Input */
+    .search-bar {
+      display: flex;
+      background: #fff;
+      border: 1px solid rgba(140,130,121,0.2);
+      border-radius: 4px;
+      overflow: hidden;
+      max-width: 480px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    }
+
+    .search-bar input {
+      flex: 1;
+      border: none;
+      outline: none;
+      padding: 14px 20px;
+      font-family: var(--font-sans);
+      font-size: 14px;
+      color: var(--onyx);
+      background: transparent;
+    }
+
+    .search-bar input::placeholder { color: var(--stone); }
+
+    .search-bar button {
+      background: var(--sage);
+      color: #fff;
+      border: none;
+      padding: 14px 24px;
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      letter-spacing: 0.04em;
+    }
+
+    /* ƒ"?ƒ"? VOICE & TONE ƒ"?ƒ"? */
+    .voice-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .voice-card {
+      border-radius: 6px;
+      padding: 24px 28px;
+    }
+
+    .voice-card.dont {
+      background: rgba(232,196,184,0.12);
+      border: 1px solid rgba(232,196,184,0.3);
+    }
+
+    .voice-card.do {
+      background: rgba(74,103,65,0.06);
+      border: 1px solid rgba(74,103,65,0.2);
+    }
+
+    .voice-card-label {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+
+    .voice-card.dont .voice-card-label { color: #c0584a; }
+    .voice-card.do .voice-card-label { color: var(--sage); }
+
+    .voice-item {
+      font-size: 14px;
+      line-height: 1.6;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(140,130,121,0.12);
+      color: var(--onyx);
+    }
+
+    .voice-item:last-child { border-bottom: none; }
+
+    /* ƒ"?ƒ"? DARK SECTION COMPONENTS ƒ"?ƒ"? */
+    .dark-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(201,169,110,0.15);
+      border-radius: 8px;
+      padding: 32px;
+    }
+
+    /* ƒ"?ƒ"? LOGO PLACEHOLDER ƒ"?ƒ"? */
+    .logo-variants {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .logo-box {
+      border-radius: 6px;
+      height: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .logo-box.dark-bg { background: var(--onyx); border: 1px solid rgba(201,169,110,0.15); }
+    .logo-box.light-bg { background: var(--ivory); border: 1px solid rgba(140,130,121,0.15); }
+    .logo-box.champagne-bg { background: rgba(201,169,110,0.1); border: 1px solid rgba(201,169,110,0.25); }
+
+    .logo-wordmark {
+      font-family: var(--font-serif);
+      font-weight: 300;
+      font-size: 22px;
+      letter-spacing: 0.04em;
+    }
+
+    .logo-wordmark.gold { color: var(--champagne); }
+    .logo-wordmark.dark { color: var(--onyx); }
+
+    .logo-icon {
+      width: 28px;
+      height: 28px;
+    }
+
+    .logo-box-label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-top: 8px;
+    }
+
+    /* ƒ"?ƒ"? SPACING SCALE ƒ"?ƒ"? */
+    .spacing-grid {
+      display: flex;
+      gap: 24px;
+      align-items: flex-end;
+      flex-wrap: wrap;
+    }
+
+    .spacing-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .spacing-block {
+      background: var(--champagne);
+      opacity: 0.7;
+      width: 24px;
+    }
+
+    .spacing-item label {
+      font-size: 11px;
+      color: var(--stone);
+      letter-spacing: 0.06em;
+    }
+
+    /* ƒ"?ƒ"? IMAGERY STYLE ƒ"?ƒ"? */
+    .imagery-guide {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .imagery-card {
+      border-radius: 8px;
+      padding: 28px;
+      background: #fff;
+      border: 1px solid rgba(140,130,121,0.12);
+    }
+
+    .imagery-card h4 {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-size: 20px;
+      margin-bottom: 16px;
+    }
+
+    .imagery-card ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .imagery-card li {
+      font-size: 14px;
+      color: var(--onyx);
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .imagery-card li::before {
+      content: 'ƒ?"';
+      position: absolute;
+      left: 0;
+      color: var(--champagne);
+    }
+
+    /* ƒ"?ƒ"? FOOTER ƒ"?ƒ"? */
+    footer {
+      background: var(--onyx);
+      padding: 48px;
+      text-align: center;
+      border-top: 1px solid rgba(201,169,110,0.15);
+    }
+
+    footer .footer-logo {
+      font-family: var(--font-serif);
+      font-weight: 300;
+      font-size: 28px;
+      color: var(--champagne);
+      letter-spacing: 0.04em;
+      margin-bottom: 12px;
+    }
+
+    footer p {
+      font-size: 12px;
+      color: var(--stone);
+      letter-spacing: 0.06em;
+    }
+
+    /* ƒ"?ƒ"? UTILITY ƒ"?ƒ"? */
+    .mt-0 { margin-top: 0; }
+    .gap-sm { gap: 12px; }
+    .flex { display: flex; }
+    .flex-wrap { flex-wrap: wrap; }
+    .col { flex-direction: column; }
+    .items-start { align-items: flex-start; }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">GlowRoute</div>
+  <ul class="nav-links">
+    <li><a href="#colors">Colors</a></li>
+    <li><a href="#typography">Typography</a></li>
+    <li><a href="#components">Components</a></li>
+    <li><a href="#voice">Voice</a></li>
+    <li><a href="#imagery">Imagery</a></li>
+    <li><a href="#logo">Logo</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-label">Brand Style Guide ƒ?" v1.0 Aú March 2026</div>
+  <h1>The Visual<br/>Language of <span>GlowRoute</span></h1>
+  <p class="hero-sub">A premium discovery and booking platform for medspas and aesthetic clinics. This guide defines every visual decision that shapes how GlowRoute looks, speaks, and feels.</p>
+  <div class="hero-meta">
+    <div class="hero-meta-item">
+      <label>Positioning</label>
+      <span>The premium discovery platform for aesthetic wellness</span>
+    </div>
+    <div class="hero-meta-item">
+      <label>Archetype</label>
+      <span>The Curator / The Sophisticate</span>
+    </div>
+    <div class="hero-meta-item">
+      <label>Tagline</label>
+      <span>"Find Your Glow."</span>
+    </div>
+  </div>
+</div>
+
+<!-- COLORS -->
+<section id="colors">
+  <div class="section-label">01 ƒ?" Color System</div>
+  <h2 class="section-title">The Palette</h2>
+  <p class="section-desc">Warm, not cold. Dark-mode-capable. Gold accents on dark backgrounds. Think high-end fragrance campaign or luxury skincare editorial.</p>
+  <div class="divider"></div>
+
+  <div class="palette-grid">
+    <div class="swatch">
+      <div class="swatch-color" style="background:#0D0D0D;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Deep Onyx</div>
+        <div class="swatch-hex">#0D0D0D</div>
+        <div class="swatch-role">Primary</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background:#C9A96E;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Warm Champagne</div>
+        <div class="swatch-hex">#C9A96E</div>
+        <div class="swatch-role">Secondary / Accent</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background:#E8C4B8;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Blush Rose</div>
+        <div class="swatch-hex">#E8C4B8</div>
+        <div class="swatch-role">Accent</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background:#FAF8F5; border: 1px solid #ede9e3;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Ivory Cream</div>
+        <div class="swatch-hex">#FAF8F5</div>
+        <div class="swatch-role">Surface / Background</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background:#8C8279;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Warm Stone</div>
+        <div class="swatch-hex">#8C8279</div>
+        <div class="swatch-role">Muted / Secondary Text</div>
+      </div>
+    </div>
+    <div class="swatch">
+      <div class="swatch-color" style="background:#4A6741;"></div>
+      <div class="swatch-info">
+        <div class="swatch-name">Deep Sage</div>
+        <div class="swatch-hex">#4A6741</div>
+        <div class="swatch-role">CTA / Action</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TYPOGRAPHY -->
+<section id="typography" style="border-top: 1px solid rgba(140,130,121,0.12);">
+  <div class="section-label">02 ƒ?" Typography</div>
+  <h2 class="section-title">Type System</h2>
+  <p class="section-desc">Serif for emotion, sans for function. Headlines feel editorial. UI stays crisp. All fonts available free via Google Fonts.</p>
+  <div class="divider"></div>
+
+  <div class="type-specimens">
+    <div class="type-row">
+      <div class="type-meta">
+        <label>H1 Headline</label>
+        <div class="font-name">Cormorant Garamond</div>
+        <div class="font-detail">Light 300 Aú 56ƒ?"72px</div>
+      </div>
+      <div class="type-specimen-h1">Find Your Glow.</div>
+    </div>
+
+    <div class="type-row">
+      <div class="type-meta">
+        <label>H2 Sub-headline</label>
+        <div class="font-name">Cormorant Garamond</div>
+        <div class="font-detail">Regular 400 Aú 36ƒ?"48px</div>
+      </div>
+      <div class="type-specimen-h2">Curated Aesthetic Care</div>
+    </div>
+
+    <div class="type-row">
+      <div class="type-meta">
+        <label>H3 Section</label>
+        <div class="font-name">DM Sans</div>
+        <div class="font-detail">Medium 500 Aú 24ƒ?"28px</div>
+      </div>
+      <div class="type-specimen-h3">Verified Tampa Providers</div>
+    </div>
+
+    <div class="type-row">
+      <div class="type-meta">
+        <label>Body Copy</label>
+        <div class="font-name">DM Sans</div>
+        <div class="font-detail">Regular 400 Aú 16ƒ?"18px</div>
+      </div>
+      <div class="type-specimen-body">GlowRoute is not a coupon site. Not a Yelp clone. We are curation infrastructure for people who take their appearance seriously and expect a premium experience from the first click ƒ?" the same energy as the clinic they're booking.</div>
+    </div>
+
+    <div class="type-row">
+      <div class="type-meta">
+        <label>Accent / Quote</label>
+        <div class="font-name">DM Serif Display</div>
+        <div class="font-detail">Italic Aú 20ƒ?"24px</div>
+      </div>
+      <div class="type-specimen-accent">"Where Excellence Finds You."</div>
+    </div>
+
+    <div class="type-row" style="border-bottom: none;">
+      <div class="type-meta">
+        <label>Label / Caption</label>
+        <div class="font-name">DM Sans</div>
+        <div class="font-detail">Medium 500 Aú 12px Aú +0.1em tracked</div>
+      </div>
+      <div>
+        <div class="type-specimen-label" style="margin-bottom: 16px;">Verified Provider Aú Tampa, FL</div>
+        <div class="type-specimen-label">Reserve Your Consultation</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPONENTS -->
+<section id="components" style="background: #fff; max-width: 100%; padding: 80px 0;">
+  <div style="max-width: 1160px; margin: 0 auto; padding: 0 48px;">
+    <div class="section-label">03 ƒ?" UI Components</div>
+    <h2 class="section-title">Interface Elements</h2>
+    <p class="section-desc">Every component reinforces the premium positioning. Minimal. Warm. Gold as the accent. Generous whitespace throughout.</p>
+    <div class="divider"></div>
+
+    <div class="component-grid">
+
+      <!-- Buttons -->
+      <div class="component-block">
+        <h3>Buttons</h3>
+        <div class="btn-row">
+          <button class="btn btn-primary">Reserve Your Consultation</button>
+          <button class="btn btn-secondary">Explore by Specialty</button>
+        </div>
+        <div class="btn-row" style="margin-top: 16px;">
+          <button class="btn btn-ghost">View All Providers</button>
+          <button class="btn btn-dark">Join as a Clinic</button>
+        </div>
+      </div>
+
+      <!-- Search Bar -->
+      <div class="component-block">
+        <h3>Search</h3>
+        <div class="search-bar">
+          <input type="text" placeholder="Find aesthetic clinics near youƒ?Ý" readonly />
+          <button>Search</button>
+        </div>
+        <p style="font-size: 12px; color: var(--stone); margin-top: 12px;">Sage CTA Aú DM Sans Medium Aú 13px</p>
+      </div>
+
+      <!-- Clinic Card -->
+      <div class="component-block">
+        <h3>Clinic Card</h3>
+        <div class="clinic-card">
+          <div class="clinic-card-image">[ Studio Photography ]</div>
+          <div class="clinic-card-body">
+            <div class="clinic-card-badge">ƒoÝ Verified Provider</div>
+            <div class="clinic-card-name">LumiA"re Aesthetics</div>
+            <div class="clinic-card-location">Tampa, FL Aú 0.8 mi</div>
+            <div class="clinic-card-stars">
+              <span class="star">ƒ~.</span><span class="star">ƒ~.</span><span class="star">ƒ~.</span><span class="star">ƒ~.</span><span class="star">ƒ~.</span>
+              <span class="rating-count">4.9 (214 reviews)</span>
+            </div>
+            <div class="clinic-card-tags">
+              <span class="tag">Botox</span>
+              <span class="tag">Filler</span>
+              <span class="tag">Skin</span>
+            </div>
+            <button class="btn btn-primary clinic-card-cta">Reserve Your Consultation</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Badges & Labels -->
+      <div class="component-block">
+        <h3>Badges & Labels</h3>
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <div>
+            <p style="font-size: 11px; color: var(--stone); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px;">Verified Badge ƒ?" Dark BG</p>
+            <div style="background: var(--onyx); padding: 20px; border-radius: 6px; display: inline-block;">
+              <span class="verified-badge">ƒoÝ Verified Provider</span>
+            </div>
+          </div>
+          <div>
+            <p style="font-size: 11px; color: var(--stone); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px;">Service Tags</p>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <span class="tag">Botox</span>
+              <span class="tag">Dermal Fillers</span>
+              <span class="tag">Laser</span>
+              <span class="tag">Weight Loss</span>
+              <span class="tag">Skin Care</span>
+            </div>
+          </div>
+          <div>
+            <p style="font-size: 11px; color: var(--stone); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px;">Section Label</p>
+            <span class="section-label" style="margin-bottom: 0;">Featured Providers</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- DARK MODE COMPONENTS -->
+<section class="dark" id="darkmode">
+  <div class="inner">
+    <div class="section-label light">03b ƒ?" Dark Mode Components</div>
+    <h2 class="section-title light">On Dark Backgrounds</h2>
+    <p class="section-desc">Hero sections, headers, and feature blocks live in Deep Onyx. Gold accents create warmth and hierarchy.</p>
+    <div class="divider"></div>
+
+    <!-- Hero Search Example -->
+    <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(201,169,110,0.12); border-radius: 10px; padding: 48px; margin-bottom: 32px;">
+      <div style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--champagne); margin-bottom: 16px;">Tampa's Premier Aesthetic Destination</div>
+      <h2 style="font-family: var(--font-serif); font-weight: 300; font-size: 52px; color: #fff; margin-bottom: 12px; line-height: 1.1;">Find Your Glow.</h2>
+      <p style="font-size: 16px; color: var(--stone); margin-bottom: 32px; max-width: 420px;">60 verified providers in Tampa, curated for discerning patients.</p>
+      <div class="search-bar" style="background: rgba(255,255,255,0.06); border-color: rgba(201,169,110,0.2); max-width: 460px;">
+        <input type="text" placeholder="Find aesthetic clinics near youƒ?Ý" style="background: transparent; color: #fff;" readonly />
+        <button>Search</button>
+      </div>
+    </div>
+
+    <!-- Stats row -->
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+      <div class="dark-card" style="text-align: center;">
+        <div style="font-family: var(--font-serif); font-weight: 300; font-size: 42px; color: var(--champagne);">292+</div>
+        <div style="font-size: 12px; color: var(--stone); letter-spacing: 0.06em; text-transform: uppercase; margin-top: 4px;">Verified Clinics</div>
+      </div>
+      <div class="dark-card" style="text-align: center;">
+        <div style="font-family: var(--font-serif); font-weight: 300; font-size: 42px; color: var(--champagne);">4.9ƒ~.</div>
+        <div style="font-size: 12px; color: var(--stone); letter-spacing: 0.06em; text-transform: uppercase; margin-top: 4px;">Avg. Rating</div>
+      </div>
+      <div class="dark-card" style="text-align: center;">
+        <div style="font-family: var(--font-serif); font-weight: 300; font-size: 42px; color: var(--champagne);">12k+</div>
+        <div style="font-size: 12px; color: var(--stone); letter-spacing: 0.06em; text-transform: uppercase; margin-top: 4px;">Consultations</div>
+      </div>
+      <div class="dark-card" style="text-align: center;">
+        <div style="font-family: var(--font-serif); font-weight: 300; font-size: 42px; color: var(--champagne);">100%</div>
+        <div style="font-size: 12px; color: var(--stone); letter-spacing: 0.06em; text-transform: uppercase; margin-top: 4px;">Curated</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOGO -->
+<section id="logo">
+  <div class="section-label">04 ƒ?" Logo System</div>
+  <h2 class="section-title">Logo Variants</h2>
+  <p class="section-desc">Four variants required for full coverage. Generate logos using the Ideogram prompts in the Brand Brief. Icon mark should be a thin gold geometric glyph ƒ?" route path, radiant point, or GR monogram.</p>
+  <div class="divider"></div>
+
+  <div class="logo-variants">
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+      <div class="logo-box dark-bg" style="width: 100%;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <circle cx="10" cy="10" r="8" stroke="#C9A96E" stroke-width="0.8"/>
+            <circle cx="10" cy="10" r="2" fill="#C9A96E"/>
+            <line x1="10" y1="2" x2="10" y2="5" stroke="#C9A96E" stroke-width="0.8"/>
+            <line x1="10" y1="15" x2="10" y2="18" stroke="#C9A96E" stroke-width="0.8"/>
+            <line x1="2" y1="10" x2="5" y2="10" stroke="#C9A96E" stroke-width="0.8"/>
+            <line x1="15" y1="10" x2="18" y2="10" stroke="#C9A96E" stroke-width="0.8"/>
+          </svg>
+          <span class="logo-wordmark gold">GlowRoute</span>
+        </div>
+      </div>
+      <span style="font-size: 11px; color: var(--stone); text-transform: uppercase; letter-spacing: 0.08em;">Horizontal Aú Dark</span>
+    </div>
+
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+      <div class="logo-box light-bg" style="width: 100%;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <circle cx="10" cy="10" r="8" stroke="#0D0D0D" stroke-width="0.8"/>
+            <circle cx="10" cy="10" r="2" fill="#0D0D0D"/>
+            <line x1="10" y1="2" x2="10" y2="5" stroke="#0D0D0D" stroke-width="0.8"/>
+            <line x1="10" y1="15" x2="10" y2="18" stroke="#0D0D0D" stroke-width="0.8"/>
+            <line x1="2" y1="10" x2="5" y2="10" stroke="#0D0D0D" stroke-width="0.8"/>
+            <line x1="15" y1="10" x2="18" y2="10" stroke="#0D0D0D" stroke-width="0.8"/>
+          </svg>
+          <span class="logo-wordmark dark">GlowRoute</span>
+        </div>
+      </div>
+      <span style="font-size: 11px; color: var(--stone); text-transform: uppercase; letter-spacing: 0.08em;">Horizontal Aú Light</span>
+    </div>
+
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+      <div class="logo-box dark-bg" style="width: 100%;">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <circle cx="20" cy="20" r="16" stroke="#C9A96E" stroke-width="0.8"/>
+          <circle cx="20" cy="20" r="4" fill="#C9A96E"/>
+          <line x1="20" y1="4" x2="20" y2="10" stroke="#C9A96E" stroke-width="0.8"/>
+          <line x1="20" y1="30" x2="20" y2="36" stroke="#C9A96E" stroke-width="0.8"/>
+          <line x1="4" y1="20" x2="10" y2="20" stroke="#C9A96E" stroke-width="0.8"/>
+          <line x1="30" y1="20" x2="36" y2="20" stroke="#C9A96E" stroke-width="0.8"/>
+          <line x1="8.7" y1="8.7" x2="12.9" y2="12.9" stroke="#C9A96E" stroke-width="0.8"/>
+          <line x1="27.1" y1="27.1" x2="31.3" y2="31.3" stroke="#C9A96E" stroke-width="0.8"/>
+          <line x1="31.3" y1="8.7" x2="27.1" y2="12.9" stroke="#C9A96E" stroke-width="0.8"/>
+          <line x1="12.9" y1="27.1" x2="8.7" y2="31.3" stroke="#C9A96E" stroke-width="0.8"/>
+        </svg>
+      </div>
+      <span style="font-size: 11px; color: var(--stone); text-transform: uppercase; letter-spacing: 0.08em;">Icon Only Aú Favicon</span>
+    </div>
+
+    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+      <div class="logo-box dark-bg" style="width: 100%;">
+        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+          <svg width="28" height="28" viewBox="0 0 40 40" fill="none">
+            <circle cx="20" cy="20" r="16" stroke="#C9A96E" stroke-width="0.8"/>
+            <circle cx="20" cy="20" r="4" fill="#C9A96E"/>
+            <line x1="20" y1="4" x2="20" y2="10" stroke="#C9A96E" stroke-width="0.8"/>
+            <line x1="20" y1="30" x2="20" y2="36" stroke="#C9A96E" stroke-width="0.8"/>
+            <line x1="4" y1="20" x2="10" y2="20" stroke="#C9A96E" stroke-width="0.8"/>
+            <line x1="30" y1="20" x2="36" y2="20" stroke="#C9A96E" stroke-width="0.8"/>
+          </svg>
+          <span class="logo-wordmark gold" style="font-size: 16px;">GlowRoute</span>
+        </div>
+      </div>
+      <span style="font-size: 11px; color: var(--stone); text-transform: uppercase; letter-spacing: 0.08em;">Stacked Aú Square</span>
+    </div>
+  </div>
+
+  <p style="font-size: 13px; color: var(--stone); margin-top: 24px; font-style: italic;">ƒ+` Placeholder mark shown above. Replace with final logo from Ideogram generation. See Brand Brief A8 for the 5 prompt variants.</p>
+</section>
+
+<!-- VOICE & TONE -->
+<section id="voice" style="background: var(--ivory); border-top: 1px solid rgba(140,130,121,0.12);">
+  <div class="section-label">05 ƒ?" Voice & Tone</div>
+  <h2 class="section-title">How GlowRoute Speaks</h2>
+  <p class="section-desc">Think <em>Vogue meets healthcare</em>. Precise, aspirational, never pushy. We curate ƒ?" we don't aggregate.</p>
+  <div class="divider"></div>
+
+  <div style="display: flex; gap: 20px; flex-wrap: wrap; margin-bottom: 48px;">
+    <div style="background: var(--onyx); border-radius: 4px; padding: 10px 20px; font-size: 12px; color: var(--champagne); letter-spacing: 0.06em;">Curated</div>
+    <div style="background: var(--onyx); border-radius: 4px; padding: 10px 20px; font-size: 12px; color: var(--champagne); letter-spacing: 0.06em;">Warm</div>
+    <div style="background: var(--onyx); border-radius: 4px; padding: 10px 20px; font-size: 12px; color: var(--champagne); letter-spacing: 0.06em;">Authoritative</div>
+    <div style="background: var(--onyx); border-radius: 4px; padding: 10px 20px; font-size: 12px; color: var(--champagne); letter-spacing: 0.06em;">Aspirational</div>
+  </div>
+
+  <div class="voice-grid">
+    <div class="voice-card dont">
+      <div class="voice-card-label">ƒ?O Don't Say</div>
+      <div class="voice-item">"60 clinics found near you"</div>
+      <div class="voice-item">"Filter by treatment"</div>
+      <div class="voice-item">"Claim your free listing"</div>
+      <div class="voice-item">"Book now"</div>
+      <div class="voice-item">"Best match"</div>
+      <div class="voice-item">"Sign up for free"</div>
+    </div>
+    <div class="voice-card do">
+      <div class="voice-card-label">ƒo" Do Say</div>
+      <div class="voice-item">"60 verified providers in Tampa"</div>
+      <div class="voice-item">"Explore by specialty"</div>
+      <div class="voice-item">"Join 292+ verified Tampa clinics"</div>
+      <div class="voice-item">"Reserve your consultation"</div>
+      <div class="voice-item">"Curated for you"</div>
+      <div class="voice-item">"Join the GlowRoute network"</div>
+    </div>
+  </div>
+</section>
+
+<!-- IMAGERY -->
+<section id="imagery" style="border-top: 1px solid rgba(140,130,121,0.12);">
+  <div class="section-label">06 ƒ?" Imagery & Photography</div>
+  <h2 class="section-title">Visual Style</h2>
+  <p class="section-desc">Clean studio aesthetic. Soft lighting. Real clinic environments. No stock-photo scrubs. Every image should feel like it belongs in a luxury editorial.</p>
+  <div class="divider"></div>
+
+  <div class="imagery-guide">
+    <div class="imagery-card">
+      <h4 style="color: var(--sage);">ƒo" Use</h4>
+      <ul>
+        <li>Soft, warm studio lighting on white or cream backgrounds</li>
+        <li>Real clinic environments ƒ?" marble, clean surfaces, branded spaces</li>
+        <li>Elegant hands, serums, tools with intentional composition</li>
+        <li>Patients or models with natural, confident expressions ƒ?" not "before/after" energy</li>
+        <li>Botanical elements ƒ?" dried florals, minimal greenery</li>
+        <li>Monochrome or champagne-tone flat lays of skincare products</li>
+      </ul>
+    </div>
+    <div class="imagery-card">
+      <h4 style="color: #c0584a;">ƒo- Avoid</h4>
+      <ul>
+        <li>Generic stock-photo nurses or medical stock imagery</li>
+        <li>Bright, clinical fluorescent lighting</li>
+        <li>Before/after procedure imagery in brand contexts</li>
+        <li>Cluttered, busy backgrounds</li>
+        <li>Cool-toned blue/grey color grading</li>
+        <li>Price-focused promotional graphics or sale imagery</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Image Generation Prompts Reference -->
+  <div style="margin-top: 48px; background: var(--onyx); border-radius: 8px; padding: 36px; border: 1px solid rgba(201,169,110,0.15);">
+    <div style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--champagne); margin-bottom: 16px;">AI Image Generation ƒ?" Brand Photography Style</div>
+    <p style="font-size: 14px; color: var(--stone); margin-bottom: 20px;">Use this base prompt modifier with any image generation tool:</p>
+    <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(201,169,110,0.1); border-radius: 4px; padding: 20px; font-family: 'Courier New', monospace; font-size: 13px; color: rgba(255,255,255,0.8); line-height: 1.8;">
+      "...warm studio lighting, ivory cream and champagne gold tones, luxury medspa editorial photography, clean composition, soft natural bokeh, high-end skincare aesthetic, Vogue editorial style, no watermarks, ultra-sharp, 8K"
+    </div>
+  </div>
+</section>
+
+<!-- SPACING & LAYOUT -->
+<section style="background: #fff; max-width: 100%; padding: 80px 0; border-top: 1px solid rgba(140,130,121,0.12);">
+  <div style="max-width: 1160px; margin: 0 auto; padding: 0 48px;">
+    <div class="section-label">07 ƒ?" Spacing & Layout</div>
+    <h2 class="section-title">Design Principles</h2>
+    <p class="section-desc">Luxury breathes. Never pack content. Generous whitespace is a feature, not wasted space.</p>
+    <div class="divider"></div>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px;">
+      <div>
+        <h3 style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--stone); margin-bottom: 24px; font-weight: 500;">Spacing Scale</h3>
+        <div class="spacing-grid">
+          <div class="spacing-item">
+            <div class="spacing-block" style="height: 4px;"></div>
+            <label>4px</label>
+          </div>
+          <div class="spacing-item">
+            <div class="spacing-block" style="height: 8px;"></div>
+            <label>8px</label>
+          </div>
+          <div class="spacing-item">
+            <div class="spacing-block" style="height: 12px;"></div>
+            <label>12px</label>
+          </div>
+          <div class="spacing-item">
+            <div class="spacing-block" style="height: 16px;"></div>
+            <label>16px</label>
+          </div>
+          <div class="spacing-item">
+            <div class="spacing-block" style="height: 24px;"></div>
+            <label>24px</label>
+          </div>
+          <div class="spacing-item">
+            <div class="spacing-block" style="height: 32px;"></div>
+            <label>32px</label>
+          </div>
+          <div class="spacing-item">
+            <div class="spacing-block" style="height: 48px;"></div>
+            <label>48px</label>
+          </div>
+          <div class="spacing-item">
+            <div class="spacing-block" style="height: 64px;"></div>
+            <label>64px</label>
+          </div>
+          <div class="spacing-item">
+            <div class="spacing-block" style="height: 80px;"></div>
+            <label>80px</label>
+          </div>
+          <div class="spacing-item">
+            <div class="spacing-block" style="height: 96px;"></div>
+            <label>96px</label>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <h3 style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--stone); margin-bottom: 24px; font-weight: 500;">Layout Rules</h3>
+        <div style="display: flex; flex-direction: column; gap: 14px;">
+          <div style="display: flex; gap: 14px; align-items: flex-start; padding: 14px; border: 1px solid rgba(140,130,121,0.12); border-radius: 4px;">
+            <span style="color: var(--champagne); font-family: var(--font-serif); font-size: 20px; line-height: 1;">1</span>
+            <p style="font-size: 14px; color: var(--onyx);">Generous whitespace ƒ?" luxury breathes. Never pack content.</p>
+          </div>
+          <div style="display: flex; gap: 14px; align-items: flex-start; padding: 14px; border: 1px solid rgba(140,130,121,0.12); border-radius: 4px;">
+            <span style="color: var(--champagne); font-family: var(--font-serif); font-size: 20px; line-height: 1;">2</span>
+            <p style="font-size: 14px; color: var(--onyx);">Dark hero sections with Deep Onyx or rich gradient for above-the-fold.</p>
+          </div>
+          <div style="display: flex; gap: 14px; align-items: flex-start; padding: 14px; border: 1px solid rgba(140,130,121,0.12); border-radius: 4px;">
+            <span style="color: var(--champagne); font-family: var(--font-serif); font-size: 20px; line-height: 1;">3</span>
+            <p style="font-size: 14px; color: var(--onyx);">Gold (#C9A96E) as the accent ƒ?" CTAs, borders, star ratings, badges.</p>
+          </div>
+          <div style="display: flex; gap: 14px; align-items: flex-start; padding: 14px; border: 1px solid rgba(140,130,121,0.12); border-radius: 4px;">
+            <span style="color: var(--champagne); font-family: var(--font-serif); font-size: 20px; line-height: 1;">4</span>
+            <p style="font-size: 14px; color: var(--onyx);">Serif for emotion, sans-serif for function. Headlines feel editorial.</p>
+          </div>
+          <div style="display: flex; gap: 14px; align-items: flex-start; padding: 14px; border: 1px solid rgba(140,130,121,0.12); border-radius: 4px;">
+            <span style="color: var(--champagne); font-family: var(--font-serif); font-size: 20px; line-height: 1;">5</span>
+            <p style="font-size: 14px; color: var(--onyx);">One hero, one action, one story per section. Strip the page.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ASSETS CHECKLIST -->
+<section style="border-top: 1px solid rgba(140,130,121,0.12);">
+  <div class="section-label">08 ƒ?" Brand Assets Checklist</div>
+  <h2 class="section-title">What to Build</h2>
+  <p class="section-desc">Track progress as each asset is completed. Logo from Ideogram unlocks the rest of the kit.</p>
+  <div class="divider"></div>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; max-width: 720px;">
+    <div style="display: flex; gap: 12px; align-items: center; padding: 14px 18px; background: rgba(74,103,65,0.06); border: 1px solid rgba(74,103,65,0.2); border-radius: 4px;">
+      <span style="color: var(--sage); font-size: 14px;">ƒo"</span>
+      <span style="font-size: 14px; color: var(--onyx);">Brand Brief v1.0</span>
+    </div>
+    <div style="display: flex; gap: 12px; align-items: center; padding: 14px 18px; background: rgba(74,103,65,0.06); border: 1px solid rgba(74,103,65,0.2); border-radius: 4px;">
+      <span style="color: var(--sage); font-size: 14px;">ƒo"</span>
+      <span style="font-size: 14px; color: var(--onyx);">HTML Brand Style Guide</span>
+    </div>
+    <div style="display: flex; gap: 12px; align-items: center; padding: 14px 18px; background: #fff; border: 1px solid rgba(140,130,121,0.2); border-radius: 4px;">
+      <span style="color: var(--stone); font-size: 14px;">ƒ-<</span>
+      <span style="font-size: 14px; color: var(--stone);">Logo ƒ?" Horizontal (dark bg)</span>
+    </div>
+    <div style="display: flex; gap: 12px; align-items: center; padding: 14px 18px; background: #fff; border: 1px solid rgba(140,130,121,0.2); border-radius: 4px;">
+      <span style="color: var(--stone); font-size: 14px;">ƒ-<</span>
+      <span style="font-size: 14px; color: var(--stone);">Logo ƒ?" Horizontal (light bg)</span>
+    </div>
+    <div style="display: flex; gap: 12px; align-items: center; padding: 14px 18px; background: #fff; border: 1px solid rgba(140,130,121,0.2); border-radius: 4px;">
+      <span style="color: var(--stone); font-size: 14px;">ƒ-<</span>
+      <span style="font-size: 14px; color: var(--stone);">Logo ƒ?" Icon only (favicon)</span>
+    </div>
+    <div style="display: flex; gap: 12px; align-items: center; padding: 14px 18px; background: #fff; border: 1px solid rgba(140,130,121,0.2); border-radius: 4px;">
+      <span style="color: var(--stone); font-size: 14px;">ƒ-<</span>
+      <span style="font-size: 14px; color: var(--stone);">Color palette tile (PNG)</span>
+    </div>
+    <div style="display: flex; gap: 12px; align-items: center; padding: 14px 18px; background: #fff; border: 1px solid rgba(140,130,121,0.2); border-radius: 4px;">
+      <span style="color: var(--stone); font-size: 14px;">ƒ-<</span>
+      <span style="font-size: 14px; color: var(--stone);">Social avatar (1:1 icon)</span>
+    </div>
+    <div style="display: flex; gap: 12px; align-items: center; padding: 14px 18px; background: #fff; border: 1px solid rgba(140,130,121,0.2); border-radius: 4px;">
+      <span style="color: var(--stone); font-size: 14px;">ƒ-<</span>
+      <span style="font-size: 14px; color: var(--stone);">OG / Social preview template</span>
+    </div>
+    <div style="display: flex; gap: 12px; align-items: center; padding: 14px 18px; background: #fff; border: 1px solid rgba(140,130,121,0.2); border-radius: 4px;">
+      <span style="color: var(--stone); font-size: 14px;">ƒ-<</span>
+      <span style="font-size: 14px; color: var(--stone);">Instagram post template (sq + story)</span>
+    </div>
+    <div style="display: flex; gap: 12px; align-items: center; padding: 14px 18px; background: #fff; border: 1px solid rgba(140,130,121,0.2); border-radius: 4px;">
+      <span style="color: var(--stone); font-size: 14px;">ƒ-<</span>
+      <span style="font-size: 14px; color: var(--stone);">Email header template</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">GlowRoute</div>
+  <p>Brand Style Guide v1.0 Aú March 2026 Aú Confidential</p>
+  <p style="margin-top: 8px;">The premium discovery platform for aesthetic wellness.</p>
+</footer>
+
+</body>
+</html>
