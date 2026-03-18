@@ -27,7 +27,8 @@ const faqs = [
 ]
 
 export default function PricingPage() {
-  const plans = [
+  type PlanEntry = { key: string; name: string; monthlyLabel: string; tagline: string; features: readonly string[]; highlight?: boolean }
+  const plans: PlanEntry[] = [
     { key: 'starter', ...PLANS.starter },
     { key: 'growth', ...PLANS.growth },
     { key: 'pro', ...PLANS.pro },
