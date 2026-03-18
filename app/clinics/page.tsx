@@ -3,6 +3,7 @@ import { useState, useMemo, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Navbar from '@/components/Navbar'
 import HeroSearch from '@/components/HeroSearch'
+import { isPeptideClinic } from '@/lib/peptide'
 import FilterSidebar from '@/components/FilterSidebar'
 import ResultsHeader from '@/components/ResultsHeader'
 import ClinicCard, { FeaturedClinicCard } from '@/components/ClinicCard'
@@ -115,10 +116,11 @@ function ClinicsPageInner() {
     }
     if (filters.treatmentTypes.length > 0 && !filters.treatmentTypes.includes('All Treatments')) {
       result = result.filter(c => {
-        const allTreatments = [...(c.treatments || []), ...(c.specialtyTreatments || [])]
-        return filters.treatmentTypes.some(ft =>
-          allTreatments.some(t => t.toLowerCase().includes(ft.toLowerCase()))
-        )
+        return filters.treatmentTypes.some(ft => {
+          if (ft === 'Peptide Therapy') return isPeptideClinic(c)
+          const allTreatments = [...(c.treatments || []), ...(c.specialtyTreatments || [])]
+          return allTreatments.some(t => t.toLowerCase().includes(ft.toLowerCase()))
+        })
       })
     }
 
