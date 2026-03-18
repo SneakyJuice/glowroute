@@ -1,6 +1,5 @@
 import Stripe from 'stripe'
 
-// Lazy singleton — initialized on first request, not at build time
 let _stripe: Stripe | null = null
 
 export function getStripe(): Stripe {
@@ -12,38 +11,48 @@ export function getStripe(): Stripe {
   return _stripe
 }
 
-// Named export for convenience in API routes
-export const stripe = {
-  get checkout() { return getStripe().checkout },
-  get webhooks() { return getStripe().webhooks },
-  get products() { return getStripe().products },
-  get prices() { return getStripe().prices },
-  get customers() { return getStripe().customers },
-  get subscriptions() { return getStripe().subscriptions },
-} as unknown as Stripe
-
 export const PLANS = {
-  basic: {
-    name: 'GlowRoute Basic',
-    priceId: process.env.STRIPE_BASIC_PRICE_ID ?? 'price_1TCFhd67ZLaHqf10hwQGrcY7',
+  starter: {
+    name: 'Starter',
+    priceId: process.env.STRIPE_STARTER_PRICE_ID ?? 'price_1TCFo067ZLaHqf10O8eXUc6l',
     amount: 9900,
+    monthlyLabel: '$99/mo',
+    tagline: 'Get your listing working for you',
     features: [
-      'Claim your listing',
-      'Add photos & update info',
-      'Manage contact details',
-      'Respond to leads',
+      'Claim & verify your listing',
+      'Update photos, services & hours',
+      'Manage contact info & website link',
+      'Remove competitor ads from your page',
+      'Receive patient leads via email',
+    ],
+  },
+  growth: {
+    name: 'Growth',
+    priceId: process.env.STRIPE_GROWTH_PRICE_ID ?? 'price_1TCFo067ZLaHqf10IR8jp6CQ',
+    amount: 24900,
+    monthlyLabel: '$249/mo',
+    tagline: 'Get discovered by more patients',
+    highlight: true,
+    features: [
+      'Everything in Starter',
+      'Featured placement in search results',
+      'Priority ranking above free listings',
+      'Analytics dashboard (views, leads, clicks)',
+      'Promotional banner on clinic profile',
     ],
   },
   pro: {
-    name: 'GlowRoute Pro',
-    priceId: process.env.STRIPE_PRO_PRICE_ID ?? 'price_1TCFhe67ZLaHqf10OkOBnXSa',
-    amount: 24900,
+    name: 'Pro',
+    priceId: process.env.STRIPE_PRO_PRICE_ID ?? 'price_1TCFo167ZLaHqf10dDmij3sG',
+    amount: 49900,
+    monthlyLabel: '$499/mo',
+    tagline: 'Dominate your market',
     features: [
-      'Everything in Basic',
-      'Featured placement in search',
-      'Priority ranking',
-      'Analytics dashboard',
-      'Verified badge',
+      'Everything in Growth',
+      'GlowRoute Verified badge',
+      'Homepage featured spotlight (rotating)',
+      'Competitor conquest (show on rival pages)',
+      'Dedicated account manager',
     ],
   },
 } as const

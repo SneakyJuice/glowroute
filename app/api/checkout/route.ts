@@ -4,40 +4,43 @@ import { SITE_URL } from '@/lib/config'
 
 export async function POST(req: NextRequest) {
   try {
-    const body = await req.json()
-    const { plan, clinicSlug, clinicName, email, ownerName } = body as {
-      plan: PlanKey
+    const body = await req.json() as {
       clinicSlug?: string
+      tier?: PlanKey
+      plan?: PlanKey          // backwards-compat alias
       clinicName?: string
       email?: string
       ownerName?: string
     }
 
-    if (!plan || !PLANS[plan]) {
+    const tier = (body.tier ?? body.plan) as PlanKey | undefined
+    const { clinicSlug, clinicName, email, ownerName } = body
+
+    if (!tier || !PLANS[tier]) {
       return NextResponse.json(
-        { error: `Invalid plan. Must be: ${Object.keys(PLANS).join(', ')}` },
+        { error: `Invalid tier. Must be: ${Object.keys(PLANS).join(', ')}` },
         { status: 400 }
       )
     }
 
     const stripe = getStripe()
-    const selectedPlan = PLANS[plan]
+    const plan = PLANS[tier]
 
     const metadata: Record<string, string> = {
-      plan,
-      ...(clinicSlug && { clinic_slug: clinicSlug }),
-      ...(clinicName && { clinic_name: clinicName }),
-      ...(ownerName && { owner_name: ownerName }),
+      tier,
+      ...(clinicSlug  && { clinic_slug:  clinicSlug  }),
+      ...(clinicName  && { clinic_name:  clinicName  }),
+      ...(ownerName   && { owner_name:   ownerName   }),
+      ...(email       && { owner_email:  email       }),
     }
 
-    const baseUrl = SITE_URL
-    const successUrl = `${baseUrl}/claim/success?session_id={CHECKOUT_SESSION_ID}&plan=${plan}`
-    const cancelUrl = `${baseUrl}/claim/cancel?plan=${plan}${clinicSlug ? `&clinic=${clinicSlug}` : ''}`
+    const successUrl = `${SITE_URL}/claim/success?session_id={CHECKOUT_SESSION_ID}&tier=${tier}`
+    const cancelUrl  = `${SITE_URL}/claim/cancel?tier=${tier}${clinicSlug ? `&clinic=${clinicSlug}` : ''}`
 
     const session = await stripe.checkout.sessions.create({
       mode: 'subscription',
       payment_method_types: ['card'],
-      line_items: [{ price: selectedPlan.priceId, quantity: 1 }],
+      line_items: [{ price: plan.priceId, quantity: 1 }],
       ...(email && { customer_email: email }),
       metadata,
       subscription_data: { metadata },
@@ -50,7 +53,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ url: session.url, sessionId: session.id })
   } catch (err) {
     const message = err instanceof Error ? err.message : 'Unknown error'
-    console.error('[checkout] Error:', message)
+    console.error('[checkout]', message)
     return NextResponse.json({ error: message }, { status: 500 })
   }
 }
