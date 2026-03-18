@@ -7,6 +7,8 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import LeadCaptureForm from '@/components/LeadCaptureForm'
 import { SITE_URL } from '@/lib/config'
+import { getVibeTags, detectBookingPlatform, VIBE_STYLES } from '@/lib/vibes'
+import type { VibeTag } from '@/lib/vibes'
 
 /** Normalize a city name to a URL-safe slug */
 function citySlug(city: string) {
@@ -118,6 +120,13 @@ export default function ClinicProfilePage({ params }: PageProps) {
     )}`
 
   const isUnclaimed = !clinic.verified
+
+  // Vibe tags + booking platform
+  const vibeTags = getVibeTags(clinic)
+  const bookingPlatform = detectBookingPlatform(clinic)
+
+  // Book Now URL — bookingUrl first, then website if it's a booking platform
+  const bookNowUrl = bookingPlatform?.url ?? null
 
   // Nearby clinics in same city
   const nearbyClinics = allClinics
@@ -242,6 +251,26 @@ export default function ClinicProfilePage({ params }: PageProps) {
                       </svg>
                     </a>
                   )}
+                  {/* Vibe tags */}
+                  {vibeTags.length > 0 && (
+                    <div className="flex flex-wrap gap-1.5 mt-2.5">
+                      {vibeTags.map(tag => (
+                        <span
+                          key={tag}
+                          className={`text-[11px] font-semibold px-2.5 py-0.5 rounded-full border ${VIBE_STYLES[tag as VibeTag] ?? 'bg-gray-100 border-gray-200 text-gray-600'}`}
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                      {/* Booking platform badge */}
+                      {bookingPlatform && (
+                        <span className="text-[11px] font-semibold px-2.5 py-0.5 rounded-full border bg-green-50 border-green-200 text-green-700 flex items-center gap-1">
+                          <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
+                          {bookingPlatform.label}
+                        </span>
+                      )}
+                    </div>
+                  )}
                   {clinic.availability && (
                     <div className="flex items-center gap-1.5 mt-2">
                       <span className="w-2 h-2 rounded-full bg-teal-light animate-pulse" />
@@ -251,8 +280,28 @@ export default function ClinicProfilePage({ params }: PageProps) {
                 </div>
               </div>
 
-              {/* Action Buttons */}
+              {/* Action Buttons — Book Now prominently above fold */}
               <div className="flex flex-wrap gap-2.5 mt-5">
+                {/* Book Now — primary CTA when booking available */}
+                {bookNowUrl ? (
+                  <a
+                    href={bookNowUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 bg-green-600 text-white text-sm font-bold px-5 py-2.5 rounded-xl hover:bg-green-700 transition-colors shadow-sm"
+                  >
+                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
+                    {bookingPlatform?.platform === 'generic' ? 'Book Online' : `Book Now`}
+                  </a>
+                ) : (
+                  <a
+                    href="#lead-form"
+                    className="flex items-center gap-2 bg-green-600 text-white text-sm font-bold px-5 py-2.5 rounded-xl hover:bg-green-700 transition-colors shadow-sm"
+                  >
+                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    Request Appointment
+                  </a>
+                )}
                 {clinic.phone && (
                   <a
                     href={`tel:${clinic.phone}`}
@@ -288,16 +337,6 @@ export default function ClinicProfilePage({ params }: PageProps) {
                       <path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z" />
                     </svg>
                     Visit Website
-                  </a>
-                )}
-                {clinic.bookingUrl && (
-                  <a
-                    href={clinic.bookingUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 bg-teal/[0.08] border border-teal/20 text-teal text-sm font-semibold px-4 py-2.5 rounded-xl hover:bg-teal hover:text-white transition-colors"
-                  >
-                    Book Consultation
                   </a>
                 )}
                 <a
@@ -416,7 +455,30 @@ export default function ClinicProfilePage({ params }: PageProps) {
                     {clinic.verified ? '✓ Verified' : 'Unverified'}
                   </span>
                 </div>
+                {isUnclaimed && (
+                  <div className="pt-2 border-t border-gray-100">
+                    <a
+                      href={`/claim/${clinic.slug}`}
+                      className="text-xs font-semibold text-teal hover:underline"
+                    >
+                      Own this business? Claim your listing →
+                    </a>
+                  </div>
+                )}
               </div>
+            </div>
+
+            {/* Price Range */}
+            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-5">
+              <h3 className="text-sm font-bold text-navy mb-3">Pricing</h3>
+              {clinic.priceTier ? (
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-500">Price Range</span>
+                  <span className="font-bold text-navy text-lg">{clinic.priceTier}</span>
+                </div>
+              ) : (
+                <p className="text-sm text-gray-500 italic">Contact for Pricing</p>
+              )}
             </div>
 
             {/* Claim This Listing CTA */}
@@ -426,10 +488,10 @@ export default function ClinicProfilePage({ params }: PageProps) {
                 <div className="text-xl mb-1.5 relative">🏢</div>
                 <h3 className="text-white font-bold text-sm mb-1.5 relative">Is this your clinic?</h3>
                 <p className="text-white/60 text-xs mb-4 relative leading-relaxed">
-                  Claim your free listing to update your info, respond to leads, and unlock analytics.
+                  430+ patients searched your area last month. Claim your listing to capture leads.
                 </p>
                 <a
-                  href={`/claim?clinic=${encodeURIComponent(clinic.name)}`}
+                  href={`/claim/${clinic.slug}`}
                   className="block text-center bg-teal text-white text-sm font-semibold py-2.5 rounded-xl hover:bg-teal/80 transition-colors relative"
                 >
                   Claim This Listing →
@@ -438,7 +500,11 @@ export default function ClinicProfilePage({ params }: PageProps) {
             )}
 
             {/* Lead Capture Form */}
-            <LeadCaptureForm clinicName={clinic.name} />
+            <LeadCaptureForm
+              clinicName={clinic.name}
+              clinicSlug={clinic.slug}
+              treatments={allTreatments}
+            />
 
             {/* Nearby Clinics (same city) */}
             {nearbyClinics.length > 0 && (

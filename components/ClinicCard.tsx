@@ -3,6 +3,8 @@ import { useState } from 'react'
 import { Clinic } from '@/types/clinic'
 import TreatmentTag, { getTagVariant } from './TreatmentTag'
 import VerifiedBadge from './VerifiedBadge'
+import { getCardVibeTags, VIBE_STYLES } from '@/lib/vibes'
+import type { VibeTag } from '@/lib/vibes'
 
 function getMapUrl(clinic: Clinic): string {
   const lat = (clinic as any).lat
@@ -139,6 +141,9 @@ export default function ClinicCard({ clinic, distanceMi }: ClinicCardProps) {
         {clinic.verified && <VerifiedBadge className="absolute top-2.5 left-2.5" />}
         {clinic.featured && <span className="absolute top-2.5 right-2.5 bg-champagne text-white text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full">⭐ Featured</span>}
         {clinic.isNew && !clinic.featured && <span className="absolute top-2.5 right-2.5 bg-onyx text-white text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full">New</span>}
+        {!clinic.verified && !clinic.featured && !clinic.isNew && (
+          <span className="absolute top-2.5 right-2.5 bg-white/90 border border-gray-200 text-gray-400 text-[10px] font-medium px-2 py-0.5 rounded-full">Unclaimed</span>
+        )}
         <button onClick={() => setSaved(!saved)} className={`absolute bottom-2.5 right-2.5 w-8 h-8 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-sm transition-colors ${saved ? 'text-red-400' : 'text-gray-400 hover:text-red-400'}`}>
           <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill={saved ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
         </button>
@@ -168,11 +173,28 @@ export default function ClinicCard({ clinic, distanceMi }: ClinicCardProps) {
             <TreatmentTag key={t} label={t} variant={getTagVariant(t)} />
           ))}
         </div>
-        {clinic.availability && (
-          <div className="flex items-center gap-1 text-[11px] font-medium text-green-600">
-            <span className="w-1.5 h-1.5 rounded-full bg-green-500" />{clinic.availability}
-          </div>
-        )}
+        {/* Vibe tags + booking availability dot */}
+        {(() => {
+          const vibeTags = getCardVibeTags(clinic)
+          const hasBooking = !!clinic.bookingUrl
+          if (vibeTags.length === 0 && !clinic.availability) return null
+          return (
+            <div className="flex flex-wrap items-center gap-1.5">
+              {vibeTags.map(tag => (
+                <span
+                  key={tag}
+                  className={`text-[10px] font-semibold px-2 py-0.5 rounded-full border ${VIBE_STYLES[tag as VibeTag] ?? 'bg-gray-100 border-gray-200 text-gray-500'}`}
+                >
+                  {tag}
+                </span>
+              ))}
+              <span className={`flex items-center gap-1 text-[10px] font-medium ${hasBooking ? 'text-green-600' : 'text-gray-400'}`}>
+                <span className={`w-1.5 h-1.5 rounded-full ${hasBooking ? 'bg-green-500' : 'bg-gray-300'}`} />
+                {hasBooking ? 'Online Booking' : 'Contact Only'}
+              </span>
+            </div>
+          )
+        })()}
         {clinic.description && (
           <p className="text-xs text-gray-500 leading-relaxed line-clamp-2 flex-1">{clinic.description}</p>
         )}
