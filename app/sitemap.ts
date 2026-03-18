@@ -1,0 +1,63 @@
+import { MetadataRoute } from 'next'
+import { allClinics } from '@/data/all-clinics'
+import { TREATMENT_SLUGS } from '@/lib/treatments'
+import { SITE_URL } from '@/lib/config'
+
+function citySlug(city: string): string {
+  return city.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
+}
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const today = new Date().toISOString().split('T')[0]
+
+  // ── Static pages ──────────────────────────────────────────────────────────
+  const staticPages: MetadataRoute.Sitemap = [
+    { url: SITE_URL,               lastModified: today, changeFrequency: 'weekly',  priority: 1.0 },
+    { url: `${SITE_URL}/clinics`,  lastModified: today, changeFrequency: 'daily',   priority: 0.9 },
+    { url: `${SITE_URL}/claim`,    lastModified: today, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${SITE_URL}/treatments`, lastModified: today, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${SITE_URL}/articles`, lastModified: today, changeFrequency: 'weekly',  priority: 0.7 },
+    { url: `${SITE_URL}/specialties`, lastModified: today, changeFrequency: 'monthly', priority: 0.6 },
+  ]
+
+  // ── Treatment pages ───────────────────────────────────────────────────────
+  const treatmentPages: MetadataRoute.Sitemap = TREATMENT_SLUGS.map(slug => ({
+    url: `${SITE_URL}/treatments/${slug}`,
+    lastModified: today,
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }))
+
+  // ── City landing pages ────────────────────────────────────────────────────
+  const uniqueCities = Array.from(new Set(allClinics.map(c => citySlug(c.city))))
+  const cityPages: MetadataRoute.Sitemap = uniqueCities.map(city => ({
+    url: `${SITE_URL}/clinics/${city}`,
+    lastModified: today,
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }))
+
+  // ── Clinic profiles ───────────────────────────────────────────────────────
+  const clinicPages: MetadataRoute.Sitemap = allClinics.map(c => ({
+    url: `${SITE_URL}/clinics/${citySlug(c.city)}/${c.slug}`,
+    lastModified: today,
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }))
+
+  // ── Claim pages (top 200 pre-rendered) ────────────────────────────────────
+  const claimPages: MetadataRoute.Sitemap = allClinics.slice(0, 200).map(c => ({
+    url: `${SITE_URL}/claim/${c.slug}`,
+    lastModified: today,
+    changeFrequency: 'monthly' as const,
+    priority: 0.5,
+  }))
+
+  return [
+    ...staticPages,
+    ...treatmentPages,
+    ...cityPages,
+    ...clinicPages,
+    ...claimPages,
+  ]
+}
