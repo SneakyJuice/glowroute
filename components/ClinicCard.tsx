@@ -5,6 +5,8 @@ import TreatmentTag, { getTagVariant } from './TreatmentTag'
 import VerifiedBadge from './VerifiedBadge'
 import { getCardVibeTags, VIBE_STYLES } from '@/lib/vibes'
 import type { VibeTag } from '@/lib/vibes'
+import { detectInfluencer, getInfluencerTier } from '@/lib/influencer'
+import CreatorBadge from './CreatorBadge'
 
 function getMapUrl(clinic: Clinic): string {
   const lat = (clinic as any).lat
@@ -173,11 +175,12 @@ export default function ClinicCard({ clinic, distanceMi }: ClinicCardProps) {
             <TreatmentTag key={t} label={t} variant={getTagVariant(t)} />
           ))}
         </div>
-        {/* Vibe tags + booking availability dot */}
+        {/* Vibe tags + booking availability dot + creator badge */}
         {(() => {
           const vibeTags = getCardVibeTags(clinic)
           const hasBooking = !!clinic.bookingUrl
-          if (vibeTags.length === 0 && !clinic.availability) return null
+          const isCreator = detectInfluencer(clinic)
+          const tier = isCreator ? getInfluencerTier(clinic) : null
           return (
             <div className="flex flex-wrap items-center gap-1.5">
               {vibeTags.map(tag => (
@@ -188,6 +191,7 @@ export default function ClinicCard({ clinic, distanceMi }: ClinicCardProps) {
                   {tag}
                 </span>
               ))}
+              {isCreator && tier && <CreatorBadge tier={tier} variant="card" />}
               <span className={`flex items-center gap-1 text-[10px] font-medium ${hasBooking ? 'text-green-600' : 'text-gray-400'}`}>
                 <span className={`w-1.5 h-1.5 rounded-full ${hasBooking ? 'bg-green-500' : 'bg-gray-300'}`} />
                 {hasBooking ? 'Online Booking' : 'Contact Only'}

@@ -6,9 +6,11 @@ import VerifiedBadge from '@/components/VerifiedBadge'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import LeadCaptureForm from '@/components/LeadCaptureForm'
+import CreatorBadge from '@/components/CreatorBadge'
 import { SITE_URL } from '@/lib/config'
 import { getVibeTags, detectBookingPlatform, VIBE_STYLES } from '@/lib/vibes'
 import type { VibeTag } from '@/lib/vibes'
+import { detectInfluencer, getInfluencerTier } from '@/lib/influencer'
 
 /** Normalize a city name to a URL-safe slug */
 function citySlug(city: string) {
@@ -121,6 +123,10 @@ export default function ClinicProfilePage({ params }: PageProps) {
 
   const isUnclaimed = !clinic.verified
 
+  // Creator / influencer signals
+  const isCreator = detectInfluencer(clinic)
+  const creatorTier = isCreator ? getInfluencerTier(clinic) : null
+
   // Vibe tags + booking platform
   const vibeTags = getVibeTags(clinic)
   const bookingPlatform = detectBookingPlatform(clinic)
@@ -212,6 +218,9 @@ export default function ClinicProfilePage({ params }: PageProps) {
                       <span className="bg-gray-100 text-gray-400 text-[10px] font-medium uppercase tracking-wide px-2 py-0.5 rounded-full border border-gray-200">
                         Unclaimed
                       </span>
+                    )}
+                    {isCreator && creatorTier && (
+                      <CreatorBadge tier={creatorTier} variant="card" instagramUrl={(clinic as any).instagram} />
                     )}
                   </div>
                   <h1 className="text-2xl font-bold text-navy leading-tight">{clinic.name}</h1>
@@ -467,6 +476,18 @@ export default function ClinicProfilePage({ params }: PageProps) {
                 )}
               </div>
             </div>
+
+            {/* Creator Clinic badge — profile variant */}
+            {isCreator && creatorTier && (
+              <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-5">
+                <h3 className="text-sm font-bold text-navy mb-3">Social Presence</h3>
+                <CreatorBadge
+                  tier={creatorTier}
+                  variant="profile"
+                  instagramUrl={(clinic as any).instagram}
+                />
+              </div>
+            )}
 
             {/* Price Range */}
             <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-5">
