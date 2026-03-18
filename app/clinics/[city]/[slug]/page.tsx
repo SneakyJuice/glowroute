@@ -11,6 +11,8 @@ import { SITE_URL } from '@/lib/config'
 import { getVibeTags, detectBookingPlatform, VIBE_STYLES } from '@/lib/vibes'
 import type { VibeTag } from '@/lib/vibes'
 import { detectInfluencer, getInfluencerTier } from '@/lib/influencer'
+import { calculateGlowScore } from '@/lib/glowscore'
+import { GlowScoreProfileCard } from '@/components/GlowScoreBadge'
 
 /** Normalize a city name to a URL-safe slug */
 function citySlug(city: string) {
@@ -126,6 +128,9 @@ export default function ClinicProfilePage({ params }: PageProps) {
   // Creator / influencer signals
   const isCreator = detectInfluencer(clinic)
   const creatorTier = isCreator ? getInfluencerTier(clinic) : null
+
+  // GlowScore
+  const glowScore = calculateGlowScore(clinic)
 
   // Vibe tags + booking platform
   const vibeTags = getVibeTags(clinic)
@@ -476,6 +481,13 @@ export default function ClinicProfilePage({ params }: PageProps) {
                 )}
               </div>
             </div>
+
+            {/* GlowScore™ sidebar card */}
+            <GlowScoreProfileCard
+              score={glowScore}
+              clinicSlug={clinic.slug}
+              isUnclaimed={isUnclaimed}
+            />
 
             {/* Creator Clinic badge — profile variant */}
             {isCreator && creatorTier && (

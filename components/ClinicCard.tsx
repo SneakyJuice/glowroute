@@ -7,6 +7,8 @@ import { getCardVibeTags, VIBE_STYLES } from '@/lib/vibes'
 import type { VibeTag } from '@/lib/vibes'
 import { detectInfluencer, getInfluencerTier } from '@/lib/influencer'
 import CreatorBadge from './CreatorBadge'
+import { calculateGlowScore } from '@/lib/glowscore'
+import { GlowScoreCardBadge } from './GlowScoreBadge'
 
 function getMapUrl(clinic: Clinic): string {
   const lat = (clinic as any).lat
@@ -215,7 +217,8 @@ export default function ClinicCard({ clinic, distanceMi }: ClinicCardProps) {
             <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
           </a>
         )}
-        {clinic.priceTier && <span className="text-xs text-gray-500 ml-auto"><strong className="text-onyx font-semibold">{clinic.priceTier}</strong></span>}
+        {clinic.priceTier && <span className="text-xs text-gray-500"><strong className="text-onyx font-semibold">{clinic.priceTier}</strong></span>}
+        <span className="ml-auto"><GlowScoreCardBadge score={calculateGlowScore(clinic)} /></span>
       </div>
     </div>
   )

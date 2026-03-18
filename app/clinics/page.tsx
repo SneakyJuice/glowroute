@@ -4,6 +4,7 @@ import { useSearchParams } from 'next/navigation'
 import Navbar from '@/components/Navbar'
 import HeroSearch from '@/components/HeroSearch'
 import { isPeptideClinic } from '@/lib/peptide'
+import { calculateGlowScore } from '@/lib/glowscore'
 import FilterSidebar from '@/components/FilterSidebar'
 import ResultsHeader from '@/components/ResultsHeader'
 import ClinicCard, { FeaturedClinicCard } from '@/components/ClinicCard'
@@ -40,7 +41,7 @@ function ClinicsPageInner() {
 
   const [filters, setFilters] = useState<FilterState>(DEFAULT_FILTERS)
   const [view, setView] = useState<'grid' | 'list'>('grid')
-  const [sort, setSort] = useState('Most Reviewed')
+  const [sort, setSort] = useState('GlowScore™')
   const [page, setPage] = useState(1)
   const [searchTreatment, setSearchTreatment] = useState('')
   const [searchCity, setSearchCity] = useState('Miami')
@@ -125,9 +126,10 @@ function ClinicsPageInner() {
     }
 
     // Sort
-    if (sort === 'Highest Rated') {
+    if (sort === 'GlowScore™') {
+      result.sort((a, b) => calculateGlowScore(b).total - calculateGlowScore(a).total)
+    } else if (sort === 'Highest Rated') {
       // Weighted score: penalises high rating with 0 reviews (fake/placeholder data)
-      // Score = rating × log10(reviews + 2) — a 4.8/500 review clinic beats 5.0/0 reviews
       const score = (c: { googleRating: number; googleReviewCount: number }) =>
         c.googleRating * Math.log10(c.googleReviewCount + 2)
       result.sort((a, b) => score(b) - score(a))
