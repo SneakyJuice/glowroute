@@ -40,6 +40,7 @@ function ClinicsPageInner() {
     : null
 
   const [filters, setFilters] = useState<FilterState>(DEFAULT_FILTERS)
+  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
   const [view, setView] = useState<'grid' | 'list'>('grid')
   const [sort, setSort] = useState('GlowScore™')
   const [page, setPage] = useState(1)
@@ -184,8 +185,29 @@ function ClinicsPageInner() {
       <HeroSearch clinicCount={standardClinics.length + 1} defaultCity="Miami, FL" onSearch={handleSearch} onNearMe={handleNearMe} />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+        {/* Mobile filter toggle */}
+        <div className="flex md:hidden justify-between items-center mb-4">
+          <span className="text-sm text-stone font-medium">{filteredClinics.length + (showFeatured ? 1 : 0)} providers</span>
+          <button
+            onClick={() => setMobileFiltersOpen(v => !v)}
+            className="flex items-center gap-2 text-sm font-semibold text-onyx border border-gray-300 rounded-full px-4 py-2 bg-white shadow-sm"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4h18M7 8h10M11 12h2" /></svg>
+            Filters {Object.values(filters).some(v => v === true || (Array.isArray(v) && v.length > 0) || (typeof v === 'number' && v > 0)) ? '•' : ''}
+          </button>
+        </div>
+
+        {/* Mobile filter drawer */}
+        {mobileFiltersOpen && (
+          <div className="md:hidden mb-4">
+            <div className="bg-white rounded-2xl border border-gray-200 p-4">
+              <FilterSidebar filters={filters} onChange={(f) => { handleFilterChange(f); setMobileFiltersOpen(false) }} />
+            </div>
+          </div>
+        )}
+
         <div className="flex flex-col md:flex-row gap-6">
-          {/* Sidebar */}
+          {/* Sidebar — desktop only */}
           <div className="hidden md:block w-64 flex-shrink-0">
             <FilterSidebar filters={filters} onChange={handleFilterChange} />
           </div>
