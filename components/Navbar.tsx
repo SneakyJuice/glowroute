@@ -8,9 +8,14 @@ export default function Navbar() {
           Glow<span className="text-champagne">Route</span>
         </a>
         <div className="hidden md:flex items-center gap-1 flex-1">
-          {['Explore Providers', 'Specialties', 'Articles', 'Near Me'].map((link) => (
-            <a key={link} href="#" className="text-sm font-medium text-white/70 px-3 py-1.5 rounded hover:text-white hover:bg-white/[0.08] transition-colors">
-              {link}
+          {[
+            { label: 'Explore Providers', href: '/clinics' },
+            { label: 'Treatments', href: '/treatments' },
+            { label: 'Cost Guides', href: '/guides' },
+            { label: 'Near Me', href: '/clinics' },
+          ].map((link) => (
+            <a key={link.label} href={link.href} className="text-sm font-medium text-white/70 px-3 py-1.5 rounded hover:text-white hover:bg-white/[0.08] transition-colors">
+              {link.label}
             </a>
           ))}
         </div>
