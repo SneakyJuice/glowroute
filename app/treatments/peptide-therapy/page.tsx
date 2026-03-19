@@ -29,7 +29,7 @@ const serviceSchema = {
   '@context': 'https://schema.org',
   '@type': 'MedicalTherapy',
   name: 'Peptide Therapy',
-  description: 'Peptide therapy, TRT, hormone optimization, GLP-1 weight loss, and BPC-157 recovery offered at Florida medical spas and wellness clinics.',
+  description: 'Peptide therapy, TRT, hormone optimization, GLP-1 weight loss, and BPC-157 recovery offered at medical spas and wellness clinics.',
   relevantSpecialty: { '@type': 'MedicalSpecialty', name: 'Endocrinology' },
   recognizingAuthority: { '@type': 'Organization', name: 'GlowRoute', url: SITE_URL },
 }
@@ -37,7 +37,7 @@ const serviceSchema = {
 const itemListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
-  name: 'Top Peptide Therapy Clinics in Florida',
+  name: 'Top Peptide Therapy Clinics near you',
   numberOfItems: Math.min(10, peptideClinics.length),
   itemListElement: peptideClinics.slice(0, 10).map((c, i) => ({
     '@type': 'ListItem',
@@ -88,11 +88,11 @@ export default function PeptideTherapyPage() {
           </nav>
           <div className="flex flex-wrap items-center gap-3 mb-3">
             <h1 className="font-serif text-3xl sm:text-4xl font-semibold">
-              Find Peptide Therapy Clinics in Florida
+              Find Peptide Therapy Clinics near you
             </h1>
           </div>
           <p className="text-white/65 text-base leading-relaxed max-w-2xl mb-6">
-            {peptideClinics.length} verified providers offering peptide therapy, TRT, hormone optimization &amp; GLP-1 weight loss across Florida. Compare clinics, read real reviews, and book your consultation today.
+            {peptideClinics.length} verified providers offering peptide therapy, TRT, hormone optimization &amp; GLP-1 weight loss across the Southeast. Compare clinics, read real reviews, and book your consultation today.
           </p>
           {/* Stats row */}
           <div className="flex flex-wrap gap-6">

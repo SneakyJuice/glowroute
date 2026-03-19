@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: treatment.title,
     description: treatment.description,
-    keywords: `${treatment.name}, medspa, aesthetic clinic, Florida, ${treatment.matchKeywords.slice(0, 4).join(', ')}`,
+    keywords: `${treatment.name}, medspa, aesthetic clinic, ${treatment.matchKeywords.slice(0, 4).join(', ')}`,
     alternates: { canonical: url },
     openGraph: {
       title: treatment.title,
@@ -74,14 +74,14 @@ export default function TreatmentPage({ params }: Props) {
     name: treatment.schemaName,
     description: treatment.description,
     provider: { '@type': 'Organization', name: 'GlowRoute', url: SITE_URL },
-    areaServed: { '@type': 'State', name: 'Florida', addressRegion: 'FL' },
+    areaServed: { '@type': 'AdministrativeArea', name: 'Southeast USA' },
     url: `${SITE_URL}/treatments/${params.slug}`,
   }
 
   const itemListSchema = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: `Top ${treatment.name} Clinics in Florida`,
+    name: `Top ${treatment.name} Clinics Near You`,
     numberOfItems: Math.min(10, matchingClinics.length),
     itemListElement: matchingClinics.slice(0, 10).map((c, i) => ({
       '@type': 'ListItem',
@@ -128,7 +128,7 @@ export default function TreatmentPage({ params }: Props) {
       <main className="max-w-4xl mx-auto px-4 py-10">
         {/* Top 10 clinics */}
         <div className="flex items-center justify-between mb-6">
-          <h2 className="text-base font-bold text-onyx">Top {treatment.name} Clinics in Florida</h2>
+          <h2 className="text-base font-bold text-onyx">Top {treatment.name} Clinics Near You</h2>
           <Link href="/clinics" className="text-sm font-semibold text-sage hover:underline">
             Full directory →
           </Link>
@@ -144,7 +144,7 @@ export default function TreatmentPage({ params }: Props) {
           <div className="py-16 text-center text-stone">
             <p className="text-sm">No matching clinics found yet.</p>
             <Link href="/clinics" className="text-sage text-sm font-semibold hover:underline mt-2 inline-block">
-              Browse all FL clinics →
+              Browse all clinics →
             </Link>
           </div>
         )}

@@ -51,7 +51,7 @@ export default function HeroSearch({ clinicCount = 939, defaultCity = 'Tampa, FL
       <div className="max-w-[820px] mx-auto text-center relative">
         <div className="inline-flex items-center gap-1.5 bg-champagne/15 border border-champagne/30 text-champagne rounded-full text-[12px] font-semibold uppercase tracking-[0.4px] px-3 py-[5px] mb-5">
           <span className="w-1.5 h-1.5 rounded-full bg-champagne animate-pulse" />
-          {clinicCount} Verified Florida Clinics
+          {clinicCount}+ Verified Clinics
         </div>
         <h1 className="font-serif text-[clamp(28px,5vw,48px)] font-light text-white leading-[1.18] tracking-tight mb-3.5">
           Discover your{' '}

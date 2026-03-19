@@ -6,8 +6,8 @@ import { TREATMENTS } from '@/lib/treatments'
 import { SITE_URL } from '@/lib/config'
 
 export const metadata: Metadata = {
-  title: 'Medspa Treatments in Florida — GlowRoute',
-  description: 'Browse all aesthetic treatments available at Florida medspas — Botox, laser hair removal, weight loss, peptide therapy, and more.',
+  title: 'Medspa Treatments Near You — GlowRoute',
+  description: 'Browse all aesthetic treatments available at medspas across the Southeast — Botox, laser hair removal, weight loss, peptide therapy, and more.',
   alternates: { canonical: `${SITE_URL}/treatments` },
 }
 
@@ -36,10 +36,10 @@ export default function TreatmentsPage() {
             <span className="text-white/80">Treatments</span>
           </nav>
           <h1 className="font-serif text-3xl sm:text-4xl font-semibold mb-3">
-            Aesthetic Treatments in Florida
+            Aesthetic Treatments Near You
           </h1>
           <p className="text-white/65 text-base leading-relaxed max-w-2xl">
-            Browse Florida medspas by treatment type. Find the right clinic for your goals.
+            Browse medspas across the Southeast by treatment type. Find the right clinic for your goals.
           </p>
         </div>
       </section>

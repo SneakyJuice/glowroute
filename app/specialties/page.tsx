@@ -9,17 +9,17 @@ import SpecialtyGrid from '@/components/SpecialtyGrid'
 
 export const metadata: Metadata = {
   title: 'Browse by Specialty | GlowRoute',
-  description: 'Browse Florida med spas and aesthetic clinics by specialty. Find the exact treatment you need from verified providers.',
+  description: 'Browse med spas and aesthetic clinics by specialty. Find the exact treatment you need from verified providers.',
   openGraph: {
     title: 'Browse by Specialty | GlowRoute',
-    description: 'Browse Florida med spas and aesthetic clinics by specialty. Find the exact treatment you need from verified providers.',
+    description: 'Browse med spas and aesthetic clinics by specialty. Find the exact treatment you need from verified providers.',
     type: 'website',
     siteName: 'GlowRoute',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Browse by Specialty | GlowRoute',
-    description: 'Browse Florida med spas and aesthetic clinics by specialty.',
+    description: 'Browse med spas and aesthetic clinics by specialty.',
   },
 }
 

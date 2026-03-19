@@ -47,7 +47,7 @@ export default function PricingPage() {
           <span className="text-[#c9a96e]">Lead Machine</span>
         </h1>
         <p className="text-[#888] text-lg leading-relaxed mb-3">
-          3,574 Florida patients searched for medspa providers in the last 30 days.
+          3,500+ patients searched for medspa providers in your area last month.
           Claim your listing and make sure they find you first.
         </p>
         <p className="text-sm text-[#555]">✦ No contract · Cancel anytime · First 5 leads free</p>
@@ -102,7 +102,7 @@ export default function PricingPage() {
 
         {/* Trust bar */}
         <div className="mt-10 grid grid-cols-3 gap-4 text-center text-sm text-[#666] border border-white/5 rounded-xl p-6 bg-[#111]">
-          <div><span className="text-[#c9a96e] font-semibold block text-base">3,574+</span>FL clinics listed</div>
+          <div><span className="text-[#c9a96e] font-semibold block text-base">3,500+</span>Clinics listed</div>
           <div><span className="text-[#c9a96e] font-semibold block text-base">4.6★</span>avg network rating</div>
           <div><span className="text-[#c9a96e] font-semibold block text-base">First 5</span>leads are free</div>
         </div>

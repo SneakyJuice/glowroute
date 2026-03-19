@@ -9,8 +9,8 @@ import { detectInfluencer, getInfluencerTier } from '@/lib/influencer'
 import { SITE_URL } from '@/lib/config'
 
 export const metadata: Metadata = {
-  title: 'Creator Clinics in Florida — GlowRoute',
-  description: 'The providers building their brands on Instagram & TikTok. Florida medspa injectors and aesthetic nurses with active social followings.',
+  title: 'Creator Clinics — GlowRoute',
+  description: 'The providers building their brands on Instagram & TikTok. Elite medspa injectors and aesthetic nurses with active social followings.',
   alternates: { canonical: `${SITE_URL}/creators` },
 }
 
@@ -40,7 +40,7 @@ export default function CreatorsPage() {
             <span className="text-white/80">Creator Clinics</span>
           </nav>
           <h1 className="font-serif text-3xl sm:text-4xl font-semibold mb-3">
-            ✨ Creator Clinics in Florida
+            ✨ Creator Clinics
           </h1>
           <p className="text-white/65 text-base leading-relaxed max-w-2xl mb-6">
             The providers building their brands on Instagram &amp; TikTok. These aesthetic nurses, injectors, and wellness practitioners have active social followings — and exceptional results to match.
