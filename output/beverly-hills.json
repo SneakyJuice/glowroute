@@ -1,0 +1,472 @@
+[
+  {
+    "name": "The MedSpa at Beverly Hills",
+    "address": "416 N Bedford Dr #100, Beverly Hills, CA 90210",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(424) 355-0116",
+    "website": "http://www.themedspaatbeverlyhills.com/",
+    "rating": 5,
+    "reviewCount": 125,
+    "lat": 34.068396,
+    "lng": -118.405003,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The%20MedSpa%20at%20Beverly%20Hills&query_place_id=ChIJAVkF8hG7woARf3HNQF3XTWQ",
+    "categories": [
+      "Medical spa",
+      "Plastic surgeon"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Beverly Hills Med Spa",
+    "address": "421 N Rodeo Dr Suite G11, Beverly Hills, CA 90210",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(310) 359-8832",
+    "website": "https://www.beverlyhillsmedspa.com/",
+    "rating": 4.5,
+    "reviewCount": 35,
+    "lat": 34.0695803,
+    "lng": -118.4038048,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Beverly%20Hills%20Med%20Spa&query_place_id=ChIJ964sNk-5woARl5j5Ve8yiaw",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "NakedMD Med Spa Beverly Hills",
+    "address": "8665 Wilshire Blvd #305, Beverly Hills, CA 90211",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(424) 285-0886",
+    "website": "https://www.nakedmd.com/pages/locations-beverly-hills-ca",
+    "rating": 4.9,
+    "reviewCount": 485,
+    "lat": 34.0665829,
+    "lng": -118.3802063,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=NakedMD%20Med%20Spa%20Beverly%20Hills&query_place_id=ChIJRYLC-M-5woART88mMxge7VU",
+    "categories": [
+      "Medical spa",
+      "Facial spa",
+      "Health and beauty shop",
+      "Skin care clinic"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Beverly Hills Plaza Medi Spa",
+    "address": "9730 Wilshire Blvd suite 214, Beverly Hills, CA 90212",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(310) 254-2371",
+    "website": "https://plazamedspa.com/",
+    "rating": 4.1,
+    "reviewCount": 209,
+    "lat": 34.0668248,
+    "lng": -118.4074698,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Beverly%20Hills%20Plaza%20Medi%20Spa&query_place_id=ChIJ91FMI3e8woARIVqxVlVy-TE",
+    "categories": [
+      "Medical spa",
+      "Facial spa",
+      "Skin care clinic"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "The Beverly Hills Medspa",
+    "address": "435 N Roxbury Dr #100, Beverly Hills, CA 90210",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(310) 438-6422",
+    "website": "https://thebeverlyhillsmedspa.com/",
+    "rating": 4.2,
+    "reviewCount": 5,
+    "lat": 34.0677348,
+    "lng": -118.4067726,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The%20Beverly%20Hills%20Medspa&query_place_id=ChIJlT4CAc7x-KARTEA9PRzKvWE",
+    "categories": [
+      "Medical spa",
+      "Beauty salon",
+      "Health and beauty shop",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Maven Medi Spa",
+    "address": "415 N Crescent Dr #140, Beverly Hills, CA 90210",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(310) 601-8606",
+    "website": "https://mavenmedispa.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp",
+    "rating": 5,
+    "reviewCount": 97,
+    "lat": 34.0714511,
+    "lng": -118.400596,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Maven%20Medi%20Spa&query_place_id=ChIJ-VO90tl3zawRqaP9B37HtKo",
+    "categories": [
+      "Medical spa",
+      "Weight loss service",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Skin Verse Medical Spa",
+    "address": "99 N La Cienega Blvd #306, Beverly Hills, CA 90211",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(424) 255-9289",
+    "website": "https://skinversemedspa.com/",
+    "rating": 4.9,
+    "reviewCount": 224,
+    "lat": 34.0673956,
+    "lng": -118.376628,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Skin%20Verse%20Medical%20Spa&query_place_id=ChIJnfLGEf-5woARleae0sV9rac",
+    "categories": [
+      "Facial spa",
+      "Hair removal service",
+      "Laser hair removal service",
+      "Plastic surgeon",
+      "Skin care clinic",
+      "Spa",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "No Pain All Gain Med Spa - Beverly Hills",
+    "address": "9025 Wilshire Blvd suite 202, Beverly Hills, CA 90211",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(310) 343-8321",
+    "website": "http://nopainallgainspa.com/",
+    "rating": 4.9,
+    "reviewCount": 92,
+    "lat": 34.067407,
+    "lng": -118.3884313,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=No%20Pain%20All%20Gain%20Med%20Spa%20-%20Beverly%20Hills&query_place_id=ChIJlakuea27woARLmDtMS6nhOY",
+    "categories": [
+      "Medical spa",
+      "Weight loss service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Beverly Wilshire Aesthetics Beverly Hills Medical Spa",
+    "address": "9100 Wilshire Blvd Suite 363 W, Beverly Hills, CA 90212",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(424) 453-5340",
+    "website": "https://www.bwaesthetics.com/medical-spa-beverly-hills/",
+    "rating": 5,
+    "reviewCount": 127,
+    "lat": 34.0666697,
+    "lng": -118.3900661,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Beverly%20Wilshire%20Aesthetics%20Beverly%20Hills%20Medical%20Spa&query_place_id=ChIJRXmaci25woARzVigGETaXic",
+    "categories": [
+      "Medical spa",
+      "Facial spa",
+      "Laser hair removal service",
+      "Skin care clinic"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "ALTA Medispa",
+    "address": "9301 Wilshire Blvd UNIT 601, Beverly Hills, CA 90210",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(424) 202-2868",
+    "website": "https://www.altamedispa.com/",
+    "rating": 5,
+    "reviewCount": 59,
+    "lat": 34.0672215,
+    "lng": -118.3946404,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=ALTA%20Medispa&query_place_id=ChIJx4epIYW7woARCGpnHPfmxyg",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "BevMed LA",
+    "address": "436 N Roxbury Dr Suite 211, Beverly Hills, CA 90210",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(310) 879-1066",
+    "website": "https://www.bevmedla.com/",
+    "rating": 5,
+    "reviewCount": 100,
+    "lat": 34.0680272,
+    "lng": -118.4064381,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=BevMed%20LA&query_place_id=ChIJhw5aE4-5woARydsfkETZ8i4",
+    "categories": [
+      "Medical spa",
+      "Wellness program"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "LYEV Beverly Hills- Medical Spa",
+    "address": "8814 Burton Wy, Beverly Hills, CA 90211",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(310) 601-7400",
+    "website": "http://www.lyevbeverlyhills.com/",
+    "rating": 4.9,
+    "reviewCount": 209,
+    "lat": 34.071976,
+    "lng": -118.3842534,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=LYEV%20Beverly%20Hills-%20Medical%20Spa&query_place_id=ChIJF_W3VIK5woARnqq3kKbGbxw",
+    "categories": [
+      "Medical spa",
+      "Dermatologist",
+      "Facial spa",
+      "Hair removal service",
+      "Health and beauty shop",
+      "Laser hair removal service",
+      "Medical Center",
+      "Skin care clinic",
+      "Spa",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "iGlow Med Spa",
+    "address": "9400 Brighton Way #209, Beverly Hills, CA 90210",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(310) 652-0544",
+    "website": "https://iglowmedspa.com/",
+    "rating": 4.4,
+    "reviewCount": 56,
+    "lat": 34.0703594,
+    "lng": -118.4010759,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=iGlow%20Med%20Spa&query_place_id=ChIJ_WkacAe8woARiGzquqAmKKM",
+    "categories": [
+      "Medical spa",
+      "Doctor",
+      "Facial spa",
+      "Hair replacement service",
+      "Laser hair removal service",
+      "Skin care clinic",
+      "Weight loss service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Beverly Hills Aesthetic Medics",
+    "address": "420 S Beverly Dr #100, Beverly Hills, CA 90212",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(310) 273-4247",
+    "website": "http://bhaestheticmedics.com/",
+    "rating": 4.2,
+    "reviewCount": 66,
+    "lat": 34.058748,
+    "lng": -118.397501,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Beverly%20Hills%20Aesthetic%20Medics&query_place_id=ChIJYb1FbVm5woAR9MtCL9foKKU",
+    "categories": [
+      "Skin care clinic",
+      "Laser hair removal service",
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Beverly Hills Beauty & Aesthetics",
+    "address": "462 N Linden Dr, Beverly Hills, CA 90212",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(310) 367-3024",
+    "website": "http://www.beverlyhillsbeauty.com/",
+    "rating": 5,
+    "reviewCount": 101,
+    "lat": 34.0675314,
+    "lng": -118.4077291,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Beverly%20Hills%20Beauty%20%26%20Aesthetics&query_place_id=ChIJZddA8kW5woAR5K-dEGxeCR4",
+    "categories": [
+      "Skin care clinic",
+      "Boutique",
+      "Health and beauty shop",
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Beverly Hills Aesthetics",
+    "address": "640 S San Vicente Blvd Ste 210, Los Angeles, CA 90048",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(424) 284-8933",
+    "website": "https://www.bhaesthetics.com/?utm_source=google&utm_medium=organic&utm_campaign=gmb",
+    "rating": 4.8,
+    "reviewCount": 94,
+    "lat": 34.0654638,
+    "lng": -118.3724056,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Beverly%20Hills%20Aesthetics&query_place_id=ChIJdaHFtOS7woAR1FxwRyGmwPY",
+    "categories": [
+      "Plastic surgery clinic",
+      "Cosmetic surgeon",
+      "Plastic surgeon"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Beverly Hills Aesthetic Group",
+    "address": "9025 Wilshire Blvd suite 202, Beverly Hills, CA 90211",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(424) 424-0260",
+    "website": "https://beverlyhillsaestheticgroup.com/host/",
+    "rating": 5,
+    "reviewCount": 4,
+    "lat": 34.067407,
+    "lng": -118.3884313,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Beverly%20Hills%20Aesthetic%20Group&query_place_id=ChIJ_5E9DuO5woARIXWfN1yH6Io",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Iconic Skin Clinic - Beverly Hills",
+    "address": "9437 S Santa Monica Blvd #208, Beverly Hills, CA 90210",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(714) 225-5137",
+    "website": "https://www.iconicskinclinic.com/",
+    "rating": 5,
+    "reviewCount": 18,
+    "lat": 34.0716022,
+    "lng": -118.403105,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Iconic%20Skin%20Clinic%20-%20Beverly%20Hills&query_place_id=ChIJUVi9fBG9woARQaby0ASffho",
+    "categories": [
+      "Skin care clinic"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "JP Beverly Hills Skin Clinic",
+    "address": "291 S La Cienega Blvd unit 306, Beverly Hills, CA 90211",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(949) 514-8722",
+    "website": "http://www.jpbhsc.com/",
+    "rating": 5,
+    "reviewCount": 41,
+    "lat": 34.0629662,
+    "lng": -118.3764665,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=JP%20Beverly%20Hills%20Skin%20Clinic&query_place_id=ChIJ0f81gCi5woARyZjgqIcWwJc",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Luxe Aesthetic Surgery & Medical Spa -",
+    "address": "9150 Wilshire Blvd Suite #205, Beverly Hills, CA 90212",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(310) 402-2849",
+    "website": "https://luxeaestheticsurgery.com/",
+    "rating": 5,
+    "reviewCount": 43,
+    "lat": 34.0666713,
+    "lng": -118.3913047,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Luxe%20Aesthetic%20Surgery%20%26%20Medical%20Spa%20-&query_place_id=ChIJp6cJXQ-5woAR1Wd6pXDSRqg",
+    "categories": [
+      "Plastic surgery clinic"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Esthetics Beverly Hills",
+    "address": "434 North Bedford Drive, Beverly Hills, California 90210, Beverly Hills, CA 90212",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(310) 683-7000",
+    "website": "https://estheticsbeverlyhills.com/",
+    "rating": 5,
+    "reviewCount": 11,
+    "lat": 34.0685832,
+    "lng": -118.4054661,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Esthetics%20Beverly%20Hills&query_place_id=ChIJy0OvIwq9woARGC3Xq5sICC8",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Juliana Clinics",
+    "address": "9730 Wilshire Blvd #111, Beverly Hills, CA 90212",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(424) 512-1699",
+    "website": "https://julianaclinics.com/",
+    "rating": 4.9,
+    "reviewCount": 109,
+    "lat": 34.0668534,
+    "lng": -118.4075018,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Juliana%20Clinics&query_place_id=ChIJncAtCBe7woARWATMIRwpxMo",
+    "categories": [
+      "Skin care clinic"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "LA Aesthetics Center - Concierge Longevity Clinic",
+    "address": "436 N Bedford Dr, Beverly Hills, CA 90210",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(747) 327-8259",
+    "website": "https://www.laaestheticscenter.com/",
+    "rating": 5,
+    "reviewCount": 19,
+    "lat": 34.0686423,
+    "lng": -118.4054709,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=LA%20Aesthetics%20Center%20-%20Concierge%20Longevity%20Clinic&query_place_id=ChIJp5a03sC9woARoBFZn4QNcLA",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "SkinSpirit at Lasky",
+    "address": "153 S Lasky Dr Suite 8, Beverly Hills, CA 90212",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(310) 552-8010",
+    "website": "https://www.skinspirit.com/locations/beverly-hills/",
+    "rating": 4.9,
+    "reviewCount": 96,
+    "lat": 34.0652208,
+    "lng": -118.4102631,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=SkinSpirit%20at%20Lasky&query_place_id=ChIJIwynefa7woARkr5aqzMIP6E",
+    "categories": [
+      "Skin care clinic",
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Beverly Hills Skin Clinic",
+    "address": "421 N Rodeo Dr G7, Beverly Hills, CA 90210",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(310) 596-0156",
+    "website": "http://www.bhskinclinic.com/",
+    "rating": 5,
+    "reviewCount": 2,
+    "lat": 34.0696706,
+    "lng": -118.4037063,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Beverly%20Hills%20Skin%20Clinic&query_place_id=ChIJMwYDKu69woARkZ84cuo8LKY",
+    "categories": [
+      "Facial spa"
+    ],
+    "enriched": false
+  }
+]

@@ -1,0 +1,486 @@
+[
+  {
+    "name": "Las Vegas Aesthetics®",
+    "address": "9081 W Sahara Ave STE 230, Las Vegas, NV 89117",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(725) 527-8211",
+    "website": "https://www.lvamedspa.com/",
+    "rating": 4.9,
+    "reviewCount": 218,
+    "lat": 36.1432639,
+    "lng": -115.2948756,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Las%20Vegas%20Aesthetics%C2%AE&query_place_id=ChIJCRNG-57AyIAR0ACtLU_xCwk",
+    "categories": [
+      "Skin care clinic",
+      "Hair transplantation clinic",
+      "Men's health physician",
+      "Reproductive health clinic",
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Advanced Aesthetics",
+    "address": "2150 S Rainbow Blvd, Las Vegas, NV 89146",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(702) 838-4644",
+    "website": "http://advancedaestheticslv.com/?utm_source=gbp&utm_medium=organic",
+    "rating": 4.9,
+    "reviewCount": 2427,
+    "lat": 36.1484061,
+    "lng": -115.2424074,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Advanced%20Aesthetics&query_place_id=ChIJxR4xV-fAyIARyfOhs6O0OZA",
+    "categories": [
+      "Medical spa",
+      "Spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Center For Aesthetic Medicine",
+    "address": "3038 S Durango Dr # 100, Las Vegas, NV 89117",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(702) 333-4896",
+    "website": "https://www.centerforaestheticmedicine.com/",
+    "rating": 4.8,
+    "reviewCount": 128,
+    "lat": 36.134055,
+    "lng": -115.2769666,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Center%20For%20Aesthetic%20Medicine&query_place_id=ChIJOZF2YozAyIARDxbUz3evfik",
+    "categories": [
+      "Skin care clinic",
+      "Dermatologist",
+      "Laser hair removal service",
+      "Medical clinic",
+      "Plastic surgeon",
+      "Medical spa",
+      "Tattoo removal service",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "The Aesthetics Lab",
+    "address": "2701 N Tenaya Wy #110, Las Vegas, NV 89128",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(702) 640-0689",
+    "website": "https://theaestheticslabmedspa.com/",
+    "rating": 4.9,
+    "reviewCount": 108,
+    "lat": 36.2096485,
+    "lng": -115.250145,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The%20Aesthetics%20Lab&query_place_id=ChIJ75JhWobryIARsa_J5Ypn1hk",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Spring Mountain Aesthetics",
+    "address": "2810 W Charleston Blvd G65, Las Vegas, NV 89102",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(702) 475-6010",
+    "website": "http://springmountainaesthetics.com/",
+    "rating": 4.2,
+    "reviewCount": 56,
+    "lat": 36.1604701,
+    "lng": -115.1792338,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Spring%20Mountain%20Aesthetics&query_place_id=ChIJT8kX-WjHyIARC64gOIO8t9A",
+    "categories": [
+      "Medical spa",
+      "Waxing hair removal service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Mia Aesthetics Las Vegas",
+    "address": "8871 W Sahara Ave, Las Vegas, NV 89117",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(702) 680-6181",
+    "website": "https://miaaesthetics.com/locations/las-vegas-nv/",
+    "rating": 4.1,
+    "reviewCount": 649,
+    "lat": 36.1429929,
+    "lng": -115.2898242,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Mia%20Aesthetics%20Las%20Vegas&query_place_id=ChIJ3XjYwEfByIARmvcxKDZT2WI",
+    "categories": [
+      "Plastic surgery clinic"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "White Coat Aesthetics",
+    "address": "2400 N Buffalo Dr Ste 110, Las Vegas, NV 89128",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(702) 919-0017",
+    "website": "https://whitecoataesthetics.com/",
+    "rating": 4.8,
+    "reviewCount": 205,
+    "lat": 36.2037903,
+    "lng": -115.2600184,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=White%20Coat%20Aesthetics&query_place_id=ChIJM5laQW_ByIARDn1R0JmnPgU",
+    "categories": [
+      "Skin care clinic",
+      "Facial spa",
+      "Laser hair removal service",
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Advanced Aesthetics - Centennial",
+    "address": "6628 Sky Pointe Dr #190, Las Vegas, NV 89131",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(702) 838-4644",
+    "website": "https://advancedaestheticslv.com/?utm_source=gbp&utm_medium=organic",
+    "rating": 5,
+    "reviewCount": 677,
+    "lat": 36.2823234,
+    "lng": -115.2680117,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Advanced%20Aesthetics%20-%20Centennial&query_place_id=ChIJezY0OkPryIARUYpzYdHLBV8",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "NP Aesthetics Las Vegas",
+    "address": "7240 W Azure Dr Suite #165, Las Vegas, NV 89130",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(725) 254-7600",
+    "website": "https://www.np-aesthetics-lv.com/",
+    "rating": 5,
+    "reviewCount": 17,
+    "lat": 36.2744979,
+    "lng": -115.2525025,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=NP%20Aesthetics%20Las%20Vegas&query_place_id=ChIJCaPWNzXryIARI8_QOZ9dyYw",
+    "categories": [
+      "Skin care clinic",
+      "Medical spa",
+      "Weight loss service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "SKIN Las Vegas Med Spa",
+    "address": "4270 S Decatur Blvd a1, Las Vegas, NV 89103",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(702) 705-7546",
+    "website": "http://skinlv.com/",
+    "rating": 5,
+    "reviewCount": 82,
+    "lat": 36.1122695,
+    "lng": -115.2066346,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=SKIN%20Las%20Vegas%20Med%20Spa&query_place_id=ChIJp1uKXK_HyIARnkEr2PptJKM",
+    "categories": [
+      "Medical spa",
+      "Facial spa",
+      "Laser hair removal service",
+      "Tattoo removal service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Esti & Co",
+    "address": "7925 W Sahara Ave Suite 103, Las Vegas, NV 89117",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "",
+    "website": "https://www.estiandcompany.com/",
+    "rating": 5,
+    "reviewCount": 140,
+    "lat": 36.1423804,
+    "lng": -115.2636969,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Esti%20%26%20Co&query_place_id=ChIJ2WQ2mH-_yIARJiPpzDahZuY",
+    "categories": [
+      "Medical spa",
+      "Dermatologist",
+      "Esthetics service",
+      "Men's health physician"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Cosmetique Aesthetics",
+    "address": "7710 W Sahara Ave #102, Las Vegas, NV 89117",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(702) 410-5779",
+    "website": "https://cosmetiqueaestheticslv.com/",
+    "rating": 4.9,
+    "reviewCount": 46,
+    "lat": 36.1444188,
+    "lng": -115.2594486,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Cosmetique%20Aesthetics&query_place_id=ChIJT-hCo8fByIAROGEIFWO5_74",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Alpha Medical Aesthetics",
+    "address": "3150 N Tenaya Wy Suite 400A, Las Vegas, NV 89128",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(702) 683-2156",
+    "website": "https://alphamedicalaesthetics.com/",
+    "rating": 4.8,
+    "reviewCount": 16,
+    "lat": 36.2168087,
+    "lng": -115.2495388,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Alpha%20Medical%20Aesthetics&query_place_id=ChIJiaihc5bryIARoMer-ZFIbRE",
+    "categories": [
+      "Medical spa",
+      "Laser cutting service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "The Look Med Spa",
+    "address": "7530 W Sahara Ave STE 105, Las Vegas, NV 89117",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(702) 246-2238",
+    "website": "http://thelookmedspalv.com/",
+    "rating": 4.9,
+    "reviewCount": 396,
+    "lat": 36.1450854,
+    "lng": -115.255678,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The%20Look%20Med%20Spa&query_place_id=ChIJXWTijY3ByIAR-07ZnMzjGj0",
+    "categories": [
+      "Medical spa",
+      "Blood testing service",
+      "Facial spa",
+      "Laser hair removal service",
+      "Medical clinic",
+      "Skin care clinic",
+      "Weight loss service",
+      "Wellness center",
+      "Wellness program"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Chic la Vie",
+    "address": "7650 W Sahara Ave suite 3, Las Vegas, NV 89117",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(702) 233-8535",
+    "website": "https://chiclavie.com/",
+    "rating": 4.8,
+    "reviewCount": 421,
+    "lat": 36.1443959,
+    "lng": -115.2577815,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Chic%20la%20Vie&query_place_id=ChIJeSAqB2S_yIARsAiphLf2SLs",
+    "categories": [
+      "Medical spa",
+      "Facial spa",
+      "Health spa",
+      "Laser hair removal service",
+      "Skin care clinic",
+      "Spa",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Alena Medspa Las Vegas by Alonso Medical Center",
+    "address": "4550 E Charleston Blvd, Las Vegas, NV 89104",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(725) 377-3165",
+    "website": "https://alenamedspa.com/",
+    "rating": 5,
+    "reviewCount": 27,
+    "lat": 36.1595546,
+    "lng": -115.0756721,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Alena%20Medspa%20Las%20Vegas%20by%20Alonso%20Medical%20Center&query_place_id=ChIJs6ra_fDbyIARNDjLCUy1aw4",
+    "categories": [
+      "Medical spa",
+      "Facial spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Novuskin Med Spa",
+    "address": "7155 S Rainbow Blvd # 200, Las Vegas, NV 89118",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(702) 780-6677",
+    "website": "https://novuskin.com/",
+    "rating": 4.7,
+    "reviewCount": 2171,
+    "lat": 36.0582271,
+    "lng": -115.243655,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Novuskin%20Med%20Spa&query_place_id=ChIJM8xSBN3HyIARpjBpPhAMoiI",
+    "categories": [
+      "Medical spa",
+      "Laser hair removal service",
+      "Skin care clinic",
+      "Weight loss service",
+      "Wellness center",
+      "Wellness program"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "MDspa",
+    "address": "5052 S Jones Blvd Ste 145A, Las Vegas, NV 89118",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(702) 718-7888",
+    "website": "https://www.mdspalv.com/",
+    "rating": 4.9,
+    "reviewCount": 115,
+    "lat": 36.0966507,
+    "lng": -115.2242801,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=MDspa&query_place_id=ChIJtTiq6yPHyIARoPTHhxX095s",
+    "categories": [
+      "Medical spa",
+      "Facial spa",
+      "Hair replacement service",
+      "Laser hair removal service",
+      "Skin care clinic",
+      "Tattoo removal service",
+      "Weight loss service",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Renew Medical Spa",
+    "address": "6980 Smoke Ranch Rd #150, Las Vegas, NV 89128",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(702) 830-6571",
+    "website": "https://www.renewmedicalspalv.com/",
+    "rating": 4.9,
+    "reviewCount": 39,
+    "lat": 36.2050438,
+    "lng": -115.2459844,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Renew%20Medical%20Spa&query_place_id=ChIJkVNI7ijAyIARZj2reARsl4k",
+    "categories": [
+      "Spa",
+      "Hair removal service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Apex Medical Spa",
+    "address": "1701 Wellness Wy UNIT 201, Las Vegas, NV 89106",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(702) 444-5680",
+    "website": "http://apexmedicalspa.com/",
+    "rating": 4.4,
+    "reviewCount": 45,
+    "lat": 36.1615932,
+    "lng": -115.1640109,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Apex%20Medical%20Spa&query_place_id=ChIJAfBmvJTDyIAR28QyLDVSXts",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "The Med Spa",
+    "address": "6125 S Fort Apache Rd, Las Vegas, NV 89148",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(702) 755-7947",
+    "website": "http://www.themedspalasvegas.com/",
+    "rating": 4.9,
+    "reviewCount": 60,
+    "lat": 36.0764525,
+    "lng": -115.2986501,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The%20Med%20Spa&query_place_id=ChIJQ94xVLe5yIAR40iE1hzXUyQ",
+    "categories": [
+      "Medical spa",
+      "Laser hair removal service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Elysian Med Spa & Wellness",
+    "address": "3225 S Rainbow Blvd # 206, Las Vegas, NV 89146",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(725) 253-2002",
+    "website": "https://elysianmedspalv.com/",
+    "rating": 5,
+    "reviewCount": 61,
+    "lat": 36.1306995,
+    "lng": -115.2434323,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Elysian%20Med%20Spa%20%26%20Wellness&query_place_id=ChIJD5pX7qTzAqkRv_JBnW36ic8",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Medicis Medical Spa",
+    "address": "750 N Eastern Ave Suite 100B, Las Vegas, NV 89101",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(888) 268-0796",
+    "website": "https://medicismedicalspa.com/",
+    "rating": 4.9,
+    "reviewCount": 31,
+    "lat": 36.1770475,
+    "lng": -115.115588,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Medicis%20Medical%20Spa&query_place_id=ChIJa3y9xcDDyIARt3TuiJh--DU",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Parie Med Spa",
+    "address": "1725 Village Center Cir ste 150, Las Vegas, NV 89134",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(702) 930-6221",
+    "website": "https://pariemedspa.com/",
+    "rating": 4.9,
+    "reviewCount": 327,
+    "lat": 36.1913683,
+    "lng": -115.2995194,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Parie%20Med%20Spa&query_place_id=ChIJGSERWQC_yIARz3MfVIIJ-fc",
+    "categories": [
+      "Medical spa",
+      "Laser hair removal service",
+      "Spa and health club",
+      "Weight loss service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Flawless Medspa Las Vegas",
+    "address": "9418 W Lake Mead Blvd, Las Vegas, NV 89134",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(702) 337-2526",
+    "website": "http://www.flawlessmedspas.com/",
+    "rating": 4.5,
+    "reviewCount": 221,
+    "lat": 36.2074865,
+    "lng": -115.3017995,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Flawless%20Medspa%20Las%20Vegas&query_place_id=ChIJo6h67yjAyIARJKrkviQ1yiI",
+    "categories": [
+      "Medical spa",
+      "Health and beauty shop",
+      "Wellness center"
+    ],
+    "enriched": false
+  }
+]

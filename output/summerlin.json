@@ -1,0 +1,479 @@
+[
+  {
+    "name": "Beverly Hills Rejuvenation Center - Summerlin",
+    "address": "1825 Festival Plaza Dr #180, Las Vegas, NV 89135",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(725) 525-6821",
+    "website": "https://www.bhrcenter.com/med-spa-location/las-vegas-nv-summerlin",
+    "rating": 4.7,
+    "reviewCount": 91,
+    "lat": 36.151284,
+    "lng": -115.3342892,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Beverly%20Hills%20Rejuvenation%20Center%20-%20Summerlin&query_place_id=ChIJ1fRmCvi_yIARyfyno5MGezo",
+    "categories": [
+      "Medical spa",
+      "Beauty supply store",
+      "Hair removal service",
+      "Laser hair removal service",
+      "Medical laboratory",
+      "Plastic surgery clinic",
+      "Skin care clinic",
+      "Weight loss service",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Restore Hyper Wellness",
+    "address": "100 Gorham Rd, South Portland, ME 04106",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(207) 250-4444",
+    "website": "http://www.restore.com/locations/me-south-portland-me001?utm_source=gmb&utm_medium=Yext&y_source=1_Njg4NzM3MDItNzE1LWxvY2F0aW9uLndlYnNpdGU%3D",
+    "rating": 4.9,
+    "reviewCount": 151,
+    "lat": 43.6334942,
+    "lng": -70.3221896,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Restore%20Hyper%20Wellness&query_place_id=ChIJo2-8v0SZskwRn_qIPO20EpM",
+    "categories": [
+      "Medical spa",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Sikara Medspa",
+    "address": "1955 Festival Plaza Dr Suite 180, Las Vegas, NV 89135",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(702) 778-6886",
+    "website": "https://sikaramedspa.com/",
+    "rating": 4.9,
+    "reviewCount": 49,
+    "lat": 36.1506231,
+    "lng": -115.3341513,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Sikara%20Medspa&query_place_id=ChIJq9V6RVq_yIARkhyD0hEwhuc",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Parie Med Spa",
+    "address": "1725 Village Center Cir ste 150, Las Vegas, NV 89134",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(702) 930-6221",
+    "website": "https://pariemedspa.com/",
+    "rating": 4.9,
+    "reviewCount": 327,
+    "lat": 36.1913683,
+    "lng": -115.2995194,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Parie%20Med%20Spa&query_place_id=ChIJGSERWQC_yIARz3MfVIIJ-fc",
+    "categories": [
+      "Medical spa",
+      "Laser hair removal service",
+      "Spa and health club",
+      "Weight loss service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Restore Hyper Wellness",
+    "address": "544 Legacy Pl, Dedham, MA 02026",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(781) 366-0591",
+    "website": "http://www.restore.com/locations/ma-dedham-ma002?utm_source=gmb&utm_medium=Yext&y_source=1_NDQ1NzE5NDUtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D",
+    "rating": 4.9,
+    "reviewCount": 249,
+    "lat": 42.229892,
+    "lng": -71.1774123,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Restore%20Hyper%20Wellness&query_place_id=ChIJq9IPhN1_44kR8UhsAsHkzx0",
+    "categories": [
+      "Medical spa",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Restore Hyper Wellness",
+    "address": "345 N Main St Suite 105, West Hartford, CT 06117",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(860) 945-4300",
+    "website": "https://www.restore.com/locations/ct-west-hartford-ct015?utm_source=gmb&utm_medium=Yext&y_source=1_MzE2Mjk4MzktNzE1LWxvY2F0aW9uLndlYnNpdGU%3D",
+    "rating": 4.8,
+    "reviewCount": 232,
+    "lat": 41.785189,
+    "lng": -72.7479087,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Restore%20Hyper%20Wellness&query_place_id=ChIJJz8FzBmr54kRG5sXBzUU2eM",
+    "categories": [
+      "Medical spa",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Restore Hyper Wellness",
+    "address": "28 S River Rd, Bedford, NH 03110",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(603) 263-8407",
+    "website": "https://www.restore.com/locations/nh-bedford-nh001?utm_source=gmb&utm_medium=Yext&y_source=1_MzgxNjcyNjgtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D",
+    "rating": 4.9,
+    "reviewCount": 196,
+    "lat": 42.9632279,
+    "lng": -71.4805131,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Restore%20Hyper%20Wellness&query_place_id=ChIJJ2Kvdx5J4okR_M-W_ST7YZY",
+    "categories": [
+      "Medical spa",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Restore Hyper Wellness",
+    "address": "340 Grand Union Blvd Unit C, Somerville, MA 02145",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(617) 600-3660",
+    "website": "http://www.restore.com/locations/ma-somerville-ma014?utm_source=gmb&utm_medium=Yext&y_source=1_OTg2OTkwODEtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D",
+    "rating": 5,
+    "reviewCount": 186,
+    "lat": 42.3918633,
+    "lng": -71.0802664,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Restore%20Hyper%20Wellness&query_place_id=ChIJ_3lfJtlw44kRhQUM0cH7zqc",
+    "categories": [
+      "Medical spa",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Perfect Skin Las Vegas LLC",
+    "address": "10300 W Charleston Blvd Ste 17 -R16, Las Vegas, NV 89135",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(702) 542-3128",
+    "website": "https://www.perfectskinlasvegas.com/",
+    "rating": 5,
+    "reviewCount": 107,
+    "lat": 36.1603824,
+    "lng": -115.3209942,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Perfect%20Skin%20Las%20Vegas%20LLC&query_place_id=ChIJKWDLQd4fswcR_gLSuMLuO28",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Renew Medical Spa",
+    "address": "6980 Smoke Ranch Rd #150, Las Vegas, NV 89128",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(702) 830-6571",
+    "website": "https://www.renewmedicalspalv.com/",
+    "rating": 4.9,
+    "reviewCount": 39,
+    "lat": 36.2050438,
+    "lng": -115.2459844,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Renew%20Medical%20Spa&query_place_id=ChIJkVNI7ijAyIARZj2reARsl4k",
+    "categories": [
+      "Spa",
+      "Hair removal service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Chic la Vie",
+    "address": "7650 W Sahara Ave suite 3, Las Vegas, NV 89117",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(702) 233-8535",
+    "website": "https://chiclavie.com/",
+    "rating": 4.8,
+    "reviewCount": 421,
+    "lat": 36.1443959,
+    "lng": -115.2577815,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Chic%20la%20Vie&query_place_id=ChIJeSAqB2S_yIARsAiphLf2SLs",
+    "categories": [
+      "Medical spa",
+      "Facial spa",
+      "Health spa",
+      "Laser hair removal service",
+      "Skin care clinic",
+      "Spa",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Flawless Medspa Las Vegas",
+    "address": "9418 W Lake Mead Blvd, Las Vegas, NV 89134",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(702) 337-2526",
+    "website": "http://www.flawlessmedspas.com/",
+    "rating": 4.5,
+    "reviewCount": 221,
+    "lat": 36.2074865,
+    "lng": -115.3017995,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Flawless%20Medspa%20Las%20Vegas&query_place_id=ChIJo6h67yjAyIARJKrkviQ1yiI",
+    "categories": [
+      "Medical spa",
+      "Health and beauty shop",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Restore Hyper Wellness",
+    "address": "55 Needham St, Newton, MA 02461",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(617) 467-5728",
+    "website": "https://www.restore.com/locations/ma-newton-ma003?utm_source=gmb&utm_medium=Yext&y_source=1_MzE2Mjk4NzQtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D",
+    "rating": 4.9,
+    "reviewCount": 236,
+    "lat": 42.3155123,
+    "lng": -71.2106566,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Restore%20Hyper%20Wellness&query_place_id=ChIJmw6-MRGD44kRNRmObW8-CCQ",
+    "categories": [
+      "Medical spa",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Las Vegas Aesthetics®",
+    "address": "9081 W Sahara Ave STE 230, Las Vegas, NV 89117",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(725) 527-8211",
+    "website": "https://www.lvamedspa.com/",
+    "rating": 4.9,
+    "reviewCount": 218,
+    "lat": 36.1432639,
+    "lng": -115.2948756,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Las%20Vegas%20Aesthetics%C2%AE&query_place_id=ChIJCRNG-57AyIAR0ACtLU_xCwk",
+    "categories": [
+      "Skin care clinic",
+      "Hair transplantation clinic",
+      "Men's health physician",
+      "Reproductive health clinic",
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "The Aesthetics Lab",
+    "address": "2701 N Tenaya Wy #110, Las Vegas, NV 89128",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(702) 640-0689",
+    "website": "https://theaestheticslabmedspa.com/",
+    "rating": 4.9,
+    "reviewCount": 108,
+    "lat": 36.2096485,
+    "lng": -115.250145,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The%20Aesthetics%20Lab&query_place_id=ChIJ75JhWobryIARsa_J5Ypn1hk",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Center For Aesthetic Medicine",
+    "address": "3038 S Durango Dr # 100, Las Vegas, NV 89117",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(702) 333-4896",
+    "website": "https://www.centerforaestheticmedicine.com/",
+    "rating": 4.8,
+    "reviewCount": 128,
+    "lat": 36.134055,
+    "lng": -115.2769666,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Center%20For%20Aesthetic%20Medicine&query_place_id=ChIJOZF2YozAyIARDxbUz3evfik",
+    "categories": [
+      "Skin care clinic",
+      "Dermatologist",
+      "Laser hair removal service",
+      "Medical clinic",
+      "Plastic surgeon",
+      "Medical spa",
+      "Tattoo removal service",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Advanced Aesthetics",
+    "address": "2150 S Rainbow Blvd, Las Vegas, NV 89146",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(702) 838-4644",
+    "website": "http://advancedaestheticslv.com/?utm_source=gbp&utm_medium=organic",
+    "rating": 4.9,
+    "reviewCount": 2427,
+    "lat": 36.1484061,
+    "lng": -115.2424074,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Advanced%20Aesthetics&query_place_id=ChIJxR4xV-fAyIARyfOhs6O0OZA",
+    "categories": [
+      "Medical spa",
+      "Spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Summerlin Center for Aesthetic Dentistry",
+    "address": "2095 Village Center Cir #110, Las Vegas, NV 89134",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(702) 844-6224",
+    "website": "https://topsummerlindentist.com/",
+    "rating": 5,
+    "reviewCount": 470,
+    "lat": 36.1904053,
+    "lng": -115.3039091,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Summerlin%20Center%20for%20Aesthetic%20Dentistry&query_place_id=ChIJl8xDLeG_yIAR8bQFCVBLuak",
+    "categories": [
+      "Dentist",
+      "Cosmetic dentist",
+      "Emergency dental service",
+      "Teeth whitening service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "LuxeFactor Aesthetics",
+    "address": "8861 W Sahara Ave #290, Las Vegas, NV 89117",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(702) 805-0777",
+    "website": "https://www.luxefactorlv.com/",
+    "rating": 5,
+    "reviewCount": 89,
+    "lat": 36.1435955,
+    "lng": -115.2901482,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=LuxeFactor%20Aesthetics&query_place_id=ChIJr1Biup6_yIARqJ6SPi0ys7Y",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Nuance Aesthetics & Plastic Surgery",
+    "address": "3605 S Town Center Dr Suite C, Las Vegas, NV 89135",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(702) 762-3223",
+    "website": "http://nuancelasvegas.com/",
+    "rating": 4.8,
+    "reviewCount": 18,
+    "lat": 36.124558,
+    "lng": -115.3258705,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Nuance%20Aesthetics%20%26%20Plastic%20Surgery&query_place_id=ChIJ9_VE-8S_yIARMy6J9kXLHYU",
+    "categories": [
+      "Skin care clinic",
+      "Dermatologist",
+      "Plastic surgeon",
+      "Plastic surgery clinic"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "White Coat Aesthetics",
+    "address": "2400 N Buffalo Dr Ste 110, Las Vegas, NV 89128",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(702) 919-0017",
+    "website": "https://whitecoataesthetics.com/",
+    "rating": 4.8,
+    "reviewCount": 205,
+    "lat": 36.2037903,
+    "lng": -115.2600184,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=White%20Coat%20Aesthetics&query_place_id=ChIJM5laQW_ByIARDn1R0JmnPgU",
+    "categories": [
+      "Skin care clinic",
+      "Facial spa",
+      "Laser hair removal service",
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Alpha Medical Aesthetics",
+    "address": "3150 N Tenaya Wy Suite 400A, Las Vegas, NV 89128",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(702) 683-2156",
+    "website": "https://alphamedicalaesthetics.com/",
+    "rating": 4.8,
+    "reviewCount": 16,
+    "lat": 36.2168087,
+    "lng": -115.2495388,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Alpha%20Medical%20Aesthetics&query_place_id=ChIJiaihc5bryIARoMer-ZFIbRE",
+    "categories": [
+      "Medical spa",
+      "Laser cutting service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "CeR Aesthetics",
+    "address": "8751 W Charleston Blvd #130, Las Vegas, NV 89117",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(702) 666-1961",
+    "website": "https://ceraesthetics.com/",
+    "rating": 5,
+    "reviewCount": 28,
+    "lat": 36.1576212,
+    "lng": -115.2860981,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=CeR%20Aesthetics&query_place_id=ChIJW8GtPKm_yIARwmgOwNCJon0",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "iRadiant Aesthetics | Emsculpt, Facials, Tox (Botox, Dysport), & Weight Loss Clinic Summerlin",
+    "address": "8975 W Charleston Blvd suite 130 studio 18, Las Vegas, NV 89117",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(725) 305-2819",
+    "website": "https://www.iradiantaesthetics.com/",
+    "rating": 5,
+    "reviewCount": 6,
+    "lat": 36.1577992,
+    "lng": -115.2884813,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=iRadiant%20Aesthetics%20%7C%20Emsculpt%2C%20Facials%2C%20Tox%20(Botox%2C%20Dysport)%2C%20%26%20Weight%20Loss%20Clinic%20Summerlin&query_place_id=ChIJA0zzVJq_yIARznE6wvCWWr8",
+    "categories": [
+      "Medical spa",
+      "Facial spa",
+      "IV therapy service",
+      "Weight loss service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Amanda Ralph MSN, APRN, NP-C",
+    "address": "2400 N Buffalo Dr Ste 110, Las Vegas, NV 89128",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(702) 919-0017",
+    "website": "https://www.whitecoataesthetics.com/",
+    "rating": 5,
+    "reviewCount": 36,
+    "lat": 36.2037899,
+    "lng": -115.2599937,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Amanda%20Ralph%20MSN%2C%20APRN%2C%20NP-C&query_place_id=ChIJ15R88CjByIARJGvxe3Yij0U",
+    "categories": [
+      "Medical spa",
+      "Nurse practitioner"
+    ],
+    "enriched": false
+  }
+]
