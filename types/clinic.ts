@@ -3,6 +3,7 @@ export interface Clinic {
   name: string
   slug: string
   city: string
+  state?: string
   neighborhood?: string
   distance?: string
   googleRating: number

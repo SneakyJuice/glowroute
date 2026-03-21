@@ -1,5 +1,6 @@
 import { Clinic } from '@/types/clinic'
 import { flClinics } from './fl-clinics'
+import { nationalClinics } from './national-clinics'
 
 /** Returns true if a description contains garbled/binary/non-Latin encoded text */
 function isGarbledDescription(desc: string): boolean {
@@ -47,9 +48,10 @@ function clean(clinic: Clinic): Clinic {
 }
 
 // Deduplicate by slug (keep first occurrence), clean each record
-// fl-clinics.ts is the canonical source — ~3,575 FL listings
+// fl-clinics.ts is the canonical FL source (~3,575 listings)
+// national-clinics.ts covers TX, CA, NV, AZ, GA, NY, IL, CO, WA, NC, TN (~453 listings)
 const seen = new Set<string>()
-export const allClinics: Clinic[] = flClinics
+export const allClinics: Clinic[] = [...flClinics, ...nationalClinics]
   .filter(c => {
     if (!c.slug || seen.has(c.slug)) return false
     seen.add(c.slug)
