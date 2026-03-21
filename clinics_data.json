@@ -55659,5 +55659,3217 @@
     "imageUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHVAweqeFfkieWe4EZT6oBcURlrWlyzyTsmwcX9CY03CS_Lm3E_k51MeM1j1MuZh1kbQSIScLZD2zAtjy715at9NYDHbbmqwXznitrJmfG2JrcImoUgHLTVQrnxjp2n9qX1kkzpSqUqn=w408-h544-k-no",
     "source": "apify-google-maps",
     "addedAt": "2026-03-16T18:01:26.568Z"
+  },
+  {
+    "name": "The MedSpa at Beverly Hills",
+    "address": "416 N Bedford Dr #100, Beverly Hills, CA 90210",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(424) 355-0116",
+    "website": "http://www.themedspaatbeverlyhills.com/",
+    "rating": 5,
+    "reviewCount": 125,
+    "lat": 34.068396,
+    "lng": -118.405003,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The%20MedSpa%20at%20Beverly%20Hills&query_place_id=ChIJAVkF8hG7woARf3HNQF3XTWQ",
+    "categories": [
+      "Medical spa",
+      "Plastic surgeon"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Beverly Hills Med Spa",
+    "address": "421 N Rodeo Dr Suite G11, Beverly Hills, CA 90210",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(310) 359-8832",
+    "website": "https://www.beverlyhillsmedspa.com/",
+    "rating": 4.5,
+    "reviewCount": 35,
+    "lat": 34.0695803,
+    "lng": -118.4038048,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Beverly%20Hills%20Med%20Spa&query_place_id=ChIJ964sNk-5woARl5j5Ve8yiaw",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "NakedMD Med Spa Beverly Hills",
+    "address": "8665 Wilshire Blvd #305, Beverly Hills, CA 90211",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(424) 285-0886",
+    "website": "https://www.nakedmd.com/pages/locations-beverly-hills-ca",
+    "rating": 4.9,
+    "reviewCount": 485,
+    "lat": 34.0665829,
+    "lng": -118.3802063,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=NakedMD%20Med%20Spa%20Beverly%20Hills&query_place_id=ChIJRYLC-M-5woART88mMxge7VU",
+    "categories": [
+      "Medical spa",
+      "Facial spa",
+      "Health and beauty shop",
+      "Skin care clinic"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Beverly Hills Plaza Medi Spa",
+    "address": "9730 Wilshire Blvd suite 214, Beverly Hills, CA 90212",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(310) 254-2371",
+    "website": "https://plazamedspa.com/",
+    "rating": 4.1,
+    "reviewCount": 209,
+    "lat": 34.0668248,
+    "lng": -118.4074698,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Beverly%20Hills%20Plaza%20Medi%20Spa&query_place_id=ChIJ91FMI3e8woARIVqxVlVy-TE",
+    "categories": [
+      "Medical spa",
+      "Facial spa",
+      "Skin care clinic"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "The Beverly Hills Medspa",
+    "address": "435 N Roxbury Dr #100, Beverly Hills, CA 90210",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(310) 438-6422",
+    "website": "https://thebeverlyhillsmedspa.com/",
+    "rating": 4.2,
+    "reviewCount": 5,
+    "lat": 34.0677348,
+    "lng": -118.4067726,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The%20Beverly%20Hills%20Medspa&query_place_id=ChIJlT4CAc7x-KARTEA9PRzKvWE",
+    "categories": [
+      "Medical spa",
+      "Beauty salon",
+      "Health and beauty shop",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Maven Medi Spa",
+    "address": "415 N Crescent Dr #140, Beverly Hills, CA 90210",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(310) 601-8606",
+    "website": "https://mavenmedispa.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp",
+    "rating": 5,
+    "reviewCount": 97,
+    "lat": 34.0714511,
+    "lng": -118.400596,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Maven%20Medi%20Spa&query_place_id=ChIJ-VO90tl3zawRqaP9B37HtKo",
+    "categories": [
+      "Medical spa",
+      "Weight loss service",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Skin Verse Medical Spa",
+    "address": "99 N La Cienega Blvd #306, Beverly Hills, CA 90211",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(424) 255-9289",
+    "website": "https://skinversemedspa.com/",
+    "rating": 4.9,
+    "reviewCount": 224,
+    "lat": 34.0673956,
+    "lng": -118.376628,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Skin%20Verse%20Medical%20Spa&query_place_id=ChIJnfLGEf-5woARleae0sV9rac",
+    "categories": [
+      "Facial spa",
+      "Hair removal service",
+      "Laser hair removal service",
+      "Plastic surgeon",
+      "Skin care clinic",
+      "Spa",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "No Pain All Gain Med Spa - Beverly Hills",
+    "address": "9025 Wilshire Blvd suite 202, Beverly Hills, CA 90211",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(310) 343-8321",
+    "website": "http://nopainallgainspa.com/",
+    "rating": 4.9,
+    "reviewCount": 92,
+    "lat": 34.067407,
+    "lng": -118.3884313,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=No%20Pain%20All%20Gain%20Med%20Spa%20-%20Beverly%20Hills&query_place_id=ChIJlakuea27woARLmDtMS6nhOY",
+    "categories": [
+      "Medical spa",
+      "Weight loss service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Beverly Wilshire Aesthetics Beverly Hills Medical Spa",
+    "address": "9100 Wilshire Blvd Suite 363 W, Beverly Hills, CA 90212",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(424) 453-5340",
+    "website": "https://www.bwaesthetics.com/medical-spa-beverly-hills/",
+    "rating": 5,
+    "reviewCount": 127,
+    "lat": 34.0666697,
+    "lng": -118.3900661,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Beverly%20Wilshire%20Aesthetics%20Beverly%20Hills%20Medical%20Spa&query_place_id=ChIJRXmaci25woARzVigGETaXic",
+    "categories": [
+      "Medical spa",
+      "Facial spa",
+      "Laser hair removal service",
+      "Skin care clinic"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "ALTA Medispa",
+    "address": "9301 Wilshire Blvd UNIT 601, Beverly Hills, CA 90210",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(424) 202-2868",
+    "website": "https://www.altamedispa.com/",
+    "rating": 5,
+    "reviewCount": 59,
+    "lat": 34.0672215,
+    "lng": -118.3946404,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=ALTA%20Medispa&query_place_id=ChIJx4epIYW7woARCGpnHPfmxyg",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "BevMed LA",
+    "address": "436 N Roxbury Dr Suite 211, Beverly Hills, CA 90210",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(310) 879-1066",
+    "website": "https://www.bevmedla.com/",
+    "rating": 5,
+    "reviewCount": 100,
+    "lat": 34.0680272,
+    "lng": -118.4064381,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=BevMed%20LA&query_place_id=ChIJhw5aE4-5woARydsfkETZ8i4",
+    "categories": [
+      "Medical spa",
+      "Wellness program"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "LYEV Beverly Hills- Medical Spa",
+    "address": "8814 Burton Wy, Beverly Hills, CA 90211",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(310) 601-7400",
+    "website": "http://www.lyevbeverlyhills.com/",
+    "rating": 4.9,
+    "reviewCount": 209,
+    "lat": 34.071976,
+    "lng": -118.3842534,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=LYEV%20Beverly%20Hills-%20Medical%20Spa&query_place_id=ChIJF_W3VIK5woARnqq3kKbGbxw",
+    "categories": [
+      "Medical spa",
+      "Dermatologist",
+      "Facial spa",
+      "Hair removal service",
+      "Health and beauty shop",
+      "Laser hair removal service",
+      "Medical Center",
+      "Skin care clinic",
+      "Spa",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "iGlow Med Spa",
+    "address": "9400 Brighton Way #209, Beverly Hills, CA 90210",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(310) 652-0544",
+    "website": "https://iglowmedspa.com/",
+    "rating": 4.4,
+    "reviewCount": 56,
+    "lat": 34.0703594,
+    "lng": -118.4010759,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=iGlow%20Med%20Spa&query_place_id=ChIJ_WkacAe8woARiGzquqAmKKM",
+    "categories": [
+      "Medical spa",
+      "Doctor",
+      "Facial spa",
+      "Hair replacement service",
+      "Laser hair removal service",
+      "Skin care clinic",
+      "Weight loss service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Beverly Hills Aesthetic Medics",
+    "address": "420 S Beverly Dr #100, Beverly Hills, CA 90212",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(310) 273-4247",
+    "website": "http://bhaestheticmedics.com/",
+    "rating": 4.2,
+    "reviewCount": 66,
+    "lat": 34.058748,
+    "lng": -118.397501,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Beverly%20Hills%20Aesthetic%20Medics&query_place_id=ChIJYb1FbVm5woAR9MtCL9foKKU",
+    "categories": [
+      "Skin care clinic",
+      "Laser hair removal service",
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Beverly Hills Beauty & Aesthetics",
+    "address": "462 N Linden Dr, Beverly Hills, CA 90212",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(310) 367-3024",
+    "website": "http://www.beverlyhillsbeauty.com/",
+    "rating": 5,
+    "reviewCount": 101,
+    "lat": 34.0675314,
+    "lng": -118.4077291,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Beverly%20Hills%20Beauty%20%26%20Aesthetics&query_place_id=ChIJZddA8kW5woAR5K-dEGxeCR4",
+    "categories": [
+      "Skin care clinic",
+      "Boutique",
+      "Health and beauty shop",
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Beverly Hills Aesthetics",
+    "address": "640 S San Vicente Blvd Ste 210, Los Angeles, CA 90048",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(424) 284-8933",
+    "website": "https://www.bhaesthetics.com/?utm_source=google&utm_medium=organic&utm_campaign=gmb",
+    "rating": 4.8,
+    "reviewCount": 94,
+    "lat": 34.0654638,
+    "lng": -118.3724056,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Beverly%20Hills%20Aesthetics&query_place_id=ChIJdaHFtOS7woAR1FxwRyGmwPY",
+    "categories": [
+      "Plastic surgery clinic",
+      "Cosmetic surgeon",
+      "Plastic surgeon"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Beverly Hills Aesthetic Group",
+    "address": "9025 Wilshire Blvd suite 202, Beverly Hills, CA 90211",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(424) 424-0260",
+    "website": "https://beverlyhillsaestheticgroup.com/host/",
+    "rating": 5,
+    "reviewCount": 4,
+    "lat": 34.067407,
+    "lng": -118.3884313,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Beverly%20Hills%20Aesthetic%20Group&query_place_id=ChIJ_5E9DuO5woARIXWfN1yH6Io",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Iconic Skin Clinic - Beverly Hills",
+    "address": "9437 S Santa Monica Blvd #208, Beverly Hills, CA 90210",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(714) 225-5137",
+    "website": "https://www.iconicskinclinic.com/",
+    "rating": 5,
+    "reviewCount": 18,
+    "lat": 34.0716022,
+    "lng": -118.403105,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Iconic%20Skin%20Clinic%20-%20Beverly%20Hills&query_place_id=ChIJUVi9fBG9woARQaby0ASffho",
+    "categories": [
+      "Skin care clinic"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "JP Beverly Hills Skin Clinic",
+    "address": "291 S La Cienega Blvd unit 306, Beverly Hills, CA 90211",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(949) 514-8722",
+    "website": "http://www.jpbhsc.com/",
+    "rating": 5,
+    "reviewCount": 41,
+    "lat": 34.0629662,
+    "lng": -118.3764665,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=JP%20Beverly%20Hills%20Skin%20Clinic&query_place_id=ChIJ0f81gCi5woARyZjgqIcWwJc",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Luxe Aesthetic Surgery & Medical Spa -",
+    "address": "9150 Wilshire Blvd Suite #205, Beverly Hills, CA 90212",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(310) 402-2849",
+    "website": "https://luxeaestheticsurgery.com/",
+    "rating": 5,
+    "reviewCount": 43,
+    "lat": 34.0666713,
+    "lng": -118.3913047,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Luxe%20Aesthetic%20Surgery%20%26%20Medical%20Spa%20-&query_place_id=ChIJp6cJXQ-5woAR1Wd6pXDSRqg",
+    "categories": [
+      "Plastic surgery clinic"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Esthetics Beverly Hills",
+    "address": "434 North Bedford Drive, Beverly Hills, California 90210, Beverly Hills, CA 90212",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(310) 683-7000",
+    "website": "https://estheticsbeverlyhills.com/",
+    "rating": 5,
+    "reviewCount": 11,
+    "lat": 34.0685832,
+    "lng": -118.4054661,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Esthetics%20Beverly%20Hills&query_place_id=ChIJy0OvIwq9woARGC3Xq5sICC8",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Juliana Clinics",
+    "address": "9730 Wilshire Blvd #111, Beverly Hills, CA 90212",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(424) 512-1699",
+    "website": "https://julianaclinics.com/",
+    "rating": 4.9,
+    "reviewCount": 109,
+    "lat": 34.0668534,
+    "lng": -118.4075018,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Juliana%20Clinics&query_place_id=ChIJncAtCBe7woARWATMIRwpxMo",
+    "categories": [
+      "Skin care clinic"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "LA Aesthetics Center - Concierge Longevity Clinic",
+    "address": "436 N Bedford Dr, Beverly Hills, CA 90210",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(747) 327-8259",
+    "website": "https://www.laaestheticscenter.com/",
+    "rating": 5,
+    "reviewCount": 19,
+    "lat": 34.0686423,
+    "lng": -118.4054709,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=LA%20Aesthetics%20Center%20-%20Concierge%20Longevity%20Clinic&query_place_id=ChIJp5a03sC9woARoBFZn4QNcLA",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "SkinSpirit at Lasky",
+    "address": "153 S Lasky Dr Suite 8, Beverly Hills, CA 90212",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(310) 552-8010",
+    "website": "https://www.skinspirit.com/locations/beverly-hills/",
+    "rating": 4.9,
+    "reviewCount": 96,
+    "lat": 34.0652208,
+    "lng": -118.4102631,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=SkinSpirit%20at%20Lasky&query_place_id=ChIJIwynefa7woARkr5aqzMIP6E",
+    "categories": [
+      "Skin care clinic",
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Beverly Hills Skin Clinic",
+    "address": "421 N Rodeo Dr G7, Beverly Hills, CA 90210",
+    "city": "Beverly Hills",
+    "state": "CA",
+    "phone": "(310) 596-0156",
+    "website": "http://www.bhskinclinic.com/",
+    "rating": 5,
+    "reviewCount": 2,
+    "lat": 34.0696706,
+    "lng": -118.4037063,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Beverly%20Hills%20Skin%20Clinic&query_place_id=ChIJMwYDKu69woARkZ84cuo8LKY",
+    "categories": [
+      "Facial spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Henderson Med Spa",
+    "address": "90 S Stephanie St #110, Henderson, NV 89012",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(702) 448-9977",
+    "website": "https://www.hendersonmedspa.com/",
+    "rating": 4.9,
+    "reviewCount": 48,
+    "lat": 36.0255227,
+    "lng": -115.0467085,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Henderson%20Med%20Spa&query_place_id=ChIJuXR1vSXRyIARLFCdzc97uj4",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "NakedMD Med Spa Henderson",
+    "address": "100 N Green Valley Pkwy #215, Henderson, NV 89074",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(702) 483-8184",
+    "website": "https://www.nakedmd.com/pages/med-spa-henderson-nv",
+    "rating": 5,
+    "reviewCount": 409,
+    "lat": 36.0259133,
+    "lng": -115.0838521,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=NakedMD%20Med%20Spa%20Henderson&query_place_id=ChIJ2Yl6mYLRyIARQZ5BAfCutrg",
+    "categories": [
+      "Medical spa",
+      "Facial spa",
+      "Health and beauty shop",
+      "Skin care clinic"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Advanced Aesthetics - Henderson",
+    "address": "60 N Pecos Rd Suite 110, Henderson, NV 89074",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(702) 838-4644",
+    "website": "https://advancedaestheticslv.com/",
+    "rating": 4.9,
+    "reviewCount": 1409,
+    "lat": 36.0319333,
+    "lng": -115.0992307,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Advanced%20Aesthetics%20-%20Henderson&query_place_id=ChIJ6dxuRSzOyIAR0Pm4MJtCw2w",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Glamour Me Medical Spa",
+    "address": "3041 W Horizon Ridge Pkwy #135, Henderson, NV 89052",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(702) 481-3949",
+    "website": "https://glamourmemedspa.com/",
+    "rating": 5,
+    "reviewCount": 60,
+    "lat": 35.9977193,
+    "lng": -115.1211024,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Glamour%20Me%20Medical%20Spa&query_place_id=ChIJ3X3ttv3HyIAR-vU6iBi_6po",
+    "categories": [
+      "Medical spa",
+      "Facial spa",
+      "Health spa",
+      "Skin care clinic",
+      "Spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "BP Royal Medspa",
+    "address": "565 Marks St #120, Henderson, NV 89014",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(702) 899-7100",
+    "website": "https://bproyalmedspa.com/?utm_source=gmb_auth",
+    "rating": 4.9,
+    "reviewCount": 97,
+    "lat": 36.0622901,
+    "lng": -115.0369145,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=BP%20Royal%20Medspa&query_place_id=ChIJ1bm8MaTRyIARGxG1dDumtME",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Esthetika MedSpa - By Ageless Las Vegas",
+    "address": "2960 Sunridge Heights Pkwy suite 200, Henderson, NV 89052",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(702) 625-5688",
+    "website": "https://esthetika.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp",
+    "rating": 5,
+    "reviewCount": 51,
+    "lat": 35.9919888,
+    "lng": -115.1178752,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Esthetika%20MedSpa%20-%20By%20Ageless%20Las%20Vegas&query_place_id=ChIJkSO_cwTNyIARuGAWitVok-4",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "[ Skin + Tonic ]",
+    "address": "3511 Volunteer Blvd #120, Henderson, NV 89044",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(702) 854-6654",
+    "website": "https://www.skinandtonic702.com/",
+    "rating": 5,
+    "reviewCount": 109,
+    "lat": 35.9595784,
+    "lng": -115.1417131,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%5B%20Skin%20%2B%20Tonic%20%5D&query_place_id=ChIJA9WUV3PRyIARVBJk7KsuQ4c",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "The Treatment Skin Boutique Henderson",
+    "address": "2245 Village View Dr suite 150, Henderson, NV 89052",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(844) 344-7546",
+    "website": "https://www.getthetreatment.com/",
+    "rating": 5,
+    "reviewCount": 81,
+    "lat": 36.0227806,
+    "lng": -115.0883027,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The%20Treatment%20Skin%20Boutique%20Henderson&query_place_id=ChIJz4OAJIrRyIARIG8qtZ_B9ec",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Botox La Belle Peau",
+    "address": "20 Via Bel Canto Suite 130, Henderson, NV 89011",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(725) 277-0704",
+    "website": "http://labelleoc.com/",
+    "rating": 4.7,
+    "reviewCount": 44,
+    "lat": 36.1024802,
+    "lng": -114.930075,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Botox%20La%20Belle%20Peau&query_place_id=ChIJm1jWCt3XyIAReRmNQTXQcyo",
+    "categories": [
+      "Medical spa",
+      "Skin care clinic",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Exotica Skin Care",
+    "address": "2480 W Horizon Ridge Pkwy Suite #130, Henderson, NV 89052",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(702) 461-6653",
+    "website": "http://www.exoticaskincare.com/",
+    "rating": 4.9,
+    "reviewCount": 543,
+    "lat": 36.0062251,
+    "lng": -115.0938647,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Exotica%20Skin%20Care&query_place_id=ChIJoTDpHAfOyIARlRstqZYCo9Q",
+    "categories": [
+      "Medical spa",
+      "Beauty product supplier",
+      "Beauty salon",
+      "Beauty supply store",
+      "Facial spa",
+      "Skin care clinic",
+      "Spa",
+      "Spa and health club",
+      "Waxing hair removal service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Oasis Beauty Medical Aesthetics",
+    "address": "2530 St Rose Pkwy Ste A-120, Henderson, NV 89074",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "",
+    "website": "https://oasisbeauty.repeatmd.app/",
+    "rating": 4.9,
+    "reviewCount": 101,
+    "lat": 36.0180991,
+    "lng": -115.1012262,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Oasis%20Beauty%20Medical%20Aesthetics&query_place_id=ChIJ1QuWWiLOyIARBtKogYqfjrE",
+    "categories": [
+      "Medical spa",
+      "Health spa",
+      "Laser hair removal service",
+      "Skin care clinic",
+      "Spa",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Tru Beauty by Trevor",
+    "address": "1701 N Green Valley Pkwy Suite 5A, Henderson, NV 89074",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(702) 852-3110",
+    "website": "https://trubeautybytrevor.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp",
+    "rating": 5,
+    "reviewCount": 527,
+    "lat": 36.0363662,
+    "lng": -115.0872396,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Tru%20Beauty%20by%20Trevor&query_place_id=ChIJocyWNpW_yIARdQeC1NcheiQ",
+    "categories": [
+      "Medical spa",
+      "Skin care clinic",
+      "Weight loss service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Ideal Image Henderson",
+    "address": "Pebble Marketplace, 1550 N Green Valley Pkwy #360, Henderson, NV 89074",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(702) 748-8110",
+    "website": "https://www.idealimage.com/locations/nevada/las-vegas-henderson-green-valley?utm_medium=yext&utm_source=extnet",
+    "rating": 4.7,
+    "reviewCount": 890,
+    "lat": 36.0296456,
+    "lng": -115.0848345,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Ideal%20Image%20Henderson&query_place_id=ChIJR7Z-jNrRyIARUydsH26LmNI",
+    "categories": [
+      "Medical spa",
+      "Laser hair removal service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Aethereal Medical Spa & Wellness",
+    "address": "8935 S Pecos Rd #21-A, Henderson, NV 89074",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "",
+    "website": "https://www.aetherealmedspa.com/",
+    "rating": 5,
+    "reviewCount": 26,
+    "lat": 36.0270444,
+    "lng": -115.1011607,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Aethereal%20Medical%20Spa%20%26%20Wellness&query_place_id=ChIJma7nW8vPyIAR40-XFlr0rJc",
+    "categories": [
+      "Medical spa",
+      "Facial spa",
+      "Health spa",
+      "Skin care clinic",
+      "Tattoo removal service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Elite Image One Med spa Anthem/Seven Hills",
+    "address": "10895 S Eastern Ave #180, Henderson, NV 89052",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(702) 722-4299",
+    "website": "http://www.eliteimageone.com/",
+    "rating": 5,
+    "reviewCount": 1,
+    "lat": 35.9936111,
+    "lng": -115.1018168,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Elite%20Image%20One%20Med%20spa%20Anthem%2FSeven%20Hills&query_place_id=ChIJu-4fcYTNyIARJCQEKSBdyTU",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "LaserAway Henderson",
+    "address": "2260 Village Walk Dr Suite 100, Henderson, NV 89052",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(702) 850-9970",
+    "website": "https://www.laseraway.com/locations/nv/henderson/?utm_source=google&utm_medium=organic&utm_campaign=website-link",
+    "rating": 4.9,
+    "reviewCount": 690,
+    "lat": 36.0214048,
+    "lng": -115.0879062,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=LaserAway%20Henderson&query_place_id=ChIJ2SRJIjbRyIARTmbuASiEiFo",
+    "categories": [
+      "Laser hair removal service",
+      "Hair removal service",
+      "Health and beauty shop",
+      "Medical spa",
+      "Skin care clinic",
+      "Tattoo removal service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Regenerate Medical Concierge",
+    "address": "2280 Paseo Verde Pkwy #100, Henderson, NV 89052",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(702) 998-8009",
+    "website": "https://regeneratemedicalconcierge.com/",
+    "rating": 4.9,
+    "reviewCount": 359,
+    "lat": 36.0196411,
+    "lng": -115.0867044,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Regenerate%20Medical%20Concierge&query_place_id=ChIJFSjI093RyIARBttN-TISMg8",
+    "categories": [
+      "Medical spa",
+      "Doctor",
+      "Internist",
+      "Medical office",
+      "Vitamin & supplements store",
+      "Weight loss service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Infuze Aesthetics & Wellness Center",
+    "address": "1590 W Horizon Ridge Pkwy #110, Henderson, NV 89012",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(702) 964-9500",
+    "website": "https://www.infuzelv.com/",
+    "rating": 4.8,
+    "reviewCount": 92,
+    "lat": 36.0167771,
+    "lng": -115.0564572,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Infuze%20Aesthetics%20%26%20Wellness%20Center&query_place_id=ChIJX-XbYwLOyIARr5XedgyZn30",
+    "categories": [
+      "Medical spa",
+      "Medical clinic",
+      "Wellness center",
+      "Vitamin & supplements store",
+      "Weight loss service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Remarkable Aesthetics",
+    "address": "43 S Stephanie St Ste 150, Henderson, NV 89012",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(702) 613-7529",
+    "website": "https://www.remarkablelv.com/",
+    "rating": 5,
+    "reviewCount": 145,
+    "lat": 36.0274946,
+    "lng": -115.0494246,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Remarkable%20Aesthetics&query_place_id=ChIJCSV4ILHRyIAR4Fr48pGo0q8",
+    "categories": [
+      "Medical spa",
+      "Facial spa",
+      "Laser hair removal service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Sculpted MD Henderson",
+    "address": "170 S Green Valley Pkwy, Henderson, NV 89012",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(702) 305-9543",
+    "website": "https://www.sculptedmd.com/nevada/henderson/",
+    "rating": 4.7,
+    "reviewCount": 68,
+    "lat": 36.0220289,
+    "lng": -115.0825085,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Sculpted%20MD%20Henderson&query_place_id=ChIJN-QVXN7RyIARZoSHxEIbaZI",
+    "categories": [
+      "Medical clinic"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Elite Aesthetics Skin Clinic",
+    "address": "2298 W Horizon Ridge Pkwy #209, Henderson, NV 89052",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(702) 530-6408",
+    "website": "http://eliteaestheticslv.com/",
+    "rating": 5,
+    "reviewCount": 41,
+    "lat": 36.006178,
+    "lng": -115.0872076,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Elite%20Aesthetics%20Skin%20Clinic&query_place_id=ChIJm9kPDDfRyIARjD7ivMA1oyA",
+    "categories": [
+      "Skin care clinic",
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Elicea Aesthetics",
+    "address": "2530 St Rose Pkwy SUITE 130 suite number 8, Henderson, NV 89074",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(702) 525-5828",
+    "website": "http://www.eliceamedspa.com/",
+    "rating": 5,
+    "reviewCount": 51,
+    "lat": 36.0179621,
+    "lng": -115.101233,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Elicea%20Aesthetics&query_place_id=ChIJp1hYa5vPyIARL6IrVs50LoE",
+    "categories": [
+      "Skin care clinic",
+      "Health and beauty shop",
+      "Permanent make-up clinic",
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "NkdSkin Aesthetics Lounge",
+    "address": "3255 St Rose Pkwy #110, Henderson, NV 89052",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(702) 370-2527",
+    "website": "http://www.nkdskin.com/",
+    "rating": 4.8,
+    "reviewCount": 43,
+    "lat": 35.9975288,
+    "lng": -115.1252798,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=NkdSkin%20Aesthetics%20Lounge&query_place_id=ChIJHz76YgHRyIARTNPZe4GPmrI",
+    "categories": [
+      "Skin care clinic",
+      "Beautician",
+      "Laser hair removal service",
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Amethyst Aesthetics",
+    "address": "1651 W Horizon Ridge Pkwy Suite 160 222, Henderson, NV 89012",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(725) 433-0577",
+    "website": "https://amethystaestheticshenderson.com/",
+    "rating": 5,
+    "reviewCount": 19,
+    "lat": 36.0156288,
+    "lng": -115.0564688,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Amethyst%20Aesthetics&query_place_id=ChIJk0JVfRzRyIARK7YPvTLPq80",
+    "categories": [
+      "Skin care clinic",
+      "Facial spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Veristic Aesthetics",
+    "address": "180 S Stephanie St Suite 140, Room 1, Henderson, NV 89074",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(702) 623-9424",
+    "website": "http://www.veristicaesthetics.com/",
+    "rating": 5,
+    "reviewCount": 52,
+    "lat": 36.0229343,
+    "lng": -115.0465528,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Veristic%20Aesthetics&query_place_id=ChIJUyOOy4DRyIARRTNb3jcuzZQ",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Las Vegas Aesthetics®",
+    "address": "9081 W Sahara Ave STE 230, Las Vegas, NV 89117",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(725) 527-8211",
+    "website": "https://www.lvamedspa.com/",
+    "rating": 4.9,
+    "reviewCount": 218,
+    "lat": 36.1432639,
+    "lng": -115.2948756,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Las%20Vegas%20Aesthetics%C2%AE&query_place_id=ChIJCRNG-57AyIAR0ACtLU_xCwk",
+    "categories": [
+      "Skin care clinic",
+      "Hair transplantation clinic",
+      "Men's health physician",
+      "Reproductive health clinic",
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Advanced Aesthetics",
+    "address": "2150 S Rainbow Blvd, Las Vegas, NV 89146",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(702) 838-4644",
+    "website": "http://advancedaestheticslv.com/?utm_source=gbp&utm_medium=organic",
+    "rating": 4.9,
+    "reviewCount": 2427,
+    "lat": 36.1484061,
+    "lng": -115.2424074,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Advanced%20Aesthetics&query_place_id=ChIJxR4xV-fAyIARyfOhs6O0OZA",
+    "categories": [
+      "Medical spa",
+      "Spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Center For Aesthetic Medicine",
+    "address": "3038 S Durango Dr # 100, Las Vegas, NV 89117",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(702) 333-4896",
+    "website": "https://www.centerforaestheticmedicine.com/",
+    "rating": 4.8,
+    "reviewCount": 128,
+    "lat": 36.134055,
+    "lng": -115.2769666,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Center%20For%20Aesthetic%20Medicine&query_place_id=ChIJOZF2YozAyIARDxbUz3evfik",
+    "categories": [
+      "Skin care clinic",
+      "Dermatologist",
+      "Laser hair removal service",
+      "Medical clinic",
+      "Plastic surgeon",
+      "Medical spa",
+      "Tattoo removal service",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "The Aesthetics Lab",
+    "address": "2701 N Tenaya Wy #110, Las Vegas, NV 89128",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(702) 640-0689",
+    "website": "https://theaestheticslabmedspa.com/",
+    "rating": 4.9,
+    "reviewCount": 108,
+    "lat": 36.2096485,
+    "lng": -115.250145,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The%20Aesthetics%20Lab&query_place_id=ChIJ75JhWobryIARsa_J5Ypn1hk",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Spring Mountain Aesthetics",
+    "address": "2810 W Charleston Blvd G65, Las Vegas, NV 89102",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(702) 475-6010",
+    "website": "http://springmountainaesthetics.com/",
+    "rating": 4.2,
+    "reviewCount": 56,
+    "lat": 36.1604701,
+    "lng": -115.1792338,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Spring%20Mountain%20Aesthetics&query_place_id=ChIJT8kX-WjHyIARC64gOIO8t9A",
+    "categories": [
+      "Medical spa",
+      "Waxing hair removal service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Mia Aesthetics Las Vegas",
+    "address": "8871 W Sahara Ave, Las Vegas, NV 89117",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(702) 680-6181",
+    "website": "https://miaaesthetics.com/locations/las-vegas-nv/",
+    "rating": 4.1,
+    "reviewCount": 649,
+    "lat": 36.1429929,
+    "lng": -115.2898242,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Mia%20Aesthetics%20Las%20Vegas&query_place_id=ChIJ3XjYwEfByIARmvcxKDZT2WI",
+    "categories": [
+      "Plastic surgery clinic"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "White Coat Aesthetics",
+    "address": "2400 N Buffalo Dr Ste 110, Las Vegas, NV 89128",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(702) 919-0017",
+    "website": "https://whitecoataesthetics.com/",
+    "rating": 4.8,
+    "reviewCount": 205,
+    "lat": 36.2037903,
+    "lng": -115.2600184,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=White%20Coat%20Aesthetics&query_place_id=ChIJM5laQW_ByIARDn1R0JmnPgU",
+    "categories": [
+      "Skin care clinic",
+      "Facial spa",
+      "Laser hair removal service",
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Advanced Aesthetics - Centennial",
+    "address": "6628 Sky Pointe Dr #190, Las Vegas, NV 89131",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(702) 838-4644",
+    "website": "https://advancedaestheticslv.com/?utm_source=gbp&utm_medium=organic",
+    "rating": 5,
+    "reviewCount": 677,
+    "lat": 36.2823234,
+    "lng": -115.2680117,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Advanced%20Aesthetics%20-%20Centennial&query_place_id=ChIJezY0OkPryIARUYpzYdHLBV8",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "NP Aesthetics Las Vegas",
+    "address": "7240 W Azure Dr Suite #165, Las Vegas, NV 89130",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(725) 254-7600",
+    "website": "https://www.np-aesthetics-lv.com/",
+    "rating": 5,
+    "reviewCount": 17,
+    "lat": 36.2744979,
+    "lng": -115.2525025,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=NP%20Aesthetics%20Las%20Vegas&query_place_id=ChIJCaPWNzXryIARI8_QOZ9dyYw",
+    "categories": [
+      "Skin care clinic",
+      "Medical spa",
+      "Weight loss service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "SKIN Las Vegas Med Spa",
+    "address": "4270 S Decatur Blvd a1, Las Vegas, NV 89103",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(702) 705-7546",
+    "website": "http://skinlv.com/",
+    "rating": 5,
+    "reviewCount": 82,
+    "lat": 36.1122695,
+    "lng": -115.2066346,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=SKIN%20Las%20Vegas%20Med%20Spa&query_place_id=ChIJp1uKXK_HyIARnkEr2PptJKM",
+    "categories": [
+      "Medical spa",
+      "Facial spa",
+      "Laser hair removal service",
+      "Tattoo removal service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Esti & Co",
+    "address": "7925 W Sahara Ave Suite 103, Las Vegas, NV 89117",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "",
+    "website": "https://www.estiandcompany.com/",
+    "rating": 5,
+    "reviewCount": 140,
+    "lat": 36.1423804,
+    "lng": -115.2636969,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Esti%20%26%20Co&query_place_id=ChIJ2WQ2mH-_yIARJiPpzDahZuY",
+    "categories": [
+      "Medical spa",
+      "Dermatologist",
+      "Esthetics service",
+      "Men's health physician"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Cosmetique Aesthetics",
+    "address": "7710 W Sahara Ave #102, Las Vegas, NV 89117",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(702) 410-5779",
+    "website": "https://cosmetiqueaestheticslv.com/",
+    "rating": 4.9,
+    "reviewCount": 46,
+    "lat": 36.1444188,
+    "lng": -115.2594486,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Cosmetique%20Aesthetics&query_place_id=ChIJT-hCo8fByIAROGEIFWO5_74",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Alpha Medical Aesthetics",
+    "address": "3150 N Tenaya Wy Suite 400A, Las Vegas, NV 89128",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(702) 683-2156",
+    "website": "https://alphamedicalaesthetics.com/",
+    "rating": 4.8,
+    "reviewCount": 16,
+    "lat": 36.2168087,
+    "lng": -115.2495388,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Alpha%20Medical%20Aesthetics&query_place_id=ChIJiaihc5bryIARoMer-ZFIbRE",
+    "categories": [
+      "Medical spa",
+      "Laser cutting service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "The Look Med Spa",
+    "address": "7530 W Sahara Ave STE 105, Las Vegas, NV 89117",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(702) 246-2238",
+    "website": "http://thelookmedspalv.com/",
+    "rating": 4.9,
+    "reviewCount": 396,
+    "lat": 36.1450854,
+    "lng": -115.255678,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The%20Look%20Med%20Spa&query_place_id=ChIJXWTijY3ByIAR-07ZnMzjGj0",
+    "categories": [
+      "Medical spa",
+      "Blood testing service",
+      "Facial spa",
+      "Laser hair removal service",
+      "Medical clinic",
+      "Skin care clinic",
+      "Weight loss service",
+      "Wellness center",
+      "Wellness program"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Chic la Vie",
+    "address": "7650 W Sahara Ave suite 3, Las Vegas, NV 89117",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(702) 233-8535",
+    "website": "https://chiclavie.com/",
+    "rating": 4.8,
+    "reviewCount": 421,
+    "lat": 36.1443959,
+    "lng": -115.2577815,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Chic%20la%20Vie&query_place_id=ChIJeSAqB2S_yIARsAiphLf2SLs",
+    "categories": [
+      "Medical spa",
+      "Facial spa",
+      "Health spa",
+      "Laser hair removal service",
+      "Skin care clinic",
+      "Spa",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Alena Medspa Las Vegas by Alonso Medical Center",
+    "address": "4550 E Charleston Blvd, Las Vegas, NV 89104",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(725) 377-3165",
+    "website": "https://alenamedspa.com/",
+    "rating": 5,
+    "reviewCount": 27,
+    "lat": 36.1595546,
+    "lng": -115.0756721,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Alena%20Medspa%20Las%20Vegas%20by%20Alonso%20Medical%20Center&query_place_id=ChIJs6ra_fDbyIARNDjLCUy1aw4",
+    "categories": [
+      "Medical spa",
+      "Facial spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Novuskin Med Spa",
+    "address": "7155 S Rainbow Blvd # 200, Las Vegas, NV 89118",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(702) 780-6677",
+    "website": "https://novuskin.com/",
+    "rating": 4.7,
+    "reviewCount": 2171,
+    "lat": 36.0582271,
+    "lng": -115.243655,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Novuskin%20Med%20Spa&query_place_id=ChIJM8xSBN3HyIARpjBpPhAMoiI",
+    "categories": [
+      "Medical spa",
+      "Laser hair removal service",
+      "Skin care clinic",
+      "Weight loss service",
+      "Wellness center",
+      "Wellness program"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "MDspa",
+    "address": "5052 S Jones Blvd Ste 145A, Las Vegas, NV 89118",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(702) 718-7888",
+    "website": "https://www.mdspalv.com/",
+    "rating": 4.9,
+    "reviewCount": 115,
+    "lat": 36.0966507,
+    "lng": -115.2242801,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=MDspa&query_place_id=ChIJtTiq6yPHyIARoPTHhxX095s",
+    "categories": [
+      "Medical spa",
+      "Facial spa",
+      "Hair replacement service",
+      "Laser hair removal service",
+      "Skin care clinic",
+      "Tattoo removal service",
+      "Weight loss service",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Renew Medical Spa",
+    "address": "6980 Smoke Ranch Rd #150, Las Vegas, NV 89128",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(702) 830-6571",
+    "website": "https://www.renewmedicalspalv.com/",
+    "rating": 4.9,
+    "reviewCount": 39,
+    "lat": 36.2050438,
+    "lng": -115.2459844,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Renew%20Medical%20Spa&query_place_id=ChIJkVNI7ijAyIARZj2reARsl4k",
+    "categories": [
+      "Spa",
+      "Hair removal service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Apex Medical Spa",
+    "address": "1701 Wellness Wy UNIT 201, Las Vegas, NV 89106",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(702) 444-5680",
+    "website": "http://apexmedicalspa.com/",
+    "rating": 4.4,
+    "reviewCount": 45,
+    "lat": 36.1615932,
+    "lng": -115.1640109,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Apex%20Medical%20Spa&query_place_id=ChIJAfBmvJTDyIAR28QyLDVSXts",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "The Med Spa",
+    "address": "6125 S Fort Apache Rd, Las Vegas, NV 89148",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(702) 755-7947",
+    "website": "http://www.themedspalasvegas.com/",
+    "rating": 4.9,
+    "reviewCount": 60,
+    "lat": 36.0764525,
+    "lng": -115.2986501,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The%20Med%20Spa&query_place_id=ChIJQ94xVLe5yIAR40iE1hzXUyQ",
+    "categories": [
+      "Medical spa",
+      "Laser hair removal service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Elysian Med Spa & Wellness",
+    "address": "3225 S Rainbow Blvd # 206, Las Vegas, NV 89146",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(725) 253-2002",
+    "website": "https://elysianmedspalv.com/",
+    "rating": 5,
+    "reviewCount": 61,
+    "lat": 36.1306995,
+    "lng": -115.2434323,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Elysian%20Med%20Spa%20%26%20Wellness&query_place_id=ChIJD5pX7qTzAqkRv_JBnW36ic8",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Medicis Medical Spa",
+    "address": "750 N Eastern Ave Suite 100B, Las Vegas, NV 89101",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(888) 268-0796",
+    "website": "https://medicismedicalspa.com/",
+    "rating": 4.9,
+    "reviewCount": 31,
+    "lat": 36.1770475,
+    "lng": -115.115588,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Medicis%20Medical%20Spa&query_place_id=ChIJa3y9xcDDyIARt3TuiJh--DU",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Parie Med Spa",
+    "address": "1725 Village Center Cir ste 150, Las Vegas, NV 89134",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(702) 930-6221",
+    "website": "https://pariemedspa.com/",
+    "rating": 4.9,
+    "reviewCount": 327,
+    "lat": 36.1913683,
+    "lng": -115.2995194,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Parie%20Med%20Spa&query_place_id=ChIJGSERWQC_yIARz3MfVIIJ-fc",
+    "categories": [
+      "Medical spa",
+      "Laser hair removal service",
+      "Spa and health club",
+      "Weight loss service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Flawless Medspa Las Vegas",
+    "address": "9418 W Lake Mead Blvd, Las Vegas, NV 89134",
+    "city": "Las Vegas",
+    "state": "NV",
+    "phone": "(702) 337-2526",
+    "website": "http://www.flawlessmedspas.com/",
+    "rating": 4.5,
+    "reviewCount": 221,
+    "lat": 36.2074865,
+    "lng": -115.3017995,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Flawless%20Medspa%20Las%20Vegas&query_place_id=ChIJo6h67yjAyIARJKrkviQ1yiI",
+    "categories": [
+      "Medical spa",
+      "Health and beauty shop",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Cienega Medical",
+    "address": "375 N La Cienega Blvd, Los Angeles, CA 90048",
+    "city": "Los Angeles",
+    "state": "CA",
+    "phone": "(310) 928-1300",
+    "website": "https://cienegaspa.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp-los-angeles",
+    "rating": 4.7,
+    "reviewCount": 760,
+    "lat": 34.078423,
+    "lng": -118.376869,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Cienega%20Medical&query_place_id=ChIJDUvh60W5woARpc9QXPcqgzQ",
+    "categories": [
+      "Medical spa",
+      "Dermatologist",
+      "Facial spa",
+      "Health spa",
+      "Laser hair removal service",
+      "Skin care clinic",
+      "Vitamin & supplements store",
+      "Weight loss service"
+    ],
+    "services": [
+      "Botox",
+      "Filler",
+      "Semaglutide",
+      "Laser",
+      "Iv Therapy",
+      "Weight Loss"
+    ],
+    "description": "[★★★★★4.7·3,250+ reviews](https://cienegaspa.com/locations/ \"See our locations\")·Board-Certified Dermatologist Oversight",
+    "about_text": "",
+    "brand_values": [],
+    "price_tier": "$$$$",
+    "imageUrl": null,
+    "logo": null,
+    "enriched": true,
+    "enriched_at": "2026-03-21T00:42:22.233Z"
+  },
+  {
+    "name": "Hush LA Medspa",
+    "address": "5065 Hollywood Blvd #203, Los Angeles, CA 90027",
+    "city": "Los Angeles",
+    "state": "CA",
+    "phone": "(323) 486-7339",
+    "website": "https://www.hushla.net/",
+    "rating": 4.7,
+    "reviewCount": 105,
+    "lat": 34.1020393,
+    "lng": -118.3000094,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Hush%20LA%20Medspa&query_place_id=ChIJ9eEOUGu_woARlx78uBt3peM",
+    "categories": [
+      "Medical spa",
+      "Laser hair removal service",
+      "Skin care clinic"
+    ],
+    "services": [
+      "Botox",
+      "Filler",
+      "Laser",
+      "Microneedling",
+      "Iv Therapy",
+      "Trt",
+      "Sculptra",
+      "Dysport"
+    ],
+    "description": "- [5065 Hollywood Blvd. Suite 203 Los Angeles, CA 90027](https://maps.app.goo.gl/CB8h9iBTaAMsaQgX7)",
+    "about_text": "",
+    "brand_values": [],
+    "price_tier": "$$$$",
+    "imageUrl": null,
+    "logo": null,
+    "enriched": true,
+    "enriched_at": "2026-03-21T00:42:26.169Z"
+  },
+  {
+    "name": "Bliss Point Medical Spa",
+    "address": "419 N Larchmont Blvd, Los Angeles, CA 90004",
+    "city": "Los Angeles",
+    "state": "CA",
+    "phone": "(310) 923-8451",
+    "website": "http://www.blisspointmedspa.com/",
+    "rating": 5,
+    "reviewCount": 27,
+    "lat": 34.0781173,
+    "lng": -118.3240979,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Bliss%20Point%20Medical%20Spa&query_place_id=ChIJnU_Ffo25woARcd3KVYLcrSo",
+    "categories": [
+      "Medical spa",
+      "Skin care clinic"
+    ],
+    "services": [
+      "Botox",
+      "Filler",
+      "Laser",
+      "Microneedling",
+      "Prp",
+      "Kybella",
+      "Sculptra",
+      "Dysport"
+    ],
+    "description": "![b4c81b_caa91233eb58445689e27accb9fc91ea~mv2_edited.png](https://static.wixstatic.com/media/b4c81b_0bbe3561ea534073b5e97cd7540ff03f~mv2.png/v1/fill/w_318,h_268,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/b4c81b_caa91233eb58445689e27accb9fc91ea~mv2_edited.png)",
+    "about_text": "",
+    "brand_values": [],
+    "price_tier": "$$$",
+    "imageUrl": null,
+    "logo": null,
+    "enriched": true,
+    "enriched_at": "2026-03-21T00:42:28.987Z"
+  },
+  {
+    "name": "Los Feliz Med Spa",
+    "address": "2107 Hillhurst Ave, Los Angeles, CA 90027",
+    "city": "Los Angeles",
+    "state": "CA",
+    "phone": "(323) 664-0186",
+    "website": "http://www.losfelizmedspa.com/",
+    "rating": 4.7,
+    "reviewCount": 70,
+    "lat": 34.11027,
+    "lng": -118.287655,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Los%20Feliz%20Med%20Spa&query_place_id=ChIJ8zCJ0rrAwoARhEUHBFe_M1s",
+    "categories": [
+      "Medical spa",
+      "Facial spa",
+      "Hair removal service",
+      "Medical office",
+      "Skin care clinic"
+    ],
+    "services": [
+      "Botox",
+      "Filler",
+      "Laser",
+      "Coolsculpting"
+    ],
+    "description": "HOME[losfelizwebmaster](https://losfelizmedspa.com/author/losfelizwebmaster/ \"Posts by losfelizwebmaster\")2024-10-07T05:10:18+00:00",
+    "about_text": "",
+    "brand_values": [],
+    "price_tier": "$$$",
+    "imageUrl": "https://losfelizmedspa.com/wp-content/uploads/2025/07/lfm150.jpg",
+    "logo": null,
+    "enriched": true,
+    "enriched_at": "2026-03-21T00:42:34.231Z"
+  },
+  {
+    "name": "R&J Medspa",
+    "address": "1110 S Western Ave, Los Angeles, CA 90006",
+    "city": "Los Angeles",
+    "state": "CA",
+    "phone": "(213) 220-8852",
+    "website": "http://www.rjmedspa.com/",
+    "rating": 5,
+    "reviewCount": 90,
+    "lat": 34.050422,
+    "lng": -118.3086145,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=R%26J%20Medspa&query_place_id=ChIJK3awoNy5woARFo0ZkgtWGLo",
+    "categories": [
+      "Medical spa",
+      "Laser hair removal service",
+      "Plastic surgery clinic",
+      "Skin care clinic"
+    ],
+    "services": [
+      "Botox",
+      "Laser"
+    ],
+    "description": "![](https://static.wixstatic.com/media/913019_424bc6e525ff49bfba18620958e8e1bf~mv2_d_5891_2177_s_2.jpg/v1/fill/w_1904,h_651,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/913019_424bc6e525ff49bfba18620958e8e1bf~mv2_d_5891_2177_s_2.jpg)",
+    "about_text": "",
+    "brand_values": [],
+    "price_tier": "$$",
+    "imageUrl": null,
+    "logo": null,
+    "enriched": true,
+    "enriched_at": "2026-03-21T00:42:38.104Z"
+  },
+  {
+    "name": "MedBeautyLA",
+    "address": "1100 S Hope St #101, Los Angeles, CA 90015",
+    "city": "Los Angeles",
+    "state": "CA",
+    "phone": "(213) 640-4008",
+    "website": "https://medbeautyla.com/",
+    "rating": 4.7,
+    "reviewCount": 142,
+    "lat": 34.0416884,
+    "lng": -118.2630878,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=MedBeautyLA&query_place_id=ChIJF_xD26zHwoARzFMHBAq8x5w",
+    "categories": [
+      "Medical spa",
+      "Facial spa",
+      "Laser hair removal service",
+      "Skin care clinic"
+    ],
+    "services": [
+      "Botox",
+      "Filler",
+      "Laser",
+      "Microneedling",
+      "Prp",
+      "Coolsculpting",
+      "Sculptra"
+    ],
+    "description": "MARCH SPECIAL: SPRING SKIN STACK — SCULPTRA + SKIN VIVE + FREE PLATED SERUM \\| USE CODE **SPRINGSTACK** \\| [VIEW DETAILS →](https://www.medbeautyla.com/march-special-2026)",
+    "about_text": "",
+    "brand_values": [],
+    "price_tier": "$$$",
+    "imageUrl": null,
+    "logo": null,
+    "enriched": true,
+    "enriched_at": "2026-03-21T00:42:42.215Z"
+  },
+  {
+    "name": "Sculpt Med Spa Downtown Los Angeles",
+    "address": "700 W 7th St Suite G240, Los Angeles, CA 90017",
+    "city": "Los Angeles",
+    "state": "CA",
+    "phone": "(213) 265-7285",
+    "website": "https://www.sculptdtla.com/",
+    "rating": 4.8,
+    "reviewCount": 209,
+    "lat": 34.0482017,
+    "lng": -118.258171,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Sculpt%20Med%20Spa%20Downtown%20Los%20Angeles&query_place_id=ChIJ6RYbr7XHwoARV94gTOPGDBk",
+    "categories": [
+      "Medical spa",
+      "Laser hair removal service",
+      "Medical clinic",
+      "Skin care clinic",
+      "Spa",
+      "Tattoo removal service"
+    ],
+    "services": [
+      "Botox",
+      "Filler",
+      "Laser",
+      "Microneedling",
+      "Peptide",
+      "Coolsculpting",
+      "Sculptra"
+    ],
+    "description": "![](https://sculptdtla.com/wp-content/uploads/2025/12/sculpt-icon.png)",
+    "about_text": "",
+    "brand_values": [],
+    "price_tier": "$$$$",
+    "imageUrl": "https://sculptdtla.com/wp-content/uploads/2025/12/sculpt-icon.png",
+    "logo": null,
+    "enriched": true,
+    "enriched_at": "2026-03-21T00:42:44.859Z"
+  },
+  {
+    "name": "IVE MEDICAL SPA",
+    "address": "356 S Western Ave #206, Los Angeles, CA 90020",
+    "city": "Los Angeles",
+    "state": "CA",
+    "phone": "(213) 663-2333",
+    "website": "https://ivemedicalspa.com/",
+    "rating": 4.7,
+    "reviewCount": 127,
+    "lat": 34.0673331,
+    "lng": -118.3088362,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=IVE%20MEDICAL%20SPA&query_place_id=ChIJ33BAyly5woARb65oJ3BJlLY",
+    "categories": [
+      "Medical spa",
+      "Skin care clinic"
+    ],
+    "services": [
+      "Botox",
+      "Filler",
+      "Laser",
+      "Hydrafacial",
+      "Microneedling",
+      "Iv Therapy",
+      "Weight Loss"
+    ],
+    "description": "Depending on your specific skin concerns, a skincare professional can customize the treatment to target your individual needs.",
+    "about_text": "",
+    "brand_values": [],
+    "price_tier": "$$$",
+    "imageUrl": "https://ivemedicalspa.com/wp-content/uploads/2023/03/mainslider1.jpg",
+    "logo": null,
+    "enriched": true,
+    "enriched_at": "2026-03-21T00:42:49.704Z"
+  },
+  {
+    "name": "Health Med Spa IV Therapy – Los Angeles",
+    "address": "3706 E Cesar E Chavez Ave, Los Angeles, CA 90063",
+    "city": "Los Angeles",
+    "state": "CA",
+    "phone": "(323) 604-9868",
+    "website": "https://www.healthmedspa.com/",
+    "rating": 4.9,
+    "reviewCount": 75,
+    "lat": 34.04033,
+    "lng": -118.1855402,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Health%20Med%20Spa%20IV%20Therapy%20%E2%80%93%20Los%20Angeles&query_place_id=ChIJhzfgKdnPwoAR0Wsj82s4Gas",
+    "categories": [
+      "Spa"
+    ],
+    "services": [
+      "Iv Therapy",
+      "Weight Loss"
+    ],
+    "description": "Discover how IV Therapy, Cryotherapy, and Weight Loss Injections can enhance your well-being and support your health goals.",
+    "about_text": "",
+    "brand_values": [],
+    "price_tier": "$$$",
+    "imageUrl": null,
+    "logo": null,
+    "enriched": true,
+    "enriched_at": "2026-03-21T00:42:51.807Z"
+  },
+  {
+    "name": "Skin Story Med Spa",
+    "address": "877 Francisco St Ste 277, Studio 14, Los Angeles, CA 90017",
+    "city": "Los Angeles",
+    "state": "CA",
+    "phone": "(323) 577-2311",
+    "website": "http://www.skinstorymedspa.com/",
+    "rating": 5,
+    "reviewCount": 35,
+    "lat": 34.0484553,
+    "lng": -118.2634744,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Skin%20Story%20Med%20Spa&query_place_id=ChIJ7wujxeKRKqkRByW40VUc5R4",
+    "categories": [
+      "Medical spa"
+    ],
+    "services": [
+      "Botox",
+      "Microneedling",
+      "Prp"
+    ],
+    "description": "Are you struggling with unwanted signs of aging or skin concerns? Look no further. Our team of experts is here to help you regain your confidence and achieve your aesthetic goals. With our state-of-the-art treatments and personalized approach, we are committed to providing you with exceptional care ",
+    "about_text": "",
+    "brand_values": [],
+    "price_tier": "$$$",
+    "imageUrl": "https://d2t6o06vr3cm40.cloudfront.net/2023/09/18/19/30/30/c206afe1-c8e1-4280-ad78-ebbb4130a9aa/pexels-cottonbro-studio-4065884.jpg",
+    "logo": null,
+    "enriched": true,
+    "enriched_at": "2026-03-21T00:42:55.422Z"
+  },
+  {
+    "name": "Chena Hot Springs Resort",
+    "address": "17600 Chena Hot Springs Rd, Fairbanks, AK 99712",
+    "city": "Los Angeles",
+    "state": "CA",
+    "phone": "(907) 451-8104",
+    "website": "https://chenahotsprings.com/",
+    "rating": 4.2,
+    "reviewCount": 5690,
+    "lat": 65.0529615,
+    "lng": -146.0590978,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Chena%20Hot%20Springs%20Resort&query_place_id=ChIJywz2uKzYM1ERBj9v-A-EaTs",
+    "categories": [
+      "Resort hotel",
+      "Massage spa",
+      "Museum",
+      "Outdoor activity organiser",
+      "Restaurant",
+      "Thermal baths",
+      "Tourist attraction"
+    ],
+    "services": [],
+    "description": "[Download File: https://chenahotsprings.com/wp-content/uploads/2021/05/new-chena-vid-1.mp4](https://chenahotsprings.com/wp-content/uploads/2021/05/new-chena-vid-1.mp4)",
+    "about_text": "",
+    "brand_values": [],
+    "price_tier": "$$",
+    "imageUrl": "https://chenahotsprings.com/wp-content/uploads/2020/05/Chena-Hot-Springs-Resort.png",
+    "logo": null,
+    "enriched": true,
+    "enriched_at": "2026-03-21T00:43:01.153Z"
+  },
+  {
+    "name": "Bright Medical Spa",
+    "address": "6370 Sunset Blvd Unit 505, Los Angeles, CA 90028",
+    "city": "Los Angeles",
+    "state": "CA",
+    "phone": "(424) 653-9278",
+    "website": "http://www.bright-medical-spa.com/",
+    "rating": 5,
+    "reviewCount": 82,
+    "lat": 34.0970708,
+    "lng": -118.3285701,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Bright%20Medical%20Spa&query_place_id=ChIJu4fJrcG_woARMe6cjR_J9gA",
+    "categories": [
+      "Medical spa",
+      "Medical clinic",
+      "Walk-in clinic",
+      "Wellness center"
+    ],
+    "services": [
+      "Botox",
+      "Filler",
+      "Microneedling",
+      "Iv Therapy",
+      "Prp"
+    ],
+    "description": "![](https://static.wixstatic.com/media/a21fba00102e468798c2aeb9f70d06f5.jpg/v1/fill/w_800,h_417,al_c,q_80,enc_avif,quality_auto/a21fba00102e468798c2aeb9f70d06f5.jpg)",
+    "about_text": "",
+    "brand_values": [],
+    "price_tier": "$$$",
+    "imageUrl": null,
+    "logo": null,
+    "enriched": true,
+    "enriched_at": "2026-03-21T00:43:04.935Z"
+  },
+  {
+    "name": "West Empire Aesthetics",
+    "address": "11645 Wilshire Blvd # 1155, Los Angeles, CA 90025",
+    "city": "Los Angeles",
+    "state": "CA",
+    "phone": "(424) 273-9732",
+    "website": "https://westempireaesthetics.com/",
+    "rating": 5,
+    "reviewCount": 344,
+    "lat": 34.0502548,
+    "lng": -118.4603285,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=West%20Empire%20Aesthetics&query_place_id=ChIJJ1XaLRy7woARL6ADbLaLPKs",
+    "categories": [
+      "Skin care clinic",
+      "Medical spa"
+    ],
+    "services": [
+      "Botox",
+      "Filler",
+      "Laser"
+    ],
+    "description": "![banner 1.2xz](https://westempireaesthetics.com/wp-content/uploads/2024/10/banner_1.2xz.jpg)",
+    "about_text": "",
+    "brand_values": [],
+    "price_tier": "$$$",
+    "imageUrl": "https://westempireaesthetics.com/wp-content/uploads/2024/10/banner_1.2xz.jpg",
+    "logo": null,
+    "enriched": true,
+    "enriched_at": "2026-03-21T00:43:06.319Z"
+  },
+  {
+    "name": "me.losangeles aesthetics",
+    "address": "9201 Sunset Blvd Suite 212, West Hollywood, CA 90069",
+    "city": "Los Angeles",
+    "state": "CA",
+    "phone": "(213) 583-5905",
+    "website": "https://www.melosangeles.com/",
+    "rating": 5,
+    "reviewCount": 156,
+    "lat": 34.0909518,
+    "lng": -118.3925134,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=me.losangeles%20aesthetics&query_place_id=ChIJdeA9JHK_woARXuIbtkLyRUU",
+    "categories": [
+      "Medical spa"
+    ],
+    "services": [
+      "Botox",
+      "Filler",
+      "Microneedling",
+      "Iv Therapy",
+      "Prp",
+      "Kybella",
+      "Sculptra",
+      "Chemical Peel"
+    ],
+    "description": "![logo](https://sa1s3optim.patientpop.com/filters:format(webp)/sc-assets/prd/practices/ae65ec75-77f0-4f77-ab74-86d7efa3a56e/Logo_light-01.png)",
+    "about_text": "",
+    "brand_values": [],
+    "price_tier": "$$$",
+    "imageUrl": null,
+    "logo": null,
+    "enriched": true,
+    "enriched_at": "2026-03-21T00:43:07.644Z"
+  },
+  {
+    "name": "Vivant Aesthetics",
+    "address": "7472 Melrose Ave, Los Angeles, CA 90046",
+    "city": "Los Angeles",
+    "state": "CA",
+    "phone": "(323) 431-8981",
+    "website": "http://www.vivantaesthetics.com/",
+    "rating": 4.9,
+    "reviewCount": 91,
+    "lat": 34.0835031,
+    "lng": -118.3529264,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Vivant%20Aesthetics&query_place_id=ChIJCXOnuYq_woAR7MgoSmJT4LI",
+    "categories": [
+      "Skin care clinic",
+      "Medical spa"
+    ],
+    "services": [
+      "Botox",
+      "Laser"
+    ],
+    "description": "[![VIVANT AESTHETICS](https://images.squarespace-cdn.com/content/v1/5ce1c5eb1ecba20001733dc2/1558315335678-K5TEQRUTCBN2VN8TFHCY/VA_Logo_Pad.png)](https://www.vivantaesthetics.com/)[Search](https://www.vivantaesthetics.com/search)",
+    "about_text": "",
+    "brand_values": [],
+    "price_tier": "$$$",
+    "imageUrl": "http://static1.squarespace.com/static/5ce1c5eb1ecba20001733dc2/t/5ce20147b6e19700014037f8/1558315336995/VA_Logo_Pad.png?format=1500w",
+    "logo": null,
+    "enriched": true,
+    "enriched_at": "2026-03-21T00:43:08.970Z"
+  },
+  {
+    "name": "Kian Aesthetic Institute",
+    "address": "12301 Wilshire Blvd #600, Los Angeles, CA 90025",
+    "city": "Los Angeles",
+    "state": "CA",
+    "phone": "(310) 295-6422",
+    "website": "https://www.thekianinstitute.com/",
+    "rating": 5,
+    "reviewCount": 360,
+    "lat": 34.0427841,
+    "lng": -118.4697163,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Kian%20Aesthetic%20Institute&query_place_id=ChIJKejX2WC7woARg29KU_wdJ2A",
+    "categories": [
+      "Skin care clinic",
+      "Plastic surgery clinic",
+      "Medical spa"
+    ],
+    "services": [
+      "Botox",
+      "Filler",
+      "Laser"
+    ],
+    "description": "![](https://images.squarespace-cdn.com/content/v1/67770298a2db76294b60afda/b3d80bf9-3679-4fd7-a3be-089029e44718/KAI+White+Logo+Lockup+for+site.png)",
+    "about_text": "",
+    "brand_values": [],
+    "price_tier": "$$$",
+    "imageUrl": "http://static1.squarespace.com/static/67770298a2db76294b60afda/t/677d96c585cf2c2e29377a6e/1743807736486/KAI+Google+Biz.jpg?format=1500w",
+    "logo": null,
+    "enriched": true,
+    "enriched_at": "2026-03-21T00:43:10.262Z"
+  },
+  {
+    "name": "My Aesthetic Doctor",
+    "address": "321 N Larchmont Blvd #505, Los Angeles, CA 90004",
+    "city": "Los Angeles",
+    "state": "CA",
+    "phone": "(323) 784-0577",
+    "website": "https://www.myaestheticdoctor.com/?utm_source=GMB&utm_medium=organic&utm_campaign=losangeles",
+    "rating": 5,
+    "reviewCount": 204,
+    "lat": 34.0768116,
+    "lng": -118.3238246,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=My%20Aesthetic%20Doctor&query_place_id=ChIJV7R8zb-5woARTWgbtfX-Li8",
+    "categories": [
+      "Medical clinic",
+      "Doctor"
+    ],
+    "services": [
+      "Botox",
+      "Filler",
+      "Microneedling",
+      "Chemical Peel"
+    ],
+    "description": "**_The Best You Is What We Do_Look, Feel & Be Your**Best Self****",
+    "about_text": "",
+    "brand_values": [],
+    "price_tier": "$$$",
+    "imageUrl": "images/social-share-img.jpg",
+    "logo": null,
+    "enriched": true,
+    "enriched_at": "2026-03-21T00:43:12.684Z"
+  },
+  {
+    "name": "Harmony Aesthetics Center",
+    "address": "11959 Santa Monica Blvd, Los Angeles, CA 90025",
+    "city": "Los Angeles",
+    "state": "CA",
+    "phone": "(424) 372-9088",
+    "website": "https://www.harmonyaestheticscenter.com/?utm_source=gbp&utm_medium=organic&utm_campaign=google_business_organic_la",
+    "rating": 5,
+    "reviewCount": 255,
+    "lat": 34.0414695,
+    "lng": -118.4619445,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Harmony%20Aesthetics%20Center&query_place_id=ChIJWwdYPhe7woARkSaoSSG1hlU",
+    "categories": [
+      "Medical spa",
+      "Facial spa",
+      "Hair removal service",
+      "Hair replacement service",
+      "Laser hair removal service",
+      "Weight loss service",
+      "Wellness center"
+    ],
+    "services": [
+      "Botox",
+      "Filler",
+      "Laser",
+      "Weight Loss"
+    ],
+    "description": "Experience personalized well-being like never before with our array of transformative services. Unleash your inner radiance with our advanced aesthetic treatments, indulge in moments of renewal with our rejuvenation therapies, and embrace cutting-edge biohacking for true holistic wellness. Our dedic",
+    "about_text": "",
+    "brand_values": [],
+    "price_tier": "$$$",
+    "imageUrl": "https://cdn.prod.website-files.com/654cd6285c539c73dc25afaa/654cd6e6dbb70a39fcf32803_Find-your-harmony-1.jpg",
+    "logo": null,
+    "enriched": true,
+    "enriched_at": "2026-03-21T00:43:14.058Z"
+  },
+  {
+    "name": "Double J Medical Aesthetics and Hair Clinic",
+    "address": "4465 Wilshire Blvd #204, Los Angeles, CA 90010",
+    "city": "Los Angeles",
+    "state": "CA",
+    "phone": "(213) 808-7780",
+    "website": "https://www.doublejaesthetics.com/",
+    "rating": 5,
+    "reviewCount": 514,
+    "lat": 34.0622128,
+    "lng": -118.3264242,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Double%20J%20Medical%20Aesthetics%20and%20Hair%20Clinic&query_place_id=ChIJ72oLsua5woARbT6BTIo7vH8",
+    "categories": [
+      "Skin care clinic",
+      "Medical spa"
+    ],
+    "services": [],
+    "description": "![](https://static.wixstatic.com/media/11062b_cb0c4d13153f4008920bb26beda8de0ff000.jpg/v1/fill/w_1904,h_690,al_c,q_85,usm_0.33_1.00_0.00,enc_avif,quality_auto/11062b_cb0c4d13153f4008920bb26beda8de0ff000.jpg)",
+    "about_text": "",
+    "brand_values": [],
+    "price_tier": "$$$",
+    "imageUrl": null,
+    "logo": null,
+    "enriched": true,
+    "enriched_at": "2026-03-21T00:43:17.169Z"
+  },
+  {
+    "name": "Beverly Hills Aesthetics",
+    "address": "640 S San Vicente Blvd Ste 210, Los Angeles, CA 90048",
+    "city": "Los Angeles",
+    "state": "CA",
+    "phone": "(424) 284-8933",
+    "website": "https://www.bhaesthetics.com/?utm_source=google&utm_medium=organic&utm_campaign=gmb",
+    "rating": 4.8,
+    "reviewCount": 94,
+    "lat": 34.0654638,
+    "lng": -118.3724056,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Beverly%20Hills%20Aesthetics&query_place_id=ChIJdaHFtOS7woAR1FxwRyGmwPY",
+    "categories": [
+      "Plastic surgery clinic",
+      "Plastic surgeon"
+    ],
+    "services": [
+      "Botox",
+      "Filler",
+      "Laser",
+      "Microneedling",
+      "Chemical Peel"
+    ],
+    "description": "[Skip to main content](https://www.bhaesthetics.com/#content)",
+    "about_text": "",
+    "brand_values": [],
+    "price_tier": "$$$",
+    "imageUrl": "https://www.bhaesthetics.com/wp-content/uploads/2023/10/insidebanner_learnandplan-1.jpg",
+    "logo": null,
+    "enriched": true,
+    "enriched_at": "2026-03-21T00:43:18.521Z"
+  },
+  {
+    "name": "The Beez Kneez Skin Care & Acne Clinic",
+    "address": "1406A Valencia St, San Francisco, CA 94110",
+    "city": "Los Angeles",
+    "state": "CA",
+    "phone": "",
+    "website": "http://thebeezkneezsf.com/",
+    "rating": 5,
+    "reviewCount": 71,
+    "lat": 37.7503671,
+    "lng": -122.4206774,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The%20Beez%20Kneez%20Skin%20Care%20%26%20Acne%20Clinic&query_place_id=ChIJV-U2io6AhYARk6FeFSJz0lE",
+    "categories": [
+      "Skin care clinic",
+      "Beauty product supplier",
+      "Facial spa"
+    ],
+    "services": [
+      "Chemical Peel"
+    ],
+    "description": "![](https://images.squarespace-cdn.com/content/v1/65d919a4be31a8689d1f9723/685dcee8-b9ca-48f7-9d24-d0dc51fed89e/GettyImages-1313487546.jpg)",
+    "about_text": "",
+    "brand_values": [],
+    "price_tier": "$$$",
+    "imageUrl": "http://static1.squarespace.com/static/65d919a4be31a8689d1f9723/t/66d0cd8f45fe453540fbb1fb/1724960143318/icon+jpg.jpeg?format=1500w",
+    "logo": null,
+    "enriched": true,
+    "enriched_at": "2026-03-21T00:43:21.717Z"
+  },
+  {
+    "name": "The Sunset Aesthetics",
+    "address": "1509 Sunset Blvd STE A, Los Angeles, CA 90026",
+    "city": "Los Angeles",
+    "state": "CA",
+    "phone": "(213) 354-0015",
+    "website": "http://thesunsetaesthetics.com/",
+    "rating": 5,
+    "reviewCount": 44,
+    "lat": 34.0761359,
+    "lng": -118.2553804,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The%20Sunset%20Aesthetics&query_place_id=ChIJt1wvLdjHwoARzn1MDi8Pb0A",
+    "categories": [
+      "Medical spa"
+    ],
+    "services": [
+      "Filler"
+    ],
+    "description": "Limited time 10% off when you follow us on SM 15% off when you leave a comment",
+    "about_text": "",
+    "brand_values": [],
+    "price_tier": "$$$",
+    "imageUrl": "https://img1.wsimg.com/isteam/ip/9894d59a-17a2-4dac-8cb0-48187105c27d/blob.png",
+    "logo": null,
+    "enriched": true,
+    "enriched_at": "2026-03-21T00:43:24.000Z"
+  },
+  {
+    "name": "Aesthetica clinic",
+    "address": "322 S Robertson Blvd, Los Angeles, CA 90048",
+    "city": "Los Angeles",
+    "state": "CA",
+    "phone": "(213) 806-9660",
+    "website": "http://aestheticabh.com/",
+    "rating": 4.6,
+    "reviewCount": 20,
+    "lat": 34.0728663,
+    "lng": -118.3835455,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Aesthetica%20clinic&query_place_id=ChIJa39BdzG5woARvRUuW3r2PPg",
+    "categories": [
+      "Medical spa"
+    ],
+    "services": [],
+    "description": "This account has expired. If you are the site owner, click below to login.",
+    "about_text": "",
+    "brand_values": [],
+    "price_tier": "$$$",
+    "imageUrl": null,
+    "logo": null,
+    "enriched": true,
+    "enriched_at": "2026-03-21T00:43:26.559Z"
+  },
+  {
+    "name": "Deluxe Cosmetic Center",
+    "address": "2630 W Olympic Blvd, Los Angeles, CA 90006",
+    "city": "Los Angeles",
+    "state": "CA",
+    "phone": "(213) 900-9777",
+    "website": "https://www.deluxecosmeticcenter.com/",
+    "rating": 4.8,
+    "reviewCount": 340,
+    "lat": 34.0521615,
+    "lng": -118.2894709,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Deluxe%20Cosmetic%20Center&query_place_id=ChIJG9nPM6HHwoARqCC5R15AYcI",
+    "categories": [
+      "Skin care clinic",
+      "Medical spa"
+    ],
+    "services": [
+      "Laser",
+      "Hydrafacial",
+      "Prp"
+    ],
+    "description": "More Info](https://deluxecosmeticcenter.com/non-surgical/emsculpt-neo/)",
+    "about_text": "",
+    "brand_values": [],
+    "price_tier": "$$$",
+    "imageUrl": null,
+    "logo": null,
+    "enriched": true,
+    "enriched_at": "2026-03-21T00:43:27.829Z"
+  },
+  {
+    "name": "Santa Monica Medical Aesthetics",
+    "address": "1821 Wilshire Blvd #605, Santa Monica, CA 90403",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(310) 403-9576",
+    "website": "https://santamonicamedicalaesthetics.com/",
+    "rating": 5,
+    "reviewCount": 35,
+    "lat": 34.0306025,
+    "lng": -118.4847327,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Santa%20Monica%20Medical%20Aesthetics&query_place_id=ChIJCbBA0oalwoARoLWwp_FVQ1U",
+    "categories": [
+      "Medical spa",
+      "Skin care clinic",
+      "Tanning salon",
+      "Teeth whitening service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Ocean Aesthetics",
+    "address": "2222 Santa Monica Blvd #201, Santa Monica, CA 90404",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(310) 829-4449",
+    "website": "https://theoceanaesthetics.com/",
+    "rating": 4.9,
+    "reviewCount": 53,
+    "lat": 34.0303795,
+    "lng": -118.4776012,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Ocean%20Aesthetics&query_place_id=ChIJ-8e1_Um7woAR5M6CjuCeUDI",
+    "categories": [
+      "Skin care clinic",
+      "Facial spa",
+      "Laser hair removal service",
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "SkinCeuticals SkinLab Santa Monica by Cavendish Clinic",
+    "address": "2801 Main St, Santa Monica, CA 90405",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(310) 310-2003",
+    "website": "http://www.skinlab-la.com/",
+    "rating": 4.9,
+    "reviewCount": 157,
+    "lat": 34.0003724,
+    "lng": -118.4815814,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=SkinCeuticals%20SkinLab%20Santa%20Monica%20by%20Cavendish%20Clinic&query_place_id=ChIJLdS8Dru7woARjiz3haI_UbM",
+    "categories": [
+      "Medical clinic",
+      "Facial spa",
+      "Skin care clinic",
+      "Weight loss service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Younique Surgery Center & Medical Spa - Santa Monica",
+    "address": "1317 5th St #200, Santa Monica, CA 90401",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(424) 622-0502",
+    "website": "https://www.youniquecosmeticsurgery.com/?utm_source=google&utm_medium=organic&utm_campaign=google_business_profile&utm_content=santa_monica",
+    "rating": 4.9,
+    "reviewCount": 230,
+    "lat": 34.0182668,
+    "lng": -118.4951174,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Younique%20Surgery%20Center%20%26%20Medical%20Spa%20-%20Santa%20Monica&query_place_id=ChIJoa_xHNGkwoARiaI2f-806CY",
+    "categories": [
+      "Plastic surgery clinic",
+      "Medical spa",
+      "Skin care clinic",
+      "Weight loss service",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "NakedMD Med Spa Santa Monica",
+    "address": "2730 Wilshire Blvd #200, Santa Monica, CA 90403",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(424) 228-9778",
+    "website": "https://www.nakedmd.com/pages/locations-santa-monica-ca",
+    "rating": 4.9,
+    "reviewCount": 431,
+    "lat": 34.037082,
+    "lng": -118.4756741,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=NakedMD%20Med%20Spa%20Santa%20Monica&query_place_id=ChIJj9wJhgC7woARIYF39Dti9ck",
+    "categories": [
+      "Medical spa",
+      "Facial spa",
+      "Health and beauty shop",
+      "Skin care clinic"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Skin by Lovely",
+    "address": "2811 Wilshire Blvd # 900, Santa Monica, CA 90403",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(877) 568-3594",
+    "website": "https://www.skinbylovely.com/",
+    "rating": 5,
+    "reviewCount": 541,
+    "lat": 34.0379064,
+    "lng": -118.4753998,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Skin%20by%20Lovely&query_place_id=ChIJYVj9Z0-7woAR4qn2QBt_HUI",
+    "categories": [
+      "Medical spa",
+      "Medical clinic",
+      "Skin care clinic"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "KAO Aesthetics",
+    "address": "900 Wilshire Blvd Suite 100, Santa Monica, CA 90401",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(310) 315-3022",
+    "website": "https://www.kaoaesthetics.com/",
+    "rating": 4.7,
+    "reviewCount": 35,
+    "lat": 34.0230014,
+    "lng": -118.4931476,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=KAO%20Aesthetics&query_place_id=ChIJSdGvF0q7woARoPMLGfgJpbg",
+    "categories": [
+      "Skin care clinic",
+      "Laser hair removal service",
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Alchemy 43 Santa Monica",
+    "address": "1230 Montana Ave, Santa Monica, CA 90403",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(310) 554-7343",
+    "website": "https://alchemy43.com/",
+    "rating": 4.4,
+    "reviewCount": 105,
+    "lat": 34.0311232,
+    "lng": -118.4962056,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Alchemy%2043%20Santa%20Monica&query_place_id=ChIJLcoILM6lwoARQGPlsg4LEco",
+    "categories": [
+      "Medical spa",
+      "Skin care clinic"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Ocean Avenue Aesthetics",
+    "address": "1327 Ocean Ave Ste E, Santa Monica, CA 90401",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(310) 310-3850",
+    "website": "http://oceanavenueaesthetics.com/",
+    "rating": 5,
+    "reviewCount": 8,
+    "lat": 34.0150674,
+    "lng": -118.498615,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Ocean%20Avenue%20Aesthetics&query_place_id=ChIJXTDRkOalwoARqGGL6xGXZDE",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Cienega Medical - Santa Monica",
+    "address": "902 Broadway, Santa Monica, CA 90401",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(310) 341-2741",
+    "website": "https://cienegaspa.com/",
+    "rating": 4.8,
+    "reviewCount": 571,
+    "lat": 34.018914,
+    "lng": -118.488588,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Cienega%20Medical%20-%20Santa%20Monica&query_place_id=ChIJFSrFBM2kwoAR3tM39r1mS5M",
+    "categories": [
+      "Medical spa",
+      "Dermatologist",
+      "Facial spa",
+      "Laser hair removal service",
+      "Skin care clinic",
+      "Vitamin & supplements store",
+      "Weight loss service",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Harmony Aesthetics Center",
+    "address": "11959 Santa Monica Blvd, Los Angeles, CA 90025",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(424) 372-9088",
+    "website": "https://www.harmonyaestheticscenter.com/?utm_source=gbp&utm_medium=organic&utm_campaign=google_business_organic_la",
+    "rating": 5,
+    "reviewCount": 255,
+    "lat": 34.0414695,
+    "lng": -118.4619445,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Harmony%20Aesthetics%20Center&query_place_id=ChIJWwdYPhe7woARkSaoSSG1hlU",
+    "categories": [
+      "Medical spa",
+      "Facial spa",
+      "Hair removal service",
+      "Hair replacement service",
+      "Laser hair removal service",
+      "Weight loss service",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Holländer Clinic",
+    "address": "2730 Wilshire Blvd # 265, Santa Monica, CA 90403",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(310) 388-9854",
+    "website": "https://www.hollanderclinic.com/?utm_source=GMBlisting&utm_medium=organic&utm_campaign=gmb",
+    "rating": 5,
+    "reviewCount": 16,
+    "lat": 34.0371068,
+    "lng": -118.4757332,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Holl%C3%A4nder%20Clinic&query_place_id=ChIJo6Y_DNe7woARgCj_dU29TZI",
+    "categories": [
+      "Skin care clinic",
+      "Facial spa",
+      "Hair replacement service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Dakota Aesthetics",
+    "address": "1150 Yale St, Santa Monica, CA 90403",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(818) 427-9845",
+    "website": "http://www.dakotaaesthetics.com/",
+    "rating": 5,
+    "reviewCount": 20,
+    "lat": 34.0383661,
+    "lng": -118.4750599,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Dakota%20Aesthetics&query_place_id=ChIJEbbKUQC7woARRLvtD2ukPuU",
+    "categories": [
+      "Skin care clinic"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Restore Hyper Wellness",
+    "address": "1130 Market St, Lynnfield, MA 01940",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(781) 650-8487",
+    "website": "http://www.restore.com/locations/ma-lynnfield-ma004?utm_source=gmb&utm_medium=Yext&y_source=1_NjMzNjc2MTItNzE1LWxvY2F0aW9uLndlYnNpdGU%3D",
+    "rating": 4.9,
+    "reviewCount": 399,
+    "lat": 42.5172049,
+    "lng": -71.0358729,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Restore%20Hyper%20Wellness&query_place_id=ChIJi0MY-IoN44kRgxWY8FNsAes",
+    "categories": [
+      "Medical spa",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Restore Hyper Wellness",
+    "address": "340 Grand Union Blvd Unit C, Somerville, MA 02145",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(617) 600-3660",
+    "website": "http://www.restore.com/locations/ma-somerville-ma014?utm_source=gmb&utm_medium=Yext&y_source=1_OTg2OTkwODEtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D",
+    "rating": 5,
+    "reviewCount": 186,
+    "lat": 42.3918633,
+    "lng": -71.0802664,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Restore%20Hyper%20Wellness&query_place_id=ChIJ_3lfJtlw44kRhQUM0cH7zqc",
+    "categories": [
+      "Medical spa",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Kalologie | Santa Monica",
+    "address": "2530 San Vicente Blvd, Santa Monica, CA 90402",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(310) 310-3776",
+    "website": "https://kalologie.com/our-locations/kalologie-in-santa-monica",
+    "rating": 4.8,
+    "reviewCount": 40,
+    "lat": 34.0480606,
+    "lng": -118.4919403,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Kalologie%20%7C%20Santa%20Monica&query_place_id=ChIJUXc9FCCjwoARRharjQfVk9c",
+    "categories": [
+      "Medical spa",
+      "Facial spa",
+      "IV therapy service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Restore Hyper Wellness",
+    "address": "55 Needham St, Newton, MA 02461",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(617) 467-5728",
+    "website": "https://www.restore.com/locations/ma-newton-ma003?utm_source=gmb&utm_medium=Yext&y_source=1_MzE2Mjk4NzQtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D",
+    "rating": 4.9,
+    "reviewCount": 236,
+    "lat": 42.3155123,
+    "lng": -71.2106566,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Restore%20Hyper%20Wellness&query_place_id=ChIJmw6-MRGD44kRNRmObW8-CCQ",
+    "categories": [
+      "Medical spa",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Restore Hyper Wellness",
+    "address": "345 N Main St Suite 105, West Hartford, CT 06117",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(860) 945-4300",
+    "website": "https://www.restore.com/locations/ct-west-hartford-ct015?utm_source=gmb&utm_medium=Yext&y_source=1_MzE2Mjk4MzktNzE1LWxvY2F0aW9uLndlYnNpdGU%3D",
+    "rating": 4.8,
+    "reviewCount": 232,
+    "lat": 41.785189,
+    "lng": -72.7479087,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Restore%20Hyper%20Wellness&query_place_id=ChIJJz8FzBmr54kRG5sXBzUU2eM",
+    "categories": [
+      "Medical spa",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Santa Monica MedSpa",
+    "address": "1908 Santa Monica Blvd Ste3, Santa Monica, CA 90404",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(310) 829-5475",
+    "website": "https://santamonicamedspa.md/",
+    "rating": null,
+    "reviewCount": 0,
+    "lat": 34.0280316,
+    "lng": -118.4806515,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Santa%20Monica%20MedSpa&query_place_id=ChIJn9yLg5S7woARLvD5XiEJlP4",
+    "categories": [
+      "Esthetics service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Dripology",
+    "address": "1411 7th St #120, Santa Monica, CA 90401",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(424) 255-4144",
+    "website": "http://dripology.co/",
+    "rating": 5,
+    "reviewCount": 458,
+    "lat": 34.0185792,
+    "lng": -118.4916578,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Dripology&query_place_id=ChIJUXu-UA6lwoAR5cafke_SOw8",
+    "categories": [
+      "Medical spa",
+      "Skin care clinic",
+      "Vitamin & supplements store",
+      "Weight loss service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Skin Remedies",
+    "address": "1711 Ocean Park Blvd, Santa Monica, CA 90405",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(310) 453-6474",
+    "website": "http://www.skinremedies.com/",
+    "rating": 4.9,
+    "reviewCount": 32,
+    "lat": 34.0128503,
+    "lng": -118.4665735,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Skin%20Remedies&query_place_id=ChIJD6isjza7woARvxV3MNXFbT8",
+    "categories": [
+      "Medical spa",
+      "Beauty salon",
+      "Facial spa",
+      "Laser hair removal service",
+      "Skin care clinic"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Beverly Hills Rejuvenation Center - Summerlin",
+    "address": "1825 Festival Plaza Dr #180, Las Vegas, NV 89135",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(725) 525-6821",
+    "website": "https://www.bhrcenter.com/med-spa-location/las-vegas-nv-summerlin",
+    "rating": 4.7,
+    "reviewCount": 91,
+    "lat": 36.151284,
+    "lng": -115.3342892,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Beverly%20Hills%20Rejuvenation%20Center%20-%20Summerlin&query_place_id=ChIJ1fRmCvi_yIARyfyno5MGezo",
+    "categories": [
+      "Medical spa",
+      "Beauty supply store",
+      "Hair removal service",
+      "Laser hair removal service",
+      "Medical laboratory",
+      "Plastic surgery clinic",
+      "Skin care clinic",
+      "Weight loss service",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Sikara Medspa",
+    "address": "1955 Festival Plaza Dr Suite 180, Las Vegas, NV 89135",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(702) 778-6886",
+    "website": "https://sikaramedspa.com/",
+    "rating": 4.9,
+    "reviewCount": 49,
+    "lat": 36.1506231,
+    "lng": -115.3341513,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Sikara%20Medspa&query_place_id=ChIJq9V6RVq_yIARkhyD0hEwhuc",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Parie Med Spa",
+    "address": "1725 Village Center Cir ste 150, Las Vegas, NV 89134",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(702) 930-6221",
+    "website": "https://pariemedspa.com/",
+    "rating": 4.9,
+    "reviewCount": 327,
+    "lat": 36.1913683,
+    "lng": -115.2995194,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Parie%20Med%20Spa&query_place_id=ChIJGSERWQC_yIARz3MfVIIJ-fc",
+    "categories": [
+      "Medical spa",
+      "Laser hair removal service",
+      "Spa and health club",
+      "Weight loss service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Restore Hyper Wellness",
+    "address": "345 N Main St Suite 105, West Hartford, CT 06117",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(860) 945-4300",
+    "website": "https://www.restore.com/locations/ct-west-hartford-ct015?utm_source=gmb&utm_medium=Yext&y_source=1_MzE2Mjk4MzktNzE1LWxvY2F0aW9uLndlYnNpdGU%3D",
+    "rating": 4.8,
+    "reviewCount": 232,
+    "lat": 41.785189,
+    "lng": -72.7479087,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Restore%20Hyper%20Wellness&query_place_id=ChIJJz8FzBmr54kRG5sXBzUU2eM",
+    "categories": [
+      "Medical spa",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Restore Hyper Wellness",
+    "address": "340 Grand Union Blvd Unit C, Somerville, MA 02145",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(617) 600-3660",
+    "website": "http://www.restore.com/locations/ma-somerville-ma014?utm_source=gmb&utm_medium=Yext&y_source=1_OTg2OTkwODEtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D",
+    "rating": 5,
+    "reviewCount": 186,
+    "lat": 42.3918633,
+    "lng": -71.0802664,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Restore%20Hyper%20Wellness&query_place_id=ChIJ_3lfJtlw44kRhQUM0cH7zqc",
+    "categories": [
+      "Medical spa",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Perfect Skin Las Vegas LLC",
+    "address": "10300 W Charleston Blvd Ste 17 -R16, Las Vegas, NV 89135",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(702) 542-3128",
+    "website": "https://www.perfectskinlasvegas.com/",
+    "rating": 5,
+    "reviewCount": 107,
+    "lat": 36.1603824,
+    "lng": -115.3209942,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Perfect%20Skin%20Las%20Vegas%20LLC&query_place_id=ChIJKWDLQd4fswcR_gLSuMLuO28",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Renew Medical Spa",
+    "address": "6980 Smoke Ranch Rd #150, Las Vegas, NV 89128",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(702) 830-6571",
+    "website": "https://www.renewmedicalspalv.com/",
+    "rating": 4.9,
+    "reviewCount": 39,
+    "lat": 36.2050438,
+    "lng": -115.2459844,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Renew%20Medical%20Spa&query_place_id=ChIJkVNI7ijAyIARZj2reARsl4k",
+    "categories": [
+      "Spa",
+      "Hair removal service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Chic la Vie",
+    "address": "7650 W Sahara Ave suite 3, Las Vegas, NV 89117",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(702) 233-8535",
+    "website": "https://chiclavie.com/",
+    "rating": 4.8,
+    "reviewCount": 421,
+    "lat": 36.1443959,
+    "lng": -115.2577815,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Chic%20la%20Vie&query_place_id=ChIJeSAqB2S_yIARsAiphLf2SLs",
+    "categories": [
+      "Medical spa",
+      "Facial spa",
+      "Health spa",
+      "Laser hair removal service",
+      "Skin care clinic",
+      "Spa",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Flawless Medspa Las Vegas",
+    "address": "9418 W Lake Mead Blvd, Las Vegas, NV 89134",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(702) 337-2526",
+    "website": "http://www.flawlessmedspas.com/",
+    "rating": 4.5,
+    "reviewCount": 221,
+    "lat": 36.2074865,
+    "lng": -115.3017995,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Flawless%20Medspa%20Las%20Vegas&query_place_id=ChIJo6h67yjAyIARJKrkviQ1yiI",
+    "categories": [
+      "Medical spa",
+      "Health and beauty shop",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Restore Hyper Wellness",
+    "address": "55 Needham St, Newton, MA 02461",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(617) 467-5728",
+    "website": "https://www.restore.com/locations/ma-newton-ma003?utm_source=gmb&utm_medium=Yext&y_source=1_MzE2Mjk4NzQtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D",
+    "rating": 4.9,
+    "reviewCount": 236,
+    "lat": 42.3155123,
+    "lng": -71.2106566,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Restore%20Hyper%20Wellness&query_place_id=ChIJmw6-MRGD44kRNRmObW8-CCQ",
+    "categories": [
+      "Medical spa",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Las Vegas Aesthetics®",
+    "address": "9081 W Sahara Ave STE 230, Las Vegas, NV 89117",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(725) 527-8211",
+    "website": "https://www.lvamedspa.com/",
+    "rating": 4.9,
+    "reviewCount": 218,
+    "lat": 36.1432639,
+    "lng": -115.2948756,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Las%20Vegas%20Aesthetics%C2%AE&query_place_id=ChIJCRNG-57AyIAR0ACtLU_xCwk",
+    "categories": [
+      "Skin care clinic",
+      "Hair transplantation clinic",
+      "Men's health physician",
+      "Reproductive health clinic",
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "The Aesthetics Lab",
+    "address": "2701 N Tenaya Wy #110, Las Vegas, NV 89128",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(702) 640-0689",
+    "website": "https://theaestheticslabmedspa.com/",
+    "rating": 4.9,
+    "reviewCount": 108,
+    "lat": 36.2096485,
+    "lng": -115.250145,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The%20Aesthetics%20Lab&query_place_id=ChIJ75JhWobryIARsa_J5Ypn1hk",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Center For Aesthetic Medicine",
+    "address": "3038 S Durango Dr # 100, Las Vegas, NV 89117",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(702) 333-4896",
+    "website": "https://www.centerforaestheticmedicine.com/",
+    "rating": 4.8,
+    "reviewCount": 128,
+    "lat": 36.134055,
+    "lng": -115.2769666,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Center%20For%20Aesthetic%20Medicine&query_place_id=ChIJOZF2YozAyIARDxbUz3evfik",
+    "categories": [
+      "Skin care clinic",
+      "Dermatologist",
+      "Laser hair removal service",
+      "Medical clinic",
+      "Plastic surgeon",
+      "Medical spa",
+      "Tattoo removal service",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Advanced Aesthetics",
+    "address": "2150 S Rainbow Blvd, Las Vegas, NV 89146",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(702) 838-4644",
+    "website": "http://advancedaestheticslv.com/?utm_source=gbp&utm_medium=organic",
+    "rating": 4.9,
+    "reviewCount": 2427,
+    "lat": 36.1484061,
+    "lng": -115.2424074,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Advanced%20Aesthetics&query_place_id=ChIJxR4xV-fAyIARyfOhs6O0OZA",
+    "categories": [
+      "Medical spa",
+      "Spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Summerlin Center for Aesthetic Dentistry",
+    "address": "2095 Village Center Cir #110, Las Vegas, NV 89134",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(702) 844-6224",
+    "website": "https://topsummerlindentist.com/",
+    "rating": 5,
+    "reviewCount": 470,
+    "lat": 36.1904053,
+    "lng": -115.3039091,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Summerlin%20Center%20for%20Aesthetic%20Dentistry&query_place_id=ChIJl8xDLeG_yIAR8bQFCVBLuak",
+    "categories": [
+      "Dentist",
+      "Cosmetic dentist",
+      "Emergency dental service",
+      "Teeth whitening service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "LuxeFactor Aesthetics",
+    "address": "8861 W Sahara Ave #290, Las Vegas, NV 89117",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(702) 805-0777",
+    "website": "https://www.luxefactorlv.com/",
+    "rating": 5,
+    "reviewCount": 89,
+    "lat": 36.1435955,
+    "lng": -115.2901482,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=LuxeFactor%20Aesthetics&query_place_id=ChIJr1Biup6_yIARqJ6SPi0ys7Y",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Nuance Aesthetics & Plastic Surgery",
+    "address": "3605 S Town Center Dr Suite C, Las Vegas, NV 89135",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(702) 762-3223",
+    "website": "http://nuancelasvegas.com/",
+    "rating": 4.8,
+    "reviewCount": 18,
+    "lat": 36.124558,
+    "lng": -115.3258705,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Nuance%20Aesthetics%20%26%20Plastic%20Surgery&query_place_id=ChIJ9_VE-8S_yIARMy6J9kXLHYU",
+    "categories": [
+      "Skin care clinic",
+      "Dermatologist",
+      "Plastic surgeon",
+      "Plastic surgery clinic"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "White Coat Aesthetics",
+    "address": "2400 N Buffalo Dr Ste 110, Las Vegas, NV 89128",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(702) 919-0017",
+    "website": "https://whitecoataesthetics.com/",
+    "rating": 4.8,
+    "reviewCount": 205,
+    "lat": 36.2037903,
+    "lng": -115.2600184,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=White%20Coat%20Aesthetics&query_place_id=ChIJM5laQW_ByIARDn1R0JmnPgU",
+    "categories": [
+      "Skin care clinic",
+      "Facial spa",
+      "Laser hair removal service",
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Alpha Medical Aesthetics",
+    "address": "3150 N Tenaya Wy Suite 400A, Las Vegas, NV 89128",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(702) 683-2156",
+    "website": "https://alphamedicalaesthetics.com/",
+    "rating": 4.8,
+    "reviewCount": 16,
+    "lat": 36.2168087,
+    "lng": -115.2495388,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Alpha%20Medical%20Aesthetics&query_place_id=ChIJiaihc5bryIARoMer-ZFIbRE",
+    "categories": [
+      "Medical spa",
+      "Laser cutting service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "CeR Aesthetics",
+    "address": "8751 W Charleston Blvd #130, Las Vegas, NV 89117",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(702) 666-1961",
+    "website": "https://ceraesthetics.com/",
+    "rating": 5,
+    "reviewCount": 28,
+    "lat": 36.1576212,
+    "lng": -115.2860981,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=CeR%20Aesthetics&query_place_id=ChIJW8GtPKm_yIARwmgOwNCJon0",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "iRadiant Aesthetics | Emsculpt, Facials, Tox (Botox, Dysport), & Weight Loss Clinic Summerlin",
+    "address": "8975 W Charleston Blvd suite 130 studio 18, Las Vegas, NV 89117",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(725) 305-2819",
+    "website": "https://www.iradiantaesthetics.com/",
+    "rating": 5,
+    "reviewCount": 6,
+    "lat": 36.1577992,
+    "lng": -115.2884813,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=iRadiant%20Aesthetics%20%7C%20Emsculpt%2C%20Facials%2C%20Tox%20(Botox%2C%20Dysport)%2C%20%26%20Weight%20Loss%20Clinic%20Summerlin&query_place_id=ChIJA0zzVJq_yIARznE6wvCWWr8",
+    "categories": [
+      "Medical spa",
+      "Facial spa",
+      "IV therapy service",
+      "Weight loss service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Amanda Ralph MSN, APRN, NP-C",
+    "address": "2400 N Buffalo Dr Ste 110, Las Vegas, NV 89128",
+    "city": "Summerlin",
+    "state": "NV",
+    "phone": "(702) 919-0017",
+    "website": "https://www.whitecoataesthetics.com/",
+    "rating": 5,
+    "reviewCount": 36,
+    "lat": 36.2037899,
+    "lng": -115.2599937,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Amanda%20Ralph%20MSN%2C%20APRN%2C%20NP-C&query_place_id=ChIJ15R88CjByIARJGvxe3Yij0U",
+    "categories": [
+      "Medical spa",
+      "Nurse practitioner"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Beauty Vault Med Spa",
+    "address": "7318 Santa Monica Blvd #50, West Hollywood, CA 90046",
+    "city": "West Hollywood",
+    "state": "CA",
+    "phone": "(323) 800-6770",
+    "website": "https://beautyvaultmedspa.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp",
+    "rating": 5,
+    "reviewCount": 134,
+    "lat": 34.0905674,
+    "lng": -118.3492146,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Beauty%20Vault%20Med%20Spa&query_place_id=ChIJjeq8eXy6V0oRQmZo03kO8RQ",
+    "categories": [
+      "Medical spa"
+    ],
+    "services": [
+      "Botox",
+      "Filler",
+      "Semaglutide",
+      "Laser",
+      "Microneedling",
+      "Iv Therapy",
+      "Prp",
+      "Weight Loss",
+      "Kybella",
+      "Sculptra",
+      "Dysport",
+      "Chemical Peel"
+    ],
+    "description": "![Avatar](https://images.leadconnectorhq.com/image/f_webp/q_100/r_180/u_https://assets.cdn.filesafe.space/uFG0160dwo84ZcU2ws7l/media/68a387d01004185914b87604.webp)",
+    "about_text": "",
+    "brand_values": [],
+    "price_tier": "$$$$",
+    "imageUrl": "https://beautyvaultmedspa.com/wp-content/uploads/2024/08/05415c850b843abec6dee940f12e18a255142299-1024x576.jpg",
+    "logo": null,
+    "enriched": true,
+    "enriched_at": "2026-03-21T00:10:59.849Z"
+  },
+  {
+    "name": "Skin Perfect Medical Aesthetics - West Hollywood",
+    "address": "638 1/2 N Robertson Blvd, West Hollywood, CA 90069",
+    "city": "West Hollywood",
+    "state": "CA",
+    "phone": "(323) 621-3205",
+    "website": "https://skinperfectmedical.com/locations/los-angeles/west-hollywood/",
+    "rating": 4.9,
+    "reviewCount": 59,
+    "lat": 34.0819931,
+    "lng": -118.3851815,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Skin%20Perfect%20Medical%20Aesthetics%20-%20West%20Hollywood&query_place_id=ChIJV0osUtC_woARXoRGUn-aoiE",
+    "categories": [
+      "Medical spa",
+      "Day spa",
+      "Facial spa",
+      "Skin care clinic"
+    ],
+    "services": [
+      "Botox",
+      "Filler",
+      "Semaglutide",
+      "Laser",
+      "Hydrafacial",
+      "Microneedling",
+      "Weight Loss",
+      "Coolsculpting",
+      "Kybella",
+      "Sculptra",
+      "Dysport",
+      "Chemical Peel"
+    ],
+    "description": "- [YouTube](https://www.youtube.com/channel/UCyeLebGkyRPllvL0CWf5U4Q)",
+    "about_text": "",
+    "brand_values": [],
+    "price_tier": "$$$$",
+    "imageUrl": "https://skinperfectmedical.com/wp-content/uploads/sites/57/2025/10/Screenshot-2025-10-30-at-1.18.18-PM-715x370.png",
+    "logo": [
+      "https://skinperfectmedical.com/wp-content/themes/skinperfectmedical_com/static/images/skin-perfect-medical-logo-seo.png",
+      "https://skinperfectmedical.com/wp-content/themes/skinperfectmedical_com/static/images/skinperfect-logo-seo.jpg"
+    ],
+    "enriched": true,
+    "enriched_at": "2026-03-21T00:11:03.904Z"
+  },
+  {
+    "name": "Beverly Hills Rejuvenation Center - West Hollywood",
+    "address": "8550 Santa Monica Blvd suite 101, West Hollywood, CA 90069",
+    "city": "West Hollywood",
+    "state": "CA",
+    "phone": "(323) 859-1257",
+    "website": "https://www.bhrcenter.com/med-spa-location/bhrc-medical-spa-west-hollywood-ca/",
+    "rating": 5,
+    "reviewCount": 39,
+    "lat": 34.088469,
+    "lng": -118.3776728,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Beverly%20Hills%20Rejuvenation%20Center%20-%20West%20Hollywood&query_place_id=ChIJ5Smss5G_woARlUq1gwr3oQI",
+    "categories": [
+      "Medical spa"
+    ],
+    "services": [
+      "Botox",
+      "Filler",
+      "Laser",
+      "Hydrafacial",
+      "Microneedling",
+      "Peptide",
+      "Iv Therapy",
+      "Prp",
+      "Weight Loss",
+      "Coolsculpting",
+      "Kybella",
+      "Sculptra",
+      "Dysport",
+      "Chemical Peel"
+    ],
+    "description": "- [Regenerative Aesthetics](https://www.bhrcenter.com/med-spa-location/bhrc-medical-spa-west-hollywood-ca/#)",
+    "about_text": "",
+    "brand_values": [],
+    "price_tier": "$$$$",
+    "imageUrl": "https://www.bhrcenter.com/wp-content/uploads/2026/02/Screenshot-2026-02-27-at-11.45.28-AM.png",
+    "logo": null,
+    "enriched": true,
+    "enriched_at": "2026-03-21T00:11:07.264Z"
+  },
+  {
+    "name": "Beauty Bar West Hollywood",
+    "address": "8527 Sunset Blvd, West Hollywood, CA 90069",
+    "city": "West Hollywood",
+    "state": "CA",
+    "phone": "(800) 974-4811",
+    "website": "https://beautybarclinic.com/us/",
+    "rating": 4.9,
+    "reviewCount": 190,
+    "lat": 34.0940085,
+    "lng": -118.377256,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Beauty%20Bar%20West%20Hollywood&query_place_id=ChIJ23K0sL2-woARp2x2IJnuHWk",
+    "categories": [
+      "Medical spa"
+    ],
+    "services": [
+      "Laser",
+      "Hydrafacial",
+      "Microneedling",
+      "Coolsculpting"
+    ],
+    "description": "[Learn More](https://beautybarclinic.com/us/wp-content/uploads/us-pricelist-dec-2021.pdf)",
+    "about_text": "",
+    "brand_values": [],
+    "price_tier": "$$$$",
+    "imageUrl": "https://beautybarclinic.com/us/wp-content/uploads/Beauty-bar-medical-clinic-logo-2.resized.png",
+    "logo": null,
+    "enriched": true,
+    "enriched_at": "2026-03-21T00:11:08.551Z"
+  },
+  {
+    "name": "me.losangeles aesthetics",
+    "address": "9201 Sunset Blvd Suite 212, West Hollywood, CA 90069",
+    "city": "West Hollywood",
+    "state": "CA",
+    "phone": "(213) 583-5905",
+    "website": "https://www.melosangeles.com/",
+    "rating": 5,
+    "reviewCount": 156,
+    "lat": 34.0909518,
+    "lng": -118.3925134,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=me.losangeles%20aesthetics&query_place_id=ChIJdeA9JHK_woARXuIbtkLyRUU",
+    "categories": [
+      "Medical spa"
+    ],
+    "services": [
+      "Botox",
+      "Filler",
+      "Microneedling",
+      "Iv Therapy",
+      "Prp",
+      "Kybella",
+      "Sculptra",
+      "Chemical Peel"
+    ],
+    "description": "![logo](https://sa1s3optim.patientpop.com/filters:format(webp)/sc-assets/prd/practices/ae65ec75-77f0-4f77-ab74-86d7efa3a56e/Logo_light-01.png)",
+    "about_text": "",
+    "brand_values": [],
+    "price_tier": "$$$",
+    "imageUrl": null,
+    "logo": null,
+    "enriched": true,
+    "enriched_at": "2026-03-21T00:11:11.271Z"
   }
 ]
