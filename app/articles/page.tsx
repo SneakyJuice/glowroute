@@ -1,24 +1,11 @@
-import type { Metadata } from 'next'
+'use client'
+import { useState } from 'react'
 import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { ARTICLES } from '@/data/articles'
 
-export const metadata: Metadata = {
-  title: 'The GlowRoute Edit | Expert Wellness Insights',
-  description: 'Expert insights on modern aesthetics & wellness — curated articles from GlowRoute.',
-  openGraph: {
-    title: 'The GlowRoute Edit | Expert Wellness Insights',
-    description: 'Expert insights on modern aesthetics & wellness — curated articles from GlowRoute.',
-    type: 'website',
-    siteName: 'GlowRoute',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'The GlowRoute Edit | Expert Wellness Insights',
-    description: 'Expert insights on modern aesthetics & wellness — curated articles from GlowRoute.',
-  },
-}
+type AudienceFilter = 'all' | 'consumer' | 'clinic'
 
 function formatDate(dateStr: string) {
   return new Date(dateStr).toLocaleDateString('en-US', {
@@ -29,8 +16,17 @@ function formatDate(dateStr: string) {
 }
 
 export default function ArticlesPage() {
-  const featured = ARTICLES.filter(a => a.featured)
-  const rest = ARTICLES.filter(a => !a.featured)
+  const [filter, setFilter] = useState<AudienceFilter>('all')
+
+  const filtered = ARTICLES.filter(a => {
+    if (filter === 'all') return true
+    if (filter === 'consumer') return a.audience === 'consumer' || !a.audience
+    if (filter === 'clinic') return a.audience === 'clinic'
+    return true
+  })
+
+  const featured = filtered.filter(a => a.featured)
+  const rest = filtered.filter(a => !a.featured)
 
   return (
     <div className="min-h-screen bg-ivory font-sans">
@@ -49,6 +45,23 @@ export default function ArticlesPage() {
       </section>
 
       <main className="max-w-6xl mx-auto px-4 sm:px-6 py-14">
+
+        {/* Audience Filter Tabs */}
+        <div className="flex items-center gap-2 mb-10">
+          {(['all', 'consumer', 'clinic'] as AudienceFilter[]).map((tab) => (
+            <button
+              key={tab}
+              onClick={() => setFilter(tab)}
+              className={`text-sm font-semibold px-5 py-2 rounded-full transition-all ${
+                filter === tab
+                  ? 'bg-onyx text-ivory'
+                  : 'bg-white text-stone border border-stone/20 hover:border-onyx/30 hover:text-onyx'
+              }`}
+            >
+              {tab === 'all' ? 'All Articles' : tab === 'consumer' ? 'For Patients' : 'For Clinics'}
+            </button>
+          ))}
+        </div>
 
         {/* Featured Articles */}
         {featured.length > 0 && (
@@ -71,9 +84,20 @@ export default function ArticlesPage() {
                   </div>
                   {/* Content */}
                   <div className="p-6 flex flex-col flex-1">
-                    <span className="inline-block bg-champagne/20 text-champagne text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full mb-3 self-start">
-                      {article.category}
-                    </span>
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="inline-block bg-champagne/20 text-champagne text-xs font-semibold uppercase tracking-wider px-3 py-1 rounded-full">
+                        {article.category}
+                      </span>
+                      {article.audience && (
+                        <span className={`inline-block text-xs font-semibold uppercase tracking-wider px-2.5 py-1 rounded-full ${
+                          article.audience === 'clinic'
+                            ? 'bg-sage/15 text-sage'
+                            : 'bg-blush/20 text-blush'
+                        }`}>
+                          {article.audience === 'clinic' ? 'Clinics' : 'Patients'}
+                        </span>
+                      )}
+                    </div>
                     <h3 className="font-serif text-2xl text-onyx leading-snug mb-2 group-hover:text-sage transition-colors">
                       {article.title}
                     </h3>
@@ -100,7 +124,9 @@ export default function ArticlesPage() {
         {/* Remaining Articles Grid */}
         {rest.length > 0 && (
           <section>
-            <h2 className="font-serif text-2xl text-onyx mb-8 tracking-tight">More from the Edit</h2>
+            <h2 className="font-serif text-2xl text-onyx mb-8 tracking-tight">
+              {featured.length > 0 ? 'More from the Edit' : 'All Articles'}
+            </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {rest.map(article => (
                 <Link
@@ -118,9 +144,20 @@ export default function ArticlesPage() {
                   </div>
                   {/* Content */}
                   <div className="p-5 flex flex-col flex-1">
-                    <span className="inline-block bg-champagne/20 text-champagne text-xs font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded-full mb-2 self-start">
-                      {article.category}
-                    </span>
+                    <div className="flex items-center gap-1.5 mb-2">
+                      <span className="inline-block bg-champagne/20 text-champagne text-xs font-semibold uppercase tracking-wider px-2.5 py-0.5 rounded-full">
+                        {article.category}
+                      </span>
+                      {article.audience && (
+                        <span className={`inline-block text-xs font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full ${
+                          article.audience === 'clinic'
+                            ? 'bg-sage/15 text-sage'
+                            : 'bg-blush/20 text-blush'
+                        }`}>
+                          {article.audience === 'clinic' ? 'Clinic' : 'Patient'}
+                        </span>
+                      )}
+                    </div>
                     <h3 className="font-serif text-xl text-onyx leading-snug mb-2 group-hover:text-sage transition-colors">
                       {article.title}
                     </h3>
@@ -142,6 +179,13 @@ export default function ArticlesPage() {
               ))}
             </div>
           </section>
+        )}
+
+        {filtered.length === 0 && (
+          <div className="text-center py-20 text-stone">
+            <p className="font-serif text-2xl text-onyx/40 mb-2">No articles found</p>
+            <p className="text-sm">Try a different filter</p>
+          </div>
         )}
 
       </main>

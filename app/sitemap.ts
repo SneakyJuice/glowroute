@@ -2,6 +2,8 @@ import { MetadataRoute } from 'next'
 import { allClinics } from '@/data/all-clinics'
 import { TREATMENT_SLUGS } from '@/lib/treatments'
 import { SITE_URL } from '@/lib/config'
+import { ARTICLES } from '@/data/articles'
+import { INSIGHTS } from '@/data/insights'
 
 function citySlug(city: string): string {
   return city.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
@@ -16,7 +18,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/clinics`,  lastModified: today, changeFrequency: 'daily',   priority: 0.9 },
     { url: `${SITE_URL}/claim`,    lastModified: today, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${SITE_URL}/treatments`, lastModified: today, changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${SITE_URL}/articles`, lastModified: today, changeFrequency: 'weekly',  priority: 0.7 },
+    { url: `${SITE_URL}/articles`, lastModified: today, changeFrequency: 'weekly',  priority: 0.8 },
+    { url: `${SITE_URL}/insights`, lastModified: today, changeFrequency: 'weekly',  priority: 0.8 },
     { url: `${SITE_URL}/specialties`, lastModified: today, changeFrequency: 'monthly', priority: 0.6 },
   ]
 
@@ -53,11 +56,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.5,
   }))
 
+  // ── Article pages ─────────────────────────────────────────────────────────
+  const articlePages: MetadataRoute.Sitemap = ARTICLES.map(a => ({
+    url: `${SITE_URL}/articles/${a.slug}`,
+    lastModified: a.publishedAt,
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }))
+
+  // ── Insight pages ─────────────────────────────────────────────────────────
+  const insightPages: MetadataRoute.Sitemap = INSIGHTS.map(i => ({
+    url: `${SITE_URL}/insights/${i.slug}`,
+    lastModified: i.publishedAt,
+    changeFrequency: 'monthly' as const,
+    priority: 0.9,
+  }))
+
   return [
     ...staticPages,
     ...treatmentPages,
     ...cityPages,
     ...clinicPages,
     ...claimPages,
+    ...articlePages,
+    ...insightPages,
   ]
 }

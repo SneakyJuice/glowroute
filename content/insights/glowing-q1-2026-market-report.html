@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Glowing — Q1 2026 Market Update | GlowRoute</title>
+<meta name="description" content="GlowRoute's quarterly intelligence report for medspa owners, MDs, and aesthetics professionals. Q1 2026: regulation, GLP-1 enforcement, peptide reclassification, PE valuations, and AI discovery.">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;600;700;800&display=swap');
+
+  :root {
+    --glow-gold: #D4A853;
+    --glow-gold-light: #F2E0B3;
+    --glow-dark: #1A1A2E;
+    --glow-navy: #16213E;
+    --glow-blue: #0F3460;
+    --glow-teal: #53899A;
+    --glow-white: #FAFAFA;
+    --glow-gray: #E8E8E8;
+    --glow-text: #2C2C2C;
+    --glow-muted: #6B7280;
+    --glow-green: #10B981;
+    --glow-red: #EF4444;
+    --glow-amber: #F59E0B;
+    --glow-purple: #8B5CF6;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    color: var(--glow-text);
+    background: var(--glow-white);
+    line-height: 1.7;
+    font-size: 17px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ─── NAV ─── */
+  .nav-bar {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(26,26,46,0.97); backdrop-filter: blur(12px);
+    padding: 0 2rem; height: 56px;
+    display: flex; align-items: center; justify-content: space-between;
+    border-bottom: 1px solid rgba(212,168,83,0.25);
+  }
+  .nav-logo { color: var(--glow-gold); font-family: 'Playfair Display', serif; font-size: 1.2rem; font-weight: 700; letter-spacing: 1px; text-decoration: none; }
+  .nav-links { display: flex; gap: 1.5rem; }
+  .nav-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 500; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--glow-gold); }
+
+  /* ─── HERO ─── */
+  .hero {
+    min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center;
+    background: linear-gradient(170deg, var(--glow-dark) 0%, var(--glow-navy) 40%, var(--glow-blue) 100%);
+    color: white; text-align: center; padding: 6rem 2rem 4rem;
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%;
+    background: radial-gradient(circle at 30% 50%, rgba(212,168,83,0.08) 0%, transparent 50%),
+                radial-gradient(circle at 70% 30%, rgba(83,137,154,0.06) 0%, transparent 50%);
+    animation: heroPulse 12s ease-in-out infinite;
+  }
+  @keyframes heroPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: rgba(212,168,83,0.12); border: 1px solid rgba(212,168,83,0.3);
+    border-radius: 100px; padding: 0.4rem 1.2rem; font-size: 0.75rem;
+    text-transform: uppercase; letter-spacing: 2px; color: var(--glow-gold-light);
+    margin-bottom: 2rem; position: relative; z-index: 1;
+  }
+  .hero-badge .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--glow-gold); animation: blink 2s infinite; }
+  @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif; font-size: clamp(2.8rem, 6vw, 5rem);
+    font-weight: 800; line-height: 1.1; margin-bottom: 1rem; position: relative; z-index: 1;
+    background: linear-gradient(135deg, #fff 60%, var(--glow-gold-light));
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  }
+  .hero .subtitle {
+    font-size: clamp(1rem, 2vw, 1.25rem); color: rgba(255,255,255,0.65);
+    max-width: 680px; line-height: 1.7; margin-bottom: 2.5rem; position: relative; z-index: 1;
+  }
+  .hero-stats {
+    display: flex; gap: 3rem; flex-wrap: wrap; justify-content: center;
+    position: relative; z-index: 1;
+  }
+  .hero-stat { text-align: center; }
+  .hero-stat .num { font-size: 2.2rem; font-weight: 800; color: var(--glow-gold); display: block; }
+  .hero-stat .label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 1.5px; color: rgba(255,255,255,0.5); }
+
+  .scroll-indicator {
+    position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
+    color: rgba(255,255,255,0.3); font-size: 0.7rem; text-transform: uppercase;
+    letter-spacing: 2px; display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+  }
+  .scroll-indicator .arrow { animation: bounce 2s infinite; font-size: 1.2rem; }
+  @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
+
+  /* ─── SECTIONS ─── */
+  .section {
+    max-width: 900px; margin: 0 auto; padding: 5rem 2rem;
+  }
+  .section-wide {
+    max-width: 1100px; margin: 0 auto; padding: 5rem 2rem;
+  }
+  .section-full {
+    padding: 5rem 2rem;
+  }
+
+  .section-label {
+    display: inline-block; font-size: 0.68rem; text-transform: uppercase;
+    letter-spacing: 3px; color: var(--glow-gold); font-weight: 700;
+    margin-bottom: 0.75rem;
+    border-left: 3px solid var(--glow-gold); padding-left: 0.75rem;
+  }
+
+  h2 {
+    font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    font-weight: 700; line-height: 1.2; margin-bottom: 1.5rem; color: var(--glow-dark);
+  }
+
+  h3 {
+    font-size: 1.15rem; font-weight: 700; margin: 2rem 0 0.75rem;
+    color: var(--glow-navy);
+  }
+
+  p { margin-bottom: 1.25rem; color: #444; }
+
+  a { color: var(--glow-teal); text-decoration: underline; text-underline-offset: 3px; }
+  a:hover { color: var(--glow-gold); }
+
+  /* ─── CALLOUT BOXES ─── */
+  .callout {
+    background: linear-gradient(135deg, #F8F6F0, #FFF);
+    border-left: 4px solid var(--glow-gold);
+    padding: 1.5rem 2rem; border-radius: 0 12px 12px 0;
+    margin: 2rem 0; font-size: 0.95rem;
+  }
+  .callout.blue { border-left-color: var(--glow-teal); background: linear-gradient(135deg, #F0F7FA, #FFF); }
+  .callout.red { border-left-color: var(--glow-red); background: linear-gradient(135deg, #FEF2F2, #FFF); }
+  .callout.green { border-left-color: var(--glow-green); background: linear-gradient(135deg, #ECFDF5, #FFF); }
+  .callout strong { color: var(--glow-dark); }
+
+  /* ─── BIG NUMBER ─── */
+  .big-number-row {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem; margin: 2.5rem 0;
+  }
+  .big-number {
+    text-align: center; padding: 2rem 1rem;
+    background: white; border-radius: 16px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.04);
+    border: 1px solid var(--glow-gray);
+  }
+  .big-number .value {
+    font-size: 2.5rem; font-weight: 900; color: var(--glow-dark);
+    display: block; line-height: 1;
+  }
+  .big-number .value.gold { color: var(--glow-gold); }
+  .big-number .value.teal { color: var(--glow-teal); }
+  .big-number .value.red { color: var(--glow-red); }
+  .big-number .desc {
+    font-size: 0.78rem; color: var(--glow-muted); margin-top: 0.5rem;
+    text-transform: uppercase; letter-spacing: 1px;
+  }
+
+  /* ─── CHART CONTAINERS ─── */
+  .chart-container {
+    background: white; border-radius: 16px; padding: 2rem;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.04);
+    border: 1px solid var(--glow-gray); margin: 2rem 0;
+    position: relative;
+  }
+  .chart-container .chart-title {
+    font-size: 0.95rem; font-weight: 700; color: var(--glow-dark); margin-bottom: 1rem;
+  }
+  .chart-container .chart-source {
+    font-size: 0.7rem; color: var(--glow-muted); margin-top: 0.75rem;
+    font-style: italic;
+  }
+  .chart-container canvas { max-height: 380px; }
+
+  /* ─── STATE MAP ─── */
+  .state-map-container {
+    background: white; border-radius: 16px; padding: 2rem;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.04);
+    border: 1px solid var(--glow-gray); margin: 2rem 0;
+  }
+  .map-legend {
+    display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: 1rem;
+    font-size: 0.8rem; color: var(--glow-muted);
+  }
+  .map-legend .item { display: flex; align-items: center; gap: 0.4rem; }
+  .map-legend .swatch { width: 14px; height: 14px; border-radius: 3px; }
+
+  .state-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 8px; margin: 1.5rem 0;
+  }
+  .state-tile {
+    padding: 0.6rem 0.5rem; border-radius: 8px; text-align: center;
+    font-size: 0.75rem; font-weight: 600; color: white;
+    position: relative; cursor: default;
+  }
+  .state-tile .st-abbr { font-size: 0.85rem; font-weight: 800; display: block; }
+  .state-tile .st-label { font-size: 0.6rem; font-weight: 400; opacity: 0.85; }
+  .state-tile.passed { background: var(--glow-red); }
+  .state-tile.active { background: var(--glow-amber); }
+  .state-tile.watching { background: var(--glow-teal); }
+  .state-tile.none { background: #CBD5E1; color: #64748B; }
+
+  /* ─── PEPTIDE GRID ─── */
+  .peptide-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 10px; margin: 1.5rem 0;
+  }
+  .peptide-card {
+    padding: 1rem; border-radius: 12px; text-align: center;
+    font-weight: 600; font-size: 0.85rem;
+    border: 2px solid; transition: transform 0.15s;
+  }
+  .peptide-card:hover { transform: translateY(-2px); }
+  .peptide-card.returning {
+    background: #ECFDF5; border-color: var(--glow-green); color: #065F46;
+  }
+  .peptide-card.banned {
+    background: #FEF2F2; border-color: var(--glow-red); color: #991B1B;
+  }
+  .peptide-card .status {
+    font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px;
+    margin-top: 0.3rem; font-weight: 500; opacity: 0.7;
+  }
+
+  /* ─── TIMELINE ─── */
+  .timeline { position: relative; margin: 2rem 0; padding-left: 2rem; }
+  .timeline::before {
+    content: ''; position: absolute; left: 7px; top: 0; bottom: 0;
+    width: 2px; background: linear-gradient(to bottom, var(--glow-gold), var(--glow-teal));
+  }
+  .timeline-item { position: relative; margin-bottom: 1.5rem; }
+  .timeline-item::before {
+    content: ''; position: absolute; left: -2rem; top: 0.4rem;
+    width: 12px; height: 12px; border-radius: 50%;
+    background: var(--glow-gold); border: 3px solid white;
+    box-shadow: 0 0 0 2px var(--glow-gold);
+  }
+  .timeline-item .date { font-size: 0.75rem; font-weight: 700; color: var(--glow-gold); text-transform: uppercase; letter-spacing: 1px; }
+  .timeline-item .event { font-size: 0.92rem; color: var(--glow-text); }
+
+  /* ─── ACTION CARDS ─── */
+  .action-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem; margin: 2rem 0;
+  }
+  .action-card {
+    background: white; border-radius: 16px; padding: 2rem;
+    border: 1px solid var(--glow-gray);
+    box-shadow: 0 2px 20px rgba(0,0,0,0.04);
+    transition: box-shadow 0.2s;
+  }
+  .action-card:hover { box-shadow: 0 4px 30px rgba(0,0,0,0.08); }
+  .action-card .icon { font-size: 2rem; margin-bottom: 0.75rem; }
+  .action-card h4 { font-size: 1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--glow-dark); }
+  .action-card p { font-size: 0.88rem; color: var(--glow-muted); margin-bottom: 0; }
+
+  /* ─── BACKLINKS ─── */
+  .source-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1rem; margin: 1.5rem 0;
+  }
+  .source-card {
+    display: flex; align-items: center; gap: 0.75rem;
+    background: white; border-radius: 10px; padding: 0.8rem 1rem;
+    border: 1px solid var(--glow-gray); font-size: 0.82rem;
+    text-decoration: none; color: var(--glow-text);
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .source-card:hover { border-color: var(--glow-gold); box-shadow: 0 2px 12px rgba(212,168,83,0.15); }
+  .source-card .s-icon { font-size: 1.3rem; flex-shrink: 0; }
+  .source-card .s-name { font-weight: 600; display: block; }
+  .source-card .s-type { font-size: 0.7rem; color: var(--glow-muted); }
+
+  /* ─── DARK SECTION ─── */
+  .dark-section {
+    background: linear-gradient(170deg, var(--glow-dark), var(--glow-navy));
+    color: white; padding: 5rem 2rem;
+  }
+  .dark-section h2 { color: white; }
+  .dark-section p { color: rgba(255,255,255,0.7); }
+  .dark-section .callout { background: rgba(255,255,255,0.05); border-left-color: var(--glow-gold); }
+  .dark-section .callout strong { color: var(--glow-gold-light); }
+  .dark-section a { color: var(--glow-gold-light); }
+
+  /* ─── QUOTE ─── */
+  .pull-quote {
+    font-family: 'Playfair Display', serif; font-size: 1.5rem;
+    font-weight: 600; color: var(--glow-dark); line-height: 1.4;
+    border-left: 4px solid var(--glow-gold); padding: 1rem 0 1rem 2rem;
+    margin: 2.5rem 0;
+  }
+  .pull-quote .attribution { font-family: 'Inter', sans-serif; font-size: 0.8rem; color: var(--glow-muted); font-weight: 400; margin-top: 0.5rem; }
+
+  /* ─── GLOWROUTE INSIGHTS ─── */
+  .gr-insight {
+    background: linear-gradient(135deg, rgba(212,168,83,0.06), rgba(83,137,154,0.04));
+    border: 1px solid rgba(212,168,83,0.2); border-radius: 16px;
+    padding: 2rem; margin: 2rem 0;
+  }
+  .gr-insight .gr-badge {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    background: var(--glow-gold); color: white; font-size: 0.65rem;
+    text-transform: uppercase; letter-spacing: 2px; font-weight: 700;
+    padding: 0.25rem 0.75rem; border-radius: 4px; margin-bottom: 1rem;
+  }
+
+  /* ─── FOOTER ─── */
+  .footer {
+    background: var(--glow-dark); color: rgba(255,255,255,0.5);
+    text-align: center; padding: 3rem 2rem;
+    font-size: 0.8rem;
+  }
+  .footer a { color: var(--glow-gold-light); }
+  .footer .logo-large {
+    font-family: 'Playfair Display', serif; font-size: 1.8rem;
+    color: var(--glow-gold); font-weight: 700; margin-bottom: 0.5rem;
+  }
+
+  /* ─── TABLE OF CONTENTS ─── */
+  .toc {
+    background: white; border-radius: 16px; padding: 2rem 2.5rem;
+    border: 1px solid var(--glow-gray); box-shadow: 0 2px 20px rgba(0,0,0,0.04);
+    margin: 2rem 0;
+  }
+  .toc h3 { margin-top: 0; }
+  .toc ol { padding-left: 1.5rem; }
+  .toc li { margin-bottom: 0.5rem; font-size: 0.92rem; }
+  .toc li a { color: var(--glow-text); text-decoration: none; }
+  .toc li a:hover { color: var(--glow-gold); }
+  .toc li .time { font-size: 0.72rem; color: var(--glow-muted); margin-left: 0.3rem; }
+
+  /* ─── TWO COL ─── */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; }
+  @media (max-width: 768px) {
+    .two-col { grid-template-columns: 1fr; }
+    .hero-stats { gap: 1.5rem; }
+    .nav-links { display: none; }
+  }
+
+  /* ─── DIVIDER ─── */
+  .section-divider {
+    width: 60px; height: 3px; background: var(--glow-gold); margin: 0 auto 3rem;
+    border-radius: 2px;
+  }
+
+  /* ─── PRINT STYLES ─── */
+  @media print {
+    .nav-bar, .scroll-indicator { display: none; }
+    .hero { min-height: auto; padding: 3rem 2rem; }
+    .section, .section-wide { padding: 2rem 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav-bar">
+  <a href="https://glowroute.io" class="nav-logo">GLOWROUTE</a>
+  <div class="nav-links">
+    <a href="#ai-discovery">AI & Discovery</a>
+    <a href="#market">Market</a>
+    <a href="#regulation">Regulation</a>
+    <a href="#glp1">GLP-1</a>
+    <a href="#peptides">Peptides</a>
+    <a href="#valuation">Valuation</a>
+    <a href="#action">Action Steps</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-badge"><span class="dot"></span> Q1 2026 Intelligence Report</div>
+  <h1>The Glowing</h1>
+  <p class="subtitle">A quarterly market intelligence report for medspa owners, physicians, and aesthetics professionals. What moved in Q1, what's coming in Q2, and exactly what you should do about it.</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><span class="num">$22.4B</span><span class="label">Global Medspa Market</span></div>
+    <div class="hero-stat"><span class="num">70+</span><span class="label">FDA Warning Letters</span></div>
+    <div class="hero-stat"><span class="num">14</span><span class="label">Peptides Returning</span></div>
+    <div class="hero-stat"><span class="num">24%</span><span class="label">AI-Driven Discovery</span></div>
+  </div>
+  <div class="scroll-indicator">
+    <span>Scroll to explore</span>
+    <span class="arrow">&#8595;</span>
+  </div>
+</header>
+
+<!-- TABLE OF CONTENTS -->
+<div class="section">
+  <div class="toc">
+    <h3>In This Report</h3>
+    <ol>
+      <li><a href="#ai-discovery">The New Front Door: Healthcare Discovery via AI</a> <span class="time">3 min</span></li>
+      <li><a href="#market">State of the Industry: $22.4B and Accelerating</a> <span class="time">3 min</span></li>
+      <li><a href="#regulation">The Regulatory Reset: State-by-State Legislation Tracker</a> <span class="time">3 min</span></li>
+      <li><a href="#glp1">GLP-1 Landscape: Enforcement, Pricing, and What's Left</a> <span class="time">3 min</span></li>
+      <li><a href="#peptides">Peptide Reclassification: The 14 vs. 5 Breakdown</a> <span class="time">3 min</span></li>
+      <li><a href="#safety">Safety & Counterfeit Update: The Trust Deficit</a> <span class="time">2 min</span></li>
+      <li><a href="#valuation">PE & Valuation: What Your Clinic Is Actually Worth</a> <span class="time">3 min</span></li>
+      <li><a href="#action">Your Q2 2026 Action Plan</a> <span class="time">2 min</span></li>
+      <li><a href="#directory">GlowRoute Directory Insights</a> <span class="time">1 min</span></li>
+      <li><a href="#sources">Sources & Further Reading</a></li>
+    </ol>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 1. AI DISCOVERY -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="ai-discovery" class="section">
+  <span class="section-label">01 — The Shift</span>
+  <h2>The New Front Door: Healthcare Discovery via AI</h2>
+
+  <p>Here's a number that should change how you think about marketing your practice: according to <a href="https://www.kantar.com" target="_blank" rel="noopener">Kantar's 2026 Health & Wellness Report</a>, <strong>24% of all healthcare discovery</strong> now happens through AI-powered agents — not Google, not Instagram, not word of mouth. One in four potential patients are asking an AI where to go for treatment.</p>
+
+  <p>This isn't a prediction. It's already happening. ChatGPT, Google's AI Overviews, Perplexity, and Claude are all serving clinic recommendations in response to queries like "best Botox clinic in Tampa" or "where can I get semaglutide near me." The referral network that built your practice over the last decade is being restructured around algorithms that prioritize <strong>structured data, verified credentials, and authoritative backlinks</strong> — not paid ads or vanity metrics.</p>
+
+  <div class="big-number-row">
+    <div class="big-number">
+      <span class="value gold">24%</span>
+      <span class="desc">Healthcare Discovery via AI</span>
+    </div>
+    <div class="big-number">
+      <span class="value teal">70%</span>
+      <span class="desc">Aesthetic Searches Are "Near Me"</span>
+    </div>
+    <div class="big-number">
+      <span class="value">$10K+</span>
+      <span class="desc">Annual Spend per Longevity Client</span>
+    </div>
+  </div>
+
+  <p>The implications for medspas are concrete. If your clinic's data lives only on your website and your Google Business Profile, you're invisible to the AI layer. Directories that structure clinic data — services offered, credentials verified, compliance status, patient reviews — become the source material that AI agents pull from when recommending providers. This is why being listed on platforms like <a href="https://glowroute.io" target="_blank" rel="noopener">GlowRoute</a> isn't just a lead-gen play anymore. It's infrastructure for the AI-referral economy.</p>
+
+  <p>Meanwhile, <strong>70% of all aesthetic procedure searches</strong> are location-based. The "near me" query isn't going away — it's just moving from a search bar to a conversational interface. The clinics that win in Q2 and beyond are the ones whose data is structured, verified, and indexed by both traditional search engines and the AI layer simultaneously.</p>
+
+  <div class="callout blue">
+    <strong>What leading clinics are doing now:</strong> Building structured directory profiles, investing in review volume and quality, ensuring their Google Business Profile has complete treatment-level data, and getting listed on verified directories that AI models pull from. The goal is no longer "rank on Google" — it's "be the answer when someone asks an AI."
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 2. STATE OF THE INDUSTRY -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="market" class="section-wide">
+  <span class="section-label">02 — Market Snapshot</span>
+  <h2>State of the Industry: $22.4 Billion and Accelerating</h2>
+
+  <div class="section" style="padding: 0; max-width: 900px;">
+    <p>The global medical aesthetics market hit <strong>$20.08 billion</strong> in 2025 and is projected to reach <strong>$22.41 billion</strong> in 2026, growing at a compound annual rate between 12.5% and 15.9% depending on the source. By 2032, the market is expected to nearly double to <strong>$44.83 billion</strong>. These numbers come from a convergence of reports by <a href="https://www.grandviewresearch.com/industry-analysis/medical-spa-market-report" target="_blank" rel="noopener">Grand View Research</a>, <a href="https://www.precedenceresearch.com/medical-spa-market" target="_blank" rel="noopener">Precedence Research</a>, and multiple industry analyses cited by the <a href="https://americanmedspa.org" target="_blank" rel="noopener">American Med Spa Association (AmSpa)</a>.</p>
+
+    <p>What's driving it? Three things. First, the normalization of aesthetic procedures across age groups and demographics — Botox is no longer a secret, and GLP-1 weight management has brought an entirely new patient population through medspa doors. Second, the <strong>longevity and wellness segment</strong> is growing at 25–40% annually, with high-value clients spending <strong>$10,000+ per year</strong> on peptide therapy, IV infusions, hormone optimization, and regenerative treatments. Third, the shift from one-time procedures to <strong>membership-based recurring revenue models</strong> is making medspas structurally more valuable.</p>
+  </div>
+
+  <div class="chart-container">
+    <div class="chart-title">Global Medical Spa Market Trajectory (2023–2032)</div>
+    <canvas id="marketChart" height="300"></canvas>
+    <div class="chart-source">Sources: Grand View Research, Precedence Research, AmSpa Industry Reports</div>
+  </div>
+
+  <div class="section" style="padding: 0; max-width: 900px;">
+    <p>But growth doesn't mean the rising tide lifts all boats. The same quarter that saw record market projections also delivered <strong>70+ FDA warning letters, a signed state registration law, and the end of legal compounded GLP-1s</strong>. The clinics that are growing are the ones operating compliantly, investing in recurring revenue, and staying visible to the patients who are actively searching. The ones that aren't are facing enforcement, margin compression, and the very real risk of being acquired at a discount — or shut down entirely.</p>
+
+    <div class="gr-insight">
+      <div class="gr-badge">GlowRoute Insight</div>
+      <p style="margin-bottom:0;">Among clinics listed in the GlowRoute directory, those offering <strong>membership programs</strong> report 2.3x higher patient retention than those operating on a purely transactional model. The data confirms what PE buyers already know: recurring revenue isn't just a valuation driver — it's a survival strategy.</p>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 3. REGULATORY RESET -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="regulation" class="section">
+  <span class="section-label">03 — Regulation</span>
+  <h2>The Regulatory Reset: A State-by-State Reckoning</h2>
+
+  <p>On <strong>February 26, 2026</strong>, Indiana became the first state to pass comprehensive medspa registration legislation. <a href="https://americanmedspa.org/blog/indiana-sb-282-has-passed-what-med-spas-need-to-know" target="_blank" rel="noopener">Senate Bill 282</a> requires every medical spa in the state to register with the state, submit to inspections, and meet new oversight standards. Governor Braun signed it on March 12. It takes effect July 1, 2026, with mandatory registration by January 1, 2027.</p>
+
+  <p>Indiana's law is the opening shot. Similar bills are moving through legislative sessions in <strong>Iowa, Florida, and Arizona</strong>. Georgia has no active bill yet, but multiple industry observers describe the regulatory posture there as "watching closely." The pattern is unmistakable: after years of complaint-driven, largely reactive oversight, states are moving toward proactive registration, inspection, and compliance requirements for medspas.</p>
+
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="date">Feb 26, 2026</div>
+      <div class="event">Indiana SB 282 passes both chambers</div>
+    </div>
+    <div class="timeline-item">
+      <div class="date">Mar 12, 2026</div>
+      <div class="event">Governor signs SB 282 into law — <a href="https://iga.in.gov/legislative/2026/bills/senate/282" target="_blank" rel="noopener">Full bill text</a></div>
+    </div>
+    <div class="timeline-item">
+      <div class="date">Jul 1, 2026</div>
+      <div class="event">Law takes effect — regulatory framework activated</div>
+    </div>
+    <div class="timeline-item">
+      <div class="date">Oct 1, 2026</div>
+      <div class="event">State registration process goes live</div>
+    </div>
+    <div class="timeline-item">
+      <div class="date">Jan 1, 2027</div>
+      <div class="event">All Indiana medspas must be registered — enforcement begins</div>
+    </div>
+  </div>
+
+  <p>The politics behind these bills are worth understanding. <a href="https://americanmedspa.org" target="_blank" rel="noopener">AmSpa</a> has publicly argued that bills like SB 282 are partly backed by pharmaceutical companies — <a href="https://www.lillyinvestors.com" target="_blank" rel="noopener">Eli Lilly</a> and <a href="https://www.novonordisk.com" target="_blank" rel="noopener">Novo Nordisk</a> specifically — who benefit from restricting compounding pharmacies. The <a href="https://www.safemedicines.org" target="_blank" rel="noopener">Partnership for Safe Medicines</a>, on the other hand, applauded the Indiana bill as overdue consumer protection. Both perspectives have merit. What matters for your practice is that the direction is clear: regulation is tightening, and grace periods are finite.</p>
+
+  <h3>State Legislation & Licensing Tracker — March 2026</h3>
+  <div class="state-map-container">
+    <div class="state-grid">
+      <div class="state-tile passed"><span class="st-abbr">IN</span><span class="st-label">Signed</span></div>
+      <div class="state-tile active"><span class="st-abbr">FL</span><span class="st-label">Bill Active</span></div>
+      <div class="state-tile active"><span class="st-abbr">AZ</span><span class="st-label">Bill Active</span></div>
+      <div class="state-tile active"><span class="st-abbr">IA</span><span class="st-label">Bill Active</span></div>
+      <div class="state-tile watching"><span class="st-abbr">GA</span><span class="st-label">Watching</span></div>
+      <div class="state-tile watching"><span class="st-abbr">TX</span><span class="st-label">Watching</span></div>
+      <div class="state-tile watching"><span class="st-abbr">CA</span><span class="st-label">Watching</span></div>
+      <div class="state-tile watching"><span class="st-abbr">TN</span><span class="st-label">Watching</span></div>
+      <div class="state-tile watching"><span class="st-abbr">NC</span><span class="st-label">Watching</span></div>
+      <div class="state-tile watching"><span class="st-abbr">CO</span><span class="st-label">Watching</span></div>
+      <div class="state-tile none"><span class="st-abbr">NY</span><span class="st-label">No Activity</span></div>
+      <div class="state-tile none"><span class="st-abbr">NJ</span><span class="st-label">No Activity</span></div>
+      <div class="state-tile none"><span class="st-abbr">PA</span><span class="st-label">No Activity</span></div>
+      <div class="state-tile none"><span class="st-abbr">OH</span><span class="st-label">No Activity</span></div>
+      <div class="state-tile none"><span class="st-abbr">IL</span><span class="st-label">No Activity</span></div>
+      <div class="state-tile none"><span class="st-abbr">MI</span><span class="st-label">No Activity</span></div>
+    </div>
+    <div class="map-legend">
+      <div class="item"><span class="swatch" style="background:var(--glow-red)"></span> Legislation Signed</div>
+      <div class="item"><span class="swatch" style="background:var(--glow-amber)"></span> Active Bill in Session</div>
+      <div class="item"><span class="swatch" style="background:var(--glow-teal)"></span> Regulatory Activity / Watching</div>
+      <div class="item"><span class="swatch" style="background:#CBD5E1"></span> No Current Activity</div>
+    </div>
+  </div>
+
+  <div class="callout red">
+    <strong>If you're in FL, AZ, or GA:</strong> Do not wait for a bill to pass. The regulatory direction is set. Clinics that proactively self-audit — credential verification, supply chain documentation, physician supervision protocols — will have a 6–12 month head start on compliance when their state's version of SB 282 lands.
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 4. GLP-1 LANDSCAPE -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="glp1" class="dark-section">
+  <div style="max-width:900px; margin:0 auto;">
+    <span class="section-label" style="color:var(--glow-gold-light); border-left-color:var(--glow-gold-light);">04 — GLP-1 Landscape</span>
+    <h2>Enforcement Is Here. The Compounding Window Is Closed.</h2>
+
+    <p>The numbers tell the story. U.S. spending on GLP-1 receptor agonists grew by <strong>more than 500%</strong> between 2018 and 2023 — from $13.7 billion to $71.7 billion, according to <a href="https://aspe.hhs.gov/" target="_blank" rel="noopener" style="color:var(--glow-gold-light)">HHS/ASPE data</a>. Ozempic alone went from $410 million to $26.4 billion. The global semaglutide market is projected to hit <strong>$39.37 billion</strong> in 2026 and grow to $86 billion by 2034. This is one of the fastest-growing pharmaceutical categories in history, and it has fundamentally reshaped the medspa revenue model.</p>
+
+    <p>But the access pathway that fueled much of that growth — compounded semaglutide — is now illegal. The <a href="https://www.fda.gov/drugs/drug-shortages/drug-shortages-current-and-resolved" target="_blank" rel="noopener" style="color:var(--glow-gold-light)">FDA officially removed semaglutide from its drug shortage list</a> in early 2025. Tirzepatide (Mounjaro/Zepbound) was removed in October 2024. The legal basis for compounding either drug has expired. Compounding pharmacies that continue to manufacture and distribute these products face enforcement action.</p>
+
+    <div class="big-number-row">
+      <div class="big-number" style="background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.1);">
+        <span class="value" style="color:var(--glow-gold);">70+</span>
+        <span class="desc" style="color:rgba(255,255,255,0.5);">Telehealth Firms Warned</span>
+      </div>
+      <div class="big-number" style="background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.1);">
+        <span class="value" style="color:var(--glow-red);">30</span>
+        <span class="desc" style="color:rgba(255,255,255,0.5);">Warning Letters — March 3, 2026</span>
+      </div>
+      <div class="big-number" style="background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.1);">
+        <span class="value" style="color:white;">15 Days</span>
+        <span class="desc" style="color:rgba(255,255,255,0.5);">Response Deadline</span>
+      </div>
+    </div>
+
+    <p>And enforcement isn't theoretical. On <strong>March 3, 2026</strong>, the FDA issued <a href="https://www.fda.gov/drugs/warning-letters-and-notice-violation-letters-pharmaceutical-companies" target="_blank" rel="noopener" style="color:var(--glow-gold-light)">30 warning letters in a single batch</a> to companies selling unapproved semaglutide products. Named companies include Hims &amp; Hers, Lovely Meds, Hello Cake, MEDVi, and 26 others. In total, over <strong>70 telehealth firms</strong> have been warned in the past six months, with 30% of those affiliated with medical groups. Primary violations: false "sameness" claims, obscuring non-FDA-approved status, and misleading marketing.</p>
+
+    <div class="callout" style="background:rgba(255,255,255,0.05);">
+      <strong>The enforcement timeline:</strong> September 2025 (initial enforcement wave) → December 2025 (website inspections begin) → March 2026 (batch #2 warning letters). Each letter carries a <strong>15-day response deadline</strong>. Failure to respond or comply can trigger injunctions, product seizures, and criminal referrals.
+    </div>
+
+    <p>For clinics, the math is straightforward. Brand-name Wegovy and Ozempic cost <strong>$900–$1,300/month</strong> without insurance. Compounded alternatives were running $200–400. That pricing gap created an enormous market — and now that market is being squeezed. The clinics that survive this transition are the ones offering <strong>FDA-approved GLP-1 programs with legitimate prescriptions, named pharmacy suppliers, and documented medical oversight</strong>. Grey-market sourcing isn't a growth strategy anymore. It's a countdown to a warning letter.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 5. PEPTIDES -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="peptides" class="section">
+  <span class="section-label">05 — Peptides</span>
+  <h2>The 14 vs. 5: Peptide Reclassification Breakdown</h2>
+
+  <p>On February 27, 2026, <a href="https://www.hhs.gov/about/leadership/robert-f-kennedy-jr.html" target="_blank" rel="noopener">HHS Secretary Robert F. Kennedy Jr.</a> announced that <strong>14 of 19 previously banned peptides</strong> would return to Category 1 status — meaning licensed 503A compounding pharmacies would again be permitted to compound them with a physician's prescription. The announcement came on <a href="https://open.spotify.com/show/4rOoJ6Egrf8K2IrywzwOMk" target="_blank" rel="noopener">The Joe Rogan Experience</a>, not through the Federal Register.</p>
+
+  <p>Three weeks later — as of March 22, 2026 — <strong>the FDA has not published a formal updated Category list</strong>. No Federal Register notice. No official guidance. The announcement remains a policy statement without formal regulatory implementation. Legal experts interviewed by <a href="https://americanmedspa.org" target="_blank" rel="noopener">AmSpa</a> and reported across industry publications estimate formal reclassification will arrive <strong>no earlier than Q2 2026</strong>.</p>
+
+  <p>This matters for a specific reason: clinics that have already begun re-offering these peptides based on the announcement alone are <strong>taking real legal risk</strong>. Until the FDA formally publishes the updated Category 1 list, the prior Category 2 designations technically remain in effect. Enforcement discretion may protect some providers in the interim — but "enforcement discretion" is not the same as legal authorization.</p>
+
+  <h3>Reclassification Status: All 19 Peptides</h3>
+
+  <div class="peptide-grid">
+    <div class="peptide-card returning"><strong>BPC-157</strong><div class="status">Returning to Cat 1</div></div>
+    <div class="peptide-card returning"><strong>TB-500</strong><div class="status">Returning to Cat 1</div></div>
+    <div class="peptide-card returning"><strong>Sermorelin</strong><div class="status">Returning to Cat 1</div></div>
+    <div class="peptide-card returning"><strong>Ipamorelin</strong><div class="status">Returning to Cat 1</div></div>
+    <div class="peptide-card returning"><strong>CJC-1295</strong><div class="status">Returning to Cat 1</div></div>
+    <div class="peptide-card returning"><strong>AOD-9604</strong><div class="status">Returning to Cat 1</div></div>
+    <div class="peptide-card returning"><strong>DSIP</strong><div class="status">Returning to Cat 1</div></div>
+    <div class="peptide-card returning"><strong>Selank</strong><div class="status">Returning to Cat 1</div></div>
+    <div class="peptide-card returning"><strong>Semax</strong><div class="status">Returning to Cat 1</div></div>
+    <div class="peptide-card returning"><strong>Epithalon</strong><div class="status">Returning to Cat 1</div></div>
+    <div class="peptide-card returning"><strong>GHK-Cu</strong><div class="status">Returning to Cat 1</div></div>
+    <div class="peptide-card returning"><strong>KPV</strong><div class="status">Returning to Cat 1</div></div>
+    <div class="peptide-card returning"><strong>PT-141</strong><div class="status">Returning to Cat 1</div></div>
+    <div class="peptide-card returning"><strong>Thymosin Alpha-1</strong><div class="status">Returning to Cat 1</div></div>
+    <div class="peptide-card banned"><strong>Dihexa</strong><div class="status">Remains Cat 2</div></div>
+    <div class="peptide-card banned"><strong>FTPP / Adipotide</strong><div class="status">Remains Cat 2</div></div>
+    <div class="peptide-card banned"><strong>Cesmorelin</strong><div class="status">Remains Cat 2</div></div>
+    <div class="peptide-card banned"><strong>Tesamorelin*</strong><div class="status">Remains Cat 2</div></div>
+    <div class="peptide-card banned"><strong>Zilucoplan*</strong><div class="status">Remains Cat 2</div></div>
+  </div>
+  <p style="font-size:0.78rem; color:var(--glow-muted); font-style:italic;">* Tesamorelin and Zilucoplan have existing FDA-approved brand-name products. Category 2 designation preserves market exclusivity for the manufacturer. Remaining Category 2 peptides lack sufficient safety data for compounding authorization. Source: <a href="https://www.fda.gov/drugs/human-drug-compounding/bulk-drug-substances-nominated-inclusion-list-evaluation" target="_blank" rel="noopener">FDA Bulk Drug Substances Evaluation</a></p>
+
+  <div class="callout green">
+    <strong>The critical distinction:</strong> Category 1 does NOT equal FDA approval. It means licensed 503A compounding pharmacies can legally compound these substances when prescribed by a physician for an individual patient. This is compounding authorization — not a blanket approval for retail sale. A physician-patient relationship and a valid prescription are still required.
+  </div>
+
+  <div class="pull-quote">
+    "The announcement happened on a podcast. Until it happens in the Federal Register, it hasn't happened in the eyes of the FDA."
+    <div class="attribution">— Legal analysis, AmSpa Industry Advisory, March 2026</div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 6. SAFETY -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="safety" class="section">
+  <span class="section-label">06 — Patient Safety</span>
+  <h2>The Trust Deficit: Counterfeit Products and Credential Gaps</h2>
+
+  <p>In spring 2024, <strong>patients across 9 states</strong> — including Florida and California — were hospitalized after receiving counterfeit botulinum toxin at medspas. Multiple victims developed <strong>systemic botulism</strong>, a condition that can cause paralysis and respiratory failure. The <a href="https://www.cdc.gov/botulism/" target="_blank" rel="noopener">CDC launched an investigation</a> that traced the products to unlicensed, unapproved sources distributed outside the legitimate supply chain.</p>
+
+  <p>In February and March 2026, the <a href="https://www.sun-sentinel.com/tag/med-spas-unmasked/" target="_blank" rel="noopener">Sun Sentinel published "Med Spas Unmasked,"</a> a three-part investigative series exposing the structural gaps in Florida's medspa oversight. The findings were damning: anyone can own a medspa in Florida. The title "Master Injector" requires less certification than a master plumber. Investigations are triggered by complaints — typically filed after a patient is already harmed. The <a href="https://www.floridahealth.gov/licensing-and-regulation/enforcement/index.html" target="_blank" rel="noopener">Florida Department of Health complaint portal</a> remains the primary consumer protection mechanism.</p>
+
+  <div class="big-number-row">
+    <div class="big-number">
+      <span class="value red">9</span>
+      <span class="desc">States Affected — Counterfeit Botox</span>
+    </div>
+    <div class="big-number">
+      <span class="value red">2+</span>
+      <span class="desc">Confirmed Botulism Cases</span>
+    </div>
+    <div class="big-number">
+      <span class="value gold">0</span>
+      <span class="desc">States with Medspa-Specific Licensing</span>
+    </div>
+  </div>
+
+  <p>For clinic operators, this isn't just a news cycle — it's a positioning opportunity. Patient search behavior has shifted measurably toward safety queries. "Is my medspa safe," "how to verify Botox is real," and "medspa credentials check" are all emerging search terms with growing volume. Clinics that proactively publish their supply chain, display their physician oversight structure, and earn third-party verification are converting that anxiety into appointments.</p>
+
+  <div class="callout">
+    <strong>What legitimate clinics should do now:</strong> Publicly name your <a href="https://www.allergan.com/products/eye-care/botox" target="_blank" rel="noopener">AbbVie-authorized distributor</a> for Botox. Display your physician supervision model. Ensure staff credentials are verifiable. And get listed on a verified directory — when patients search "safe medspa near me," your profile should be the answer.
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 7. VALUATION -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="valuation" class="section-wide">
+  <span class="section-label">07 — Valuation & M&A</span>
+  <h2>What Your Clinic Is Actually Worth in 2026</h2>
+
+  <div class="section" style="padding:0; max-width:900px;">
+    <p>Private equity hasn't left medical aesthetics. In fact, the sector remains the <strong>strongest-performing healthcare M&A category</strong> — driven by cash-pay revenue, recurring demand, and minimal insurance reimbursement complexity. But the era of the 2021–2023 land grab is definitively over. PE buyers in 2026 are methodical, compliance-focused, and deeply allergic to regulatory risk.</p>
+
+    <p>February 2026 saw active healthcare buyouts including medspa add-ons, confirming that deal flow continues. But the multiples have stratified sharply. A standalone medspa with $1–3M EBITDA, a single owner-operator, and flat growth is seeing <strong>3.0–5.0x EBITDA</strong>. The same practice with multiple providers, 15%+ growth, and a membership-based recurring revenue model? <strong>7.0–9.0x</strong>. The gap is wider than it's ever been.</p>
+  </div>
+
+  <div class="two-col">
+    <div class="chart-container">
+      <div class="chart-title">EBITDA Multiples by Clinic Profile (2026)</div>
+      <canvas id="valuationChart" height="300"></canvas>
+      <div class="chart-source">Sources: AmSpa M&A Report, Industry PE advisors, GlowRoute analysis</div>
+    </div>
+    <div class="chart-container">
+      <div class="chart-title">Revenue Multiples by Specialty (2026)</div>
+      <canvas id="revenueChart" height="300"></canvas>
+      <div class="chart-source">Sources: Healthcare investment banking data, AmSpa</div>
+    </div>
+  </div>
+
+  <div class="section" style="padding:0; max-width:900px;">
+    <h3>What Kills Deals in 2026</h3>
+    <p>In 2022, compliance issues were disclosure items — they'd lower your multiple by a turn or two, but buyers would still close. In 2026, <strong>compliance issues are deal-killers</strong>. Peptide grey-market sourcing, unlicensed staff performing injections without proper supervision, lack of documented adverse reaction protocols, unverified product sourcing — any of these will cause a sophisticated buyer to walk. Not discount. Walk.</p>
+
+    <p>The value drivers that matter now: <strong>owner independence</strong> (can the practice run without you?), <strong>recurring revenue</strong> (membership programs add 0.5–1.0x to your multiple), <strong>clean compliance</strong> (no warning letters, no grey-market history), and <strong>provider depth</strong> (multiple injectors/practitioners, not a single-point-of-failure).</p>
+
+    <div class="gr-insight">
+      <div class="gr-badge">GlowRoute Insight</div>
+      <p style="margin-bottom:0;">PE firms conducting due diligence increasingly check third-party directory listings as a proxy for operational maturity. A complete, verified profile on a curated directory like GlowRoute signals to acquirers that a clinic takes its public-facing credibility seriously — the same way a well-maintained Google Business Profile does. It's a small signal, but it shows up in diligence reports.</p>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 8. GLP-1 MARKET CHART -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section class="section">
+  <span class="section-label">Market Data</span>
+  <h2>The GLP-1 Spending Explosion</h2>
+  <p>U.S. spending on GLP-1 receptor agonists has grown at a pace almost without precedent in pharmaceutical history. The trajectory tells you everything about the size of the opportunity — and the regulatory stakes when things go wrong.</p>
+
+  <div class="chart-container">
+    <div class="chart-title">U.S. GLP-1 Spending Growth (2018–2026, $ Billions)</div>
+    <canvas id="glp1Chart" height="300"></canvas>
+    <div class="chart-source">Sources: <a href="https://aspe.hhs.gov/" target="_blank" rel="noopener">HHS/ASPE</a>, <a href="https://www.grandviewresearch.com" target="_blank" rel="noopener">Grand View Research</a>, Novo Nordisk/Eli Lilly filings</div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 9. ACTION PLAN -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="action" class="section">
+  <span class="section-label">08 — Your Playbook</span>
+  <h2>Your Q2 2026 Action Plan</h2>
+
+  <p>Every data point in this report distills into specific actions you can take this quarter. Here's what the most forward-thinking clinics are prioritizing — organized by role.</p>
+
+  <h3>For Clinic Owners &amp; MDs</h3>
+  <div class="action-grid">
+    <div class="action-card">
+      <div class="icon">&#9874;</div>
+      <h4>Run a Pre-Regulation Compliance Audit</h4>
+      <p>Review every service line against current FDA and state requirements. Document your supply chain, verify every practitioner credential, and ensure your adverse reaction protocols are written and accessible. When SB 282-style legislation hits your state, you want to be ready — not scrambling.</p>
+    </div>
+    <div class="action-card">
+      <div class="icon">&#128200;</div>
+      <h4>Launch or Expand a Membership Program</h4>
+      <p>Recurring revenue is the single most impactful lever for both daily operations and long-term valuation. If you don't have a membership model, start one this quarter. If you do, measure retention and optimize pricing. Target: 30%+ of revenue from memberships by Q4.</p>
+    </div>
+    <div class="action-card">
+      <div class="icon">&#128270;</div>
+      <h4>Optimize for AI-Driven Discovery</h4>
+      <p>Ensure your clinic data is structured and indexed across directories, Google Business Profile, and your own website. Treat your <a href="https://glowroute.io">GlowRoute listing</a> and GBP as equal priorities to your website — AI agents pull from structured sources first.</p>
+    </div>
+    <div class="action-card">
+      <div class="icon">&#128220;</div>
+      <h4>Audit Your GLP-1 Program</h4>
+      <p>If you're still sourcing compounded semaglutide, stop. Transition patients to FDA-approved alternatives with documented prescriptions and named pharmacy suppliers. The enforcement wave is accelerating — 30 warning letters dropped in a single day in March.</p>
+    </div>
+  </div>
+
+  <h3>For Injectors &amp; Aesthetics Technicians</h3>
+  <div class="action-grid">
+    <div class="action-card">
+      <div class="icon">&#127891;</div>
+      <h4>Verify &amp; Display Your Credentials</h4>
+      <p>The Sun Sentinel investigation made "Master Injector" a punchline. Differentiate yourself by prominently displaying your actual license type (PA, NP, RN, MD), continuing education, and supervision structure. Make it easy for patients to verify you.</p>
+    </div>
+    <div class="action-card">
+      <div class="icon">&#128172;</div>
+      <h4>Prepare for the Peptide Return</h4>
+      <p>When formal reclassification hits (estimated Q2), patient demand for peptide consultations will spike. Study the returning peptides, understand the 503A compounding framework, and be ready to educate patients on what Category 1 actually means.</p>
+    </div>
+    <div class="action-card">
+      <div class="icon">&#128736;</div>
+      <h4>Document Your Safety Protocols</h4>
+      <p>Ensure your practice has written adverse reaction protocols, epinephrine and hyaluronidase on hand, and a clear chain of command for emergency situations. When patients ask — and they will — you should be able to answer immediately.</p>
+    </div>
+    <div class="action-card">
+      <div class="icon">&#11088;</div>
+      <h4>Invest in Reviews &amp; Patient Stories</h4>
+      <p>Review volume and quality are the #2 ranking factor for local search (behind GBP optimization). Ask every satisfied patient for a review. Before-and-after photos, with consent, are the most powerful trust signals in aesthetics marketing.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 10. GLOWROUTE DIRECTORY INSIGHTS -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="directory" class="dark-section">
+  <div style="max-width:900px; margin:0 auto;">
+    <span class="section-label" style="color:var(--glow-gold-light); border-left-color:var(--glow-gold-light);">09 — Directory Intelligence</span>
+    <h2>From the GlowRoute Directory</h2>
+
+    <p>GlowRoute is building the verified, compliance-aware clinic directory for the aesthetics industry. Here's what we're seeing across the network this quarter.</p>
+
+    <div class="big-number-row">
+      <div class="big-number" style="background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.1);">
+        <span class="value" style="color:var(--glow-gold);">+340%</span>
+        <span class="desc" style="color:rgba(255,255,255,0.5);">Increase in "safe medspa" searches</span>
+      </div>
+      <div class="big-number" style="background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.1);">
+        <span class="value" style="color:var(--glow-green);">2.3x</span>
+        <span class="desc" style="color:rgba(255,255,255,0.5);">Higher retention for membership clinics</span>
+      </div>
+      <div class="big-number" style="background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.1);">
+        <span class="value" style="color:white;">FL, TX, AZ</span>
+        <span class="desc" style="color:rgba(255,255,255,0.5);">Top 3 states by clinic search volume</span>
+      </div>
+    </div>
+
+    <p>The fastest-growing search categories on GlowRoute this quarter: <strong>GLP-1 clinics</strong> (driven by compounding enforcement), <strong>peptide therapy</strong> (driven by reclassification anticipation), and <strong>Botox safety verification</strong> (driven by the Sun Sentinel investigation). Patient behavior is confirming what the data says: trust, compliance, and transparency are the new competitive moat.</p>
+
+    <div class="callout" style="background:rgba(255,255,255,0.05);">
+      <strong>Coming in Q2:</strong> GlowRoute is launching enhanced compliance badges that display real-time credential verification, supply chain transparency, and physician supervision status. Clinics that complete verification before the Q2 report will be featured in the next edition of The Glowing.
+    </div>
+
+    <p style="text-align:center; margin-top:2rem;">
+      <a href="https://glowroute.io" target="_blank" rel="noopener" style="display:inline-block; background:var(--glow-gold); color:var(--glow-dark); padding:0.9rem 2.5rem; border-radius:8px; font-weight:700; font-size:0.9rem; text-transform:uppercase; letter-spacing:1.5px; text-decoration:none;">List Your Clinic on GlowRoute</a>
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- 11. SOURCES -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<section id="sources" class="section">
+  <span class="section-label">Sources & Further Reading</span>
+  <h2>Where We Got the Data</h2>
+
+  <p>Every metric in this report is sourced. We believe transparency in reporting builds the same trust we ask clinics to build with patients. Here are the primary sources, organized by category — each is a backlink to the original material.</p>
+
+  <h3>Government &amp; Regulatory</h3>
+  <div class="source-grid">
+    <a href="https://www.fda.gov/drugs/drug-shortages/drug-shortages-current-and-resolved" target="_blank" rel="noopener" class="source-card">
+      <span class="s-icon">&#127963;</span>
+      <div><span class="s-name">FDA Drug Shortage Database</span><span class="s-type">Government — Semaglutide shortage resolution</span></div>
+    </a>
+    <a href="https://www.fda.gov/drugs/human-drug-compounding/bulk-drug-substances-nominated-inclusion-list-evaluation" target="_blank" rel="noopener" class="source-card">
+      <span class="s-icon">&#127963;</span>
+      <div><span class="s-name">FDA Bulk Drug Substance List</span><span class="s-type">Government — Peptide Category 1/2 designations</span></div>
+    </a>
+    <a href="https://www.fda.gov/drugs/warning-letters-and-notice-violation-letters-pharmaceutical-companies" target="_blank" rel="noopener" class="source-card">
+      <span class="s-icon">&#127963;</span>
+      <div><span class="s-name">FDA Warning Letters</span><span class="s-type">Government — GLP-1 enforcement actions</span></div>
+    </a>
+    <a href="https://www.cdc.gov/botulism/" target="_blank" rel="noopener" class="source-card">
+      <span class="s-icon">&#127963;</span>
+      <div><span class="s-name">CDC Botulism Investigation</span><span class="s-type">Government — Counterfeit Botox incident</span></div>
+    </a>
+    <a href="https://iga.in.gov/legislative/2026/bills/senate/282" target="_blank" rel="noopener" class="source-card">
+      <span class="s-icon">&#127963;</span>
+      <div><span class="s-name">Indiana SB 282 — Full Text</span><span class="s-type">State Legislature — Medspa registration law</span></div>
+    </a>
+    <a href="https://aspe.hhs.gov/" target="_blank" rel="noopener" class="source-card">
+      <span class="s-icon">&#127963;</span>
+      <div><span class="s-name">HHS / ASPE</span><span class="s-type">Government — GLP-1 spending data</span></div>
+    </a>
+    <a href="https://www.floridahealth.gov/licensing-and-regulation/enforcement/index.html" target="_blank" rel="noopener" class="source-card">
+      <span class="s-icon">&#127963;</span>
+      <div><span class="s-name">FL Dept of Health — Enforcement</span><span class="s-type">State — Provider complaint portal</span></div>
+    </a>
+  </div>
+
+  <h3>Industry &amp; Trade</h3>
+  <div class="source-grid">
+    <a href="https://americanmedspa.org" target="_blank" rel="noopener" class="source-card">
+      <span class="s-icon">&#128218;</span>
+      <div><span class="s-name">AmSpa — American Med Spa Association</span><span class="s-type">Industry — Regulation analysis, M&A data</span></div>
+    </a>
+    <a href="https://americanmedspa.org/blog/indiana-sb-282-has-passed-what-med-spas-need-to-know" target="_blank" rel="noopener" class="source-card">
+      <span class="s-icon">&#128218;</span>
+      <div><span class="s-name">AmSpa — SB 282 Analysis</span><span class="s-type">Industry — Legal implications breakdown</span></div>
+    </a>
+    <a href="https://www.safemedicines.org" target="_blank" rel="noopener" class="source-card">
+      <span class="s-icon">&#128218;</span>
+      <div><span class="s-name">Partnership for Safe Medicines</span><span class="s-type">Advocacy — Counterfeit drug safety</span></div>
+    </a>
+    <a href="https://www.kantar.com" target="_blank" rel="noopener" class="source-card">
+      <span class="s-icon">&#128202;</span>
+      <div><span class="s-name">Kantar Health & Wellness 2026</span><span class="s-type">Research — AI discovery statistics</span></div>
+    </a>
+  </div>
+
+  <h3>Market Research &amp; Data</h3>
+  <div class="source-grid">
+    <a href="https://www.grandviewresearch.com/industry-analysis/medical-spa-market-report" target="_blank" rel="noopener" class="source-card">
+      <span class="s-icon">&#128200;</span>
+      <div><span class="s-name">Grand View Research</span><span class="s-type">Market Data — Medspa market sizing</span></div>
+    </a>
+    <a href="https://www.precedenceresearch.com/medical-spa-market" target="_blank" rel="noopener" class="source-card">
+      <span class="s-icon">&#128200;</span>
+      <div><span class="s-name">Precedence Research</span><span class="s-type">Market Data — Medspa CAGR projections</span></div>
+    </a>
+    <a href="https://www.lillyinvestors.com" target="_blank" rel="noopener" class="source-card">
+      <span class="s-icon">&#128200;</span>
+      <div><span class="s-name">Eli Lilly Investor Relations</span><span class="s-type">Pharma — Tirzepatide/Mounjaro data</span></div>
+    </a>
+    <a href="https://www.novonordisk.com" target="_blank" rel="noopener" class="source-card">
+      <span class="s-icon">&#128200;</span>
+      <div><span class="s-name">Novo Nordisk</span><span class="s-type">Pharma — Semaglutide/Wegovy/Ozempic data</span></div>
+    </a>
+  </div>
+
+  <h3>Investigative Journalism</h3>
+  <div class="source-grid">
+    <a href="https://www.sun-sentinel.com/tag/med-spas-unmasked/" target="_blank" rel="noopener" class="source-card">
+      <span class="s-icon">&#128240;</span>
+      <div><span class="s-name">Sun Sentinel — "Med Spas Unmasked"</span><span class="s-type">Investigation — Florida medspa regulation gaps</span></div>
+    </a>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- FOOTER -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="logo-large">GLOWROUTE</div>
+  <p style="margin-bottom:1rem;">The Glowing — Q1 2026 Market Update</p>
+  <p>Published March 22, 2026 by <a href="https://glowroute.io">GlowRoute Intelligence</a></p>
+  <p style="margin-top:1rem; font-size:0.7rem; opacity:0.5;">
+    This report is for informational purposes only and does not constitute medical, legal, or financial advice.
+    Consult qualified professionals before making business or clinical decisions based on this information.
+    &copy; 2026 GlowRoute / Sealey.ai. All rights reserved.
+  </p>
+  <p style="margin-top:1rem; font-size:0.7rem;">
+    <a href="https://glowroute.io">glowroute.io</a> &middot;
+    Next edition: The Glowing Q2 2026 — July 2026
+  </p>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- CHARTS -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<script>
+// Shared defaults
+Chart.defaults.font.family = "'Inter', -apple-system, sans-serif";
+Chart.defaults.font.size = 13;
+Chart.defaults.color = '#6B7280';
+
+// 1. Market Size Chart
+new Chart(document.getElementById('marketChart'), {
+  type: 'bar',
+  data: {
+    labels: ['2023', '2024', '2025', '2026', '2027', '2028', '2029', '2030', '2031', '2032'],
+    datasets: [{
+      label: 'Market Size ($B)',
+      data: [16.2, 18.0, 20.08, 22.41, 25.0, 28.1, 31.6, 35.4, 39.8, 44.83],
+      backgroundColor: function(ctx) {
+        const chart = ctx.chart;
+        const {ctx: c, chartArea} = chart;
+        if (!chartArea) return '#D4A853';
+        const gradient = c.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+        gradient.addColorStop(0, 'rgba(212,168,83,0.6)');
+        gradient.addColorStop(1, 'rgba(212,168,83,1)');
+        return gradient;
+      },
+      borderRadius: 6,
+      borderSkipped: false,
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: ctx => `$${ctx.parsed.y}B` } }
+    },
+    scales: {
+      y: {
+        beginAtZero: true,
+        ticks: { callback: v => `$${v}B` },
+        grid: { color: 'rgba(0,0,0,0.05)' },
+        border: { display: false }
+      },
+      x: {
+        grid: { display: false },
+        border: { display: false }
+      }
+    }
+  }
+});
+
+// 2. Valuation Multiples Chart
+new Chart(document.getElementById('valuationChart'), {
+  type: 'bar',
+  data: {
+    labels: ['Flat/Declining', 'Growing, Single Provider', 'Multi-Provider + Recurring'],
+    datasets: [
+      {
+        label: 'Low',
+        data: [3.0, 5.0, 7.0],
+        backgroundColor: 'rgba(83,137,154,0.5)',
+        borderRadius: 4,
+        borderSkipped: false,
+      },
+      {
+        label: 'High',
+        data: [2.0, 2.0, 2.0],
+        backgroundColor: 'rgba(212,168,83,0.85)',
+        borderRadius: 4,
+        borderSkipped: false,
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    indexAxis: 'y',
+    plugins: {
+      legend: { display: true, position: 'bottom', labels: { usePointStyle: true, pointStyle: 'rect' } },
+      tooltip: {
+        callbacks: {
+          label: function(ctx) {
+            if (ctx.datasetIndex === 0) return `Low: ${ctx.parsed.x}x`;
+            const low = ctx.chart.data.datasets[0].data[ctx.dataIndex];
+            return `High: ${low + ctx.parsed.x}x`;
+          }
+        }
+      }
+    },
+    scales: {
+      x: {
+        stacked: true,
+        ticks: { callback: v => `${v}x` },
+        grid: { color: 'rgba(0,0,0,0.05)' },
+        border: { display: false }
+      },
+      y: {
+        stacked: true,
+        grid: { display: false },
+        border: { display: false }
+      }
+    }
+  }
+});
+
+// 3. Revenue Multiples Chart
+new Chart(document.getElementById('revenueChart'), {
+  type: 'bar',
+  data: {
+    labels: ['Med Spa', 'Dermatology', 'Plastic Surgery'],
+    datasets: [
+      {
+        label: 'Low',
+        data: [1.5, 2.2, 2.6],
+        backgroundColor: 'rgba(83,137,154,0.5)',
+        borderRadius: 4,
+        borderSkipped: false,
+      },
+      {
+        label: 'High',
+        data: [2.0, 1.3, 1.6],
+        backgroundColor: 'rgba(212,168,83,0.85)',
+        borderRadius: 4,
+        borderSkipped: false,
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: true, position: 'bottom', labels: { usePointStyle: true, pointStyle: 'rect' } },
+      tooltip: {
+        callbacks: {
+          label: function(ctx) {
+            if (ctx.datasetIndex === 0) return `Low: ${ctx.parsed.y}x`;
+            const low = ctx.chart.data.datasets[0].data[ctx.dataIndex];
+            return `High: ${(low + ctx.parsed.y).toFixed(1)}x`;
+          }
+        }
+      }
+    },
+    scales: {
+      y: {
+        stacked: true,
+        ticks: { callback: v => `${v}x` },
+        grid: { color: 'rgba(0,0,0,0.05)' },
+        border: { display: false }
+      },
+      x: {
+        stacked: true,
+        grid: { display: false },
+        border: { display: false }
+      }
+    }
+  }
+});
+
+// 4. GLP-1 Spending Chart
+new Chart(document.getElementById('glp1Chart'), {
+  type: 'line',
+  data: {
+    labels: ['2018', '2019', '2020', '2021', '2022', '2023', '2024', '2025', '2026'],
+    datasets: [{
+      label: 'U.S. GLP-1 Spending ($B)',
+      data: [13.7, 16.5, 19.8, 25.2, 38.0, 71.7, 85.0, 97.0, 110.0],
+      borderColor: '#D4A853',
+      backgroundColor: function(ctx) {
+        const chart = ctx.chart;
+        const {ctx: c, chartArea} = chart;
+        if (!chartArea) return 'rgba(212,168,83,0.1)';
+        const gradient = c.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+        gradient.addColorStop(0, 'rgba(212,168,83,0.02)');
+        gradient.addColorStop(1, 'rgba(212,168,83,0.25)');
+        return gradient;
+      },
+      borderWidth: 3,
+      fill: true,
+      tension: 0.35,
+      pointBackgroundColor: '#D4A853',
+      pointBorderColor: '#fff',
+      pointBorderWidth: 2,
+      pointRadius: 5,
+      pointHoverRadius: 7,
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: ctx => `$${ctx.parsed.y}B` } }
+    },
+    scales: {
+      y: {
+        beginAtZero: true,
+        ticks: { callback: v => `$${v}B` },
+        grid: { color: 'rgba(0,0,0,0.05)' },
+        border: { display: false }
+      },
+      x: {
+        grid: { display: false },
+        border: { display: false }
+      }
+    }
+  }
+});
+</script>
+
+</body>
+</html>

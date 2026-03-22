@@ -1,22 +1,140 @@
-export const ARTICLES = [
+export interface Article {
+  slug: string
+  title: string
+  excerpt: string
+  category: string
+  readTime: string
+  publishedAt: string
+  featured: boolean
+  imageUrl: string
+  contentFile?: string
+  audience?: 'consumer' | 'clinic'
+  tags?: string[]
+}
+
+export const ARTICLES: Article[] = [
+  {
+    slug: 'medspa-unmasked',
+    title: "The 'Med Spas Unmasked' Investigation — What Every Florida Patient Should Know",
+    excerpt: "When you walk into a medspa in Florida, you're stepping into a largely unregulated world. Here's what the Sun Sentinel investigation revealed — and how to protect yourself.",
+    category: 'Patient Safety',
+    readTime: '6 min read',
+    publishedAt: '2026-03-22',
+    featured: true,
+    audience: 'consumer',
+    tags: ['medspa safety', 'Florida', 'regulation', 'patient guide'],
+    imageUrl: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80',
+    contentFile: 'medspa-unmasked.md',
+  },
+  {
+    slug: 'sb282-regulatory-wave',
+    title: "Indiana Just Passed SB 282 — Is Florida Next?",
+    excerpt: "How medspa regulation is tightening nationwide, and what clinic owners need to know about compounded GLP-1s before the next wave hits.",
+    category: 'Clinic Operations',
+    readTime: '7 min read',
+    publishedAt: '2026-03-22',
+    featured: true,
+    audience: 'clinic',
+    tags: ['regulation', 'SB 282', 'GLP-1', 'compliance', 'clinic operators'],
+    imageUrl: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=800&q=80',
+    contentFile: 'sb282-regulatory-wave.md',
+  },
+  {
+    slug: 'compounded-semaglutide-fda',
+    title: "Compounded Semaglutide Is Going Away — Here's What to Do Now",
+    excerpt: "The FDA ended the drug shortage — and with it, access to cheap compounded semaglutide. What patients need to know and where to find legal alternatives.",
+    category: 'GLP-1 & Weight Loss',
+    readTime: '6 min read',
+    publishedAt: '2026-03-22',
+    featured: false,
+    audience: 'consumer',
+    tags: ['semaglutide', 'GLP-1', 'FDA', 'compounding', 'weight loss'],
+    imageUrl: 'https://images.unsplash.com/photo-1631549916768-4119b2e5f926?w=800&q=80',
+    contentFile: 'compounded-semaglutide-fda.md',
+  },
+  {
+    slug: 'pe-medspa-valuation-2026',
+    title: "Private Equity Is Still Buying Medspas — What Your Clinic Is Worth in 2026",
+    excerpt: "The era of easy money is gone. Here's what disciplined PE buyers are actually paying for medspas now — and how to position your clinic.",
+    category: 'Business & Finance',
+    readTime: '7 min read',
+    publishedAt: '2026-03-22',
+    featured: false,
+    audience: 'clinic',
+    tags: ['private equity', 'medspa valuation', 'M&A', 'clinic business'],
+    imageUrl: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80',
+    contentFile: 'pe-medspa-valuation-2026.md',
+  },
+  {
+    slug: '14-peptides-update',
+    title: "14 Peptides Are Coming Back — But When? (March 2026 Status Update)",
+    excerpt: "RFK Jr.'s February announcement promised legal peptide therapy. Three weeks later, the formal FDA update still hasn't landed — here's what that means for you.",
+    category: 'Peptide Therapy',
+    readTime: '6 min read',
+    publishedAt: '2026-03-22',
+    featured: false,
+    audience: 'consumer',
+    tags: ['peptides', 'BPC-157', 'TB-500', 'FDA', 'RFK Jr'],
+    imageUrl: 'https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=800&q=80',
+    contentFile: '14-peptides-update.md',
+  },
+  {
+    slug: 'fake-botox-crisis',
+    title: "The Fake Botox Crisis Is Still Happening — How FL Clinics Should Respond",
+    excerpt: "In 2024, counterfeit Botox hospitalized patients across nine states. 2026 investigations have reignited the crisis — and clinic operators must act now.",
+    category: 'Clinic Operations',
+    readTime: '6 min read',
+    publishedAt: '2026-03-22',
+    featured: false,
+    audience: 'clinic',
+    tags: ['Botox', 'counterfeit', 'FDA', 'patient safety', 'clinic compliance'],
+    imageUrl: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&q=80',
+    contentFile: 'fake-botox-crisis.md',
+  },
+  {
+    slug: 'glp1-compliance-guide',
+    title: "Your GLP-1 Clinic Might Be in Legal Trouble — How to Tell If Yours Is Compliant",
+    excerpt: "Thousands of patients are injecting compounded weight-loss drugs from clinics operating in a legal gray zone. The FDA is cracking down — here's how to verify.",
+    category: 'GLP-1 & Weight Loss',
+    readTime: '8 min read',
+    publishedAt: '2026-03-22',
+    featured: false,
+    audience: 'consumer',
+    tags: ['GLP-1', 'compliance', 'FDA', 'semaglutide', 'patient safety'],
+    imageUrl: 'https://images.unsplash.com/photo-1559757175-0eb30cd8c063?w=800&q=80',
+    contentFile: 'glp1-compliance-guide.md',
+  },
+  {
+    slug: 'injectable-checklist-2026',
+    title: "5 Questions to Ask Before Any Medspa Injectable — The 2026 Patient Checklist",
+    excerpt: "How to separate safe clinics from risky ones before you get your next Botox, filler, or injectable treatment. A checklist every patient needs.",
+    category: 'Patient Safety',
+    readTime: '5 min read',
+    publishedAt: '2026-03-22',
+    featured: false,
+    audience: 'consumer',
+    tags: ['injectables', 'Botox', 'patient checklist', 'medspa safety'],
+    imageUrl: 'https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=800&q=80',
+    contentFile: 'injectable-checklist-2026.md',
+  },
   {
     slug: 'beginners-guide-to-botox',
-    title: 'The Beginner\'s Guide to Botox: What to Expect',
+    title: "The Beginner's Guide to Botox: What to Expect",
     excerpt: 'Everything you need to know before your first appointment — from consultation to results.',
     category: 'Botox & Fillers',
     readTime: '5 min read',
     publishedAt: '2026-03-10',
-    featured: true,
+    featured: false,
     imageUrl: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&q=80',
   },
   {
     slug: 'how-to-choose-a-medspa',
     title: 'How to Choose the Right MedSpa: 7 Questions to Ask',
-    excerpt: 'Not all medspas are created equal. Here\'s what separates elite providers from the rest.',
+    excerpt: "Not all medspas are created equal. Here's what separates elite providers from the rest.",
     category: 'Guides',
     readTime: '6 min read',
     publishedAt: '2026-03-08',
-    featured: true,
+    featured: false,
     imageUrl: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80',
   },
   {
@@ -49,4 +167,4 @@ export const ARTICLES = [
     featured: false,
     imageUrl: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&q=80',
   },
-];
+]
