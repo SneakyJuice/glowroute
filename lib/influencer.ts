@@ -1,6 +1,19 @@
 import type { Clinic } from '@/types/clinic'
 import { isPeptideClinic } from '@/lib/peptide'
 
+/**
+ * ENRICHMENT PIPELINE NOTE:
+ * The `instagramHandle` and `tiktokHandle` fields on the Clinic type will be populated
+ * in two ways:
+ *   1. During clinic onboarding (claimed listing flow — owner enters handles manually)
+ *   2. Future Apify enrichment pass — automated scraping of clinic websites and Google
+ *      Business profiles to extract social media links and handles at scale
+ *
+ * Once real follower counts are available (via Instagram Graph API or Apify social scraper),
+ * `getInfluencerTier()` should be updated to use actual follower_count rather than the
+ * review volume proxy currently in use.
+ */
+
 // Keywords suggesting a practitioner-led / personally branded clinic
 const PRACTITIONER_KEYWORDS = [
   'np ', ' np,', 'nurse practitioner', 'injector', 'aesthetic nurse',
