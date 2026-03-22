@@ -8,6 +8,7 @@ export default function Navbar() {
     { label: 'Explore Providers', href: '/clinics' },
     { label: 'Treatments', href: '/treatments' },
     { label: 'Cost Guides', href: '/guides' },
+    { label: 'Articles', href: '/articles' },
     { label: 'Near Me', href: '/clinics?near=me' },
   ]
 
