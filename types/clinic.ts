@@ -24,6 +24,9 @@ export interface Clinic {
   website?: string
   bookingUrl?: string
   instagram?: string
+  instagramHandle?: string
+  tiktokHandle?: string
+  icalUrl?: string
   mapsUrl?: string
   brandValues?: string[]
   lat?: number

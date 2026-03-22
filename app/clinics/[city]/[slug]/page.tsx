@@ -6,6 +6,7 @@ import VerifiedBadge from '@/components/VerifiedBadge'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import LeadCaptureForm from '@/components/LeadCaptureForm'
+import AvailabilityBadge from '@/components/AvailabilityBadge'
 import CreatorBadge from '@/components/CreatorBadge'
 import { SITE_URL } from '@/lib/config'
 import { getVibeTags, detectBookingPlatform, VIBE_STYLES } from '@/lib/vibes'
@@ -371,6 +372,9 @@ export default function ClinicProfilePage({ params }: PageProps) {
                   </svg>
                   Get Directions
                 </a>
+              </div>
+              <div className="mt-3">
+                <AvailabilityBadge icalUrl={clinic.icalUrl} bookingUrl={clinic.bookingUrl} />
               </div>
             </div>
 

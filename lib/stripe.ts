@@ -39,6 +39,7 @@ export const PLANS = {
       'Priority ranking above free listings',
       'Analytics dashboard (views, leads, clicks)',
       'Promotional banner on clinic profile',
+      'iCal availability sync',
     ],
   },
   pro: {

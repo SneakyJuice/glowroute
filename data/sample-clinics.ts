@@ -17,6 +17,7 @@ export const sampleClinics: Clinic[] = [
     featured: true,
     priceTier: '$$$',
     availability: 'Available This Week',
+    icalUrl: 'https://calendar.google.com/calendar/ical/en.usa%23holiday%40group.v.calendar.google.com/public/basic.ics',
     address: '4200 W Kennedy Blvd, Suite 180, Tampa, FL 33609',
     description: 'Tampa\'s premier med spa combining cutting-edge aesthetics with personalized wellness programs. Board-certified providers, transparent pricing, and a 5-star patient experience every visit.',
   },
