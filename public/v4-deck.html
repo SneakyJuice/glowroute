@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>GlowRoute — v4 Sprint Overview</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=DM+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+:root {
+  --onyx: #111111; --onyx2: #1a1a1a; --onyx3: #222222;
+  --champagne: #c9a96e; --champagne-light: #e8d5b0;
+  --sage: #7a9e7e; --sage-light: #a8c5ab;
+  --ivory: #f5f0e8; --ivory2: #ede6d8;
+  --teal: #028090; --teal-light: #03a0b3; --teal-faint: #013d45;
+  --white: #ffffff; --red: #e55555; --green: #4caf7d; --amber: #f5a623;
+  --text-muted: #888888; --border: rgba(201,169,110,0.2);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter','DM Sans',sans-serif; background:#000; color:var(--ivory); overflow:hidden; height:100vh; width:100vw; }
+.deck { position:relative; width:100vw; height:100vh; }
+.slide { position:absolute; inset:0; width:100%; height:100%; display:flex; flex-direction:column; justify-content:center; align-items:center; padding:56px 80px; opacity:0; transform:translateX(40px); transition:opacity 0.45s ease,transform 0.45s ease; pointer-events:none; background:var(--onyx); }
+.slide.active { opacity:1; transform:translateX(0); pointer-events:all; z-index:1; }
+.slide.exit-left { opacity:0; transform:translateX(-40px); transition:opacity 0.3s ease,transform 0.3s ease; }
+.progress-bar { position:fixed; bottom:0; left:0; height:3px; background:linear-gradient(90deg,var(--champagne),var(--teal)); transition:width 0.4s ease; z-index:100; }
+.nav { position:fixed; bottom:24px; right:40px; display:flex; align-items:center; gap:16px; z-index:100; }
+.nav-btn { width:40px; height:40px; border-radius:50%; border:1px solid var(--border); background:rgba(201,169,110,0.08); color:var(--champagne); cursor:pointer; font-size:18px; display:flex; align-items:center; justify-content:center; transition:all 0.2s; backdrop-filter:blur(8px); }
+.nav-btn:hover { background:rgba(201,169,110,0.2); border-color:var(--champagne); }
+.nav-btn:disabled { opacity:0.3; cursor:default; }
+.slide-counter { font-size:12px; color:var(--text-muted); letter-spacing:2px; font-weight:500; min-width:50px; text-align:center; }
+.slide-num { position:fixed; bottom:30px; left:40px; font-size:11px; color:var(--text-muted); letter-spacing:3px; text-transform:uppercase; font-weight:500; z-index:100; }
+.corner-logo { position:fixed; top:28px; left:40px; font-size:13px; font-weight:700; letter-spacing:3px; text-transform:uppercase; color:var(--champagne); z-index:100; opacity:0.7; }
+.kb-hint { position:fixed; top:28px; right:40px; font-size:11px; color:rgba(255,255,255,0.2); letter-spacing:1px; z-index:100; }
+.label { font-size:11px; letter-spacing:4px; text-transform:uppercase; font-weight:600; color:var(--champagne); margin-bottom:16px; }
+.label.teal { color:var(--teal-light); }
+.label.sage { color:var(--sage); }
+.label.green { color:var(--green); }
+h1 { font-family:'DM Sans','Inter',sans-serif; font-size:clamp(40px,5vw,66px); font-weight:800; line-height:1.05; color:var(--ivory); letter-spacing:-1px; }
+h2 { font-family:'DM Sans','Inter',sans-serif; font-size:clamp(28px,3.2vw,46px); font-weight:700; line-height:1.1; color:var(--ivory); letter-spacing:-0.5px; }
+h3 { font-size:clamp(17px,1.9vw,23px); font-weight:600; color:var(--ivory); }
+.sub { font-size:clamp(13px,1.3vw,17px); color:var(--text-muted); line-height:1.65; font-weight:400; margin-top:12px; }
+.accent { color:var(--champagne); }
+.accent-teal { color:var(--teal-light); }
+.accent-sage { color:var(--sage-light); }
+.accent-green { color:var(--green); }
+.accent-red { color:var(--red); }
+.divider { width:48px; height:2px; background:linear-gradient(90deg,var(--champagne),transparent); margin:20px 0; }
+.grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:28px; width:100%; }
+.grid-3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:22px; width:100%; }
+.grid-4 { display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:18px; width:100%; }
+.card { background:var(--onyx2); border:1px solid var(--border); border-radius:12px; padding:26px 22px; }
+.card.teal-border { border-color:rgba(2,128,144,0.4); }
+.card.sage-border { border-color:rgba(122,158,126,0.3); }
+.card.champagne-border { border-color:rgba(201,169,110,0.4); }
+.card.glow { box-shadow:0 0 30px rgba(201,169,110,0.08); }
+.card.teal-glow { box-shadow:0 0 30px rgba(2,128,144,0.12); }
+.card-label { font-size:10px; letter-spacing:3px; text-transform:uppercase; color:var(--champagne); font-weight:600; margin-bottom:8px; }
+.card-label.teal { color:var(--teal-light); }
+.card-label.sage { color:var(--sage); }
+.big-num { font-family:'DM Sans',sans-serif; font-size:clamp(34px,3.8vw,54px); font-weight:800; line-height:1; color:var(--champagne); }
+.big-num.teal { color:var(--teal-light); }
+.big-num.green { color:var(--green); }
+.card-sub { font-size:12px; color:var(--text-muted); margin-top:6px; line-height:1.4; }
+.data-table { width:100%; border-collapse:collapse; font-size:clamp(11px,1.05vw,13px); }
+.data-table th { text-align:left; padding:9px 14px; font-size:10px; letter-spacing:2px; text-transform:uppercase; color:var(--champagne); font-weight:600; border-bottom:1px solid var(--border); }
+.data-table td { padding:10px 14px; border-bottom:1px solid rgba(255,255,255,0.04); color:var(--ivory); line-height:1.4; }
+.data-table tr:last-child td { border-bottom:none; }
+.data-table tr:hover td { background:rgba(201,169,110,0.04); }
+.data-table .highlight td { background:rgba(2,128,144,0.08); }
+.pill { display:inline-block; padding:3px 11px; border-radius:20px; font-size:11px; font-weight:600; letter-spacing:1px; }
+.pill-champagne { background:rgba(201,169,110,0.15); color:var(--champagne); border:1px solid rgba(201,169,110,0.3); }
+.pill-teal { background:rgba(2,128,144,0.15); color:var(--teal-light); border:1px solid rgba(2,128,144,0.3); }
+.pill-sage { background:rgba(122,158,126,0.15); color:var(--sage-light); border:1px solid rgba(122,158,126,0.3); }
+.pill-green { background:rgba(76,175,125,0.15); color:var(--green); border:1px solid rgba(76,175,125,0.3); }
+.pill-red { background:rgba(229,85,85,0.12); color:var(--red); border:1px solid rgba(229,85,85,0.25); }
+.check-list { list-style:none; display:flex; flex-direction:column; gap:9px; }
+.check-list li { display:flex; align-items:flex-start; gap:10px; font-size:13px; color:var(--ivory); line-height:1.5; }
+.check-list li::before { content:"✓"; color:var(--green); font-weight:700; flex-shrink:0; }
+.check-list li.x::before { content:"✗"; color:var(--red); }
+.check-list li.dot::before { content:"→"; color:var(--champagne); }
+.timeline { display:flex; gap:0; width:100%; position:relative; }
+.timeline::before { content:''; position:absolute; top:21px; left:4%; right:4%; height:2px; background:linear-gradient(90deg,var(--teal-faint),var(--teal),var(--champagne),transparent); }
+.timeline-step { flex:1; display:flex; flex-direction:column; align-items:center; gap:12px; }
+.timeline-dot { width:42px; height:42px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:15px; font-weight:800; z-index:1; }
+.dot-champagne { background:rgba(201,169,110,0.2); border:2px solid var(--champagne); color:var(--champagne); }
+.dot-teal { background:rgba(2,128,144,0.2); border:2px solid var(--teal); color:var(--teal-light); }
+.dot-sage { background:rgba(122,158,126,0.2); border:2px solid var(--sage); color:var(--sage-light); }
+.dot-green { background:rgba(76,175,125,0.2); border:2px solid var(--green); color:var(--green); }
+.timeline-content { text-align:center; padding:14px 10px; border-radius:10px; background:var(--onyx2); border:1px solid var(--border); width:100%; }
+.timeline-content h4 { font-size:12px; font-weight:700; margin-bottom:5px; }
+.timeline-content p { font-size:11px; color:var(--text-muted); line-height:1.5; }
+.hbar-container { width:100%; display:flex; flex-direction:column; gap:11px; }
+.hbar-row { display:flex; align-items:center; gap:12px; }
+.hbar-label { font-size:12px; color:var(--text-muted); min-width:130px; text-align:right; }
+.hbar-track { flex:1; height:7px; background:rgba(255,255,255,0.06); border-radius:4px; overflow:hidden; }
+.hbar-fill { height:100%; border-radius:4px; background:linear-gradient(90deg,var(--teal),var(--champagne)); }
+.hbar-val { font-size:12px; color:var(--champagne); font-weight:600; min-width:55px; }
+.big-stat-num { font-family:'DM Sans',sans-serif; font-size:clamp(46px,5.5vw,78px); font-weight:900; line-height:1; color:var(--champagne); }
+.big-stat-desc { font-size:clamp(12px,1.15vw,15px); color:var(--text-muted); margin-top:4px; }
+.icon-badge { font-size:20px; width:42px; height:42px; border-radius:10px; display:flex; align-items:center; justify-content:center; background:rgba(201,169,110,0.1); border:1px solid var(--border); flex-shrink:0; }
+.icon-badge.teal { background:rgba(2,128,144,0.1); border-color:rgba(2,128,144,0.3); }
+.icon-badge.green { background:rgba(76,175,125,0.1); border-color:rgba(76,175,125,0.3); }
+.w-full { width:100%; }
+.text-center { text-align:center; }
+.flex-col { display:flex; flex-direction:column; }
+.gap-3 { gap:12px; }
+.gap-4 { gap:16px; }
+.mt-2 { margin-top:8px; }
+.mt-3 { margin-top:12px; }
+.mt-4 { margin-top:16px; }
+.mt-6 { margin-top:24px; }
+.small { font-size:11px; color:var(--text-muted); }
+.bold { font-weight:700; }
+.scroll-content { width:100%; max-height:calc(100vh - 160px); overflow-y:auto; scrollbar-width:thin; scrollbar-color:var(--border) transparent; }
+.slide-dark { background:#0d0d0d; }
+.slide-dark::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 70% 60% at 70% 50%,rgba(2,128,144,0.1) 0%,transparent 70%),radial-gradient(ellipse 50% 40% at 20% 80%,rgba(201,169,110,0.07) 0%,transparent 60%); pointer-events:none; }
+.slide-title::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 70% 60% at 70% 50%,rgba(2,128,144,0.12) 0%,transparent 70%),radial-gradient(ellipse 50% 40% at 20% 80%,rgba(201,169,110,0.08) 0%,transparent 60%); pointer-events:none; }
+.vs-grid { display:grid; grid-template-columns:1fr 44px 1fr; gap:0; align-items:center; width:100%; }
+.vs-label { font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--text-muted); text-align:center; font-weight:600; }
+.funnel-row { display:flex; align-items:center; gap:0; width:100%; margin-bottom:8px; }
+.funnel-step { flex:1; text-align:center; padding:14px 8px; background:var(--onyx2); border:1px solid var(--border); font-size:12px; font-weight:600; color:var(--ivory); }
+.funnel-step:first-child { border-radius:8px 0 0 8px; }
+.funnel-step:last-child { border-radius:0 8px 8px 0; }
+.funnel-arrow { color:var(--champagne); font-size:18px; flex-shrink:0; padding:0 4px; }
+.funnel-step .fsub { font-size:10px; color:var(--text-muted); font-weight:400; margin-top:3px; }
+.phase-row { display:flex; gap:12px; width:100%; }
+.phase-card { flex:1; padding:18px 16px; background:var(--onyx2); border-radius:10px; border-left:3px solid var(--champagne); }
+.phase-card.teal-left { border-left-color:var(--teal); }
+.phase-card.sage-left { border-left-color:var(--sage); }
+.phase-card.green-left { border-left-color:var(--green); }
+.phase-card h4 { font-size:13px; font-weight:700; margin-bottom:6px; }
+.phase-card p { font-size:11px; color:var(--text-muted); line-height:1.55; }
+.status-dot { display:inline-block; width:8px; height:8px; border-radius:50%; margin-right:6px; }
+.dot-live { background:var(--green); }
+.dot-progress { background:var(--amber); }
+.dot-planned { background:var(--text-muted); }
+.two-col { display:grid; grid-template-columns:1fr 1fr; gap:40px; width:100%; align-items:start; }
+</style>
+</head>
+<body>
+<div class="corner-logo">GlowRoute</div>
+<div class="kb-hint">← → or click arrows</div>
+<div class="slide-num" id="slideNum">01 / 18</div>
+<div class="progress-bar" id="progressBar" style="width:5.5%"></div>
+
+<div class="deck">
+
+<!-- SLIDE 1: TITLE -->
+<div class="slide slide-title active">
+  <div class="label">v4 Sprint Overview · March 2026</div>
+  <h1>The Discovery Platform<br/>for Aesthetic Wellness</h1>
+  <div class="divider"></div>
+  <p class="sub" style="max-width:580px">GlowRoute is a verified, AI-powered medspa directory targeting a $20B+ market — live in production, 4,436 clinics, entering revenue phase.</p>
+  <div class="mt-6" style="display:flex;gap:16px;flex-wrap:wrap;">
+    <span class="pill pill-green">✓ Live in Production</span>
+    <span class="pill pill-champagne">4,436 Clinics</span>
+    <span class="pill pill-teal">17 States</span>
+    <span class="pill pill-sage">Revenue: Days Away</span>
+  </div>
+  <div class="mt-6 small" style="opacity:0.5">Platform: glowroute.io · Built by Zion ⚡ Atlas 🖥 Ark 🧠</div>
+</div>
+
+<!-- SLIDE 2: WHAT IS GLOWROUTE -->
+<div class="slide slide-dark">
+  <div class="label teal">The Platform</div>
+  <h2>The Leafly of Aesthetic<br/>Wellness & Hormone Optimization</h2>
+  <div class="divider"></div>
+  <div class="grid-3 mt-6">
+    <div class="card champagne-border">
+      <div class="card-label">For Consumers</div>
+      <h3 style="margin-top:8px">Discover & Book</h3>
+      <p class="card-sub mt-2">Search verified medspas by treatment, location, price, and GlowScore™. Filter by peptide therapy, GLP-1, IV therapy, and more.</p>
+    </div>
+    <div class="card teal-border teal-glow">
+      <div class="card-label teal">For Clinics</div>
+      <h3 style="margin-top:8px">Get Found & Grow</h3>
+      <p class="card-sub mt-2">Claim your listing, manage your profile, connect your booking system, receive leads, and track analytics.</p>
+    </div>
+    <div class="card sage-border">
+      <div class="card-label sage">For Brands</div>
+      <h3 style="margin-top:8px">Reach & Partner</h3>
+      <p class="card-sub mt-2">Sponsored placements, affiliate integrations, telehealth directory listings, and data-driven brand sponsorships.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 3: CURRENT STATUS -->
+<div class="slide">
+  <div class="label green">Current Status · v3.2 Complete</div>
+  <h2>Live, Enriched, <span class="accent">Ready to Monetize</span></h2>
+  <div class="divider"></div>
+  <div class="grid-4 mt-6">
+    <div class="card glow">
+      <div class="big-num">4,436</div>
+      <div class="card-sub">Verified unique clinic listings</div>
+    </div>
+    <div class="card">
+      <div class="big-num teal">17</div>
+      <div class="card-sub">States · FL, TX, CA, NV, AZ, GA + more</div>
+    </div>
+    <div class="card">
+      <div class="big-num" style="color:var(--sage-light)">63</div>
+      <div class="card-sub">FL clinics with peptide therapy flagged</div>
+    </div>
+    <div class="card">
+      <div class="big-num green">$50</div>
+      <div class="card-sub">Total build cost to reach this state</div>
+    </div>
+  </div>
+  <div class="mt-4 w-full">
+    <table class="data-table">
+      <thead><tr><th>Feature</th><th>Status</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td><span class="status-dot dot-live"></span>Claim + Stripe + Resend</td><td><span class="pill pill-green">Live</span></td><td>Claim flow, webhooks, lead routing ready</td></tr>
+        <tr><td><span class="status-dot dot-live"></span>GlowScore™ Algorithm V1</td><td><span class="pill pill-green">Live</span></td><td>lib/glowscore.ts · 0–100 composite score</td></tr>
+        <tr><td><span class="status-dot dot-live"></span>SEO Pages + Sitemap</td><td><span class="pill pill-green">Live</span></td><td>City pages, treatment pages, XML sitemap</td></tr>
+        <tr><td><span class="status-dot dot-live"></span>Peptide Filter + /peptide-therapy</td><td><span class="pill pill-green">Live</span></td><td>Dedicated route, 63 FL clinics flagged</td></tr>
+        <tr><td><span class="status-dot dot-progress"></span>iCal / PMS Integration</td><td><span class="pill pill-champagne">In Progress</span></td><td>Replacing with Mindbody / Vagaro / Fresha APIs</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- SLIDE 4: MARKET OPPORTUNITY -->
+<div class="slide slide-dark">
+  <div class="label">Market Opportunity</div>
+  <h2>Three Overlapping Markets.<br/><span class="accent">One Discovery Platform.</span></h2>
+  <div class="divider"></div>
+  <div class="grid-3 mt-6">
+    <div class="card champagne-border glow">
+      <div class="card-label">Primary · Live Now</div>
+      <div class="big-num mt-2">$20B+</div>
+      <div class="card-sub">US Medspa & Aesthetics<br/>10,488+ clinics · 18% YoY · 95% cash-pay · $1.9M avg revenue</div>
+    </div>
+    <div class="card teal-border">
+      <div class="card-label teal">Q2 2026 Expansion</div>
+      <div class="big-num teal mt-2">$6.8B</div>
+      <div class="card-sub">Hormone Optimization & TRT<br/>2.3M+ prescriptions · 12–15% YoY · telehealth + in-clinic</div>
+    </div>
+    <div class="card sage-border">
+      <div class="card-label sage">Content + Affiliate</div>
+      <div class="big-num mt-2" style="color:var(--sage-light)">$49B</div>
+      <div class="card-sub">Peptide Therapeutics (Global)<br/>BPC-157, GLP-1, Sema, TRT · SEO content moat + brand inventory</div>
+    </div>
+  </div>
+  <p class="sub mt-4 text-center">GLP-1 mainstreaming expanded the medspa patient base. Post-FDA peptide ad restrictions created brand spend with nowhere compliant to go.</p>
+</div>
+
+<!-- SLIDE 5: COMPETITIVE POSITION -->
+<div class="slide">
+  <div class="label">Competitive Positioning</div>
+  <h2>RealSelf Is the Benchmark.<br/><span class="accent">GlowRoute Undercuts on Every Dimension.</span></h2>
+  <div class="divider"></div>
+  <table class="data-table mt-4">
+    <thead><tr><th>Dimension</th><th>RealSelf</th><th style="color:var(--teal-light)">GlowRoute</th></tr></thead>
+    <tbody>
+      <tr><td>Free Tier</td><td class="accent-red">Surgeons only — credential-gated</td><td class="accent-green">All medspas — auto-listed day 1</td></tr>
+      <tr><td>Paid Entry</td><td class="accent-red">$300–700/mo</td><td class="accent-green">$99/mo — 3–4× cheaper</td></tr>
+      <tr><td>Premium Tier</td><td class="accent-red">~$2,000/mo</td><td class="accent-green">$499/mo + performance incentives</td></tr>
+      <tr><td>Trust Model</td><td class="accent-red">Pay-to-rank — highest bidder wins</td><td class="accent-green">GlowScore™ — merit-based, verified</td></tr>
+      <tr><td>Booking</td><td class="accent-red">Not built</td><td class="accent-green">Mindbody / Vagaro / Fresha deep-link</td></tr>
+      <tr class="highlight"><td>Peptide / GLP-1</td><td class="accent-red">Not supported</td><td class="accent-green">Dedicated filter + content hub + taxonomy</td></tr>
+      <tr><td>Market Focus</td><td class="accent-red">Plastic surgery · high-end · insurance</td><td class="accent-green">Medspa + hormone + telehealth · cash-pay</td></tr>
+    </tbody>
+  </table>
+  <p class="sub mt-4 text-center">The ghost listing competitor is the sales weapon on every cold call — show them Lorem ipsum vs. their real GlowRoute listing.</p>
+</div>
+
+<!-- SLIDE 6: REVENUE ARCHITECTURE -->
+<div class="slide slide-dark">
+  <div class="label teal">Phase 1 · Revenue Architecture</div>
+  <h2>The Core Funnel</h2>
+  <div class="divider"></div>
+  <div class="funnel-row mt-6">
+    <div class="funnel-step">Awareness<div class="fsub">SEO · Social · UGC</div></div>
+    <div class="funnel-arrow">→</div>
+    <div class="funnel-step">Activation<div class="fsub">Free Marketing Audit</div></div>
+    <div class="funnel-arrow">→</div>
+    <div class="funnel-step">Conversion<div class="fsub">Claim + Stripe</div></div>
+    <div class="funnel-arrow">→</div>
+    <div class="funnel-step">Expansion<div class="fsub">Dashboard + PPL</div></div>
+  </div>
+  <div class="grid-3 mt-4">
+    <div class="card champagne-border">
+      <div class="card-label">Starter</div>
+      <div class="big-num mt-2">$99<span style="font-size:18px;opacity:0.6">/mo</span></div>
+      <div class="card-sub">Claim badge · profile edit · PMS booking link · lead inbox · basic analytics</div>
+      <div class="mt-3"><span class="pill pill-champagne">Break-even: 1 patient</span></div>
+    </div>
+    <div class="card teal-border teal-glow">
+      <div class="card-label teal">Growth · Most Popular</div>
+      <div class="big-num teal mt-2">$249<span style="font-size:18px;opacity:0.6">/mo</span></div>
+      <div class="card-sub">Everything in Starter + featured placement · priority ranking · promo engine</div>
+      <div class="mt-3"><span class="pill pill-teal">Break-even: 2 patients</span></div>
+    </div>
+    <div class="card sage-border">
+      <div class="card-label sage">Pro</div>
+      <div class="big-num mt-2" style="color:var(--sage-light)">$499<span style="font-size:18px;opacity:0.6">/mo</span></div>
+      <div class="card-sub">Everything in Growth + top 3 placement · PPL billing $15–25/lead · competitor benchmarking</div>
+      <div class="mt-3"><span class="pill pill-sage">Aligned incentives</span></div>
+    </div>
+  </div>
+  <p class="sub mt-4 text-center"><span class="accent bold">Path to $1M ARR:</span> 300 clinics × $299 avg MRR · 13% conversion target · 85%+ gross margin</p>
+</div>
+
+<!-- SLIDE 7: BOOKING / PMS -->
+<div class="slide">
+  <div class="label">Booking Integration</div>
+  <h2>PMS Deep-Link API —<br/><span class="accent">Not iCal</span></h2>
+  <div class="divider"></div>
+  <p class="sub" style="max-width:700px">Every medspa already uses a practice management system. GlowRoute detects which one and deep-links directly — no clinic cooperation needed.</p>
+  <table class="data-table mt-4">
+    <thead><tr><th>PMS Platform</th><th>Market Share</th><th>API Access</th><th>Integration</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Mindbody</strong></td><td>~40%</td><td><span class="accent-green">✓ Public REST API</span></td><td>Widget embed + availability feed</td></tr>
+      <tr><td><strong>Vagaro</strong></td><td>~25%</td><td><span class="accent-green">✓ REST API + widget</span></td><td>iFrame booking + client sync</td></tr>
+      <tr><td><strong>Fresha</strong></td><td>~15%</td><td><span class="accent">⚠ Booking button only</span></td><td>Deep-link URL — free</td></tr>
+      <tr><td><strong>Boulevard</strong></td><td>~8%</td><td><span class="accent-green">✓ Partner API</span></td><td>Full booking — enterprise partnership</td></tr>
+      <tr><td><strong>Jane App</strong></td><td>~5%</td><td><span class="accent-green">✓ REST API</span></td><td>Booking + intake forms</td></tr>
+    </tbody>
+  </table>
+  <div class="grid-2 mt-4">
+    <div class="card teal-border">
+      <div class="card-label teal">Phase A — Immediate</div>
+      <p style="font-size:13px;margin-top:6px">Zion adds PMS detection to all Apify enrichment passes — one regex match per clinic. Deep-link "Book Now" button live for all platforms. <span class="accent-green">Zero additional cost.</span></p>
+    </div>
+    <div class="card champagne-border">
+      <div class="card-label">Phase B — Month 2</div>
+      <p style="font-size:13px;margin-top:6px">Apply for Mindbody + Vagaro partner programs. Embed native booking widgets on Growth/Pro profiles. Real-time availability. <span class="accent">3× conversion vs. redirect.</span></p>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 8: OUTBOUND SALES -->
+<div class="slide slide-dark">
+  <div class="label">Phase 2 · Outbound Sales</div>
+  <h2>Agent-First Outbound —<br/><span class="accent">Solo Operator, Automated</span></h2>
+  <div class="divider"></div>
+  <div class="two-col mt-4">
+    <div>
+      <div class="card-label" style="margin-bottom:12px">Apollo.io — Outbound Machine</div>
+      <ul class="check-list">
+        <li>275M+ contacts — find clinic owners by name + city</li>
+        <li>Unlimited cold email sequences with A/B testing</li>
+        <li>Power dialer — connects only on live pickups</li>
+        <li>Voicemail drop — record once, auto-drop on no-answer</li>
+        <li>Bidirectional sync with HubSpot</li>
+        <li class="dot">$149/mo (Org) — credits for mobile numbers</li>
+      </ul>
+      <div class="mt-4 card-label" style="margin-bottom:12px">HubSpot — Pipeline Tracker</div>
+      <ul class="check-list">
+        <li>Warm lead pipeline: Contacted → Paying → Churned</li>
+        <li>Stripe webhook → deal closed on claim</li>
+        <li>MCP connected to Ark for sprint planning</li>
+        <li class="dot">Free CRM tier sufficient to start</li>
+      </ul>
+    </div>
+    <div>
+      <div class="card-label" style="margin-bottom:12px">The 4-Step Sequence</div>
+      <div class="flex-col gap-3">
+        <div class="card" style="padding:14px 16px">
+          <div style="font-size:11px;color:var(--champagne);letter-spacing:2px;font-weight:600">DAY 1</div>
+          <p style="font-size:12px;margin-top:4px">Personalized email + Loom walkthrough of <em>their</em> actual GlowRoute profile</p>
+        </div>
+        <div class="card" style="padding:14px 16px">
+          <div style="font-size:11px;color:var(--champagne);letter-spacing:2px;font-weight:600">DAY 3</div>
+          <p style="font-size:12px;margin-top:4px">Reply bump + GlowScore screenshot + competitor comparison</p>
+        </div>
+        <div class="card teal-border" style="padding:14px 16px">
+          <div style="font-size:11px;color:var(--teal-light);letter-spacing:2px;font-weight:600">DAY 7</div>
+          <p style="font-size:12px;margin-top:4px">Free Marketing Audit PDF delivered — GlowScore breakdown + missed leads</p>
+        </div>
+        <div class="card" style="padding:14px 16px">
+          <div style="font-size:11px;color:var(--text-muted);letter-spacing:2px;font-weight:600">DAY 14</div>
+          <p style="font-size:12px;margin-top:4px">Breakup — competitor in [city] just claimed, limited featured slots</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 9: VAPI / AI CALLING -->
+<div class="slide">
+  <div class="label teal">Phase 2 · AI Voice Stack</div>
+  <h2>From Manual Dialer<br/>to <span class="accent-teal">AI-First Outreach at Scale</span></h2>
+  <div class="divider"></div>
+  <div class="grid-3 mt-4">
+    <div class="card champagne-border glow">
+      <div class="card-label">Phase 1 · Now</div>
+      <div style="font-size:22px;margin:10px 0">🎯</div>
+      <h3>Apollo Power Dialer</h3>
+      <p class="card-sub mt-2">Anthony dials. Connects only on live pickups. Learn 20–30 real objections from clinic owners — paid research for Phase 2 script.</p>
+      <div class="mt-3"><span class="pill pill-champagne">$149/mo</span></div>
+    </div>
+    <div class="card teal-border teal-glow">
+      <div class="card-label teal">Phase 2 · Next</div>
+      <div style="font-size:22px;margin:10px 0">🤖</div>
+      <h3>Vapi + ElevenLabs</h3>
+      <p class="card-sub mt-2">AI agent handles first-touch calls. Qualifies, books callbacks, logs transcripts to HubSpot. Anthony only gets warm connections.</p>
+      <div class="mt-3"><span class="pill pill-teal">$0.075/call</span></div>
+    </div>
+    <div class="card sage-border">
+      <div class="card-label sage">Phase 3 · Scale</div>
+      <div style="font-size:22px;margin:10px 0">⚡</div>
+      <h3>Custom Twilio Agent</h3>
+      <p class="card-sub mt-2">Full control, 3–5× cheaper than Vapi at volume. Build post Series A or $5K+ MRR when 5,000+ calls/month.</p>
+      <div class="mt-3"><span class="pill pill-sage">$0.02/call</span></div>
+    </div>
+  </div>
+  <div class="card mt-4 teal-border" style="padding:16px 22px">
+    <div style="display:flex;align-items:center;gap:16px">
+      <div class="icon-badge teal">🎙</div>
+      <p style="font-size:13px"><span class="accent-teal bold">Calling all 4,436 clinics with Vapi costs ~$332 total.</span> At $0.075/call, a monthly AI outreach campaign to the full database costs less than a single clinic subscription. Zion scopes the Vapi build after Phase 1 call learning is complete.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 10: SEO STRATEGY -->
+<div class="slide slide-dark">
+  <div class="label">Phase 4 · SEO Strategy</div>
+  <h2>The Content Engine —<br/><span class="accent">$165/mo, Compounds Forever</span></h2>
+  <div class="divider"></div>
+  <div class="two-col mt-4">
+    <div>
+      <div class="card-label" style="margin-bottom:12px">Tool Stack</div>
+      <table class="data-table">
+        <thead><tr><th>Tool</th><th>Purpose</th><th>Cost</th></tr></thead>
+        <tbody>
+          <tr><td>Google Search Console</td><td>Impressions, rank, crawl errors</td><td class="accent-green">Free</td></tr>
+          <tr><td>GA4</td><td>Traffic + conversions</td><td class="accent-green">Free</td></tr>
+          <tr><td>PostHog</td><td>Product funnels + sessions</td><td class="accent-green">Free</td></tr>
+          <tr><td>Ahrefs Lite</td><td>Keywords + backlinks + audit</td><td class="accent">$99/mo</td></tr>
+          <tr><td>Frase.io</td><td>Content briefs + SERP scoring</td><td class="accent">$44/mo</td></tr>
+          <tr class="highlight"><td>Screaming Frog</td><td>Technical crawl + canonical fix</td><td class="accent">$22/mo</td></tr>
+        </tbody>
+      </table>
+      <div class="mt-3 small">2 Starter clinics ($99/mo each) cover the entire stack.</div>
+    </div>
+    <div>
+      <div class="card-label" style="margin-bottom:12px">Content Flow</div>
+      <div class="flex-col gap-3">
+        <div style="display:flex;align-items:center;gap:12px"><div class="icon-badge">🔍</div><div><div style="font-size:12px;font-weight:600">Ahrefs keyword clusters</div><div class="small">City × procedure × intent matrix</div></div></div>
+        <div style="display:flex;align-items:center;gap:12px"><div class="icon-badge teal">📝</div><div><div style="font-size:12px;font-weight:600">Frase content brief</div><div class="small">SERP analysis, questions, headings, word count</div></div></div>
+        <div style="display:flex;align-items:center;gap:12px"><div class="icon-badge">⚡</div><div><div style="font-size:12px;font-weight:600">Zion generates (Gemini Flash)</div><div class="small">Full page · schema · internal links · CTA · $0.01/page</div></div></div>
+        <div style="display:flex;align-items:center;gap:12px"><div class="icon-badge teal">✓</div><div><div style="font-size:12px;font-weight:600">Frase scores (target 70+/100)</div><div class="small">Auto-revision on sub-70 pages</div></div></div>
+        <div style="display:flex;align-items:center;gap:12px"><div class="icon-badge green">🚀</div><div><div style="font-size:12px;font-weight:600">Auto-deploy via Vercel</div><div class="small">GSC ping on new URLs</div></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 11: SEO PHASE 4.1 GBP -->
+<div class="slide">
+  <div class="label">Phase 4.1 · Local SEO</div>
+  <h2>Google Business Profile —<br/><span class="accent">The Map Pack Advantage</span></h2>
+  <div class="divider"></div>
+  <div class="grid-2 mt-4">
+    <div>
+      <div class="card-label" style="margin-bottom:12px">B2B Angle — Clinic Facing</div>
+      <p style="font-size:13px;color:var(--text-muted);margin-bottom:12px">Free Marketing Audit includes GBP analysis for every unclaimed clinic:</p>
+      <ul class="check-list">
+        <li>GBP completeness score vs. top competitors</li>
+        <li>Missing categories (peptide therapy, IV, GLP-1)</li>
+        <li>Photo count + review response rate gap</li>
+        <li>Q&A section gaps costing discovery clicks</li>
+        <li class="dot">Delivered free · converts to paid claim</li>
+      </ul>
+    </div>
+    <div>
+      <div class="card-label teal" style="margin-bottom:12px">Consumer Angle — Map Pack Rankings</div>
+      <p style="font-size:13px;color:var(--text-muted);margin-bottom:12px">GlowRoute city pages outrank individual clinic GBPs for category searches:</p>
+      <ul class="check-list">
+        <li>AggregateRating schema from GlowScore + GBP data</li>
+        <li>LocalBusiness + MedicalBusiness JSON-LD on all pages</li>
+        <li>areaServed geo markup: city + county level</li>
+        <li>Near-me content from existing Haversine sort</li>
+        <li class="dot">Neighborhood guides: zero competition, high intent</li>
+      </ul>
+    </div>
+  </div>
+  <div class="card teal-border mt-4" style="padding:16px 22px">
+    <div style="display:flex;align-items:center;gap:16px">
+      <div class="icon-badge teal">📍</div>
+      <p style="font-size:13px"><span class="accent-teal bold">GBP enrichment runs inside the existing Apify subscription</span> — adds fields: <code style="background:rgba(255,255,255,0.08);padding:2px 6px;border-radius:4px;font-size:11px">gbp_rating · gbp_photo_count · gbp_categories · gbp_has_booking</code> — zero additional cost. Clinics with incomplete GBPs are flagged as warm leads.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 12: SOCIAL MEDIA -->
+<div class="slide slide-dark">
+  <div class="label">Phase 5 · Social Media</div>
+  <h2>UGC Curation Engine —<br/><span class="accent">$0 Content, Infinite Reach</span></h2>
+  <div class="divider"></div>
+  <div class="two-col mt-4">
+    <div>
+      <div class="card-label" style="margin-bottom:12px">The Strategy</div>
+      <p style="font-size:13px;color:var(--text-muted);margin-bottom:14px">RNs, aestheticians, medspa owners, and patients already create the content. GlowRoute curates and amplifies.</p>
+      <div class="flex-col gap-3">
+        <div style="display:flex;align-items:center;gap:12px"><div class="icon-badge">🔎</div><div><div style="font-size:12px;font-weight:600">Apify discovers top Reels weekly</div><div class="small">#medspa #peptidetherapy #aestheticnurse + FL geo</div></div></div>
+        <div style="display:flex;align-items:center;gap:12px"><div class="icon-badge teal">✉️</div><div><div style="font-size:12px;font-weight:600">Ark drafts permission DM</div><div class="small">Creator gets reach + "Featured on GlowRoute" tag</div></div></div>
+        <div style="display:flex;align-items:center;gap:12px"><div class="icon-badge green">📅</div><div><div style="font-size:12px;font-weight:600">n8n schedules + posts</div><div class="small">Runs on existing DigitalOcean droplet — $0 extra</div></div></div>
+      </div>
+      <div class="mt-4 card champagne-border" style="padding:14px 16px">
+        <p style="font-size:12px">Permission DM doubles as warm outreach — many creators are clinic operators or referral sources.</p>
+      </div>
+    </div>
+    <div>
+      <div class="card-label" style="margin-bottom:12px">Content Mix</div>
+      <div class="hbar-container">
+        <div class="hbar-row"><div class="hbar-label">UGC Reposts</div><div class="hbar-track"><div class="hbar-fill" style="width:60%"></div></div><div class="hbar-val">60%</div></div>
+        <div class="hbar-row"><div class="hbar-label">Clinic Spotlights</div><div class="hbar-track"><div class="hbar-fill" style="width:20%"></div></div><div class="hbar-val">20%</div></div>
+        <div class="hbar-row"><div class="hbar-label">Educational</div><div class="hbar-track"><div class="hbar-fill" style="width:15%"></div></div><div class="hbar-val">15%</div></div>
+        <div class="hbar-row"><div class="hbar-label">Platform News</div><div class="hbar-track"><div class="hbar-fill" style="width:5%"></div></div><div class="hbar-val">5%</div></div>
+      </div>
+      <div class="card-label mt-4" style="margin-bottom:10px">Platforms</div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <span class="pill pill-champagne">Instagram Reels</span>
+        <span class="pill pill-teal">TikTok</span>
+        <span class="pill pill-sage">Pinterest</span>
+        <span class="pill pill-champagne">LinkedIn</span>
+      </div>
+      <div class="card mt-4" style="padding:14px 16px">
+        <div style="font-size:11px;color:var(--champagne);letter-spacing:2px;font-weight:600;margin-bottom:6px">n8n vs. Buffer/Later</div>
+        <p style="font-size:12px">n8n on existing DigitalOcean server = <span class="accent-green">$0/mo</span> vs. Buffer $18/mo or Later $25/mo. Zion sets it up in ~2 hrs.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 13: TELEHEALTH VERTICAL -->
+<div class="slide">
+  <div class="label">Phase 9 · Telehealth Vertical</div>
+  <h2>The <span class="accent">/telehealth</span> Directory —<br/>Affiliate Revenue + Brand Partnerships</h2>
+  <div class="divider"></div>
+  <p class="sub" style="max-width:700px;margin-bottom:20px">These brands spend $10M–$100M+/yr in digital ads targeting GlowRoute's exact patient profile. A dedicated vertical captures affiliate commissions and sponsored placement fees.</p>
+  <div class="scroll-content">
+    <table class="data-table">
+      <thead><tr><th>Brand</th><th>Category</th><th>Affiliate Program</th><th>Commission</th></tr></thead>
+      <tbody>
+        <tr class="highlight"><td><strong>Hone Health</strong></td><td>TRT · Hormone</td><td>✓ Impact.com</td><td class="accent-green">$100–150/subscription</td></tr>
+        <tr class="highlight"><td><strong>Henry Meds</strong></td><td>GLP-1 · Semaglutide</td><td>✓ Impact.com</td><td class="accent-green">$50–100/patient</td></tr>
+        <tr class="highlight"><td><strong>Function Health</strong></td><td>Lab Testing ($499/yr)</td><td>✓ Referral system</td><td class="accent-green">$50–100/membership</td></tr>
+        <tr><td><strong>Maximus TRT</strong></td><td>Testosterone</td><td>✓ ShareASale</td><td class="accent">$50–100/subscription</td></tr>
+        <tr><td><strong>Midi Health</strong></td><td>Women's Hormone</td><td>✓ Direct outreach</td><td class="accent">$75–100/consult</td></tr>
+        <tr><td><strong>Hims & Hers</strong></td><td>GLP-1 · Hair · ED</td><td>✓ CJ Affiliate</td><td class="accent">$15–30/first order</td></tr>
+        <tr><td><strong>Alloy Women's Health</strong></td><td>Menopause HRT</td><td>✓ ShareASale</td><td class="accent">$30–50/subscription</td></tr>
+        <tr><td><strong>Calibrate</strong></td><td>GLP-1 Metabolic</td><td>✓ Impact.com</td><td class="accent">$75–150/enrollment</td></tr>
+        <tr><td><strong>Fountain TRT</strong></td><td>Testosterone</td><td>✓ Direct</td><td class="accent">$50–75/subscription</td></tr>
+        <tr><td><strong>InsideTracker</strong></td><td>Blood + DNA Optimization</td><td>✓ CJ Affiliate</td><td class="accent">10–15% of sale</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="small mt-3 text-center">Priority outreach: Hone Health → Henry Meds → Function Health (all on Impact.com — 15 min each to apply)</p>
+</div>
+
+<!-- SLIDE 14: LEAD MAGNETS / OFFERS -->
+<div class="slide slide-dark">
+  <div class="label">Phase 6 · Clinic Offer Design</div>
+  <h2>Give Before You Ask —<br/><span class="accent">Four Escalating Offers</span></h2>
+  <div class="divider"></div>
+  <div class="grid-2 mt-4" style="gap:18px">
+    <div class="card champagne-border glow">
+      <div class="card-label">Offer 1 · P0 — Build First</div>
+      <h3 class="mt-2">Free GlowRoute Marketing Audit</h3>
+      <p class="card-sub mt-2">Auto-generated by Zion + Gemini Flash. Shows: GlowScore breakdown, missing profile fields, monthly search volume in their city, 3 competitor clinics outranking them. Day 7 email delivery.</p>
+      <div class="mt-3" style="display:flex;justify-content:space-between;align-items:center">
+        <span class="pill pill-green">Cost: $0.01 to produce</span>
+        <span class="small">Perceived value: $200–500</span>
+      </div>
+    </div>
+    <div class="card teal-border">
+      <div class="card-label teal">Offer 2 · P1</div>
+      <h3 class="mt-2">Telehealth Partner Network</h3>
+      <p class="card-sub mt-2">White-labeled referral partnerships with Hone, Henry Meds, Midi Health. Patients who want telehealth get routed. Clinic gets credit. GlowRoute earns $50–200/conversion.</p>
+      <div class="mt-3"><span class="pill pill-teal">Dependency: GR-019</span></div>
+    </div>
+    <div class="card sage-border">
+      <div class="card-label sage">Offer 3 · P2</div>
+      <h3 class="mt-2">Peptide & Supply Procurement</h3>
+      <p class="card-sub mt-2">Group purchasing: peptide compounds, IV therapy supplies, aesthetic consumables. GlowRoute earns 3–5% on referred orders. Retention driver — clinics stay for supply access.</p>
+      <div class="mt-3"><span class="pill pill-sage">Recurring margin</span></div>
+    </div>
+    <div class="card">
+      <div class="card-label">Offer 4 · P3</div>
+      <h3 class="mt-2">GlowRoute Clinic Design Kit</h3>
+      <p class="card-sub mt-2">Branded social templates, patient education PDFs, email sequences. AI-generated by Zion per clinic brand. Free for Pro tier, $199 one-time for Growth.</p>
+      <div class="mt-3"><span class="pill pill-champagne">High-margin upsell</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 15: ANALYTICS -->
+<div class="slide">
+  <div class="label">Phase 7 · Analytics Stack</div>
+  <h2>Instrument Everything —<br/><span class="accent">Free Stack to Start</span></h2>
+  <div class="divider"></div>
+  <div class="grid-2 mt-4">
+    <div>
+      <table class="data-table">
+        <thead><tr><th>Tool</th><th>Purpose</th><th>Cost</th></tr></thead>
+        <tbody>
+          <tr><td><strong>PostHog</strong></td><td>Funnels, session recordings, feature flags</td><td class="accent-green">Free (1M events)</td></tr>
+          <tr><td><strong>Google Search Console</strong></td><td>SEO keywords, impressions, crawl</td><td class="accent-green">Free</td></tr>
+          <tr><td><strong>GA4</strong></td><td>Traffic sources, UTM, conversions</td><td class="accent-green">Free</td></tr>
+          <tr><td><strong>Vercel Analytics</strong></td><td>Core Web Vitals, edge performance</td><td class="accent-green">Free (included)</td></tr>
+          <tr><td><strong>Stripe Dashboard</strong></td><td>MRR, churn, subscription events</td><td class="accent-green">Free (included)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <div class="card-label" style="margin-bottom:12px">Key Events to Track from Day 1</div>
+      <div class="flex-col gap-3">
+        <div class="card" style="padding:12px 14px;font-size:12px"><span class="accent">clinic_profile_viewed</span><span class="small" style="margin-left:8px">clinic_id · city · procedure · source</span></div>
+        <div class="card" style="padding:12px 14px;font-size:12px"><span class="accent">booking_button_clicked</span><span class="small" style="margin-left:8px">clinic_id · booking_platform · tier</span></div>
+        <div class="card teal-border" style="padding:12px 14px;font-size:12px"><span class="accent-teal">claim_completed</span><span class="small" style="margin-left:8px">clinic_id · plan · stripe_customer_id</span></div>
+        <div class="card teal-border" style="padding:12px 14px;font-size:12px"><span class="accent-teal">affiliate_link_clicked</span><span class="small" style="margin-left:8px">brand · page_path · source_channel</span></div>
+        <div class="card" style="padding:12px 14px;font-size:12px"><span class="accent">marketing_audit_opened</span><span class="small" style="margin-left:8px">clinic_id · sequence_step</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 16: API COST -->
+<div class="slide slide-dark">
+  <div class="label">Phase 8 · API Cost Reduction</div>
+  <h2>Multi-Agent Model Routing —<br/><span class="accent">99% Cost Advantage</span></h2>
+  <div class="divider"></div>
+  <div class="grid-2 mt-4">
+    <div>
+      <div class="card-label" style="margin-bottom:12px">Model Routing Decision Tree</div>
+      <table class="data-table">
+        <thead><tr><th>Task Type</th><th>Model</th><th>Cost</th></tr></thead>
+        <tbody>
+          <tr><td>Bulk content (guides, pages, audits)</td><td>Gemini Flash</td><td class="accent-green">$0.01/task</td></tr>
+          <tr><td>Code generation (TypeScript, React)</td><td>DeepSeek V3</td><td class="accent-green">$0.02/task</td></tr>
+          <tr><td>Classification, dedup, filtering</td><td>Claude Haiku</td><td class="accent-green">$0.003/task</td></tr>
+          <tr class="highlight"><td>Orchestration, QA, complex logic</td><td>Claude Sonnet (cached)</td><td class="accent">$0.05/task</td></tr>
+          <tr><td>When Atlas is online</td><td>Atlas local (qwen2.5)</td><td class="accent-green">$0</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div>
+      <div class="card-label" style="margin-bottom:12px">v4 Optimizations</div>
+      <ul class="check-list">
+        <li><strong>Prompt Caching</strong> — 90% discount on cached tokens. Cache clinic schema + GlowScore algorithm + enrichment templates. 60–80% cost reduction on repeated context.</li>
+        <li><strong>Batch API</strong> — 50% discount vs. standard. Zion routes all non-interactive tasks through Anthropic Batch API.</li>
+        <li><strong>Context Trimming</strong> — Pass only relevant clinic fields per task. 30–40% token reduction per enrichment run.</li>
+        <li><strong>Haiku for Classification</strong> — Category detection, duplicate filtering, field extraction from HTML.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 17: SPRINT ROADMAP -->
+<div class="slide">
+  <div class="label">Sprint Roadmap</div>
+  <h2>v4 Sequencing —<br/><span class="accent">Revenue in Week 2</span></h2>
+  <div class="divider"></div>
+  <div class="timeline mt-4">
+    <div class="timeline-step">
+      <div class="timeline-dot dot-champagne">1</div>
+      <div class="timeline-content">
+        <h4>This Week</h4>
+        <p>Rotate Stripe key · Fix canonical URLs · Fix CSR bailout · 307→301 · PMS detection in Apify · Apollo Org setup</p>
+      </div>
+    </div>
+    <div class="timeline-step">
+      <div class="timeline-dot dot-teal">2</div>
+      <div class="timeline-content">
+        <h4>Week 2</h4>
+        <p>Apply to Hone/Henry Meds affiliate programs · Record 3 Loom demos · Launch first Apollo sequence (50 clinics) · HubSpot pipeline live</p>
+      </div>
+    </div>
+    <div class="timeline-step">
+      <div class="timeline-dot dot-champagne">3</div>
+      <div class="timeline-content">
+        <h4>Week 3–4</h4>
+        <p>Ahrefs + Frase setup · 80 SEO pages sprint · Schema markup all profiles · n8n social engine · Apify hashtag scrape</p>
+      </div>
+    </div>
+    <div class="timeline-step">
+      <div class="timeline-dot dot-green">4</div>
+      <div class="timeline-content">
+        <h4>Month 2</h4>
+        <p>10 paying clinics → trigger Supabase migration · Dashboard build begins · Brand package · Vapi scoping sprint</p>
+      </div>
+    </div>
+    <div class="timeline-step">
+      <div class="timeline-dot dot-sage">5</div>
+      <div class="timeline-content">
+        <h4>Month 3</h4>
+        <p>/telehealth vertical · GR-016 PPL tracking · 10 new states · Peptide brand sponsorship outreach</p>
+      </div>
+    </div>
+  </div>
+  <div class="grid-3 mt-4">
+    <div class="card champagne-border"><div class="card-label">Week 1 Gate</div><div class="big-num mt-2" style="font-size:28px">⚠️ Stripe Key</div><div class="card-sub">Rotate before first real transaction</div></div>
+    <div class="card teal-border"><div class="card-label teal">Week 1 Gate</div><div class="big-num teal mt-2" style="font-size:28px">🔧 Canonical</div><div class="card-sub">Fix env var before any content push</div></div>
+    <div class="card sage-border"><div class="card-label sage">Month 2 Gate</div><div class="big-num mt-2" style="font-size:28px;color:var(--sage-light)">10 Clinics</div><div class="card-sub">Triggers Supabase migration + dashboard build</div></div>
+  </div>
+</div>
+
+<!-- SLIDE 18: PATH TO $1M ARR -->
+<div class="slide slide-dark">
+  <div class="label teal">Revenue Projection</div>
+  <h2>Path to <span class="accent">$1M ARR</span></h2>
+  <div class="divider"></div>
+  <div class="grid-2 mt-4">
+    <div>
+      <table class="data-table">
+        <thead><tr><th>Scenario</th><th>Clinics</th><th>Avg MRR</th><th>ARR</th></tr></thead>
+        <tbody>
+          <tr><td>Conservative</td><td>150</td><td>$199</td><td class="accent">$394K</td></tr>
+          <tr><td>Base Case</td><td>200</td><td>$249</td><td class="accent">$694K</td></tr>
+          <tr class="highlight"><td><strong>Target</strong></td><td><strong>300</strong></td><td><strong>$299</strong></td><td class="accent-green"><strong>$1.26M</strong></td></tr>
+          <tr><td>Aggressive</td><td>400</td><td>$349</td><td class="accent">$1.98M</td></tr>
+        </tbody>
+      </table>
+      <div class="card mt-4 champagne-border" style="padding:14px 16px">
+        <div class="card-label">Additional Revenue Streams</div>
+        <p style="font-size:12px;margin-top:8px;line-height:1.7">Pay-per-lead: $15–25/verified lead<br/>Telehealth affiliate: $50–200/conversion<br/>Brand sponsorships: $1K–5K/mo<br/>Supply procurement: 3–5% margin<br/>Blood testing affiliate: $15–30 CPA</p>
+      </div>
+    </div>
+    <div>
+      <div class="card-label" style="margin-bottom:16px">Conversion Math</div>
+      <div class="hbar-container">
+        <div class="hbar-row"><div class="hbar-label">4,436 Listed</div><div class="hbar-track"><div class="hbar-fill" style="width:100%"></div></div><div class="hbar-val">100%</div></div>
+        <div class="hbar-row"><div class="hbar-label">Contacted</div><div class="hbar-track"><div class="hbar-fill" style="width:60%"></div></div><div class="hbar-val">~2,600</div></div>
+        <div class="hbar-row"><div class="hbar-label">Email Opened</div><div class="hbar-track"><div class="hbar-fill" style="width:30%"></div></div><div class="hbar-val">~780</div></div>
+        <div class="hbar-row"><div class="hbar-label">Audit Delivered</div><div class="hbar-track"><div class="hbar-fill" style="width:20%"></div></div><div class="hbar-val">~520</div></div>
+        <div class="hbar-row"><div class="hbar-label" style="color:var(--green)">Claimed (13%)</div><div class="hbar-track"><div class="hbar-fill" style="width:13%"></div></div><div class="hbar-val" style="color:var(--green)">~577</div></div>
+      </div>
+      <div class="mt-4 card" style="padding:14px 16px">
+        <p style="font-size:13px"><span class="accent bold">Breakeven:</span> 13–40 paying clinics at current opex. Target conversion rate: 13% of listed clinics. <span class="accent-green">85%+ gross margin.</span></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SLIDE 19: DATA MOAT -->
+<div class="slide">
+  <div class="label">The Long Game</div>
+  <h2>Data Moat —<br/><span class="accent">The Real Defensibility</span></h2>
+  <div class="divider"></div>
+  <p class="sub" style="max-width:700px">GlowRoute's defensibility is not the directory. It's the behavioral data layer on top of it.</p>
+  <div class="grid-2 mt-4">
+    <div>
+      <div class="card-label" style="margin-bottom:12px">Every Event Compounds</div>
+      <ul class="check-list">
+        <li>Claim events → subscription lifecycle data</li>
+        <li>Lead form submissions → consumer demand signals</li>
+        <li>Booking clicks → procedure intent by city + season</li>
+        <li>GlowScore changes → clinic health indicators</li>
+        <li>Supply orders → procurement intelligence</li>
+        <li>Affiliate clicks → treatment interest mapping</li>
+      </ul>
+    </div>
+    <div>
+      <div class="card-label teal" style="margin-bottom:12px">What That Data Unlocks</div>
+      <div class="flex-col gap-3">
+        <div class="card teal-border" style="padding:14px 16px">
+          <div style="font-size:12px;font-weight:600;color:var(--teal-light)">Predictive Churn</div>
+          <p style="font-size:11px;color:var(--text-muted);margin-top:4px">Clinics likely to cancel flagged before they churn</p>
+        </div>
+        <div class="card champagne-border" style="padding:14px 16px">
+          <div style="font-size:12px;font-weight:600;color:var(--champagne)">Treatment Demand Signals</div>
+          <p style="font-size:11px;color:var(--text-muted);margin-top:4px">Which procedures are trending by city, month, season</p>
+        </div>
+        <div class="card sage-border" style="padding:14px 16px">
+          <div style="font-size:12px;font-weight:600;color:var(--sage-light)">Brand Advertising Inventory</div>
+          <p style="font-size:11px;color:var(--text-muted);margin-top:4px">CPM pricing based on verified procedure intent</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card mt-4 teal-border" style="padding:16px 22px;text-align:center">
+    <p style="font-size:14px">By Month 6, GlowRoute has a dataset that <span class="accent bold">no competitor can replicate at any price.</span> Build the tracking infrastructure now.</p>
+  </div>
+</div>
+
+<!-- SLIDE 20: CLOSE -->
+<div class="slide slide-dark" style="text-align:center">
+  <div class="label text-center">v4 Sprint Conclusion</div>
+  <h1 style="font-size:clamp(36px,4.5vw,60px)">The Platform Is Built.<br/>The Data Is Live.<br/><span class="accent">The Revenue Motion Starts Now.</span></h1>
+  <div class="divider" style="margin:24px auto"></div>
+  <p class="sub" style="max-width:580px;text-align:center">Two API keys. Five calls. First revenue. Then the agents take over.</p>
+  <div class="mt-6" style="display:flex;gap:20px;justify-content:center;flex-wrap:wrap">
+    <div style="text-align:center">
+      <div class="big-stat-num">4,436</div>
+      <div class="big-stat-desc">Verified Clinics</div>
+    </div>
+    <div style="width:1px;background:var(--border);margin:0 10px"></div>
+    <div style="text-align:center">
+      <div class="big-stat-num" style="color:var(--teal-light)">$1M+</div>
+      <div class="big-stat-desc">ARR Target · Q4 2026</div>
+    </div>
+    <div style="width:1px;background:var(--border);margin:0 10px"></div>
+    <div style="text-align:center">
+      <div class="big-stat-num" style="color:var(--green)">$50</div>
+      <div class="big-stat-desc">Total Build Cost to Date</div>
+    </div>
+  </div>
+  <div class="mt-6 small" style="opacity:0.4">glowroute.io · v4 Sprint · March 2026 · Confidential</div>
+</div>
+
+</div><!-- end deck -->
+
+<nav class="nav">
+  <button class="nav-btn" id="prevBtn" onclick="navigate(-1)" disabled>←</button>
+  <span class="slide-counter" id="counter">1 / 20</span>
+  <button class="nav-btn" id="nextBtn" onclick="navigate(1)">→</button>
+</nav>
+
+<script>
+const slides = document.querySelectorAll('.slide');
+let current = 0;
+const total = slides.length;
+
+function navigate(dir) {
+  const next = current + dir;
+  if (next < 0 || next >= total) return;
+  slides[current].classList.remove('active');
+  if (dir > 0) { slides[current].classList.add('exit-left'); setTimeout(() => slides[current].classList.remove('exit-left'), 400); }
+  current = next;
+  slides[current].classList.add('active');
+  updateUI();
+}
+
+function updateUI() {
+  const pct = ((current + 1) / total) * 100;
+  document.getElementById('progressBar').style.width = pct + '%';
+  document.getElementById('counter').textContent = (current + 1) + ' / ' + total;
+  document.getElementById('slideNum').textContent = String(current + 1).padStart(2,'0') + ' / ' + String(total).padStart(2,'0');
+  document.getElementById('prevBtn').disabled = current === 0;
+  document.getElementById('nextBtn').disabled = current === total - 1;
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight' || e.key === 'ArrowDown' || e.key === ' ') { e.preventDefault(); navigate(1); }
+  if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); navigate(-1); }
+});
+
+let touchX = 0;
+document.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; });
+document.addEventListener('touchend', e => { const dx = e.changedTouches[0].clientX - touchX; if (Math.abs(dx) > 60) navigate(dx < 0 ? 1 : -1); });
+
+updateUI();
+</script>
+</body>
+</html>
