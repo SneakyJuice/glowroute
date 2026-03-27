@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 SITE=${1:-https://glowroute.io}
-urls=("/" "/clinics" "/articles" "/insights" "/cost-guides")
+urls=("/" "/clinics" "/articles" "/insights" "/guides")
 STATUS=0
 for u in "${urls[@]}"; do
   code=$(curl -s -o /dev/null -w "%{http_code}" "$SITE$u")
