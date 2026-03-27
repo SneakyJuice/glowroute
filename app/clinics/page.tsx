@@ -1,6 +1,5 @@
 import { Metadata } from 'next'
 import ClinicsClient from './ClinicsClient'
-import { featuredClinic, standardClinics } from '@/data/all-clinics'
 
 export const metadata: Metadata = {
   title: 'Find Top-Rated Clinics in Florida | GlowRoute',
@@ -8,5 +7,5 @@ export const metadata: Metadata = {
 }
 
 export default function ClinicsPage() {
-  return <ClinicsClient clinics={[...standardClinics, featuredClinic]} />
+  return <ClinicsClient />
 }
