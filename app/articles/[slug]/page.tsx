@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Script from 'next/script'
 import { notFound } from 'next/navigation'
 import fs from 'fs'
 import path from 'path'
@@ -114,9 +115,10 @@ export default function ArticleDetailPage({ params }: PageProps) {
     <div className="min-h-screen bg-ivory font-sans">
       <Navbar />
 
-      <script
+      <Script
+        id={`article-schema-${article.slug}`}
         type="application/ld+json"
-        suppressHydrationWarning
+        strategy="beforeInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 

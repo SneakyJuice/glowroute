@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import Script from 'next/script'
 import { COST_GUIDES, getGuideBySlug } from '@/lib/cost-guides'
 import { SITE_URL } from '@/lib/config'
 import type { Metadata } from 'next'
@@ -101,14 +102,16 @@ export default function CostGuidePage({ params }: { params: { slug: string } }) 
 
   return (
     <>
-      <script
+      <Script
+        id={`guide-schema-${guide.slug}`}
         type="application/ld+json"
-        suppressHydrationWarning
+        strategy="beforeInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <script
+      <Script
+        id={`guide-faq-${guide.slug}`}
         type="application/ld+json"
-        suppressHydrationWarning
+        strategy="beforeInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <main className="min-h-screen bg-[#0a0a0a] text-[#f5f0e8]">

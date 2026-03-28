@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
+import Script from 'next/script'
 import { allClinics } from '@/data/all-clinics'
 import TreatmentTag, { getTagVariant } from '@/components/TreatmentTag'
 import VerifiedBadge from '@/components/VerifiedBadge'
@@ -217,9 +218,10 @@ export default function ClinicProfilePage({ params }: PageProps) {
     <div className="min-h-screen bg-[#F8F6F1] font-sans">
       <Navbar />
 
-      <script
+      <Script
+        id={`clinic-schema-${clinic.slug}`}
         type="application/ld+json"
-        suppressHydrationWarning
+        strategy="beforeInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(clinicSchema) }}
       />
 
