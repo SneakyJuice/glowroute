@@ -1,5 +1,5 @@
 'use client'
-import { useState, useMemo, Suspense } from 'react'
+import { useState, useMemo, useEffect, Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
 import Navbar from '@/components/Navbar'
 import HeroSearch from '@/components/HeroSearch'
@@ -49,6 +49,12 @@ function ClinicsPageInner() {
   const [searchDistance, setSearchDistance] = useState('25')
   const [userLat, setUserLat] = useState<number | null>(null)
   const [userLng, setUserLng] = useState<number | null>(null)
+
+  // Hide the server-rendered preview once this client component mounts
+  useEffect(() => {
+    const ssrPreview = document.getElementById('ssr-clinic-preview')
+    if (ssrPreview) ssrPreview.style.display = 'none'
+  }, [])
 
   const handleNearMe = (lat: number, lng: number) => {
     setUserLat(lat)
