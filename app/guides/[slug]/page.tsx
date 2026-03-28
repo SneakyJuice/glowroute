@@ -1,7 +1,24 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import { COST_GUIDES, getGuideBySlug } from '@/lib/cost-guides'
+import { SITE_URL } from '@/lib/config'
 import type { Metadata } from 'next'
+
+const priceNumberRegex = /[0-9]+(?:,[0-9]{3})*(?:\.[0-9]+)?/g
+
+function parsePriceRange(value: string): { min: number; max: number | null } | null {
+  const matches = value.match(priceNumberRegex)
+  if (!matches) return null
+  const numbers: number[] = []
+  for (const match of matches) {
+    const numeric = Number(match.replace(/,/g, ''))
+    if (Number.isNaN(numeric)) continue
+    numbers.push(numeric)
+    if (numbers.length === 2) break
+  }
+  if (!numbers.length) return null
+  return { min: numbers[0], max: numbers[1] ?? null }
+}
 
 export function generateStaticParams() {
   return COST_GUIDES.map(g => ({ slug: g.slug }))
@@ -21,6 +38,8 @@ export default function CostGuidePage({ params }: { params: { slug: string } }) 
   const guide = getGuideBySlug(params.slug)
   if (!guide) notFound()
 
+  const guideUrl = `${SITE_URL}/guides/${guide.slug}`
+
   const priceRows = [
     { label: 'Budget', value: guide.avgLow, color: 'text-[#7a9e7e]' },
     { label: 'Average', value: guide.avgMid, color: 'text-[#c9a96e]' },
@@ -28,7 +47,49 @@ export default function CostGuidePage({ params }: { params: { slug: string } }) 
     { label: 'Luxury', value: guide.avgPremium, color: 'text-white' },
   ]
 
-  const schema = {
+  const offerTiers = priceRows.map(row => {
+    const parsed = parsePriceRange(row.value)
+    const offer: Record<string, any> = {
+      '@type': 'Offer',
+      name: `${row.label} ${guide.treatment}`,
+      description: row.value,
+      priceCurrency: 'USD',
+    }
+    if (parsed) {
+      offer.price = parsed.min
+      offer.priceSpecification = {
+        '@type': 'UnitPriceSpecification',
+        priceCurrency: 'USD',
+        minPrice: parsed.min,
+        ...(parsed.max ? { maxPrice: parsed.max } : {}),
+      }
+    }
+    return offer
+  })
+
+  const articleSchema: Record<string, any> = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: `How Much Does ${guide.treatment} Cost? (2025 Guide)`,
+    description: guide.intro,
+    author: {
+      '@type': 'Organization',
+      name: 'GlowRoute Research Desk',
+    },
+    mainEntityOfPage: guideUrl,
+    url: guideUrl,
+    articleSection: 'Cost Guide',
+    keywords: `${guide.treatment} cost, medspa pricing, GlowRoute guide`,
+    about: {
+      '@type': 'Service',
+      name: `${guide.treatment} Treatment`,
+      serviceType: guide.treatment,
+      offers: offerTiers,
+    },
+    offers: offerTiers,
+  }
+
+  const faqSchema = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: guide.faq.map(f => ({
@@ -42,7 +103,13 @@ export default function CostGuidePage({ params }: { params: { slug: string } }) 
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <main className="min-h-screen bg-[#0a0a0a] text-[#f5f0e8]">
 

@@ -126,6 +126,74 @@ export default function ClinicProfilePage({ params }: PageProps) {
 
   const isUnclaimed = !clinic.verified
 
+  const pageUrl = `${SITE_URL}/clinics/${citySlug(clinic.city)}/${clinic.slug}`
+  const socialProfiles: string[] = []
+  if (clinic.instagramHandle) {
+    socialProfiles.push(`https://instagram.com/${clinic.instagramHandle.replace('@', '')}`)
+  }
+  if (clinic.tiktokHandle) {
+    socialProfiles.push(`https://www.tiktok.com/@${clinic.tiktokHandle.replace('@', '')}`)
+  }
+
+  const sameAs = new Set<string>()
+  socialProfiles.forEach(url => sameAs.add(url))
+  if (clinic.website) sameAs.add(clinic.website)
+  if (clinic.bookingUrl) sameAs.add(clinic.bookingUrl)
+
+  const clinicSchema: Record<string, any> = {
+    '@context': 'https://schema.org',
+    '@type': 'MedicalBusiness',
+    '@id': pageUrl,
+    url: pageUrl,
+    name: clinic.name,
+    description: clinic.description,
+    medicalSpecialty: 'MedicalSpa',
+  }
+
+  const schemaImage = primaryImage || clinic.logo || clinic.images?.[0]
+  if (schemaImage) clinicSchema.image = schemaImage
+  if (clinic.phone) clinicSchema.telephone = clinic.phone
+  if (clinic.priceTier) clinicSchema.priceRange = clinic.priceTier
+  if (sameAs.size) clinicSchema.sameAs = Array.from(sameAs)
+
+  if (clinic.address || clinic.city || clinic.state) {
+    clinicSchema.address = {
+      '@type': 'PostalAddress',
+      ...(clinic.address ? { streetAddress: clinic.address } : {}),
+      ...(clinic.city ? { addressLocality: clinic.city } : {}),
+      ...(clinic.state ? { addressRegion: clinic.state } : {}),
+      addressCountry: 'US',
+    }
+  }
+
+  if (clinic.lat && clinic.lng) {
+    clinicSchema.geo = {
+      '@type': 'GeoCoordinates',
+      latitude: clinic.lat,
+      longitude: clinic.lng,
+    }
+  }
+
+  if (clinic.googleRating && clinic.googleReviewCount) {
+    clinicSchema.aggregateRating = {
+      '@type': 'AggregateRating',
+      ratingValue: clinic.googleRating,
+      reviewCount: clinic.googleReviewCount,
+      bestRating: 5,
+    }
+  }
+
+  if (allTreatments.length) {
+    clinicSchema.availableService = allTreatments.map(t => ({
+      '@type': 'MedicalProcedure',
+      name: t,
+    }))
+  }
+
+  if (clinic.mapsUrl) {
+    clinicSchema.hasMap = clinic.mapsUrl
+  }
+
   // Creator / influencer signals
   const isCreator = detectInfluencer(clinic)
   const creatorTier = isCreator ? getInfluencerTier(clinic) : null
@@ -148,6 +216,12 @@ export default function ClinicProfilePage({ params }: PageProps) {
   return (
     <div className="min-h-screen bg-[#F8F6F1] font-sans">
       <Navbar />
+
+      <script
+        type="application/ld+json"
+        suppressHydrationWarning
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(clinicSchema) }}
+      />
 
       {/* Hero Image Banner */}
       <div className="w-full h-[260px] md:h-[340px] relative overflow-hidden bg-gradient-to-br from-[#0D1B2E] to-[#1a2e4a]">

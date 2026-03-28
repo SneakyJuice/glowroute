@@ -81,18 +81,33 @@ export default function ArticleDetailPage({ params }: PageProps) {
   const rawContent = getArticleContent(article.contentFile)
   const renderedContent = rawContent ? renderMarkdown(rawContent) : null
 
-  const jsonLd = {
+  const articleUrl = `https://glowroute.io/articles/${article.slug}`
+  const jsonLd: Record<string, any> = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: article.title,
     description: article.excerpt,
     datePublished: article.publishedAt,
+    author: {
+      '@type': 'Person',
+      name: 'GlowRoute Editorial Team',
+    },
     publisher: {
       '@type': 'Organization',
       name: 'GlowRoute',
       url: 'https://glowroute.io',
     },
-    mainEntityOfPage: `https://glowroute.io/articles/${article.slug}`,
+    mainEntityOfPage: articleUrl,
+    url: articleUrl,
+    image: article.imageUrl,
+    articleSection: article.category,
+  }
+
+  if (article.tags?.length) {
+    jsonLd.keywords = article.tags.join(', ')
+  }
+  if (rawContent) {
+    jsonLd.articleBody = rawContent
   }
 
   return (
@@ -101,6 +116,7 @@ export default function ArticleDetailPage({ params }: PageProps) {
 
       <script
         type="application/ld+json"
+        suppressHydrationWarning
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
