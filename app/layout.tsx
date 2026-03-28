@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { DM_Sans } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
+import { PHProvider } from '@/providers/posthog-provider'
 import './globals.css'
 import { SITE_URL } from '@/lib/config'
 
@@ -41,7 +42,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${dmSans.className} bg-ivory text-onyx`}>
-        {children}
+        <PHProvider>
+          {children}
+        </PHProvider>
         <Analytics />
       </body>
     </html>
