@@ -185,7 +185,7 @@ function ClinicsPageInner({ allClinics, initialClinics, featuredClinic }: Clinic
     <div className="min-h-screen bg-ivory font-sans">
       <Navbar />
       {/* clinicCount should be allClinics.length, but HeroSearch needs it directly. Maybe pass totalCount */}
-      <HeroSearch clinicCount={allClinics.length} defaultCity="Miami, FL" onSearch={handleSearch} onNearMe={handleNearMe} />
+      <HeroSearch clinicCount={4871} defaultCity="Miami, FL" onSearch={handleSearch} onNearMe={handleNearMe} />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
         {/* Mobile filter toggle */}

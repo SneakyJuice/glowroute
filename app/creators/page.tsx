@@ -14,15 +14,15 @@ export const metadata: Metadata = {
   alternates: { canonical: `${SITE_URL}/creators` },
 }
 
-const creatorClinics = allClinics
-  .filter(detectInfluencer)
-  .sort((a, b) => b.googleReviewCount - a.googleReviewCount)
-
 function citySlug(city: string) {
   return city.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
 }
 
-export default function CreatorsPage() {
+export default async function CreatorsPage() {
+  const all = await allClinics
+  const creatorClinics = all
+    .filter(detectInfluencer)
+    .sort((a, b) => b.googleReviewCount - a.googleReviewCount)
   const macro = creatorClinics.filter(c => getInfluencerTier(c) === 'Macro')
   const mid = creatorClinics.filter(c => getInfluencerTier(c) === 'Mid')
   const micro = creatorClinics.filter(c => getInfluencerTier(c) === 'Micro')

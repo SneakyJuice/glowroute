@@ -28,13 +28,15 @@ function toClinicSlug(city: string): string {
 }
 
 export async function generateStaticParams() {
-  const slugs = new Set(allClinics.map(c => toCitySlug(c.city)))
+  const clinics = await allClinics
+  const slugs = new Set(clinics.map(c => toCitySlug(c.city)))
   return Array.from(slugs).map(city => ({ city }))
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const clinics = await allClinics
   const displayCity = citySlugToDisplay(params.city)
-  const cityClinics = allClinics.filter(c => toCitySlug(c.city) === params.city)
+  const cityClinics = clinics.filter(c => toCitySlug(c.city) === params.city)
   if (cityClinics.length === 0) return { title: 'Clinics — GlowRoute' }
 
   const count = cityClinics.length
@@ -58,9 +60,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default function CityPage({ params }: Props) {
+export default async function CityPage({ params }: Props) {
   const displayCity = citySlugToDisplay(params.city)
-  const cityClinics = allClinics
+  const all = await allClinics
+  const cityClinics = all
     .filter(c => toCitySlug(c.city) === params.city)
     .sort((a, b) => b.googleRating - a.googleRating || b.googleReviewCount - a.googleReviewCount)
 
@@ -177,7 +180,7 @@ export default function CityPage({ params }: Props) {
           <h2 className="text-base font-bold text-onyx mb-4">Explore Nearby Cities</h2>
           <div className="flex flex-wrap gap-2">
             {Array.from(new Set(
-              allClinics
+              all
                 .map(c => c.city)
                 .filter(c => c !== cityClinics[0]?.city)
             ))

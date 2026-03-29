@@ -47,25 +47,26 @@ function matchesTreatment(clinic: Clinic, keywords: string[]): boolean {
   return keywords.some(k => hay.includes(k.toLowerCase()))
 }
 
-export default function TreatmentPage({ params }: Props) {
+export default async function TreatmentPage({ params }: Props) {
+  const clinics = await allClinics
   const treatment = getTreatmentBySlug(params.slug)
   if (!treatment) notFound()
 
-  const matchingClinics = allClinics
+  const matchingClinics = clinics
     .filter(c => matchesTreatment(c, treatment.matchKeywords))
     .sort((a, b) => b.googleRating - a.googleRating || b.googleReviewCount - a.googleReviewCount)
     .slice(0, 10)
 
   // Get city breakdown for context
   const cityCounts: Record<string, number> = {}
-  allClinics
+  clinics
     .filter(c => matchesTreatment(c, treatment.matchKeywords))
     .forEach(c => { cityCounts[c.city] = (cityCounts[c.city] ?? 0) + 1 })
   const topCities = Object.entries(cityCounts)
     .sort((a, b) => b[1] - a[1])
     .slice(0, 8)
 
-  const totalCount = allClinics.filter(c => matchesTreatment(c, treatment.matchKeywords)).length
+  const totalCount = clinics.filter(c => matchesTreatment(c, treatment.matchKeywords)).length
 
   // Schema.org markup
   const serviceSchema = {
