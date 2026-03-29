@@ -18,6 +18,8 @@ import { detectInfluencer, getInfluencerTier } from '@/lib/influencer'
 import { calculateGlowScore } from '@/lib/glowscore'
 import { GlowScoreProfileCard } from '@/components/GlowScoreBadge'
 import { PostHogClinicTracker } from '@/components/PostHogClinicTracker'
+import { TREATMENTS, TREATMENT_SLUGS } from '@/lib/treatments'
+import ClinicCard from '@/components/ClinicCard'
 
 /** Normalize a city name to a URL-safe slug */
 function citySlug(city: string) {
@@ -122,7 +124,61 @@ function StarRating({ rating }: { rating: number }) {
   )
 }
 
+// ─── Treatment City Page (disambiguation) ────────────────────────────────────
+async function TreatmentCityPage({ city, treatment }: { city: string; treatment: string }) {
+  const treatmentInfo = TREATMENTS.find(t => t.slug === treatment)
+  const supabase = getSupabaseAdmin()
+  let clinics: import('@/types/clinic').Clinic[] = []
+  if (supabase) {
+    const displayCity = city.split('-').map(w => w[0].toUpperCase() + w.slice(1)).join(' ')
+    const { data } = await supabase
+      .from('clinics')
+      .select('*')
+      .ilike('city', displayCity)
+      .contains('services', [treatment])
+      .limit(50)
+    clinics = (data || []) as import('@/types/clinic').Clinic[]
+  }
+  return (
+    <div className="min-h-screen bg-ivory font-sans">
+      <Navbar />
+      <section className="bg-onyx py-12 px-6">
+        <div className="max-w-5xl mx-auto">
+          <p className="text-stone text-sm uppercase tracking-widest mb-2">
+            {city.split('-').map(w => w[0].toUpperCase() + w.slice(1)).join(' ')}, FL
+          </p>
+          <h1 className="font-serif text-3xl md:text-4xl font-light text-ivory mb-3">
+            {treatmentInfo?.name ?? treatment} Providers
+          </h1>
+          <p className="text-stone text-base">
+            {clinics.length} verified clinic{clinics.length !== 1 ? 's' : ''} in the area
+          </p>
+        </div>
+      </section>
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+        {clinics.length > 0 ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {clinics.map(clinic => (
+              <ClinicCard key={clinic.slug} clinic={clinic} />
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-20">
+            <p className="text-stone text-lg mb-4">No clinics found for this treatment in this city yet.</p>
+            <a href="/clinics" className="text-blush underline">Browse all clinics →</a>
+          </div>
+        )}
+      </main>
+      <Footer />
+    </div>
+  )
+}
+
 export default async function ClinicProfilePage({ params }: PageProps) {
+  // Disambiguate: if slug matches a treatment, show treatment page
+  if (TREATMENT_SLUGS.includes(params.slug)) {
+    return <TreatmentCityPage city={params.city} treatment={params.slug} />
+  }
   const clinic = await fetchClinicBySlug(params.city, params.slug)
   if (!clinic) notFound()
 
