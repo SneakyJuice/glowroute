@@ -21,7 +21,7 @@ export async function POST(req: NextRequest) {
     }
 
     // Look up clinic name for the notification
-    const clinic = clinicSlug ? allClinics.find(c => c.slug === clinicSlug) : undefined
+    const clinic = clinicSlug ? (await allClinics).find(c => c.slug === clinicSlug) : undefined
     const clinicName = clinic?.name ?? clinicSlug ?? 'GlowRoute Directory'
 
     // Save lead to JSON store

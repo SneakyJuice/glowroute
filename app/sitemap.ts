@@ -9,7 +9,8 @@ function citySlug(city: string): string {
   return city.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
 }
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const clinics = await allClinics
   const today = new Date().toISOString().split('T')[0]
 
   // ── Static pages ──────────────────────────────────────────────────────────
@@ -32,7 +33,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }))
 
   // ── City landing pages ────────────────────────────────────────────────────
-  const uniqueCities = Array.from(new Set(allClinics.map(c => citySlug(c.city))))
+  const uniqueCities = Array.from(new Set(clinics.map(c => citySlug(c.city))))
   const cityPages: MetadataRoute.Sitemap = uniqueCities.map(city => ({
     url: `${SITE_URL}/clinics/${city}`,
     lastModified: today,
@@ -41,7 +42,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }))
 
   // ── Clinic profiles ───────────────────────────────────────────────────────
-  const clinicPages: MetadataRoute.Sitemap = allClinics.map(c => ({
+  const clinicPages: MetadataRoute.Sitemap = clinics.map(c => ({
     url: `${SITE_URL}/clinics/${citySlug(c.city)}/${c.slug}`,
     lastModified: today,
     changeFrequency: 'weekly' as const,
@@ -49,7 +50,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }))
 
   // ── Claim pages (top 200 pre-rendered) ────────────────────────────────────
-  const claimPages: MetadataRoute.Sitemap = allClinics.slice(0, 200).map(c => ({
+  const claimPages: MetadataRoute.Sitemap = clinics.slice(0, 200).map(c => ({
     url: `${SITE_URL}/claim/${c.slug}`,
     lastModified: today,
     changeFrequency: 'monthly' as const,

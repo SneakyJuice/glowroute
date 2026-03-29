@@ -34,7 +34,7 @@ function generateDescription(clinic: Clinic): string {
 }
 
 /** Clean a clinic record — strip garbled descriptions, normalize nulls */
-function clean(clinic: Clinic): Clinic {
+export function clean(clinic: Clinic): Clinic {
   const descGarbled =
     clinic.description && isGarbledDescription(clinic.description)
 
@@ -51,7 +51,7 @@ function clean(clinic: Clinic): Clinic {
  * Note: googleRating and googleReviewCount are not in Supabase schema,
  * so we provide defaults. Treatments are mapped from services array.
  */
-function mapSupabaseRow(row: any): Clinic {
+export function mapSupabaseRow(row: any): Clinic {
   return {
     id: row.id,
     slug: row.slug,

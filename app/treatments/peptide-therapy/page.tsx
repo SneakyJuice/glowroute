@@ -21,9 +21,7 @@ const TAB_MAP: Record<FilterTab, PeptideCategory | null> = {
 const TABS: FilterTab[] = ['All Peptide', 'TRT/Testosterone', 'GLP-1/Semaglutide', 'BPC-157/Recovery', 'HGH/IGF-1']
 
 // schema injected via script tag — only on server, so we pre-compute here
-const peptideClinics = allClinics
-  .filter(isPeptideClinic)
-  .sort((a, b) => b.googleRating - a.googleRating || b.googleReviewCount - a.googleReviewCount)
+// peptideClinics computed inside component
 
 const serviceSchema = {
   '@context': 'https://schema.org',
@@ -38,13 +36,8 @@ const itemListSchema = {
   '@context': 'https://schema.org',
   '@type': 'ItemList',
   name: 'Top Peptide Therapy Clinics near you',
-  numberOfItems: Math.min(10, peptideClinics.length),
-  itemListElement: peptideClinics.slice(0, 10).map((c, i) => ({
-    '@type': 'ListItem',
-    position: i + 1,
-    name: c.name,
-    url: `${SITE_URL}/clinics/${c.city.toLowerCase().replace(/\s+/g, '-')}/${c.slug}`,
-  })),
+  numberOfItems: 10,
+  itemListElement: [],
 }
 
 function citySlug(city: string) {
@@ -52,6 +45,7 @@ function citySlug(city: string) {
 }
 
 export default function PeptideTherapyPage() {
+  const peptideClinics: import('@/types/clinic').Clinic[] = [] // TODO: fetch from Supabase API
   const [activeTab, setActiveTab] = useState<FilterTab>('All Peptide')
   const [page, setPage] = useState(1)
   const PER_PAGE = 12

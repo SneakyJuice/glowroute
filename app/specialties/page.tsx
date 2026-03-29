@@ -23,14 +23,14 @@ export const metadata: Metadata = {
   },
 }
 
-function getCategoryCounts(): Record<CategorySlug, number> {
+async function getCategoryCounts(): Promise<Record<CategorySlug, number>> {
   const counts = {} as Record<CategorySlug, number>
   // Init all to 0
   for (const cat of CATEGORIES) {
     counts[cat.slug as CategorySlug] = 0
   }
   // Count clinics per category
-  for (const clinic of allClinics) {
+  for (const clinic of (await allClinics)) {
     const treatments = [...(clinic.treatments || []), ...(clinic.specialtyTreatments || [])]
     const matched = matchCategories(treatments)
     for (const slug of matched) {
@@ -40,8 +40,8 @@ function getCategoryCounts(): Record<CategorySlug, number> {
   return counts
 }
 
-export default function SpecialtiesPage() {
-  const counts = getCategoryCounts()
+export default async function SpecialtiesPage() {
+  const counts = await getCategoryCounts()
 
   return (
     <div className="min-h-screen bg-ivory font-sans">
