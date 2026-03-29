@@ -17,6 +17,7 @@ import type { VibeTag } from '@/lib/vibes'
 import { detectInfluencer, getInfluencerTier } from '@/lib/influencer'
 import { calculateGlowScore } from '@/lib/glowscore'
 import { GlowScoreProfileCard } from '@/components/GlowScoreBadge'
+import { PostHogClinicTracker } from '@/components/PostHogClinicTracker'
 
 /** Normalize a city name to a URL-safe slug */
 function citySlug(city: string) {

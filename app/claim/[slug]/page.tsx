@@ -6,6 +6,7 @@ import Footer from '@/components/Footer'
 import { allClinics } from '@/data/all-clinics'
 import { PLANS } from '@/lib/stripe'
 import ClaimCheckoutButton from './ClaimCheckoutButton'
+import { trackClaimStarted } from '@/components/PostHogClinicTracker'
 
 interface Props { params: { slug: string } }
 
