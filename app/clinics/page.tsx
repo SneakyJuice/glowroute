@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import { standardClinics, featuredClinic } from '@/data/all-clinics'
+import { fetchAllClinicsFromSupabase, fetchFeaturedClinic } from '@/data/supabase-clinics'
 import { calculateGlowScore } from '@/lib/glowscore'
 import { Clinic } from '@/types/clinic'
 import ClinicsClient from './ClinicsClient'
@@ -9,15 +9,7 @@ export const metadata: Metadata = {
   description: 'Discover and compare the best clinics in Florida for your needs. Filter by specialty, location, ratings, and more.',
 }
 
-/* ── Server-side: pre-compute the default first page (24 clinics, sorted by GlowScore) ── */
 const SSR_PAGE_SIZE = 24
-
-function getInitialClinics(): Clinic[] {
-  return [...standardClinics]
-    .filter(c => c.googleRating > 0)
-    .sort((a, b) => calculateGlowScore(b).total - calculateGlowScore(a).total)
-    .slice(0, SSR_PAGE_SIZE)
-}
 
 function citySlug(city: string) {
   return city.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
@@ -27,7 +19,7 @@ function citySlug(city: string) {
 function SSRClinicCard({ clinic }: { clinic: Clinic }) {
   const score = calculateGlowScore(clinic)
   const profileUrl = `/clinics/${citySlug(clinic.city)}/${clinic.slug}`
-  const treatments = [...(clinic.treatments || []), ...(clinic.specialtyTreatments || [])].slice(0, 4)
+  const treatments = clinic.treatments.slice(0, 4) // treatments is already an array in Clinic type
 
   return (
     <article className="bg-white rounded-2xl overflow-hidden flex flex-col border border-gray-200 shadow-sm">
@@ -132,9 +124,20 @@ function SSRFeaturedCard({ clinic }: { clinic: Clinic }) {
   )
 }
 
-export default function ClinicsPage() {
+export default async function ClinicsPage() {
+  const allClinics = await fetchAllClinicsFromSupabase()
+  const initialFeaturedClinic = await fetchFeaturedClinic()
+
+  const getInitialClinics = () => {
+    if (!initialFeaturedClinic) return allClinics.slice(0, SSR_PAGE_SIZE)
+    return allClinics
+      .filter(c => c.id !== initialFeaturedClinic.id && c.googleRating > 0)
+      .sort((a, b) => calculateGlowScore(b).total - calculateGlowScore(a).total)
+      .slice(0, SSR_PAGE_SIZE)
+  }
+
   const initialClinics = getInitialClinics()
-  const totalCount = standardClinics.length + 1
+  const totalCount = allClinics.length // Total clinics from Supabase
 
   return (
     <>
@@ -152,7 +155,7 @@ export default function ClinicsPage() {
           </header>
 
           <div className="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            <SSRFeaturedCard clinic={featuredClinic} />
+            {initialFeaturedClinic && <SSRFeaturedCard clinic={initialFeaturedClinic} />}
             {initialClinics.map(clinic => (
               <SSRClinicCard key={clinic.id} clinic={clinic} />
             ))}
@@ -165,7 +168,7 @@ export default function ClinicsPage() {
       </div>
 
       {/* ── Client component: hydrates and replaces the SSR preview ── */}
-      <ClinicsClient />
+      <ClinicsClient allClinics={allClinics} initialClinics={initialClinics} featuredClinic={initialFeaturedClinic} />
     </>
   )
 }
