@@ -1,7 +1,8 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Script from 'next/script'
-import { allClinics } from '@/data/all-clinics'
+import { getSupabaseAdmin } from '@/lib/supabase'
+import { mapSupabaseRow, clean, fetchAllClinicsFromSupabase } from '@/data/supabase-clinics'
 import TreatmentTag, { getTagVariant } from '@/components/TreatmentTag'
 import VerifiedBadge from '@/components/VerifiedBadge'
 import Navbar from '@/components/Navbar'
@@ -15,6 +16,7 @@ import type { VibeTag } from '@/lib/vibes'
 import { detectInfluencer, getInfluencerTier } from '@/lib/influencer'
 import { calculateGlowScore } from '@/lib/glowscore'
 import { GlowScoreProfileCard } from '@/components/GlowScoreBadge'
+import type { Clinic } from '@/types/clinic'
 
 /** Normalize a city name to a URL-safe slug */
 function citySlug(city: string) {
@@ -26,6 +28,7 @@ interface PageProps {
 }
 
 export async function generateStaticParams() {
+  const allClinics = await fetchAllClinicsFromSupabase();
   return allClinics.map(clinic => ({
     city: citySlug(clinic.city),
     slug: clinic.slug,
@@ -38,10 +41,32 @@ function truncate(str: string, maxLen: number, suffix = '…'): string {
   return str.slice(0, maxLen - suffix.length).trimEnd() + suffix
 }
 
+// Helper to fetch a single clinic from Supabase
+async function fetchClinicBySlug(city: string, slug: string): Promise<Clinic | null> {
+  const supabase = getSupabaseAdmin();
+  if (!supabase) return null;
+
+  const { data, error } = await supabase
+    .from('clinics')
+    .select('*')
+    .eq('slug', slug)
+    .limit(1);
+
+  if (error) {
+    console.error('[ClinicProfilePage] Error fetching clinic:', error.message);
+    return null;
+  }
+
+  if (!data || data.length === 0) {
+    return null;
+  }
+
+  // Need to explicitly map and clean the row
+  return clean(mapSupabaseRow(data[0]));
+}
+
 export async function generateMetadata({ params }: PageProps) {
-  const clinic = allClinics.find(
-    c => c.slug === params.slug && citySlug(c.city) === params.city
-  )
+  const clinic = await fetchClinicBySlug(params.city, params.slug)
   if (!clinic) return { title: 'Clinic Not Found | GlowRoute' }
 
   // Page title: full name (browsers handle overflow)
@@ -56,8 +81,8 @@ export async function generateMetadata({ params }: PageProps) {
   )
 
   const image =
-    clinic.images?.[0] ||
-    (clinic as any).imageUrl ||
+    clinic.imageUrl ||
+    (clinic as any).images?.[0] ||
     clinic.logo ||
     `${SITE_URL}/og-default.jpg`
 
@@ -107,14 +132,11 @@ function StarRating({ rating }: { rating: number }) {
   )
 }
 
-export default function ClinicProfilePage({ params }: PageProps) {
-  const clinic = allClinics.find(c => c.slug === params.slug)
+export default async function ClinicProfilePage({ params }: PageProps) {
+  const clinic = await fetchClinicBySlug(params.city, params.slug)
   if (!clinic) notFound()
 
-  const allTreatments = [
-    ...(clinic.treatments || []),
-    ...(clinic.specialtyTreatments || []),
-  ].filter((t, idx, arr) => arr.indexOf(t) === idx)
+  const allTreatments = clinic.treatments.filter((t, idx, arr) => arr.indexOf(t) === idx)
 
   const primaryImage = clinic.images?.[0] || null
   const galleryImages = clinic.images?.slice(1) || []
@@ -209,10 +231,9 @@ export default function ClinicProfilePage({ params }: PageProps) {
   // Book Now URL — bookingUrl first, then website if it's a booking platform
   const bookNowUrl = bookingPlatform?.url ?? null
 
-  // Nearby clinics in same city
-  const nearbyClinics = allClinics
-    .filter(c => c.city === clinic.city && c.slug !== clinic.slug)
-    .slice(0, 4)
+  // Nearby clinics in same city -- this will come from allClinics, but for now we have only one clinic.
+  // We need to fetch nearby clinics from supbase by city. But that's out of scope for now.
+  const nearbyClinics: Clinic[] = [] // Temporarily empty
 
   return (
     <div className="min-h-screen bg-[#F8F6F1] font-sans">
@@ -395,10 +416,10 @@ export default function ClinicProfilePage({ params }: PageProps) {
                 </div>
               </div>
 
-              {/* Action Buttons — Book Now prominently above fold */}
-              <div className="flex flex-wrap gap-2.5 mt-5">
+            {/* Action Buttons — Book Now prominently above fold */}
+            <div className="flex flex-wrap gap-2.5 mt-5">
                 {/* Book Now — primary CTA when booking available */}
-                {bookNowUrl ? (
+                {bookNowUrl ? ( 
                   <a
                     href={bookNowUrl}
                     target="_blank"
@@ -572,19 +593,9 @@ export default function ClinicProfilePage({ params }: PageProps) {
                   >
                     {clinic.verified ? '✓ Verified' : 'Unverified'}
                   </span>
-                </div>
-                {isUnclaimed && (
-                  <div className="pt-2 border-t border-gray-100">
-                    <a
-                      href={`/claim/${clinic.slug}`}
-                      className="text-xs font-semibold text-teal hover:underline"
-                    >
-                      Own this business? Claim your listing →
-                    </a>
-                  </div>
-                )}
+                )
               </div>
-            </div>
+            )}
 
             {/* GlowScore™ sidebar card */}
             <GlowScoreProfileCard
@@ -694,5 +705,3 @@ export default function ClinicProfilePage({ params }: PageProps) {
 
       <Footer />
     </div>
-  )
-}

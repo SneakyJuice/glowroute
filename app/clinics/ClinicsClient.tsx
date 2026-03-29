@@ -13,7 +13,6 @@ import Pagination from '@/components/Pagination'
 import BottomCTA from '@/components/BottomCTA'
 import Footer from '@/components/Footer'
 import { FilterState, Clinic } from '@/types/clinic'
-import { featuredClinic, standardClinics } from '@/data/all-clinics'
 import { CATEGORIES, matchCategories } from '@/data/categories'
 import type { CategorySlug } from '@/data/categories'
 import { haversine } from '@/lib/geo'
@@ -32,7 +31,13 @@ const DEFAULT_FILTERS: FilterState = {
 
 const ITEMS_PER_PAGE = 6
 
-function ClinicsPageInner() {
+interface ClinicsClientProps {
+  allClinics: Clinic[];
+  initialClinics: Clinic[];
+  featuredClinic: Clinic | null;
+}
+
+function ClinicsPageInner({ allClinics, initialClinics, featuredClinic }: ClinicsClientProps) {
   const searchParams = useSearchParams()
   const specialtyParam = searchParams.get('specialty') as CategorySlug | null
   const activeSpecialty = specialtyParam
@@ -50,19 +55,12 @@ function ClinicsPageInner() {
   const [userLat, setUserLat] = useState<number | null>(null)
   const [userLng, setUserLng] = useState<number | null>(null)
 
-  // Hide the server-rendered preview once this client component mounts
-  useEffect(() => {
-    const ssrPreview = document.getElementById('ssr-clinic-preview')
-    if (ssrPreview) ssrPreview.style.display = 'none'
-  }, [])
-
   const handleNearMe = (lat: number, lng: number) => {
     setUserLat(lat)
     setUserLng(lng)
     setSort('Nearest First')
     setPage(1)
   }
-
 
   const handleSearch = (treatment: string, city: string) => {
     setSearchTreatment(treatment.toLowerCase().trim())
@@ -71,7 +69,7 @@ function ClinicsPageInner() {
   }
 
   const filteredClinics = useMemo(() => {
-    let result = [...standardClinics]
+    let result = [...allClinics] // Use allClinics prop as base
 
     // SPECIALTY FILTER — pre-filter by category slug from ?specialty= param
     if (activeSpecialty) {
@@ -159,12 +157,10 @@ function ClinicsPageInner() {
     }
 
     return result
-  }, [filters, sort, searchTreatment, searchCity, userLat, userLng, activeSpecialty])
+  }, [filters, sort, searchTreatment, searchCity, userLat, userLng, activeSpecialty, allClinics])
 
   // Featured clinic — show for Miami (default) or Tampa
-  const showFeatured = !searchCity ||
-    searchCity.toLowerCase().includes('miami') ||
-    searchCity.toLowerCase().includes('tampa')
+  const showFeatured = (!searchCity || searchCity.toLowerCase().includes('miami') || searchCity.toLowerCase().includes('tampa')) && featuredClinic
   const resultCount = filteredClinics.length + (showFeatured ? 1 : 0)
 
   const totalPages = Math.ceil(filteredClinics.length / ITEMS_PER_PAGE)
@@ -188,7 +184,8 @@ function ClinicsPageInner() {
   return (
     <div className="min-h-screen bg-ivory font-sans">
       <Navbar />
-      <HeroSearch clinicCount={standardClinics.length + 1} defaultCity="Miami, FL" onSearch={handleSearch} onNearMe={handleNearMe} />
+      {/* clinicCount should be allClinics.length, but HeroSearch needs it directly. Maybe pass totalCount */}
+      <HeroSearch clinicCount={allClinics.length} defaultCity="Miami, FL" onSearch={handleSearch} onNearMe={handleNearMe} />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
         {/* Mobile filter toggle */}
@@ -246,7 +243,7 @@ function ClinicsPageInner() {
 
             <div className={`grid gap-5 ${view === 'grid' ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3' : 'grid-cols-1'}`}>
               {/* Featured card — only shown when city context matches Tampa */}
-              {showFeatured && <FeaturedClinicCard clinic={featuredClinic} />}
+              {showFeatured && featuredClinic && <FeaturedClinicCard clinic={featuredClinic} />}
 
               {/* Standard clinic cards */}
               {pagedClinics.map((clinic: Clinic) => {
@@ -275,10 +272,10 @@ function ClinicsPageInner() {
   )
 }
 
-export default function ClinicsPage() {
+export default function ClinicsPage(props: ClinicsClientProps) {
   return (
     <Suspense fallback={<div className="min-h-screen bg-ivory flex items-center justify-center"><p className="text-stone">Loading...</p></div>}>
-      <ClinicsPageInner />
+      <ClinicsPageInner {...props} />
     </Suspense>
   )
 }
