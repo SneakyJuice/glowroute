@@ -22,8 +22,8 @@ import { TREATMENTS, TREATMENT_SLUGS } from '@/lib/treatments'
 import ClinicCard from '@/components/ClinicCard'
 
 /** Normalize a city name to a URL-safe slug */
-function citySlug(city: string) {
-  return city.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
+function citySlug(city: string | undefined | null) {
+  return (city || '').toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
 }
 
 interface PageProps {
@@ -45,10 +45,13 @@ async function fetchClinicBySlug(city: string, slug: string): Promise<Clinic | n
 
 export async function generateStaticParams() {
   const all = await fetchAllClinicsFromSupabase()
-  return all.map(clinic => ({
-    city: citySlug(clinic.city),
-    slug: clinic.slug,
-  }))
+  return all
+    .filter(clinic => clinic.city && clinic.slug) // skip records with missing city or slug
+    .map(clinic => ({
+      city: citySlug(clinic.city),
+      slug: clinic.slug,
+    }))
+    .filter(p => p.city && p.slug) // double-check after slug normalization
 }
 
 /** Truncate a string to maxLen, appending suffix if cut */
