@@ -125,7 +125,8 @@ function SSRFeaturedCard({ clinic }: { clinic: Clinic }) {
 }
 
 export default async function ClinicsPage() {
-  const allClinics = await fetchAllClinicsFromSupabase()
+  const allClinicsRaw = await fetchAllClinicsFromSupabase()
+  const allClinics = allClinicsRaw.filter(c => c.city && c.slug) // exclude null-city/slug records
   const initialFeaturedClinic = await fetchFeaturedClinic()
 
   const getInitialClinics = () => {
