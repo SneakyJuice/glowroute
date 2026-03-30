@@ -66,6 +66,12 @@ export default function InsightDetailPage({ params }: PageProps) {
   const insight = INSIGHTS.find(i => i.slug === params.slug)
   if (!insight) notFound()
 
+  // Full HTML reports get their own standalone renderer (preserves Chart.js, CSS, scripts)
+  if (insight.contentFile?.endsWith('.html')) {
+    const { redirect } = require('next/navigation')
+    redirect(`/insights-full/${params.slug}`)
+  }
+
   const htmlContent = getInsightContent(insight.contentFile)
 
   const jsonLd = {
