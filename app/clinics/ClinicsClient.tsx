@@ -38,6 +38,12 @@ interface ClinicsClientProps {
 }
 
 function ClinicsPageInner({ allClinics, initialClinics, featuredClinic }: ClinicsClientProps) {
+  // Hide the SSR preview once the client component mounts
+  useEffect(() => {
+    const ssrPreview = document.getElementById('ssr-clinic-preview')
+    if (ssrPreview) ssrPreview.style.display = 'none'
+  }, [])
+
   const searchParams = useSearchParams()
   const specialtyParam = searchParams.get('specialty') as CategorySlug | null
   const activeSpecialty = specialtyParam

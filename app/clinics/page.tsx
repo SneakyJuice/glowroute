@@ -155,7 +155,7 @@ export default async function ClinicsPage() {
           </header>
 
           <div className="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            {initialFeaturedClinic && (initialFeaturedClinic.googleReviewCount ?? 0) > 0 && <SSRFeaturedCard clinic={initialFeaturedClinic} />}
+            {initialFeaturedClinic && (initialFeaturedClinic.googleRating ?? 0) > 0 && (initialFeaturedClinic.googleReviewCount ?? 0) > 0 && <SSRFeaturedCard clinic={initialFeaturedClinic} />}
             {initialClinics.map(clinic => (
               <SSRClinicCard key={clinic.id} clinic={clinic} />
             ))}
