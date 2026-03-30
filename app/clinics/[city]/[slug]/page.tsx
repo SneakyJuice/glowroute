@@ -134,13 +134,30 @@ async function TreatmentCityPage({ city, treatment }: { city: string; treatment:
   let clinics: import('@/types/clinic').Clinic[] = []
   if (supabase) {
     const displayCity = city.split('-').map(w => w[0].toUpperCase() + w.slice(1)).join(' ')
-    const { data } = await supabase
+
+    // First: try exact services match
+    const { data: matched } = await supabase
       .from('clinics')
       .select('*')
       .ilike('city', displayCity)
       .contains('services', [treatment])
+      .gt('glow_score', 0)
+      .order('glow_score', { ascending: false })
       .limit(50)
-    clinics = (data || []) as import('@/types/clinic').Clinic[]
+
+    if (matched && matched.length > 0) {
+      clinics = matched as import('@/types/clinic').Clinic[]
+    } else {
+      // Fallback: show all rated clinics in the city (services data not yet populated)
+      const { data: cityAll } = await supabase
+        .from('clinics')
+        .select('*')
+        .ilike('city', displayCity)
+        .gt('glow_score', 0)
+        .order('glow_score', { ascending: false })
+        .limit(50)
+      clinics = (cityAll || []) as import('@/types/clinic').Clinic[]
+    }
   }
   return (
     <div className="min-h-screen bg-ivory font-sans">
