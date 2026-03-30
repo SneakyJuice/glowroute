@@ -54,7 +54,7 @@ export function clean(clinic: Clinic): Clinic {
 export function mapSupabaseRow(row: any): Clinic {
   return {
     id: row.id,
-    slug: row.slug,
+    slug: (row.slug || '').replace(/^\/+/, ''), // strip leading slashes that break Next.js routing
     name: row.name,
     city: row.city,
     state: row.state || 'FL',
