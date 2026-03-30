@@ -29,7 +29,7 @@ const DEFAULT_FILTERS: FilterState = {
   freeConsultation: false,
 }
 
-const ITEMS_PER_PAGE = 6
+const ITEMS_PER_PAGE = 20
 
 interface ClinicsClientProps {
   allClinics: Clinic[];
@@ -160,7 +160,11 @@ function ClinicsPageInner({ allClinics, initialClinics, featuredClinic }: Clinic
   }, [filters, sort, searchTreatment, searchCity, userLat, userLng, activeSpecialty, allClinics])
 
   // Featured clinic — show for Miami (default) or Tampa
-  const showFeatured = (!searchCity || searchCity.toLowerCase().includes('miami') || searchCity.toLowerCase().includes('tampa')) && featuredClinic
+  // Only show featured if it has real review data AND city matches current search
+  const showFeatured = featuredClinic &&
+    (featuredClinic.googleRating ?? 0) > 0 &&
+    (featuredClinic.googleReviewCount ?? 0) > 0 &&
+    (!searchCity || searchCity.toLowerCase().includes((featuredClinic.city ?? '').toLowerCase().split(',')[0].trim()))
   const resultCount = filteredClinics.length + (showFeatured ? 1 : 0)
 
   const totalPages = Math.ceil(filteredClinics.length / ITEMS_PER_PAGE)
