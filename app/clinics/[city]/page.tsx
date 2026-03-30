@@ -29,7 +29,8 @@ function toClinicSlug(city: string): string {
 
 export async function generateStaticParams() {
   const clinics = await allClinics
-  const slugs = new Set(clinics.map(c => toCitySlug(c.city)))
+  const slugs = new Set(clinics.filter(c => c.city).map(c => toCitySlug(c.city)))
+  slugs.delete('') // remove empty string from null cities
   return Array.from(slugs).map(city => ({ city }))
 }
 
