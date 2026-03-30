@@ -43,26 +43,87 @@ function formatDate(dateStr: string) {
 }
 
 function renderMarkdown(md: string): string {
-  return md
-    .replace(/^# (.+)$/gm, '<h1 class="font-serif text-4xl text-onyx mb-6 mt-10">$1</h1>')
-    .replace(/^## (.+)$/gm, '<h2 class="font-serif text-2xl text-onyx mb-4 mt-8 border-b border-stone/15 pb-2">$1</h2>')
-    .replace(/^### (.+)$/gm, '<h3 class="font-serif text-xl text-onyx mb-3 mt-6">$1</h3>')
-    .replace(/\*\*(.+?)\*\*/g, '<strong class="font-semibold text-onyx">$1</strong>')
-    .replace(/\*(.+?)\*/g, '<em class="italic">$1</em>')
-    .replace(/^---$/gm, '<hr class="border-stone/20 my-8"/>')
-    .replace(/^> (.+)$/gm, '<blockquote class="border-l-2 border-champagne pl-5 italic text-onyx/70 my-6 font-serif text-lg">$1</blockquote>')
-    .replace(/^- (.+)$/gm, '<li class="text-onyx/80 leading-relaxed mb-1 ml-4 list-disc">$1</li>')
-    .replace(/(<li[^>]*>.*<\/li>\n?)+/g, (match) => `<ul class="my-4 space-y-1">${match}</ul>`)
-    .replace(/\[(.+?)\]\((https?:\/\/[^)]+)\)/g, '<a href="$2" class="text-sage underline underline-offset-2 hover:text-champagne transition-colors" target="_blank" rel="noopener">$1</a>')
-    .replace(/\[(.+?)\]\(([^)]+)\)/g, '<a href="$2" class="text-sage underline underline-offset-2 hover:text-champagne transition-colors">$1</a>')
-    .split('\n')
-    .map(line => {
-      if (!line.trim()) return ''
-      if (/^<[hbuliabqp]/.test(line)) return line
-      return `<p class="text-onyx/80 leading-relaxed mb-4">${line}</p>`
+  // Track footnotes for numbered citations
+  let fnCounter = 0
+  const footnotes: { num: number; url: string; label: string }[] = []
+
+  // Pre-process: collapse lines that are continuations of the same paragraph
+  // Split into blocks by blank lines first
+  const blocks = md.split(/\n\n+/)
+
+  const renderedBlocks = blocks.map(block => {
+    const trimmed = block.trim()
+    if (!trimmed) return ''
+
+    // Headings
+    if (trimmed.startsWith('# ')) return `<h1 class="article-h1">${inlineRender(trimmed.slice(2), footnotes, () => ++fnCounter)}</h1>`
+    if (trimmed.startsWith('## ')) return `<h2 class="article-h2">${inlineRender(trimmed.slice(3), footnotes, () => ++fnCounter)}</h2>`
+    if (trimmed.startsWith('### ')) return `<h3 class="article-h3">${inlineRender(trimmed.slice(4), footnotes, () => ++fnCounter)}</h3>`
+
+    // Horizontal rule
+    if (/^---+$/.test(trimmed)) return '<hr class="article-rule"/>'
+
+    // Blockquote
+    if (trimmed.startsWith('> ')) {
+      const content = trimmed.split('\n').map(l => l.replace(/^> ?/, '')).join(' ')
+      return `<blockquote class="article-quote">${inlineRender(content, footnotes, () => ++fnCounter)}</blockquote>`
+    }
+
+    // Unordered list
+    if (trimmed.split('\n').every(l => /^- /.test(l.trim()) || !l.trim())) {
+      const items = trimmed.split('\n').filter(l => /^- /.test(l.trim()))
+        .map(l => `<li>${inlineRender(l.replace(/^- /, ''), footnotes, () => ++fnCounter)}</li>`)
+        .join('')
+      return `<ul class="article-list">${items}</ul>`
+    }
+
+    // Ordered list
+    if (trimmed.split('\n').every(l => /^\d+\. /.test(l.trim()) || !l.trim())) {
+      const items = trimmed.split('\n').filter(l => /^\d+\. /.test(l.trim()))
+        .map(l => `<li>${inlineRender(l.replace(/^\d+\. /, ''), footnotes, () => ++fnCounter)}</li>`)
+        .join('')
+      return `<ol class="article-list article-list--ordered">${items}</ol>`
+    }
+
+    // Already HTML (pass-through)
+    if (trimmed.startsWith('<')) return trimmed
+
+    // Paragraph (join lines)
+    const text = trimmed.split('\n').join(' ')
+    return `<p class="article-p">${inlineRender(text, footnotes, () => ++fnCounter)}</p>`
+  })
+
+  let html = renderedBlocks.filter(Boolean).join('\n')
+
+  // Append footnotes / references section if any were captured
+  if (footnotes.length > 0) {
+    html += `<div class="article-footnotes"><h4 class="article-footnotes__title">References</h4><ol class="article-footnotes__list">`
+    footnotes.forEach(f => {
+      html += `<li id="fn${f.num}"><a href="${f.url}" target="_blank" rel="noopener" class="article-footnotes__link">${f.url}</a> — ${f.label}</li>`
     })
-    .join('\n')
-    .replace(/<p[^>]*>\s*<\/p>/g, '')
+    html += `</ol></div>`
+  }
+
+  return html
+}
+
+function inlineRender(
+  text: string,
+  footnotes: { num: number; url: string; label: string }[],
+  nextFn: () => number
+): string {
+  return text
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\*(.+?)\*/g, '<em>$1</em>')
+    // External links → numbered footnotes
+    .replace(/\[(.+?)\]\((https?:\/\/[^)]+)\)/g, (_, label, url) => {
+      const num = nextFn()
+      footnotes.push({ num, url, label })
+      return `<a href="${url}" target="_blank" rel="noopener" class="article-link">${label}<sup class="article-footnote-ref">[${num}]</sup></a>`
+    })
+    // Internal links
+    .replace(/\[(.+?)\]\(([^)]+)\)/g, '<a href="$2" class="article-link">$1</a>')
+    .replace(/`(.+?)`/g, '<code class="article-code">$1</code>')
 }
 
 function getArticleContent(contentFile?: string): string | null {
