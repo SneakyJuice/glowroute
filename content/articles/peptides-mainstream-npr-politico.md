@@ -41,4 +41,4 @@ For patients in Florida, Texas, Arizona, Georgia, and beyond, the peptide opport
 For clinics, this is the time to communicate clearly. Publish your stance on FDA changes, explain which peptides you currently offer, outline how you handle informed consent, and make it easy for educated patients to start the process online. GlowRoute can amplify that transparency by sending qualified referrals, surfacing your clinical differentiators, and ensuring prospective patients understand costs, cadence, and expectations before they ever sit in your lobby.
 
 ## Call to Action
-Find a licensed peptide clinic near you before the waitlists fill up → glowroute.sealey.ai
+Find a licensed peptide clinic near you before the waitlists fill up → glowroute.io

@@ -65,4 +65,4 @@ Medspa procedures may look like beauty services on Instagram, but they are medic
 You can absolutely run this checklist yourself. Copy the questions into your Notes app, ask them during every consultation, and leave if the answers feel slippery. Or, if you’d rather spend that energy planning your results instead of policing bureaucracy, GlowRoute has already done the verification for you.
 
 ## CTA
-Skip the checklist — every clinic on GlowRoute is already verified. Find your clinic → glowroute.sealey.ai
+Skip the checklist — every clinic on GlowRoute is already verified. Find your clinic → glowroute.io

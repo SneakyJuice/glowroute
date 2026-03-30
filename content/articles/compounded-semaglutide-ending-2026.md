@@ -41,4 +41,4 @@ Beyond listings, GlowRoute produces state-specific action plans. Patients receiv
 If you currently rely on compounded GLP-1 therapy, the policy landscape now assumes you will either access an FDA-approved alternative or step down under medical supervision. Hoping that regulators will reverse course is not a strategy. Instead, start by confirming how many compliant doses you have left, book a consultation with a licensed obesity-medicine provider, and review your insurance formulary. Bring up the Cleveland Clinic findings so your clinician appreciates your concern about rebound, and ask about peptide bridges, combo protocols, and lifestyle intensification so that your plan is layered. Most importantly, avoid stockpiling unverified products; enforcement escalations could expose you to legal and safety risks.
 
 ## CTA
-Your compounded semaglutide program may be ending — find a licensed weight loss clinic with legal GLP-1 options → glowroute.sealey.ai
+Your compounded semaglutide program may be ending — find a licensed weight loss clinic with legal GLP-1 options → glowroute.io

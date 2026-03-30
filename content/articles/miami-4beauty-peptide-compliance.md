@@ -64,4 +64,4 @@ If you're a medspa owner or medical director in Florida, Texas, or Arizona, here
 The 4Beauty model isn't perfect — no model is. But it represents the direction the industry is heading: physician-led, compliance-first, and built for a regulatory environment that's tightening by the quarter. The clinics that move now will be the ones that define what medspa peptide therapy compliance looks like in Florida and beyond.
 
 ---
-*List your physician-supervised peptide program on GlowRoute — patients are searching for exactly what you offer → [glowroute.sealey.ai](https://glowroute.sealey.ai)*
+*List your physician-supervised peptide program on GlowRoute — patients are searching for exactly what you offer → [glowroute.io](https://glowroute.io)*

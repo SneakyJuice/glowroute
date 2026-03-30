@@ -60,4 +60,4 @@ Following these steps turns compliance from a reactive scramble into a repeatabl
 
 The legislation will land—what remains undecided are the exact ratios, deadlines, and penalties. Use Indiana’s SB 282 as your floor, build your roadmap with counsel, and let GlowRoute broadcast that readiness to patients and partners.
 
-**Get listed on GlowRoute before FL and AZ compliance laws take effect — your verified status becomes your competitive advantage → [glowroute.sealey.ai](https://glowroute.sealey.ai)**
+**Get listed on GlowRoute before FL and AZ compliance laws take effect — your verified status becomes your competitive advantage → [glowroute.io](https://glowroute.io)**
