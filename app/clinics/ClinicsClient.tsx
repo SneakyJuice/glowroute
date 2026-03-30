@@ -107,8 +107,9 @@ function ClinicsPageInner({ allClinics, initialClinics, featuredClinic }: Clinic
       })
     }
 
-    // Always exclude clinics with no rating data (broken scrape records)
-    result = result.filter(c => c.googleRating > 0)
+    // Note: googleRating/googleReviewCount default to 0 until GMB migration runs.
+    // Only filter out zero-review records once real data is populated.
+    // result = result.filter(c => c.googleRating > 0)
 
     // Existing filters (rating, price, verified, treatment type)
     if (filters.minRating > 0) {

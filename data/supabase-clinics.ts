@@ -60,8 +60,8 @@ export function mapSupabaseRow(row: any): Clinic {
     state: row.state || 'FL',
     neighborhood: undefined,
     distance: undefined,
-    googleRating: 0, // TODO: add column to Supabase or compute from elsewhere
-    googleReviewCount: 0,
+    googleRating: row.glow_score ?? 0,         // populated after GMB migration + enrichment
+    googleReviewCount: row.review_count ?? 0,  // populated after GMB migration + enrichment
     treatments: Array.isArray(row.services) ? row.services : [],
     specialtyTreatments: [],
     verified: row.is_verified || false,
