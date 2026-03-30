@@ -113,9 +113,8 @@ function ClinicsPageInner({ allClinics, initialClinics, featuredClinic }: Clinic
       })
     }
 
-    // Note: googleRating/googleReviewCount default to 0 until GMB migration runs.
-    // Only filter out zero-review records once real data is populated.
-    // result = result.filter(c => c.googleRating > 0)
+    // Filter to clinics with real GMB ratings (glow_score > 1 = has actual star rating)
+    result = result.filter(c => c.googleRating > 1)
 
     // Existing filters (rating, price, verified, treatment type)
     if (filters.minRating > 0) {

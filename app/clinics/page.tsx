@@ -132,7 +132,7 @@ export default async function ClinicsPage() {
   const getInitialClinics = () => {
     if (!initialFeaturedClinic) return allClinics.slice(0, SSR_PAGE_SIZE)
     return allClinics
-      .filter(c => c.id !== initialFeaturedClinic.id)
+      .filter(c => c.id !== initialFeaturedClinic.id && (c.googleRating ?? 0) > 1)
       .sort((a, b) => calculateGlowScore(b).total - calculateGlowScore(a).total)
       .slice(0, SSR_PAGE_SIZE)
   }
