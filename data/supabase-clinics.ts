@@ -48,7 +48,7 @@ export function clean(clinic: Clinic): Clinic {
 
 /**
  * Map a Supabase clinic row to the Clinic interface.
- * Note: googleRating and googleReviewCount are not in Supabase schema,
+ * Note: googleRating maps from glow_score; googleReviewCount maps from review_count column (added 2026-03-31).
  * so we provide defaults. Treatments are mapped from services array.
  */
 export function mapSupabaseRow(row: any): Clinic {
@@ -60,8 +60,8 @@ export function mapSupabaseRow(row: any): Clinic {
     state: row.state || 'FL',
     neighborhood: undefined,
     distance: undefined,
-    googleRating: row.glow_score ?? 0,         // GMB star rating (0.0-5.0), backfilled from clinics_data.json
-    googleReviewCount: row.glow_score > 1 ? 1 : 0, // proxy until review_count col added; glow_score > 1 = has real reviews
+    googleRating: row.glow_score ?? 0,         // GMB star rating (0.0-5.0)
+    googleReviewCount: row.review_count ?? 0,  // Real GMB review count — backfilled 2026-03-31
     treatments: Array.isArray(row.services) ? row.services : [],
     specialtyTreatments: [],
     verified: row.is_verified || false,
