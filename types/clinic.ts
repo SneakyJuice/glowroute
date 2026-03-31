@@ -31,10 +31,12 @@ export interface Clinic {
   brandValues?: string[]
   lat?: number
   lng?: number
+  goals?: string[]
 }
 
 export interface FilterState {
   treatmentTypes: string[]
+  goals: string[]
   distanceMiles: number
   minRating: number
   priceTiers: string[]

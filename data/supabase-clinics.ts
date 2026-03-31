@@ -62,6 +62,7 @@ export function mapSupabaseRow(row: any): Clinic {
     distance: undefined,
     googleRating: row.glow_score ?? 0,         // GMB star rating (0.0-5.0)
     googleReviewCount: row.review_count ?? 0,  // Real GMB review count — backfilled 2026-03-31
+    goals: row.goals ?? [],                    // Health goal tags — backfilled 2026-03-31
     treatments: Array.isArray(row.services) ? row.services : [],
     specialtyTreatments: [],
     verified: row.is_verified || false,

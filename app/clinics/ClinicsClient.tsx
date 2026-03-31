@@ -1,6 +1,7 @@
 'use client'
 import { useState, useMemo, useEffect, Suspense } from 'react'
-import { useSearchParams } from 'next/navigation'
+import { useSearchParams, useRouter } from 'next/navigation'
+import { GOALS } from '@/lib/goals'
 import Navbar from '@/components/Navbar'
 import HeroSearch from '@/components/HeroSearch'
 import { isPeptideClinic } from '@/lib/peptide'
@@ -19,6 +20,7 @@ import { haversine } from '@/lib/geo'
 
 const DEFAULT_FILTERS: FilterState = {
   treatmentTypes: [],
+  goals: [],
   distanceMiles: 25,
   minRating: 0,
   priceTiers: [],
@@ -44,13 +46,19 @@ function ClinicsPageInner({ allClinics, initialClinics, featuredClinic }: Clinic
     if (ssrPreview) ssrPreview.style.display = 'none'
   }, [])
 
+  const router = useRouter()
   const searchParams = useSearchParams()
   const specialtyParam = searchParams.get('specialty') as CategorySlug | null
   const activeSpecialty = specialtyParam
     ? CATEGORIES.find(c => c.slug === specialtyParam) ?? null
     : null
 
-  const [filters, setFilters] = useState<FilterState>(DEFAULT_FILTERS)
+  // Pre-seed goal filter from ?goal= URL param
+  const goalParam = searchParams.get('goal')
+  const [filters, setFilters] = useState<FilterState>({
+    ...DEFAULT_FILTERS,
+    goals: goalParam ? [goalParam] : [],
+  })
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
   const [view, setView] = useState<'grid' | 'list'>('grid')
   const [sort, setSort] = useState('GlowScore™')
@@ -134,6 +142,12 @@ function ClinicsPageInner({ allClinics, initialClinics, featuredClinic }: Clinic
           return allTreatments.some(t => t.toLowerCase().includes(ft.toLowerCase()))
         })
       })
+    }
+    // Goal filter — powered by taxonomy goals layer
+    if (filters.goals.length > 0) {
+      result = result.filter(c =>
+        filters.goals.some(g => (c.goals || []).includes(g))
+      )
     }
 
     // Sort
