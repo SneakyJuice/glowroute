@@ -477,7 +477,7 @@
     <div>
       <div class="header-label">Project Plan — Gantt View</div>
       <h1>GlowRoute V5.2 Sprint</h1>
-      <p>4-week sprint · 25 task cards · 5 deliverables · 5 milestones</p>
+      <p>4-week sprint · 25 task cards · 5 deliverables · 5 milestones &nbsp;·&nbsp; <span style="color:#34D399;font-weight:700;">11 completed</span></p>
       <div class="header-meta">
         <div><strong>Start:</strong> Mar 28</div>
         <div><strong>End:</strong> Apr 24</div>
@@ -524,7 +524,7 @@
   <button class="filter-btn" onclick="filterTasks('infra', this)">Platform</button>
   <button class="filter-btn" onclick="filterTasks('milestone', this)">Milestones</button>
   <div class="filter-sep"></div>
-  <button class="clear-btn" onclick="clearAll()">✕ Clear Completed</button>
+  <button class="clear-btn" onclick="clearAll()">↺ Reset to Default</button>
 </div>
 
 <!-- SUMMARY CARDS -->
@@ -596,8 +596,29 @@
 <script>
 // ===== PERSISTENCE =====
 const STORAGE_KEY = 'glowroute-v52-gantt-done';
+// Default completion state — reflects actual sprint progress as of Mar 31
+const DEFAULT_DONE = {
+  "T-01": true, // City×treatment routes ✓
+  "T-02": true, // Content templates ✓
+  "T-03": true, // Sitemap generator (11,357 URLs) ✓
+  "T-04": true, // Coverage matrix ✓
+  "T-05": true, // FL Batch 1 deploy ✓
+  "T-06": true, // Top 20 metros Batch 2 ✓
+  "T-08": true, // National Batch 4 ✓
+  "M1":   true, // Batch 1 live milestone ✓
+  "M2":   true, // CRM populated ✓
+  "T-23": true, // PostHog clinic analytics ✓
+  "T-24": true, // Claim page conversion tracking ✓
+};
 function loadDone() {
-  try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); } catch(e) { return {}; }
+  try {
+    const stored = localStorage.getItem(STORAGE_KEY);
+    if (stored === null) {
+      // First visit — seed with actual progress
+      return { ...DEFAULT_DONE };
+    }
+    return JSON.parse(stored);
+  } catch(e) { return { ...DEFAULT_DONE }; }
 }
 function saveDone(done) {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(done));
@@ -668,8 +689,8 @@ function toggleDone(id) {
 }
 
 function clearAll() {
-  if (!confirm('Clear all completed tasks?')) return;
-  doneMap = {};
+  if (!confirm('Reset to default sprint progress?')) return;
+  doneMap = { ...DEFAULT_DONE };
   saveDone(doneMap);
   renderGantt(currentFilter);
   updateProgress();
