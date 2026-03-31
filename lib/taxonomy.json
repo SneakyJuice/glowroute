@@ -1,0 +1,288 @@
+{
+  "_meta": {
+    "version": "1.0.0",
+    "lastUpdated": "2026-03-31",
+    "description": "GlowRoute canonical treatment taxonomy. Canonical slugs are signal-driven — labels reflect how users actually search, not formal medical terminology. Run scripts/taxonomy-backfill.js after any changes. Run scripts/taxonomy-audit.js monthly to surface new candidates.",
+    "maintenanceSchedule": "First Monday of each month",
+    "signalSources": ["posthog:search_query", "posthog:filter_used", "posthog:clinic_profile_view", "supabase:new_services_appearing"]
+  },
+  "canonicals": {
+    "botox-fillers": {
+      "label": "Botox & Fillers",
+      "searchPriority": 1,
+      "notes": "Highest-volume injectable category. 'Botox' dominates search vs clinical terms. Includes all neurotoxins + volumizers.",
+      "variants": [
+        "botox", "Botox", "BOTOX",
+        "botox-fillers", "botox & fillers", "botox and fillers",
+        "filler", "fillers", "Filler", "Fillers",
+        "dermal filler", "dermal fillers", "Dermal Fillers", "dermal-fillers",
+        "injectables", "Injectables", "injectable treatments",
+        "dysport", "Dysport",
+        "sculptra", "Sculptra",
+        "kybella", "Kybella",
+        "radiesse", "Radiesse",
+        "juvederm", "Juvederm", "juvéderm",
+        "restylane", "Restylane",
+        "xeomin", "Xeomin",
+        "lip filler", "lip fillers", "lip augmentation", "lip injections",
+        "under eye filler", "cheek filler", "jawline filler",
+        "belotero", "Belotero",
+        "vollure", "voluma", "volbella",
+        "neuromodulator", "neurotoxin",
+        "anti-wrinkle injections"
+      ]
+    },
+    "laser-hair-removal": {
+      "label": "Laser Hair Removal",
+      "searchPriority": 2,
+      "notes": "High search volume. Users search 'laser hair removal' not 'photoepilation'.",
+      "variants": [
+        "laser hair removal", "Laser Hair Removal", "laser-hair-removal",
+        "laser hair removal service", "Laser hair removal service", "Laser Hair Removal Service",
+        "hair removal", "hair removal laser", "permanent hair removal",
+        "hair removal laser", "diode laser", "alexandrite laser",
+        "IPL hair removal", "intense pulsed light",
+        "electrolysis", "waxing hair removal"
+      ]
+    },
+    "hydrafacial": {
+      "label": "HydraFacial",
+      "searchPriority": 3,
+      "notes": "Brand name dominates search. Users search 'hydrafacial' directly.",
+      "variants": [
+        "hydrafacial", "HydraFacial", "Hydrafacial", "hydra facial", "hydra-facial",
+        "hydradermabrasion", "aquafacial", "AquaFacial",
+        "oxygen facial", "brightening facial",
+        "glow facial", "luxury facial", "signature facial",
+        "facial treatments", "Facial Treatments", "facial spa", "Facial spa",
+        "facials", "Facials", "facial",
+        "skincare facial", "medical facial",
+        "dermaplaning facial", "enzyme facial",
+        "anti-aging facial", "rejuvenating facial",
+        "microcurrent facial", "microcurrent-facials",
+        "corrective facials", "holistic skincare",
+        "day spa", "Day spa", "spa", "Spa", "beauty salon", "Beauty salon",
+        "facials-skincare", "skin care clinic", "Skin care clinic",
+        "aesthetics", "aesthetic clinic"
+      ]
+    },
+    "weight-loss-ozempic": {
+      "label": "Medical Weight Loss",
+      "searchPriority": 4,
+      "notes": "'Ozempic' and 'semaglutide' are high-intent search terms in 2025-2026. 'GLP-1' emerging fast.",
+      "variants": [
+        "weight loss", "Weight Loss", "weight-loss",
+        "medical weight loss", "Medical Weight Loss", "medical-weight-loss",
+        "weight loss service", "Weight loss service", "weight loss program",
+        "semaglutide", "Semaglutide", "semaglutide weight loss",
+        "ozempic", "Ozempic",
+        "wegovy", "Wegovy",
+        "tirzepatide", "Tirzepatide", "mounjaro", "Mounjaro",
+        "glp-1", "GLP-1", "glp1", "glp-1 program", "GLP-1 Program",
+        "lipo b injections", "lipotropic injections",
+        "body sculpting weight loss",
+        "weight management",
+        "appetite suppressant",
+        "metabolic health"
+      ]
+    },
+    "iv-therapy": {
+      "label": "IV Therapy",
+      "searchPriority": 5,
+      "notes": "'IV therapy' and 'IV drip' are how patients search. 'Intravenous' too clinical.",
+      "variants": [
+        "iv therapy", "IV Therapy", "Iv Therapy", "iv-therapy",
+        "iv drip", "IV drip", "IV Drip",
+        "iv infusion", "IV infusion", "IV Infusion",
+        "intravenous therapy", "intravenous vitamin",
+        "myers cocktail", "Myers Cocktail", "myers' cocktail",
+        "vitamin iv", "vitamin drip",
+        "nad+ iv", "nad iv", "NAD IV", "NAD+",
+        "glutathione iv", "glutathione",
+        "hydration iv", "immunity iv", "energy iv",
+        "b12 injection", "b12 injections", "B12",
+        "vitamin injection", "vitamin shots"
+      ]
+    },
+    "microneedling": {
+      "label": "Microneedling",
+      "searchPriority": 6,
+      "notes": "Clear search term. 'RF microneedling' and 'Morpheus8' are high-value sub-categories to track.",
+      "variants": [
+        "microneedling", "Microneedling", "micro needling",
+        "rf microneedling", "RF microneedling", "radiofrequency microneedling",
+        "morpheus8", "Morpheus8", "morpheus 8",
+        "prp microneedling", "vampire facial",
+        "collagen induction therapy",
+        "skin needling",
+        "vivace", "Vivace",
+        "fractora", "Fractora",
+        "genius rf", "potenza"
+      ]
+    },
+    "chemical-peels": {
+      "label": "Chemical Peels",
+      "searchPriority": 7,
+      "notes": "'Chemical peel' is the standard search term.",
+      "variants": [
+        "chemical peel", "Chemical Peel", "chemical-peel",
+        "chemical peels", "Chemical Peels", "chemical-peels",
+        "vi peel", "VI Peel", "vi-peel",
+        "jessner peel", "tca peel", "TCA peel",
+        "glycolic peel", "salicylic peel",
+        "superficial peel", "medium peel", "deep peel",
+        "dermaplaning", "Dermaplaning", "dermaplane",
+        "microdermabrasion", "Microdermabrasion", "micro-dermabrasion",
+        "dermalinfusion", "Dermalinfusion",
+        "skin resurfacing", "skin-resurfacing",
+        "exfoliation treatment"
+      ]
+    },
+    "trt-testosterone": {
+      "label": "TRT & Hormone Therapy",
+      "searchPriority": 8,
+      "notes": "'TRT' and 'testosterone' dominate male search. 'Hormone therapy' captures female HRT. Both important for GlowRoute's hormone optimization vertical.",
+      "variants": [
+        "trt", "TRT", "testosterone therapy", "Testosterone Therapy",
+        "testosterone-therapy-trt", "testosterone replacement",
+        "testosterone replacement therapy",
+        "hormone therapy", "Hormone Therapy", "hormone-therapy",
+        "hormone replacement therapy", "Hormone Replacement Therapy", "hormone-replacement-therapy",
+        "hrt", "HRT",
+        "hormone optimization", "Hormone Optimization",
+        "bioidentical hormones", "bioidentical hormone therapy", "bhrt", "BHRT",
+        "men's health", "Men's Health", "men's clinic",
+        "low t", "low testosterone",
+        "estrogen therapy", "progesterone therapy",
+        "thyroid therapy",
+        "adrenal support",
+        "wellness center", "Wellness center", "wellness-center"
+      ]
+    },
+    "peptide-therapy": {
+      "label": "Peptide Therapy",
+      "searchPriority": 9,
+      "notes": "Fast-growing search category. Specific peptide names (BPC-157, semaglutide, sermorelin) are high-intent. GlowRoute's differentiator vertical.",
+      "variants": [
+        "peptide", "Peptide", "peptide therapy", "Peptide Therapy", "peptide-therapy",
+        "peptide treatments", "peptide injections",
+        "bpc-157", "BPC-157", "bpc157",
+        "sermorelin", "Sermorelin",
+        "ipamorelin", "Ipamorelin",
+        "cjc-1295", "CJC-1295",
+        "tb-500", "TB-500",
+        "nad+", "NAD+", "nad therapy", "NAD Therapy", "nad-therapy",
+        "growth hormone peptide", "gh peptide",
+        "pt-141", "PT-141",
+        "aod-9604", "AOD-9604",
+        "tesamorelin", "Tesamorelin",
+        "mots-c", "MOTS-c",
+        "thymosin alpha", "thymosin beta",
+        "ll-37", "kisspeptin",
+        "anti-aging peptide", "longevity peptide",
+        "regenerative medicine",
+        "functional medicine"
+      ]
+    },
+    "coolsculpting": {
+      "label": "Body Contouring",
+      "searchPriority": 10,
+      "notes": "'CoolSculpting' is the dominant brand name. 'Emsculpt' and 'body contouring' are growing. Catch-all for non-surgical body reshaping.",
+      "variants": [
+        "coolsculpting", "CoolSculpting", "cool sculpting",
+        "body contouring", "Body Contouring", "body-contouring",
+        "emsculpt", "Emsculpt", "emsculpt neo", "EmSculpt NEO",
+        "kybella body", "fat reduction", "fat removal",
+        "liposuction", "lipo",
+        "cryolipolysis",
+        "sculpsure", "SculpSure",
+        "truSculpt", "trusculpt",
+        "velashape", "VelaShape",
+        "radiofrequency body", "rf body contouring",
+        "body sculpting", "Body Sculpting",
+        "body treatments", "Body treatments",
+        "cellulite treatment", "cellulite reduction",
+        "skin tightening", "skin-tightening", "Skin tightening",
+        "body wraps"
+      ]
+    },
+    "prp-treatments": {
+      "label": "PRP Treatments",
+      "searchPriority": 11,
+      "notes": "PRP is a distinct high-search-volume category. 'Vampire facial' is consumer-facing brand for PRP facials.",
+      "variants": [
+        "prp", "PRP", "prp therapy", "PRP Therapy", "prp-therapy",
+        "prp treatments", "PRP Treatments", "prp-treatments",
+        "platelet rich plasma", "platelet-rich plasma",
+        "vampire facial", "vampire facelift",
+        "prp hair restoration", "prp hair loss",
+        "prp injections", "prp for skin",
+        "exosomes", "exosome therapy",
+        "stem cell therapy", "regenerative aesthetics"
+      ]
+    },
+    "laser-skin": {
+      "label": "Laser Skin Treatments",
+      "searchPriority": 12,
+      "notes": "Distinct from laser hair removal. Covers resurfacing, rejuvenation, vascular, pigment.",
+      "variants": [
+        "laser", "Laser",
+        "laser treatments", "Laser treatments", "Laser Treatments", "laser-treatments",
+        "laser skin treatment", "laser skin resurfacing",
+        "laser & skin", "Laser & Skin", "laser and skin",
+        "laser rejuvenation", "laser facial",
+        "ipl", "IPL", "intense pulsed light", "photofacial",
+        "fraxel", "Fraxel",
+        "co2 laser", "CO2 laser",
+        "erbium laser",
+        "pico laser", "picosure", "PicoSure",
+        "clear and brilliant", "Clear + Brilliant",
+        "halo laser", "Halo",
+        "skin rejuvenation", "Skin Rejuvenation", "skin-rejuvenation",
+        "skin treatments", "skin tightening laser",
+        "vascular laser", "pigment laser",
+        "tattoo removal", "Tattoo Removal",
+        "rosacea treatment",
+        "acne laser", "acne treatment",
+        "skin resurfacing"
+      ]
+    },
+    "anti-aging": {
+      "label": "Anti-Aging & Skin Care",
+      "searchPriority": 13,
+      "notes": "Broad catch-all for skin health. Lower specificity but high volume at top of funnel.",
+      "variants": [
+        "anti-aging", "Anti-Aging", "anti aging", "antiaging",
+        "anti-aging treatments", "Anti-Aging Treatments",
+        "anti-aging facial",
+        "skin care", "skin care clinic", "Skin Care",
+        "skincare", "skincare clinic",
+        "medical spa", "Medical Spa", "Medical spa", "medical-spa", "medspa", "med spa",
+        "aesthetics clinic", "aesthetic clinic",
+        "cosmetic clinic", "cosmetic treatments",
+        "wrinkle treatment", "wrinkle reduction",
+        "collagen treatment", "collagen boost",
+        "skin health", "skin wellness",
+        "complexion treatment",
+        "sun damage treatment",
+        "age spot treatment"
+      ]
+    },
+    "hair-restoration": {
+      "label": "Hair Restoration",
+      "searchPriority": 14,
+      "notes": "Emerging category. PRP hair + transplants + GLP-1 hair loss side effects driving search growth.",
+      "variants": [
+        "hair restoration", "Hair Restoration", "hair-restoration",
+        "hair transplant", "Hair Transplant",
+        "prp hair", "prp hair restoration", "prp for hair loss",
+        "hair loss treatment", "hair loss",
+        "alopecia treatment",
+        "hair regrowth", "hair growth treatment",
+        "fue transplant", "FUE",
+        "scalp treatment",
+        "hair extension technician", "Hair extension technician"
+      ]
+    }
+  }
+}
