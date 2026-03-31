@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { Suspense } from 'react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import ClaimSuccessTracker from './ClaimSuccessTracker'
 
 function SuccessContent() {
   return (
@@ -41,6 +42,7 @@ export default function ClaimSuccessPage() {
     <div className="min-h-screen bg-ivory font-sans">
       <Navbar />
       <Suspense fallback={<div className="py-20 text-center text-stone text-sm">Loading…</div>}>
+        <ClaimSuccessTracker />
         <SuccessContent />
       </Suspense>
       <Footer />
