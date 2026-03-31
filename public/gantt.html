@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GlowRoute V5.2 — Project Plan (Gantt)</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+  :root {
+    --primary: #0F172A;
+    --accent: #6366F1;
+    --muted: #64748B;
+    --border: #E2E8F0;
+    --bg: #FAFBFC;
+    --card: #FFFFFF;
+    --seo: #10B981;
+    --seo-light: #D1FAE5;
+    --crm: #6366F1;
+    --crm-light: #E0E7FF;
+    --outbound: #F59E0B;
+    --outbound-light: #FEF3C7;
+    --content: #8B5CF6;
+    --content-light: #EDE9FE;
+    --infra: #0D9488;
+    --infra-light: #CCFBF1;
+    --milestone: #EF4444;
+    --milestone-light: #FEE2E2;
+    --done: #94A3B8;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--primary);
+    padding: 0;
+  }
+
+  /* HEADER */
+  .header {
+    background: linear-gradient(135deg, #0F172A 0%, #1E293B 40%, #312E81 100%);
+    color: white;
+    padding: 36px 48px 28px;
+  }
+  .header-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; }
+  .header-label { font-size: 10px; font-weight: 700; letter-spacing: 2.5px; color: #818CF8; text-transform: uppercase; margin-bottom: 6px; }
+  .header h1 { font-size: 28px; font-weight: 900; margin-bottom: 4px; }
+  .header p { font-size: 13px; color: #94A3B8; }
+  .header-meta { display: flex; gap: 24px; font-size: 12px; color: #94A3B8; margin-top: 8px; }
+  .header-meta strong { color: white; }
+
+  /* PROGRESS BAR */
+  .progress-banner {
+    background: #1E293B;
+    border-top: 1px solid #334155;
+    padding: 12px 48px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .progress-label { font-size: 11px; font-weight: 700; color: #94A3B8; text-transform: uppercase; letter-spacing: 1px; white-space: nowrap; }
+  .progress-track { flex: 1; min-width: 200px; height: 8px; background: #334155; border-radius: 4px; overflow: hidden; }
+  .progress-fill { height: 100%; background: linear-gradient(90deg, #6366F1, #818CF8); border-radius: 4px; transition: width 0.4s ease; }
+  .progress-count { font-size: 13px; font-weight: 800; color: white; white-space: nowrap; }
+  .progress-pct { font-size: 11px; color: #818CF8; margin-left: 4px; }
+
+  /* LEGEND */
+  .legend-bar {
+    background: white;
+    border-bottom: 1px solid var(--border);
+    padding: 14px 48px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .legend-title { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-right: 8px; }
+  .legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: #475569;
+    background: #F8FAFC;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 4px 10px;
+  }
+  .legend-dot { width: 14px; height: 10px; border-radius: 3px; flex-shrink: 0; }
+  .legend-done {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: #475569;
+    background: #F1F5F9;
+    border: 1px dashed #CBD5E1;
+    border-radius: 6px;
+    padding: 4px 10px;
+  }
+
+  /* FILTERS */
+  .filter-bar {
+    background: white;
+    border-bottom: 1px solid var(--border);
+    padding: 10px 48px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .filter-label { font-size: 11px; font-weight: 600; color: var(--muted); margin-right: 4px; }
+  .filter-btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: white;
+    color: #475569;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .filter-btn:hover { background: #F1F5F9; }
+  .filter-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
+
+  .filter-sep { width: 1px; height: 20px; background: var(--border); margin: 0 4px; }
+
+  .clear-btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 6px;
+    border: 1px solid #FCA5A5;
+    background: #FFF5F5;
+    color: #DC2626;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .clear-btn:hover { background: #FEE2E2; }
+
+  /* GANTT CONTAINER */
+  .gantt-wrap {
+    padding: 24px 48px 48px;
+    overflow-x: auto;
+  }
+
+  /* GANTT TABLE */
+  .gantt {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    min-width: 1100px;
+  }
+
+  /* HEADER ROW */
+  .gantt thead th {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: #F8FAFC;
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 0;
+    border-bottom: 2px solid var(--border);
+  }
+
+  .gantt .week-header {
+    text-align: center;
+    padding: 10px 4px 4px;
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--primary);
+    letter-spacing: 0.5px;
+  }
+
+  .gantt .day-header {
+    text-align: center;
+    padding: 4px 2px 8px;
+    font-size: 9px;
+    font-weight: 600;
+    color: #94A3B8;
+    min-width: 34px;
+    width: 34px;
+  }
+  .gantt .day-header.weekend { color: #CBD5E1; }
+  .gantt .day-header.today-hdr { color: var(--accent); font-weight: 800; }
+
+  .gantt .task-header {
+    text-align: left;
+    padding: 10px 16px;
+    min-width: 280px;
+    width: 280px;
+    font-size: 11px;
+    color: var(--muted);
+  }
+
+  /* CATEGORY ROW */
+  .gantt .cat-row td {
+    background: #F1F5F9;
+    padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 800;
+    color: var(--primary);
+    letter-spacing: 0.3px;
+    border-top: 2px solid var(--border);
+    border-bottom: 1px solid var(--border);
+  }
+  .gantt .cat-row .cat-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .gantt .cat-row .cat-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+  }
+  .gantt .cat-row .cat-count {
+    margin-left: auto;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--muted);
+  }
+
+  /* TASK ROWS */
+  .gantt tbody td {
+    padding: 0;
+    border-bottom: 1px solid #F1F5F9;
+    height: 40px;
+    vertical-align: middle;
+    transition: background 0.15s;
+  }
+
+  .gantt .task-name {
+    padding: 6px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #334155;
+    white-space: nowrap;
+    background: white;
+    border-right: 1px solid var(--border);
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.15s;
+  }
+  .gantt .task-name:hover { background: #F8FAFC; }
+
+  .gantt .task-name .task-id {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--accent);
+    background: #EEF2FF;
+    padding: 1px 5px;
+    border-radius: 3px;
+    margin-right: 6px;
+  }
+  .gantt .task-name .priority {
+    font-size: 10px;
+    font-weight: 700;
+    padding: 1px 6px;
+    border-radius: 3px;
+    margin-left: 6px;
+  }
+  .gantt .task-name .priority.p0 { background: #ECFDF5; color: #059669; }
+  .gantt .task-name .priority.p1 { background: #EEF2FF; color: #4F46E5; }
+  .gantt .task-name .priority.p2 { background: #FFFBEB; color: #D97706; }
+
+  /* DONE STATE */
+  .task-row.done .task-name {
+    background: #F8FAFC;
+    color: #94A3B8;
+  }
+  .task-row.done .task-name .task-id {
+    background: #F1F5F9;
+    color: #94A3B8;
+  }
+  .task-row.done .task-name .priority { opacity: 0.4; }
+  .task-row.done .task-name .task-label-text {
+    text-decoration: line-through;
+    color: #94A3B8;
+  }
+  .task-row.done td { background: #FAFBFC !important; }
+
+  .done-check {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #10B981;
+    color: white;
+    font-size: 9px;
+    margin-right: 6px;
+    flex-shrink: 0;
+    vertical-align: middle;
+  }
+
+  /* GRID CELLS */
+  .gantt .cell {
+    border-left: 1px solid #F8FAFC;
+    position: relative;
+    background: white;
+  }
+  .gantt .cell.weekend { background: #FAFBFC; }
+
+  /* BARS */
+  .bar {
+    position: absolute;
+    top: 8px;
+    bottom: 8px;
+    left: 2px;
+    right: 2px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0;
+    transition: transform 0.15s, box-shadow 0.15s, opacity 0.2s;
+  }
+  .bar:hover {
+    transform: scaleY(1.15);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 5;
+  }
+
+  .bar.start { border-radius: 5px 0 0 5px; right: 0; }
+  .bar.end { border-radius: 0 5px 5px 0; left: 0; }
+  .bar.mid { border-radius: 0; left: 0; right: 0; }
+  .bar.single { border-radius: 5px; }
+
+  .bar.seo { background: linear-gradient(90deg, #10B981, #34D399); }
+  .bar.crm { background: linear-gradient(90deg, #6366F1, #818CF8); }
+  .bar.outbound { background: linear-gradient(90deg, #F59E0B, #FBBF24); }
+  .bar.content { background: linear-gradient(90deg, #8B5CF6, #A78BFA); }
+  .bar.infra { background: linear-gradient(90deg, #0D9488, #2DD4BF); }
+
+  /* DONE BAR */
+  .task-row.done .bar { background: linear-gradient(90deg, #CBD5E1, #E2E8F0) !important; opacity: 0.7; }
+
+  /* MILESTONE */
+  .milestone-marker {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 14px;
+    height: 14px;
+    background: var(--milestone);
+    border: 2px solid white;
+    box-shadow: 0 1px 4px rgba(239,68,68,0.4);
+    transition: opacity 0.2s;
+  }
+
+  /* MILESTONE DONE */
+  .task-row.done .milestone-marker { background: #10B981; box-shadow: 0 1px 4px rgba(16,185,129,0.4); }
+
+  /* MILESTONE ROW */
+  .gantt .milestone-row td {
+    background: #FFFBFB;
+    border-bottom: 1px solid #FEE2E2;
+    height: 36px;
+  }
+  .gantt .milestone-row .task-name {
+    background: #FFFBFB;
+    font-weight: 700;
+    color: #DC2626;
+    font-size: 12px;
+  }
+  .gantt .milestone-row.done td { background: #F0FDF4 !important; }
+  .gantt .milestone-row.done .task-name { background: #F0FDF4; color: #059669; }
+
+  /* TODAY LINE */
+  .today-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--accent);
+    z-index: 20;
+    pointer-events: none;
+  }
+  .today-line::before {
+    content: 'TODAY';
+    position: absolute;
+    top: -18px;
+    left: -16px;
+    font-size: 8px;
+    font-weight: 800;
+    color: var(--accent);
+    letter-spacing: 1px;
+  }
+
+  /* TOOLTIP */
+  .tooltip {
+    display: none;
+    position: fixed;
+    background: var(--primary);
+    color: white;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 12px;
+    line-height: 1.5;
+    max-width: 300px;
+    z-index: 100;
+    pointer-events: none;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  }
+  .tooltip .tt-title { font-weight: 700; margin-bottom: 4px; }
+  .tooltip .tt-meta { color: #94A3B8; font-size: 11px; }
+  .tooltip .tt-done { color: #34D399; font-weight: 600; margin-top: 4px; font-size: 11px; }
+  .tooltip .tt-hint { color: #64748B; font-size: 10px; margin-top: 4px; font-style: italic; }
+
+  /* SUMMARY CARDS */
+  .summary {
+    padding: 0 48px 32px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+  }
+  .summary-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 18px;
+    border-top: 3px solid;
+  }
+  .summary-card .sc-label { font-size: 11px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+  .summary-card .sc-value { font-size: 22px; font-weight: 800; color: var(--primary); }
+  .summary-card .sc-sub { font-size: 11px; color: var(--muted); margin-top: 2px; }
+  .summary-card .sc-progress { margin-top: 8px; height: 4px; background: #F1F5F9; border-radius: 2px; overflow: hidden; }
+  .summary-card .sc-progress-fill { height: 100%; border-radius: 2px; transition: width 0.4s; }
+
+  /* INSTRUCTION BANNER */
+  .hint-bar {
+    background: #EFF6FF;
+    border-bottom: 1px solid #BFDBFE;
+    padding: 8px 48px;
+    font-size: 12px;
+    color: #1E40AF;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .hint-bar svg { flex-shrink: 0; }
+
+  @media (max-width: 900px) {
+    .header, .legend-bar, .filter-bar, .gantt-wrap, .summary, .progress-banner, .hint-bar { padding-left: 16px; padding-right: 16px; }
+    .summary { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media print {
+    body { background: white; }
+    .filter-bar, .hint-bar { display: none; }
+    .gantt-wrap { overflow: visible; }
+    .bar:hover { transform: none; box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-top">
+    <div>
+      <div class="header-label">Project Plan — Gantt View</div>
+      <h1>GlowRoute V5.2 Sprint</h1>
+      <p>4-week sprint · 25 task cards · 5 deliverables · 5 milestones</p>
+      <div class="header-meta">
+        <div><strong>Start:</strong> Mar 28</div>
+        <div><strong>End:</strong> Apr 24</div>
+        <div><strong>Owner:</strong> Anthony Sealey</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROGRESS BANNER -->
+<div class="progress-banner">
+  <span class="progress-label">Sprint Progress</span>
+  <div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+  <span class="progress-count" id="progressCount">0 / 25 tasks</span>
+  <span class="progress-pct" id="progressPct">(0%)</span>
+</div>
+
+<!-- HINT -->
+<div class="hint-bar">
+  <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" /></svg>
+  Click any task name to mark it complete / incomplete. Progress is saved in your browser.
+</div>
+
+<!-- LEGEND -->
+<div class="legend-bar">
+  <span class="legend-title">Workstreams</span>
+  <div class="legend-item"><div class="legend-dot" style="background: linear-gradient(90deg, #10B981, #34D399);"></div>SEO Engine (DEL-01)</div>
+  <div class="legend-item"><div class="legend-dot" style="background: linear-gradient(90deg, #6366F1, #818CF8);"></div>CRM Population (DEL-02)</div>
+  <div class="legend-item"><div class="legend-dot" style="background: linear-gradient(90deg, #F59E0B, #FBBF24);"></div>Outbound — Async (DEL-03)</div>
+  <div class="legend-item"><div class="legend-dot" style="background: linear-gradient(90deg, #8B5CF6, #A78BFA);"></div>Content Engine (DEL-04)</div>
+  <div class="legend-item"><div class="legend-dot" style="background: linear-gradient(90deg, #0D9488, #2DD4BF);"></div>Platform (DEL-05)</div>
+  <div class="legend-item"><div class="legend-dot" style="background: #EF4444; width: 10px; height: 10px; transform: rotate(45deg); border-radius: 1px;"></div>Milestone</div>
+  <div class="legend-done"><div class="legend-dot" style="background: linear-gradient(90deg, #CBD5E1, #E2E8F0);"></div>✓ Completed</div>
+</div>
+
+<!-- FILTERS -->
+<div class="filter-bar">
+  <span class="filter-label">Filter:</span>
+  <button class="filter-btn active" onclick="filterTasks('all', this)">All</button>
+  <button class="filter-btn" onclick="filterTasks('seo', this)">SEO</button>
+  <button class="filter-btn" onclick="filterTasks('crm', this)">CRM</button>
+  <button class="filter-btn" onclick="filterTasks('outbound', this)">Outbound</button>
+  <button class="filter-btn" onclick="filterTasks('content', this)">Content</button>
+  <button class="filter-btn" onclick="filterTasks('infra', this)">Platform</button>
+  <button class="filter-btn" onclick="filterTasks('milestone', this)">Milestones</button>
+  <div class="filter-sep"></div>
+  <button class="clear-btn" onclick="clearAll()">✕ Clear Completed</button>
+</div>
+
+<!-- SUMMARY CARDS -->
+<div style="padding-top: 24px;"></div>
+<div class="summary">
+  <div class="summary-card" style="border-top-color: var(--seo);">
+    <div class="sc-label">SEO Engine</div>
+    <div class="sc-value">8</div>
+    <div class="sc-sub">tasks · T-01 through T-08</div>
+    <div class="sc-progress"><div class="sc-progress-fill" id="prog-seo" style="background:#10B981;width:0%"></div></div>
+  </div>
+  <div class="summary-card" style="border-top-color: var(--crm);">
+    <div class="sc-label">CRM Population</div>
+    <div class="sc-value">5</div>
+    <div class="sc-sub">tasks · T-09 through T-13</div>
+    <div class="sc-progress"><div class="sc-progress-fill" id="prog-crm" style="background:#6366F1;width:0%"></div></div>
+  </div>
+  <div class="summary-card" style="border-top-color: var(--outbound);">
+    <div class="sc-label">Outbound (Async)</div>
+    <div class="sc-value">5</div>
+    <div class="sc-sub">tasks · T-14 through T-18</div>
+    <div class="sc-progress"><div class="sc-progress-fill" id="prog-outbound" style="background:#F59E0B;width:0%"></div></div>
+  </div>
+  <div class="summary-card" style="border-top-color: var(--content);">
+    <div class="sc-label">Content Engine</div>
+    <div class="sc-value">4</div>
+    <div class="sc-sub">tasks · T-19 through T-22</div>
+    <div class="sc-progress"><div class="sc-progress-fill" id="prog-content" style="background:#8B5CF6;width:0%"></div></div>
+  </div>
+  <div class="summary-card" style="border-top-color: var(--infra);">
+    <div class="sc-label">Platform</div>
+    <div class="sc-value">3</div>
+    <div class="sc-sub">tasks · T-23 through T-25</div>
+    <div class="sc-progress"><div class="sc-progress-fill" id="prog-infra" style="background:#0D9488;width:0%"></div></div>
+  </div>
+</div>
+
+<!-- GANTT -->
+<div class="gantt-wrap">
+<table class="gantt" id="ganttTable">
+<thead>
+  <tr>
+    <th class="task-header" rowspan="2">Task</th>
+    <th class="week-header" colspan="7">WEEK 1 · Mar 28 – Apr 3</th>
+    <th class="week-header" colspan="7">WEEK 2 · Apr 4 – Apr 10</th>
+    <th class="week-header" colspan="7">WEEK 3 · Apr 11 – Apr 17</th>
+    <th class="week-header" colspan="7">WEEK 4 · Apr 18 – Apr 24</th>
+  </tr>
+  <tr>
+    <th class="day-header weekend">28</th><th class="day-header weekend">29</th><th class="day-header">30</th><th class="day-header">31</th><th class="day-header">1</th><th class="day-header">2</th><th class="day-header">3</th>
+    <th class="day-header weekend">4</th><th class="day-header weekend">5</th><th class="day-header">6</th><th class="day-header">7</th><th class="day-header">8</th><th class="day-header">9</th><th class="day-header">10</th>
+    <th class="day-header weekend">11</th><th class="day-header weekend">12</th><th class="day-header today-hdr">13</th><th class="day-header">14</th><th class="day-header">15</th><th class="day-header">16</th><th class="day-header">17</th>
+    <th class="day-header weekend">18</th><th class="day-header weekend">19</th><th class="day-header">20</th><th class="day-header">21</th><th class="day-header">22</th><th class="day-header">23</th><th class="day-header">24</th>
+  </tr>
+</thead>
+<tbody id="ganttBody">
+</tbody>
+</table>
+</div>
+
+<!-- TOOLTIP -->
+<div class="tooltip" id="tooltip">
+  <div class="tt-title"></div>
+  <div class="tt-meta"></div>
+  <div class="tt-done" id="ttDone"></div>
+  <div class="tt-hint" id="ttHint"></div>
+</div>
+
+<script>
+// ===== PERSISTENCE =====
+const STORAGE_KEY = 'glowroute-v52-gantt-done';
+function loadDone() {
+  try { return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); } catch(e) { return {}; }
+}
+function saveDone(done) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(done));
+}
+let doneMap = loadDone();
+
+// ===== DATA =====
+const tasks = [
+  // SEO
+  { cat: "seo", catLabel: "DEL-01: Programmatic SEO Engine" },
+  { id: "T-01", name: "Build crossover dynamic route", type: "seo", p: "p0", start: 0, end: 2, deps: "None", assignee: "Atlas", est: "1-2 days" },
+  { id: "T-02", name: "Generate content templates", type: "seo", p: "p0", start: 2, end: 3, deps: "T-01", assignee: "Zion → Atlas", est: "1 day" },
+  { id: "T-03", name: "Dynamic sitemap generator", type: "seo", p: "p0", start: 3, end: 3, deps: "T-01", assignee: "Atlas", est: "0.5 day" },
+  { id: "T-04", name: "Treatment × City coverage matrix", type: "seo", p: "p0", start: 0, end: 1, deps: "Keyword Index", assignee: "Zion", est: "0.5 day" },
+  { id: "T-05", name: "Batch 1: FL core (480 pages)", type: "seo", p: "p0", start: 4, end: 6, deps: "T-01, T-02, T-04", assignee: "Atlas", est: "1 day" },
+  { id: "T-06", name: "Batch 2: Top 20 metros (200 pages)", type: "seo", p: "p1", start: 7, end: 10, deps: "T-05", assignee: "Atlas", est: "1 day" },
+  { id: "T-07", name: "Batch 3: FL expanded hormones/peptides (600 pages)", type: "seo", p: "p1", start: 14, end: 17, deps: "T-04, T-05", assignee: "Atlas", est: "1 day" },
+  { id: "T-08", name: "Batch 4: National expanded (500+ pages)", type: "seo", p: "p2", start: 18, end: 22, deps: "T-07, T-15", assignee: "Atlas", est: "1-2 days" },
+
+  // CRM
+  { cat: "crm", catLabel: "DEL-02: HubSpot CRM Population" },
+  { id: "T-09", name: "Create HubSpot properties & pipeline", type: "crm", p: "p0", start: 0, end: 0, deps: "None", assignee: "Anthony", est: "0.5 day" },
+  { id: "T-10", name: "Import 5,000+ clinics into HubSpot", type: "crm", p: "p0", start: 1, end: 2, deps: "T-09", assignee: "Zion → HubSpot API", est: "1 day" },
+  { id: "T-11", name: "Apollo enrichment — Tier 1 & 2", type: "crm", p: "p0", start: 3, end: 7, deps: "T-10", assignee: "Zion → Apollo", est: "2-3 days" },
+  { id: "T-12", name: "Apollo enrichment — Tier 3 & 4 (email only)", type: "crm", p: "p2", start: 7, end: 11, deps: "T-10", assignee: "Zion → Apollo", est: "2 days" },
+  { id: "T-13", name: "Tier scoring & segmentation validation", type: "crm", p: "p1", start: 11, end: 12, deps: "T-11", assignee: "Zion", est: "0.5 day" },
+
+  // OUTBOUND (ASYNC)
+  { cat: "outbound", catLabel: "DEL-03: Outbound Machine (Async Sub-Deliverable)" },
+  { id: "T-14", name: "Generate 10 city market reports", type: "outbound", p: "p1", start: 7, end: 11, deps: "T-04", assignee: "Zion → Atlas", est: "2-3 days" },
+  { id: "T-15", name: "Market expansion scrape → 10K clinics", type: "outbound", p: "p0", start: 2, end: 9, deps: "None", assignee: "Apify/Firecrawl", est: "3-5 days" },
+  { id: "T-16", name: "Build HubSpot email sequences", type: "outbound", p: "p1", start: 14, end: 16, deps: "T-11, T-14", assignee: "Anthony + HubSpot", est: "1 day" },
+  { id: "T-17", name: "Twilio SMS integration", type: "outbound", p: "p2", start: 17, end: 18, deps: "T-16", assignee: "Atlas", est: "0.5 day" },
+  { id: "T-18", name: "Activate T1 outreach (200 contacts)", type: "outbound", p: "p1", start: 21, end: 24, deps: "T-16, T-14, SC data", assignee: "Anthony", est: "0.5 day" },
+
+  // CONTENT ENGINE
+  { cat: "content", catLabel: "DEL-04: Agentic Content Engine" },
+  { id: "T-19", name: "Build content pipeline (Zion→GH→Vercel)", type: "content", p: "p0", start: 4, end: 8, deps: "T-01", assignee: "Zion → Atlas", est: "2-3 days" },
+  { id: "T-20", name: "Create 5 article content templates", type: "content", p: "p0", start: 4, end: 6, deps: "Keyword Index", assignee: "Zion", est: "1 day" },
+  { id: "T-21", name: "Reddit monitoring agent setup", type: "content", p: "p1", start: 7, end: 9, deps: "None", assignee: "Zion → Apify", est: "1 day" },
+  { id: "T-22", name: "Publish first 10 articles", type: "content", p: "p1", start: 11, end: 15, deps: "T-19, T-20", assignee: "Zion → Atlas", est: "2 days" },
+
+  // PLATFORM
+  { cat: "infra", catLabel: "DEL-05: Platform & Analytics" },
+  { id: "T-23", name: "Clinic-level analytics dashboard", type: "infra", p: "p0", start: 2, end: 3, deps: "PostHog (done)", assignee: "Atlas", est: "1 day" },
+  { id: "T-24", name: "Claim page conversion tracking", type: "infra", p: "p0", start: 3, end: 3, deps: "PostHog (done)", assignee: "Atlas", est: "0.5 day" },
+  { id: "T-25", name: "Weekly automated report", type: "infra", p: "p1", start: 14, end: 16, deps: "T-23, SC API", assignee: "Zion", est: "1 day" },
+
+  // MILESTONES
+  { cat: "milestone", catLabel: "Decision Gates" },
+  { id: "M1", name: "Batch 1 Live — 480 FL pages deployed", type: "milestone", start: 6, milestone: true, decision: "If clean deploy → Batch 2. If issues → fix before scaling." },
+  { id: "M2", name: "CRM Populated — T1/T2 enriched", type: "milestone", start: 12, milestone: true, decision: "If >80% email coverage → greenlight outbound. If <60% → expand Apollo." },
+  { id: "M3", name: "Content Engine Live — pipeline tested", type: "milestone", start: 15, milestone: true, decision: "If 10 articles deployed clean → scale to 5-10/wk. If QA >20% fail → fix templates." },
+  { id: "M4", name: "Outbound Activated — T1 sequences live", type: "milestone", start: 21, milestone: true, decision: "If SC shows impressions → full send. If zero → delay, diagnose indexing." },
+  { id: "M5", name: "V5.2 Complete — score against metrics", type: "milestone", start: 27, milestone: true, decision: "Score all success metrics. Greenlight V6 planning." },
+];
+
+const TOTAL_DAYS = 28;
+const catColors = { seo: '#10B981', crm: '#6366F1', outbound: '#F59E0B', content: '#8B5CF6', infra: '#0D9488', milestone: '#EF4444' };
+const catSizes = { seo: 8, crm: 5, outbound: 5, content: 4, infra: 3 };
+const dayNames = ['Mar 28','Mar 29','Mar 30','Mar 31','Apr 1','Apr 2','Apr 3','Apr 4','Apr 5','Apr 6','Apr 7','Apr 8','Apr 9','Apr 10','Apr 11','Apr 12','Apr 13','Apr 14','Apr 15','Apr 16','Apr 17','Apr 18','Apr 19','Apr 20','Apr 21','Apr 22','Apr 23','Apr 24'];
+
+function toggleDone(id) {
+  doneMap[id] = !doneMap[id];
+  saveDone(doneMap);
+  renderGantt(currentFilter);
+  updateProgress();
+}
+
+function clearAll() {
+  if (!confirm('Clear all completed tasks?')) return;
+  doneMap = {};
+  saveDone(doneMap);
+  renderGantt(currentFilter);
+  updateProgress();
+}
+
+function updateProgress() {
+  const taskIds = tasks.filter(t => t.id && !t.milestone).map(t => t.id);
+  const doneCount = taskIds.filter(id => doneMap[id]).length;
+  const total = taskIds.length;
+  const pct = Math.round(doneCount / total * 100);
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressCount').textContent = `${doneCount} / ${total} tasks`;
+  document.getElementById('progressPct').textContent = `(${pct}%)`;
+
+  // Per-category
+  ['seo','crm','outbound','content','infra'].forEach(cat => {
+    const catTasks = tasks.filter(t => t.type === cat && t.id).map(t => t.id);
+    const catDone = catTasks.filter(id => doneMap[id]).length;
+    const catPct = catTasks.length ? Math.round(catDone / catTasks.length * 100) : 0;
+    const el = document.getElementById('prog-' + cat);
+    if (el) el.style.width = catPct + '%';
+  });
+}
+
+let currentFilter = 'all';
+
+function renderGantt(filter) {
+  currentFilter = filter;
+  const tbody = document.getElementById('ganttBody');
+  tbody.innerHTML = '';
+
+  tasks.forEach(task => {
+    if (task.cat !== undefined && task.catLabel) {
+      if (filter !== 'all' && task.cat !== filter) return;
+      const tr = document.createElement('tr');
+      tr.className = 'cat-row';
+      tr.dataset.type = task.cat;
+      tr.innerHTML = `<td colspan="${TOTAL_DAYS + 1}"><span class="cat-badge"><span class="cat-dot" style="background:${catColors[task.cat]}"></span>${task.catLabel}</span></td>`;
+      tbody.appendChild(tr);
+      return;
+    }
+    if (!task.id) return;
+    if (filter !== 'all' && task.type !== filter) return;
+
+    const isDone = !!doneMap[task.id];
+    const tr = document.createElement('tr');
+    tr.className = 'task-row' + (task.milestone ? ' milestone-row' : '') + (isDone ? ' done' : '');
+    tr.dataset.type = task.type;
+    tr.dataset.id = task.id;
+
+    // Task name cell
+    const nameTd = document.createElement('td');
+    nameTd.className = 'task-name';
+    let priorityHtml = '';
+    if (task.p) priorityHtml = `<span class="priority ${task.p}">${task.p.toUpperCase()}</span>`;
+    const checkIcon = isDone ? `<span class="done-check">✓</span>` : '';
+    nameTd.innerHTML = `<span class="task-id">${task.id}</span>${checkIcon}<span class="task-label-text">${task.name}</span>${priorityHtml}`;
+    nameTd.addEventListener('click', () => toggleDone(task.id));
+    nameTd.title = isDone ? 'Click to mark incomplete' : 'Click to mark complete';
+    tr.appendChild(nameTd);
+
+    // Day cells
+    for (let d = 0; d < TOTAL_DAYS; d++) {
+      const td = document.createElement('td');
+      const isWeekend = (d % 7 === 0) || (d % 7 === 1);
+      td.className = 'cell' + (isWeekend ? ' weekend' : '');
+      td.style.position = 'relative';
+
+      if (task.milestone && d === task.start) {
+        const marker = document.createElement('div');
+        marker.className = 'milestone-marker';
+        td.appendChild(marker);
+        td.addEventListener('mouseenter', (e) => showTooltip(e, task));
+        td.addEventListener('mouseleave', hideTooltip);
+      }
+
+      if (!task.milestone && d >= task.start && d <= task.end) {
+        const bar = document.createElement('div');
+        bar.className = 'bar ' + task.type;
+        const span = task.end - task.start;
+        if (span === 0) bar.classList.add('single');
+        else if (d === task.start) bar.classList.add('start');
+        else if (d === task.end) bar.classList.add('end');
+        else bar.classList.add('mid');
+        td.appendChild(bar);
+        bar.addEventListener('mouseenter', (e) => showTooltip(e, task));
+        bar.addEventListener('mouseleave', hideTooltip);
+      }
+
+      tr.appendChild(td);
+    }
+
+    tbody.appendChild(tr);
+  });
+}
+
+function showTooltip(e, task) {
+  const tooltip = document.getElementById('tooltip');
+  const ttTitle = tooltip.querySelector('.tt-title');
+  const ttMeta = tooltip.querySelector('.tt-meta');
+  const ttDone = document.getElementById('ttDone');
+  const ttHint = document.getElementById('ttHint');
+
+  ttTitle.textContent = `${task.id}: ${task.name}`;
+  let metaLines = [];
+  if (task.assignee) metaLines.push(`Assignee: ${task.assignee}`);
+  if (task.est) metaLines.push(`Estimate: ${task.est}`);
+  if (task.deps) metaLines.push(`Deps: ${task.deps}`);
+  if (task.decision) metaLines.push(`Decision: ${task.decision}`);
+  if (task.milestone) {
+    metaLines.unshift(`Date: ${dayNames[task.start]}`);
+  } else if (task.start !== undefined) {
+    metaLines.unshift(`${dayNames[task.start]} → ${dayNames[task.end]}`);
+  }
+  ttMeta.innerHTML = metaLines.join('<br>');
+
+  if (doneMap[task.id]) {
+    ttDone.textContent = '✓ Completed';
+    ttHint.textContent = 'Click to unmark';
+  } else {
+    ttDone.textContent = '';
+    ttHint.textContent = 'Click task name to mark complete';
+  }
+
+  tooltip.style.display = 'block';
+  tooltip.style.left = Math.min(e.clientX + 12, window.innerWidth - 320) + 'px';
+  tooltip.style.top = (e.clientY - 10) + 'px';
+}
+
+function hideTooltip() {
+  document.getElementById('tooltip').style.display = 'none';
+}
+
+function filterTasks(type, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  renderGantt(type);
+}
+
+// Initial render
+renderGantt('all');
+updateProgress();
+</script>
+
+</body>
+</html>
