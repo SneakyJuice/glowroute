@@ -32,6 +32,7 @@ export interface Clinic {
   lat?: number
   lng?: number
   goals?: string[]
+  visibility?: 'visible' | 'hidden' | 'removed' | 'needs_review'
 }
 
 export interface FilterState {
