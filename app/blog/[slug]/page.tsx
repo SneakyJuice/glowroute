@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import { compileMDX } from 'next-mdx-remote/rsc';
-import { supabase } from '@/lib/supabase';
+import { getSupabaseAdmin } from '@/lib/supabase';
 import ClinicCard from '@/components/ClinicCard';
 
 export async function generateStaticParams() {
@@ -32,7 +32,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
         <div className="mt-12">
           <h2>Featured Clinics</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {clinics.map(clinic => (
+            {clinics.map((clinic: any) => (
               <ClinicCard key={clinic.id} clinic={clinic} />
             ))}
           </div>
@@ -63,6 +63,9 @@ function extractClinicNames(content: React.ReactNode): string[] {
 
 async function fetchClinics(names: string[]) {
   if (names.length === 0) return [];
+  
+  const supabase = getSupabaseAdmin();
+  if (!supabase) return [];
   
   const { data, error } = await supabase
     .from('clinics')
