@@ -7,6 +7,9 @@ import ClinicsClient from '@/app/clinics/ClinicsClient'
 export const metadata: Metadata = {
   title: 'GlowRoute — Find Top-Rated Med Spas & Aesthetic Clinics in Florida',
   description: 'Discover and compare 4,000+ med spas and aesthetic clinics across Florida. Filter by treatment, city, and ratings. Powered by GlowScore™.',
+  alternates: {
+    canonical: 'https://glowroute.io',
+  },
 }
 
 const SSR_PAGE_SIZE = 20
