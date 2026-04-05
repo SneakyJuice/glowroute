@@ -1,0 +1,1266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GlowRoute — Find Your Perfect MedSpa</title>
+<style>
+  :root {
+    --purple-deep: #3B0764;
+    --purple-main: #7C3AED;
+    --purple-mid: #9D4EDD;
+    --purple-light: #C4B5FD;
+    --purple-pale: #F5F3FF;
+    --silver-dark: #94A3B8;
+    --silver-mid: #CBD5E1;
+    --silver-light: #F1F5F9;
+    --silver-white: #F8FAFC;
+    --text-dark: #1E1B4B;
+    --text-mid: #4B5563;
+    --text-light: #94A3B8;
+    --gold: #F59E0B;
+    --green: #10B981;
+    --radius: 12px;
+    --shadow: 0 4px 24px rgba(124,58,237,0.10);
+    --shadow-hover: 0 8px 40px rgba(124,58,237,0.20);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--silver-white);
+    color: var(--text-dark);
+  }
+
+  /* ── NAV ── */
+  nav {
+    background: var(--purple-deep);
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+
+  .logo-icon {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, var(--purple-mid), var(--purple-light));
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    box-shadow: 0 0 16px rgba(196,181,253,0.4);
+  }
+
+  .logo-text {
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+  }
+
+  .logo-text span:first-child { color: #fff; }
+  .logo-text span:last-child {
+    color: var(--purple-light);
+  }
+
+  .logo-tagline {
+    font-size: 11px;
+    color: var(--silver-dark);
+    letter-spacing: 0.5px;
+    margin-top: -2px;
+  }
+
+  .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .btn-claim-nav {
+    background: linear-gradient(135deg, var(--purple-mid), #A855F7);
+    color: white;
+    border: none;
+    padding: 9px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+    letter-spacing: 0.2px;
+  }
+  .btn-claim-nav:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(168,85,247,0.5);
+  }
+
+  .btn-list {
+    color: var(--purple-light);
+    background: transparent;
+    border: 1px solid rgba(196,181,253,0.3);
+    padding: 9px 18px;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn-list:hover { background: rgba(196,181,253,0.1); }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(135deg, var(--purple-deep) 0%, #4C1D95 50%, #3B0764 100%);
+    padding: 72px 32px 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(ellipse at 60% 40%, rgba(167,139,250,0.15) 0%, transparent 60%),
+                radial-gradient(ellipse at 20% 80%, rgba(124,58,237,0.1) 0%, transparent 50%);
+    pointer-events: none;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(196,181,253,0.15);
+    border: 1px solid rgba(196,181,253,0.3);
+    color: var(--purple-light);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+
+  .hero h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 800;
+    color: white;
+    line-height: 1.15;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+  }
+
+  .hero h1 em {
+    font-style: normal;
+    background: linear-gradient(135deg, var(--purple-light), #E9D5FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hero p {
+    color: var(--silver-mid);
+    font-size: 18px;
+    max-width: 560px;
+    margin: 0 auto 36px;
+    line-height: 1.6;
+  }
+
+  /* ── SEARCH BAR ── */
+  .search-wrap {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .search-box {
+    display: flex;
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.3);
+  }
+
+  .search-input {
+    flex: 1;
+    padding: 18px 20px 18px 52px;
+    border: none;
+    font-size: 16px;
+    color: var(--text-dark);
+    outline: none;
+    background: white;
+  }
+
+  .search-input::placeholder { color: var(--text-light); }
+
+  .search-icon {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    pointer-events: none;
+  }
+
+  .search-btn {
+    background: linear-gradient(135deg, var(--purple-main), var(--purple-mid));
+    color: white;
+    border: none;
+    padding: 18px 28px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+  .search-btn:hover { filter: brightness(1.1); }
+
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+  }
+
+  .hero-stat {
+    color: var(--silver-mid);
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .hero-stat strong { color: white; }
+
+  /* ── FILTERS ── */
+  .filters-bar {
+    background: white;
+    border-bottom: 1px solid var(--silver-mid);
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 64px;
+    z-index: 90;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  }
+
+  .filter-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-mid);
+    margin-right: 4px;
+    white-space: nowrap;
+  }
+
+  .filter-chip {
+    padding: 7px 16px;
+    border-radius: 20px;
+    border: 1.5px solid var(--silver-mid);
+    background: white;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-mid);
+    cursor: pointer;
+    transition: all 0.15s;
+    white-space: nowrap;
+  }
+
+  .filter-chip:hover {
+    border-color: var(--purple-mid);
+    color: var(--purple-main);
+    background: var(--purple-pale);
+  }
+
+  .filter-chip.active {
+    background: var(--purple-main);
+    border-color: var(--purple-main);
+    color: white;
+    font-weight: 600;
+  }
+
+  .filter-select {
+    padding: 7px 32px 7px 12px;
+    border-radius: 20px;
+    border: 1.5px solid var(--silver-mid);
+    background: white url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2394A3B8' d='M6 8L1 3h10z'/%3E%3C/svg%3E") no-repeat right 10px center;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-mid);
+    cursor: pointer;
+    appearance: none;
+    outline: none;
+    transition: all 0.15s;
+  }
+
+  .filter-select:focus {
+    border-color: var(--purple-mid);
+    color: var(--purple-main);
+  }
+
+  .results-count {
+    margin-left: auto;
+    font-size: 13px;
+    color: var(--text-light);
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  /* ── MAIN LAYOUT ── */
+  .main {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 32px 24px;
+  }
+
+  /* ── LISTING GRID ── */
+  .listing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+  }
+
+  /* ── CARD ── */
+  .card {
+    background: white;
+    border-radius: var(--radius);
+    border: 1px solid var(--silver-mid);
+    overflow: hidden;
+    transition: all 0.2s;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .card:hover {
+    box-shadow: var(--shadow-hover);
+    border-color: var(--purple-light);
+    transform: translateY(-2px);
+  }
+
+  .card-header {
+    height: 90px;
+    background: linear-gradient(135deg, var(--purple-deep) 0%, #4C1D95 100%);
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 12px 16px;
+  }
+
+  .card-avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 12px;
+    border: 3px solid white;
+    background: linear-gradient(135deg, var(--purple-mid), var(--purple-light));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: 800;
+    color: white;
+    text-transform: uppercase;
+    flex-shrink: 0;
+    margin-bottom: -26px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+
+  .card-badges {
+    margin-left: auto;
+    display: flex;
+    gap: 6px;
+    margin-bottom: 4px;
+  }
+
+  .badge {
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+  }
+
+  .badge-peptide {
+    background: rgba(167,139,250,0.25);
+    color: var(--purple-light);
+    border: 1px solid rgba(167,139,250,0.4);
+  }
+
+  .badge-unclaimed {
+    background: rgba(203,213,225,0.2);
+    color: var(--silver-mid);
+    border: 1px solid rgba(203,213,225,0.3);
+    cursor: pointer;
+  }
+
+  .badge-unclaimed:hover {
+    background: rgba(196,181,253,0.2);
+    color: var(--purple-light);
+    border-color: rgba(196,181,253,0.4);
+  }
+
+  .card-body {
+    padding: 32px 16px 16px;
+  }
+
+  .card-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-dark);
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+
+  .card-city {
+    font-size: 12px;
+    color: var(--text-light);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .card-rating {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 10px;
+  }
+
+  .stars {
+    color: var(--gold);
+    font-size: 13px;
+    letter-spacing: 1px;
+  }
+
+  .rating-num {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-dark);
+  }
+
+  .review-count {
+    font-size: 12px;
+    color: var(--text-light);
+  }
+
+  .card-services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-bottom: 12px;
+  }
+
+  .service-tag {
+    background: var(--purple-pale);
+    color: var(--purple-main);
+    padding: 3px 8px;
+    border-radius: 6px;
+    font-size: 11px;
+    font-weight: 500;
+  }
+
+  .service-tag.peptide-tag {
+    background: linear-gradient(135deg, rgba(124,58,237,0.15), rgba(168,85,247,0.15));
+    color: var(--purple-mid);
+    border: 1px solid rgba(124,58,237,0.2);
+    font-weight: 600;
+  }
+
+  .card-footer {
+    padding: 12px 16px;
+    border-top: 1px solid var(--silver-light);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .card-phone {
+    font-size: 12px;
+    color: var(--text-mid);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .card-phone:hover { color: var(--purple-main); }
+
+  .btn-view {
+    background: linear-gradient(135deg, var(--purple-main), var(--purple-mid));
+    color: white;
+    border: none;
+    padding: 7px 14px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .btn-view:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(124,58,237,0.4);
+  }
+
+  /* ── MODAL ── */
+  .modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(15,10,30,0.75);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    backdrop-filter: blur(4px);
+  }
+
+  .modal-overlay.open { display: flex; }
+
+  .modal {
+    background: white;
+    border-radius: 20px;
+    max-width: 560px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 24px 80px rgba(0,0,0,0.4);
+    animation: modalIn 0.25s ease;
+  }
+
+  @keyframes modalIn {
+    from { opacity: 0; transform: scale(0.95) translateY(10px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+  }
+
+  .modal-header {
+    background: linear-gradient(135deg, var(--purple-deep), #4C1D95);
+    padding: 28px 28px 20px;
+    border-radius: 20px 20px 0 0;
+    position: relative;
+  }
+
+  .modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: rgba(255,255,255,0.15);
+    border: none;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+  }
+  .modal-close:hover { background: rgba(255,255,255,0.25); }
+
+  .modal-avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
+    border: 3px solid rgba(255,255,255,0.3);
+    background: linear-gradient(135deg, var(--purple-mid), var(--purple-light));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 12px;
+  }
+
+  .modal-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+    line-height: 1.2;
+    margin-bottom: 4px;
+  }
+
+  .modal-subtitle {
+    color: var(--purple-light);
+    font-size: 13px;
+  }
+
+  .modal-body { padding: 24px 28px; }
+
+  .modal-section { margin-bottom: 20px; }
+
+  .modal-section-title {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--text-light);
+    margin-bottom: 8px;
+  }
+
+  .modal-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: var(--text-mid);
+  }
+
+  .modal-row a { color: var(--purple-main); text-decoration: none; font-weight: 500; }
+  .modal-row a:hover { text-decoration: underline; }
+
+  .modal-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .modal-tag {
+    background: var(--purple-pale);
+    color: var(--purple-main);
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .modal-rating-big {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    background: var(--silver-light);
+    border-radius: 10px;
+    margin-bottom: 12px;
+  }
+
+  .rating-big-num {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--text-dark);
+    line-height: 1;
+  }
+
+  .modal-actions {
+    display: flex;
+    gap: 10px;
+    padding: 0 28px 24px;
+  }
+
+  .btn-primary {
+    flex: 1;
+    background: linear-gradient(135deg, var(--purple-main), var(--purple-mid));
+    color: white;
+    border: none;
+    padding: 13px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn-primary:hover { box-shadow: 0 4px 20px rgba(124,58,237,0.4); filter: brightness(1.05); }
+
+  .btn-secondary {
+    flex: 1;
+    background: var(--silver-light);
+    color: var(--text-mid);
+    border: 1.5px solid var(--silver-mid);
+    padding: 13px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn-secondary:hover { border-color: var(--purple-light); color: var(--purple-main); }
+
+  /* ── CLAIM MODAL ── */
+  .claim-modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(15,10,30,0.8);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    backdrop-filter: blur(6px);
+  }
+
+  .claim-modal-overlay.open { display: flex; }
+
+  .claim-modal {
+    background: white;
+    border-radius: 20px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 24px 80px rgba(0,0,0,0.5);
+    animation: modalIn 0.25s ease;
+    overflow: hidden;
+  }
+
+  .claim-header {
+    background: linear-gradient(135deg, var(--purple-deep), var(--purple-main));
+    padding: 28px;
+    text-align: center;
+  }
+
+  .claim-header .claim-icon { font-size: 40px; margin-bottom: 10px; }
+  .claim-header h2 { color: white; font-size: 22px; font-weight: 800; margin-bottom: 6px; }
+  .claim-header p { color: var(--purple-light); font-size: 14px; }
+
+  .claim-body { padding: 28px; }
+
+  .form-group { margin-bottom: 16px; }
+
+  .form-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-mid);
+    margin-bottom: 6px;
+    letter-spacing: 0.2px;
+  }
+
+  .form-input {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1.5px solid var(--silver-mid);
+    border-radius: 8px;
+    font-size: 14px;
+    color: var(--text-dark);
+    outline: none;
+    transition: border-color 0.15s;
+    background: white;
+  }
+
+  .form-input:focus { border-color: var(--purple-mid); box-shadow: 0 0 0 3px rgba(124,58,237,0.1); }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+  .claim-perks {
+    background: var(--purple-pale);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 20px;
+  }
+
+  .claim-perk {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--purple-main);
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+
+  .claim-perk:last-child { margin-bottom: 0; }
+
+  .btn-submit {
+    width: 100%;
+    background: linear-gradient(135deg, var(--purple-main), var(--purple-mid));
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+    letter-spacing: 0.2px;
+  }
+  .btn-submit:hover { box-shadow: 0 6px 20px rgba(124,58,237,0.4); filter: brightness(1.05); }
+
+  .claim-footer {
+    text-align: center;
+    margin-top: 12px;
+    font-size: 12px;
+    color: var(--text-light);
+  }
+
+  .claim-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: rgba(255,255,255,0.15);
+    border: none;
+    color: white;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .claim-header { position: relative; }
+
+  /* ── EMPTY STATE ── */
+  .empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-light);
+    grid-column: 1 / -1;
+  }
+
+  .empty-state .empty-icon { font-size: 48px; margin-bottom: 12px; }
+  .empty-state h3 { font-size: 18px; color: var(--text-mid); margin-bottom: 6px; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--purple-deep);
+    color: var(--silver-dark);
+    text-align: center;
+    padding: 32px;
+    margin-top: 60px;
+    font-size: 13px;
+  }
+
+  footer strong { color: var(--purple-light); }
+
+  /* ── LOAD MORE ── */
+  .load-more-wrap {
+    text-align: center;
+    margin-top: 32px;
+  }
+
+  .btn-load-more {
+    background: white;
+    color: var(--purple-main);
+    border: 2px solid var(--purple-light);
+    padding: 12px 32px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .btn-load-more:hover { background: var(--purple-pale); }
+
+  @media (max-width: 600px) {
+    nav { padding: 0 16px; }
+    .hero { padding: 48px 20px 56px; }
+    .filters-bar { padding: 12px 16px; overflow-x: auto; flex-wrap: nowrap; }
+    .main { padding: 20px 16px; }
+    .listing-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="logo">
+    <div class="logo-icon">✦</div>
+    <div>
+      <div class="logo-text"><span>Glow</span><span>Route</span></div>
+      <div class="logo-tagline">Find Verified MedSpas Near You</div>
+    </div>
+  </a>
+  <div class="nav-actions">
+    <button class="btn-list" onclick="openClaim(null)">List Your Practice</button>
+    <button class="btn-claim-nav" onclick="openClaim(null)">Claim Your Listing</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">✦ 277 Verified Florida Clinics</div>
+  <h1>Find Your <em>Perfect</em><br>MedSpa or Wellness Clinic</h1>
+  <p>The only directory that verifies every clinic — real providers, real reviews, real results. From Botox to peptide therapy.</p>
+
+  <div class="search-wrap">
+    <div class="search-box">
+      <span class="search-icon">🔍</span>
+      <input
+        type="text"
+        class="search-input"
+        id="searchInput"
+        placeholder="Search clinic name, treatment, or city..."
+        oninput="applyFilters()"
+      >
+      <button class="search-btn" onclick="applyFilters()">Search</button>
+    </div>
+  </div>
+
+  <div class="hero-stats">
+    <div class="hero-stat">⭐ <strong>4.8</strong> avg rating across all clinics</div>
+    <div class="hero-stat">💉 <strong>63</strong> peptide & hormone clinics</div>
+    <div class="hero-stat">📍 <strong>5</strong> Florida markets</div>
+  </div>
+</div>
+
+<!-- FILTERS -->
+<div class="filters-bar">
+  <span class="filter-label">Filter:</span>
+
+  <select class="filter-select" id="cityFilter" onchange="applyFilters()">
+    <option value="">All Cities</option>
+    <option value="Tampa">Tampa</option>
+    <option value="Miami">Miami</option>
+    <option value="Orlando">Orlando</option>
+    <option value="Jacksonville">Jacksonville</option>
+    <option value="Fort Lauderdale">Fort Lauderdale</option>
+  </select>
+
+  <button class="filter-chip active" data-filter="all" onclick="setTreatmentFilter(this, 'all')">All Clinics</button>
+  <button class="filter-chip" data-filter="peptide" onclick="setTreatmentFilter(this, 'peptide')">💉 Peptide &amp; Hormone</button>
+  <button class="filter-chip" data-filter="high" onclick="setTreatmentFilter(this, 'high')">🔥 Top Rated</button>
+
+  <select class="filter-select" id="ratingFilter" onchange="applyFilters()">
+    <option value="0">Any Rating</option>
+    <option value="4.5">4.5+ Stars</option>
+    <option value="4.8">4.8+ Stars</option>
+    <option value="5">5 Stars Only</option>
+  </select>
+
+  <span class="results-count" id="resultsCount">Loading...</span>
+</div>
+
+<!-- MAIN -->
+<main class="main">
+  <div class="listing-grid" id="listingGrid">
+    <div class="empty-state"><div class="empty-icon">⏳</div><h3>Loading clinics...</h3></div>
+  </div>
+
+  <div class="load-more-wrap" id="loadMoreWrap" style="display:none">
+    <button class="btn-load-more" onclick="loadMore()">Load More Clinics</button>
+  </div>
+</main>
+
+<!-- LISTING DETAIL MODAL -->
+<div class="modal-overlay" id="detailModal" onclick="closeModal(event)">
+  <div class="modal" id="detailModalInner">
+    <div class="modal-header">
+      <button class="modal-close" onclick="closeDetailModal()">✕</button>
+      <div class="modal-avatar" id="dAvatar"></div>
+      <div class="modal-title" id="dTitle"></div>
+      <div class="modal-subtitle" id="dSubtitle"></div>
+    </div>
+    <div class="modal-body">
+      <div class="modal-section">
+        <div class="modal-rating-big">
+          <div>
+            <div class="rating-big-num" id="dRating"></div>
+            <div class="stars" id="dStars"></div>
+          </div>
+          <div>
+            <div style="font-size:14px;font-weight:700;color:var(--text-dark)" id="dReviews"></div>
+            <div style="font-size:12px;color:var(--text-light)">Google Reviews</div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-section">
+        <div class="modal-section-title">Contact &amp; Location</div>
+        <div class="modal-row">📍 <span id="dAddress"></span></div>
+        <div class="modal-row" id="dPhoneRow">📞 <a id="dPhone" href="#"></a></div>
+        <div class="modal-row" id="dWebRow">🌐 <a id="dWeb" href="#" target="_blank">Visit Website</a></div>
+        <div class="modal-row" id="dMapsRow">🗺 <a id="dMaps" href="#" target="_blank">Open in Google Maps</a></div>
+      </div>
+      <div class="modal-section" id="dServicesSection">
+        <div class="modal-section-title">Services &amp; Specialties</div>
+        <div class="modal-tags" id="dServices"></div>
+      </div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn-primary" id="dClaimBtn" onclick="">✦ Claim This Listing</button>
+      <button class="btn-secondary" onclick="closeDetailModal()">Close</button>
+    </div>
+  </div>
+</div>
+
+<!-- CLAIM MODAL -->
+<div class="claim-modal-overlay" id="claimModal" onclick="closeClaimModal(event)">
+  <div class="claim-modal">
+    <div class="claim-header">
+      <button class="claim-close" onclick="closeClaimModal()">✕</button>
+      <div class="claim-icon">✦</div>
+      <h2>Claim Your Listing</h2>
+      <p id="claimSubtitle">Take control of your GlowRoute presence</p>
+    </div>
+    <div class="claim-body">
+      <div class="claim-perks">
+        <div class="claim-perk">✅ Free verified clinic profile</div>
+        <div class="claim-perk">📊 See how many patients viewed your listing</div>
+        <div class="claim-perk">💬 Respond to patient inquiries</div>
+        <div class="claim-perk">💉 Add peptide &amp; service badges</div>
+        <div class="claim-perk">🔝 Upgrade to remove competitor ads</div>
+      </div>
+      <form onsubmit="submitClaim(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">First Name *</label>
+            <input type="text" class="form-input" placeholder="Jane" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Last Name *</label>
+            <input type="text" class="form-input" placeholder="Smith" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Clinic Name *</label>
+          <input type="text" class="form-input" id="claimClinicName" placeholder="Your Clinic Name" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Business Email *</label>
+          <input type="email" class="form-input" placeholder="you@yourclinic.com" required>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Phone *</label>
+            <input type="tel" class="form-input" placeholder="(813) 555-0100" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">City</label>
+            <input type="text" class="form-input" placeholder="Tampa">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Website</label>
+          <input type="url" class="form-input" placeholder="https://yourclinic.com">
+        </div>
+        <button type="submit" class="btn-submit">✦ Submit Claim — It's Free</button>
+        <div class="claim-footer">No credit card required · We'll verify and activate within 24h</div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div style="font-size:22px;font-weight:800;margin-bottom:6px"><strong>Glow</strong>Route</div>
+  <div>The verified MedSpa & Wellness Clinic directory for Florida</div>
+  <div style="margin-top:12px;font-size:12px;opacity:0.6">© 2026 GlowRoute · Tampa, FL · Are you a clinic? <a href="#" onclick="openClaim(null)" style="color:var(--purple-light)">Claim your listing →</a></div>
+</footer>
+
+<script>
+// ─── DATA ───────────────────────────────────────────────
+const CLINICS_URL = 'clinics_data.json';
+let allClinics = [];
+let filtered = [];
+let displayed = 0;
+const PAGE_SIZE = 24;
+let treatmentFilter = 'all';
+
+// ─── INIT ───────────────────────────────────────────────
+async function init() {
+  try {
+    const res = await fetch(CLINICS_URL);
+    allClinics = await res.json();
+  } catch(e) {
+    // fallback inline data if fetch fails
+    allClinics = FALLBACK_DATA;
+  }
+  applyFilters();
+}
+
+// ─── FILTERS ────────────────────────────────────────────
+function applyFilters() {
+  const search = document.getElementById('searchInput').value.toLowerCase();
+  const city = document.getElementById('cityFilter').value;
+  const minRating = parseFloat(document.getElementById('ratingFilter').value) || 0;
+
+  filtered = allClinics.filter(c => {
+    const matchSearch = !search ||
+      c.name.toLowerCase().includes(search) ||
+      c.city.toLowerCase().includes(search) ||
+      (c.category||'').toLowerCase().includes(search) ||
+      (c.address||'').toLowerCase().includes(search);
+    const matchCity = !city || c.city === city;
+    const matchRating = c.rating >= minRating;
+    const matchTreatment =
+      treatmentFilter === 'all' ? true :
+      treatmentFilter === 'peptide' ? c.peptide :
+      treatmentFilter === 'high' ? (c.rating >= 4.8 && c.reviews >= 100) : true;
+    return matchSearch && matchCity && matchRating && matchTreatment;
+  });
+
+  displayed = 0;
+  document.getElementById('listingGrid').innerHTML = '';
+  document.getElementById('resultsCount').textContent = `${filtered.length} clinics`;
+  loadMore();
+}
+
+function setTreatmentFilter(el, val) {
+  document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+  el.classList.add('active');
+  treatmentFilter = val;
+  applyFilters();
+}
+
+// ─── RENDER ─────────────────────────────────────────────
+function loadMore() {
+  const grid = document.getElementById('listingGrid');
+  const batch = filtered.slice(displayed, displayed + PAGE_SIZE);
+
+  if (displayed === 0 && batch.length === 0) {
+    grid.innerHTML = `<div class="empty-state"><div class="empty-icon">🔍</div><h3>No clinics match your search</h3><p>Try adjusting filters or search terms</p></div>`;
+    document.getElementById('loadMoreWrap').style.display = 'none';
+    return;
+  }
+
+  batch.forEach(c => grid.appendChild(buildCard(c)));
+  displayed += batch.length;
+
+  document.getElementById('loadMoreWrap').style.display =
+    displayed < filtered.length ? 'block' : 'none';
+}
+
+function getInitials(name) {
+  return name.split(' ').slice(0,2).map(w => w[0]).join('').toUpperCase();
+}
+
+function buildStars(rating) {
+  const full = Math.floor(rating);
+  const half = rating % 1 >= 0.5 ? 1 : 0;
+  return '★'.repeat(full) + (half ? '½' : '') + '☆'.repeat(5 - full - half);
+}
+
+function getServices(c) {
+  const cats = (c.category||'').split(',').map(s => s.trim()).filter(Boolean).slice(0,3);
+  return cats;
+}
+
+function buildCard(c) {
+  const el = document.createElement('div');
+  el.className = 'card';
+  el.onclick = () => openDetail(c);
+
+  const services = getServices(c);
+  const serviceHtml = services.map(s => `<span class="service-tag">${s}</span>`).join('');
+  const peptideHtml = c.peptide ? `<span class="service-tag peptide-tag">💉 Peptide / Hormone</span>` : '';
+
+  el.innerHTML = `
+    <div class="card-header">
+      <div class="card-avatar">${getInitials(c.name)}</div>
+      <div class="card-badges">
+        ${c.peptide ? '<span class="badge badge-peptide">💉 Peptide</span>' : ''}
+        <span class="badge badge-unclaimed" onclick="event.stopPropagation();openClaim('${c.name.replace(/'/g,"\\'")}')">⊕ Claim</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-name">${c.name}</div>
+      <div class="card-city">📍 ${c.city}, FL</div>
+      <div class="card-rating">
+        <span class="stars">${buildStars(c.rating)}</span>
+        <span class="rating-num">${c.rating.toFixed(1)}</span>
+        <span class="review-count">(${c.reviews.toLocaleString()} reviews)</span>
+      </div>
+      <div class="card-services">
+        ${serviceHtml}
+        ${peptideHtml}
+      </div>
+    </div>
+    <div class="card-footer">
+      ${c.phone ? `<a class="card-phone" href="tel:${c.phone}" onclick="event.stopPropagation()">📞 ${c.phone}</a>` : '<span></span>'}
+      <button class="btn-view" onclick="event.stopPropagation();openDetail(this.__clinic__)">View →</button>
+    </div>`;
+
+  el.querySelector('.btn-view').__clinic__ = c;
+  return el;
+}
+
+// ─── DETAIL MODAL ────────────────────────────────────────
+function openDetail(c) {
+  document.getElementById('dAvatar').textContent = getInitials(c.name);
+  document.getElementById('dTitle').textContent = c.name;
+  document.getElementById('dSubtitle').textContent = `${c.city}, FL · ${c.rating}★ · ${c.reviews.toLocaleString()} Google Reviews`;
+  document.getElementById('dRating').textContent = c.rating.toFixed(1);
+  document.getElementById('dStars').textContent = buildStars(c.rating);
+  document.getElementById('dReviews').textContent = `${c.reviews.toLocaleString()} Reviews`;
+  document.getElementById('dAddress').textContent = c.address || 'See Google Maps';
+
+  const ph = document.getElementById('dPhoneRow');
+  if (c.phone) { document.getElementById('dPhone').href = `tel:${c.phone}`; document.getElementById('dPhone').textContent = c.phone; ph.style.display = 'flex'; }
+  else { ph.style.display = 'none'; }
+
+  const wb = document.getElementById('dWebRow');
+  if (c.website) { document.getElementById('dWeb').href = c.website; wb.style.display = 'flex'; }
+  else { wb.style.display = 'none'; }
+
+  const mb = document.getElementById('dMapsRow');
+  if (c.mapsUrl) { document.getElementById('dMaps').href = c.mapsUrl; mb.style.display = 'flex'; }
+  else { mb.style.display = 'none'; }
+
+  const services = [...getServices(c), ...(c.peptide ? ['Peptide Therapy', 'Hormone Therapy'] : [])];
+  document.getElementById('dServices').innerHTML = services.map(s => `<span class="modal-tag">${s}</span>`).join('');
+
+  document.getElementById('dClaimBtn').onclick = () => { closeDetailModal(); openClaim(c.name); };
+  document.getElementById('detailModal').classList.add('open');
+}
+
+function closeDetailModal() {
+  document.getElementById('detailModal').classList.remove('open');
+}
+
+function closeModal(e) {
+  if (e.target === document.getElementById('detailModal')) closeDetailModal();
+}
+
+// ─── CLAIM MODAL ─────────────────────────────────────────
+function openClaim(clinicName) {
+  if (clinicName) {
+    document.getElementById('claimClinicName').value = clinicName;
+    document.getElementById('claimSubtitle').textContent = `Claim your listing for ${clinicName}`;
+  } else {
+    document.getElementById('claimClinicName').value = '';
+    document.getElementById('claimSubtitle').textContent = 'Take control of your GlowRoute presence';
+  }
+  document.getElementById('claimModal').classList.add('open');
+}
+
+function closeClaimModal(e) {
+  if (!e || e.target === document.getElementById('claimModal')) {
+    document.getElementById('claimModal').classList.remove('open');
+  }
+}
+
+function submitClaim(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('.btn-submit');
+  btn.textContent = '✓ Claim Submitted!';
+  btn.style.background = 'linear-gradient(135deg, #10B981, #059669)';
+  setTimeout(() => closeClaimModal(), 2000);
+}
+
+// Fallback data if JSON fetch fails
+const FALLBACK_DATA = [
+  {name:"GlowRoute Demo Clinic",city:"Tampa",rating:4.9,reviews:500,phone:"(813) 555-0100",website:"https://glowroute.com",address:"123 Main St, Tampa, FL 33606",category:"Medical spa, Aesthetic clinic",peptide:true,mapsUrl:""}
+];
+
+init();
+</script>
+</body>
+</html>

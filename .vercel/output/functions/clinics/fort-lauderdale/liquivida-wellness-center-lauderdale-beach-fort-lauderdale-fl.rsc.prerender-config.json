@@ -1,0 +1,28 @@
+{
+  "type": "Prerender",
+  "expiration": false,
+  "group": 175,
+  "bypassToken": "9d8b700795dea5dd1e3631af343fff28",
+  "experimentalBypassFor": [
+    {
+      "type": "header",
+      "key": "Next-Action"
+    },
+    {
+      "type": "header",
+      "key": "content-type",
+      "value": "multipart/form-data;.*"
+    }
+  ],
+  "fallback": {
+    "type": "FileFsRef",
+    "mode": 33188,
+    "fsPath": "liquivida-wellness-center-lauderdale-beach-fort-lauderdale-fl.rsc.prerender-fallback.rsc"
+  },
+  "initialHeaders": {
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/clinics/layout,_N_T_/clinics/[city]/layout,_N_T_/clinics/[city]/[slug]/layout,_N_T_/clinics/[city]/[slug]/page,_N_T_/clinics/fort-lauderdale/liquivida-wellness-center-lauderdale-beach-fort-lauderdale-fl",
+    "vary": "RSC, Next-Router-State-Tree, Next-Router-Prefetch",
+    "content-type": "text/x-component"
+  },
+  "allowQuery": []
+}
