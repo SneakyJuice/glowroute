@@ -16,7 +16,7 @@ export default function ResultsHeader({ count, city, view, sort, onViewChange, o
           ))}
         </div>
         <select value={sort} onChange={e => onSortChange(e.target.value)} className="text-[13px] font-medium text-onyx border border-gray-200 rounded px-2.5 py-[7px] appearance-none bg-white outline-none cursor-pointer">
-          {['Curated for You', 'Highest Rated', 'Most Reviewed', 'Nearest First', 'Price: Low to High'].map(o => <option key={o}>{o}</option>)}
+          {['GlowScore™', 'Highest Rated', 'Most Reviewed', 'Nearest First', 'Price: Low to High'].map(o => <option key={o}>{o}</option>)}
         </select>
       </div>
     </div>

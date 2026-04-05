@@ -1,3 +1,11 @@
 {
-  "framework": "nextjs"
+  "framework": "nextjs",
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [{ "type": "host", "value": "www.glowroute.io" }],
+      "destination": "https://glowroute.io/$1",
+      "permanent": true
+    }
+  ]
 }

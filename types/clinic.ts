@@ -3,6 +3,7 @@ export interface Clinic {
   name: string
   slug: string
   city: string
+  state?: string
   neighborhood?: string
   distance?: string
   googleRating: number
@@ -23,14 +24,24 @@ export interface Clinic {
   website?: string
   bookingUrl?: string
   instagram?: string
+  instagramHandle?: string
+  tiktokHandle?: string
+  icalUrl?: string
   mapsUrl?: string
   brandValues?: string[]
   lat?: number
   lng?: number
+  goals?: string[]
+  services?: string[]
+  visibility?: 'visible' | 'hidden' | 'removed' | 'needs_review'
+  heroImageUrl?: string
+  isClaimed?: boolean
+  isVerified?: boolean
 }
 
 export interface FilterState {
   treatmentTypes: string[]
+  goals: string[]
   distanceMiles: number
   minRating: number
   priceTiers: string[]

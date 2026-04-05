@@ -6,11 +6,13 @@ import Footer from '@/components/Footer'
 import { allClinics } from '@/data/all-clinics'
 import { PLANS } from '@/lib/stripe'
 import ClaimCheckoutButton from './ClaimCheckoutButton'
+import { trackClaimStarted } from '@/components/PostHogClinicTracker'
 
 interface Props { params: { slug: string } }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const clinic = allClinics.find(c => c.slug === params.slug)
+  const clinics = await allClinics
+  const clinic = clinics.find(c => c.slug === params.slug)
   if (!clinic) return { title: 'Claim Your Listing — GlowRoute' }
   return {
     title: `Claim ${clinic.name} — GlowRoute`,
@@ -20,13 +22,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export async function generateStaticParams() {
   // Pre-render first 200 slugs; the rest are on-demand
-  return allClinics.slice(0, 200).map(c => ({ slug: c.slug }))
+  const all = await allClinics
+  return all.slice(0, 200).map(c => ({ slug: c.slug }))
 }
 
 const PLAN_ORDER = ['starter', 'growth', 'pro'] as const
 
-export default function ClaimSlugPage({ params }: Props) {
-  const clinic = allClinics.find(c => c.slug === params.slug)
+export default async function ClaimSlugPage({ params }: Props) {
+  const clinics = await allClinics
+  const clinic = clinics.find(c => c.slug === params.slug)
   if (!clinic) notFound()
 
   const displayCity = `${clinic.city}, FL`

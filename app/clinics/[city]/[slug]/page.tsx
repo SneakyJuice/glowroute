@@ -1,27 +1,57 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { allClinics } from '@/data/all-clinics'
+import Script from 'next/script'
+import { getSupabaseAdmin } from '@/lib/supabase'
+import { mapSupabaseRow, clean, fetchAllClinicsFromSupabase } from '@/data/supabase-clinics'
+import type { Clinic } from '@/types/clinic'
 import TreatmentTag, { getTagVariant } from '@/components/TreatmentTag'
 import VerifiedBadge from '@/components/VerifiedBadge'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import LeadCaptureForm from '@/components/LeadCaptureForm'
+import AvailabilityBadge from '@/components/AvailabilityBadge'
+import CreatorBadge from '@/components/CreatorBadge'
 import { SITE_URL } from '@/lib/config'
+import { getVibeTags, detectBookingPlatform, VIBE_STYLES } from '@/lib/vibes'
+import type { VibeTag } from '@/lib/vibes'
+import { detectInfluencer, getInfluencerTier } from '@/lib/influencer'
+import { calculateGlowScore } from '@/lib/glowscore'
+import { GlowScoreProfileCard } from '@/components/GlowScoreBadge'
+import { PostHogClinicTracker } from '@/components/PostHogClinicTracker'
+import { TREATMENTS, TREATMENT_SLUGS } from '@/lib/treatments'
+import ClinicCard from '@/components/ClinicCard'
 
 /** Normalize a city name to a URL-safe slug */
-function citySlug(city: string) {
-  return city.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
+function citySlug(city: string | undefined | null) {
+  return (city || '').toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
 }
 
 interface PageProps {
   params: { city: string; slug: string }
 }
 
+// Helper to fetch a single clinic from Supabase
+async function fetchClinicBySlug(city: string, slug: string): Promise<Clinic | null> {
+  const supabase = getSupabaseAdmin()
+  if (!supabase) return null
+  const { data, error } = await supabase
+    .from('clinics')
+    .select('*')
+    .eq('slug', slug)
+    .limit(1)
+  if (error || !data || data.length === 0) return null
+  return clean(mapSupabaseRow(data[0]))
+}
+
 export async function generateStaticParams() {
-  return allClinics.map(clinic => ({
-    city: citySlug(clinic.city),
-    slug: clinic.slug,
-  }))
+  const all = await fetchAllClinicsFromSupabase()
+  return all
+    .filter(clinic => clinic.city && clinic.slug) // skip records with missing city or slug
+    .map(clinic => ({
+      city: citySlug(clinic.city),
+      slug: clinic.slug,
+    }))
+    .filter(p => p.city && p.slug) // double-check after slug normalization
 }
 
 /** Truncate a string to maxLen, appending suffix if cut */
@@ -31,9 +61,7 @@ function truncate(str: string, maxLen: number, suffix = '…'): string {
 }
 
 export async function generateMetadata({ params }: PageProps) {
-  const clinic = allClinics.find(
-    c => c.slug === params.slug && citySlug(c.city) === params.city
-  )
+  const clinic = await fetchClinicBySlug(params.city, params.slug)
   if (!clinic) return { title: 'Clinic Not Found | GlowRoute' }
 
   // Page title: full name (browsers handle overflow)
@@ -99,8 +127,79 @@ function StarRating({ rating }: { rating: number }) {
   )
 }
 
-export default function ClinicProfilePage({ params }: PageProps) {
-  const clinic = allClinics.find(c => c.slug === params.slug)
+// ─── Treatment City Page (disambiguation) ────────────────────────────────────
+async function TreatmentCityPage({ city, treatment }: { city: string; treatment: string }) {
+  const treatmentInfo = TREATMENTS.find(t => t.slug === treatment)
+  const supabase = getSupabaseAdmin()
+  let clinics: import('@/types/clinic').Clinic[] = []
+  if (supabase) {
+    const displayCity = city.split('-').map(w => w[0].toUpperCase() + w.slice(1)).join(' ')
+
+    // First: try exact services match
+    const { data: matched } = await supabase
+      .from('clinics')
+      .select('*')
+      .ilike('city', displayCity)
+      .contains('services', [treatment])
+      .gt('glow_score', 0)
+      .order('glow_score', { ascending: false })
+      .limit(50)
+
+    if (matched && matched.length > 0) {
+      clinics = matched as import('@/types/clinic').Clinic[]
+    } else {
+      // Fallback: show all rated clinics in the city (services data not yet populated)
+      const { data: cityAll } = await supabase
+        .from('clinics')
+        .select('*')
+        .ilike('city', displayCity)
+        .gt('glow_score', 0)
+        .order('glow_score', { ascending: false })
+        .limit(50)
+      clinics = (cityAll || []) as import('@/types/clinic').Clinic[]
+    }
+  }
+  return (
+    <div className="min-h-screen bg-ivory font-sans">
+      <Navbar />
+      <section className="bg-onyx py-12 px-6">
+        <div className="max-w-5xl mx-auto">
+          <p className="text-stone text-sm uppercase tracking-widest mb-2">
+            {city.split('-').map(w => w[0].toUpperCase() + w.slice(1)).join(' ')}, FL
+          </p>
+          <h1 className="font-serif text-3xl md:text-4xl font-light text-ivory mb-3">
+            {treatmentInfo?.name ?? treatment} Providers
+          </h1>
+          <p className="text-stone text-base">
+            {clinics.length} verified clinic{clinics.length !== 1 ? 's' : ''} in the area
+          </p>
+        </div>
+      </section>
+      <main className="max-w-7xl mx-auto px-4 sm:px-6 py-10">
+        {clinics.length > 0 ? (
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {clinics.map(clinic => (
+              <ClinicCard key={clinic.slug} clinic={clinic} />
+            ))}
+          </div>
+        ) : (
+          <div className="text-center py-20">
+            <p className="text-stone text-lg mb-4">No clinics found for this treatment in this city yet.</p>
+            <a href="/clinics" className="text-blush underline">Browse all clinics →</a>
+          </div>
+        )}
+      </main>
+      <Footer />
+    </div>
+  )
+}
+
+export default async function ClinicProfilePage({ params }: PageProps) {
+  // Disambiguate: if slug matches a treatment, show treatment page
+  if (TREATMENT_SLUGS.includes(params.slug)) {
+    return <TreatmentCityPage city={params.city} treatment={params.slug} />
+  }
+  const clinic = await fetchClinicBySlug(params.city, params.slug)
   if (!clinic) notFound()
 
   const allTreatments = [
@@ -119,14 +218,101 @@ export default function ClinicProfilePage({ params }: PageProps) {
 
   const isUnclaimed = !clinic.verified
 
+  const pageUrl = `${SITE_URL}/clinics/${citySlug(clinic.city)}/${clinic.slug}`
+  const socialProfiles: string[] = []
+  if (clinic.instagramHandle) {
+    socialProfiles.push(`https://instagram.com/${clinic.instagramHandle.replace('@', '')}`)
+  }
+  if (clinic.tiktokHandle) {
+    socialProfiles.push(`https://www.tiktok.com/@${clinic.tiktokHandle.replace('@', '')}`)
+  }
+
+  const sameAs = new Set<string>()
+  socialProfiles.forEach(url => sameAs.add(url))
+  if (clinic.website) sameAs.add(clinic.website)
+  if (clinic.bookingUrl) sameAs.add(clinic.bookingUrl)
+
+  const clinicSchema: Record<string, any> = {
+    '@context': 'https://schema.org',
+    '@type': 'MedicalBusiness',
+    '@id': pageUrl,
+    url: pageUrl,
+    name: clinic.name,
+    description: clinic.description,
+    medicalSpecialty: 'MedicalSpa',
+  }
+
+  const schemaImage = primaryImage || clinic.logo || clinic.images?.[0]
+  if (schemaImage) clinicSchema.image = schemaImage
+  if (clinic.phone) clinicSchema.telephone = clinic.phone
+  if (clinic.priceTier) clinicSchema.priceRange = clinic.priceTier
+  if (sameAs.size) clinicSchema.sameAs = Array.from(sameAs)
+
+  if (clinic.address || clinic.city || clinic.state) {
+    clinicSchema.address = {
+      '@type': 'PostalAddress',
+      ...(clinic.address ? { streetAddress: clinic.address } : {}),
+      ...(clinic.city ? { addressLocality: clinic.city } : {}),
+      ...(clinic.state ? { addressRegion: clinic.state } : {}),
+      addressCountry: 'US',
+    }
+  }
+
+  if (clinic.lat && clinic.lng) {
+    clinicSchema.geo = {
+      '@type': 'GeoCoordinates',
+      latitude: clinic.lat,
+      longitude: clinic.lng,
+    }
+  }
+
+  if (clinic.googleRating && clinic.googleReviewCount) {
+    clinicSchema.aggregateRating = {
+      '@type': 'AggregateRating',
+      ratingValue: clinic.googleRating,
+      reviewCount: clinic.googleReviewCount,
+      bestRating: 5,
+    }
+  }
+
+  if (allTreatments.length) {
+    clinicSchema.availableService = allTreatments.map(t => ({
+      '@type': 'MedicalProcedure',
+      name: t,
+    }))
+  }
+
+  if (clinic.mapsUrl) {
+    clinicSchema.hasMap = clinic.mapsUrl
+  }
+
+  // Creator / influencer signals
+  const isCreator = detectInfluencer(clinic)
+  const creatorTier = isCreator ? getInfluencerTier(clinic) : null
+
+  // GlowScore
+  const glowScore = calculateGlowScore(clinic)
+
+  // Vibe tags + booking platform
+  const vibeTags = getVibeTags(clinic)
+  const bookingPlatform = detectBookingPlatform(clinic)
+
+  // Book Now URL — bookingUrl first, then website if it's a booking platform
+  const bookNowUrl = bookingPlatform?.url ?? null
+
   // Nearby clinics in same city
-  const nearbyClinics = allClinics
-    .filter(c => c.city === clinic.city && c.slug !== clinic.slug)
-    .slice(0, 4)
+  const nearbyClinics: import('@/types/clinic').Clinic[] = [] // Supabase query TBD
 
   return (
     <div className="min-h-screen bg-[#F8F6F1] font-sans">
       <Navbar />
+
+      <Script
+        id={`clinic-schema-${clinic.slug}`}
+        type="application/ld+json"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(clinicSchema) }}
+      />
 
       {/* Hero Image Banner */}
       <div className="w-full h-[260px] md:h-[340px] relative overflow-hidden bg-gradient-to-br from-[#0D1B2E] to-[#1a2e4a]">
@@ -204,6 +390,33 @@ export default function ClinicProfilePage({ params }: PageProps) {
                         Unclaimed
                       </span>
                     )}
+                    {isCreator && creatorTier && (
+                      <CreatorBadge tier={creatorTier} variant="card" instagramUrl={(clinic as any).instagram} />
+                    )}
+                    {clinic.instagramHandle && (
+                      <a
+                        href={`https://instagram.com/${clinic.instagramHandle.replace('@', '')}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-[10px] font-semibold px-2 py-0.5 rounded-full border bg-gradient-to-r from-pink-50 to-purple-50 border-pink-200 text-pink-600 hover:border-pink-400 transition-colors"
+                        title="View on Instagram"
+                      >
+                        <svg className="w-2.5 h-2.5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        @{clinic.instagramHandle.replace('@', '')}
+                      </a>
+                    )}
+                    {clinic.tiktokHandle && (
+                      <a
+                        href={`https://tiktok.com/@${clinic.tiktokHandle.replace('@', '')}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 text-[10px] font-semibold px-2 py-0.5 rounded-full border bg-gray-50 border-gray-200 text-gray-600 hover:border-gray-400 transition-colors"
+                        title="View on TikTok"
+                      >
+                        <svg className="w-2.5 h-2.5" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.69a8.23 8.23 0 004.81 1.54V6.78a4.85 4.85 0 01-1.04-.09z"/></svg>
+                        @{clinic.tiktokHandle.replace('@', '')}
+                      </a>
+                    )}
                   </div>
                   <h1 className="text-2xl font-bold text-navy leading-tight">{clinic.name}</h1>
                   <div className="flex items-center gap-2 mt-1.5">
@@ -242,6 +455,26 @@ export default function ClinicProfilePage({ params }: PageProps) {
                       </svg>
                     </a>
                   )}
+                  {/* Vibe tags */}
+                  {vibeTags.length > 0 && (
+                    <div className="flex flex-wrap gap-1.5 mt-2.5">
+                      {vibeTags.map(tag => (
+                        <span
+                          key={tag}
+                          className={`text-[11px] font-semibold px-2.5 py-0.5 rounded-full border ${VIBE_STYLES[tag as VibeTag] ?? 'bg-gray-100 border-gray-200 text-gray-600'}`}
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                      {/* Booking platform badge */}
+                      {bookingPlatform && (
+                        <span className="text-[11px] font-semibold px-2.5 py-0.5 rounded-full border bg-green-50 border-green-200 text-green-700 flex items-center gap-1">
+                          <span className="w-1.5 h-1.5 rounded-full bg-green-500" />
+                          {bookingPlatform.label}
+                        </span>
+                      )}
+                    </div>
+                  )}
                   {clinic.availability && (
                     <div className="flex items-center gap-1.5 mt-2">
                       <span className="w-2 h-2 rounded-full bg-teal-light animate-pulse" />
@@ -251,8 +484,28 @@ export default function ClinicProfilePage({ params }: PageProps) {
                 </div>
               </div>
 
-              {/* Action Buttons */}
+              {/* Action Buttons — Book Now prominently above fold */}
               <div className="flex flex-wrap gap-2.5 mt-5">
+                {/* Book Now — primary CTA when booking available */}
+                {bookNowUrl ? (
+                  <a
+                    href={bookNowUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 bg-green-600 text-white text-sm font-bold px-5 py-2.5 rounded-xl hover:bg-green-700 transition-colors shadow-sm"
+                  >
+                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg>
+                    {bookingPlatform?.platform === 'generic' ? 'Book Online' : `Book Now`}
+                  </a>
+                ) : (
+                  <a
+                    href="#lead-form"
+                    className="flex items-center gap-2 bg-green-600 text-white text-sm font-bold px-5 py-2.5 rounded-xl hover:bg-green-700 transition-colors shadow-sm"
+                  >
+                    <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                    Request Appointment
+                  </a>
+                )}
                 {clinic.phone && (
                   <a
                     href={`tel:${clinic.phone}`}
@@ -290,16 +543,6 @@ export default function ClinicProfilePage({ params }: PageProps) {
                     Visit Website
                   </a>
                 )}
-                {clinic.bookingUrl && (
-                  <a
-                    href={clinic.bookingUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 bg-teal/[0.08] border border-teal/20 text-teal text-sm font-semibold px-4 py-2.5 rounded-xl hover:bg-teal hover:text-white transition-colors"
-                  >
-                    Book Consultation
-                  </a>
-                )}
                 <a
                   href={googleMapsUrl}
                   target="_blank"
@@ -318,6 +561,9 @@ export default function ClinicProfilePage({ params }: PageProps) {
                   </svg>
                   Get Directions
                 </a>
+              </div>
+              <div className="mt-3">
+                <AvailabilityBadge icalUrl={clinic.icalUrl} bookingUrl={clinic.bookingUrl} />
               </div>
             </div>
 
@@ -416,7 +662,49 @@ export default function ClinicProfilePage({ params }: PageProps) {
                     {clinic.verified ? '✓ Verified' : 'Unverified'}
                   </span>
                 </div>
+                {isUnclaimed && (
+                  <div className="pt-2 border-t border-gray-100">
+                    <a
+                      href={`/claim/${clinic.slug}`}
+                      className="text-xs font-semibold text-teal hover:underline"
+                    >
+                      Own this business? Claim your listing →
+                    </a>
+                  </div>
+                )}
               </div>
+            </div>
+
+            {/* GlowScore™ sidebar card */}
+            <GlowScoreProfileCard
+              score={glowScore}
+              clinicSlug={clinic.slug}
+              isUnclaimed={isUnclaimed}
+            />
+
+            {/* Creator Clinic badge — profile variant */}
+            {isCreator && creatorTier && (
+              <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-5">
+                <h3 className="text-sm font-bold text-navy mb-3">Social Presence</h3>
+                <CreatorBadge
+                  tier={creatorTier}
+                  variant="profile"
+                  instagramUrl={(clinic as any).instagram}
+                />
+              </div>
+            )}
+
+            {/* Price Range */}
+            <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-5">
+              <h3 className="text-sm font-bold text-navy mb-3">Pricing</h3>
+              {clinic.priceTier ? (
+                <div className="flex items-center justify-between">
+                  <span className="text-sm text-gray-500">Price Range</span>
+                  <span className="font-bold text-navy text-lg">{clinic.priceTier}</span>
+                </div>
+              ) : (
+                <p className="text-sm text-gray-500 italic">Contact for Pricing</p>
+              )}
             </div>
 
             {/* Claim This Listing CTA */}
@@ -426,10 +714,10 @@ export default function ClinicProfilePage({ params }: PageProps) {
                 <div className="text-xl mb-1.5 relative">🏢</div>
                 <h3 className="text-white font-bold text-sm mb-1.5 relative">Is this your clinic?</h3>
                 <p className="text-white/60 text-xs mb-4 relative leading-relaxed">
-                  Claim your free listing to update your info, respond to leads, and unlock analytics.
+                  430+ patients searched your area last month. Claim your listing to capture leads.
                 </p>
                 <a
-                  href={`/claim?clinic=${encodeURIComponent(clinic.name)}`}
+                  href={`/claim/${clinic.slug}`}
                   className="block text-center bg-teal text-white text-sm font-semibold py-2.5 rounded-xl hover:bg-teal/80 transition-colors relative"
                 >
                   Claim This Listing →
@@ -438,7 +726,11 @@ export default function ClinicProfilePage({ params }: PageProps) {
             )}
 
             {/* Lead Capture Form */}
-            <LeadCaptureForm clinicName={clinic.name} />
+            <LeadCaptureForm
+              clinicName={clinic.name}
+              clinicSlug={clinic.slug}
+              treatments={allTreatments}
+            />
 
             {/* Nearby Clinics (same city) */}
             {nearbyClinics.length > 0 && (

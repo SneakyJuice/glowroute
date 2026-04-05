@@ -1,14 +1,7 @@
 import { Clinic } from '@/types/clinic'
-import { flClinics } from './fl-clinics'
+import { fetchAllClinicsFromSupabase, fetchFeaturedClinic, fetchStandardClinics } from './supabase-clinics'
 
-// Deduplicate by slug (keep first occurrence)
-// fl-clinics.ts is the canonical source — ~3,575 FL listings
-const seen = new Set<string>()
-export const allClinics: Clinic[] = flClinics.filter(c => {
-  if (!c.slug || seen.has(c.slug)) return false
-  seen.add(c.slug)
-  return true
-})
-
-export const featuredClinic = allClinics.find(c => c.featured) ?? allClinics[0]
-export const standardClinics = allClinics.filter(c => c !== featuredClinic)
+// Re-export these for compatibility, but now backed by Supabase
+export const allClinics: Promise<Clinic[]> = fetchAllClinicsFromSupabase()
+export const featuredClinic: Promise<Clinic | null> = fetchFeaturedClinic()
+export const standardClinics: Promise<Clinic[]> = fetchStandardClinics()
