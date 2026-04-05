@@ -173,7 +173,7 @@ export default async function HomePage() {
       </div>
 
       {/* ── Client component: hydrates and replaces the SSR preview with interactive experience ── */}
-      <ClinicsClientV2 allClinics={allClinics} initialClinics={initialClinics} featuredClinic={initialFeaturedClinic} />
+      <ClinicsClientV2 allClinics={[]} initialClinics={initialClinics} featuredClinic={initialFeaturedClinic} />
     </>
   )
 }
