@@ -1,10 +1,9 @@
 import Link from 'next/link';
-import { supabase } from '@/lib/supabase';
 
 export default async function BlogPage() {
   // In production, would read from file system or database
   // For now, just return empty array - the generate-content script will populate this
-  const posts = [];
+  const posts: any[] = [];
 
   return (
     <div className="max-w-4xl mx-auto py-8">
