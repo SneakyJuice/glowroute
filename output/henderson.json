@@ -1,0 +1,480 @@
+[
+  {
+    "name": "Henderson Med Spa",
+    "address": "90 S Stephanie St #110, Henderson, NV 89012",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(702) 448-9977",
+    "website": "https://www.hendersonmedspa.com/",
+    "rating": 4.9,
+    "reviewCount": 48,
+    "lat": 36.0255227,
+    "lng": -115.0467085,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Henderson%20Med%20Spa&query_place_id=ChIJuXR1vSXRyIARLFCdzc97uj4",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "NakedMD Med Spa Henderson",
+    "address": "100 N Green Valley Pkwy #215, Henderson, NV 89074",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(702) 483-8184",
+    "website": "https://www.nakedmd.com/pages/med-spa-henderson-nv",
+    "rating": 5,
+    "reviewCount": 409,
+    "lat": 36.0259133,
+    "lng": -115.0838521,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=NakedMD%20Med%20Spa%20Henderson&query_place_id=ChIJ2Yl6mYLRyIARQZ5BAfCutrg",
+    "categories": [
+      "Medical spa",
+      "Facial spa",
+      "Health and beauty shop",
+      "Skin care clinic"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Advanced Aesthetics - Henderson",
+    "address": "60 N Pecos Rd Suite 110, Henderson, NV 89074",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(702) 838-4644",
+    "website": "https://advancedaestheticslv.com/",
+    "rating": 4.9,
+    "reviewCount": 1409,
+    "lat": 36.0319333,
+    "lng": -115.0992307,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Advanced%20Aesthetics%20-%20Henderson&query_place_id=ChIJ6dxuRSzOyIAR0Pm4MJtCw2w",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Glamour Me Medical Spa",
+    "address": "3041 W Horizon Ridge Pkwy #135, Henderson, NV 89052",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(702) 481-3949",
+    "website": "https://glamourmemedspa.com/",
+    "rating": 5,
+    "reviewCount": 60,
+    "lat": 35.9977193,
+    "lng": -115.1211024,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Glamour%20Me%20Medical%20Spa&query_place_id=ChIJ3X3ttv3HyIAR-vU6iBi_6po",
+    "categories": [
+      "Medical spa",
+      "Facial spa",
+      "Health spa",
+      "Skin care clinic",
+      "Spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "BP Royal Medspa",
+    "address": "565 Marks St #120, Henderson, NV 89014",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(702) 899-7100",
+    "website": "https://bproyalmedspa.com/?utm_source=gmb_auth",
+    "rating": 4.9,
+    "reviewCount": 97,
+    "lat": 36.0622901,
+    "lng": -115.0369145,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=BP%20Royal%20Medspa&query_place_id=ChIJ1bm8MaTRyIARGxG1dDumtME",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Esthetika MedSpa - By Ageless Las Vegas",
+    "address": "2960 Sunridge Heights Pkwy suite 200, Henderson, NV 89052",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(702) 625-5688",
+    "website": "https://esthetika.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp",
+    "rating": 5,
+    "reviewCount": 51,
+    "lat": 35.9919888,
+    "lng": -115.1178752,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Esthetika%20MedSpa%20-%20By%20Ageless%20Las%20Vegas&query_place_id=ChIJkSO_cwTNyIARuGAWitVok-4",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "[ Skin + Tonic ]",
+    "address": "3511 Volunteer Blvd #120, Henderson, NV 89044",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(702) 854-6654",
+    "website": "https://www.skinandtonic702.com/",
+    "rating": 5,
+    "reviewCount": 109,
+    "lat": 35.9595784,
+    "lng": -115.1417131,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=%5B%20Skin%20%2B%20Tonic%20%5D&query_place_id=ChIJA9WUV3PRyIARVBJk7KsuQ4c",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "The Treatment Skin Boutique Henderson",
+    "address": "2245 Village View Dr suite 150, Henderson, NV 89052",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(844) 344-7546",
+    "website": "https://www.getthetreatment.com/",
+    "rating": 5,
+    "reviewCount": 81,
+    "lat": 36.0227806,
+    "lng": -115.0883027,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The%20Treatment%20Skin%20Boutique%20Henderson&query_place_id=ChIJz4OAJIrRyIARIG8qtZ_B9ec",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Botox La Belle Peau",
+    "address": "20 Via Bel Canto Suite 130, Henderson, NV 89011",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(725) 277-0704",
+    "website": "http://labelleoc.com/",
+    "rating": 4.7,
+    "reviewCount": 44,
+    "lat": 36.1024802,
+    "lng": -114.930075,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Botox%20La%20Belle%20Peau&query_place_id=ChIJm1jWCt3XyIAReRmNQTXQcyo",
+    "categories": [
+      "Medical spa",
+      "Skin care clinic",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Exotica Skin Care",
+    "address": "2480 W Horizon Ridge Pkwy Suite #130, Henderson, NV 89052",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(702) 461-6653",
+    "website": "http://www.exoticaskincare.com/",
+    "rating": 4.9,
+    "reviewCount": 543,
+    "lat": 36.0062251,
+    "lng": -115.0938647,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Exotica%20Skin%20Care&query_place_id=ChIJoTDpHAfOyIARlRstqZYCo9Q",
+    "categories": [
+      "Medical spa",
+      "Beauty product supplier",
+      "Beauty salon",
+      "Beauty supply store",
+      "Facial spa",
+      "Skin care clinic",
+      "Spa",
+      "Spa and health club",
+      "Waxing hair removal service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Oasis Beauty Medical Aesthetics",
+    "address": "2530 St Rose Pkwy Ste A-120, Henderson, NV 89074",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "",
+    "website": "https://oasisbeauty.repeatmd.app/",
+    "rating": 4.9,
+    "reviewCount": 101,
+    "lat": 36.0180991,
+    "lng": -115.1012262,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Oasis%20Beauty%20Medical%20Aesthetics&query_place_id=ChIJ1QuWWiLOyIARBtKogYqfjrE",
+    "categories": [
+      "Medical spa",
+      "Health spa",
+      "Laser hair removal service",
+      "Skin care clinic",
+      "Spa",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Tru Beauty by Trevor",
+    "address": "1701 N Green Valley Pkwy Suite 5A, Henderson, NV 89074",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(702) 852-3110",
+    "website": "https://trubeautybytrevor.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp",
+    "rating": 5,
+    "reviewCount": 527,
+    "lat": 36.0363662,
+    "lng": -115.0872396,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Tru%20Beauty%20by%20Trevor&query_place_id=ChIJocyWNpW_yIARdQeC1NcheiQ",
+    "categories": [
+      "Medical spa",
+      "Skin care clinic",
+      "Weight loss service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Ideal Image Henderson",
+    "address": "Pebble Marketplace, 1550 N Green Valley Pkwy #360, Henderson, NV 89074",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(702) 748-8110",
+    "website": "https://www.idealimage.com/locations/nevada/las-vegas-henderson-green-valley?utm_medium=yext&utm_source=extnet",
+    "rating": 4.7,
+    "reviewCount": 890,
+    "lat": 36.0296456,
+    "lng": -115.0848345,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Ideal%20Image%20Henderson&query_place_id=ChIJR7Z-jNrRyIARUydsH26LmNI",
+    "categories": [
+      "Medical spa",
+      "Laser hair removal service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Aethereal Medical Spa & Wellness",
+    "address": "8935 S Pecos Rd #21-A, Henderson, NV 89074",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "",
+    "website": "https://www.aetherealmedspa.com/",
+    "rating": 5,
+    "reviewCount": 26,
+    "lat": 36.0270444,
+    "lng": -115.1011607,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Aethereal%20Medical%20Spa%20%26%20Wellness&query_place_id=ChIJma7nW8vPyIAR40-XFlr0rJc",
+    "categories": [
+      "Medical spa",
+      "Facial spa",
+      "Health spa",
+      "Skin care clinic",
+      "Tattoo removal service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Elite Image One Med spa Anthem/Seven Hills",
+    "address": "10895 S Eastern Ave #180, Henderson, NV 89052",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(702) 722-4299",
+    "website": "http://www.eliteimageone.com/",
+    "rating": 5,
+    "reviewCount": 1,
+    "lat": 35.9936111,
+    "lng": -115.1018168,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Elite%20Image%20One%20Med%20spa%20Anthem%2FSeven%20Hills&query_place_id=ChIJu-4fcYTNyIARJCQEKSBdyTU",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "LaserAway Henderson",
+    "address": "2260 Village Walk Dr Suite 100, Henderson, NV 89052",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(702) 850-9970",
+    "website": "https://www.laseraway.com/locations/nv/henderson/?utm_source=google&utm_medium=organic&utm_campaign=website-link",
+    "rating": 4.9,
+    "reviewCount": 690,
+    "lat": 36.0214048,
+    "lng": -115.0879062,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=LaserAway%20Henderson&query_place_id=ChIJ2SRJIjbRyIARTmbuASiEiFo",
+    "categories": [
+      "Laser hair removal service",
+      "Hair removal service",
+      "Health and beauty shop",
+      "Medical spa",
+      "Skin care clinic",
+      "Tattoo removal service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Regenerate Medical Concierge",
+    "address": "2280 Paseo Verde Pkwy #100, Henderson, NV 89052",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(702) 998-8009",
+    "website": "https://regeneratemedicalconcierge.com/",
+    "rating": 4.9,
+    "reviewCount": 359,
+    "lat": 36.0196411,
+    "lng": -115.0867044,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Regenerate%20Medical%20Concierge&query_place_id=ChIJFSjI093RyIARBttN-TISMg8",
+    "categories": [
+      "Medical spa",
+      "Doctor",
+      "Internist",
+      "Medical office",
+      "Vitamin & supplements store",
+      "Weight loss service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Infuze Aesthetics & Wellness Center",
+    "address": "1590 W Horizon Ridge Pkwy #110, Henderson, NV 89012",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(702) 964-9500",
+    "website": "https://www.infuzelv.com/",
+    "rating": 4.8,
+    "reviewCount": 92,
+    "lat": 36.0167771,
+    "lng": -115.0564572,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Infuze%20Aesthetics%20%26%20Wellness%20Center&query_place_id=ChIJX-XbYwLOyIARr5XedgyZn30",
+    "categories": [
+      "Medical spa",
+      "Medical clinic",
+      "Wellness center",
+      "Vitamin & supplements store",
+      "Weight loss service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Remarkable Aesthetics",
+    "address": "43 S Stephanie St Ste 150, Henderson, NV 89012",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(702) 613-7529",
+    "website": "https://www.remarkablelv.com/",
+    "rating": 5,
+    "reviewCount": 145,
+    "lat": 36.0274946,
+    "lng": -115.0494246,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Remarkable%20Aesthetics&query_place_id=ChIJCSV4ILHRyIAR4Fr48pGo0q8",
+    "categories": [
+      "Medical spa",
+      "Facial spa",
+      "Laser hair removal service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Sculpted MD Henderson",
+    "address": "170 S Green Valley Pkwy, Henderson, NV 89012",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(702) 305-9543",
+    "website": "https://www.sculptedmd.com/nevada/henderson/",
+    "rating": 4.7,
+    "reviewCount": 68,
+    "lat": 36.0220289,
+    "lng": -115.0825085,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Sculpted%20MD%20Henderson&query_place_id=ChIJN-QVXN7RyIARZoSHxEIbaZI",
+    "categories": [
+      "Medical clinic"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Elite Aesthetics Skin Clinic",
+    "address": "2298 W Horizon Ridge Pkwy #209, Henderson, NV 89052",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(702) 530-6408",
+    "website": "http://eliteaestheticslv.com/",
+    "rating": 5,
+    "reviewCount": 41,
+    "lat": 36.006178,
+    "lng": -115.0872076,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Elite%20Aesthetics%20Skin%20Clinic&query_place_id=ChIJm9kPDDfRyIARjD7ivMA1oyA",
+    "categories": [
+      "Skin care clinic",
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Elicea Aesthetics",
+    "address": "2530 St Rose Pkwy SUITE 130 suite number 8, Henderson, NV 89074",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(702) 525-5828",
+    "website": "http://www.eliceamedspa.com/",
+    "rating": 5,
+    "reviewCount": 51,
+    "lat": 36.0179621,
+    "lng": -115.101233,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Elicea%20Aesthetics&query_place_id=ChIJp1hYa5vPyIARL6IrVs50LoE",
+    "categories": [
+      "Skin care clinic",
+      "Health and beauty shop",
+      "Permanent make-up clinic",
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "NkdSkin Aesthetics Lounge",
+    "address": "3255 St Rose Pkwy #110, Henderson, NV 89052",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(702) 370-2527",
+    "website": "http://www.nkdskin.com/",
+    "rating": 4.8,
+    "reviewCount": 43,
+    "lat": 35.9975288,
+    "lng": -115.1252798,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=NkdSkin%20Aesthetics%20Lounge&query_place_id=ChIJHz76YgHRyIARTNPZe4GPmrI",
+    "categories": [
+      "Skin care clinic",
+      "Beautician",
+      "Laser hair removal service",
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Amethyst Aesthetics",
+    "address": "1651 W Horizon Ridge Pkwy Suite 160 222, Henderson, NV 89012",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(725) 433-0577",
+    "website": "https://amethystaestheticshenderson.com/",
+    "rating": 5,
+    "reviewCount": 19,
+    "lat": 36.0156288,
+    "lng": -115.0564688,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Amethyst%20Aesthetics&query_place_id=ChIJk0JVfRzRyIARK7YPvTLPq80",
+    "categories": [
+      "Skin care clinic",
+      "Facial spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Veristic Aesthetics",
+    "address": "180 S Stephanie St Suite 140, Room 1, Henderson, NV 89074",
+    "city": "Henderson",
+    "state": "NV",
+    "phone": "(702) 623-9424",
+    "website": "http://www.veristicaesthetics.com/",
+    "rating": 5,
+    "reviewCount": 52,
+    "lat": 36.0229343,
+    "lng": -115.0465528,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Veristic%20Aesthetics&query_place_id=ChIJUyOOy4DRyIARRTNb3jcuzZQ",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  }
+]

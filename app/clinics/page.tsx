@@ -1,243 +1,175 @@
-'use client'
-import { useState, useMemo, Suspense } from 'react'
-import { useSearchParams } from 'next/navigation'
-import Navbar from '@/components/Navbar'
-import HeroSearch from '@/components/HeroSearch'
-import FilterSidebar from '@/components/FilterSidebar'
-import ResultsHeader from '@/components/ResultsHeader'
-import ClinicCard, { FeaturedClinicCard } from '@/components/ClinicCard'
-import MapStrip from '@/components/MapStrip'
-import Pagination from '@/components/Pagination'
-import BottomCTA from '@/components/BottomCTA'
-import Footer from '@/components/Footer'
-import { FilterState, Clinic } from '@/types/clinic'
-import { featuredClinic, standardClinics } from '@/data/all-clinics'
-import { CATEGORIES, matchCategories } from '@/data/categories'
-import type { CategorySlug } from '@/data/categories'
-import { haversine } from '@/lib/geo'
+import { Metadata } from 'next'
+import { fetchAllClinicsFromSupabase, fetchFeaturedClinic } from '@/data/supabase-clinics'
+import { calculateGlowScore } from '@/lib/glowscore'
+import { Clinic } from '@/types/clinic'
+import ClinicsClient from './ClinicsClient'
 
-const DEFAULT_FILTERS: FilterState = {
-  treatmentTypes: [],
-  distanceMiles: 25,
-  minRating: 0,
-  priceTiers: [],
-  verifiedOnly: false,
-  onlineBooking: false,
-  telehealth: false,
-  membershipPlans: false,
-  freeConsultation: false,
+export const metadata: Metadata = {
+  title: 'Find Top-Rated Clinics in Florida | GlowRoute',
+  description: 'Discover and compare the best clinics in Florida for your needs. Filter by specialty, location, ratings, and more.',
 }
 
-const ITEMS_PER_PAGE = 6
+const SSR_PAGE_SIZE = 20
 
-function ClinicsPageInner() {
-  const searchParams = useSearchParams()
-  const specialtyParam = searchParams.get('specialty') as CategorySlug | null
-  const activeSpecialty = specialtyParam
-    ? CATEGORIES.find(c => c.slug === specialtyParam) ?? null
-    : null
+function citySlug(city: string) {
+  return city.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
+}
 
-  const [filters, setFilters] = useState<FilterState>(DEFAULT_FILTERS)
-  const [view, setView] = useState<'grid' | 'list'>('grid')
-  const [sort, setSort] = useState('Highest Rated')
-  const [page, setPage] = useState(1)
-  const [searchTreatment, setSearchTreatment] = useState('')
-  const [searchCity, setSearchCity] = useState('Tampa')
-  const [searchDistance, setSearchDistance] = useState('25')
-  const [userLat, setUserLat] = useState<number | null>(null)
-  const [userLng, setUserLng] = useState<number | null>(null)
-
-  const handleNearMe = (lat: number, lng: number) => {
-    setUserLat(lat)
-    setUserLng(lng)
-    setSort('Nearest First')
-    setPage(1)
-  }
-
-
-  const handleSearch = (treatment: string, city: string) => {
-    setSearchTreatment(treatment.toLowerCase().trim())
-    setSearchCity(city.toLowerCase().replace(',', '').trim())
-    setPage(1)
-  }
-
-  const filteredClinics = useMemo(() => {
-    let result = [...standardClinics]
-
-    // SPECIALTY FILTER — pre-filter by category slug from ?specialty= param
-    if (activeSpecialty) {
-      result = result.filter(c => {
-        const treatments = [...(c.treatments || []), ...(c.specialtyTreatments || [])]
-        return matchCategories(treatments).includes(activeSpecialty.slug as CategorySlug)
-      })
-    }
-
-    // TEXT SEARCH — treatment keyword against name, treatments, services, description
-    if (searchTreatment) {
-      result = result.filter(c => {
-        const hay = [
-          c.name,
-          ...(c.treatments || []),
-          ...(c.specialtyTreatments || []),
-          c.description || '',
-        ].join(' ').toLowerCase()
-        return hay.includes(searchTreatment)
-      })
-    }
-
-    // CITY FILTER — match against clinic city field
-    if (searchCity && searchCity !== 'florida' && searchCity !== 'fl') {
-      result = result.filter(c => {
-        // Normalize both sides: strip ", FL", replace hyphens with spaces, lowercase
-        const normalize = (s: string) => s.toLowerCase()
-          .replace(/,?\s*(fl|florida)\s*/gi, '')
-          .replace(/-/g, ' ')
-          .replace(/st\.?\s+pete(rsburg)?/gi, 'st. petersburg')
-          .trim()
-        const clinicCity = normalize(c.city || '')
-        const searchLower = normalize(searchCity)
-        return clinicCity.includes(searchLower) || searchLower.includes(clinicCity)
-      })
-    }
-
-    // Existing filters (rating, price, verified, treatment type)
-    if (filters.minRating > 0) {
-      result = result.filter(c => c.googleRating >= filters.minRating)
-    }
-    if (filters.priceTiers.length > 0) {
-      result = result.filter(c => c.priceTier && filters.priceTiers.includes(c.priceTier))
-    }
-    if (filters.verifiedOnly) {
-      result = result.filter(c => c.verified)
-    }
-    if (filters.treatmentTypes.length > 0 && !filters.treatmentTypes.includes('All Treatments')) {
-      result = result.filter(c => {
-        const allTreatments = [...(c.treatments || []), ...(c.specialtyTreatments || [])]
-        return filters.treatmentTypes.some(ft =>
-          allTreatments.some(t => t.toLowerCase().includes(ft.toLowerCase()))
-        )
-      })
-    }
-
-    // Sort
-    if (sort === 'Highest Rated') {
-      result.sort((a, b) => b.googleRating - a.googleRating)
-    } else if (sort === 'Most Reviewed') {
-      result.sort((a, b) => b.googleReviewCount - a.googleReviewCount)
-    } else if (sort === 'Nearest First') {
-      if (userLat !== null && userLng !== null) {
-        result.sort((a, b) => {
-          const distA = a.lat != null && a.lng != null ? haversine(userLat, userLng, a.lat, a.lng) : 9999
-          const distB = b.lat != null && b.lng != null ? haversine(userLat, userLng, b.lat, b.lng) : 9999
-          return distA - distB
-        })
-      } else {
-        result.sort((a, b) => {
-          const distA = parseFloat(a.distance || '99')
-          const distB = parseFloat(b.distance || '99')
-          return distA - distB
-        })
-      }
-    }
-
-    return result
-  }, [filters, sort, searchTreatment, searchCity, userLat, userLng, activeSpecialty])
-
-  // Featured clinic is Tampa-only — hide when user has searched for another city
-  const showFeatured = !searchCity || searchCity.toLowerCase().includes('tampa')
-  const resultCount = filteredClinics.length + (showFeatured ? 1 : 0)
-
-  const totalPages = Math.ceil(filteredClinics.length / ITEMS_PER_PAGE)
-  const pagedClinics = filteredClinics.slice((page - 1) * ITEMS_PER_PAGE, page * ITEMS_PER_PAGE)
-
-  const handleFilterChange = (newFilters: FilterState) => {
-    setFilters(newFilters)
-    setPage(1)
-  }
-
-  const handleSortChange = (newSort: string) => {
-    setSort(newSort)
-    setPage(1)
-  }
-
-  // Display-friendly city label for UI components
-  const displayCity = searchCity
-    ? searchCity.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ') + ', FL'
-    : 'Tampa, FL'
+/** Lightweight server-rendered clinic card — pure HTML, no interactivity needed */
+function SSRClinicCard({ clinic }: { clinic: Clinic }) {
+  const score = calculateGlowScore(clinic)
+  const profileUrl = `/clinics/${citySlug(clinic.city)}/${clinic.slug}`
+  const treatments = clinic.treatments.slice(0, 4) // treatments is already an array in Clinic type
 
   return (
-    <div className="min-h-screen bg-ivory font-sans">
-      <Navbar />
-      <HeroSearch clinicCount={standardClinics.length + 1} defaultCity="Tampa, FL" onSearch={handleSearch} onNearMe={handleNearMe} />
-
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
-        <div className="flex flex-col md:flex-row gap-6">
-          {/* Sidebar */}
-          <div className="hidden md:block w-64 flex-shrink-0">
-            <FilterSidebar filters={filters} onChange={handleFilterChange} />
+    <article className="bg-white rounded-2xl overflow-hidden flex flex-col border border-gray-200 shadow-sm">
+      <div className="h-[168px] relative overflow-hidden bg-gradient-to-br from-[#c9d8e8] to-[#e0eff7]">
+        {(clinic.imageUrl || clinic.images?.[0]) ? (
+          <img
+            src={clinic.imageUrl || clinic.images?.[0]}
+            alt={clinic.name}
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+        ) : clinic.logo ? (
+          <img src={clinic.logo} alt={clinic.name} className="w-full h-full object-contain p-8" loading="lazy" />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center text-4xl">🏥</div>
+        )}
+        {clinic.verified && (
+          <span className="absolute top-2.5 left-2.5 bg-white/95 backdrop-blur-sm text-sage text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full border border-sage/20">✓ Verified</span>
+        )}
+      </div>
+      <div className="p-4 flex-1 flex flex-col gap-2.5">
+        <h3 className="text-[15px] font-bold text-onyx tracking-tight leading-snug">
+          <a href={profileUrl} className="hover:text-sage transition-colors">{clinic.name}</a>
+        </h3>
+        <div className="flex items-center gap-1.5 flex-wrap">
+          <div className="flex gap-0.5">
+            {[1,2,3,4,5].map(i => (
+              <span key={i} className={`text-[13px] ${i <= Math.floor(clinic.googleRating) ? 'text-champagne' : 'text-gray-200'}`}>★</span>
+            ))}
           </div>
-
-          {/* Main content */}
-          <div className="flex-1 min-w-0">
-            {activeSpecialty && (
-              <div className="mb-4 flex items-center gap-2.5">
-                <span className="text-2xl">{activeSpecialty.icon}</span>
-                <div>
-                  <p className="text-xs text-stone uppercase tracking-wider font-medium">Showing results for</p>
-                  <p className="text-base font-semibold text-onyx">{activeSpecialty.label}</p>
-                </div>
-                <a href="/clinics" className="ml-auto text-xs text-stone hover:text-sage border border-stone/20 hover:border-sage/40 rounded-full px-3 py-1 transition-colors">
-                  Clear filter ✕
-                </a>
-              </div>
-            )}
-
-            <MapStrip city={displayCity} radius={filters.distanceMiles} />
-
-            <ResultsHeader
-              count={resultCount}
-              city={displayCity}
-              view={view}
-              sort={sort}
-              onViewChange={setView}
-              onSortChange={handleSortChange}
-            />
-
-            <div className={`grid gap-5 ${view === 'grid' ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3' : 'grid-cols-1'}`}>
-              {/* Featured card — only shown when city context matches Tampa */}
-              {showFeatured && <FeaturedClinicCard clinic={featuredClinic} />}
-
-              {/* Standard clinic cards */}
-              {pagedClinics.map((clinic: Clinic) => {
-                const distMi = userLat !== null && userLng !== null && clinic.lat != null && clinic.lng != null
-                  ? haversine(userLat, userLng, clinic.lat, clinic.lng)
-                  : undefined
-                return <ClinicCard key={clinic.id} clinic={clinic} distanceMi={distMi} />
-              })}
-            </div>
-
-            {totalPages > 1 && (
-              <Pagination
-                currentPage={page}
-                totalPages={totalPages}
-                onChange={setPage}
-              />
-            )}
-
-            <BottomCTA />
-          </div>
+          <span className="text-sm font-bold text-onyx">{clinic.googleRating}</span>
+          <span className="text-xs text-gray-400">({clinic.googleReviewCount})</span>
         </div>
-      </main>
-
-      <Footer />
-    </div>
+        {(clinic.neighborhood || clinic.city) && (
+          <p className="text-xs text-gray-500">
+            📍 {clinic.neighborhood || clinic.city}{clinic.distance && ` · ${clinic.distance}`}
+          </p>
+        )}
+        {treatments.length > 0 && (
+          <div className="flex flex-wrap gap-1">
+            {treatments.map(t => (
+              <span key={t} className="text-[11px] font-medium text-stone bg-stone/10 px-2 py-0.5 rounded-full">{t}</span>
+            ))}
+          </div>
+        )}
+        {clinic.description && (
+          <p className="text-xs text-gray-500 leading-relaxed line-clamp-2 flex-1">{clinic.description}</p>
+        )}
+      </div>
+      <div className="flex items-center gap-2 px-4 py-3 border-t border-gray-100">
+        <a href={profileUrl} className="flex-1 text-center text-sm font-semibold text-white bg-sage px-3.5 py-2 rounded hover:bg-onyx transition-colors">
+          View Profile
+        </a>
+        <span className="text-xs font-semibold text-champagne">{score.total}/100 GlowScore</span>
+      </div>
+    </article>
   )
 }
 
-export default function ClinicsPage() {
+/** Server-rendered featured clinic card */
+function SSRFeaturedCard({ clinic }: { clinic: Clinic }) {
+  const profileUrl = `/clinics/${citySlug(clinic.city)}/${clinic.slug}`
   return (
-    <Suspense fallback={<div className="min-h-screen bg-ivory flex items-center justify-center"><p className="text-stone">Loading...</p></div>}>
-      <ClinicsPageInner />
-    </Suspense>
+    <article className="col-span-full">
+      <div className="bg-white rounded-2xl border border-champagne/35 shadow-featured overflow-hidden grid grid-cols-1 md:grid-cols-[300px_1fr]">
+        <div className="h-[220px] bg-gradient-to-br from-[#bdd4e7] to-[#d4ecf5] flex items-center justify-center text-5xl">
+          {(clinic.imageUrl || clinic.images?.[0]) ? (
+            <img src={clinic.imageUrl || clinic.images?.[0]} alt={clinic.name} className="w-full h-full object-cover" />
+          ) : clinic.logo ? (
+            <img src={clinic.logo} alt={clinic.name} className="max-w-[60%] max-h-[60%] object-contain opacity-80" />
+          ) : '✨'}
+        </div>
+        <div className="p-5 flex flex-col gap-2.5">
+          <div>
+            <div className="flex items-center gap-2 mb-1.5">
+              <span className="bg-white/95 backdrop-blur-sm text-sage text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full border border-sage/20">✓ Verified</span>
+              <span className="bg-champagne text-white text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full">⭐ Featured</span>
+            </div>
+            <h3 className="text-lg font-bold text-onyx tracking-tight">
+              <a href={profileUrl} className="hover:text-sage transition-colors">{clinic.name}</a>
+            </h3>
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="flex gap-0.5">
+              {[1,2,3,4,5].map(i => (
+                <span key={i} className={`text-[13px] ${i <= Math.floor(clinic.googleRating) ? 'text-champagne' : 'text-gray-200'}`}>★</span>
+              ))}
+            </div>
+            <span className="text-sm font-bold text-onyx">{clinic.googleRating}</span>
+            <span className="text-xs text-gray-400">({clinic.googleReviewCount} reviews)</span>
+          </div>
+          {clinic.address && (
+            <p className="text-xs text-gray-500">📍 {clinic.address}{clinic.distance && ` · ${clinic.distance} away`}</p>
+          )}
+          {clinic.description && <p className="text-sm text-gray-500 leading-relaxed">{clinic.description}</p>}
+          <div className="flex items-center gap-2.5 mt-auto">
+            <a href={profileUrl} className="inline-block bg-sage text-white text-sm font-semibold px-5 py-2.5 rounded hover:bg-onyx transition-colors">View Full Profile</a>
+          </div>
+        </div>
+      </div>
+    </article>
+  )
+}
+
+export default async function ClinicsPage() {
+  const allClinicsRaw = await fetchAllClinicsFromSupabase()
+  const allClinics = allClinicsRaw.filter(c => c.city && c.slug) // exclude null-city/slug records
+  const initialFeaturedClinic = await fetchFeaturedClinic()
+
+  const getInitialClinics = () => {
+    if (!initialFeaturedClinic) return allClinics.slice(0, SSR_PAGE_SIZE)
+    return allClinics
+      .filter(c => c.id !== initialFeaturedClinic.id && (c.googleRating ?? 0) > 1)
+      .sort((a, b) => calculateGlowScore(b).total - calculateGlowScore(a).total)
+      .slice(0, SSR_PAGE_SIZE)
+  }
+
+  const initialClinics = getInitialClinics()
+  const totalCount = allClinics.length // Total clinics from Supabase
+
+  return (
+    <>
+      {/* ── SSR Preview: visible to crawlers, hidden once client JS mounts ── */}
+      <div id="ssr-clinic-preview" className="min-h-screen bg-ivory font-sans">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+          <header className="mb-8">
+            <h1 className="text-3xl font-bold text-onyx tracking-tight">
+              Find Top-Rated Clinics in Florida
+            </h1>
+            <p className="text-stone mt-2">
+              Discover and compare {totalCount.toLocaleString()} med spas and aesthetic clinics.
+              Sorted by GlowScore™ — our proprietary quality ranking.
+            </p>
+          </header>
+
+          <div className="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            {initialFeaturedClinic && (initialFeaturedClinic.googleRating ?? 0) > 0 && (initialFeaturedClinic.googleReviewCount ?? 0) > 0 && <SSRFeaturedCard clinic={initialFeaturedClinic} />}
+            {initialClinics.map(clinic => (
+              <SSRClinicCard key={clinic.id} clinic={clinic} />
+            ))}
+          </div>
+
+          <nav className="mt-8 text-center text-sm text-stone" aria-label="Pagination hint">
+            Showing top {initialClinics.length} of {totalCount.toLocaleString()} clinics · Loading full interactive experience…
+          </nav>
+        </div>
+      </div>
+
+      {/* ── Client component: hydrates and replaces the SSR preview ── */}
+      <ClinicsClient allClinics={allClinics} initialClinics={initialClinics} featuredClinic={initialFeaturedClinic} />
+    </>
   )
 }

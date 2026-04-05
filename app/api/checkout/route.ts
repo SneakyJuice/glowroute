@@ -2,6 +2,37 @@ import { NextRequest, NextResponse } from 'next/server'
 import { getStripe, PLANS, PlanKey } from '@/lib/stripe'
 import { SITE_URL } from '@/lib/config'
 
+// GET /api/checkout?tier=starter|growth|pro
+// Allows direct links from /pricing page CTAs
+export async function GET(req: NextRequest) {
+  const { searchParams } = new URL(req.url)
+  const tier = searchParams.get('tier') as PlanKey | null
+
+  if (!tier || !PLANS[tier]) {
+    return NextResponse.redirect(new URL('/pricing', req.url))
+  }
+
+  try {
+    const stripe = getStripe()
+    const plan = PLANS[tier]
+    const session = await stripe.checkout.sessions.create({
+      mode: 'subscription',
+      payment_method_types: ['card'],
+      line_items: [{ price: plan.priceId, quantity: 1 }],
+      metadata: { tier },
+      subscription_data: { metadata: { tier } },
+      success_url: `${SITE_URL}/claim/success?session_id={CHECKOUT_SESSION_ID}&tier=${tier}`,
+      cancel_url: `${SITE_URL}/pricing`,
+      allow_promotion_codes: true,
+    })
+    return NextResponse.redirect(session.url!)
+  } catch (err) {
+    const message = err instanceof Error ? err.message : 'Unknown error'
+    console.error('[checkout GET]', message)
+    return NextResponse.redirect(new URL('/pricing', req.url))
+  }
+}
+
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json() as {

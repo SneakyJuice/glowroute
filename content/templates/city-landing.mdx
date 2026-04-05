@@ -1,0 +1,23 @@
+---
+title: "Best Med Spas in {{city}}"
+description: "Discover the top-rated med spas in {{city}} based on customer reviews and expert ratings."
+---
+
+# Best Med Spas in {{city}}
+
+Here are the top {{clinics.length}} med spas in {{city}} based on our rigorous evaluation:
+
+{% for clinic in clinics %}
+## {{clinic.name}}
+- **Rating:** {{clinic.glow_score}}/10
+- **Specialties:** 
+- **Address:** {{clinic.address}}
+
+{{clinic.description}}
+
+[Visit Website]({{clinic.website}})
+{% endfor %}
+
+### About {{city}}
+
+The med spa industry in {{city}} is thriving with {{city_stats.clinic_count}} clinics and an average rating of {{city_stats.avg_score}}.

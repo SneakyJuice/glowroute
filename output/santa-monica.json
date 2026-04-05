@@ -1,0 +1,480 @@
+[
+  {
+    "name": "Santa Monica Medical Aesthetics",
+    "address": "1821 Wilshire Blvd #605, Santa Monica, CA 90403",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(310) 403-9576",
+    "website": "https://santamonicamedicalaesthetics.com/",
+    "rating": 5,
+    "reviewCount": 35,
+    "lat": 34.0306025,
+    "lng": -118.4847327,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Santa%20Monica%20Medical%20Aesthetics&query_place_id=ChIJCbBA0oalwoARoLWwp_FVQ1U",
+    "categories": [
+      "Medical spa",
+      "Skin care clinic",
+      "Tanning salon",
+      "Teeth whitening service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Ocean Aesthetics",
+    "address": "2222 Santa Monica Blvd #201, Santa Monica, CA 90404",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(310) 829-4449",
+    "website": "https://theoceanaesthetics.com/",
+    "rating": 4.9,
+    "reviewCount": 53,
+    "lat": 34.0303795,
+    "lng": -118.4776012,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Ocean%20Aesthetics&query_place_id=ChIJ-8e1_Um7woAR5M6CjuCeUDI",
+    "categories": [
+      "Skin care clinic",
+      "Facial spa",
+      "Laser hair removal service",
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "SkinCeuticals SkinLab Santa Monica by Cavendish Clinic",
+    "address": "2801 Main St, Santa Monica, CA 90405",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(310) 310-2003",
+    "website": "http://www.skinlab-la.com/",
+    "rating": 4.9,
+    "reviewCount": 157,
+    "lat": 34.0003724,
+    "lng": -118.4815814,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=SkinCeuticals%20SkinLab%20Santa%20Monica%20by%20Cavendish%20Clinic&query_place_id=ChIJLdS8Dru7woARjiz3haI_UbM",
+    "categories": [
+      "Medical clinic",
+      "Facial spa",
+      "Skin care clinic",
+      "Weight loss service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Younique Surgery Center & Medical Spa - Santa Monica",
+    "address": "1317 5th St #200, Santa Monica, CA 90401",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(424) 622-0502",
+    "website": "https://www.youniquecosmeticsurgery.com/?utm_source=google&utm_medium=organic&utm_campaign=google_business_profile&utm_content=santa_monica",
+    "rating": 4.9,
+    "reviewCount": 230,
+    "lat": 34.0182668,
+    "lng": -118.4951174,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Younique%20Surgery%20Center%20%26%20Medical%20Spa%20-%20Santa%20Monica&query_place_id=ChIJoa_xHNGkwoARiaI2f-806CY",
+    "categories": [
+      "Plastic surgery clinic",
+      "Medical spa",
+      "Skin care clinic",
+      "Weight loss service",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "NakedMD Med Spa Santa Monica",
+    "address": "2730 Wilshire Blvd #200, Santa Monica, CA 90403",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(424) 228-9778",
+    "website": "https://www.nakedmd.com/pages/locations-santa-monica-ca",
+    "rating": 4.9,
+    "reviewCount": 431,
+    "lat": 34.037082,
+    "lng": -118.4756741,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=NakedMD%20Med%20Spa%20Santa%20Monica&query_place_id=ChIJj9wJhgC7woARIYF39Dti9ck",
+    "categories": [
+      "Medical spa",
+      "Facial spa",
+      "Health and beauty shop",
+      "Skin care clinic"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Skin by Lovely",
+    "address": "2811 Wilshire Blvd # 900, Santa Monica, CA 90403",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(877) 568-3594",
+    "website": "https://www.skinbylovely.com/",
+    "rating": 5,
+    "reviewCount": 541,
+    "lat": 34.0379064,
+    "lng": -118.4753998,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Skin%20by%20Lovely&query_place_id=ChIJYVj9Z0-7woAR4qn2QBt_HUI",
+    "categories": [
+      "Medical spa",
+      "Medical clinic",
+      "Skin care clinic"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "KAO Aesthetics",
+    "address": "900 Wilshire Blvd Suite 100, Santa Monica, CA 90401",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(310) 315-3022",
+    "website": "https://www.kaoaesthetics.com/",
+    "rating": 4.7,
+    "reviewCount": 35,
+    "lat": 34.0230014,
+    "lng": -118.4931476,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=KAO%20Aesthetics&query_place_id=ChIJSdGvF0q7woARoPMLGfgJpbg",
+    "categories": [
+      "Skin care clinic",
+      "Laser hair removal service",
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Alchemy 43 Santa Monica",
+    "address": "1230 Montana Ave, Santa Monica, CA 90403",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(310) 554-7343",
+    "website": "https://alchemy43.com/",
+    "rating": 4.4,
+    "reviewCount": 105,
+    "lat": 34.0311232,
+    "lng": -118.4962056,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Alchemy%2043%20Santa%20Monica&query_place_id=ChIJLcoILM6lwoARQGPlsg4LEco",
+    "categories": [
+      "Medical spa",
+      "Skin care clinic"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Ocean Avenue Aesthetics",
+    "address": "1327 Ocean Ave Ste E, Santa Monica, CA 90401",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(310) 310-3850",
+    "website": "http://oceanavenueaesthetics.com/",
+    "rating": 5,
+    "reviewCount": 8,
+    "lat": 34.0150674,
+    "lng": -118.498615,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Ocean%20Avenue%20Aesthetics&query_place_id=ChIJXTDRkOalwoARqGGL6xGXZDE",
+    "categories": [
+      "Medical spa"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Cienega Medical - Santa Monica",
+    "address": "902 Broadway, Santa Monica, CA 90401",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(310) 341-2741",
+    "website": "https://cienegaspa.com/",
+    "rating": 4.8,
+    "reviewCount": 571,
+    "lat": 34.018914,
+    "lng": -118.488588,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Cienega%20Medical%20-%20Santa%20Monica&query_place_id=ChIJFSrFBM2kwoAR3tM39r1mS5M",
+    "categories": [
+      "Medical spa",
+      "Dermatologist",
+      "Facial spa",
+      "Laser hair removal service",
+      "Skin care clinic",
+      "Vitamin & supplements store",
+      "Weight loss service",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Harmony Aesthetics Center",
+    "address": "11959 Santa Monica Blvd, Los Angeles, CA 90025",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(424) 372-9088",
+    "website": "https://www.harmonyaestheticscenter.com/?utm_source=gbp&utm_medium=organic&utm_campaign=google_business_organic_la",
+    "rating": 5,
+    "reviewCount": 255,
+    "lat": 34.0414695,
+    "lng": -118.4619445,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Harmony%20Aesthetics%20Center&query_place_id=ChIJWwdYPhe7woARkSaoSSG1hlU",
+    "categories": [
+      "Medical spa",
+      "Facial spa",
+      "Hair removal service",
+      "Hair replacement service",
+      "Laser hair removal service",
+      "Weight loss service",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Holländer Clinic",
+    "address": "2730 Wilshire Blvd # 265, Santa Monica, CA 90403",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(310) 388-9854",
+    "website": "https://www.hollanderclinic.com/?utm_source=GMBlisting&utm_medium=organic&utm_campaign=gmb",
+    "rating": 5,
+    "reviewCount": 16,
+    "lat": 34.0371068,
+    "lng": -118.4757332,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Holl%C3%A4nder%20Clinic&query_place_id=ChIJo6Y_DNe7woARgCj_dU29TZI",
+    "categories": [
+      "Skin care clinic",
+      "Facial spa",
+      "Hair replacement service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Dakota Aesthetics",
+    "address": "1150 Yale St, Santa Monica, CA 90403",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(818) 427-9845",
+    "website": "http://www.dakotaaesthetics.com/",
+    "rating": 5,
+    "reviewCount": 20,
+    "lat": 34.0383661,
+    "lng": -118.4750599,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Dakota%20Aesthetics&query_place_id=ChIJEbbKUQC7woARRLvtD2ukPuU",
+    "categories": [
+      "Skin care clinic"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Restore Hyper Wellness",
+    "address": "1130 Market St, Lynnfield, MA 01940",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(781) 650-8487",
+    "website": "http://www.restore.com/locations/ma-lynnfield-ma004?utm_source=gmb&utm_medium=Yext&y_source=1_NjMzNjc2MTItNzE1LWxvY2F0aW9uLndlYnNpdGU%3D",
+    "rating": 4.9,
+    "reviewCount": 399,
+    "lat": 42.5172049,
+    "lng": -71.0358729,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Restore%20Hyper%20Wellness&query_place_id=ChIJi0MY-IoN44kRgxWY8FNsAes",
+    "categories": [
+      "Medical spa",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Restore Hyper Wellness",
+    "address": "544 Legacy Pl, Dedham, MA 02026",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(781) 366-0591",
+    "website": "http://www.restore.com/locations/ma-dedham-ma002?utm_source=gmb&utm_medium=Yext&y_source=1_NDQ1NzE5NDUtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D",
+    "rating": 4.9,
+    "reviewCount": 249,
+    "lat": 42.229892,
+    "lng": -71.1774123,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Restore%20Hyper%20Wellness&query_place_id=ChIJq9IPhN1_44kR8UhsAsHkzx0",
+    "categories": [
+      "Medical spa",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Restore Hyper Wellness",
+    "address": "100 Gorham Rd, South Portland, ME 04106",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(207) 250-4444",
+    "website": "http://www.restore.com/locations/me-south-portland-me001?utm_source=gmb&utm_medium=Yext&y_source=1_Njg4NzM3MDItNzE1LWxvY2F0aW9uLndlYnNpdGU%3D",
+    "rating": 4.9,
+    "reviewCount": 151,
+    "lat": 43.6334942,
+    "lng": -70.3221896,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Restore%20Hyper%20Wellness&query_place_id=ChIJo2-8v0SZskwRn_qIPO20EpM",
+    "categories": [
+      "Medical spa",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Restore Hyper Wellness",
+    "address": "340 Grand Union Blvd Unit C, Somerville, MA 02145",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(617) 600-3660",
+    "website": "http://www.restore.com/locations/ma-somerville-ma014?utm_source=gmb&utm_medium=Yext&y_source=1_OTg2OTkwODEtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D",
+    "rating": 5,
+    "reviewCount": 186,
+    "lat": 42.3918633,
+    "lng": -71.0802664,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Restore%20Hyper%20Wellness&query_place_id=ChIJ_3lfJtlw44kRhQUM0cH7zqc",
+    "categories": [
+      "Medical spa",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Restore Hyper Wellness",
+    "address": "28 S River Rd, Bedford, NH 03110",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(603) 263-8407",
+    "website": "https://www.restore.com/locations/nh-bedford-nh001?utm_source=gmb&utm_medium=Yext&y_source=1_MzgxNjcyNjgtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D",
+    "rating": 4.9,
+    "reviewCount": 196,
+    "lat": 42.9632279,
+    "lng": -71.4805131,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Restore%20Hyper%20Wellness&query_place_id=ChIJJ2Kvdx5J4okR_M-W_ST7YZY",
+    "categories": [
+      "Medical spa",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Kalologie | Santa Monica",
+    "address": "2530 San Vicente Blvd, Santa Monica, CA 90402",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(310) 310-3776",
+    "website": "https://kalologie.com/our-locations/kalologie-in-santa-monica",
+    "rating": 4.8,
+    "reviewCount": 40,
+    "lat": 34.0480606,
+    "lng": -118.4919403,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Kalologie%20%7C%20Santa%20Monica&query_place_id=ChIJUXc9FCCjwoARRharjQfVk9c",
+    "categories": [
+      "Medical spa",
+      "Facial spa",
+      "IV therapy service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Restore Hyper Wellness",
+    "address": "94 Derby St Suite 211, Hingham, MA 02043",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(781) 385-7342",
+    "website": "https://www.restore.com/locations/ma-hingham-ma001?utm_source=gmb&utm_medium=Yext&y_source=1_MzE2Mjk4NzMtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D",
+    "rating": 4.9,
+    "reviewCount": 318,
+    "lat": 42.1782726,
+    "lng": -70.9082325,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Restore%20Hyper%20Wellness&query_place_id=ChIJNb6vr4Vj44kReE15CzZfytU",
+    "categories": [
+      "Medical spa",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Restore Hyper Wellness",
+    "address": "55 Needham St, Newton, MA 02461",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(617) 467-5728",
+    "website": "https://www.restore.com/locations/ma-newton-ma003?utm_source=gmb&utm_medium=Yext&y_source=1_MzE2Mjk4NzQtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D",
+    "rating": 4.9,
+    "reviewCount": 236,
+    "lat": 42.3155123,
+    "lng": -71.2106566,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Restore%20Hyper%20Wellness&query_place_id=ChIJmw6-MRGD44kRNRmObW8-CCQ",
+    "categories": [
+      "Medical spa",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Restore Hyper Wellness",
+    "address": "345 N Main St Suite 105, West Hartford, CT 06117",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(860) 945-4300",
+    "website": "https://www.restore.com/locations/ct-west-hartford-ct015?utm_source=gmb&utm_medium=Yext&y_source=1_MzE2Mjk4MzktNzE1LWxvY2F0aW9uLndlYnNpdGU%3D",
+    "rating": 4.8,
+    "reviewCount": 232,
+    "lat": 41.785189,
+    "lng": -72.7479087,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Restore%20Hyper%20Wellness&query_place_id=ChIJJz8FzBmr54kRG5sXBzUU2eM",
+    "categories": [
+      "Medical spa",
+      "Wellness center"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Santa Monica MedSpa",
+    "address": "1908 Santa Monica Blvd Ste3, Santa Monica, CA 90404",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(310) 829-5475",
+    "website": "https://santamonicamedspa.md/",
+    "rating": null,
+    "reviewCount": 0,
+    "lat": 34.0280316,
+    "lng": -118.4806515,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Santa%20Monica%20MedSpa&query_place_id=ChIJn9yLg5S7woARLvD5XiEJlP4",
+    "categories": [
+      "Esthetics service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Dripology",
+    "address": "1411 7th St #120, Santa Monica, CA 90401",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(424) 255-4144",
+    "website": "http://dripology.co/",
+    "rating": 5,
+    "reviewCount": 458,
+    "lat": 34.0185792,
+    "lng": -118.4916578,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Dripology&query_place_id=ChIJUXu-UA6lwoAR5cafke_SOw8",
+    "categories": [
+      "Medical spa",
+      "Skin care clinic",
+      "Vitamin & supplements store",
+      "Weight loss service"
+    ],
+    "enriched": false
+  },
+  {
+    "name": "Skin Remedies",
+    "address": "1711 Ocean Park Blvd, Santa Monica, CA 90405",
+    "city": "Santa Monica",
+    "state": "CA",
+    "phone": "(310) 453-6474",
+    "website": "http://www.skinremedies.com/",
+    "rating": 4.9,
+    "reviewCount": 32,
+    "lat": 34.0128503,
+    "lng": -118.4665735,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Skin%20Remedies&query_place_id=ChIJD6isjza7woARvxV3MNXFbT8",
+    "categories": [
+      "Medical spa",
+      "Beauty salon",
+      "Facial spa",
+      "Laser hair removal service",
+      "Skin care clinic"
+    ],
+    "enriched": false
+  }
+]

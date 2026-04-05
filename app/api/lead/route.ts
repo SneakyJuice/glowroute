@@ -49,7 +49,7 @@ export async function POST(req: NextRequest) {
               <h2 style="color: #b45e8f;">Hi ${name},</h2>
               <p>Thanks for reaching out about <strong>${clinicName}</strong> on GlowRoute.</p>
               <p>Your inquiry has been sent directly to the clinic. You can typically expect a response within 1–2 business days.</p>
-              <p>In the meantime, feel free to explore more wellness options near you at <a href="https://glowroute.sealey.ai" style="color: #b45e8f;">GlowRoute</a>.</p>
+              <p>In the meantime, feel free to explore more wellness options near you at <a href="https://glowroute.io" style="color: #b45e8f;">GlowRoute</a>.</p>
               <br/>
               <p style="color: #666;">— The GlowRoute Team</p>
             </div>
