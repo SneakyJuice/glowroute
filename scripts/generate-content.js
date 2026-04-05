@@ -25,6 +25,18 @@ program
 program.parse(process.argv);
 const options = program.opts();
 
+async function fetchTopCities(limit = 50) {
+  const { data, error } = await supabase
+    .from('clinics')
+    .select('city', { count: 'exact', head: true })
+    .eq('visibility', 'visible')
+    .order('count', { ascending: false })
+    .limit(limit);
+
+  if (error) throw error;
+  return data;
+}
+
 async function fetchClinicsByCity(city, limit = 3) {
   const { data, error } = await supabase
     .from('clinics')
@@ -67,12 +79,7 @@ async function generateContent() {
 
     if (options.batch) {
       // Batch mode - generate for top cities
-      const { data: cities } = await supabase
-        .from('clinics')
-        .select('city')
-        .order('glow_score', { ascending: false })
-        .limit(options.count);
-
+      const cities = await fetchTopCities(50);
       for (const { city } of cities) {
         await processCity(city, template);
       }
