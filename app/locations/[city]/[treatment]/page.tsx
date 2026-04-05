@@ -58,12 +58,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: meta.title || 'GlowRoute',
     description: meta.description || '',
     alternates: {
-      canonical: `https://glowroute.sealey.ai/treatments/${params.city}/${params.treatment}`,
+      canonical: `https://glowroute.sealey.ai/locations/${params.city}/${params.treatment}`,
     },
     openGraph: {
       title: meta.title,
       description: meta.description,
-      url: `https://glowroute.sealey.ai/treatments/${params.city}/${params.treatment}`,
+      url: `https://glowroute.sealey.ai/locations/${params.city}/${params.treatment}`,
     },
   }
 }
