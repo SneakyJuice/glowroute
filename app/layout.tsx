@@ -35,6 +35,9 @@ export const metadata: Metadata = {
     description: 'Discover the most curated aesthetic wellness providers near you — verified clinics, real results.',
     images: [`${SITE_URL}/og-default.jpg`],
   },
+  alternates: {
+    canonical: SITE_URL,
+  },
 }
 
 export default function RootLayout({
