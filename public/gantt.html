@@ -31,20 +31,10 @@
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
-
-  body {
-    font-family: 'Inter', -apple-system, sans-serif;
-    background: var(--bg);
-    color: var(--primary);
-    padding: 0;
-  }
+  body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); color: var(--primary); padding: 0; }
 
   /* HEADER */
-  .header {
-    background: linear-gradient(135deg, #0F172A 0%, #1E293B 40%, #312E81 100%);
-    color: white;
-    padding: 36px 48px 28px;
-  }
+  .header { background: linear-gradient(135deg, #0F172A 0%, #1E293B 40%, #312E81 100%); color: white; padding: 36px 48px 28px; }
   .header-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; }
   .header-label { font-size: 10px; font-weight: 700; letter-spacing: 2.5px; color: #818CF8; text-transform: uppercase; margin-bottom: 6px; }
   .header h1 { font-size: 28px; font-weight: 900; margin-bottom: 4px; }
@@ -52,16 +42,8 @@
   .header-meta { display: flex; gap: 24px; font-size: 12px; color: #94A3B8; margin-top: 8px; }
   .header-meta strong { color: white; }
 
-  /* PROGRESS BAR */
-  .progress-banner {
-    background: #1E293B;
-    border-top: 1px solid #334155;
-    padding: 12px 48px;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
+  /* PROGRESS BANNER */
+  .progress-banner { background: #1E293B; border-top: 1px solid #334155; padding: 12px 48px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
   .progress-label { font-size: 11px; font-weight: 700; color: #94A3B8; text-transform: uppercase; letter-spacing: 1px; white-space: nowrap; }
   .progress-track { flex: 1; min-width: 200px; height: 8px; background: #334155; border-radius: 4px; overflow: hidden; }
   .progress-fill { height: 100%; background: linear-gradient(90deg, #6366F1, #818CF8); border-radius: 4px; transition: width 0.4s ease; }
@@ -69,403 +51,117 @@
   .progress-pct { font-size: 11px; color: #818CF8; margin-left: 4px; }
 
   /* LEGEND */
-  .legend-bar {
-    background: white;
-    border-bottom: 1px solid var(--border);
-    padding: 14px 48px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
+  .legend-bar { background: white; border-bottom: 1px solid var(--border); padding: 14px 48px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
   .legend-title { font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-right: 8px; }
-  .legend-item {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 12px;
-    color: #475569;
-    background: #F8FAFC;
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 4px 10px;
-  }
+  .legend-item { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: #475569; background: #F8FAFC; border: 1px solid var(--border); border-radius: 6px; padding: 4px 10px; }
   .legend-dot { width: 14px; height: 10px; border-radius: 3px; flex-shrink: 0; }
-  .legend-done {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    font-size: 12px;
-    color: #475569;
-    background: #F1F5F9;
-    border: 1px dashed #CBD5E1;
-    border-radius: 6px;
-    padding: 4px 10px;
-  }
+  .legend-done { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: #475569; background: #F1F5F9; border: 1px dashed #CBD5E1; border-radius: 6px; padding: 4px 10px; }
+  .legend-wip { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: #059669; background: #ECFDF5; border: 1px solid #6EE7B7; border-radius: 6px; padding: 4px 10px; font-weight: 600; }
 
   /* FILTERS */
-  .filter-bar {
-    background: white;
-    border-bottom: 1px solid var(--border);
-    padding: 10px 48px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    flex-wrap: wrap;
-  }
+  .filter-bar { background: white; border-bottom: 1px solid var(--border); padding: 10px 48px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
   .filter-label { font-size: 11px; font-weight: 600; color: var(--muted); margin-right: 4px; }
-  .filter-btn {
-    font-family: 'Inter', sans-serif;
-    font-size: 12px;
-    font-weight: 600;
-    padding: 5px 12px;
-    border-radius: 6px;
-    border: 1px solid var(--border);
-    background: white;
-    color: #475569;
-    cursor: pointer;
-    transition: all 0.15s;
-  }
+  .filter-btn { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 600; padding: 5px 12px; border-radius: 6px; border: 1px solid var(--border); background: white; color: #475569; cursor: pointer; transition: all 0.15s; }
   .filter-btn:hover { background: #F1F5F9; }
   .filter-btn.active { background: var(--primary); color: white; border-color: var(--primary); }
-
   .filter-sep { width: 1px; height: 20px; background: var(--border); margin: 0 4px; }
-
-  .clear-btn {
-    font-family: 'Inter', sans-serif;
-    font-size: 11px;
-    font-weight: 600;
-    padding: 4px 10px;
-    border-radius: 6px;
-    border: 1px solid #FCA5A5;
-    background: #FFF5F5;
-    color: #DC2626;
-    cursor: pointer;
-    transition: all 0.15s;
-  }
+  .clear-btn { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 6px; border: 1px solid #FCA5A5; background: #FFF5F5; color: #DC2626; cursor: pointer; transition: all 0.15s; }
   .clear-btn:hover { background: #FEE2E2; }
 
-  /* GANTT CONTAINER */
-  .gantt-wrap {
-    padding: 24px 48px 48px;
-    overflow-x: auto;
-  }
-
-  /* GANTT TABLE */
-  .gantt {
-    width: 100%;
-    border-collapse: separate;
-    border-spacing: 0;
-    min-width: 1100px;
-  }
+  /* GANTT */
+  .gantt-wrap { padding: 24px 48px 48px; overflow-x: auto; }
+  .gantt { width: 100%; border-collapse: separate; border-spacing: 0; min-width: 1100px; }
 
   /* HEADER ROW */
-  .gantt thead th {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background: #F8FAFC;
-    font-size: 10px;
-    font-weight: 700;
-    color: var(--muted);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding: 0;
-    border-bottom: 2px solid var(--border);
-  }
-
-  .gantt .week-header {
-    text-align: center;
-    padding: 10px 4px 4px;
-    font-size: 11px;
-    font-weight: 800;
-    color: var(--primary);
-    letter-spacing: 0.5px;
-  }
-
-  .gantt .day-header {
-    text-align: center;
-    padding: 4px 2px 8px;
-    font-size: 9px;
-    font-weight: 600;
-    color: #94A3B8;
-    min-width: 34px;
-    width: 34px;
-  }
+  .gantt thead th { position: sticky; top: 0; z-index: 10; background: #F8FAFC; font-size: 10px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; padding: 0; border-bottom: 2px solid var(--border); }
+  .gantt .week-header { text-align: center; padding: 10px 4px 4px; font-size: 11px; font-weight: 800; color: var(--primary); letter-spacing: 0.5px; }
+  .gantt .day-header { text-align: center; padding: 4px 2px 8px; font-size: 9px; font-weight: 600; color: #94A3B8; min-width: 34px; width: 34px; }
   .gantt .day-header.weekend { color: #CBD5E1; }
-  .gantt .day-header.today-hdr { color: var(--accent); font-weight: 800; }
-
-  .gantt .task-header {
-    text-align: left;
-    padding: 10px 16px;
-    min-width: 280px;
-    width: 280px;
-    font-size: 11px;
-    color: var(--muted);
-  }
+  .gantt .day-header.today-hdr { color: var(--accent); font-weight: 800; background: #EEF2FF; }
+  .gantt .task-header { text-align: left; padding: 10px 16px; min-width: 300px; width: 300px; font-size: 11px; color: var(--muted); }
 
   /* CATEGORY ROW */
-  .gantt .cat-row td {
-    background: #F1F5F9;
-    padding: 8px 16px;
-    font-size: 12px;
-    font-weight: 800;
-    color: var(--primary);
-    letter-spacing: 0.3px;
-    border-top: 2px solid var(--border);
-    border-bottom: 1px solid var(--border);
-  }
-  .gantt .cat-row .cat-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-  }
-  .gantt .cat-row .cat-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 3px;
-  }
-  .gantt .cat-row .cat-count {
-    margin-left: auto;
-    font-size: 10px;
-    font-weight: 600;
-    color: var(--muted);
-  }
+  .gantt .cat-row td { background: #F1F5F9; padding: 8px 16px; font-size: 12px; font-weight: 800; color: var(--primary); letter-spacing: 0.3px; border-top: 2px solid var(--border); border-bottom: 1px solid var(--border); }
+  .gantt .cat-row .cat-badge { display: inline-flex; align-items: center; gap: 6px; }
+  .gantt .cat-row .cat-dot { width: 10px; height: 10px; border-radius: 3px; }
 
   /* TASK ROWS */
-  .gantt tbody td {
-    padding: 0;
-    border-bottom: 1px solid #F1F5F9;
-    height: 40px;
-    vertical-align: middle;
-    transition: background 0.15s;
-  }
-
-  .gantt .task-name {
-    padding: 6px 16px;
-    font-size: 13px;
-    font-weight: 500;
-    color: #334155;
-    white-space: nowrap;
-    background: white;
-    border-right: 1px solid var(--border);
-    position: relative;
-    cursor: pointer;
-    user-select: none;
-    transition: background 0.15s;
-  }
+  .gantt tbody td { padding: 0; border-bottom: 1px solid #F1F5F9; height: 40px; vertical-align: middle; }
+  .gantt .task-name { padding: 6px 16px; font-size: 13px; font-weight: 500; color: #334155; white-space: nowrap; background: white; border-right: 1px solid var(--border); position: relative; cursor: pointer; user-select: none; transition: background 0.15s; }
   .gantt .task-name:hover { background: #F8FAFC; }
-
-  .gantt .task-name .task-id {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 10px;
-    font-weight: 600;
-    color: var(--accent);
-    background: #EEF2FF;
-    padding: 1px 5px;
-    border-radius: 3px;
-    margin-right: 6px;
-  }
-  .gantt .task-name .priority {
-    font-size: 10px;
-    font-weight: 700;
-    padding: 1px 6px;
-    border-radius: 3px;
-    margin-left: 6px;
-  }
+  .gantt .task-name .task-id { font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 600; color: var(--accent); background: #EEF2FF; padding: 1px 5px; border-radius: 3px; margin-right: 6px; }
+  .gantt .task-name .priority { font-size: 10px; font-weight: 700; padding: 1px 6px; border-radius: 3px; margin-left: 6px; }
   .gantt .task-name .priority.p0 { background: #ECFDF5; color: #059669; }
   .gantt .task-name .priority.p1 { background: #EEF2FF; color: #4F46E5; }
   .gantt .task-name .priority.p2 { background: #FFFBEB; color: #D97706; }
 
   /* DONE STATE */
-  .task-row.done .task-name {
-    background: #F8FAFC;
-    color: #94A3B8;
-  }
-  .task-row.done .task-name .task-id {
-    background: #F1F5F9;
-    color: #94A3B8;
-  }
+  .task-row.done .task-name { background: #F8FAFC; color: #94A3B8; }
+  .task-row.done .task-name .task-id { background: #F1F5F9; color: #94A3B8; }
   .task-row.done .task-name .priority { opacity: 0.4; }
-  .task-row.done .task-name .task-label-text {
-    text-decoration: line-through;
-    color: #94A3B8;
-  }
+  .task-row.done .task-name .task-label-text { text-decoration: line-through; color: #94A3B8; }
   .task-row.done td { background: #FAFBFC !important; }
+  .task-row.done .bar { background: linear-gradient(90deg, #CBD5E1, #E2E8F0) !important; opacity: 0.7; }
+  .done-check { display: inline-flex; align-items: center; justify-content: center; width: 16px; height: 16px; border-radius: 50%; background: #10B981; color: white; font-size: 9px; margin-right: 6px; flex-shrink: 0; vertical-align: middle; }
 
-  .done-check {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: #10B981;
-    color: white;
-    font-size: 9px;
-    margin-right: 6px;
-    flex-shrink: 0;
-    vertical-align: middle;
-  }
+  /* IN-PROGRESS STATE */
+  .task-row.in-progress .task-name { background: #FFFBEB; }
+  .task-row.in-progress td { background: #FFFBEB !important; }
+  .live-badge { display: inline-flex; align-items: center; gap: 3px; font-size: 9px; font-weight: 700; color: #059669; background: #ECFDF5; border: 1px solid #6EE7B7; padding: 1px 5px; border-radius: 3px; margin-left: 6px; text-transform: uppercase; letter-spacing: 0.5px; vertical-align: middle; }
+  .live-dot { width: 6px; height: 6px; border-radius: 50%; background: #10B981; display: inline-block; animation: live-pulse 1s ease-in-out infinite; }
+  @keyframes live-pulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(0.7); } }
+  .task-row.in-progress .bar { animation: bar-glow 2s ease-in-out infinite; }
+  @keyframes bar-glow { 0%, 100% { filter: brightness(1); box-shadow: none; } 50% { filter: brightness(1.25); box-shadow: 0 0 10px rgba(99,102,241,0.35); } }
 
   /* GRID CELLS */
-  .gantt .cell {
-    border-left: 1px solid #F8FAFC;
-    position: relative;
-    background: white;
-  }
+  .gantt .cell { border-left: 1px solid #F8FAFC; position: relative; background: white; }
   .gantt .cell.weekend { background: #FAFBFC; }
+  .gantt .cell.today-col { background: #F5F3FF !important; border-left: 2px solid #6366F1 !important; }
 
   /* BARS */
-  .bar {
-    position: absolute;
-    top: 8px;
-    bottom: 8px;
-    left: 2px;
-    right: 2px;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 0;
-    transition: transform 0.15s, box-shadow 0.15s, opacity 0.2s;
-  }
-  .bar:hover {
-    transform: scaleY(1.15);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    z-index: 5;
-  }
-
+  .bar { position: absolute; top: 8px; bottom: 8px; left: 2px; right: 2px; border-radius: 5px; display: flex; align-items: center; justify-content: center; font-size: 0; transition: transform 0.15s, box-shadow 0.15s, opacity 0.2s; }
+  .bar:hover { transform: scaleY(1.15); box-shadow: 0 2px 8px rgba(0,0,0,0.15); z-index: 5; }
   .bar.start { border-radius: 5px 0 0 5px; right: 0; }
   .bar.end { border-radius: 0 5px 5px 0; left: 0; }
   .bar.mid { border-radius: 0; left: 0; right: 0; }
   .bar.single { border-radius: 5px; }
-
   .bar.seo { background: linear-gradient(90deg, #10B981, #34D399); }
   .bar.crm { background: linear-gradient(90deg, #6366F1, #818CF8); }
   .bar.outbound { background: linear-gradient(90deg, #F59E0B, #FBBF24); }
   .bar.content { background: linear-gradient(90deg, #8B5CF6, #A78BFA); }
   .bar.infra { background: linear-gradient(90deg, #0D9488, #2DD4BF); }
 
-  /* DONE BAR */
-  .task-row.done .bar { background: linear-gradient(90deg, #CBD5E1, #E2E8F0) !important; opacity: 0.7; }
-
   /* MILESTONE */
-  .milestone-marker {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
-    width: 14px;
-    height: 14px;
-    background: var(--milestone);
-    border: 2px solid white;
-    box-shadow: 0 1px 4px rgba(239,68,68,0.4);
-    transition: opacity 0.2s;
-  }
-
-  /* MILESTONE DONE */
+  .milestone-marker { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) rotate(45deg); width: 14px; height: 14px; background: var(--milestone); border: 2px solid white; box-shadow: 0 1px 4px rgba(239,68,68,0.4); }
   .task-row.done .milestone-marker { background: #10B981; box-shadow: 0 1px 4px rgba(16,185,129,0.4); }
-
-  /* MILESTONE ROW */
-  .gantt .milestone-row td {
-    background: #FFFBFB;
-    border-bottom: 1px solid #FEE2E2;
-    height: 36px;
-  }
-  .gantt .milestone-row .task-name {
-    background: #FFFBFB;
-    font-weight: 700;
-    color: #DC2626;
-    font-size: 12px;
-  }
+  .gantt .milestone-row td { background: #FFFBFB; border-bottom: 1px solid #FEE2E2; height: 36px; }
+  .gantt .milestone-row .task-name { background: #FFFBFB; font-weight: 700; color: #DC2626; font-size: 12px; }
   .gantt .milestone-row.done td { background: #F0FDF4 !important; }
   .gantt .milestone-row.done .task-name { background: #F0FDF4; color: #059669; }
 
-  /* TODAY LINE */
-  .today-line {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: var(--accent);
-    z-index: 20;
-    pointer-events: none;
-  }
-  .today-line::before {
-    content: 'TODAY';
-    position: absolute;
-    top: -18px;
-    left: -16px;
-    font-size: 8px;
-    font-weight: 800;
-    color: var(--accent);
-    letter-spacing: 1px;
-  }
-
   /* TOOLTIP */
-  .tooltip {
-    display: none;
-    position: fixed;
-    background: var(--primary);
-    color: white;
-    padding: 10px 14px;
-    border-radius: 8px;
-    font-size: 12px;
-    line-height: 1.5;
-    max-width: 300px;
-    z-index: 100;
-    pointer-events: none;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
-  }
+  .tooltip { display: none; position: fixed; background: var(--primary); color: white; padding: 10px 14px; border-radius: 8px; font-size: 12px; line-height: 1.5; max-width: 300px; z-index: 100; pointer-events: none; box-shadow: 0 4px 16px rgba(0,0,0,0.3); }
   .tooltip .tt-title { font-weight: 700; margin-bottom: 4px; }
   .tooltip .tt-meta { color: #94A3B8; font-size: 11px; }
   .tooltip .tt-done { color: #34D399; font-weight: 600; margin-top: 4px; font-size: 11px; }
+  .tooltip .tt-wip { color: #FCD34D; font-weight: 600; margin-top: 4px; font-size: 11px; }
   .tooltip .tt-hint { color: #64748B; font-size: 10px; margin-top: 4px; font-style: italic; }
 
   /* SUMMARY CARDS */
-  .summary {
-    padding: 0 48px 32px;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 12px;
-  }
-  .summary-card {
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 16px 18px;
-    border-top: 3px solid;
-  }
+  .summary { padding: 0 48px 32px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+  .summary-card { background: white; border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; border-top: 3px solid; }
   .summary-card .sc-label { font-size: 11px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
   .summary-card .sc-value { font-size: 22px; font-weight: 800; color: var(--primary); }
   .summary-card .sc-sub { font-size: 11px; color: var(--muted); margin-top: 2px; }
   .summary-card .sc-progress { margin-top: 8px; height: 4px; background: #F1F5F9; border-radius: 2px; overflow: hidden; }
   .summary-card .sc-progress-fill { height: 100%; border-radius: 2px; transition: width 0.4s; }
 
-  /* INSTRUCTION BANNER */
-  .hint-bar {
-    background: #EFF6FF;
-    border-bottom: 1px solid #BFDBFE;
-    padding: 8px 48px;
-    font-size: 12px;
-    color: #1E40AF;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .hint-bar svg { flex-shrink: 0; }
+  /* HINT */
+  .hint-bar { background: #EFF6FF; border-bottom: 1px solid #BFDBFE; padding: 8px 48px; font-size: 12px; color: #1E40AF; display: flex; align-items: center; gap: 8px; }
 
   @media (max-width: 900px) {
     .header, .legend-bar, .filter-bar, .gantt-wrap, .summary, .progress-banner, .hint-bar { padding-left: 16px; padding-right: 16px; }
     .summary { grid-template-columns: repeat(2, 1fr); }
-  }
-
-  @media print {
-    body { background: white; }
-    .filter-bar, .hint-bar { display: none; }
-    .gantt-wrap { overflow: visible; }
-    .bar:hover { transform: none; box-shadow: none; }
   }
 </style>
 </head>
@@ -475,12 +171,13 @@
 <div class="header">
   <div class="header-top">
     <div>
-      <div class="header-label">Project Plan — Gantt View</div>
+      <div class="header-label">Project Plan — Gantt View · Updated Apr 5, 2026</div>
       <h1>GlowRoute V5.2 Sprint</h1>
-      <p>4-week sprint · 25 task cards · 5 deliverables · 5 milestones &nbsp;·&nbsp; <span style="color:#34D399;font-weight:700;">11 completed</span></p>
+      <p>4-week sprint · 33 task cards · 5 deliverables · 5 milestones &nbsp;·&nbsp; <span style="color:#34D399;font-weight:700;">13 completed</span> &nbsp;·&nbsp; <span style="color:#FCD34D;font-weight:700;">2 in progress</span></p>
       <div class="header-meta">
         <div><strong>Start:</strong> Mar 28</div>
         <div><strong>End:</strong> Apr 24</div>
+        <div><strong>Today:</strong> Apr 5</div>
         <div><strong>Owner:</strong> Anthony Sealey</div>
       </div>
     </div>
@@ -491,25 +188,26 @@
 <div class="progress-banner">
   <span class="progress-label">Sprint Progress</span>
   <div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
-  <span class="progress-count" id="progressCount">0 / 25 tasks</span>
+  <span class="progress-count" id="progressCount">0 / 33 tasks</span>
   <span class="progress-pct" id="progressPct">(0%)</span>
 </div>
 
 <!-- HINT -->
 <div class="hint-bar">
   <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" /></svg>
-  Click any task name to mark it complete / incomplete. Progress is saved in your browser.
+  Click any task name to mark it complete / incomplete. 🟡 Yellow rows = in progress right now. Blue column = today (Apr 5).
 </div>
 
 <!-- LEGEND -->
 <div class="legend-bar">
   <span class="legend-title">Workstreams</span>
-  <div class="legend-item"><div class="legend-dot" style="background: linear-gradient(90deg, #10B981, #34D399);"></div>SEO Engine (DEL-01)</div>
-  <div class="legend-item"><div class="legend-dot" style="background: linear-gradient(90deg, #6366F1, #818CF8);"></div>CRM Population (DEL-02)</div>
-  <div class="legend-item"><div class="legend-dot" style="background: linear-gradient(90deg, #F59E0B, #FBBF24);"></div>Outbound — Async (DEL-03)</div>
-  <div class="legend-item"><div class="legend-dot" style="background: linear-gradient(90deg, #8B5CF6, #A78BFA);"></div>Content Engine (DEL-04)</div>
-  <div class="legend-item"><div class="legend-dot" style="background: linear-gradient(90deg, #0D9488, #2DD4BF);"></div>Platform (DEL-05)</div>
+  <div class="legend-item"><div class="legend-dot" style="background: linear-gradient(90deg, #10B981, #34D399);"></div>SEO Engine</div>
+  <div class="legend-item"><div class="legend-dot" style="background: linear-gradient(90deg, #6366F1, #818CF8);"></div>CRM Population</div>
+  <div class="legend-item"><div class="legend-dot" style="background: linear-gradient(90deg, #F59E0B, #FBBF24);"></div>Outbound</div>
+  <div class="legend-item"><div class="legend-dot" style="background: linear-gradient(90deg, #8B5CF6, #A78BFA);"></div>Content Engine</div>
+  <div class="legend-item"><div class="legend-dot" style="background: linear-gradient(90deg, #0D9488, #2DD4BF);"></div>Platform</div>
   <div class="legend-item"><div class="legend-dot" style="background: #EF4444; width: 10px; height: 10px; transform: rotate(45deg); border-radius: 1px;"></div>Milestone</div>
+  <div class="legend-wip"><span class="live-dot"></span> In Progress</div>
   <div class="legend-done"><div class="legend-dot" style="background: linear-gradient(90deg, #CBD5E1, #E2E8F0);"></div>✓ Completed</div>
 </div>
 
@@ -532,14 +230,14 @@
 <div class="summary">
   <div class="summary-card" style="border-top-color: var(--seo);">
     <div class="sc-label">SEO Engine</div>
-    <div class="sc-value">8</div>
-    <div class="sc-sub">tasks · T-01 through T-08</div>
+    <div class="sc-value">9</div>
+    <div class="sc-sub">tasks · T-01 → T-08 + T-07b</div>
     <div class="sc-progress"><div class="sc-progress-fill" id="prog-seo" style="background:#10B981;width:0%"></div></div>
   </div>
   <div class="summary-card" style="border-top-color: var(--crm);">
     <div class="sc-label">CRM Population</div>
-    <div class="sc-value">5</div>
-    <div class="sc-sub">tasks · T-09 through T-13</div>
+    <div class="sc-value">6</div>
+    <div class="sc-sub">tasks · T-09 → T-13 + T-10b</div>
     <div class="sc-progress"><div class="sc-progress-fill" id="prog-crm" style="background:#6366F1;width:0%"></div></div>
   </div>
   <div class="summary-card" style="border-top-color: var(--outbound);">
@@ -556,8 +254,8 @@
   </div>
   <div class="summary-card" style="border-top-color: var(--infra);">
     <div class="sc-label">Platform</div>
-    <div class="sc-value">3</div>
-    <div class="sc-sub">tasks · T-23 through T-25</div>
+    <div class="sc-value">9</div>
+    <div class="sc-sub">T-23/24/25 + 3 bugs + 3 enhancements</div>
     <div class="sc-progress"><div class="sc-progress-fill" id="prog-infra" style="background:#0D9488;width:0%"></div></div>
   </div>
 </div>
@@ -575,13 +273,12 @@
   </tr>
   <tr>
     <th class="day-header weekend">28</th><th class="day-header weekend">29</th><th class="day-header">30</th><th class="day-header">31</th><th class="day-header">1</th><th class="day-header">2</th><th class="day-header">3</th>
-    <th class="day-header weekend">4</th><th class="day-header weekend">5</th><th class="day-header">6</th><th class="day-header">7</th><th class="day-header">8</th><th class="day-header">9</th><th class="day-header">10</th>
-    <th class="day-header weekend">11</th><th class="day-header weekend">12</th><th class="day-header today-hdr">13</th><th class="day-header">14</th><th class="day-header">15</th><th class="day-header">16</th><th class="day-header">17</th>
+    <th class="day-header weekend">4</th><th class="day-header weekend today-hdr">5 ▲</th><th class="day-header">6</th><th class="day-header">7</th><th class="day-header">8</th><th class="day-header">9</th><th class="day-header">10</th>
+    <th class="day-header weekend">11</th><th class="day-header weekend">12</th><th class="day-header">13</th><th class="day-header">14</th><th class="day-header">15</th><th class="day-header">16</th><th class="day-header">17</th>
     <th class="day-header weekend">18</th><th class="day-header weekend">19</th><th class="day-header">20</th><th class="day-header">21</th><th class="day-header">22</th><th class="day-header">23</th><th class="day-header">24</th>
   </tr>
 </thead>
-<tbody id="ganttBody">
-</tbody>
+<tbody id="ganttBody"></tbody>
 </table>
 </div>
 
@@ -590,95 +287,92 @@
   <div class="tt-title"></div>
   <div class="tt-meta"></div>
   <div class="tt-done" id="ttDone"></div>
+  <div class="tt-wip" id="ttWip"></div>
   <div class="tt-hint" id="ttHint"></div>
 </div>
 
 <script>
-// ===== PERSISTENCE =====
-const STORAGE_KEY = 'glowroute-v52-gantt-done';
-// Default completion state — reflects actual sprint progress as of Mar 31
+const TODAY_COL = 8; // Apr 5 = column index 8 (0-indexed from Mar 28)
+
+const STORAGE_KEY = 'glowroute-v52-gantt-done-v2';
 const DEFAULT_DONE = {
-  "T-01": true, // City×treatment routes ✓
-  "T-02": true, // Content templates ✓
-  "T-03": true, // Sitemap generator (11,357 URLs) ✓
-  "T-04": true, // Coverage matrix ✓
-  "T-05": true, // FL Batch 1 deploy ✓
-  "T-06": true, // Top 20 metros Batch 2 ✓
-  "T-08": true, // National Batch 4 ✓
-  "M1":   true, // Batch 1 live milestone ✓
-  "M2":   true, // CRM populated ✓
-  "T-23": true, // PostHog clinic analytics ✓
-  "T-24": true, // Claim page conversion tracking ✓
+  "T-01": true, "T-02": true, "T-03": true, "T-04": true,
+  "T-05": true, "T-06": true, "T-08": true, "T-10": true,
+  "T-23": true, "T-24": true,
+  "M1": true, "M2": true, "M3": false,
 };
+
 function loadDone() {
   try {
-    const stored = localStorage.getItem(STORAGE_KEY);
-    if (stored === null) {
-      // First visit — seed with actual progress
-      return { ...DEFAULT_DONE };
-    }
-    return JSON.parse(stored);
+    const s = localStorage.getItem(STORAGE_KEY);
+    return s === null ? { ...DEFAULT_DONE } : JSON.parse(s);
   } catch(e) { return { ...DEFAULT_DONE }; }
 }
-function saveDone(done) {
-  localStorage.setItem(STORAGE_KEY, JSON.stringify(done));
-}
+function saveDone(d) { localStorage.setItem(STORAGE_KEY, JSON.stringify(d)); }
 let doneMap = loadDone();
 
-// ===== DATA =====
 const tasks = [
-  // SEO
+  // ─── SEO ENGINE ───
   { cat: "seo", catLabel: "DEL-01: Programmatic SEO Engine" },
-  { id: "T-01", name: "Build crossover dynamic route", type: "seo", p: "p0", start: 0, end: 2, deps: "None", assignee: "Atlas", est: "1-2 days" },
-  { id: "T-02", name: "Generate content templates", type: "seo", p: "p0", start: 2, end: 3, deps: "T-01", assignee: "Zion → Atlas", est: "1 day" },
-  { id: "T-03", name: "Dynamic sitemap generator", type: "seo", p: "p0", start: 3, end: 3, deps: "T-01", assignee: "Atlas", est: "0.5 day" },
-  { id: "T-04", name: "Treatment × City coverage matrix", type: "seo", p: "p0", start: 0, end: 1, deps: "Keyword Index", assignee: "Zion", est: "0.5 day" },
-  { id: "T-05", name: "Batch 1: FL core (480 pages)", type: "seo", p: "p0", start: 4, end: 6, deps: "T-01, T-02, T-04", assignee: "Atlas", est: "1 day" },
-  { id: "T-06", name: "Batch 2: Top 20 metros (200 pages)", type: "seo", p: "p1", start: 7, end: 10, deps: "T-05", assignee: "Atlas", est: "1 day" },
-  { id: "T-07", name: "Batch 3: FL expanded hormones/peptides (600 pages)", type: "seo", p: "p1", start: 14, end: 17, deps: "T-04, T-05", assignee: "Atlas", est: "1 day" },
-  { id: "T-08", name: "Batch 4: National expanded (500+ pages)", type: "seo", p: "p2", start: 18, end: 22, deps: "T-07, T-15", assignee: "Atlas", est: "1-2 days" },
+  { id:"T-01", name:"Build crossover dynamic route /clinics/[city]/[treatment]", type:"seo", p:"p0", start:0, end:2, assignee:"Atlas", est:"1-2 days", deps:"None" },
+  { id:"T-02", name:"Generate crossover page content templates", type:"seo", p:"p0", start:2, end:3, assignee:"Zion → Atlas", est:"1 day", deps:"T-01" },
+  { id:"T-03", name:"Dynamic sitemap generator (11,357 URLs)", type:"seo", p:"p0", start:3, end:3, assignee:"Atlas", est:"0.5 day", deps:"T-01" },
+  { id:"T-04", name:"Treatment × City coverage matrix analysis", type:"seo", p:"p0", start:0, end:1, assignee:"Zion", est:"0.5 day", deps:"Keyword Index" },
+  { id:"T-05", name:"Batch 1: FL core (480 pages deployed)", type:"seo", p:"p0", start:4, end:6, assignee:"Atlas", est:"1 day", deps:"T-01, T-02, T-04" },
+  { id:"T-06", name:"Batch 2: Top 20 metros × treatments (200 pages)", type:"seo", p:"p1", start:7, end:10, assignee:"Atlas", est:"1 day", deps:"T-05" },
+  { id:"T-07", name:"Batch 3: ALL metros — hormones/peptides/longevity (600 pages)", type:"seo", p:"p1", start:14, end:17, assignee:"Atlas", est:"1-2 days", deps:"T-04, T-05" },
+  { id:"T-07b", name:"Metro Onboarding Standard (METRO_ONBOARDING_CHECKLIST.md)", type:"seo", p:"p1", start:8, end:10, assignee:"Zion", est:"30 min", deps:"T-07 scope update" },
+  { id:"T-08", name:"Batch 4: National expanded metros (500+ pages)", type:"seo", p:"p2", start:18, end:22, assignee:"Atlas", est:"1-2 days", deps:"T-07, T-15" },
 
-  // CRM
+  // ─── CRM ───
   { cat: "crm", catLabel: "DEL-02: HubSpot CRM Population" },
-  { id: "T-09", name: "Create HubSpot properties & pipeline", type: "crm", p: "p0", start: 0, end: 0, deps: "None", assignee: "Anthony", est: "0.5 day" },
-  { id: "T-10", name: "Import 5,000+ clinics into HubSpot", type: "crm", p: "p0", start: 1, end: 2, deps: "T-09", assignee: "Zion → HubSpot API", est: "1 day" },
-  { id: "T-11", name: "Apollo enrichment — Tier 1 & 2", type: "crm", p: "p0", start: 3, end: 7, deps: "T-10", assignee: "Zion → Apollo", est: "2-3 days" },
-  { id: "T-12", name: "Apollo enrichment — Tier 3 & 4 (email only)", type: "crm", p: "p2", start: 7, end: 11, deps: "T-10", assignee: "Zion → Apollo", est: "2 days" },
-  { id: "T-13", name: "Tier scoring & segmentation validation", type: "crm", p: "p1", start: 11, end: 12, deps: "T-11", assignee: "Zion", est: "0.5 day" },
+  { id:"T-09", name:"Create HubSpot custom properties & pipeline", type:"crm", p:"p0", start:0, end:0, assignee:"Anthony", est:"0.5 day", deps:"None" },
+  { id:"T-10", name:"Import 5,000+ clinics → HubSpot (Company records)", type:"crm", p:"p0", start:1, end:2, assignee:"Zion → HubSpot API", est:"1 day", deps:"T-09" },
+  { id:"T-10b", name:"HubSpot sync — enriched 660+ clinic dataset (Atlas)", type:"crm", p:"p0", start:8, end:9, inProgress:true, assignee:"Atlas (parallel)", est:"30-45 min", deps:"T-10 + enrichment" },
+  { id:"T-11", name:"Apollo enrichment — Tier 1 & 2 clinics", type:"crm", p:"p0", start:3, end:7, assignee:"Zion → Apollo", est:"2-3 days", deps:"T-10" },
+  { id:"T-12", name:"Apollo enrichment — Tier 3 & 4 (email only)", type:"crm", p:"p2", start:7, end:11, assignee:"Zion → Apollo", est:"2 days", deps:"T-10" },
+  { id:"T-13", name:"Tier scoring & segmentation validation", type:"crm", p:"p1", start:11, end:12, assignee:"Zion", est:"0.5 day", deps:"T-11" },
 
-  // OUTBOUND (ASYNC)
-  { cat: "outbound", catLabel: "DEL-03: Outbound Machine (Async Sub-Deliverable)" },
-  { id: "T-14", name: "Generate 10 city market reports", type: "outbound", p: "p1", start: 7, end: 11, deps: "T-04", assignee: "Zion → Atlas", est: "2-3 days" },
-  { id: "T-15", name: "Market expansion scrape → 10K clinics", type: "outbound", p: "p0", start: 2, end: 9, deps: "None", assignee: "Apify/Firecrawl", est: "3-5 days" },
-  { id: "T-16", name: "Build HubSpot email sequences", type: "outbound", p: "p1", start: 14, end: 16, deps: "T-11, T-14", assignee: "Anthony + HubSpot", est: "1 day" },
-  { id: "T-17", name: "Twilio SMS integration", type: "outbound", p: "p2", start: 17, end: 18, deps: "T-16", assignee: "Atlas", est: "0.5 day" },
-  { id: "T-18", name: "Activate T1 outreach (200 contacts)", type: "outbound", p: "p1", start: 21, end: 24, deps: "T-16, T-14, SC data", assignee: "Anthony", est: "0.5 day" },
+  // ─── OUTBOUND ───
+  { cat: "outbound", catLabel: "DEL-03: Outbound Machine (Async)" },
+  { id:"T-14", name:"Generate top 10 city market intelligence reports", type:"outbound", p:"p1", start:7, end:11, assignee:"Zion → Atlas", est:"2-3 days", deps:"T-04" },
+  { id:"T-15", name:"Market expansion scrape → 10K+ clinics", type:"outbound", p:"p0", start:2, end:9, assignee:"Apify/Firecrawl", est:"3-5 days", deps:"None" },
+  { id:"T-16", name:"Build HubSpot email sequences (4 emails)", type:"outbound", p:"p1", start:14, end:16, assignee:"Anthony + HubSpot", est:"1 day", deps:"T-11, T-14" },
+  { id:"T-17", name:"Twilio SMS integration with HubSpot workflow", type:"outbound", p:"p2", start:17, end:18, assignee:"Atlas", est:"0.5 day", deps:"T-16" },
+  { id:"T-18", name:"Activate T1 outreach — first 200 contacts", type:"outbound", p:"p1", start:21, end:24, assignee:"Anthony", est:"0.5 day", deps:"T-16, T-14" },
 
-  // CONTENT ENGINE
+  // ─── CONTENT ENGINE ───
   { cat: "content", catLabel: "DEL-04: Agentic Content Engine" },
-  { id: "T-19", name: "Build content pipeline (Zion→GH→Vercel)", type: "content", p: "p0", start: 4, end: 8, deps: "T-01", assignee: "Zion → Atlas", est: "2-3 days" },
-  { id: "T-20", name: "Create 5 article content templates", type: "content", p: "p0", start: 4, end: 6, deps: "Keyword Index", assignee: "Zion", est: "1 day" },
-  { id: "T-21", name: "Reddit monitoring agent setup", type: "content", p: "p1", start: 7, end: 9, deps: "None", assignee: "Zion → Apify", est: "1 day" },
-  { id: "T-22", name: "Publish first 10 articles", type: "content", p: "p1", start: 11, end: 15, deps: "T-19, T-20", assignee: "Zion → Atlas", est: "2 days" },
+  { id:"T-19", name:"Build content pipeline (Zion → GitHub → Vercel)", type:"content", p:"p0", start:4, end:8, assignee:"Zion → Atlas", est:"2-3 days", deps:"T-01" },
+  { id:"T-20", name:"Create 5 article content templates", type:"content", p:"p0", start:4, end:6, assignee:"Zion", est:"1 day", deps:"Keyword Index" },
+  { id:"T-21", name:"Set up Reddit monitoring agent (Apify)", type:"content", p:"p1", start:7, end:9, assignee:"Zion → Apify", est:"1 day", deps:"None" },
+  { id:"T-22", name:"Publish first 10 articles", type:"content", p:"p1", start:11, end:15, assignee:"Zion → Atlas", est:"2 days", deps:"T-19, T-20" },
 
-  // PLATFORM
-  { cat: "infra", catLabel: "DEL-05: Platform & Analytics" },
-  { id: "T-23", name: "Clinic-level analytics dashboard", type: "infra", p: "p0", start: 2, end: 3, deps: "PostHog (done)", assignee: "Atlas", est: "1 day" },
-  { id: "T-24", name: "Claim page conversion tracking", type: "infra", p: "p0", start: 3, end: 3, deps: "PostHog (done)", assignee: "Atlas", est: "0.5 day" },
-  { id: "T-25", name: "Weekly automated report", type: "infra", p: "p1", start: 14, end: 16, deps: "T-23, SC API", assignee: "Zion", est: "1 day" },
+  // ─── PLATFORM ───
+  { cat: "infra", catLabel: "DEL-05: Platform, Data & Infrastructure" },
+  { id:"T-23", name:"Clinic-level analytics dashboard (PostHog)", type:"infra", p:"p0", start:2, end:3, assignee:"Atlas", est:"1 day", deps:"PostHog live" },
+  { id:"T-24", name:"Claim page conversion tracking", type:"infra", p:"p0", start:3, end:3, assignee:"Atlas", est:"0.5 day", deps:"PostHog live" },
+  { id:"T-25", name:"Weekly automated performance report", type:"infra", p:"p1", start:14, end:16, assignee:"Zion", est:"1 day", deps:"T-23" },
+  // ─── DATA DEPLOYMENT BUGS (TODAY) ───
+  { id:"BUG-01", name:"Commit enriched-clinics.json → GitHub (Ark)", type:"infra", p:"p0", start:8, end:8, inProgress:true, assignee:"Ark", est:"5-10 min", deps:"None" },
+  { id:"BUG-02", name:"Verify Vercel deployment — 660 real clinics live", type:"infra", p:"p0", start:9, end:9, assignee:"Zion", est:"10-15 min", deps:"BUG-01" },
+  { id:"BUG-03", name:"Add Tampa clinics (Bio, Titan, Defy + lat/lng)", type:"infra", p:"p1", start:9, end:10, assignee:"Ark", est:"20-30 min", deps:"BUG-02" },
+  // ─── PLATFORM ENHANCEMENTS ───
+  { id:"ENH-01", name:"Distance-based sorting — platform-wide (GH #13)", type:"infra", p:"p1", start:16, end:20, assignee:"Ark", est:"3-4 hours", deps:"BUG-03 (lat/lng required)" },
+  { id:"ENH-02", name:"Metro search aliases — platform-wide (GH #14)", type:"infra", p:"p1", start:14, end:17, assignee:"Atlas", est:"2-3 hours", deps:"BUG-03" },
+  { id:"MAINT", name:"Weekly metro maintenance cron (geocode + alias audit)", type:"infra", p:"p2", start:21, end:27, assignee:"Zion (cron)", est:"Automated — Mondays 06:00 UTC", deps:"ENH-01, ENH-02" },
 
-  // MILESTONES
+  // ─── MILESTONES ───
   { cat: "milestone", catLabel: "Decision Gates" },
-  { id: "M1", name: "Batch 1 Live — 480 FL pages deployed", type: "milestone", start: 6, milestone: true, decision: "If clean deploy → Batch 2. If issues → fix before scaling." },
-  { id: "M2", name: "CRM Populated — T1/T2 enriched", type: "milestone", start: 12, milestone: true, decision: "If >80% email coverage → greenlight outbound. If <60% → expand Apollo." },
-  { id: "M3", name: "Content Engine Live — pipeline tested", type: "milestone", start: 15, milestone: true, decision: "If 10 articles deployed clean → scale to 5-10/wk. If QA >20% fail → fix templates." },
-  { id: "M4", name: "Outbound Activated — T1 sequences live", type: "milestone", start: 21, milestone: true, decision: "If SC shows impressions → full send. If zero → delay, diagnose indexing." },
-  { id: "M5", name: "V5.2 Complete — score against metrics", type: "milestone", start: 27, milestone: true, decision: "Score all success metrics. Greenlight V6 planning." },
+  { id:"M1", name:"Batch 1 Live — 480 FL pages deployed ✓", type:"milestone", start:6, milestone:true, decision:"PASSED — Batch 2 greenlit." },
+  { id:"M2", name:"CRM Populated — T1/T2 contacts enriched ✓", type:"milestone", start:12, milestone:true, decision:"PASSED — Outbound greenlit." },
+  { id:"M3", name:"Content Engine Live — pipeline tested end-to-end", type:"milestone", start:15, milestone:true, decision:"If 10 articles clean → scale 5-10/wk. If QA fails → fix templates." },
+  { id:"M4", name:"Outbound Activated — T1 sequences launched", type:"milestone", start:21, milestone:true, decision:"If impressions in SC → full send. If zero → diagnose indexing." },
+  { id:"M5", name:"V5.2 Complete — score all success metrics", type:"milestone", start:27, milestone:true, decision:"Score all metrics. Greenlight V6 planning." },
 ];
 
 const TOTAL_DAYS = 28;
-const catColors = { seo: '#10B981', crm: '#6366F1', outbound: '#F59E0B', content: '#8B5CF6', infra: '#0D9488', milestone: '#EF4444' };
-const catSizes = { seo: 8, crm: 5, outbound: 5, content: 4, infra: 3 };
+const catColors = { seo:'#10B981', crm:'#6366F1', outbound:'#F59E0B', content:'#8B5CF6', infra:'#0D9488', milestone:'#EF4444' };
 const dayNames = ['Mar 28','Mar 29','Mar 30','Mar 31','Apr 1','Apr 2','Apr 3','Apr 4','Apr 5','Apr 6','Apr 7','Apr 8','Apr 9','Apr 10','Apr 11','Apr 12','Apr 13','Apr 14','Apr 15','Apr 16','Apr 17','Apr 18','Apr 19','Apr 20','Apr 21','Apr 22','Apr 23','Apr 24'];
 
 function toggleDone(id) {
@@ -705,7 +399,6 @@ function updateProgress() {
   document.getElementById('progressCount').textContent = `${doneCount} / ${total} tasks`;
   document.getElementById('progressPct').textContent = `(${pct}%)`;
 
-  // Per-category
   ['seo','crm','outbound','content','infra'].forEach(cat => {
     const catTasks = tasks.filter(t => t.type === cat && t.id).map(t => t.id);
     const catDone = catTasks.filter(id => doneMap[id]).length;
@@ -736,34 +429,40 @@ function renderGantt(filter) {
     if (filter !== 'all' && task.type !== filter) return;
 
     const isDone = !!doneMap[task.id];
+    const isWip = !!task.inProgress && !isDone;
+
     const tr = document.createElement('tr');
-    tr.className = 'task-row' + (task.milestone ? ' milestone-row' : '') + (isDone ? ' done' : '');
+    tr.className = 'task-row'
+      + (task.milestone ? ' milestone-row' : '')
+      + (isDone ? ' done' : '')
+      + (isWip ? ' in-progress' : '');
     tr.dataset.type = task.type;
     tr.dataset.id = task.id;
 
     // Task name cell
     const nameTd = document.createElement('td');
     nameTd.className = 'task-name';
-    let priorityHtml = '';
-    if (task.p) priorityHtml = `<span class="priority ${task.p}">${task.p.toUpperCase()}</span>`;
+    let priorityHtml = task.p ? `<span class="priority ${task.p}">${task.p.toUpperCase()}</span>` : '';
     const checkIcon = isDone ? `<span class="done-check">✓</span>` : '';
-    nameTd.innerHTML = `<span class="task-id">${task.id}</span>${checkIcon}<span class="task-label-text">${task.name}</span>${priorityHtml}`;
+    const wipBadge = isWip ? `<span class="live-badge"><span class="live-dot"></span>LIVE</span>` : '';
+    nameTd.innerHTML = `<span class="task-id">${task.id}</span>${checkIcon}<span class="task-label-text">${task.name}</span>${priorityHtml}${wipBadge}`;
     nameTd.addEventListener('click', () => toggleDone(task.id));
-    nameTd.title = isDone ? 'Click to mark incomplete' : 'Click to mark complete';
+    nameTd.title = isDone ? 'Click to unmark' : 'Click to mark complete';
     tr.appendChild(nameTd);
 
     // Day cells
     for (let d = 0; d < TOTAL_DAYS; d++) {
       const td = document.createElement('td');
       const isWeekend = (d % 7 === 0) || (d % 7 === 1);
-      td.className = 'cell' + (isWeekend ? ' weekend' : '');
+      const isToday = d === TODAY_COL;
+      td.className = 'cell' + (isWeekend ? ' weekend' : '') + (isToday ? ' today-col' : '');
       td.style.position = 'relative';
 
       if (task.milestone && d === task.start) {
         const marker = document.createElement('div');
         marker.className = 'milestone-marker';
         td.appendChild(marker);
-        td.addEventListener('mouseenter', (e) => showTooltip(e, task));
+        td.addEventListener('mouseenter', e => showTooltip(e, task, isDone, isWip));
         td.addEventListener('mouseleave', hideTooltip);
       }
 
@@ -776,7 +475,7 @@ function renderGantt(filter) {
         else if (d === task.end) bar.classList.add('end');
         else bar.classList.add('mid');
         td.appendChild(bar);
-        bar.addEventListener('mouseenter', (e) => showTooltip(e, task));
+        bar.addEventListener('mouseenter', e => showTooltip(e, task, isDone, isWip));
         bar.addEventListener('mouseleave', hideTooltip);
       }
 
@@ -787,42 +486,26 @@ function renderGantt(filter) {
   });
 }
 
-function showTooltip(e, task) {
+function showTooltip(e, task, isDone, isWip) {
   const tooltip = document.getElementById('tooltip');
-  const ttTitle = tooltip.querySelector('.tt-title');
-  const ttMeta = tooltip.querySelector('.tt-meta');
-  const ttDone = document.getElementById('ttDone');
-  const ttHint = document.getElementById('ttHint');
-
-  ttTitle.textContent = `${task.id}: ${task.name}`;
-  let metaLines = [];
-  if (task.assignee) metaLines.push(`Assignee: ${task.assignee}`);
-  if (task.est) metaLines.push(`Estimate: ${task.est}`);
-  if (task.deps) metaLines.push(`Deps: ${task.deps}`);
-  if (task.decision) metaLines.push(`Decision: ${task.decision}`);
-  if (task.milestone) {
-    metaLines.unshift(`Date: ${dayNames[task.start]}`);
-  } else if (task.start !== undefined) {
-    metaLines.unshift(`${dayNames[task.start]} → ${dayNames[task.end]}`);
-  }
-  ttMeta.innerHTML = metaLines.join('<br>');
-
-  if (doneMap[task.id]) {
-    ttDone.textContent = '✓ Completed';
-    ttHint.textContent = 'Click to unmark';
-  } else {
-    ttDone.textContent = '';
-    ttHint.textContent = 'Click task name to mark complete';
-  }
-
+  tooltip.querySelector('.tt-title').textContent = `${task.id}: ${task.name}`;
+  let meta = [];
+  if (task.assignee) meta.push(`Assignee: ${task.assignee}`);
+  if (task.est) meta.push(`Estimate: ${task.est}`);
+  if (task.deps) meta.push(`Deps: ${task.deps}`);
+  if (task.milestone) meta.unshift(`Date: ${dayNames[task.start]}`);
+  else if (task.start !== undefined) meta.unshift(`${dayNames[task.start]} → ${dayNames[task.end]}`);
+  if (task.decision) meta.push(`Gate: ${task.decision}`);
+  tooltip.querySelector('.tt-meta').innerHTML = meta.join('<br>');
+  document.getElementById('ttDone').textContent = isDone ? '✓ Completed' : '';
+  document.getElementById('ttWip').textContent = isWip ? '▶ IN PROGRESS RIGHT NOW' : '';
+  document.getElementById('ttHint').textContent = isDone ? 'Click to unmark' : 'Click task name to mark complete';
   tooltip.style.display = 'block';
   tooltip.style.left = Math.min(e.clientX + 12, window.innerWidth - 320) + 'px';
   tooltip.style.top = (e.clientY - 10) + 'px';
 }
 
-function hideTooltip() {
-  document.getElementById('tooltip').style.display = 'none';
-}
+function hideTooltip() { document.getElementById('tooltip').style.display = 'none'; }
 
 function filterTasks(type, btn) {
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
@@ -830,10 +513,8 @@ function filterTasks(type, btn) {
   renderGantt(type);
 }
 
-// Initial render
 renderGantt('all');
 updateProgress();
 </script>
-
 </body>
 </html>
