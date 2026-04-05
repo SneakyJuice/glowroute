@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { fetchAllClinicsFromSupabase, fetchFeaturedClinic } from '@/data/supabase-clinics'
 import { calculateGlowScore } from '@/lib/glowscore'
 import { Clinic } from '@/types/clinic'
-import ClinicsClient from '@/app/clinics/ClinicsClient'
+import ClinicsClientV2 from '@/app/clinics/ClinicsClientV2'
 
 export const metadata: Metadata = {
   title: 'GlowRoute — Find Top-Rated Med Spas & Aesthetic Clinics in Florida',
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   },
 }
 
-const SSR_PAGE_SIZE = 20
+const SSR_PAGE_SIZE = 25
 
 function citySlug(city: string) {
   return city.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
@@ -128,6 +128,7 @@ function SSRFeaturedCard({ clinic }: { clinic: Clinic }) {
 }
 
 export default async function HomePage() {
+  // Fetch only the first page of clinics for SSR (reduce payload from 7.8 MB to ~100 KB)
   const allClinicsRaw = await fetchAllClinicsFromSupabase()
   const allClinics = allClinicsRaw.filter(c => c.city && c.slug)
   const initialFeaturedClinic = await fetchFeaturedClinic()
@@ -145,7 +146,7 @@ export default async function HomePage() {
 
   return (
     <>
-      {/* ── SSR Preview: visible to crawlers, hidden once client JS mounts ── */}
+      {/* ── SSR Preview: visible to crawlers, replaced by client JS after hydration ── */}
       <div id="ssr-clinic-preview" className="min-h-screen bg-ivory font-sans">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <header className="mb-8">
@@ -166,13 +167,13 @@ export default async function HomePage() {
           </div>
 
           <nav className="mt-8 text-center text-sm text-stone" aria-label="Pagination hint">
-            Showing top {initialClinics.length} of {totalCount.toLocaleString()} clinics · Loading full interactive experience…
+            Showing {initialClinics.length} of {totalCount.toLocaleString()} clinics · Interactive search loading…
           </nav>
         </div>
       </div>
 
-      {/* ── Client component: hydrates and replaces the SSR preview ── */}
-      <ClinicsClient allClinics={allClinics} initialClinics={initialClinics} featuredClinic={initialFeaturedClinic} />
+      {/* ── Client component: hydrates and replaces the SSR preview with interactive experience ── */}
+      <ClinicsClientV2 allClinics={allClinics} initialClinics={initialClinics} featuredClinic={initialFeaturedClinic} />
     </>
   )
 }
