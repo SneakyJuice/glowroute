@@ -104,42 +104,74 @@ async function updateClinicContact(id, data) {
 function extractDomain(website) {
   if (!website) return null;
   try {
-    const url = new URL(website.startsWith('http') ? website : `https://${website}`);
+    // Strip UTM params and clean URL first
+    const clean = website.split('?')[0].split('#')[0].trim();
+    const url = new URL(clean.startsWith('http') ? clean : `https://${clean}`);
     return url.hostname.replace(/^www\./, '');
   } catch { return null; }
 }
 
-const OWNER_TITLES = [
-  'owner', 'medical director', 'founder', 'practice manager',
-  'director', 'physician', 'doctor', 'nurse practitioner', 'CEO', 'president'
-];
+const OWNER_TITLES = ['owner','founder','medical director','CEO','president','director','practice manager','physician','doctor','nurse practitioner','pa-c','aesthetic director'];
 
 async function findContact(clinic) {
   const domain = extractDomain(clinic.website);
   if (!domain) return null;
 
   try {
-    const res = await request('POST',
-      'https://api.apollo.io/v1/mixed_people/search',
-      {
-        api_key: APOLLO_KEY,
-        q_organization_domains: domain,
-        person_titles: OWNER_TITLES,
-        page: 1,
-        per_page: 1,
-      }
+    // Step 1: Org enrichment → get org ID + phone
+    const orgRes = await request('GET',
+      `https://api.apollo.io/api/v1/organizations/enrich?domain=${encodeURIComponent(domain)}`,
+      null,
+      { 'X-Api-Key': APOLLO_KEY, 'Content-Type': 'application/json' }
     );
+    if (orgRes.status !== 200) return null;
+    const orgData = JSON.parse(orgRes.body);
+    const orgId = orgData?.organization?.id;
+    const orgPhone = orgData?.organization?.phone || null;
+    if (!orgId) return null;
 
-    if (res.status !== 200) return null;
-    const data = JSON.parse(res.body);
-    const person = data?.people?.[0];
-    if (!person) return null;
+    // Step 2: Search for people at org (redacted list, pick best title)
+    const searchRes = await request('POST',
+      'https://api.apollo.io/api/v1/mixed_people/api_search',
+      { organization_ids: [orgId], per_page: 5 },
+      { 'X-Api-Key': APOLLO_KEY, 'Content-Type': 'application/json' }
+    );
+    if (searchRes.status !== 200) return null;
+    const searchData = JSON.parse(searchRes.body);
+    const people = searchData?.people || [];
+    if (!people.length) return null;
+
+    // Pick best contact by title priority
+    const ranked = [...people].sort((a, b) => {
+      const aScore = OWNER_TITLES.findIndex(t => (a.title||'').toLowerCase().includes(t));
+      const bScore = OWNER_TITLES.findIndex(t => (b.title||'').toLowerCase().includes(t));
+      return (aScore === -1 ? 99 : aScore) - (bScore === -1 ? 99 : bScore);
+    });
+    const best = ranked[0];
+
+    // Step 3: Reveal/unlock the contact (costs 1 credit — only for best match)
+    const revealRes = await request('POST',
+      'https://api.apollo.io/api/v1/people/match',
+      {
+        id: best.id,
+        reveal_personal_emails: true,
+        reveal_phone_number: false,
+      },
+      { 'X-Api-Key': APOLLO_KEY, 'Content-Type': 'application/json' }
+    );
+    if (revealRes.status !== 200) return null;
+    const revealData = JSON.parse(revealRes.body);
+    const person = revealData?.person || best;
+
+    const fullName = person.name ||
+      [person.first_name, person.last_name].filter(Boolean).join(' ') || null;
 
     return {
-      contact_name:  person.name || null,
-      contact_email: person.email || null,
-      contact_title: person.title || null,
+      contact_name:     fullName,
+      contact_email:    person.email || null,
+      contact_title:    person.title || best.title || null,
       contact_linkedin: person.linkedin_url || null,
+      contact_phone:    person.sanitized_phone || orgPhone,
     };
   } catch { return null; }
 }
