@@ -70,22 +70,12 @@ function ClinicsPageInner({ allClinics, initialClinics, featuredClinic }: Clinic
   const [userLat, setUserLat] = useState<number | null>(null)
   const [userLng, setUserLng] = useState<number | null>(null)
 
-  const handleNearMe = (lat: number, lng: number) => {
+  const handleNearMe = async (lat: number, lng: number) => {
     setUserLat(lat)
     setUserLng(lng)
     setSort('Nearest First')
     setPage(1)
-  }
-
-  const handleSearch = (treatment: string, city: string) => {
-    setSearchTreatment(treatment.toLowerCase().trim())
-    // Resolve metro aliases: "boca" → "Boca Raton", "south beach" → "Miami Beach", etc.
-    const resolved = resolveCity(city)
-    setSearchCity(resolved.toLowerCase().replace(',', '').trim())
-    setPage(1)
-  }
-
-  const handleNearMe = async (lat: number, lng: number) => {
+    // Reverse geocode to get city name and filter results
     try {
       const res = await fetch(
         `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lng}&localityLanguage=en`
@@ -95,9 +85,16 @@ function ClinicsPageInner({ allClinics, initialClinics, featuredClinic }: Clinic
       if (city) {
         const resolved = resolveCity(city)
         setSearchCity(resolved.toLowerCase().trim())
-        setPage(1)
       }
-    } catch { /* silent fail — user still sees results */ }
+    } catch { /* silent fail — lat/lng sort still applies */ }
+  }
+
+  const handleSearch = (treatment: string, city: string) => {
+    setSearchTreatment(treatment.toLowerCase().trim())
+    // Resolve metro aliases: "boca" → "Boca Raton", "south beach" → "Miami Beach", etc.
+    const resolved = resolveCity(city)
+    setSearchCity(resolved.toLowerCase().replace(',', '').trim())
+    setPage(1)
   }
 
   const filteredClinics = useMemo(() => {
