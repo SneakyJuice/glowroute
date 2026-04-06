@@ -5,6 +5,7 @@ import { GOALS } from '@/lib/goals'
 import Navbar from '@/components/Navbar'
 import HeroSearch from '@/components/HeroSearch'
 import { isPeptideClinic } from '@/lib/peptide'
+import { resolveCity } from '@/lib/metro-aliases'
 import { calculateGlowScore } from '@/lib/glowscore'
 import FilterSidebar from '@/components/FilterSidebar'
 import ResultsHeader from '@/components/ResultsHeader'
@@ -78,8 +79,25 @@ function ClinicsPageInner({ allClinics, initialClinics, featuredClinic }: Clinic
 
   const handleSearch = (treatment: string, city: string) => {
     setSearchTreatment(treatment.toLowerCase().trim())
-    setSearchCity(city.toLowerCase().replace(',', '').trim())
+    // Resolve metro aliases: "boca" → "Boca Raton", "south beach" → "Miami Beach", etc.
+    const resolved = resolveCity(city)
+    setSearchCity(resolved.toLowerCase().replace(',', '').trim())
     setPage(1)
+  }
+
+  const handleNearMe = async (lat: number, lng: number) => {
+    try {
+      const res = await fetch(
+        `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lng}&localityLanguage=en`
+      )
+      const data = await res.json()
+      const city = data.city || data.locality || ''
+      if (city) {
+        const resolved = resolveCity(city)
+        setSearchCity(resolved.toLowerCase().trim())
+        setPage(1)
+      }
+    } catch { /* silent fail — user still sees results */ }
   }
 
   const filteredClinics = useMemo(() => {
