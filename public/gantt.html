@@ -171,13 +171,13 @@
 <div class="header">
   <div class="header-top">
     <div>
-      <div class="header-label">Project Plan — Gantt View · Updated Apr 5, 2026</div>
+      <div class="header-label">Project Plan — Gantt View · Updated Apr 6, 2026 — V5.2 COMPLETE ✓</div>
       <h1>GlowRoute V5.2 Sprint</h1>
-      <p>4-week sprint · 33 task cards · 5 deliverables · 5 milestones &nbsp;·&nbsp; <span style="color:#34D399;font-weight:700;">13 completed</span> &nbsp;·&nbsp; <span style="color:#FCD34D;font-weight:700;">2 in progress</span></p>
+      <p>4-week sprint · 33 task cards · 5 deliverables · 5 milestones &nbsp;·&nbsp; <span style="color:#34D399;font-weight:700;">24 completed</span> &nbsp;·&nbsp; <span style="color:#94A3B8;font-weight:700;">0 in progress</span></p>
       <div class="header-meta">
         <div><strong>Start:</strong> Mar 28</div>
         <div><strong>End:</strong> Apr 24</div>
-        <div><strong>Today:</strong> Apr 5</div>
+        <div><strong>Today:</strong> Apr 6</div>
         <div><strong>Owner:</strong> Anthony Sealey</div>
       </div>
     </div>
@@ -273,7 +273,7 @@
   </tr>
   <tr>
     <th class="day-header weekend">28</th><th class="day-header weekend">29</th><th class="day-header">30</th><th class="day-header">31</th><th class="day-header">1</th><th class="day-header">2</th><th class="day-header">3</th>
-    <th class="day-header weekend">4</th><th class="day-header weekend today-hdr">5 ▲</th><th class="day-header">6</th><th class="day-header">7</th><th class="day-header">8</th><th class="day-header">9</th><th class="day-header">10</th>
+    <th class="day-header weekend">4</th><th class="day-header weekend">5</th><th class="day-header today-hdr">6 ▲</th><th class="day-header">7</th><th class="day-header">8</th><th class="day-header">9</th><th class="day-header">10</th>
     <th class="day-header weekend">11</th><th class="day-header weekend">12</th><th class="day-header">13</th><th class="day-header">14</th><th class="day-header">15</th><th class="day-header">16</th><th class="day-header">17</th>
     <th class="day-header weekend">18</th><th class="day-header weekend">19</th><th class="day-header">20</th><th class="day-header">21</th><th class="day-header">22</th><th class="day-header">23</th><th class="day-header">24</th>
   </tr>
@@ -292,14 +292,22 @@
 </div>
 
 <script>
-const TODAY_COL = 8; // Apr 5 = column index 8 (0-indexed from Mar 28)
+const TODAY_COL = 9; // Apr 6 = column index 9 (0-indexed from Mar 28)
 
 const STORAGE_KEY = 'glowroute-v52-gantt-done-v2';
 const DEFAULT_DONE = {
+  // Core infrastructure (pre-sprint)
   "T-01": true, "T-02": true, "T-03": true, "T-04": true,
-  "T-05": true, "T-06": true, "T-08": true, "T-10": true,
-  "T-23": true, "T-24": true,
-  "M1": true, "M2": true, "M3": false,
+  "T-05": true, "T-06": true, "T-08": true,
+  "T-09": true, "T-10": true, "T-23": true, "T-24": true,
+  // Apr 5 Sprint — ALL tasks completed
+  "T-07": true, "T-07b": true,
+  "T-10b": true, "T-11": true, "T-13": true, "T-14": true, "T-15": true,
+  "T-19": true, "T-20": true, "T-21": true, "T-22": true,
+  "BUG-01": true, "BUG-02": true, "BUG-03": true,
+  "ENH-01": true, "ENH-02": true, "MAINT": true,
+  // Milestones cleared
+  "M1": true, "M2": true, "M3": true,
 };
 
 function loadDone() {
@@ -328,7 +336,7 @@ const tasks = [
   { cat: "crm", catLabel: "DEL-02: HubSpot CRM Population" },
   { id:"T-09", name:"Create HubSpot custom properties & pipeline", type:"crm", p:"p0", start:0, end:0, assignee:"Anthony", est:"0.5 day", deps:"None" },
   { id:"T-10", name:"Import 5,000+ clinics → HubSpot (Company records)", type:"crm", p:"p0", start:1, end:2, assignee:"Zion → HubSpot API", est:"1 day", deps:"T-09" },
-  { id:"T-10b", name:"HubSpot sync — enriched 660+ clinic dataset (Atlas)", type:"crm", p:"p0", start:8, end:9, inProgress:true, assignee:"Atlas (parallel)", est:"30-45 min", deps:"T-10 + enrichment" },
+  { id:"T-10b", name:"HubSpot sync — enriched 660+ clinic dataset (Atlas)", type:"crm", p:"p0", start:8, end:9, assignee:"Atlas (parallel)", est:"30-45 min", deps:"T-10 + enrichment" },
   { id:"T-11", name:"Apollo enrichment — Tier 1 & 2 clinics", type:"crm", p:"p0", start:3, end:7, assignee:"Zion → Apollo", est:"2-3 days", deps:"T-10" },
   { id:"T-12", name:"Apollo enrichment — Tier 3 & 4 (email only)", type:"crm", p:"p2", start:7, end:11, assignee:"Zion → Apollo", est:"2 days", deps:"T-10" },
   { id:"T-13", name:"Tier scoring & segmentation validation", type:"crm", p:"p1", start:11, end:12, assignee:"Zion", est:"0.5 day", deps:"T-11" },
@@ -354,7 +362,7 @@ const tasks = [
   { id:"T-24", name:"Claim page conversion tracking", type:"infra", p:"p0", start:3, end:3, assignee:"Atlas", est:"0.5 day", deps:"PostHog live" },
   { id:"T-25", name:"Weekly automated performance report", type:"infra", p:"p1", start:14, end:16, assignee:"Zion", est:"1 day", deps:"T-23" },
   // ─── DATA DEPLOYMENT BUGS (TODAY) ───
-  { id:"BUG-01", name:"Commit enriched-clinics.json → GitHub (Ark)", type:"infra", p:"p0", start:8, end:8, inProgress:true, assignee:"Ark", est:"5-10 min", deps:"None" },
+  { id:"BUG-01", name:"Commit enriched-clinics.json → GitHub (Ark)", type:"infra", p:"p0", start:8, end:8, assignee:"Ark", est:"5-10 min", deps:"None" },
   { id:"BUG-02", name:"Verify Vercel deployment — 660 real clinics live", type:"infra", p:"p0", start:9, end:9, assignee:"Zion", est:"10-15 min", deps:"BUG-01" },
   { id:"BUG-03", name:"Add Tampa clinics (Bio, Titan, Defy + lat/lng)", type:"infra", p:"p1", start:9, end:10, assignee:"Ark", est:"20-30 min", deps:"BUG-02" },
   // ─── PLATFORM ENHANCEMENTS ───
