@@ -25,7 +25,7 @@ Bradenton has become a hub for advanced wellness medicine, with providers offeri
 
 Browse verified Testosterone Replacement Therapy providers on GlowRoute.
 
-[View all Testosterone Replacement Therapy providers in Bradenton →](https://glowroute.sealey.ai/?search=Bradenton)
+[View all Testosterone Replacement Therapy providers in Bradenton →](https://glowroute.io/?search=Bradenton)
 
 ## What to Expect from Testosterone Replacement Therapy
 
@@ -60,4 +60,4 @@ Most plans do not cover elective Testosterone Replacement Therapy. If medically 
 
 GlowRoute has 31+ verified clinics in Bradenton offering Testosterone Replacement Therapy and related wellness services.
 
-[Search Testosterone Replacement Therapy in Bradenton →](https://glowroute.sealey.ai/?search=Bradenton&treatment=testosterone-replacement)
+[Search Testosterone Replacement Therapy in Bradenton →](https://glowroute.io/?search=Bradenton&treatment=testosterone-replacement)

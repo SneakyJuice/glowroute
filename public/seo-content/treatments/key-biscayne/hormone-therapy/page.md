@@ -27,7 +27,7 @@ Key Biscayne has become a hub for advanced wellness medicine, with providers off
 2. **B. Care Salon SPA** — 5.0★ (173 reviews)
 3. **GM Salon** — 5.0★ (73 reviews)
 
-[View all Hormone Therapy providers in Key Biscayne →](https://glowroute.sealey.ai/?search=Key%20Biscayne)
+[View all Hormone Therapy providers in Key Biscayne →](https://glowroute.io/?search=Key%20Biscayne)
 
 ## What to Expect from Hormone Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Hormone Therapy. If medically necessary, partia
 
 GlowRoute has 107+ verified clinics in Key Biscayne offering Hormone Therapy and related wellness services.
 
-[Search Hormone Therapy in Key Biscayne →](https://glowroute.sealey.ai/?search=Key%20Biscayne&treatment=hormone-therapy)
+[Search Hormone Therapy in Key Biscayne →](https://glowroute.io/?search=Key%20Biscayne&treatment=hormone-therapy)

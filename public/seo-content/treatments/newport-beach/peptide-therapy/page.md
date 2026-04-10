@@ -27,7 +27,7 @@ Newport Beach has become a hub for advanced wellness medicine, with providers of
 2. **PCH MedSpa** — 5.0★ (404 reviews)
 3. **MeSO Medspa Newport Beach** — 5.0★ (303 reviews)
 
-[View all Peptide Therapy providers in Newport Beach →](https://glowroute.sealey.ai/?search=Newport%20Beach)
+[View all Peptide Therapy providers in Newport Beach →](https://glowroute.io/?search=Newport%20Beach)
 
 ## What to Expect from Peptide Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Peptide Therapy. If medically necessary, partia
 
 GlowRoute has 24+ verified clinics in Newport Beach offering Peptide Therapy and related wellness services.
 
-[Search Peptide Therapy in Newport Beach →](https://glowroute.sealey.ai/?search=Newport%20Beach&treatment=peptide-therapy)
+[Search Peptide Therapy in Newport Beach →](https://glowroute.io/?search=Newport%20Beach&treatment=peptide-therapy)

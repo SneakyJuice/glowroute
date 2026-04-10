@@ -27,7 +27,7 @@ Seattle has become a hub for advanced wellness medicine, with providers offering
 2. **Pinch Med Spa Seattle | Concierge, Mobile & At Home BOTOX, Microneedling & Chemical Peels** — 5.0★ (314 reviews)
 3. **SkinSpirit Seattle - University Village** — 5.0★ (292 reviews)
 
-[View all IV Therapy & Vitamin Infusions providers in Seattle →](https://glowroute.sealey.ai/?search=Seattle)
+[View all IV Therapy & Vitamin Infusions providers in Seattle →](https://glowroute.io/?search=Seattle)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -62,4 +62,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 30+ verified clinics in Seattle offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in Seattle →](https://glowroute.sealey.ai/?search=Seattle&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Seattle →](https://glowroute.io/?search=Seattle&treatment=iv-therapy)

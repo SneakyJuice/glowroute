@@ -27,7 +27,7 @@ North Miami has become a hub for advanced wellness medicine, with providers offe
 2. **Diane Walder Dermatology by Riverchase** — 5.0★ (648 reviews)
 3. **Pler Clinics** — 5.0★ (494 reviews)
 
-[View all Hormone Therapy providers in North Miami →](https://glowroute.sealey.ai/?search=North%20Miami)
+[View all Hormone Therapy providers in North Miami →](https://glowroute.io/?search=North%20Miami)
 
 ## What to Expect from Hormone Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Hormone Therapy. If medically necessary, partia
 
 GlowRoute has 79+ verified clinics in North Miami offering Hormone Therapy and related wellness services.
 
-[Search Hormone Therapy in North Miami →](https://glowroute.sealey.ai/?search=North%20Miami&treatment=hormone-therapy)
+[Search Hormone Therapy in North Miami →](https://glowroute.io/?search=North%20Miami&treatment=hormone-therapy)

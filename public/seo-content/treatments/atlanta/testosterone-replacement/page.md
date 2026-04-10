@@ -27,7 +27,7 @@ Atlanta has become a hub for advanced wellness medicine, with providers offering
 2. **4Ever Young Med Spa & Wellness Center - Atlanta Midtown** — 5.0★ (1010 reviews)
 3. **The Ageless Center** — 5.0★ (471 reviews)
 
-[View all Testosterone Replacement Therapy providers in Atlanta →](https://glowroute.sealey.ai/?search=Atlanta)
+[View all Testosterone Replacement Therapy providers in Atlanta →](https://glowroute.io/?search=Atlanta)
 
 ## What to Expect from Testosterone Replacement Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Testosterone Replacement Therapy. If medically 
 
 GlowRoute has 59+ verified clinics in Atlanta offering Testosterone Replacement Therapy and related wellness services.
 
-[Search Testosterone Replacement Therapy in Atlanta →](https://glowroute.sealey.ai/?search=Atlanta&treatment=testosterone-replacement)
+[Search Testosterone Replacement Therapy in Atlanta →](https://glowroute.io/?search=Atlanta&treatment=testosterone-replacement)

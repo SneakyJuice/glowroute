@@ -27,7 +27,7 @@ San Diego has become a hub for advanced wellness medicine, with providers offeri
 2. **SDBotox - Mission Valley** — 5.0★ (630 reviews)
 3. **Botoxie - North Park** — 5.0★ (473 reviews)
 
-[View all Longevity & Anti-Aging providers in San Diego →](https://glowroute.sealey.ai/?search=San%20Diego)
+[View all Longevity & Anti-Aging providers in San Diego →](https://glowroute.io/?search=San%20Diego)
 
 ## What to Expect from Longevity & Anti-Aging
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Longevity & Anti-Aging. If medically necessary,
 
 GlowRoute has 58+ verified clinics in San Diego offering Longevity & Anti-Aging and related wellness services.
 
-[Search Longevity & Anti-Aging in San Diego →](https://glowroute.sealey.ai/?search=San%20Diego&treatment=longevity)
+[Search Longevity & Anti-Aging in San Diego →](https://glowroute.io/?search=San%20Diego&treatment=longevity)

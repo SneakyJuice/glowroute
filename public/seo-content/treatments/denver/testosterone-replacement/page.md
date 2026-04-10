@@ -27,7 +27,7 @@ Denver has become a hub for advanced wellness medicine, with providers offering 
 2. **Look Lab Med Spa** — 5.0★ (752 reviews)
 3. **Cara Mia Dermatology** — 5.0★ (690 reviews)
 
-[View all Testosterone Replacement Therapy providers in Denver →](https://glowroute.sealey.ai/?search=Denver)
+[View all Testosterone Replacement Therapy providers in Denver →](https://glowroute.io/?search=Denver)
 
 ## What to Expect from Testosterone Replacement Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Testosterone Replacement Therapy. If medically 
 
 GlowRoute has 42+ verified clinics in Denver offering Testosterone Replacement Therapy and related wellness services.
 
-[Search Testosterone Replacement Therapy in Denver →](https://glowroute.sealey.ai/?search=Denver&treatment=testosterone-replacement)
+[Search Testosterone Replacement Therapy in Denver →](https://glowroute.io/?search=Denver&treatment=testosterone-replacement)

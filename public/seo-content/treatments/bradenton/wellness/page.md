@@ -25,7 +25,7 @@ Bradenton has become a hub for advanced wellness medicine, with providers offeri
 
 Browse verified Wellness & Preventive Care providers on GlowRoute.
 
-[View all Wellness & Preventive Care providers in Bradenton →](https://glowroute.sealey.ai/?search=Bradenton)
+[View all Wellness & Preventive Care providers in Bradenton →](https://glowroute.io/?search=Bradenton)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -60,4 +60,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 31+ verified clinics in Bradenton offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in Bradenton →](https://glowroute.sealey.ai/?search=Bradenton&treatment=wellness)
+[Search Wellness & Preventive Care in Bradenton →](https://glowroute.io/?search=Bradenton&treatment=wellness)

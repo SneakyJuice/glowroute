@@ -27,7 +27,7 @@ Henderson has become a hub for advanced wellness medicine, with providers offeri
 2. **LaserAway Henderson** — 5.0★ (690 reviews)
 3. **Exotica Skin Care** — 5.0★ (543 reviews)
 
-[View all Testosterone Replacement Therapy providers in Henderson →](https://glowroute.sealey.ai/?search=Henderson)
+[View all Testosterone Replacement Therapy providers in Henderson →](https://glowroute.io/?search=Henderson)
 
 ## What to Expect from Testosterone Replacement Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Testosterone Replacement Therapy. If medically 
 
 GlowRoute has 23+ verified clinics in Henderson offering Testosterone Replacement Therapy and related wellness services.
 
-[Search Testosterone Replacement Therapy in Henderson →](https://glowroute.sealey.ai/?search=Henderson&treatment=testosterone-replacement)
+[Search Testosterone Replacement Therapy in Henderson →](https://glowroute.io/?search=Henderson&treatment=testosterone-replacement)

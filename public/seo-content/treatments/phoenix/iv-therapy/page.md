@@ -27,7 +27,7 @@ Phoenix has become a hub for advanced wellness medicine, with providers offering
 2. **Suddenly Slimmer Med Spa** — 5.0★ (1062 reviews)
 3. **NakedMD Med Spa Phoenix** — 5.0★ (493 reviews)
 
-[View all IV Therapy & Vitamin Infusions providers in Phoenix →](https://glowroute.sealey.ai/?search=Phoenix)
+[View all IV Therapy & Vitamin Infusions providers in Phoenix →](https://glowroute.io/?search=Phoenix)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -62,4 +62,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 58+ verified clinics in Phoenix offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in Phoenix →](https://glowroute.sealey.ai/?search=Phoenix&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Phoenix →](https://glowroute.io/?search=Phoenix&treatment=iv-therapy)

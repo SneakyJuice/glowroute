@@ -27,7 +27,7 @@ Tampa has become a hub for advanced wellness medicine, with providers offering e
 2. **Refresh Tampa Medical Aesthetics (Formerly Ideal Image)** — 3.7★ (1033 reviews)
 3. **BioDesign Men's Clinic of Tampa** — 5.0★ (1033 reviews)
 
-[View all Longevity & Anti-Aging providers in Tampa →](https://glowroute.sealey.ai/?search=Tampa)
+[View all Longevity & Anti-Aging providers in Tampa →](https://glowroute.io/?search=Tampa)
 
 ## What to Expect from Longevity & Anti-Aging
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Longevity & Anti-Aging. If medically necessary,
 
 GlowRoute has 120+ verified clinics in Tampa offering Longevity & Anti-Aging and related wellness services.
 
-[Search Longevity & Anti-Aging in Tampa →](https://glowroute.sealey.ai/?search=Tampa&treatment=longevity)
+[Search Longevity & Anti-Aging in Tampa →](https://glowroute.io/?search=Tampa&treatment=longevity)

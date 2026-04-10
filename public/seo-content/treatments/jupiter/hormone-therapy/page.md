@@ -27,7 +27,7 @@ Jupiter has become a hub for advanced wellness medicine, with providers offering
 2. **The Medical Group of South Florida** — 4.0★ (780 reviews)
 3. **4Ever Young Med Spa & Wellness Center - Jupiter** — 5.0★ (754 reviews)
 
-[View all Hormone Therapy providers in Jupiter →](https://glowroute.sealey.ai/?search=Jupiter)
+[View all Hormone Therapy providers in Jupiter →](https://glowroute.io/?search=Jupiter)
 
 ## What to Expect from Hormone Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Hormone Therapy. If medically necessary, partia
 
 GlowRoute has 100+ verified clinics in Jupiter offering Hormone Therapy and related wellness services.
 
-[Search Hormone Therapy in Jupiter →](https://glowroute.sealey.ai/?search=Jupiter&treatment=hormone-therapy)
+[Search Hormone Therapy in Jupiter →](https://glowroute.io/?search=Jupiter&treatment=hormone-therapy)

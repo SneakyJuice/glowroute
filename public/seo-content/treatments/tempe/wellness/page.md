@@ -27,7 +27,7 @@ Tempe has become a hub for advanced wellness medicine, with providers offering e
 2. **ZONA MED SPA** — 5.0★ (509 reviews)
 3. **Perfect Skin Center** — 5.0★ (470 reviews)
 
-[View all Wellness & Preventive Care providers in Tempe →](https://glowroute.sealey.ai/?search=Tempe)
+[View all Wellness & Preventive Care providers in Tempe →](https://glowroute.io/?search=Tempe)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 24+ verified clinics in Tempe offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in Tempe →](https://glowroute.sealey.ai/?search=Tempe&treatment=wellness)
+[Search Wellness & Preventive Care in Tempe →](https://glowroute.io/?search=Tempe&treatment=wellness)

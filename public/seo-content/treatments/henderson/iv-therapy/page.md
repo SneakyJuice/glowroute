@@ -27,7 +27,7 @@ Henderson has become a hub for advanced wellness medicine, with providers offeri
 2. **LaserAway Henderson** — 5.0★ (690 reviews)
 3. **Exotica Skin Care** — 5.0★ (543 reviews)
 
-[View all IV Therapy & Vitamin Infusions providers in Henderson →](https://glowroute.sealey.ai/?search=Henderson)
+[View all IV Therapy & Vitamin Infusions providers in Henderson →](https://glowroute.io/?search=Henderson)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -62,4 +62,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 23+ verified clinics in Henderson offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in Henderson →](https://glowroute.sealey.ai/?search=Henderson&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Henderson →](https://glowroute.io/?search=Henderson&treatment=iv-therapy)

@@ -27,7 +27,7 @@ Margate has become a hub for advanced wellness medicine, with providers offering
 2. **Threading and glow by Faye** — 5.0★ (379 reviews)
 3. **Stretch Sesh - Margate** — 5.0★ (286 reviews)
 
-[View all Longevity & Anti-Aging providers in Margate →](https://glowroute.sealey.ai/?search=Margate)
+[View all Longevity & Anti-Aging providers in Margate →](https://glowroute.io/?search=Margate)
 
 ## What to Expect from Longevity & Anti-Aging
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Longevity & Anti-Aging. If medically necessary,
 
 GlowRoute has 31+ verified clinics in Margate offering Longevity & Anti-Aging and related wellness services.
 
-[Search Longevity & Anti-Aging in Margate →](https://glowroute.sealey.ai/?search=Margate&treatment=longevity)
+[Search Longevity & Anti-Aging in Margate →](https://glowroute.io/?search=Margate&treatment=longevity)

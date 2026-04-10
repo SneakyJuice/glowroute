@@ -27,7 +27,7 @@ Las Vegas has become a hub for advanced wellness medicine, with providers offeri
 2. **Novuskin Med Spa** — 5.0★ (2171 reviews)
 3. **Advanced Aesthetics - Centennial** — 5.0★ (677 reviews)
 
-[View all Wellness & Preventive Care providers in Las Vegas →](https://glowroute.sealey.ai/?search=Las%20Vegas)
+[View all Wellness & Preventive Care providers in Las Vegas →](https://glowroute.io/?search=Las%20Vegas)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 76+ verified clinics in Las Vegas offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in Las Vegas →](https://glowroute.sealey.ai/?search=Las%20Vegas&treatment=wellness)
+[Search Wellness & Preventive Care in Las Vegas →](https://glowroute.io/?search=Las%20Vegas&treatment=wellness)

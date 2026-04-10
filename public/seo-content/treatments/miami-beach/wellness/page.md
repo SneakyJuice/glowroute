@@ -27,7 +27,7 @@ Miami Beach has become a hub for advanced wellness medicine, with providers offe
 2. **Charette Cosmetics Medical Spa - Miami Beach** — 5.0★ (554 reviews)
 3. **Tao Spa Miami** — 5.0★ (503 reviews)
 
-[View all Wellness & Preventive Care providers in Miami Beach →](https://glowroute.sealey.ai/?search=Miami%20Beach)
+[View all Wellness & Preventive Care providers in Miami Beach →](https://glowroute.io/?search=Miami%20Beach)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 173+ verified clinics in Miami Beach offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in Miami Beach →](https://glowroute.sealey.ai/?search=Miami%20Beach&treatment=wellness)
+[Search Wellness & Preventive Care in Miami Beach →](https://glowroute.io/?search=Miami%20Beach&treatment=wellness)

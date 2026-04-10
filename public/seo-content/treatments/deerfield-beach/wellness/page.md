@@ -27,7 +27,7 @@ Deerfield Beach has become a hub for advanced wellness medicine, with providers 
 2. **Schweiger Dermatology Group - Boca Raton Central** — 5.0★ (760 reviews)
 3. **Barnett Dermatology of Boca Raton** — 5.0★ (611 reviews)
 
-[View all Wellness & Preventive Care providers in Deerfield Beach →](https://glowroute.sealey.ai/?search=Deerfield%20Beach)
+[View all Wellness & Preventive Care providers in Deerfield Beach →](https://glowroute.io/?search=Deerfield%20Beach)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 100+ verified clinics in Deerfield Beach offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in Deerfield Beach →](https://glowroute.sealey.ai/?search=Deerfield%20Beach&treatment=wellness)
+[Search Wellness & Preventive Care in Deerfield Beach →](https://glowroute.io/?search=Deerfield%20Beach&treatment=wellness)

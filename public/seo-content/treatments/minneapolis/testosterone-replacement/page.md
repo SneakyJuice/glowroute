@@ -27,7 +27,7 @@ Minneapolis has become a hub for advanced wellness medicine, with providers offe
 2. **Clinic Ellena Health + Wellness** — 5.0★ (233 reviews)
 3. **Eternal Beauty & Wellness** — 5.0★ (168 reviews)
 
-[View all Testosterone Replacement Therapy providers in Minneapolis →](https://glowroute.sealey.ai/?search=Minneapolis)
+[View all Testosterone Replacement Therapy providers in Minneapolis →](https://glowroute.io/?search=Minneapolis)
 
 ## What to Expect from Testosterone Replacement Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Testosterone Replacement Therapy. If medically 
 
 GlowRoute has 34+ verified clinics in Minneapolis offering Testosterone Replacement Therapy and related wellness services.
 
-[Search Testosterone Replacement Therapy in Minneapolis →](https://glowroute.sealey.ai/?search=Minneapolis&treatment=testosterone-replacement)
+[Search Testosterone Replacement Therapy in Minneapolis →](https://glowroute.io/?search=Minneapolis&treatment=testosterone-replacement)

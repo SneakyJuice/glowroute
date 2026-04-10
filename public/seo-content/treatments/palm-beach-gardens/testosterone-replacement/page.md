@@ -25,7 +25,7 @@ Palm Beach Gardens has become a hub for advanced wellness medicine, with provide
 
 Browse verified Testosterone Replacement Therapy providers on GlowRoute.
 
-[View all Testosterone Replacement Therapy providers in Palm Beach Gardens →](https://glowroute.sealey.ai/?search=Palm%20Beach%20Gardens)
+[View all Testosterone Replacement Therapy providers in Palm Beach Gardens →](https://glowroute.io/?search=Palm%20Beach%20Gardens)
 
 ## What to Expect from Testosterone Replacement Therapy
 
@@ -60,4 +60,4 @@ Most plans do not cover elective Testosterone Replacement Therapy. If medically 
 
 GlowRoute has 34+ verified clinics in Palm Beach Gardens offering Testosterone Replacement Therapy and related wellness services.
 
-[Search Testosterone Replacement Therapy in Palm Beach Gardens →](https://glowroute.sealey.ai/?search=Palm%20Beach%20Gardens&treatment=testosterone-replacement)
+[Search Testosterone Replacement Therapy in Palm Beach Gardens →](https://glowroute.io/?search=Palm%20Beach%20Gardens&treatment=testosterone-replacement)

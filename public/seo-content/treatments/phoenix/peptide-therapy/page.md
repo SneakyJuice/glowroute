@@ -27,7 +27,7 @@ Phoenix has become a hub for advanced wellness medicine, with providers offering
 2. **Suddenly Slimmer Med Spa** — 5.0★ (1062 reviews)
 3. **NakedMD Med Spa Phoenix** — 5.0★ (493 reviews)
 
-[View all Peptide Therapy providers in Phoenix →](https://glowroute.sealey.ai/?search=Phoenix)
+[View all Peptide Therapy providers in Phoenix →](https://glowroute.io/?search=Phoenix)
 
 ## What to Expect from Peptide Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Peptide Therapy. If medically necessary, partia
 
 GlowRoute has 58+ verified clinics in Phoenix offering Peptide Therapy and related wellness services.
 
-[Search Peptide Therapy in Phoenix →](https://glowroute.sealey.ai/?search=Phoenix&treatment=peptide-therapy)
+[Search Peptide Therapy in Phoenix →](https://glowroute.io/?search=Phoenix&treatment=peptide-therapy)

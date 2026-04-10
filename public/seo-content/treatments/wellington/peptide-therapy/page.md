@@ -27,7 +27,7 @@ Wellington has become a hub for advanced wellness medicine, with providers offer
 2. **Relive Wellington** — 5.0★ (434 reviews)
 3. **4Ever Young Anti Aging Solutions** — 5.0★ (378 reviews)
 
-[View all Peptide Therapy providers in Wellington →](https://glowroute.sealey.ai/?search=Wellington)
+[View all Peptide Therapy providers in Wellington →](https://glowroute.io/?search=Wellington)
 
 ## What to Expect from Peptide Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Peptide Therapy. If medically necessary, partia
 
 GlowRoute has 67+ verified clinics in Wellington offering Peptide Therapy and related wellness services.
 
-[Search Peptide Therapy in Wellington →](https://glowroute.sealey.ai/?search=Wellington&treatment=peptide-therapy)
+[Search Peptide Therapy in Wellington →](https://glowroute.io/?search=Wellington&treatment=peptide-therapy)

@@ -27,7 +27,7 @@ Newport Beach has become a hub for advanced wellness medicine, with providers of
 2. **PCH MedSpa** — 5.0★ (404 reviews)
 3. **MeSO Medspa Newport Beach** — 5.0★ (303 reviews)
 
-[View all IV Therapy & Vitamin Infusions providers in Newport Beach →](https://glowroute.sealey.ai/?search=Newport%20Beach)
+[View all IV Therapy & Vitamin Infusions providers in Newport Beach →](https://glowroute.io/?search=Newport%20Beach)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -62,4 +62,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 24+ verified clinics in Newport Beach offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in Newport Beach →](https://glowroute.sealey.ai/?search=Newport%20Beach&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Newport Beach →](https://glowroute.io/?search=Newport%20Beach&treatment=iv-therapy)

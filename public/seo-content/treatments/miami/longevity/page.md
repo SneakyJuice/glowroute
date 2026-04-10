@@ -27,7 +27,7 @@ Miami has become a hub for advanced wellness medicine, with providers offering e
 2. **Dr. Deborah Longwill, DO, FAOCD** — 5.0★ (1393 reviews)
 3. **Miami Center for Dermatology** — 5.0★ (1340 reviews)
 
-[View all Longevity & Anti-Aging providers in Miami →](https://glowroute.sealey.ai/?search=Miami)
+[View all Longevity & Anti-Aging providers in Miami →](https://glowroute.io/?search=Miami)
 
 ## What to Expect from Longevity & Anti-Aging
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Longevity & Anti-Aging. If medically necessary,
 
 GlowRoute has 136+ verified clinics in Miami offering Longevity & Anti-Aging and related wellness services.
 
-[Search Longevity & Anti-Aging in Miami →](https://glowroute.sealey.ai/?search=Miami&treatment=longevity)
+[Search Longevity & Anti-Aging in Miami →](https://glowroute.io/?search=Miami&treatment=longevity)

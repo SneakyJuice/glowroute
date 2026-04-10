@@ -27,7 +27,7 @@ Orlando has become a hub for advanced wellness medicine, with providers offering
 2. **Sanctuary Salon & Med Spa** — 5.0★ (732 reviews)
 3. **Evolving Aesthetics** — 5.0★ (553 reviews)
 
-[View all Semaglutide / GLP-1 Weight Loss providers in Orlando →](https://glowroute.sealey.ai/?search=Orlando)
+[View all Semaglutide / GLP-1 Weight Loss providers in Orlando →](https://glowroute.io/?search=Orlando)
 
 ## What to Expect from Semaglutide / GLP-1 Weight Loss
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Semaglutide / GLP-1 Weight Loss. If medically n
 
 GlowRoute has 55+ verified clinics in Orlando offering Semaglutide / GLP-1 Weight Loss and related wellness services.
 
-[Search Semaglutide / GLP-1 Weight Loss in Orlando →](https://glowroute.sealey.ai/?search=Orlando&treatment=semaglutide)
+[Search Semaglutide / GLP-1 Weight Loss in Orlando →](https://glowroute.io/?search=Orlando&treatment=semaglutide)

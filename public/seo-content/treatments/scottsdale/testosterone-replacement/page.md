@@ -27,7 +27,7 @@ Scottsdale has become a hub for advanced wellness medicine, with providers offer
 2. **Look Lab Med Spa** — 5.0★ (829 reviews)
 3. **Alani Skin MD** — 5.0★ (663 reviews)
 
-[View all Testosterone Replacement Therapy providers in Scottsdale →](https://glowroute.sealey.ai/?search=Scottsdale)
+[View all Testosterone Replacement Therapy providers in Scottsdale →](https://glowroute.io/?search=Scottsdale)
 
 ## What to Expect from Testosterone Replacement Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Testosterone Replacement Therapy. If medically 
 
 GlowRoute has 28+ verified clinics in Scottsdale offering Testosterone Replacement Therapy and related wellness services.
 
-[Search Testosterone Replacement Therapy in Scottsdale →](https://glowroute.sealey.ai/?search=Scottsdale&treatment=testosterone-replacement)
+[Search Testosterone Replacement Therapy in Scottsdale →](https://glowroute.io/?search=Scottsdale&treatment=testosterone-replacement)

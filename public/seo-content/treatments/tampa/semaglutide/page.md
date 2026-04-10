@@ -27,7 +27,7 @@ Tampa has become a hub for advanced wellness medicine, with providers offering e
 2. **Refresh Tampa Medical Aesthetics (Formerly Ideal Image)** — 3.7★ (1033 reviews)
 3. **BioDesign Men's Clinic of Tampa** — 5.0★ (1033 reviews)
 
-[View all Semaglutide / GLP-1 Weight Loss providers in Tampa →](https://glowroute.sealey.ai/?search=Tampa)
+[View all Semaglutide / GLP-1 Weight Loss providers in Tampa →](https://glowroute.io/?search=Tampa)
 
 ## What to Expect from Semaglutide / GLP-1 Weight Loss
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Semaglutide / GLP-1 Weight Loss. If medically n
 
 GlowRoute has 120+ verified clinics in Tampa offering Semaglutide / GLP-1 Weight Loss and related wellness services.
 
-[Search Semaglutide / GLP-1 Weight Loss in Tampa →](https://glowroute.sealey.ai/?search=Tampa&treatment=semaglutide)
+[Search Semaglutide / GLP-1 Weight Loss in Tampa →](https://glowroute.io/?search=Tampa&treatment=semaglutide)

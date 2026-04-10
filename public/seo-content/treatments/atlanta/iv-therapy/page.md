@@ -27,7 +27,7 @@ Atlanta has become a hub for advanced wellness medicine, with providers offering
 2. **4Ever Young Med Spa & Wellness Center - Atlanta Midtown** — 5.0★ (1010 reviews)
 3. **The Ageless Center** — 5.0★ (471 reviews)
 
-[View all IV Therapy & Vitamin Infusions providers in Atlanta →](https://glowroute.sealey.ai/?search=Atlanta)
+[View all IV Therapy & Vitamin Infusions providers in Atlanta →](https://glowroute.io/?search=Atlanta)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -62,4 +62,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 59+ verified clinics in Atlanta offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in Atlanta →](https://glowroute.sealey.ai/?search=Atlanta&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Atlanta →](https://glowroute.io/?search=Atlanta&treatment=iv-therapy)

@@ -27,7 +27,7 @@ Lake Worth has become a hub for advanced wellness medicine, with providers offer
 2. **Pediatric & General Dentistry of Palm Beach, PA** — 5.0★ (1131 reviews)
 3. **LA Medical Associates** — 5.0★ (410 reviews)
 
-[View all IV Therapy & Vitamin Infusions providers in Lake Worth →](https://glowroute.sealey.ai/?search=Lake%20Worth)
+[View all IV Therapy & Vitamin Infusions providers in Lake Worth →](https://glowroute.io/?search=Lake%20Worth)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -62,4 +62,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 57+ verified clinics in Lake Worth offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in Lake Worth →](https://glowroute.sealey.ai/?search=Lake%20Worth&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Lake Worth →](https://glowroute.io/?search=Lake%20Worth&treatment=iv-therapy)

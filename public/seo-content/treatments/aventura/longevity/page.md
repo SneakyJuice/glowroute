@@ -25,7 +25,7 @@ Aventura has become a hub for advanced wellness medicine, with providers offerin
 
 Browse verified Longevity & Anti-Aging providers on GlowRoute.
 
-[View all Longevity & Anti-Aging providers in Aventura →](https://glowroute.sealey.ai/?search=Aventura)
+[View all Longevity & Anti-Aging providers in Aventura →](https://glowroute.io/?search=Aventura)
 
 ## What to Expect from Longevity & Anti-Aging
 
@@ -60,4 +60,4 @@ Most plans do not cover elective Longevity & Anti-Aging. If medically necessary,
 
 GlowRoute has 19+ verified clinics in Aventura offering Longevity & Anti-Aging and related wellness services.
 
-[Search Longevity & Anti-Aging in Aventura →](https://glowroute.sealey.ai/?search=Aventura&treatment=longevity)
+[Search Longevity & Anti-Aging in Aventura →](https://glowroute.io/?search=Aventura&treatment=longevity)

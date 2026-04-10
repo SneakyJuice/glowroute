@@ -25,7 +25,7 @@ Aventura has become a hub for advanced wellness medicine, with providers offerin
 
 Browse verified IV Therapy & Vitamin Infusions providers on GlowRoute.
 
-[View all IV Therapy & Vitamin Infusions providers in Aventura →](https://glowroute.sealey.ai/?search=Aventura)
+[View all IV Therapy & Vitamin Infusions providers in Aventura →](https://glowroute.io/?search=Aventura)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -60,4 +60,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 19+ verified clinics in Aventura offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in Aventura →](https://glowroute.sealey.ai/?search=Aventura&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Aventura →](https://glowroute.io/?search=Aventura&treatment=iv-therapy)

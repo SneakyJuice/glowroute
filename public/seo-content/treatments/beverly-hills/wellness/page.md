@@ -27,7 +27,7 @@ Beverly Hills has become a hub for advanced wellness medicine, with providers of
 2. **Skin Verse Medical Spa** — 5.0★ (224 reviews)
 3. **LYEV Beverly Hills- Medical Spa** — 5.0★ (209 reviews)
 
-[View all Wellness & Preventive Care providers in Beverly Hills →](https://glowroute.sealey.ai/?search=Beverly%20Hills)
+[View all Wellness & Preventive Care providers in Beverly Hills →](https://glowroute.io/?search=Beverly%20Hills)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 24+ verified clinics in Beverly Hills offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in Beverly Hills →](https://glowroute.sealey.ai/?search=Beverly%20Hills&treatment=wellness)
+[Search Wellness & Preventive Care in Beverly Hills →](https://glowroute.io/?search=Beverly%20Hills&treatment=wellness)

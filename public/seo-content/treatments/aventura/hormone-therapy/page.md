@@ -25,7 +25,7 @@ Aventura has become a hub for advanced wellness medicine, with providers offerin
 
 Browse verified Hormone Therapy providers on GlowRoute.
 
-[View all Hormone Therapy providers in Aventura →](https://glowroute.sealey.ai/?search=Aventura)
+[View all Hormone Therapy providers in Aventura →](https://glowroute.io/?search=Aventura)
 
 ## What to Expect from Hormone Therapy
 
@@ -60,4 +60,4 @@ Most plans do not cover elective Hormone Therapy. If medically necessary, partia
 
 GlowRoute has 19+ verified clinics in Aventura offering Hormone Therapy and related wellness services.
 
-[Search Hormone Therapy in Aventura →](https://glowroute.sealey.ai/?search=Aventura&treatment=hormone-therapy)
+[Search Hormone Therapy in Aventura →](https://glowroute.io/?search=Aventura&treatment=hormone-therapy)

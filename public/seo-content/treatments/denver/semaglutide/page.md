@@ -27,7 +27,7 @@ Denver has become a hub for advanced wellness medicine, with providers offering 
 2. **Look Lab Med Spa** — 5.0★ (752 reviews)
 3. **Cara Mia Dermatology** — 5.0★ (690 reviews)
 
-[View all Semaglutide / GLP-1 Weight Loss providers in Denver →](https://glowroute.sealey.ai/?search=Denver)
+[View all Semaglutide / GLP-1 Weight Loss providers in Denver →](https://glowroute.io/?search=Denver)
 
 ## What to Expect from Semaglutide / GLP-1 Weight Loss
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Semaglutide / GLP-1 Weight Loss. If medically n
 
 GlowRoute has 42+ verified clinics in Denver offering Semaglutide / GLP-1 Weight Loss and related wellness services.
 
-[Search Semaglutide / GLP-1 Weight Loss in Denver →](https://glowroute.sealey.ai/?search=Denver&treatment=semaglutide)
+[Search Semaglutide / GLP-1 Weight Loss in Denver →](https://glowroute.io/?search=Denver&treatment=semaglutide)

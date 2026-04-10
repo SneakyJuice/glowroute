@@ -27,7 +27,7 @@ Chicago has become a hub for advanced wellness medicine, with providers offering
 2. **Mia Aesthetics** — 4.0★ (815 reviews)
 3. **Pure Med Spa** — 5.0★ (761 reviews)
 
-[View all IV Therapy & Vitamin Infusions providers in Chicago →](https://glowroute.sealey.ai/?search=Chicago)
+[View all IV Therapy & Vitamin Infusions providers in Chicago →](https://glowroute.io/?search=Chicago)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -62,4 +62,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 65+ verified clinics in Chicago offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in Chicago →](https://glowroute.sealey.ai/?search=Chicago&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Chicago →](https://glowroute.io/?search=Chicago&treatment=iv-therapy)

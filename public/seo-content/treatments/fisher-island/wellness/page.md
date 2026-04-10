@@ -30,7 +30,7 @@ Fisher Island has become a hub for advanced wellness and aesthetic medicine, wit
 2. **Monaco MedSpa** — 5★ (0 reviews)
 3. **Kauai Aesthetics** — 5★ (0 reviews)
 
-[View all Wellness & Preventive Care providers in Fisher Island →](https://glowroute.sealey.ai/?search=Fisher%20Island)
+[View all Wellness & Preventive Care providers in Fisher Island →](https://glowroute.io/?search=Fisher%20Island)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -74,4 +74,4 @@ Most insurance plans do not cover elective Wellness & Preventive Care protocols.
 
 GlowRoute has verified 99+ clinics in Fisher Island offering Wellness & Preventive Care and related wellness services. Browse real patient reviews, compare GlowScores, and find the right provider for your goals.
 
-[Search Wellness & Preventive Care in Fisher Island →](https://glowroute.sealey.ai/?search=Fisher%20Island&treatment=wellness)
+[Search Wellness & Preventive Care in Fisher Island →](https://glowroute.io/?search=Fisher%20Island&treatment=wellness)

@@ -27,7 +27,7 @@ Davie has become a hub for advanced wellness medicine, with providers offering e
 2. **Zemits A-Esthetic - Spa Aesthetic Equipment** — 5.0★ (1714 reviews)
 3. **Barehandspa LLC** — 5.0★ (528 reviews)
 
-[View all Testosterone Replacement Therapy providers in Davie →](https://glowroute.sealey.ai/?search=Davie)
+[View all Testosterone Replacement Therapy providers in Davie →](https://glowroute.io/?search=Davie)
 
 ## What to Expect from Testosterone Replacement Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Testosterone Replacement Therapy. If medically 
 
 GlowRoute has 86+ verified clinics in Davie offering Testosterone Replacement Therapy and related wellness services.
 
-[Search Testosterone Replacement Therapy in Davie →](https://glowroute.sealey.ai/?search=Davie&treatment=testosterone-replacement)
+[Search Testosterone Replacement Therapy in Davie →](https://glowroute.io/?search=Davie&treatment=testosterone-replacement)

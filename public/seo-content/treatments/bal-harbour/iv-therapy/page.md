@@ -30,7 +30,7 @@ Bal Harbour has become a hub for advanced wellness and aesthetic medicine, with 
 2. **Red Market Miami Salon** — 5★ (343 reviews)
 3. **SKINNEY Medspa** — 5★ (93 reviews)
 
-[View all IV Therapy & Vitamin Infusions providers in Bal Harbour →](https://glowroute.sealey.ai/?search=Bal%20Harbour)
+[View all IV Therapy & Vitamin Infusions providers in Bal Harbour →](https://glowroute.io/?search=Bal%20Harbour)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -74,4 +74,4 @@ Most insurance plans do not cover elective IV Therapy & Vitamin Infusions protoc
 
 GlowRoute has verified 99+ clinics in Bal Harbour offering IV Therapy & Vitamin Infusions and related wellness services. Browse real patient reviews, compare GlowScores, and find the right provider for your goals.
 
-[Search IV Therapy & Vitamin Infusions in Bal Harbour →](https://glowroute.sealey.ai/?search=Bal%20Harbour&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Bal Harbour →](https://glowroute.io/?search=Bal%20Harbour&treatment=iv-therapy)

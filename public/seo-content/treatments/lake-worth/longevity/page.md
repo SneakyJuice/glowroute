@@ -27,7 +27,7 @@ Lake Worth has become a hub for advanced wellness medicine, with providers offer
 2. **Pediatric & General Dentistry of Palm Beach, PA** — 5.0★ (1131 reviews)
 3. **LA Medical Associates** — 5.0★ (410 reviews)
 
-[View all Longevity & Anti-Aging providers in Lake Worth →](https://glowroute.sealey.ai/?search=Lake%20Worth)
+[View all Longevity & Anti-Aging providers in Lake Worth →](https://glowroute.io/?search=Lake%20Worth)
 
 ## What to Expect from Longevity & Anti-Aging
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Longevity & Anti-Aging. If medically necessary,
 
 GlowRoute has 57+ verified clinics in Lake Worth offering Longevity & Anti-Aging and related wellness services.
 
-[Search Longevity & Anti-Aging in Lake Worth →](https://glowroute.sealey.ai/?search=Lake%20Worth&treatment=longevity)
+[Search Longevity & Anti-Aging in Lake Worth →](https://glowroute.io/?search=Lake%20Worth&treatment=longevity)

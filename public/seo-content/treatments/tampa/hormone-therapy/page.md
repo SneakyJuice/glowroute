@@ -27,7 +27,7 @@ Tampa has become a hub for advanced wellness medicine, with providers offering e
 2. **Refresh Tampa Medical Aesthetics (Formerly Ideal Image)** — 3.7★ (1033 reviews)
 3. **BioDesign Men's Clinic of Tampa** — 5.0★ (1033 reviews)
 
-[View all Hormone Therapy providers in Tampa →](https://glowroute.sealey.ai/?search=Tampa)
+[View all Hormone Therapy providers in Tampa →](https://glowroute.io/?search=Tampa)
 
 ## What to Expect from Hormone Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Hormone Therapy. If medically necessary, partia
 
 GlowRoute has 120+ verified clinics in Tampa offering Hormone Therapy and related wellness services.
 
-[Search Hormone Therapy in Tampa →](https://glowroute.sealey.ai/?search=Tampa&treatment=hormone-therapy)
+[Search Hormone Therapy in Tampa →](https://glowroute.io/?search=Tampa&treatment=hormone-therapy)

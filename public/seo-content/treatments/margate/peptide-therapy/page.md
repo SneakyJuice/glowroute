@@ -27,7 +27,7 @@ Margate has become a hub for advanced wellness medicine, with providers offering
 2. **Threading and glow by Faye** — 5.0★ (379 reviews)
 3. **Stretch Sesh - Margate** — 5.0★ (286 reviews)
 
-[View all Peptide Therapy providers in Margate →](https://glowroute.sealey.ai/?search=Margate)
+[View all Peptide Therapy providers in Margate →](https://glowroute.io/?search=Margate)
 
 ## What to Expect from Peptide Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Peptide Therapy. If medically necessary, partia
 
 GlowRoute has 31+ verified clinics in Margate offering Peptide Therapy and related wellness services.
 
-[Search Peptide Therapy in Margate →](https://glowroute.sealey.ai/?search=Margate&treatment=peptide-therapy)
+[Search Peptide Therapy in Margate →](https://glowroute.io/?search=Margate&treatment=peptide-therapy)

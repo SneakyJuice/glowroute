@@ -27,7 +27,7 @@ Davie has become a hub for advanced wellness medicine, with providers offering e
 2. **Zemits A-Esthetic - Spa Aesthetic Equipment** — 5.0★ (1714 reviews)
 3. **Barehandspa LLC** — 5.0★ (528 reviews)
 
-[View all Peptide Therapy providers in Davie →](https://glowroute.sealey.ai/?search=Davie)
+[View all Peptide Therapy providers in Davie →](https://glowroute.io/?search=Davie)
 
 ## What to Expect from Peptide Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Peptide Therapy. If medically necessary, partia
 
 GlowRoute has 86+ verified clinics in Davie offering Peptide Therapy and related wellness services.
 
-[Search Peptide Therapy in Davie →](https://glowroute.sealey.ai/?search=Davie&treatment=peptide-therapy)
+[Search Peptide Therapy in Davie →](https://glowroute.io/?search=Davie&treatment=peptide-therapy)

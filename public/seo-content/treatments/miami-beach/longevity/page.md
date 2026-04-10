@@ -27,7 +27,7 @@ Miami Beach has become a hub for advanced wellness medicine, with providers offe
 2. **Charette Cosmetics Medical Spa - Miami Beach** — 5.0★ (554 reviews)
 3. **Tao Spa Miami** — 5.0★ (503 reviews)
 
-[View all Longevity & Anti-Aging providers in Miami Beach →](https://glowroute.sealey.ai/?search=Miami%20Beach)
+[View all Longevity & Anti-Aging providers in Miami Beach →](https://glowroute.io/?search=Miami%20Beach)
 
 ## What to Expect from Longevity & Anti-Aging
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Longevity & Anti-Aging. If medically necessary,
 
 GlowRoute has 173+ verified clinics in Miami Beach offering Longevity & Anti-Aging and related wellness services.
 
-[Search Longevity & Anti-Aging in Miami Beach →](https://glowroute.sealey.ai/?search=Miami%20Beach&treatment=longevity)
+[Search Longevity & Anti-Aging in Miami Beach →](https://glowroute.io/?search=Miami%20Beach&treatment=longevity)

@@ -27,7 +27,7 @@ New York City has become a hub for advanced wellness medicine, with providers of
 2. **AestheticsMD by Jean Rhee Upper East Side** — 5.0★ (579 reviews)
 3. **SKINNEY Medspa** — 5.0★ (454 reviews)
 
-[View all Wellness & Preventive Care providers in New York City →](https://glowroute.sealey.ai/?search=New%20York%20City)
+[View all Wellness & Preventive Care providers in New York City →](https://glowroute.io/?search=New%20York%20City)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 25+ verified clinics in New York City offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in New York City →](https://glowroute.sealey.ai/?search=New%20York%20City&treatment=wellness)
+[Search Wellness & Preventive Care in New York City →](https://glowroute.io/?search=New%20York%20City&treatment=wellness)

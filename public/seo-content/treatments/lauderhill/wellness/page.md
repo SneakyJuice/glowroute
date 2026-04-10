@@ -25,7 +25,7 @@ Lauderhill has become a hub for advanced wellness medicine, with providers offer
 
 Browse verified Wellness & Preventive Care providers on GlowRoute.
 
-[View all Wellness & Preventive Care providers in Lauderhill →](https://glowroute.sealey.ai/?search=Lauderhill)
+[View all Wellness & Preventive Care providers in Lauderhill →](https://glowroute.io/?search=Lauderhill)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -60,4 +60,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 25+ verified clinics in Lauderhill offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in Lauderhill →](https://glowroute.sealey.ai/?search=Lauderhill&treatment=wellness)
+[Search Wellness & Preventive Care in Lauderhill →](https://glowroute.io/?search=Lauderhill&treatment=wellness)

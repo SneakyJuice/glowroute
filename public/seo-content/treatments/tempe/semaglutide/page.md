@@ -27,7 +27,7 @@ Tempe has become a hub for advanced wellness medicine, with providers offering e
 2. **ZONA MED SPA** — 5.0★ (509 reviews)
 3. **Perfect Skin Center** — 5.0★ (470 reviews)
 
-[View all Semaglutide / GLP-1 Weight Loss providers in Tempe →](https://glowroute.sealey.ai/?search=Tempe)
+[View all Semaglutide / GLP-1 Weight Loss providers in Tempe →](https://glowroute.io/?search=Tempe)
 
 ## What to Expect from Semaglutide / GLP-1 Weight Loss
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Semaglutide / GLP-1 Weight Loss. If medically n
 
 GlowRoute has 24+ verified clinics in Tempe offering Semaglutide / GLP-1 Weight Loss and related wellness services.
 
-[Search Semaglutide / GLP-1 Weight Loss in Tempe →](https://glowroute.sealey.ai/?search=Tempe&treatment=semaglutide)
+[Search Semaglutide / GLP-1 Weight Loss in Tempe →](https://glowroute.io/?search=Tempe&treatment=semaglutide)

@@ -27,7 +27,7 @@ Phoenix has become a hub for advanced wellness medicine, with providers offering
 2. **Suddenly Slimmer Med Spa** — 5.0★ (1062 reviews)
 3. **NakedMD Med Spa Phoenix** — 5.0★ (493 reviews)
 
-[View all Wellness & Preventive Care providers in Phoenix →](https://glowroute.sealey.ai/?search=Phoenix)
+[View all Wellness & Preventive Care providers in Phoenix →](https://glowroute.io/?search=Phoenix)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 58+ verified clinics in Phoenix offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in Phoenix →](https://glowroute.sealey.ai/?search=Phoenix&treatment=wellness)
+[Search Wellness & Preventive Care in Phoenix →](https://glowroute.io/?search=Phoenix&treatment=wellness)

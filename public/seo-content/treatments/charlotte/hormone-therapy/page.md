@@ -27,7 +27,7 @@ Charlotte has become a hub for advanced wellness medicine, with providers offeri
 2. **Lifted Aesthetics Charlotte** — 5.0★ (934 reviews)
 3. **Ageless Remedies SouthPark** — 5.0★ (696 reviews)
 
-[View all Hormone Therapy providers in Charlotte →](https://glowroute.sealey.ai/?search=Charlotte)
+[View all Hormone Therapy providers in Charlotte →](https://glowroute.io/?search=Charlotte)
 
 ## What to Expect from Hormone Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Hormone Therapy. If medically necessary, partia
 
 GlowRoute has 65+ verified clinics in Charlotte offering Hormone Therapy and related wellness services.
 
-[Search Hormone Therapy in Charlotte →](https://glowroute.sealey.ai/?search=Charlotte&treatment=hormone-therapy)
+[Search Hormone Therapy in Charlotte →](https://glowroute.io/?search=Charlotte&treatment=hormone-therapy)

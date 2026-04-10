@@ -27,7 +27,7 @@ Las Vegas has become a hub for advanced wellness medicine, with providers offeri
 2. **Novuskin Med Spa** — 5.0★ (2171 reviews)
 3. **Advanced Aesthetics - Centennial** — 5.0★ (677 reviews)
 
-[View all Hormone Therapy providers in Las Vegas →](https://glowroute.sealey.ai/?search=Las%20Vegas)
+[View all Hormone Therapy providers in Las Vegas →](https://glowroute.io/?search=Las%20Vegas)
 
 ## What to Expect from Hormone Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Hormone Therapy. If medically necessary, partia
 
 GlowRoute has 76+ verified clinics in Las Vegas offering Hormone Therapy and related wellness services.
 
-[Search Hormone Therapy in Las Vegas →](https://glowroute.sealey.ai/?search=Las%20Vegas&treatment=hormone-therapy)
+[Search Hormone Therapy in Las Vegas →](https://glowroute.io/?search=Las%20Vegas&treatment=hormone-therapy)

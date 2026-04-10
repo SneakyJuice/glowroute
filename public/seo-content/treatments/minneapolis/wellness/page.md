@@ -27,7 +27,7 @@ Minneapolis has become a hub for advanced wellness medicine, with providers offe
 2. **Clinic Ellena Health + Wellness** — 5.0★ (233 reviews)
 3. **Eternal Beauty & Wellness** — 5.0★ (168 reviews)
 
-[View all Wellness & Preventive Care providers in Minneapolis →](https://glowroute.sealey.ai/?search=Minneapolis)
+[View all Wellness & Preventive Care providers in Minneapolis →](https://glowroute.io/?search=Minneapolis)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 34+ verified clinics in Minneapolis offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in Minneapolis →](https://glowroute.sealey.ai/?search=Minneapolis&treatment=wellness)
+[Search Wellness & Preventive Care in Minneapolis →](https://glowroute.io/?search=Minneapolis&treatment=wellness)

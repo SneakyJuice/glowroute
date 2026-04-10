@@ -27,7 +27,7 @@ Newport Beach has become a hub for advanced wellness medicine, with providers of
 2. **PCH MedSpa** — 5.0★ (404 reviews)
 3. **MeSO Medspa Newport Beach** — 5.0★ (303 reviews)
 
-[View all Hormone Therapy providers in Newport Beach →](https://glowroute.sealey.ai/?search=Newport%20Beach)
+[View all Hormone Therapy providers in Newport Beach →](https://glowroute.io/?search=Newport%20Beach)
 
 ## What to Expect from Hormone Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Hormone Therapy. If medically necessary, partia
 
 GlowRoute has 24+ verified clinics in Newport Beach offering Hormone Therapy and related wellness services.
 
-[Search Hormone Therapy in Newport Beach →](https://glowroute.sealey.ai/?search=Newport%20Beach&treatment=hormone-therapy)
+[Search Hormone Therapy in Newport Beach →](https://glowroute.io/?search=Newport%20Beach&treatment=hormone-therapy)

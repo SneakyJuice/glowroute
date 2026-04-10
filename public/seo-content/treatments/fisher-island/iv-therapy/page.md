@@ -30,7 +30,7 @@ Fisher Island has become a hub for advanced wellness and aesthetic medicine, wit
 2. **Monaco MedSpa** — 5★ (0 reviews)
 3. **Kauai Aesthetics** — 5★ (0 reviews)
 
-[View all IV Therapy & Vitamin Infusions providers in Fisher Island →](https://glowroute.sealey.ai/?search=Fisher%20Island)
+[View all IV Therapy & Vitamin Infusions providers in Fisher Island →](https://glowroute.io/?search=Fisher%20Island)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -74,4 +74,4 @@ Most insurance plans do not cover elective IV Therapy & Vitamin Infusions protoc
 
 GlowRoute has verified 99+ clinics in Fisher Island offering IV Therapy & Vitamin Infusions and related wellness services. Browse real patient reviews, compare GlowScores, and find the right provider for your goals.
 
-[Search IV Therapy & Vitamin Infusions in Fisher Island →](https://glowroute.sealey.ai/?search=Fisher%20Island&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Fisher Island →](https://glowroute.io/?search=Fisher%20Island&treatment=iv-therapy)

@@ -27,7 +27,7 @@ Jacksonville has become a hub for advanced wellness medicine, with providers off
 2. **CMA - Center for Modern Aesthetic Medicine** — 5.0★ (246 reviews)
 3. **Med Spa by Voupre** — 5.0★ (242 reviews)
 
-[View all Testosterone Replacement Therapy providers in Jacksonville →](https://glowroute.sealey.ai/?search=Jacksonville)
+[View all Testosterone Replacement Therapy providers in Jacksonville →](https://glowroute.io/?search=Jacksonville)
 
 ## What to Expect from Testosterone Replacement Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Testosterone Replacement Therapy. If medically 
 
 GlowRoute has 44+ verified clinics in Jacksonville offering Testosterone Replacement Therapy and related wellness services.
 
-[Search Testosterone Replacement Therapy in Jacksonville →](https://glowroute.sealey.ai/?search=Jacksonville&treatment=testosterone-replacement)
+[Search Testosterone Replacement Therapy in Jacksonville →](https://glowroute.io/?search=Jacksonville&treatment=testosterone-replacement)

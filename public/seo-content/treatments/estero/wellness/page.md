@@ -27,7 +27,7 @@ Estero has become a hub for advanced wellness medicine, with providers offering 
 2. **Riverchase Dermatology - Estero** — 5.0★ (873 reviews)
 3. **Spavia Day Spa - Estero** — 5.0★ (451 reviews)
 
-[View all Wellness & Preventive Care providers in Estero →](https://glowroute.sealey.ai/?search=Estero)
+[View all Wellness & Preventive Care providers in Estero →](https://glowroute.io/?search=Estero)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 43+ verified clinics in Estero offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in Estero →](https://glowroute.sealey.ai/?search=Estero&treatment=wellness)
+[Search Wellness & Preventive Care in Estero →](https://glowroute.io/?search=Estero&treatment=wellness)

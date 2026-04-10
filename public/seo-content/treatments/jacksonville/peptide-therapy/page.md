@@ -27,7 +27,7 @@ Jacksonville has become a hub for advanced wellness medicine, with providers off
 2. **CMA - Center for Modern Aesthetic Medicine** — 5.0★ (246 reviews)
 3. **Med Spa by Voupre** — 5.0★ (242 reviews)
 
-[View all Peptide Therapy providers in Jacksonville →](https://glowroute.sealey.ai/?search=Jacksonville)
+[View all Peptide Therapy providers in Jacksonville →](https://glowroute.io/?search=Jacksonville)
 
 ## What to Expect from Peptide Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Peptide Therapy. If medically necessary, partia
 
 GlowRoute has 44+ verified clinics in Jacksonville offering Peptide Therapy and related wellness services.
 
-[Search Peptide Therapy in Jacksonville →](https://glowroute.sealey.ai/?search=Jacksonville&treatment=peptide-therapy)
+[Search Peptide Therapy in Jacksonville →](https://glowroute.io/?search=Jacksonville&treatment=peptide-therapy)

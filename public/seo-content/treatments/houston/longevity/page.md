@@ -27,7 +27,7 @@ Houston has become a hub for advanced wellness medicine, with providers offering
 2. **Mia Aesthetics Houston** — 4.0★ (650 reviews)
 3. **Aesthetic Center for Plastic Surgery & MedSpa (ACPS)** — 5.0★ (487 reviews)
 
-[View all Longevity & Anti-Aging providers in Houston →](https://glowroute.sealey.ai/?search=Houston)
+[View all Longevity & Anti-Aging providers in Houston →](https://glowroute.io/?search=Houston)
 
 ## What to Expect from Longevity & Anti-Aging
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Longevity & Anti-Aging. If medically necessary,
 
 GlowRoute has 55+ verified clinics in Houston offering Longevity & Anti-Aging and related wellness services.
 
-[Search Longevity & Anti-Aging in Houston →](https://glowroute.sealey.ai/?search=Houston&treatment=longevity)
+[Search Longevity & Anti-Aging in Houston →](https://glowroute.io/?search=Houston&treatment=longevity)

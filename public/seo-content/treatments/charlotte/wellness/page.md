@@ -27,7 +27,7 @@ Charlotte has become a hub for advanced wellness medicine, with providers offeri
 2. **Lifted Aesthetics Charlotte** — 5.0★ (934 reviews)
 3. **Ageless Remedies SouthPark** — 5.0★ (696 reviews)
 
-[View all Wellness & Preventive Care providers in Charlotte →](https://glowroute.sealey.ai/?search=Charlotte)
+[View all Wellness & Preventive Care providers in Charlotte →](https://glowroute.io/?search=Charlotte)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 65+ verified clinics in Charlotte offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in Charlotte →](https://glowroute.sealey.ai/?search=Charlotte&treatment=wellness)
+[Search Wellness & Preventive Care in Charlotte →](https://glowroute.io/?search=Charlotte&treatment=wellness)

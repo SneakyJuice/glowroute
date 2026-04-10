@@ -27,7 +27,7 @@ Miami Lakes has become a hub for advanced wellness medicine, with providers offe
 2. **Chinitas Beauty** — 5.0★ (546 reviews)
 3. **Enrique Hanabergh Jr, MD** — 5.0★ (249 reviews)
 
-[View all Wellness & Preventive Care providers in Miami Lakes →](https://glowroute.sealey.ai/?search=Miami%20Lakes)
+[View all Wellness & Preventive Care providers in Miami Lakes →](https://glowroute.io/?search=Miami%20Lakes)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 61+ verified clinics in Miami Lakes offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in Miami Lakes →](https://glowroute.sealey.ai/?search=Miami%20Lakes&treatment=wellness)
+[Search Wellness & Preventive Care in Miami Lakes →](https://glowroute.io/?search=Miami%20Lakes&treatment=wellness)

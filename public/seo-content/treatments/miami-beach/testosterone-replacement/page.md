@@ -27,7 +27,7 @@ Miami Beach has become a hub for advanced wellness medicine, with providers offe
 2. **Charette Cosmetics Medical Spa - Miami Beach** — 5.0★ (554 reviews)
 3. **Tao Spa Miami** — 5.0★ (503 reviews)
 
-[View all Testosterone Replacement Therapy providers in Miami Beach →](https://glowroute.sealey.ai/?search=Miami%20Beach)
+[View all Testosterone Replacement Therapy providers in Miami Beach →](https://glowroute.io/?search=Miami%20Beach)
 
 ## What to Expect from Testosterone Replacement Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Testosterone Replacement Therapy. If medically 
 
 GlowRoute has 173+ verified clinics in Miami Beach offering Testosterone Replacement Therapy and related wellness services.
 
-[Search Testosterone Replacement Therapy in Miami Beach →](https://glowroute.sealey.ai/?search=Miami%20Beach&treatment=testosterone-replacement)
+[Search Testosterone Replacement Therapy in Miami Beach →](https://glowroute.io/?search=Miami%20Beach&treatment=testosterone-replacement)

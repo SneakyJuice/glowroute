@@ -27,7 +27,7 @@ Jacksonville has become a hub for advanced wellness medicine, with providers off
 2. **CMA - Center for Modern Aesthetic Medicine** — 5.0★ (246 reviews)
 3. **Med Spa by Voupre** — 5.0★ (242 reviews)
 
-[View all Longevity & Anti-Aging providers in Jacksonville →](https://glowroute.sealey.ai/?search=Jacksonville)
+[View all Longevity & Anti-Aging providers in Jacksonville →](https://glowroute.io/?search=Jacksonville)
 
 ## What to Expect from Longevity & Anti-Aging
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Longevity & Anti-Aging. If medically necessary,
 
 GlowRoute has 44+ verified clinics in Jacksonville offering Longevity & Anti-Aging and related wellness services.
 
-[Search Longevity & Anti-Aging in Jacksonville →](https://glowroute.sealey.ai/?search=Jacksonville&treatment=longevity)
+[Search Longevity & Anti-Aging in Jacksonville →](https://glowroute.io/?search=Jacksonville&treatment=longevity)

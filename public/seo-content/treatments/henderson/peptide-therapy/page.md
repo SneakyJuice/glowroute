@@ -27,7 +27,7 @@ Henderson has become a hub for advanced wellness medicine, with providers offeri
 2. **LaserAway Henderson** — 5.0★ (690 reviews)
 3. **Exotica Skin Care** — 5.0★ (543 reviews)
 
-[View all Peptide Therapy providers in Henderson →](https://glowroute.sealey.ai/?search=Henderson)
+[View all Peptide Therapy providers in Henderson →](https://glowroute.io/?search=Henderson)
 
 ## What to Expect from Peptide Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Peptide Therapy. If medically necessary, partia
 
 GlowRoute has 23+ verified clinics in Henderson offering Peptide Therapy and related wellness services.
 
-[Search Peptide Therapy in Henderson →](https://glowroute.sealey.ai/?search=Henderson&treatment=peptide-therapy)
+[Search Peptide Therapy in Henderson →](https://glowroute.io/?search=Henderson&treatment=peptide-therapy)

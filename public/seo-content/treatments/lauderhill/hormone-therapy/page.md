@@ -25,7 +25,7 @@ Lauderhill has become a hub for advanced wellness medicine, with providers offer
 
 Browse verified Hormone Therapy providers on GlowRoute.
 
-[View all Hormone Therapy providers in Lauderhill →](https://glowroute.sealey.ai/?search=Lauderhill)
+[View all Hormone Therapy providers in Lauderhill →](https://glowroute.io/?search=Lauderhill)
 
 ## What to Expect from Hormone Therapy
 
@@ -60,4 +60,4 @@ Most plans do not cover elective Hormone Therapy. If medically necessary, partia
 
 GlowRoute has 25+ verified clinics in Lauderhill offering Hormone Therapy and related wellness services.
 
-[Search Hormone Therapy in Lauderhill →](https://glowroute.sealey.ai/?search=Lauderhill&treatment=hormone-therapy)
+[Search Hormone Therapy in Lauderhill →](https://glowroute.io/?search=Lauderhill&treatment=hormone-therapy)

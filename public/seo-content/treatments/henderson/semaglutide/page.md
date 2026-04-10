@@ -27,7 +27,7 @@ Henderson has become a hub for advanced wellness medicine, with providers offeri
 2. **LaserAway Henderson** — 5.0★ (690 reviews)
 3. **Exotica Skin Care** — 5.0★ (543 reviews)
 
-[View all Semaglutide / GLP-1 Weight Loss providers in Henderson →](https://glowroute.sealey.ai/?search=Henderson)
+[View all Semaglutide / GLP-1 Weight Loss providers in Henderson →](https://glowroute.io/?search=Henderson)
 
 ## What to Expect from Semaglutide / GLP-1 Weight Loss
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Semaglutide / GLP-1 Weight Loss. If medically n
 
 GlowRoute has 23+ verified clinics in Henderson offering Semaglutide / GLP-1 Weight Loss and related wellness services.
 
-[Search Semaglutide / GLP-1 Weight Loss in Henderson →](https://glowroute.sealey.ai/?search=Henderson&treatment=semaglutide)
+[Search Semaglutide / GLP-1 Weight Loss in Henderson →](https://glowroute.io/?search=Henderson&treatment=semaglutide)

@@ -30,7 +30,7 @@ Fisher Island has become a hub for advanced wellness and aesthetic medicine, wit
 2. **Monaco MedSpa** — 5★ (0 reviews)
 3. **Kauai Aesthetics** — 5★ (0 reviews)
 
-[View all Testosterone Replacement Therapy (TRT) providers in Fisher Island →](https://glowroute.sealey.ai/?search=Fisher%20Island)
+[View all Testosterone Replacement Therapy (TRT) providers in Fisher Island →](https://glowroute.io/?search=Fisher%20Island)
 
 ## What to Expect from Testosterone Replacement Therapy (TRT)
 
@@ -74,4 +74,4 @@ Most insurance plans do not cover elective Testosterone Replacement Therapy (TRT
 
 GlowRoute has verified 99+ clinics in Fisher Island offering Testosterone Replacement Therapy (TRT) and related wellness services. Browse real patient reviews, compare GlowScores, and find the right provider for your goals.
 
-[Search Testosterone Replacement Therapy (TRT) in Fisher Island →](https://glowroute.sealey.ai/?search=Fisher%20Island&treatment=testosterone-replacement)
+[Search Testosterone Replacement Therapy (TRT) in Fisher Island →](https://glowroute.io/?search=Fisher%20Island&treatment=testosterone-replacement)

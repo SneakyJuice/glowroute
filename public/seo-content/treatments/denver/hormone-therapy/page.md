@@ -27,7 +27,7 @@ Denver has become a hub for advanced wellness medicine, with providers offering 
 2. **Look Lab Med Spa** — 5.0★ (752 reviews)
 3. **Cara Mia Dermatology** — 5.0★ (690 reviews)
 
-[View all Hormone Therapy providers in Denver →](https://glowroute.sealey.ai/?search=Denver)
+[View all Hormone Therapy providers in Denver →](https://glowroute.io/?search=Denver)
 
 ## What to Expect from Hormone Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Hormone Therapy. If medically necessary, partia
 
 GlowRoute has 42+ verified clinics in Denver offering Hormone Therapy and related wellness services.
 
-[Search Hormone Therapy in Denver →](https://glowroute.sealey.ai/?search=Denver&treatment=hormone-therapy)
+[Search Hormone Therapy in Denver →](https://glowroute.io/?search=Denver&treatment=hormone-therapy)

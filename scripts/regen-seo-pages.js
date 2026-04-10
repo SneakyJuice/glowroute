@@ -108,7 +108,7 @@ ${city} has become a hub for advanced wellness medicine, with providers offering
 
 ${clinicList}
 
-[View all ${t.label} providers in ${city} →](https://glowroute.sealey.ai/?search=${encodeURIComponent(city)})
+[View all ${t.label} providers in ${city} →](https://glowroute.io/?search=${encodeURIComponent(city)})
 
 ## What to Expect from ${t.label}
 
@@ -130,7 +130,7 @@ ${faq.map(f => `### ${f.q}\n${f.a}`).join('\n\n')}
 
 GlowRoute has ${count}+ verified clinics in ${city} offering ${t.label} and related wellness services.
 
-[Search ${t.label} in ${city} →](https://glowroute.sealey.ai/?search=${encodeURIComponent(city)}&treatment=${t.slug})
+[Search ${t.label} in ${city} →](https://glowroute.io/?search=${encodeURIComponent(city)}&treatment=${t.slug})
 `;
 }
 

@@ -27,7 +27,7 @@ Henderson has become a hub for advanced wellness medicine, with providers offeri
 2. **LaserAway Henderson** — 5.0★ (690 reviews)
 3. **Exotica Skin Care** — 5.0★ (543 reviews)
 
-[View all Longevity & Anti-Aging providers in Henderson →](https://glowroute.sealey.ai/?search=Henderson)
+[View all Longevity & Anti-Aging providers in Henderson →](https://glowroute.io/?search=Henderson)
 
 ## What to Expect from Longevity & Anti-Aging
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Longevity & Anti-Aging. If medically necessary,
 
 GlowRoute has 23+ verified clinics in Henderson offering Longevity & Anti-Aging and related wellness services.
 
-[Search Longevity & Anti-Aging in Henderson →](https://glowroute.sealey.ai/?search=Henderson&treatment=longevity)
+[Search Longevity & Anti-Aging in Henderson →](https://glowroute.io/?search=Henderson&treatment=longevity)

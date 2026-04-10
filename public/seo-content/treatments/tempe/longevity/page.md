@@ -27,7 +27,7 @@ Tempe has become a hub for advanced wellness medicine, with providers offering e
 2. **ZONA MED SPA** — 5.0★ (509 reviews)
 3. **Perfect Skin Center** — 5.0★ (470 reviews)
 
-[View all Longevity & Anti-Aging providers in Tempe →](https://glowroute.sealey.ai/?search=Tempe)
+[View all Longevity & Anti-Aging providers in Tempe →](https://glowroute.io/?search=Tempe)
 
 ## What to Expect from Longevity & Anti-Aging
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Longevity & Anti-Aging. If medically necessary,
 
 GlowRoute has 24+ verified clinics in Tempe offering Longevity & Anti-Aging and related wellness services.
 
-[Search Longevity & Anti-Aging in Tempe →](https://glowroute.sealey.ai/?search=Tempe&treatment=longevity)
+[Search Longevity & Anti-Aging in Tempe →](https://glowroute.io/?search=Tempe&treatment=longevity)

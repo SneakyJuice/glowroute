@@ -27,7 +27,7 @@ Tamarac has become a hub for advanced wellness medicine, with providers offering
 2. **BeU Medical Spa** — 5.0★ (671 reviews)
 3. **Soaplab Laundromat & Wash and Fold** — 5.0★ (272 reviews)
 
-[View all IV Therapy & Vitamin Infusions providers in Tamarac →](https://glowroute.sealey.ai/?search=Tamarac)
+[View all IV Therapy & Vitamin Infusions providers in Tamarac →](https://glowroute.io/?search=Tamarac)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -62,4 +62,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 36+ verified clinics in Tamarac offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in Tamarac →](https://glowroute.sealey.ai/?search=Tamarac&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Tamarac →](https://glowroute.io/?search=Tamarac&treatment=iv-therapy)

@@ -30,7 +30,7 @@ Fisher Island has become a hub for advanced wellness and aesthetic medicine, wit
 2. **Monaco MedSpa** — 5★ (0 reviews)
 3. **Kauai Aesthetics** — 5★ (0 reviews)
 
-[View all Peptide Therapy providers in Fisher Island →](https://glowroute.sealey.ai/?search=Fisher%20Island)
+[View all Peptide Therapy providers in Fisher Island →](https://glowroute.io/?search=Fisher%20Island)
 
 ## What to Expect from Peptide Therapy
 
@@ -74,4 +74,4 @@ Most insurance plans do not cover elective Peptide Therapy protocols. However, i
 
 GlowRoute has verified 99+ clinics in Fisher Island offering Peptide Therapy and related wellness services. Browse real patient reviews, compare GlowScores, and find the right provider for your goals.
 
-[Search Peptide Therapy in Fisher Island →](https://glowroute.sealey.ai/?search=Fisher%20Island&treatment=peptide-therapy)
+[Search Peptide Therapy in Fisher Island →](https://glowroute.io/?search=Fisher%20Island&treatment=peptide-therapy)

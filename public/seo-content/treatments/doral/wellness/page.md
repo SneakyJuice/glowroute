@@ -25,7 +25,7 @@ Doral has become a hub for advanced wellness medicine, with providers offering e
 
 Browse verified Wellness & Preventive Care providers on GlowRoute.
 
-[View all Wellness & Preventive Care providers in Doral →](https://glowroute.sealey.ai/?search=Doral)
+[View all Wellness & Preventive Care providers in Doral →](https://glowroute.io/?search=Doral)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -60,4 +60,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 17+ verified clinics in Doral offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in Doral →](https://glowroute.sealey.ai/?search=Doral&treatment=wellness)
+[Search Wellness & Preventive Care in Doral →](https://glowroute.io/?search=Doral&treatment=wellness)

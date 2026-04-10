@@ -27,7 +27,7 @@ Wellington has become a hub for advanced wellness medicine, with providers offer
 2. **Relive Wellington** — 5.0★ (434 reviews)
 3. **4Ever Young Anti Aging Solutions** — 5.0★ (378 reviews)
 
-[View all Semaglutide / GLP-1 Weight Loss providers in Wellington →](https://glowroute.sealey.ai/?search=Wellington)
+[View all Semaglutide / GLP-1 Weight Loss providers in Wellington →](https://glowroute.io/?search=Wellington)
 
 ## What to Expect from Semaglutide / GLP-1 Weight Loss
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Semaglutide / GLP-1 Weight Loss. If medically n
 
 GlowRoute has 67+ verified clinics in Wellington offering Semaglutide / GLP-1 Weight Loss and related wellness services.
 
-[Search Semaglutide / GLP-1 Weight Loss in Wellington →](https://glowroute.sealey.ai/?search=Wellington&treatment=semaglutide)
+[Search Semaglutide / GLP-1 Weight Loss in Wellington →](https://glowroute.io/?search=Wellington&treatment=semaglutide)

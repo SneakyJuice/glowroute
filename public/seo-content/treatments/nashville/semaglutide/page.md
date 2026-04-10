@@ -27,7 +27,7 @@ Nashville has become a hub for advanced wellness medicine, with providers offeri
 2. **NakedMD Med Spa Nashville** — 5.0★ (530 reviews)
 3. **Hatef Aesthetics & Plastic Surgery** — 5.0★ (437 reviews)
 
-[View all Semaglutide / GLP-1 Weight Loss providers in Nashville →](https://glowroute.sealey.ai/?search=Nashville)
+[View all Semaglutide / GLP-1 Weight Loss providers in Nashville →](https://glowroute.io/?search=Nashville)
 
 ## What to Expect from Semaglutide / GLP-1 Weight Loss
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Semaglutide / GLP-1 Weight Loss. If medically n
 
 GlowRoute has 32+ verified clinics in Nashville offering Semaglutide / GLP-1 Weight Loss and related wellness services.
 
-[Search Semaglutide / GLP-1 Weight Loss in Nashville →](https://glowroute.sealey.ai/?search=Nashville&treatment=semaglutide)
+[Search Semaglutide / GLP-1 Weight Loss in Nashville →](https://glowroute.io/?search=Nashville&treatment=semaglutide)

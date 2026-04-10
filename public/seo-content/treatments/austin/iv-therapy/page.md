@@ -27,7 +27,7 @@ Austin has become a hub for advanced wellness medicine, with providers offering 
 2. **Peachy East Austin** — 5.0★ (443 reviews)
 3. **It's A Secret Med Spa - Austin** — 5.0★ (342 reviews)
 
-[View all IV Therapy & Vitamin Infusions providers in Austin →](https://glowroute.sealey.ai/?search=Austin)
+[View all IV Therapy & Vitamin Infusions providers in Austin →](https://glowroute.io/?search=Austin)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -62,4 +62,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 49+ verified clinics in Austin offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in Austin →](https://glowroute.sealey.ai/?search=Austin&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Austin →](https://glowroute.io/?search=Austin&treatment=iv-therapy)

@@ -27,7 +27,7 @@ Dallas has become a hub for advanced wellness medicine, with providers offering 
 2. **Mara's Med Spa** — 5.0★ (596 reviews)
 3. **NakedMD Med Spa Dallas** — 5.0★ (504 reviews)
 
-[View all Wellness & Preventive Care providers in Dallas →](https://glowroute.sealey.ai/?search=Dallas)
+[View all Wellness & Preventive Care providers in Dallas →](https://glowroute.io/?search=Dallas)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 69+ verified clinics in Dallas offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in Dallas →](https://glowroute.sealey.ai/?search=Dallas&treatment=wellness)
+[Search Wellness & Preventive Care in Dallas →](https://glowroute.io/?search=Dallas&treatment=wellness)

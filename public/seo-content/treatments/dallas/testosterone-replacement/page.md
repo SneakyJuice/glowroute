@@ -27,7 +27,7 @@ Dallas has become a hub for advanced wellness medicine, with providers offering 
 2. **Mara's Med Spa** — 5.0★ (596 reviews)
 3. **NakedMD Med Spa Dallas** — 5.0★ (504 reviews)
 
-[View all Testosterone Replacement Therapy providers in Dallas →](https://glowroute.sealey.ai/?search=Dallas)
+[View all Testosterone Replacement Therapy providers in Dallas →](https://glowroute.io/?search=Dallas)
 
 ## What to Expect from Testosterone Replacement Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Testosterone Replacement Therapy. If medically 
 
 GlowRoute has 69+ verified clinics in Dallas offering Testosterone Replacement Therapy and related wellness services.
 
-[Search Testosterone Replacement Therapy in Dallas →](https://glowroute.sealey.ai/?search=Dallas&treatment=testosterone-replacement)
+[Search Testosterone Replacement Therapy in Dallas →](https://glowroute.io/?search=Dallas&treatment=testosterone-replacement)

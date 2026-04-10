@@ -27,7 +27,7 @@ Estero has become a hub for advanced wellness medicine, with providers offering 
 2. **Riverchase Dermatology - Estero** — 5.0★ (873 reviews)
 3. **Spavia Day Spa - Estero** — 5.0★ (451 reviews)
 
-[View all Semaglutide / GLP-1 Weight Loss providers in Estero →](https://glowroute.sealey.ai/?search=Estero)
+[View all Semaglutide / GLP-1 Weight Loss providers in Estero →](https://glowroute.io/?search=Estero)
 
 ## What to Expect from Semaglutide / GLP-1 Weight Loss
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Semaglutide / GLP-1 Weight Loss. If medically n
 
 GlowRoute has 43+ verified clinics in Estero offering Semaglutide / GLP-1 Weight Loss and related wellness services.
 
-[Search Semaglutide / GLP-1 Weight Loss in Estero →](https://glowroute.sealey.ai/?search=Estero&treatment=semaglutide)
+[Search Semaglutide / GLP-1 Weight Loss in Estero →](https://glowroute.io/?search=Estero&treatment=semaglutide)

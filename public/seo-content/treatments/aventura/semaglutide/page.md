@@ -25,7 +25,7 @@ Aventura has become a hub for advanced wellness medicine, with providers offerin
 
 Browse verified Semaglutide / GLP-1 Weight Loss providers on GlowRoute.
 
-[View all Semaglutide / GLP-1 Weight Loss providers in Aventura →](https://glowroute.sealey.ai/?search=Aventura)
+[View all Semaglutide / GLP-1 Weight Loss providers in Aventura →](https://glowroute.io/?search=Aventura)
 
 ## What to Expect from Semaglutide / GLP-1 Weight Loss
 
@@ -60,4 +60,4 @@ Most plans do not cover elective Semaglutide / GLP-1 Weight Loss. If medically n
 
 GlowRoute has 19+ verified clinics in Aventura offering Semaglutide / GLP-1 Weight Loss and related wellness services.
 
-[Search Semaglutide / GLP-1 Weight Loss in Aventura →](https://glowroute.sealey.ai/?search=Aventura&treatment=semaglutide)
+[Search Semaglutide / GLP-1 Weight Loss in Aventura →](https://glowroute.io/?search=Aventura&treatment=semaglutide)

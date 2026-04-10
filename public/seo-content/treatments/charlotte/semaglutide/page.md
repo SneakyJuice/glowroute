@@ -27,7 +27,7 @@ Charlotte has become a hub for advanced wellness medicine, with providers offeri
 2. **Lifted Aesthetics Charlotte** — 5.0★ (934 reviews)
 3. **Ageless Remedies SouthPark** — 5.0★ (696 reviews)
 
-[View all Semaglutide / GLP-1 Weight Loss providers in Charlotte →](https://glowroute.sealey.ai/?search=Charlotte)
+[View all Semaglutide / GLP-1 Weight Loss providers in Charlotte →](https://glowroute.io/?search=Charlotte)
 
 ## What to Expect from Semaglutide / GLP-1 Weight Loss
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Semaglutide / GLP-1 Weight Loss. If medically n
 
 GlowRoute has 65+ verified clinics in Charlotte offering Semaglutide / GLP-1 Weight Loss and related wellness services.
 
-[Search Semaglutide / GLP-1 Weight Loss in Charlotte →](https://glowroute.sealey.ai/?search=Charlotte&treatment=semaglutide)
+[Search Semaglutide / GLP-1 Weight Loss in Charlotte →](https://glowroute.io/?search=Charlotte&treatment=semaglutide)

@@ -27,7 +27,7 @@ Miami Lakes has become a hub for advanced wellness medicine, with providers offe
 2. **Chinitas Beauty** — 5.0★ (546 reviews)
 3. **Enrique Hanabergh Jr, MD** — 5.0★ (249 reviews)
 
-[View all Hormone Therapy providers in Miami Lakes →](https://glowroute.sealey.ai/?search=Miami%20Lakes)
+[View all Hormone Therapy providers in Miami Lakes →](https://glowroute.io/?search=Miami%20Lakes)
 
 ## What to Expect from Hormone Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Hormone Therapy. If medically necessary, partia
 
 GlowRoute has 61+ verified clinics in Miami Lakes offering Hormone Therapy and related wellness services.
 
-[Search Hormone Therapy in Miami Lakes →](https://glowroute.sealey.ai/?search=Miami%20Lakes&treatment=hormone-therapy)
+[Search Hormone Therapy in Miami Lakes →](https://glowroute.io/?search=Miami%20Lakes&treatment=hormone-therapy)

@@ -27,7 +27,7 @@ North Miami has become a hub for advanced wellness medicine, with providers offe
 2. **Diane Walder Dermatology by Riverchase** — 5.0★ (648 reviews)
 3. **Pler Clinics** — 5.0★ (494 reviews)
 
-[View all Semaglutide / GLP-1 Weight Loss providers in North Miami →](https://glowroute.sealey.ai/?search=North%20Miami)
+[View all Semaglutide / GLP-1 Weight Loss providers in North Miami →](https://glowroute.io/?search=North%20Miami)
 
 ## What to Expect from Semaglutide / GLP-1 Weight Loss
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Semaglutide / GLP-1 Weight Loss. If medically n
 
 GlowRoute has 79+ verified clinics in North Miami offering Semaglutide / GLP-1 Weight Loss and related wellness services.
 
-[Search Semaglutide / GLP-1 Weight Loss in North Miami →](https://glowroute.sealey.ai/?search=North%20Miami&treatment=semaglutide)
+[Search Semaglutide / GLP-1 Weight Loss in North Miami →](https://glowroute.io/?search=North%20Miami&treatment=semaglutide)

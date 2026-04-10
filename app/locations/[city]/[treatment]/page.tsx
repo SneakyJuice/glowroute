@@ -4,6 +4,8 @@ import fs from 'fs'
 import path from 'path'
 import Link from 'next/link'
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://glowroute.io'
+
 interface Props {
   params: { city: string; treatment: string }
 }
@@ -58,12 +60,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: meta.title || 'GlowRoute',
     description: meta.description || '',
     alternates: {
-      canonical: `https://glowroute.sealey.ai/locations/${params.city}/${params.treatment}`,
+      canonical: `${SITE_URL}/locations/${params.city}/${params.treatment}`,
     },
     openGraph: {
       title: meta.title,
       description: meta.description,
-      url: `https://glowroute.sealey.ai/locations/${params.city}/${params.treatment}`,
+      url: `${SITE_URL}/locations/${params.city}/${params.treatment}`,
     },
   }
 }
@@ -84,7 +86,7 @@ export default function TreatmentCityPage({ params }: Props) {
             Glow<span className="text-amber-400">Route</span>
           </Link>
           <Link
-            href={`https://glowroute.sealey.ai/?search=${encodeURIComponent(meta.city || '')}`}
+            href={`${SITE_URL}/?search=${encodeURIComponent(meta.city || '')}`}
             className="text-sm text-amber-400 hover:text-amber-300"
           >
             Find clinics near you →
@@ -123,7 +125,7 @@ export default function TreatmentCityPage({ params }: Props) {
           Browse {meta.clinicCount}+ verified clinics with real patient reviews.
         </p>
         <Link
-          href={`https://glowroute.sealey.ai/?search=${encodeURIComponent(meta.city || '')}`}
+          href={`${SITE_URL}/?search=${encodeURIComponent(meta.city || '')}`}
           className="inline-flex items-center gap-2 bg-amber-400 text-zinc-950 font-semibold px-6 py-3 rounded-lg hover:bg-amber-300 transition-colors"
         >
           Search {meta.city} Clinics →
@@ -131,7 +133,7 @@ export default function TreatmentCityPage({ params }: Props) {
       </div>
 
       <footer className="border-t border-zinc-800 px-6 py-6 text-center text-zinc-500 text-sm">
-        © 2026 GlowRoute · <Link href="/" className="hover:text-zinc-300">glowroute.sealey.ai</Link>
+        © 2026 GlowRoute · <Link href="/" className="hover:text-zinc-300">glowroute.io</Link>
       </footer>
     </div>
   )

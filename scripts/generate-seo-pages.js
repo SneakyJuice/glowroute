@@ -111,7 +111,7 @@ ${city} has become a hub for advanced wellness and aesthetic medicine, with a gr
 
 ${clinicList}
 
-[View all ${treatment.label} providers in ${city} →](https://glowroute.sealey.ai/?search=${encodeURIComponent(city)})
+[View all ${treatment.label} providers in ${city} →](https://glowroute.io/?search=${encodeURIComponent(city)})
 
 ## What to Expect from ${treatment.label}
 
@@ -142,7 +142,7 @@ ${faqItems.map(f => `### ${f.q}\n${f.a}`).join('\n\n')}
 
 GlowRoute has verified ${clinicCount}+ clinics in ${city} offering ${treatment.label} and related wellness services. Browse real patient reviews, compare GlowScores, and find the right provider for your goals.
 
-[Search ${treatment.label} in ${city} →](https://glowroute.sealey.ai/?search=${encodeURIComponent(city)}&treatment=${treatment.slug})
+[Search ${treatment.label} in ${city} →](https://glowroute.io/?search=${encodeURIComponent(city)}&treatment=${treatment.slug})
 `;
 }
 

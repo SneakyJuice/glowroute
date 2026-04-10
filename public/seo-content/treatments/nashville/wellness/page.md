@@ -27,7 +27,7 @@ Nashville has become a hub for advanced wellness medicine, with providers offeri
 2. **NakedMD Med Spa Nashville** — 5.0★ (530 reviews)
 3. **Hatef Aesthetics & Plastic Surgery** — 5.0★ (437 reviews)
 
-[View all Wellness & Preventive Care providers in Nashville →](https://glowroute.sealey.ai/?search=Nashville)
+[View all Wellness & Preventive Care providers in Nashville →](https://glowroute.io/?search=Nashville)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 32+ verified clinics in Nashville offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in Nashville →](https://glowroute.sealey.ai/?search=Nashville&treatment=wellness)
+[Search Wellness & Preventive Care in Nashville →](https://glowroute.io/?search=Nashville&treatment=wellness)

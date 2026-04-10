@@ -27,7 +27,7 @@ Jacksonville has become a hub for advanced wellness medicine, with providers off
 2. **CMA - Center for Modern Aesthetic Medicine** — 5.0★ (246 reviews)
 3. **Med Spa by Voupre** — 5.0★ (242 reviews)
 
-[View all Semaglutide / GLP-1 Weight Loss providers in Jacksonville →](https://glowroute.sealey.ai/?search=Jacksonville)
+[View all Semaglutide / GLP-1 Weight Loss providers in Jacksonville →](https://glowroute.io/?search=Jacksonville)
 
 ## What to Expect from Semaglutide / GLP-1 Weight Loss
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Semaglutide / GLP-1 Weight Loss. If medically n
 
 GlowRoute has 44+ verified clinics in Jacksonville offering Semaglutide / GLP-1 Weight Loss and related wellness services.
 
-[Search Semaglutide / GLP-1 Weight Loss in Jacksonville →](https://glowroute.sealey.ai/?search=Jacksonville&treatment=semaglutide)
+[Search Semaglutide / GLP-1 Weight Loss in Jacksonville →](https://glowroute.io/?search=Jacksonville&treatment=semaglutide)

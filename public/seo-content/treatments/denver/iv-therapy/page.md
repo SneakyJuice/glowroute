@@ -27,7 +27,7 @@ Denver has become a hub for advanced wellness medicine, with providers offering 
 2. **Look Lab Med Spa** — 5.0★ (752 reviews)
 3. **Cara Mia Dermatology** — 5.0★ (690 reviews)
 
-[View all IV Therapy & Vitamin Infusions providers in Denver →](https://glowroute.sealey.ai/?search=Denver)
+[View all IV Therapy & Vitamin Infusions providers in Denver →](https://glowroute.io/?search=Denver)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -62,4 +62,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 42+ verified clinics in Denver offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in Denver →](https://glowroute.sealey.ai/?search=Denver&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Denver →](https://glowroute.io/?search=Denver&treatment=iv-therapy)

@@ -27,7 +27,7 @@ Tampa has become a hub for advanced wellness medicine, with providers offering e
 2. **Refresh Tampa Medical Aesthetics (Formerly Ideal Image)** — 3.7★ (1033 reviews)
 3. **BioDesign Men's Clinic of Tampa** — 5.0★ (1033 reviews)
 
-[View all Testosterone Replacement Therapy providers in Tampa →](https://glowroute.sealey.ai/?search=Tampa)
+[View all Testosterone Replacement Therapy providers in Tampa →](https://glowroute.io/?search=Tampa)
 
 ## What to Expect from Testosterone Replacement Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Testosterone Replacement Therapy. If medically 
 
 GlowRoute has 120+ verified clinics in Tampa offering Testosterone Replacement Therapy and related wellness services.
 
-[Search Testosterone Replacement Therapy in Tampa →](https://glowroute.sealey.ai/?search=Tampa&treatment=testosterone-replacement)
+[Search Testosterone Replacement Therapy in Tampa →](https://glowroute.io/?search=Tampa&treatment=testosterone-replacement)

@@ -27,7 +27,7 @@ Minneapolis has become a hub for advanced wellness medicine, with providers offe
 2. **Clinic Ellena Health + Wellness** — 5.0★ (233 reviews)
 3. **Eternal Beauty & Wellness** — 5.0★ (168 reviews)
 
-[View all IV Therapy & Vitamin Infusions providers in Minneapolis →](https://glowroute.sealey.ai/?search=Minneapolis)
+[View all IV Therapy & Vitamin Infusions providers in Minneapolis →](https://glowroute.io/?search=Minneapolis)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -62,4 +62,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 34+ verified clinics in Minneapolis offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in Minneapolis →](https://glowroute.sealey.ai/?search=Minneapolis&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Minneapolis →](https://glowroute.io/?search=Minneapolis&treatment=iv-therapy)

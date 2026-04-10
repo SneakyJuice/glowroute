@@ -27,7 +27,7 @@ Columbus has become a hub for advanced wellness medicine, with providers offerin
 2. **Jiva Med Spa Columbus** — 5.0★ (1119 reviews)
 3. **Monarch Aesthetic Medicine** — 5.0★ (790 reviews)
 
-[View all Hormone Therapy providers in Columbus →](https://glowroute.sealey.ai/?search=Columbus)
+[View all Hormone Therapy providers in Columbus →](https://glowroute.io/?search=Columbus)
 
 ## What to Expect from Hormone Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Hormone Therapy. If medically necessary, partia
 
 GlowRoute has 23+ verified clinics in Columbus offering Hormone Therapy and related wellness services.
 
-[Search Hormone Therapy in Columbus →](https://glowroute.sealey.ai/?search=Columbus&treatment=hormone-therapy)
+[Search Hormone Therapy in Columbus →](https://glowroute.io/?search=Columbus&treatment=hormone-therapy)

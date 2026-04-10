@@ -27,7 +27,7 @@ Phoenix has become a hub for advanced wellness medicine, with providers offering
 2. **Suddenly Slimmer Med Spa** — 5.0★ (1062 reviews)
 3. **NakedMD Med Spa Phoenix** — 5.0★ (493 reviews)
 
-[View all Semaglutide / GLP-1 Weight Loss providers in Phoenix →](https://glowroute.sealey.ai/?search=Phoenix)
+[View all Semaglutide / GLP-1 Weight Loss providers in Phoenix →](https://glowroute.io/?search=Phoenix)
 
 ## What to Expect from Semaglutide / GLP-1 Weight Loss
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Semaglutide / GLP-1 Weight Loss. If medically n
 
 GlowRoute has 58+ verified clinics in Phoenix offering Semaglutide / GLP-1 Weight Loss and related wellness services.
 
-[Search Semaglutide / GLP-1 Weight Loss in Phoenix →](https://glowroute.sealey.ai/?search=Phoenix&treatment=semaglutide)
+[Search Semaglutide / GLP-1 Weight Loss in Phoenix →](https://glowroute.io/?search=Phoenix&treatment=semaglutide)

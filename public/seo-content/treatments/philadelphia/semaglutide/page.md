@@ -27,7 +27,7 @@ Philadelphia has become a hub for advanced wellness medicine, with providers off
 2. **Revive Medical** — 5.0★ (697 reviews)
 3. **Shiloh Cosmetics** — 5.0★ (649 reviews)
 
-[View all Semaglutide / GLP-1 Weight Loss providers in Philadelphia →](https://glowroute.sealey.ai/?search=Philadelphia)
+[View all Semaglutide / GLP-1 Weight Loss providers in Philadelphia →](https://glowroute.io/?search=Philadelphia)
 
 ## What to Expect from Semaglutide / GLP-1 Weight Loss
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Semaglutide / GLP-1 Weight Loss. If medically n
 
 GlowRoute has 40+ verified clinics in Philadelphia offering Semaglutide / GLP-1 Weight Loss and related wellness services.
 
-[Search Semaglutide / GLP-1 Weight Loss in Philadelphia →](https://glowroute.sealey.ai/?search=Philadelphia&treatment=semaglutide)
+[Search Semaglutide / GLP-1 Weight Loss in Philadelphia →](https://glowroute.io/?search=Philadelphia&treatment=semaglutide)

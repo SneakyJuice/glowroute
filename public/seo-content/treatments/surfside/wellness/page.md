@@ -27,7 +27,7 @@ Surfside has become a hub for advanced wellness medicine, with providers offerin
 2. **Savou Med Spa** — 5.0★ (138 reviews)
 3. **SJI Dermatology** — 5.0★ (138 reviews)
 
-[View all Wellness & Preventive Care providers in Surfside →](https://glowroute.sealey.ai/?search=Surfside)
+[View all Wellness & Preventive Care providers in Surfside →](https://glowroute.io/?search=Surfside)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 107+ verified clinics in Surfside offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in Surfside →](https://glowroute.sealey.ai/?search=Surfside&treatment=wellness)
+[Search Wellness & Preventive Care in Surfside →](https://glowroute.io/?search=Surfside&treatment=wellness)

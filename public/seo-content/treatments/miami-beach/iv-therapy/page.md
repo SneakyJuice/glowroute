@@ -27,7 +27,7 @@ Miami Beach has become a hub for advanced wellness medicine, with providers offe
 2. **Charette Cosmetics Medical Spa - Miami Beach** — 5.0★ (554 reviews)
 3. **Tao Spa Miami** — 5.0★ (503 reviews)
 
-[View all IV Therapy & Vitamin Infusions providers in Miami Beach →](https://glowroute.sealey.ai/?search=Miami%20Beach)
+[View all IV Therapy & Vitamin Infusions providers in Miami Beach →](https://glowroute.io/?search=Miami%20Beach)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -62,4 +62,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 173+ verified clinics in Miami Beach offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in Miami Beach →](https://glowroute.sealey.ai/?search=Miami%20Beach&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Miami Beach →](https://glowroute.io/?search=Miami%20Beach&treatment=iv-therapy)

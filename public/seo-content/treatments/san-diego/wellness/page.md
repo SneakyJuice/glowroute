@@ -27,7 +27,7 @@ San Diego has become a hub for advanced wellness medicine, with providers offeri
 2. **SDBotox - Mission Valley** — 5.0★ (630 reviews)
 3. **Botoxie - North Park** — 5.0★ (473 reviews)
 
-[View all Wellness & Preventive Care providers in San Diego →](https://glowroute.sealey.ai/?search=San%20Diego)
+[View all Wellness & Preventive Care providers in San Diego →](https://glowroute.io/?search=San%20Diego)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 58+ verified clinics in San Diego offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in San Diego →](https://glowroute.sealey.ai/?search=San%20Diego&treatment=wellness)
+[Search Wellness & Preventive Care in San Diego →](https://glowroute.io/?search=San%20Diego&treatment=wellness)

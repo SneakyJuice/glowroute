@@ -27,7 +27,7 @@ Charlotte has become a hub for advanced wellness medicine, with providers offeri
 2. **Lifted Aesthetics Charlotte** — 5.0★ (934 reviews)
 3. **Ageless Remedies SouthPark** — 5.0★ (696 reviews)
 
-[View all Longevity & Anti-Aging providers in Charlotte →](https://glowroute.sealey.ai/?search=Charlotte)
+[View all Longevity & Anti-Aging providers in Charlotte →](https://glowroute.io/?search=Charlotte)
 
 ## What to Expect from Longevity & Anti-Aging
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Longevity & Anti-Aging. If medically necessary,
 
 GlowRoute has 65+ verified clinics in Charlotte offering Longevity & Anti-Aging and related wellness services.
 
-[Search Longevity & Anti-Aging in Charlotte →](https://glowroute.sealey.ai/?search=Charlotte&treatment=longevity)
+[Search Longevity & Anti-Aging in Charlotte →](https://glowroute.io/?search=Charlotte&treatment=longevity)

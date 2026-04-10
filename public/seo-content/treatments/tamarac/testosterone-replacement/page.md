@@ -27,7 +27,7 @@ Tamarac has become a hub for advanced wellness medicine, with providers offering
 2. **BeU Medical Spa** — 5.0★ (671 reviews)
 3. **Soaplab Laundromat & Wash and Fold** — 5.0★ (272 reviews)
 
-[View all Testosterone Replacement Therapy providers in Tamarac →](https://glowroute.sealey.ai/?search=Tamarac)
+[View all Testosterone Replacement Therapy providers in Tamarac →](https://glowroute.io/?search=Tamarac)
 
 ## What to Expect from Testosterone Replacement Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Testosterone Replacement Therapy. If medically 
 
 GlowRoute has 36+ verified clinics in Tamarac offering Testosterone Replacement Therapy and related wellness services.
 
-[Search Testosterone Replacement Therapy in Tamarac →](https://glowroute.sealey.ai/?search=Tamarac&treatment=testosterone-replacement)
+[Search Testosterone Replacement Therapy in Tamarac →](https://glowroute.io/?search=Tamarac&treatment=testosterone-replacement)

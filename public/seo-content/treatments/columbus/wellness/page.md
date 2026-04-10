@@ -27,7 +27,7 @@ Columbus has become a hub for advanced wellness medicine, with providers offerin
 2. **Jiva Med Spa Columbus** — 5.0★ (1119 reviews)
 3. **Monarch Aesthetic Medicine** — 5.0★ (790 reviews)
 
-[View all Wellness & Preventive Care providers in Columbus →](https://glowroute.sealey.ai/?search=Columbus)
+[View all Wellness & Preventive Care providers in Columbus →](https://glowroute.io/?search=Columbus)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 23+ verified clinics in Columbus offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in Columbus →](https://glowroute.sealey.ai/?search=Columbus&treatment=wellness)
+[Search Wellness & Preventive Care in Columbus →](https://glowroute.io/?search=Columbus&treatment=wellness)

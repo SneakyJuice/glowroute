@@ -27,7 +27,7 @@ Scottsdale has become a hub for advanced wellness medicine, with providers offer
 2. **Look Lab Med Spa** — 5.0★ (829 reviews)
 3. **Alani Skin MD** — 5.0★ (663 reviews)
 
-[View all Semaglutide / GLP-1 Weight Loss providers in Scottsdale →](https://glowroute.sealey.ai/?search=Scottsdale)
+[View all Semaglutide / GLP-1 Weight Loss providers in Scottsdale →](https://glowroute.io/?search=Scottsdale)
 
 ## What to Expect from Semaglutide / GLP-1 Weight Loss
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Semaglutide / GLP-1 Weight Loss. If medically n
 
 GlowRoute has 28+ verified clinics in Scottsdale offering Semaglutide / GLP-1 Weight Loss and related wellness services.
 
-[Search Semaglutide / GLP-1 Weight Loss in Scottsdale →](https://glowroute.sealey.ai/?search=Scottsdale&treatment=semaglutide)
+[Search Semaglutide / GLP-1 Weight Loss in Scottsdale →](https://glowroute.io/?search=Scottsdale&treatment=semaglutide)

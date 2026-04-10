@@ -27,7 +27,7 @@ Newport Beach has become a hub for advanced wellness medicine, with providers of
 2. **PCH MedSpa** — 5.0★ (404 reviews)
 3. **MeSO Medspa Newport Beach** — 5.0★ (303 reviews)
 
-[View all Wellness & Preventive Care providers in Newport Beach →](https://glowroute.sealey.ai/?search=Newport%20Beach)
+[View all Wellness & Preventive Care providers in Newport Beach →](https://glowroute.io/?search=Newport%20Beach)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 24+ verified clinics in Newport Beach offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in Newport Beach →](https://glowroute.sealey.ai/?search=Newport%20Beach&treatment=wellness)
+[Search Wellness & Preventive Care in Newport Beach →](https://glowroute.io/?search=Newport%20Beach&treatment=wellness)

@@ -27,7 +27,7 @@ Margate has become a hub for advanced wellness medicine, with providers offering
 2. **Threading and glow by Faye** — 5.0★ (379 reviews)
 3. **Stretch Sesh - Margate** — 5.0★ (286 reviews)
 
-[View all Hormone Therapy providers in Margate →](https://glowroute.sealey.ai/?search=Margate)
+[View all Hormone Therapy providers in Margate →](https://glowroute.io/?search=Margate)
 
 ## What to Expect from Hormone Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Hormone Therapy. If medically necessary, partia
 
 GlowRoute has 31+ verified clinics in Margate offering Hormone Therapy and related wellness services.
 
-[Search Hormone Therapy in Margate →](https://glowroute.sealey.ai/?search=Margate&treatment=hormone-therapy)
+[Search Hormone Therapy in Margate →](https://glowroute.io/?search=Margate&treatment=hormone-therapy)

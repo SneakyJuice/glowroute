@@ -27,7 +27,7 @@ Davie has become a hub for advanced wellness medicine, with providers offering e
 2. **Zemits A-Esthetic - Spa Aesthetic Equipment** — 5.0★ (1714 reviews)
 3. **Barehandspa LLC** — 5.0★ (528 reviews)
 
-[View all Longevity & Anti-Aging providers in Davie →](https://glowroute.sealey.ai/?search=Davie)
+[View all Longevity & Anti-Aging providers in Davie →](https://glowroute.io/?search=Davie)
 
 ## What to Expect from Longevity & Anti-Aging
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Longevity & Anti-Aging. If medically necessary,
 
 GlowRoute has 86+ verified clinics in Davie offering Longevity & Anti-Aging and related wellness services.
 
-[Search Longevity & Anti-Aging in Davie →](https://glowroute.sealey.ai/?search=Davie&treatment=longevity)
+[Search Longevity & Anti-Aging in Davie →](https://glowroute.io/?search=Davie&treatment=longevity)

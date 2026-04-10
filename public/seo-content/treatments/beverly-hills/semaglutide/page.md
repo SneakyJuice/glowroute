@@ -27,7 +27,7 @@ Beverly Hills has become a hub for advanced wellness medicine, with providers of
 2. **Skin Verse Medical Spa** — 5.0★ (224 reviews)
 3. **LYEV Beverly Hills- Medical Spa** — 5.0★ (209 reviews)
 
-[View all Semaglutide / GLP-1 Weight Loss providers in Beverly Hills →](https://glowroute.sealey.ai/?search=Beverly%20Hills)
+[View all Semaglutide / GLP-1 Weight Loss providers in Beverly Hills →](https://glowroute.io/?search=Beverly%20Hills)
 
 ## What to Expect from Semaglutide / GLP-1 Weight Loss
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Semaglutide / GLP-1 Weight Loss. If medically n
 
 GlowRoute has 24+ verified clinics in Beverly Hills offering Semaglutide / GLP-1 Weight Loss and related wellness services.
 
-[Search Semaglutide / GLP-1 Weight Loss in Beverly Hills →](https://glowroute.sealey.ai/?search=Beverly%20Hills&treatment=semaglutide)
+[Search Semaglutide / GLP-1 Weight Loss in Beverly Hills →](https://glowroute.io/?search=Beverly%20Hills&treatment=semaglutide)

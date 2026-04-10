@@ -27,7 +27,7 @@ San Antonio has become a hub for advanced wellness medicine, with providers offe
 2. **Nova Aesthetics** — 5.0★ (1052 reviews)
 3. **Esthetica Medspa San Antonio** — 5.0★ (1039 reviews)
 
-[View all Wellness & Preventive Care providers in San Antonio →](https://glowroute.sealey.ai/?search=San%20Antonio)
+[View all Wellness & Preventive Care providers in San Antonio →](https://glowroute.io/?search=San%20Antonio)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 67+ verified clinics in San Antonio offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in San Antonio →](https://glowroute.sealey.ai/?search=San%20Antonio&treatment=wellness)
+[Search Wellness & Preventive Care in San Antonio →](https://glowroute.io/?search=San%20Antonio&treatment=wellness)

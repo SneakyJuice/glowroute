@@ -27,7 +27,7 @@ Austin has become a hub for advanced wellness medicine, with providers offering 
 2. **Peachy East Austin** — 5.0★ (443 reviews)
 3. **It's A Secret Med Spa - Austin** — 5.0★ (342 reviews)
 
-[View all Wellness & Preventive Care providers in Austin →](https://glowroute.sealey.ai/?search=Austin)
+[View all Wellness & Preventive Care providers in Austin →](https://glowroute.io/?search=Austin)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 49+ verified clinics in Austin offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in Austin →](https://glowroute.sealey.ai/?search=Austin&treatment=wellness)
+[Search Wellness & Preventive Care in Austin →](https://glowroute.io/?search=Austin&treatment=wellness)

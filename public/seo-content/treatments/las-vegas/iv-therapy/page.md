@@ -27,7 +27,7 @@ Las Vegas has become a hub for advanced wellness medicine, with providers offeri
 2. **Novuskin Med Spa** — 5.0★ (2171 reviews)
 3. **Advanced Aesthetics - Centennial** — 5.0★ (677 reviews)
 
-[View all IV Therapy & Vitamin Infusions providers in Las Vegas →](https://glowroute.sealey.ai/?search=Las%20Vegas)
+[View all IV Therapy & Vitamin Infusions providers in Las Vegas →](https://glowroute.io/?search=Las%20Vegas)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -62,4 +62,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 76+ verified clinics in Las Vegas offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in Las Vegas →](https://glowroute.sealey.ai/?search=Las%20Vegas&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Las Vegas →](https://glowroute.io/?search=Las%20Vegas&treatment=iv-therapy)

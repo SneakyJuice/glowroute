@@ -27,7 +27,7 @@ Tampa has become a hub for advanced wellness medicine, with providers offering e
 2. **Refresh Tampa Medical Aesthetics (Formerly Ideal Image)** — 3.7★ (1033 reviews)
 3. **BioDesign Men's Clinic of Tampa** — 5.0★ (1033 reviews)
 
-[View all IV Therapy & Vitamin Infusions providers in Tampa →](https://glowroute.sealey.ai/?search=Tampa)
+[View all IV Therapy & Vitamin Infusions providers in Tampa →](https://glowroute.io/?search=Tampa)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -62,4 +62,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 120+ verified clinics in Tampa offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in Tampa →](https://glowroute.sealey.ai/?search=Tampa&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Tampa →](https://glowroute.io/?search=Tampa&treatment=iv-therapy)

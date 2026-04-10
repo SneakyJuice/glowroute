@@ -27,7 +27,7 @@ Miami Beach has become a hub for advanced wellness medicine, with providers offe
 2. **Charette Cosmetics Medical Spa - Miami Beach** — 5.0★ (554 reviews)
 3. **Tao Spa Miami** — 5.0★ (503 reviews)
 
-[View all Semaglutide / GLP-1 Weight Loss providers in Miami Beach →](https://glowroute.sealey.ai/?search=Miami%20Beach)
+[View all Semaglutide / GLP-1 Weight Loss providers in Miami Beach →](https://glowroute.io/?search=Miami%20Beach)
 
 ## What to Expect from Semaglutide / GLP-1 Weight Loss
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Semaglutide / GLP-1 Weight Loss. If medically n
 
 GlowRoute has 173+ verified clinics in Miami Beach offering Semaglutide / GLP-1 Weight Loss and related wellness services.
 
-[Search Semaglutide / GLP-1 Weight Loss in Miami Beach →](https://glowroute.sealey.ai/?search=Miami%20Beach&treatment=semaglutide)
+[Search Semaglutide / GLP-1 Weight Loss in Miami Beach →](https://glowroute.io/?search=Miami%20Beach&treatment=semaglutide)

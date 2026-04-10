@@ -27,7 +27,7 @@ Jupiter has become a hub for advanced wellness medicine, with providers offering
 2. **The Medical Group of South Florida** — 4.0★ (780 reviews)
 3. **4Ever Young Med Spa & Wellness Center - Jupiter** — 5.0★ (754 reviews)
 
-[View all Longevity & Anti-Aging providers in Jupiter →](https://glowroute.sealey.ai/?search=Jupiter)
+[View all Longevity & Anti-Aging providers in Jupiter →](https://glowroute.io/?search=Jupiter)
 
 ## What to Expect from Longevity & Anti-Aging
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Longevity & Anti-Aging. If medically necessary,
 
 GlowRoute has 100+ verified clinics in Jupiter offering Longevity & Anti-Aging and related wellness services.
 
-[Search Longevity & Anti-Aging in Jupiter →](https://glowroute.sealey.ai/?search=Jupiter&treatment=longevity)
+[Search Longevity & Anti-Aging in Jupiter →](https://glowroute.io/?search=Jupiter&treatment=longevity)

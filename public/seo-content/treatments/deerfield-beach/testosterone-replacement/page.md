@@ -27,7 +27,7 @@ Deerfield Beach has become a hub for advanced wellness medicine, with providers 
 2. **Schweiger Dermatology Group - Boca Raton Central** — 5.0★ (760 reviews)
 3. **Barnett Dermatology of Boca Raton** — 5.0★ (611 reviews)
 
-[View all Testosterone Replacement Therapy providers in Deerfield Beach →](https://glowroute.sealey.ai/?search=Deerfield%20Beach)
+[View all Testosterone Replacement Therapy providers in Deerfield Beach →](https://glowroute.io/?search=Deerfield%20Beach)
 
 ## What to Expect from Testosterone Replacement Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Testosterone Replacement Therapy. If medically 
 
 GlowRoute has 100+ verified clinics in Deerfield Beach offering Testosterone Replacement Therapy and related wellness services.
 
-[Search Testosterone Replacement Therapy in Deerfield Beach →](https://glowroute.sealey.ai/?search=Deerfield%20Beach&treatment=testosterone-replacement)
+[Search Testosterone Replacement Therapy in Deerfield Beach →](https://glowroute.io/?search=Deerfield%20Beach&treatment=testosterone-replacement)

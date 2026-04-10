@@ -27,7 +27,7 @@ Chicago has become a hub for advanced wellness medicine, with providers offering
 2. **Mia Aesthetics** — 4.0★ (815 reviews)
 3. **Pure Med Spa** — 5.0★ (761 reviews)
 
-[View all Wellness & Preventive Care providers in Chicago →](https://glowroute.sealey.ai/?search=Chicago)
+[View all Wellness & Preventive Care providers in Chicago →](https://glowroute.io/?search=Chicago)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 65+ verified clinics in Chicago offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in Chicago →](https://glowroute.sealey.ai/?search=Chicago&treatment=wellness)
+[Search Wellness & Preventive Care in Chicago →](https://glowroute.io/?search=Chicago&treatment=wellness)

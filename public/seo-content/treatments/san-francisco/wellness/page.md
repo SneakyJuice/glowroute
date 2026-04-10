@@ -27,7 +27,7 @@ San Francisco has become a hub for advanced wellness medicine, with providers of
 2. **Restore Hyper Wellness** — 5.0★ (399 reviews)
 3. **Serenity Aesthetics & Wellness** — 5.0★ (297 reviews)
 
-[View all Wellness & Preventive Care providers in San Francisco →](https://glowroute.sealey.ai/?search=San%20Francisco)
+[View all Wellness & Preventive Care providers in San Francisco →](https://glowroute.io/?search=San%20Francisco)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 19+ verified clinics in San Francisco offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in San Francisco →](https://glowroute.sealey.ai/?search=San%20Francisco&treatment=wellness)
+[Search Wellness & Preventive Care in San Francisco →](https://glowroute.io/?search=San%20Francisco&treatment=wellness)

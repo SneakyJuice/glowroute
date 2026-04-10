@@ -27,7 +27,7 @@ Henderson has become a hub for advanced wellness medicine, with providers offeri
 2. **LaserAway Henderson** — 5.0★ (690 reviews)
 3. **Exotica Skin Care** — 5.0★ (543 reviews)
 
-[View all Hormone Therapy providers in Henderson →](https://glowroute.sealey.ai/?search=Henderson)
+[View all Hormone Therapy providers in Henderson →](https://glowroute.io/?search=Henderson)
 
 ## What to Expect from Hormone Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Hormone Therapy. If medically necessary, partia
 
 GlowRoute has 23+ verified clinics in Henderson offering Hormone Therapy and related wellness services.
 
-[Search Hormone Therapy in Henderson →](https://glowroute.sealey.ai/?search=Henderson&treatment=hormone-therapy)
+[Search Hormone Therapy in Henderson →](https://glowroute.io/?search=Henderson&treatment=hormone-therapy)

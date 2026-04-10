@@ -27,7 +27,7 @@ Philadelphia has become a hub for advanced wellness medicine, with providers off
 2. **Revive Medical** — 5.0★ (697 reviews)
 3. **Shiloh Cosmetics** — 5.0★ (649 reviews)
 
-[View all Longevity & Anti-Aging providers in Philadelphia →](https://glowroute.sealey.ai/?search=Philadelphia)
+[View all Longevity & Anti-Aging providers in Philadelphia →](https://glowroute.io/?search=Philadelphia)
 
 ## What to Expect from Longevity & Anti-Aging
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Longevity & Anti-Aging. If medically necessary,
 
 GlowRoute has 40+ verified clinics in Philadelphia offering Longevity & Anti-Aging and related wellness services.
 
-[Search Longevity & Anti-Aging in Philadelphia →](https://glowroute.sealey.ai/?search=Philadelphia&treatment=longevity)
+[Search Longevity & Anti-Aging in Philadelphia →](https://glowroute.io/?search=Philadelphia&treatment=longevity)

@@ -25,7 +25,7 @@ Hallandale Beach has become a hub for advanced wellness medicine, with providers
 
 Browse verified Peptide Therapy providers on GlowRoute.
 
-[View all Peptide Therapy providers in Hallandale Beach →](https://glowroute.sealey.ai/?search=Hallandale%20Beach)
+[View all Peptide Therapy providers in Hallandale Beach →](https://glowroute.io/?search=Hallandale%20Beach)
 
 ## What to Expect from Peptide Therapy
 
@@ -60,4 +60,4 @@ Most plans do not cover elective Peptide Therapy. If medically necessary, partia
 
 GlowRoute has 60+ verified clinics in Hallandale Beach offering Peptide Therapy and related wellness services.
 
-[Search Peptide Therapy in Hallandale Beach →](https://glowroute.sealey.ai/?search=Hallandale%20Beach&treatment=peptide-therapy)
+[Search Peptide Therapy in Hallandale Beach →](https://glowroute.io/?search=Hallandale%20Beach&treatment=peptide-therapy)

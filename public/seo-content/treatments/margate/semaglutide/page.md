@@ -27,7 +27,7 @@ Margate has become a hub for advanced wellness medicine, with providers offering
 2. **Threading and glow by Faye** — 5.0★ (379 reviews)
 3. **Stretch Sesh - Margate** — 5.0★ (286 reviews)
 
-[View all Semaglutide / GLP-1 Weight Loss providers in Margate →](https://glowroute.sealey.ai/?search=Margate)
+[View all Semaglutide / GLP-1 Weight Loss providers in Margate →](https://glowroute.io/?search=Margate)
 
 ## What to Expect from Semaglutide / GLP-1 Weight Loss
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Semaglutide / GLP-1 Weight Loss. If medically n
 
 GlowRoute has 31+ verified clinics in Margate offering Semaglutide / GLP-1 Weight Loss and related wellness services.
 
-[Search Semaglutide / GLP-1 Weight Loss in Margate →](https://glowroute.sealey.ai/?search=Margate&treatment=semaglutide)
+[Search Semaglutide / GLP-1 Weight Loss in Margate →](https://glowroute.io/?search=Margate&treatment=semaglutide)

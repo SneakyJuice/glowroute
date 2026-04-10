@@ -27,7 +27,7 @@ Wellington has become a hub for advanced wellness medicine, with providers offer
 2. **Relive Wellington** — 5.0★ (434 reviews)
 3. **4Ever Young Anti Aging Solutions** — 5.0★ (378 reviews)
 
-[View all Longevity & Anti-Aging providers in Wellington →](https://glowroute.sealey.ai/?search=Wellington)
+[View all Longevity & Anti-Aging providers in Wellington →](https://glowroute.io/?search=Wellington)
 
 ## What to Expect from Longevity & Anti-Aging
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Longevity & Anti-Aging. If medically necessary,
 
 GlowRoute has 67+ verified clinics in Wellington offering Longevity & Anti-Aging and related wellness services.
 
-[Search Longevity & Anti-Aging in Wellington →](https://glowroute.sealey.ai/?search=Wellington&treatment=longevity)
+[Search Longevity & Anti-Aging in Wellington →](https://glowroute.io/?search=Wellington&treatment=longevity)

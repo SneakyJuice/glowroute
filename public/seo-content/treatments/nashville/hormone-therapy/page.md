@@ -27,7 +27,7 @@ Nashville has become a hub for advanced wellness medicine, with providers offeri
 2. **NakedMD Med Spa Nashville** — 5.0★ (530 reviews)
 3. **Hatef Aesthetics & Plastic Surgery** — 5.0★ (437 reviews)
 
-[View all Hormone Therapy providers in Nashville →](https://glowroute.sealey.ai/?search=Nashville)
+[View all Hormone Therapy providers in Nashville →](https://glowroute.io/?search=Nashville)
 
 ## What to Expect from Hormone Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Hormone Therapy. If medically necessary, partia
 
 GlowRoute has 32+ verified clinics in Nashville offering Hormone Therapy and related wellness services.
 
-[Search Hormone Therapy in Nashville →](https://glowroute.sealey.ai/?search=Nashville&treatment=hormone-therapy)
+[Search Hormone Therapy in Nashville →](https://glowroute.io/?search=Nashville&treatment=hormone-therapy)

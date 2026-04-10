@@ -25,7 +25,7 @@ Aventura has become a hub for advanced wellness medicine, with providers offerin
 
 Browse verified Wellness & Preventive Care providers on GlowRoute.
 
-[View all Wellness & Preventive Care providers in Aventura →](https://glowroute.sealey.ai/?search=Aventura)
+[View all Wellness & Preventive Care providers in Aventura →](https://glowroute.io/?search=Aventura)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -60,4 +60,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 19+ verified clinics in Aventura offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in Aventura →](https://glowroute.sealey.ai/?search=Aventura&treatment=wellness)
+[Search Wellness & Preventive Care in Aventura →](https://glowroute.io/?search=Aventura&treatment=wellness)

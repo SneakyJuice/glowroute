@@ -30,7 +30,7 @@ Fisher Island has become a hub for advanced wellness and aesthetic medicine, wit
 2. **Monaco MedSpa** — 5★ (0 reviews)
 3. **Kauai Aesthetics** — 5★ (0 reviews)
 
-[View all Semaglutide / GLP-1 Weight Loss providers in Fisher Island →](https://glowroute.sealey.ai/?search=Fisher%20Island)
+[View all Semaglutide / GLP-1 Weight Loss providers in Fisher Island →](https://glowroute.io/?search=Fisher%20Island)
 
 ## What to Expect from Semaglutide / GLP-1 Weight Loss
 
@@ -74,4 +74,4 @@ Most insurance plans do not cover elective Semaglutide / GLP-1 Weight Loss proto
 
 GlowRoute has verified 99+ clinics in Fisher Island offering Semaglutide / GLP-1 Weight Loss and related wellness services. Browse real patient reviews, compare GlowScores, and find the right provider for your goals.
 
-[Search Semaglutide / GLP-1 Weight Loss in Fisher Island →](https://glowroute.sealey.ai/?search=Fisher%20Island&treatment=semaglutide)
+[Search Semaglutide / GLP-1 Weight Loss in Fisher Island →](https://glowroute.io/?search=Fisher%20Island&treatment=semaglutide)

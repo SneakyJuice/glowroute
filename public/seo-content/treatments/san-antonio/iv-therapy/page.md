@@ -27,7 +27,7 @@ San Antonio has become a hub for advanced wellness medicine, with providers offe
 2. **Nova Aesthetics** — 5.0★ (1052 reviews)
 3. **Esthetica Medspa San Antonio** — 5.0★ (1039 reviews)
 
-[View all IV Therapy & Vitamin Infusions providers in San Antonio →](https://glowroute.sealey.ai/?search=San%20Antonio)
+[View all IV Therapy & Vitamin Infusions providers in San Antonio →](https://glowroute.io/?search=San%20Antonio)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -62,4 +62,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 67+ verified clinics in San Antonio offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in San Antonio →](https://glowroute.sealey.ai/?search=San%20Antonio&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in San Antonio →](https://glowroute.io/?search=San%20Antonio&treatment=iv-therapy)

@@ -27,7 +27,7 @@ Jupiter has become a hub for advanced wellness medicine, with providers offering
 2. **The Medical Group of South Florida** — 4.0★ (780 reviews)
 3. **4Ever Young Med Spa & Wellness Center - Jupiter** — 5.0★ (754 reviews)
 
-[View all Wellness & Preventive Care providers in Jupiter →](https://glowroute.sealey.ai/?search=Jupiter)
+[View all Wellness & Preventive Care providers in Jupiter →](https://glowroute.io/?search=Jupiter)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 100+ verified clinics in Jupiter offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in Jupiter →](https://glowroute.sealey.ai/?search=Jupiter&treatment=wellness)
+[Search Wellness & Preventive Care in Jupiter →](https://glowroute.io/?search=Jupiter&treatment=wellness)

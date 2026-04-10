@@ -27,7 +27,7 @@ Phoenix has become a hub for advanced wellness medicine, with providers offering
 2. **Suddenly Slimmer Med Spa** — 5.0★ (1062 reviews)
 3. **NakedMD Med Spa Phoenix** — 5.0★ (493 reviews)
 
-[View all Hormone Therapy providers in Phoenix →](https://glowroute.sealey.ai/?search=Phoenix)
+[View all Hormone Therapy providers in Phoenix →](https://glowroute.io/?search=Phoenix)
 
 ## What to Expect from Hormone Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Hormone Therapy. If medically necessary, partia
 
 GlowRoute has 58+ verified clinics in Phoenix offering Hormone Therapy and related wellness services.
 
-[Search Hormone Therapy in Phoenix →](https://glowroute.sealey.ai/?search=Phoenix&treatment=hormone-therapy)
+[Search Hormone Therapy in Phoenix →](https://glowroute.io/?search=Phoenix&treatment=hormone-therapy)

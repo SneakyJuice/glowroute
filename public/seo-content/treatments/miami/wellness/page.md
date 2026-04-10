@@ -27,7 +27,7 @@ Miami has become a hub for advanced wellness medicine, with providers offering e
 2. **Dr. Deborah Longwill, DO, FAOCD** — 5.0★ (1393 reviews)
 3. **Miami Center for Dermatology** — 5.0★ (1340 reviews)
 
-[View all Wellness & Preventive Care providers in Miami →](https://glowroute.sealey.ai/?search=Miami)
+[View all Wellness & Preventive Care providers in Miami →](https://glowroute.io/?search=Miami)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 136+ verified clinics in Miami offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in Miami →](https://glowroute.sealey.ai/?search=Miami&treatment=wellness)
+[Search Wellness & Preventive Care in Miami →](https://glowroute.io/?search=Miami&treatment=wellness)

@@ -27,7 +27,7 @@ Wellington has become a hub for advanced wellness medicine, with providers offer
 2. **Relive Wellington** — 5.0★ (434 reviews)
 3. **4Ever Young Anti Aging Solutions** — 5.0★ (378 reviews)
 
-[View all IV Therapy & Vitamin Infusions providers in Wellington →](https://glowroute.sealey.ai/?search=Wellington)
+[View all IV Therapy & Vitamin Infusions providers in Wellington →](https://glowroute.io/?search=Wellington)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -62,4 +62,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 67+ verified clinics in Wellington offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in Wellington →](https://glowroute.sealey.ai/?search=Wellington&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Wellington →](https://glowroute.io/?search=Wellington&treatment=iv-therapy)

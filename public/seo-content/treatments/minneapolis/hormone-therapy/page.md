@@ -27,7 +27,7 @@ Minneapolis has become a hub for advanced wellness medicine, with providers offe
 2. **Clinic Ellena Health + Wellness** — 5.0★ (233 reviews)
 3. **Eternal Beauty & Wellness** — 5.0★ (168 reviews)
 
-[View all Hormone Therapy providers in Minneapolis →](https://glowroute.sealey.ai/?search=Minneapolis)
+[View all Hormone Therapy providers in Minneapolis →](https://glowroute.io/?search=Minneapolis)
 
 ## What to Expect from Hormone Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Hormone Therapy. If medically necessary, partia
 
 GlowRoute has 34+ verified clinics in Minneapolis offering Hormone Therapy and related wellness services.
 
-[Search Hormone Therapy in Minneapolis →](https://glowroute.sealey.ai/?search=Minneapolis&treatment=hormone-therapy)
+[Search Hormone Therapy in Minneapolis →](https://glowroute.io/?search=Minneapolis&treatment=hormone-therapy)

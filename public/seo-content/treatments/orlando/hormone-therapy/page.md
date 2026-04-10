@@ -27,7 +27,7 @@ Orlando has become a hub for advanced wellness medicine, with providers offering
 2. **Sanctuary Salon & Med Spa** — 5.0★ (732 reviews)
 3. **Evolving Aesthetics** — 5.0★ (553 reviews)
 
-[View all Hormone Therapy providers in Orlando →](https://glowroute.sealey.ai/?search=Orlando)
+[View all Hormone Therapy providers in Orlando →](https://glowroute.io/?search=Orlando)
 
 ## What to Expect from Hormone Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Hormone Therapy. If medically necessary, partia
 
 GlowRoute has 55+ verified clinics in Orlando offering Hormone Therapy and related wellness services.
 
-[Search Hormone Therapy in Orlando →](https://glowroute.sealey.ai/?search=Orlando&treatment=hormone-therapy)
+[Search Hormone Therapy in Orlando →](https://glowroute.io/?search=Orlando&treatment=hormone-therapy)

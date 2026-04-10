@@ -27,7 +27,7 @@ Dallas has become a hub for advanced wellness medicine, with providers offering 
 2. **Mara's Med Spa** — 5.0★ (596 reviews)
 3. **NakedMD Med Spa Dallas** — 5.0★ (504 reviews)
 
-[View all IV Therapy & Vitamin Infusions providers in Dallas →](https://glowroute.sealey.ai/?search=Dallas)
+[View all IV Therapy & Vitamin Infusions providers in Dallas →](https://glowroute.io/?search=Dallas)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -62,4 +62,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 69+ verified clinics in Dallas offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in Dallas →](https://glowroute.sealey.ai/?search=Dallas&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Dallas →](https://glowroute.io/?search=Dallas&treatment=iv-therapy)

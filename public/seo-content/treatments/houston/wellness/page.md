@@ -27,7 +27,7 @@ Houston has become a hub for advanced wellness medicine, with providers offering
 2. **Mia Aesthetics Houston** — 4.0★ (650 reviews)
 3. **Aesthetic Center for Plastic Surgery & MedSpa (ACPS)** — 5.0★ (487 reviews)
 
-[View all Wellness & Preventive Care providers in Houston →](https://glowroute.sealey.ai/?search=Houston)
+[View all Wellness & Preventive Care providers in Houston →](https://glowroute.io/?search=Houston)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 55+ verified clinics in Houston offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in Houston →](https://glowroute.sealey.ai/?search=Houston&treatment=wellness)
+[Search Wellness & Preventive Care in Houston →](https://glowroute.io/?search=Houston&treatment=wellness)
