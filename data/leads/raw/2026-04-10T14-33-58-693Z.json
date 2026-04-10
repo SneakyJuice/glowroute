@@ -1,0 +1,264 @@
+[
+  {
+    "clinic_name": "Mystique Aesthetics",
+    "website_url": "http://www.mystiqueaesthetics.com/?y_source=1_MTAzNTgyOTEyNS03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D",
+    "phone": "(469) 531-0203",
+    "email": null,
+    "city": "Irving",
+    "state": "TX",
+    "zip": "75062",
+    "services_offered": [],
+    "social_links": [],
+    "scraped_at": "2026-04-10T14:35:13.538Z",
+    "source_city": "Irving",
+    "source_state": "TX",
+    "raw_address": "2940 N O'Connor Rd Suite #117, Irving, TX 75062",
+    "rating": 5,
+    "review_count": 28
+  },
+  {
+    "clinic_name": "The Beauty Clinic Med Spa",
+    "website_url": "http://www.thebeautyclinicmedspa.com/",
+    "phone": "(972) 293-4300",
+    "email": null,
+    "city": "Irving",
+    "state": "TX",
+    "zip": "75062",
+    "services_offered": [
+      "Laser"
+    ],
+    "social_links": [],
+    "scraped_at": "2026-04-10T14:35:14.885Z",
+    "source_city": "Irving",
+    "source_state": "TX",
+    "raw_address": "580 Decker Dr #275, Irving, TX 75062",
+    "rating": 4.3,
+    "review_count": 238
+  },
+  {
+    "clinic_name": "Forever Young Aesthetics",
+    "website_url": "http://foreveryoung-aesthetics.com/",
+    "phone": "(469) 237-8212",
+    "email": "hello@foreveryoung-aesthetics.com",
+    "city": "Irving",
+    "state": "TX",
+    "zip": "75038",
+    "services_offered": [
+      "Facial"
+    ],
+    "social_links": [],
+    "scraped_at": "2026-04-10T14:35:17.549Z",
+    "source_city": "Irving",
+    "source_state": "TX",
+    "raw_address": "3575 W Story Rd Ste 120, Irving, TX 75038",
+    "rating": 4.9,
+    "review_count": 112
+  },
+  {
+    "clinic_name": "SN BEAUTY MEDICAL SPA",
+    "website_url": "https://facialsirving.com/",
+    "phone": "(702) 578-0067",
+    "email": null,
+    "city": "Irving",
+    "state": "TX",
+    "zip": "75063",
+    "services_offered": [
+      "Botox",
+      "Filler",
+      "Microneedling",
+      "Chemical Peel",
+      "Facial",
+      "Lip Filler"
+    ],
+    "social_links": [],
+    "scraped_at": "2026-04-10T14:35:20.616Z",
+    "source_city": "Irving",
+    "source_state": "TX",
+    "raw_address": "9905 Cliffside Ct, Irving, TX 75063",
+    "rating": 5,
+    "review_count": 61
+  },
+  {
+    "clinic_name": "Regen Medical Aesthetics",
+    "website_url": "https://www.regenmedicalaesthetics.com/",
+    "phone": "(469) 928-8227",
+    "email": null,
+    "city": "Irving",
+    "state": "TX",
+    "zip": "75038",
+    "services_offered": [
+      "Botox"
+    ],
+    "social_links": [
+      "https://www.instagram.com/regenmedicalaesthetics/)",
+      "https://www.facebook.com/Regen.Med.Aesthetics/)",
+      "https://www.tiktok.com/@regenmedaesthetics)",
+      "https://x.com/RMedAesthetics)"
+    ],
+    "scraped_at": "2026-04-10T14:35:24.402Z",
+    "source_city": "Irving",
+    "source_state": "TX",
+    "raw_address": "5901 High Point Dr 120 Suite 21, Irving, TX 75038",
+    "rating": 4.9,
+    "review_count": 28
+  },
+  {
+    "clinic_name": "Facial Mania Med Spa Irving",
+    "website_url": "http://facialmaniamedspa.com/",
+    "phone": "(817) 663-0995",
+    "email": null,
+    "city": "Irving",
+    "state": "TX",
+    "zip": "75063",
+    "services_offered": [
+      "Facial"
+    ],
+    "social_links": [],
+    "scraped_at": "2026-04-10T14:35:25.774Z",
+    "source_city": "Irving",
+    "source_state": "TX",
+    "raw_address": "2240 Market Pl Blvd Suite 160, Irving, TX 75063",
+    "rating": 4.9,
+    "review_count": 53
+  },
+  {
+    "clinic_name": "Dr. Reddy Medspa",
+    "website_url": "http://www.drreddymedspa.com/",
+    "phone": "(972) 262-2235",
+    "email": "drreddymedspa@gmail.com",
+    "city": "Irving",
+    "state": "TX",
+    "zip": "75061",
+    "services_offered": [
+      "Botox",
+      "Filler",
+      "Laser",
+      "Microneedling",
+      "Chemical Peel",
+      "Dermaplaning",
+      "Facial"
+    ],
+    "social_links": [],
+    "scraped_at": "2026-04-10T14:35:28.480Z",
+    "source_city": "Irving",
+    "source_state": "TX",
+    "raw_address": "3600 Conflans Rd Ste 102 Suite 102, Irving, TX 75061",
+    "rating": 4.7,
+    "review_count": 23
+  },
+  {
+    "clinic_name": "Imaginique Med Spa",
+    "website_url": "http://www.imaginiquemedspa.com/",
+    "phone": "(469) 744-3231",
+    "email": null,
+    "city": "Irving",
+    "state": "TX",
+    "zip": "75039",
+    "services_offered": [
+      "Filler",
+      "Laser",
+      "Microneedling",
+      "Prp",
+      "Facial"
+    ],
+    "social_links": [],
+    "scraped_at": "2026-04-10T14:35:34.216Z",
+    "source_city": "Irving",
+    "source_state": "TX",
+    "raw_address": "955 W John Carpenter Fwy Ste 100 - 927, Irving, TX 75039",
+    "rating": 4.5,
+    "review_count": 41
+  },
+  {
+    "clinic_name": "Skin Technology",
+    "website_url": "http://www.sherryskin.com/",
+    "phone": "(972) 869-6900",
+    "email": null,
+    "city": "Irving",
+    "state": "TX",
+    "zip": "75039",
+    "services_offered": [],
+    "social_links": [],
+    "scraped_at": "2026-04-10T14:35:37.185Z",
+    "source_city": "Irving",
+    "source_state": "TX",
+    "raw_address": "122 W John Carpenter Fwy #125, Irving, TX 75039",
+    "rating": 4.8,
+    "review_count": 26
+  },
+  {
+    "clinic_name": "Kairos Aesthetic Medicine",
+    "website_url": "https://kairosaestheticmedicine.com/",
+    "phone": "(972) 236-7523",
+    "email": null,
+    "city": "Irving",
+    "state": "TX",
+    "zip": "75063",
+    "services_offered": [
+      "Botox",
+      "Filler",
+      "Laser",
+      "Hydrafacial",
+      "Microneedling",
+      "Peptide",
+      "Weight Loss",
+      "Sculptra",
+      "Chemical Peel",
+      "Facial",
+      "Skin Rejuvenation",
+      "Radiesse"
+    ],
+    "social_links": [
+      "https://www.instagram.com/kairosaestheticmedicine/)"
+    ],
+    "scraped_at": "2026-04-10T14:35:40.180Z",
+    "source_city": "Irving",
+    "source_state": "TX",
+    "raw_address": "1701 W Royal Ln #101, Irving, TX 75063",
+    "rating": 5,
+    "review_count": 33
+  },
+  {
+    "clinic_name": "Body by YourClinic",
+    "website_url": "https://bodybyyourclinic.com/",
+    "phone": "(972) 584-0500",
+    "email": "info@bodybyyourclinic.com",
+    "city": "Irving",
+    "state": "TX",
+    "zip": "75063",
+    "services_offered": [
+      "Microneedling",
+      "Facial",
+      "Body Contouring"
+    ],
+    "social_links": [
+      "https://stcdn.leadconnectorhq.com/funnel/icons/dark/facebook-dark.svg)](https://www.facebook.com/bodybyyourclinic)[![social",
+      "https://stcdn.leadconnectorhq.com/funnel/icons/dark/instagram-dark.svg)](https://www.instagram.com/bodybyyourclinic/)"
+    ],
+    "scraped_at": "2026-04-10T14:35:45.168Z",
+    "source_city": "Irving",
+    "source_state": "TX",
+    "raw_address": "1141 Kinwest Pkwy STE 150, Irving, TX 75063",
+    "rating": 5,
+    "review_count": 64
+  },
+  {
+    "clinic_name": "A&M Skin & Laser Clinic LLC",
+    "website_url": "https://amskinandlaser.com/",
+    "phone": "(214) 307-4611",
+    "email": null,
+    "city": "Irving",
+    "state": "TX",
+    "zip": "75062",
+    "services_offered": [
+      "Laser"
+    ],
+    "social_links": [],
+    "scraped_at": "2026-04-10T14:35:48.425Z",
+    "source_city": "Irving",
+    "source_state": "TX",
+    "raw_address": "300 Decker Dr Suite 310, Irving, TX 75062",
+    "rating": 4.8,
+    "review_count": 107
+  }
+]
