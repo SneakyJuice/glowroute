@@ -25,7 +25,7 @@ Bradenton has become a hub for advanced wellness medicine, with providers offeri
 
 Browse verified Hormone Therapy providers on GlowRoute.
 
-[View all Hormone Therapy providers in Bradenton →](https://glowroute.sealey.ai/?search=Bradenton)
+[View all Hormone Therapy providers in Bradenton →](https://glowroute.io/?search=Bradenton)
 
 ## What to Expect from Hormone Therapy
 
@@ -60,4 +60,4 @@ Most plans do not cover elective Hormone Therapy. If medically necessary, partia
 
 GlowRoute has 31+ verified clinics in Bradenton offering Hormone Therapy and related wellness services.
 
-[Search Hormone Therapy in Bradenton →](https://glowroute.sealey.ai/?search=Bradenton&treatment=hormone-therapy)
+[Search Hormone Therapy in Bradenton →](https://glowroute.io/?search=Bradenton&treatment=hormone-therapy)

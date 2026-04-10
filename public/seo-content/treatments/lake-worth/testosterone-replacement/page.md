@@ -27,7 +27,7 @@ Lake Worth has become a hub for advanced wellness medicine, with providers offer
 2. **Pediatric & General Dentistry of Palm Beach, PA** — 5.0★ (1131 reviews)
 3. **LA Medical Associates** — 5.0★ (410 reviews)
 
-[View all Testosterone Replacement Therapy providers in Lake Worth →](https://glowroute.sealey.ai/?search=Lake%20Worth)
+[View all Testosterone Replacement Therapy providers in Lake Worth →](https://glowroute.io/?search=Lake%20Worth)
 
 ## What to Expect from Testosterone Replacement Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Testosterone Replacement Therapy. If medically 
 
 GlowRoute has 57+ verified clinics in Lake Worth offering Testosterone Replacement Therapy and related wellness services.
 
-[Search Testosterone Replacement Therapy in Lake Worth →](https://glowroute.sealey.ai/?search=Lake%20Worth&treatment=testosterone-replacement)
+[Search Testosterone Replacement Therapy in Lake Worth →](https://glowroute.io/?search=Lake%20Worth&treatment=testosterone-replacement)

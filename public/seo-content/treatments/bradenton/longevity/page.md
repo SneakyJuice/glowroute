@@ -25,7 +25,7 @@ Bradenton has become a hub for advanced wellness medicine, with providers offeri
 
 Browse verified Longevity & Anti-Aging providers on GlowRoute.
 
-[View all Longevity & Anti-Aging providers in Bradenton →](https://glowroute.sealey.ai/?search=Bradenton)
+[View all Longevity & Anti-Aging providers in Bradenton →](https://glowroute.io/?search=Bradenton)
 
 ## What to Expect from Longevity & Anti-Aging
 
@@ -60,4 +60,4 @@ Most plans do not cover elective Longevity & Anti-Aging. If medically necessary,
 
 GlowRoute has 31+ verified clinics in Bradenton offering Longevity & Anti-Aging and related wellness services.
 
-[Search Longevity & Anti-Aging in Bradenton →](https://glowroute.sealey.ai/?search=Bradenton&treatment=longevity)
+[Search Longevity & Anti-Aging in Bradenton →](https://glowroute.io/?search=Bradenton&treatment=longevity)

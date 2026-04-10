@@ -25,7 +25,7 @@ Lauderhill has become a hub for advanced wellness medicine, with providers offer
 
 Browse verified Longevity & Anti-Aging providers on GlowRoute.
 
-[View all Longevity & Anti-Aging providers in Lauderhill →](https://glowroute.sealey.ai/?search=Lauderhill)
+[View all Longevity & Anti-Aging providers in Lauderhill →](https://glowroute.io/?search=Lauderhill)
 
 ## What to Expect from Longevity & Anti-Aging
 
@@ -60,4 +60,4 @@ Most plans do not cover elective Longevity & Anti-Aging. If medically necessary,
 
 GlowRoute has 25+ verified clinics in Lauderhill offering Longevity & Anti-Aging and related wellness services.
 
-[Search Longevity & Anti-Aging in Lauderhill →](https://glowroute.sealey.ai/?search=Lauderhill&treatment=longevity)
+[Search Longevity & Anti-Aging in Lauderhill →](https://glowroute.io/?search=Lauderhill&treatment=longevity)

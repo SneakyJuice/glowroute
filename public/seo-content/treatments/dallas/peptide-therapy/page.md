@@ -27,7 +27,7 @@ Dallas has become a hub for advanced wellness medicine, with providers offering 
 2. **Mara's Med Spa** — 5.0★ (596 reviews)
 3. **NakedMD Med Spa Dallas** — 5.0★ (504 reviews)
 
-[View all Peptide Therapy providers in Dallas →](https://glowroute.sealey.ai/?search=Dallas)
+[View all Peptide Therapy providers in Dallas →](https://glowroute.io/?search=Dallas)
 
 ## What to Expect from Peptide Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Peptide Therapy. If medically necessary, partia
 
 GlowRoute has 69+ verified clinics in Dallas offering Peptide Therapy and related wellness services.
 
-[Search Peptide Therapy in Dallas →](https://glowroute.sealey.ai/?search=Dallas&treatment=peptide-therapy)
+[Search Peptide Therapy in Dallas →](https://glowroute.io/?search=Dallas&treatment=peptide-therapy)

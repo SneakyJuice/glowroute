@@ -27,7 +27,7 @@ San Antonio has become a hub for advanced wellness medicine, with providers offe
 2. **Nova Aesthetics** — 5.0★ (1052 reviews)
 3. **Esthetica Medspa San Antonio** — 5.0★ (1039 reviews)
 
-[View all Longevity & Anti-Aging providers in San Antonio →](https://glowroute.sealey.ai/?search=San%20Antonio)
+[View all Longevity & Anti-Aging providers in San Antonio →](https://glowroute.io/?search=San%20Antonio)
 
 ## What to Expect from Longevity & Anti-Aging
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Longevity & Anti-Aging. If medically necessary,
 
 GlowRoute has 67+ verified clinics in San Antonio offering Longevity & Anti-Aging and related wellness services.
 
-[Search Longevity & Anti-Aging in San Antonio →](https://glowroute.sealey.ai/?search=San%20Antonio&treatment=longevity)
+[Search Longevity & Anti-Aging in San Antonio →](https://glowroute.io/?search=San%20Antonio&treatment=longevity)

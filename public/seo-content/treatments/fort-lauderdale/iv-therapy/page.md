@@ -27,7 +27,7 @@ Fort Lauderdale has become a hub for advanced wellness medicine, with providers 
 2. **The Beauty Clinic** — 5.0★ (568 reviews)
 3. **Las Olas Med Spa** — 5.0★ (412 reviews)
 
-[View all IV Therapy & Vitamin Infusions providers in Fort Lauderdale →](https://glowroute.sealey.ai/?search=Fort%20Lauderdale)
+[View all IV Therapy & Vitamin Infusions providers in Fort Lauderdale →](https://glowroute.io/?search=Fort%20Lauderdale)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -62,4 +62,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 42+ verified clinics in Fort Lauderdale offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in Fort Lauderdale →](https://glowroute.sealey.ai/?search=Fort%20Lauderdale&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Fort Lauderdale →](https://glowroute.io/?search=Fort%20Lauderdale&treatment=iv-therapy)

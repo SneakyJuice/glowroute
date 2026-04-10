@@ -27,7 +27,7 @@ Chicago has become a hub for advanced wellness medicine, with providers offering
 2. **Mia Aesthetics** — 4.0★ (815 reviews)
 3. **Pure Med Spa** — 5.0★ (761 reviews)
 
-[View all Longevity & Anti-Aging providers in Chicago →](https://glowroute.sealey.ai/?search=Chicago)
+[View all Longevity & Anti-Aging providers in Chicago →](https://glowroute.io/?search=Chicago)
 
 ## What to Expect from Longevity & Anti-Aging
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Longevity & Anti-Aging. If medically necessary,
 
 GlowRoute has 65+ verified clinics in Chicago offering Longevity & Anti-Aging and related wellness services.
 
-[Search Longevity & Anti-Aging in Chicago →](https://glowroute.sealey.ai/?search=Chicago&treatment=longevity)
+[Search Longevity & Anti-Aging in Chicago →](https://glowroute.io/?search=Chicago&treatment=longevity)

@@ -25,7 +25,7 @@ Winter Park has become a hub for advanced wellness medicine, with providers offe
 
 Browse verified IV Therapy & Vitamin Infusions providers on GlowRoute.
 
-[View all IV Therapy & Vitamin Infusions providers in Winter Park →](https://glowroute.sealey.ai/?search=Winter%20Park)
+[View all IV Therapy & Vitamin Infusions providers in Winter Park →](https://glowroute.io/?search=Winter%20Park)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -60,4 +60,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 56+ verified clinics in Winter Park offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in Winter Park →](https://glowroute.sealey.ai/?search=Winter%20Park&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Winter Park →](https://glowroute.io/?search=Winter%20Park&treatment=iv-therapy)

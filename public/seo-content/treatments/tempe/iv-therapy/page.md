@@ -27,7 +27,7 @@ Tempe has become a hub for advanced wellness medicine, with providers offering e
 2. **ZONA MED SPA** — 5.0★ (509 reviews)
 3. **Perfect Skin Center** — 5.0★ (470 reviews)
 
-[View all IV Therapy & Vitamin Infusions providers in Tempe →](https://glowroute.sealey.ai/?search=Tempe)
+[View all IV Therapy & Vitamin Infusions providers in Tempe →](https://glowroute.io/?search=Tempe)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -62,4 +62,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 24+ verified clinics in Tempe offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in Tempe →](https://glowroute.sealey.ai/?search=Tempe&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Tempe →](https://glowroute.io/?search=Tempe&treatment=iv-therapy)

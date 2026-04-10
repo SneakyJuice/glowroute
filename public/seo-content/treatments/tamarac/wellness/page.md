@@ -27,7 +27,7 @@ Tamarac has become a hub for advanced wellness medicine, with providers offering
 2. **BeU Medical Spa** — 5.0★ (671 reviews)
 3. **Soaplab Laundromat & Wash and Fold** — 5.0★ (272 reviews)
 
-[View all Wellness & Preventive Care providers in Tamarac →](https://glowroute.sealey.ai/?search=Tamarac)
+[View all Wellness & Preventive Care providers in Tamarac →](https://glowroute.io/?search=Tamarac)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 36+ verified clinics in Tamarac offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in Tamarac →](https://glowroute.sealey.ai/?search=Tamarac&treatment=wellness)
+[Search Wellness & Preventive Care in Tamarac →](https://glowroute.io/?search=Tamarac&treatment=wellness)

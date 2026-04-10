@@ -25,7 +25,7 @@ Palm Beach Gardens has become a hub for advanced wellness medicine, with provide
 
 Browse verified IV Therapy & Vitamin Infusions providers on GlowRoute.
 
-[View all IV Therapy & Vitamin Infusions providers in Palm Beach Gardens →](https://glowroute.sealey.ai/?search=Palm%20Beach%20Gardens)
+[View all IV Therapy & Vitamin Infusions providers in Palm Beach Gardens →](https://glowroute.io/?search=Palm%20Beach%20Gardens)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -60,4 +60,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 34+ verified clinics in Palm Beach Gardens offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in Palm Beach Gardens →](https://glowroute.sealey.ai/?search=Palm%20Beach%20Gardens&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Palm Beach Gardens →](https://glowroute.io/?search=Palm%20Beach%20Gardens&treatment=iv-therapy)

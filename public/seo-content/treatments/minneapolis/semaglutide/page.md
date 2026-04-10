@@ -27,7 +27,7 @@ Minneapolis has become a hub for advanced wellness medicine, with providers offe
 2. **Clinic Ellena Health + Wellness** — 5.0★ (233 reviews)
 3. **Eternal Beauty & Wellness** — 5.0★ (168 reviews)
 
-[View all Semaglutide / GLP-1 Weight Loss providers in Minneapolis →](https://glowroute.sealey.ai/?search=Minneapolis)
+[View all Semaglutide / GLP-1 Weight Loss providers in Minneapolis →](https://glowroute.io/?search=Minneapolis)
 
 ## What to Expect from Semaglutide / GLP-1 Weight Loss
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Semaglutide / GLP-1 Weight Loss. If medically n
 
 GlowRoute has 34+ verified clinics in Minneapolis offering Semaglutide / GLP-1 Weight Loss and related wellness services.
 
-[Search Semaglutide / GLP-1 Weight Loss in Minneapolis →](https://glowroute.sealey.ai/?search=Minneapolis&treatment=semaglutide)
+[Search Semaglutide / GLP-1 Weight Loss in Minneapolis →](https://glowroute.io/?search=Minneapolis&treatment=semaglutide)

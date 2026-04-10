@@ -27,7 +27,7 @@ New York City has become a hub for advanced wellness medicine, with providers of
 2. **AestheticsMD by Jean Rhee Upper East Side** — 5.0★ (579 reviews)
 3. **SKINNEY Medspa** — 5.0★ (454 reviews)
 
-[View all Longevity & Anti-Aging providers in New York City →](https://glowroute.sealey.ai/?search=New%20York%20City)
+[View all Longevity & Anti-Aging providers in New York City →](https://glowroute.io/?search=New%20York%20City)
 
 ## What to Expect from Longevity & Anti-Aging
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Longevity & Anti-Aging. If medically necessary,
 
 GlowRoute has 25+ verified clinics in New York City offering Longevity & Anti-Aging and related wellness services.
 
-[Search Longevity & Anti-Aging in New York City →](https://glowroute.sealey.ai/?search=New%20York%20City&treatment=longevity)
+[Search Longevity & Anti-Aging in New York City →](https://glowroute.io/?search=New%20York%20City&treatment=longevity)

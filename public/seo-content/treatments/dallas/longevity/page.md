@@ -27,7 +27,7 @@ Dallas has become a hub for advanced wellness medicine, with providers offering 
 2. **Mara's Med Spa** — 5.0★ (596 reviews)
 3. **NakedMD Med Spa Dallas** — 5.0★ (504 reviews)
 
-[View all Longevity & Anti-Aging providers in Dallas →](https://glowroute.sealey.ai/?search=Dallas)
+[View all Longevity & Anti-Aging providers in Dallas →](https://glowroute.io/?search=Dallas)
 
 ## What to Expect from Longevity & Anti-Aging
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Longevity & Anti-Aging. If medically necessary,
 
 GlowRoute has 69+ verified clinics in Dallas offering Longevity & Anti-Aging and related wellness services.
 
-[Search Longevity & Anti-Aging in Dallas →](https://glowroute.sealey.ai/?search=Dallas&treatment=longevity)
+[Search Longevity & Anti-Aging in Dallas →](https://glowroute.io/?search=Dallas&treatment=longevity)

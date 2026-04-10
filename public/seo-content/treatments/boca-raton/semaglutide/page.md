@@ -27,7 +27,7 @@ Boca Raton has become a hub for advanced wellness medicine, with providers offer
 2. **Rendon Aesthetics** — 5.0★ (346 reviews)
 3. **Ora Wellness and Aesthetics** — 5.0★ (217 reviews)
 
-[View all Semaglutide / GLP-1 Weight Loss providers in Boca Raton →](https://glowroute.sealey.ai/?search=Boca%20Raton)
+[View all Semaglutide / GLP-1 Weight Loss providers in Boca Raton →](https://glowroute.io/?search=Boca%20Raton)
 
 ## What to Expect from Semaglutide / GLP-1 Weight Loss
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Semaglutide / GLP-1 Weight Loss. If medically n
 
 GlowRoute has 21+ verified clinics in Boca Raton offering Semaglutide / GLP-1 Weight Loss and related wellness services.
 
-[Search Semaglutide / GLP-1 Weight Loss in Boca Raton →](https://glowroute.sealey.ai/?search=Boca%20Raton&treatment=semaglutide)
+[Search Semaglutide / GLP-1 Weight Loss in Boca Raton →](https://glowroute.io/?search=Boca%20Raton&treatment=semaglutide)

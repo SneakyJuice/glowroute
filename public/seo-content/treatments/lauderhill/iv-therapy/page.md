@@ -25,7 +25,7 @@ Lauderhill has become a hub for advanced wellness medicine, with providers offer
 
 Browse verified IV Therapy & Vitamin Infusions providers on GlowRoute.
 
-[View all IV Therapy & Vitamin Infusions providers in Lauderhill →](https://glowroute.sealey.ai/?search=Lauderhill)
+[View all IV Therapy & Vitamin Infusions providers in Lauderhill →](https://glowroute.io/?search=Lauderhill)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -60,4 +60,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 25+ verified clinics in Lauderhill offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in Lauderhill →](https://glowroute.sealey.ai/?search=Lauderhill&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Lauderhill →](https://glowroute.io/?search=Lauderhill&treatment=iv-therapy)

@@ -25,7 +25,7 @@ Palm Beach Gardens has become a hub for advanced wellness medicine, with provide
 
 Browse verified Wellness & Preventive Care providers on GlowRoute.
 
-[View all Wellness & Preventive Care providers in Palm Beach Gardens →](https://glowroute.sealey.ai/?search=Palm%20Beach%20Gardens)
+[View all Wellness & Preventive Care providers in Palm Beach Gardens →](https://glowroute.io/?search=Palm%20Beach%20Gardens)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -60,4 +60,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 34+ verified clinics in Palm Beach Gardens offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in Palm Beach Gardens →](https://glowroute.sealey.ai/?search=Palm%20Beach%20Gardens&treatment=wellness)
+[Search Wellness & Preventive Care in Palm Beach Gardens →](https://glowroute.io/?search=Palm%20Beach%20Gardens&treatment=wellness)

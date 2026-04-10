@@ -27,7 +27,7 @@ Miami has become a hub for advanced wellness medicine, with providers offering e
 2. **Dr. Deborah Longwill, DO, FAOCD** — 5.0★ (1393 reviews)
 3. **Miami Center for Dermatology** — 5.0★ (1340 reviews)
 
-[View all Testosterone Replacement Therapy providers in Miami →](https://glowroute.sealey.ai/?search=Miami)
+[View all Testosterone Replacement Therapy providers in Miami →](https://glowroute.io/?search=Miami)
 
 ## What to Expect from Testosterone Replacement Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Testosterone Replacement Therapy. If medically 
 
 GlowRoute has 136+ verified clinics in Miami offering Testosterone Replacement Therapy and related wellness services.
 
-[Search Testosterone Replacement Therapy in Miami →](https://glowroute.sealey.ai/?search=Miami&treatment=testosterone-replacement)
+[Search Testosterone Replacement Therapy in Miami →](https://glowroute.io/?search=Miami&treatment=testosterone-replacement)

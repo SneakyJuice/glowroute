@@ -27,7 +27,7 @@ Charlotte has become a hub for advanced wellness medicine, with providers offeri
 2. **Lifted Aesthetics Charlotte** — 5.0★ (934 reviews)
 3. **Ageless Remedies SouthPark** — 5.0★ (696 reviews)
 
-[View all IV Therapy & Vitamin Infusions providers in Charlotte →](https://glowroute.sealey.ai/?search=Charlotte)
+[View all IV Therapy & Vitamin Infusions providers in Charlotte →](https://glowroute.io/?search=Charlotte)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -62,4 +62,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 65+ verified clinics in Charlotte offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in Charlotte →](https://glowroute.sealey.ai/?search=Charlotte&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Charlotte →](https://glowroute.io/?search=Charlotte&treatment=iv-therapy)

@@ -25,7 +25,7 @@ Palm Beach Gardens has become a hub for advanced wellness medicine, with provide
 
 Browse verified Longevity & Anti-Aging providers on GlowRoute.
 
-[View all Longevity & Anti-Aging providers in Palm Beach Gardens →](https://glowroute.sealey.ai/?search=Palm%20Beach%20Gardens)
+[View all Longevity & Anti-Aging providers in Palm Beach Gardens →](https://glowroute.io/?search=Palm%20Beach%20Gardens)
 
 ## What to Expect from Longevity & Anti-Aging
 
@@ -60,4 +60,4 @@ Most plans do not cover elective Longevity & Anti-Aging. If medically necessary,
 
 GlowRoute has 34+ verified clinics in Palm Beach Gardens offering Longevity & Anti-Aging and related wellness services.
 
-[Search Longevity & Anti-Aging in Palm Beach Gardens →](https://glowroute.sealey.ai/?search=Palm%20Beach%20Gardens&treatment=longevity)
+[Search Longevity & Anti-Aging in Palm Beach Gardens →](https://glowroute.io/?search=Palm%20Beach%20Gardens&treatment=longevity)

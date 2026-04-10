@@ -27,7 +27,7 @@ New York City has become a hub for advanced wellness medicine, with providers of
 2. **AestheticsMD by Jean Rhee Upper East Side** — 5.0★ (579 reviews)
 3. **SKINNEY Medspa** — 5.0★ (454 reviews)
 
-[View all Hormone Therapy providers in New York City →](https://glowroute.sealey.ai/?search=New%20York%20City)
+[View all Hormone Therapy providers in New York City →](https://glowroute.io/?search=New%20York%20City)
 
 ## What to Expect from Hormone Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Hormone Therapy. If medically necessary, partia
 
 GlowRoute has 25+ verified clinics in New York City offering Hormone Therapy and related wellness services.
 
-[Search Hormone Therapy in New York City →](https://glowroute.sealey.ai/?search=New%20York%20City&treatment=hormone-therapy)
+[Search Hormone Therapy in New York City →](https://glowroute.io/?search=New%20York%20City&treatment=hormone-therapy)

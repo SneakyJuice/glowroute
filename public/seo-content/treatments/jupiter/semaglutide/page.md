@@ -27,7 +27,7 @@ Jupiter has become a hub for advanced wellness medicine, with providers offering
 2. **The Medical Group of South Florida** — 4.0★ (780 reviews)
 3. **4Ever Young Med Spa & Wellness Center - Jupiter** — 5.0★ (754 reviews)
 
-[View all Semaglutide / GLP-1 Weight Loss providers in Jupiter →](https://glowroute.sealey.ai/?search=Jupiter)
+[View all Semaglutide / GLP-1 Weight Loss providers in Jupiter →](https://glowroute.io/?search=Jupiter)
 
 ## What to Expect from Semaglutide / GLP-1 Weight Loss
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Semaglutide / GLP-1 Weight Loss. If medically n
 
 GlowRoute has 100+ verified clinics in Jupiter offering Semaglutide / GLP-1 Weight Loss and related wellness services.
 
-[Search Semaglutide / GLP-1 Weight Loss in Jupiter →](https://glowroute.sealey.ai/?search=Jupiter&treatment=semaglutide)
+[Search Semaglutide / GLP-1 Weight Loss in Jupiter →](https://glowroute.io/?search=Jupiter&treatment=semaglutide)

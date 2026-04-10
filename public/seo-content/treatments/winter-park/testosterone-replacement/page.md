@@ -25,7 +25,7 @@ Winter Park has become a hub for advanced wellness medicine, with providers offe
 
 Browse verified Testosterone Replacement Therapy providers on GlowRoute.
 
-[View all Testosterone Replacement Therapy providers in Winter Park →](https://glowroute.sealey.ai/?search=Winter%20Park)
+[View all Testosterone Replacement Therapy providers in Winter Park →](https://glowroute.io/?search=Winter%20Park)
 
 ## What to Expect from Testosterone Replacement Therapy
 
@@ -60,4 +60,4 @@ Most plans do not cover elective Testosterone Replacement Therapy. If medically 
 
 GlowRoute has 56+ verified clinics in Winter Park offering Testosterone Replacement Therapy and related wellness services.
 
-[Search Testosterone Replacement Therapy in Winter Park →](https://glowroute.sealey.ai/?search=Winter%20Park&treatment=testosterone-replacement)
+[Search Testosterone Replacement Therapy in Winter Park →](https://glowroute.io/?search=Winter%20Park&treatment=testosterone-replacement)

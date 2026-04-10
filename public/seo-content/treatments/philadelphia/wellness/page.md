@@ -27,7 +27,7 @@ Philadelphia has become a hub for advanced wellness medicine, with providers off
 2. **Revive Medical** — 5.0★ (697 reviews)
 3. **Shiloh Cosmetics** — 5.0★ (649 reviews)
 
-[View all Wellness & Preventive Care providers in Philadelphia →](https://glowroute.sealey.ai/?search=Philadelphia)
+[View all Wellness & Preventive Care providers in Philadelphia →](https://glowroute.io/?search=Philadelphia)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 40+ verified clinics in Philadelphia offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in Philadelphia →](https://glowroute.sealey.ai/?search=Philadelphia&treatment=wellness)
+[Search Wellness & Preventive Care in Philadelphia →](https://glowroute.io/?search=Philadelphia&treatment=wellness)

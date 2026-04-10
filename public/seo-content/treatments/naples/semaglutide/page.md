@@ -27,7 +27,7 @@ Naples has become a hub for advanced wellness medicine, with providers offering 
 2. **Skin Wellness Physicians** — 5.0★ (446 reviews)
 3. **Beauty Studio by Tatiana** — 5.0★ (424 reviews)
 
-[View all Semaglutide / GLP-1 Weight Loss providers in Naples →](https://glowroute.sealey.ai/?search=Naples)
+[View all Semaglutide / GLP-1 Weight Loss providers in Naples →](https://glowroute.io/?search=Naples)
 
 ## What to Expect from Semaglutide / GLP-1 Weight Loss
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Semaglutide / GLP-1 Weight Loss. If medically n
 
 GlowRoute has 120+ verified clinics in Naples offering Semaglutide / GLP-1 Weight Loss and related wellness services.
 
-[Search Semaglutide / GLP-1 Weight Loss in Naples →](https://glowroute.sealey.ai/?search=Naples&treatment=semaglutide)
+[Search Semaglutide / GLP-1 Weight Loss in Naples →](https://glowroute.io/?search=Naples&treatment=semaglutide)

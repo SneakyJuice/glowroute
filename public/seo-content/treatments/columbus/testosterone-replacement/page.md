@@ -27,7 +27,7 @@ Columbus has become a hub for advanced wellness medicine, with providers offerin
 2. **Jiva Med Spa Columbus** — 5.0★ (1119 reviews)
 3. **Monarch Aesthetic Medicine** — 5.0★ (790 reviews)
 
-[View all Testosterone Replacement Therapy providers in Columbus →](https://glowroute.sealey.ai/?search=Columbus)
+[View all Testosterone Replacement Therapy providers in Columbus →](https://glowroute.io/?search=Columbus)
 
 ## What to Expect from Testosterone Replacement Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Testosterone Replacement Therapy. If medically 
 
 GlowRoute has 23+ verified clinics in Columbus offering Testosterone Replacement Therapy and related wellness services.
 
-[Search Testosterone Replacement Therapy in Columbus →](https://glowroute.sealey.ai/?search=Columbus&treatment=testosterone-replacement)
+[Search Testosterone Replacement Therapy in Columbus →](https://glowroute.io/?search=Columbus&treatment=testosterone-replacement)

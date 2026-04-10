@@ -25,7 +25,7 @@ Aventura has become a hub for advanced wellness medicine, with providers offerin
 
 Browse verified Testosterone Replacement Therapy providers on GlowRoute.
 
-[View all Testosterone Replacement Therapy providers in Aventura →](https://glowroute.sealey.ai/?search=Aventura)
+[View all Testosterone Replacement Therapy providers in Aventura →](https://glowroute.io/?search=Aventura)
 
 ## What to Expect from Testosterone Replacement Therapy
 
@@ -60,4 +60,4 @@ Most plans do not cover elective Testosterone Replacement Therapy. If medically 
 
 GlowRoute has 19+ verified clinics in Aventura offering Testosterone Replacement Therapy and related wellness services.
 
-[Search Testosterone Replacement Therapy in Aventura →](https://glowroute.sealey.ai/?search=Aventura&treatment=testosterone-replacement)
+[Search Testosterone Replacement Therapy in Aventura →](https://glowroute.io/?search=Aventura&treatment=testosterone-replacement)

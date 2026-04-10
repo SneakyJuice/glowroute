@@ -27,7 +27,7 @@ Jupiter has become a hub for advanced wellness medicine, with providers offering
 2. **The Medical Group of South Florida** — 4.0★ (780 reviews)
 3. **4Ever Young Med Spa & Wellness Center - Jupiter** — 5.0★ (754 reviews)
 
-[View all Testosterone Replacement Therapy providers in Jupiter →](https://glowroute.sealey.ai/?search=Jupiter)
+[View all Testosterone Replacement Therapy providers in Jupiter →](https://glowroute.io/?search=Jupiter)
 
 ## What to Expect from Testosterone Replacement Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Testosterone Replacement Therapy. If medically 
 
 GlowRoute has 100+ verified clinics in Jupiter offering Testosterone Replacement Therapy and related wellness services.
 
-[Search Testosterone Replacement Therapy in Jupiter →](https://glowroute.sealey.ai/?search=Jupiter&treatment=testosterone-replacement)
+[Search Testosterone Replacement Therapy in Jupiter →](https://glowroute.io/?search=Jupiter&treatment=testosterone-replacement)

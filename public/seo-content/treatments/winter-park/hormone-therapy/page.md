@@ -25,7 +25,7 @@ Winter Park has become a hub for advanced wellness medicine, with providers offe
 
 Browse verified Hormone Therapy providers on GlowRoute.
 
-[View all Hormone Therapy providers in Winter Park →](https://glowroute.sealey.ai/?search=Winter%20Park)
+[View all Hormone Therapy providers in Winter Park →](https://glowroute.io/?search=Winter%20Park)
 
 ## What to Expect from Hormone Therapy
 
@@ -60,4 +60,4 @@ Most plans do not cover elective Hormone Therapy. If medically necessary, partia
 
 GlowRoute has 56+ verified clinics in Winter Park offering Hormone Therapy and related wellness services.
 
-[Search Hormone Therapy in Winter Park →](https://glowroute.sealey.ai/?search=Winter%20Park&treatment=hormone-therapy)
+[Search Hormone Therapy in Winter Park →](https://glowroute.io/?search=Winter%20Park&treatment=hormone-therapy)

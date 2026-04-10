@@ -25,7 +25,7 @@ Winter Park has become a hub for advanced wellness medicine, with providers offe
 
 Browse verified Wellness & Preventive Care providers on GlowRoute.
 
-[View all Wellness & Preventive Care providers in Winter Park →](https://glowroute.sealey.ai/?search=Winter%20Park)
+[View all Wellness & Preventive Care providers in Winter Park →](https://glowroute.io/?search=Winter%20Park)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -60,4 +60,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 56+ verified clinics in Winter Park offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in Winter Park →](https://glowroute.sealey.ai/?search=Winter%20Park&treatment=wellness)
+[Search Wellness & Preventive Care in Winter Park →](https://glowroute.io/?search=Winter%20Park&treatment=wellness)

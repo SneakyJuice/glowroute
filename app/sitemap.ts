@@ -3,7 +3,7 @@ import fs from 'fs'
 import path from 'path'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = 'https://glowroute.sealey.ai'
+  const base = process.env.NEXT_PUBLIC_SITE_URL || 'https://glowroute.io'
   const now = new Date()
 
   // Static core routes

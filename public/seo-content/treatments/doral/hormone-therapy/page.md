@@ -25,7 +25,7 @@ Doral has become a hub for advanced wellness medicine, with providers offering e
 
 Browse verified Hormone Therapy providers on GlowRoute.
 
-[View all Hormone Therapy providers in Doral →](https://glowroute.sealey.ai/?search=Doral)
+[View all Hormone Therapy providers in Doral →](https://glowroute.io/?search=Doral)
 
 ## What to Expect from Hormone Therapy
 
@@ -60,4 +60,4 @@ Most plans do not cover elective Hormone Therapy. If medically necessary, partia
 
 GlowRoute has 17+ verified clinics in Doral offering Hormone Therapy and related wellness services.
 
-[Search Hormone Therapy in Doral →](https://glowroute.sealey.ai/?search=Doral&treatment=hormone-therapy)
+[Search Hormone Therapy in Doral →](https://glowroute.io/?search=Doral&treatment=hormone-therapy)

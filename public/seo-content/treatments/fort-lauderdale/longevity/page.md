@@ -27,7 +27,7 @@ Fort Lauderdale has become a hub for advanced wellness medicine, with providers 
 2. **The Beauty Clinic** — 5.0★ (568 reviews)
 3. **Las Olas Med Spa** — 5.0★ (412 reviews)
 
-[View all Longevity & Anti-Aging providers in Fort Lauderdale →](https://glowroute.sealey.ai/?search=Fort%20Lauderdale)
+[View all Longevity & Anti-Aging providers in Fort Lauderdale →](https://glowroute.io/?search=Fort%20Lauderdale)
 
 ## What to Expect from Longevity & Anti-Aging
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Longevity & Anti-Aging. If medically necessary,
 
 GlowRoute has 42+ verified clinics in Fort Lauderdale offering Longevity & Anti-Aging and related wellness services.
 
-[Search Longevity & Anti-Aging in Fort Lauderdale →](https://glowroute.sealey.ai/?search=Fort%20Lauderdale&treatment=longevity)
+[Search Longevity & Anti-Aging in Fort Lauderdale →](https://glowroute.io/?search=Fort%20Lauderdale&treatment=longevity)

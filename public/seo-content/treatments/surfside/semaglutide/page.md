@@ -27,7 +27,7 @@ Surfside has become a hub for advanced wellness medicine, with providers offerin
 2. **Savou Med Spa** — 5.0★ (138 reviews)
 3. **SJI Dermatology** — 5.0★ (138 reviews)
 
-[View all Semaglutide / GLP-1 Weight Loss providers in Surfside →](https://glowroute.sealey.ai/?search=Surfside)
+[View all Semaglutide / GLP-1 Weight Loss providers in Surfside →](https://glowroute.io/?search=Surfside)
 
 ## What to Expect from Semaglutide / GLP-1 Weight Loss
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Semaglutide / GLP-1 Weight Loss. If medically n
 
 GlowRoute has 107+ verified clinics in Surfside offering Semaglutide / GLP-1 Weight Loss and related wellness services.
 
-[Search Semaglutide / GLP-1 Weight Loss in Surfside →](https://glowroute.sealey.ai/?search=Surfside&treatment=semaglutide)
+[Search Semaglutide / GLP-1 Weight Loss in Surfside →](https://glowroute.io/?search=Surfside&treatment=semaglutide)

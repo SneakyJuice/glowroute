@@ -27,7 +27,7 @@ Phoenix has become a hub for advanced wellness medicine, with providers offering
 2. **Suddenly Slimmer Med Spa** — 5.0★ (1062 reviews)
 3. **NakedMD Med Spa Phoenix** — 5.0★ (493 reviews)
 
-[View all Testosterone Replacement Therapy providers in Phoenix →](https://glowroute.sealey.ai/?search=Phoenix)
+[View all Testosterone Replacement Therapy providers in Phoenix →](https://glowroute.io/?search=Phoenix)
 
 ## What to Expect from Testosterone Replacement Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Testosterone Replacement Therapy. If medically 
 
 GlowRoute has 58+ verified clinics in Phoenix offering Testosterone Replacement Therapy and related wellness services.
 
-[Search Testosterone Replacement Therapy in Phoenix →](https://glowroute.sealey.ai/?search=Phoenix&treatment=testosterone-replacement)
+[Search Testosterone Replacement Therapy in Phoenix →](https://glowroute.io/?search=Phoenix&treatment=testosterone-replacement)

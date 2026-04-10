@@ -27,7 +27,7 @@ Denver has become a hub for advanced wellness medicine, with providers offering 
 2. **Look Lab Med Spa** — 5.0★ (752 reviews)
 3. **Cara Mia Dermatology** — 5.0★ (690 reviews)
 
-[View all Wellness & Preventive Care providers in Denver →](https://glowroute.sealey.ai/?search=Denver)
+[View all Wellness & Preventive Care providers in Denver →](https://glowroute.io/?search=Denver)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 42+ verified clinics in Denver offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in Denver →](https://glowroute.sealey.ai/?search=Denver&treatment=wellness)
+[Search Wellness & Preventive Care in Denver →](https://glowroute.io/?search=Denver&treatment=wellness)

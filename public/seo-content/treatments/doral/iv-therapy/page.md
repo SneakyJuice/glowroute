@@ -25,7 +25,7 @@ Doral has become a hub for advanced wellness medicine, with providers offering e
 
 Browse verified IV Therapy & Vitamin Infusions providers on GlowRoute.
 
-[View all IV Therapy & Vitamin Infusions providers in Doral →](https://glowroute.sealey.ai/?search=Doral)
+[View all IV Therapy & Vitamin Infusions providers in Doral →](https://glowroute.io/?search=Doral)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -60,4 +60,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 17+ verified clinics in Doral offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in Doral →](https://glowroute.sealey.ai/?search=Doral&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Doral →](https://glowroute.io/?search=Doral&treatment=iv-therapy)

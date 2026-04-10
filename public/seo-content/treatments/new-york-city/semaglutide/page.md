@@ -27,7 +27,7 @@ New York City has become a hub for advanced wellness medicine, with providers of
 2. **AestheticsMD by Jean Rhee Upper East Side** — 5.0★ (579 reviews)
 3. **SKINNEY Medspa** — 5.0★ (454 reviews)
 
-[View all Semaglutide / GLP-1 Weight Loss providers in New York City →](https://glowroute.sealey.ai/?search=New%20York%20City)
+[View all Semaglutide / GLP-1 Weight Loss providers in New York City →](https://glowroute.io/?search=New%20York%20City)
 
 ## What to Expect from Semaglutide / GLP-1 Weight Loss
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Semaglutide / GLP-1 Weight Loss. If medically n
 
 GlowRoute has 25+ verified clinics in New York City offering Semaglutide / GLP-1 Weight Loss and related wellness services.
 
-[Search Semaglutide / GLP-1 Weight Loss in New York City →](https://glowroute.sealey.ai/?search=New%20York%20City&treatment=semaglutide)
+[Search Semaglutide / GLP-1 Weight Loss in New York City →](https://glowroute.io/?search=New%20York%20City&treatment=semaglutide)

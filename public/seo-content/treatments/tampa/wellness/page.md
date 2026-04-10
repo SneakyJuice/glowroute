@@ -27,7 +27,7 @@ Tampa has become a hub for advanced wellness medicine, with providers offering e
 2. **Refresh Tampa Medical Aesthetics (Formerly Ideal Image)** — 3.7★ (1033 reviews)
 3. **BioDesign Men's Clinic of Tampa** — 5.0★ (1033 reviews)
 
-[View all Wellness & Preventive Care providers in Tampa →](https://glowroute.sealey.ai/?search=Tampa)
+[View all Wellness & Preventive Care providers in Tampa →](https://glowroute.io/?search=Tampa)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 120+ verified clinics in Tampa offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in Tampa →](https://glowroute.sealey.ai/?search=Tampa&treatment=wellness)
+[Search Wellness & Preventive Care in Tampa →](https://glowroute.io/?search=Tampa&treatment=wellness)

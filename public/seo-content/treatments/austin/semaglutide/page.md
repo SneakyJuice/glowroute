@@ -27,7 +27,7 @@ Austin has become a hub for advanced wellness medicine, with providers offering 
 2. **Peachy East Austin** — 5.0★ (443 reviews)
 3. **It's A Secret Med Spa - Austin** — 5.0★ (342 reviews)
 
-[View all Semaglutide / GLP-1 Weight Loss providers in Austin →](https://glowroute.sealey.ai/?search=Austin)
+[View all Semaglutide / GLP-1 Weight Loss providers in Austin →](https://glowroute.io/?search=Austin)
 
 ## What to Expect from Semaglutide / GLP-1 Weight Loss
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Semaglutide / GLP-1 Weight Loss. If medically n
 
 GlowRoute has 49+ verified clinics in Austin offering Semaglutide / GLP-1 Weight Loss and related wellness services.
 
-[Search Semaglutide / GLP-1 Weight Loss in Austin →](https://glowroute.sealey.ai/?search=Austin&treatment=semaglutide)
+[Search Semaglutide / GLP-1 Weight Loss in Austin →](https://glowroute.io/?search=Austin&treatment=semaglutide)

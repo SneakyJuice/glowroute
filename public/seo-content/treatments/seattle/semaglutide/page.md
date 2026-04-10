@@ -27,7 +27,7 @@ Seattle has become a hub for advanced wellness medicine, with providers offering
 2. **Pinch Med Spa Seattle | Concierge, Mobile & At Home BOTOX, Microneedling & Chemical Peels** — 5.0★ (314 reviews)
 3. **SkinSpirit Seattle - University Village** — 5.0★ (292 reviews)
 
-[View all Semaglutide / GLP-1 Weight Loss providers in Seattle →](https://glowroute.sealey.ai/?search=Seattle)
+[View all Semaglutide / GLP-1 Weight Loss providers in Seattle →](https://glowroute.io/?search=Seattle)
 
 ## What to Expect from Semaglutide / GLP-1 Weight Loss
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Semaglutide / GLP-1 Weight Loss. If medically n
 
 GlowRoute has 30+ verified clinics in Seattle offering Semaglutide / GLP-1 Weight Loss and related wellness services.
 
-[Search Semaglutide / GLP-1 Weight Loss in Seattle →](https://glowroute.sealey.ai/?search=Seattle&treatment=semaglutide)
+[Search Semaglutide / GLP-1 Weight Loss in Seattle →](https://glowroute.io/?search=Seattle&treatment=semaglutide)

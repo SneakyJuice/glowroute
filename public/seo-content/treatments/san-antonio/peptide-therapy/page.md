@@ -27,7 +27,7 @@ San Antonio has become a hub for advanced wellness medicine, with providers offe
 2. **Nova Aesthetics** — 5.0★ (1052 reviews)
 3. **Esthetica Medspa San Antonio** — 5.0★ (1039 reviews)
 
-[View all Peptide Therapy providers in San Antonio →](https://glowroute.sealey.ai/?search=San%20Antonio)
+[View all Peptide Therapy providers in San Antonio →](https://glowroute.io/?search=San%20Antonio)
 
 ## What to Expect from Peptide Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Peptide Therapy. If medically necessary, partia
 
 GlowRoute has 67+ verified clinics in San Antonio offering Peptide Therapy and related wellness services.
 
-[Search Peptide Therapy in San Antonio →](https://glowroute.sealey.ai/?search=San%20Antonio&treatment=peptide-therapy)
+[Search Peptide Therapy in San Antonio →](https://glowroute.io/?search=San%20Antonio&treatment=peptide-therapy)

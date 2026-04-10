@@ -27,7 +27,7 @@ New York City has become a hub for advanced wellness medicine, with providers of
 2. **AestheticsMD by Jean Rhee Upper East Side** — 5.0★ (579 reviews)
 3. **SKINNEY Medspa** — 5.0★ (454 reviews)
 
-[View all Peptide Therapy providers in New York City →](https://glowroute.sealey.ai/?search=New%20York%20City)
+[View all Peptide Therapy providers in New York City →](https://glowroute.io/?search=New%20York%20City)
 
 ## What to Expect from Peptide Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Peptide Therapy. If medically necessary, partia
 
 GlowRoute has 25+ verified clinics in New York City offering Peptide Therapy and related wellness services.
 
-[Search Peptide Therapy in New York City →](https://glowroute.sealey.ai/?search=New%20York%20City&treatment=peptide-therapy)
+[Search Peptide Therapy in New York City →](https://glowroute.io/?search=New%20York%20City&treatment=peptide-therapy)

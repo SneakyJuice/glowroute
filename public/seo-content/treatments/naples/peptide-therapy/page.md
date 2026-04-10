@@ -27,7 +27,7 @@ Naples has become a hub for advanced wellness medicine, with providers offering 
 2. **Skin Wellness Physicians** — 5.0★ (446 reviews)
 3. **Beauty Studio by Tatiana** — 5.0★ (424 reviews)
 
-[View all Peptide Therapy providers in Naples →](https://glowroute.sealey.ai/?search=Naples)
+[View all Peptide Therapy providers in Naples →](https://glowroute.io/?search=Naples)
 
 ## What to Expect from Peptide Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Peptide Therapy. If medically necessary, partia
 
 GlowRoute has 120+ verified clinics in Naples offering Peptide Therapy and related wellness services.
 
-[Search Peptide Therapy in Naples →](https://glowroute.sealey.ai/?search=Naples&treatment=peptide-therapy)
+[Search Peptide Therapy in Naples →](https://glowroute.io/?search=Naples&treatment=peptide-therapy)

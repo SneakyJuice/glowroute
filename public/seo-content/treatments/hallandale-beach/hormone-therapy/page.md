@@ -25,7 +25,7 @@ Hallandale Beach has become a hub for advanced wellness medicine, with providers
 
 Browse verified Hormone Therapy providers on GlowRoute.
 
-[View all Hormone Therapy providers in Hallandale Beach →](https://glowroute.sealey.ai/?search=Hallandale%20Beach)
+[View all Hormone Therapy providers in Hallandale Beach →](https://glowroute.io/?search=Hallandale%20Beach)
 
 ## What to Expect from Hormone Therapy
 
@@ -60,4 +60,4 @@ Most plans do not cover elective Hormone Therapy. If medically necessary, partia
 
 GlowRoute has 60+ verified clinics in Hallandale Beach offering Hormone Therapy and related wellness services.
 
-[Search Hormone Therapy in Hallandale Beach →](https://glowroute.sealey.ai/?search=Hallandale%20Beach&treatment=hormone-therapy)
+[Search Hormone Therapy in Hallandale Beach →](https://glowroute.io/?search=Hallandale%20Beach&treatment=hormone-therapy)

@@ -27,7 +27,7 @@ San Francisco has become a hub for advanced wellness medicine, with providers of
 2. **Restore Hyper Wellness** — 5.0★ (399 reviews)
 3. **Serenity Aesthetics & Wellness** — 5.0★ (297 reviews)
 
-[View all Semaglutide / GLP-1 Weight Loss providers in San Francisco →](https://glowroute.sealey.ai/?search=San%20Francisco)
+[View all Semaglutide / GLP-1 Weight Loss providers in San Francisco →](https://glowroute.io/?search=San%20Francisco)
 
 ## What to Expect from Semaglutide / GLP-1 Weight Loss
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Semaglutide / GLP-1 Weight Loss. If medically n
 
 GlowRoute has 19+ verified clinics in San Francisco offering Semaglutide / GLP-1 Weight Loss and related wellness services.
 
-[Search Semaglutide / GLP-1 Weight Loss in San Francisco →](https://glowroute.sealey.ai/?search=San%20Francisco&treatment=semaglutide)
+[Search Semaglutide / GLP-1 Weight Loss in San Francisco →](https://glowroute.io/?search=San%20Francisco&treatment=semaglutide)

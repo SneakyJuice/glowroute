@@ -25,7 +25,7 @@ Hallandale Beach has become a hub for advanced wellness medicine, with providers
 
 Browse verified Longevity & Anti-Aging providers on GlowRoute.
 
-[View all Longevity & Anti-Aging providers in Hallandale Beach →](https://glowroute.sealey.ai/?search=Hallandale%20Beach)
+[View all Longevity & Anti-Aging providers in Hallandale Beach →](https://glowroute.io/?search=Hallandale%20Beach)
 
 ## What to Expect from Longevity & Anti-Aging
 
@@ -60,4 +60,4 @@ Most plans do not cover elective Longevity & Anti-Aging. If medically necessary,
 
 GlowRoute has 60+ verified clinics in Hallandale Beach offering Longevity & Anti-Aging and related wellness services.
 
-[Search Longevity & Anti-Aging in Hallandale Beach →](https://glowroute.sealey.ai/?search=Hallandale%20Beach&treatment=longevity)
+[Search Longevity & Anti-Aging in Hallandale Beach →](https://glowroute.io/?search=Hallandale%20Beach&treatment=longevity)

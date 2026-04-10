@@ -27,7 +27,7 @@ Las Vegas has become a hub for advanced wellness medicine, with providers offeri
 2. **Novuskin Med Spa** — 5.0★ (2171 reviews)
 3. **Advanced Aesthetics - Centennial** — 5.0★ (677 reviews)
 
-[View all Testosterone Replacement Therapy providers in Las Vegas →](https://glowroute.sealey.ai/?search=Las%20Vegas)
+[View all Testosterone Replacement Therapy providers in Las Vegas →](https://glowroute.io/?search=Las%20Vegas)
 
 ## What to Expect from Testosterone Replacement Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Testosterone Replacement Therapy. If medically 
 
 GlowRoute has 76+ verified clinics in Las Vegas offering Testosterone Replacement Therapy and related wellness services.
 
-[Search Testosterone Replacement Therapy in Las Vegas →](https://glowroute.sealey.ai/?search=Las%20Vegas&treatment=testosterone-replacement)
+[Search Testosterone Replacement Therapy in Las Vegas →](https://glowroute.io/?search=Las%20Vegas&treatment=testosterone-replacement)

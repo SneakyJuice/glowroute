@@ -27,7 +27,7 @@ Surfside has become a hub for advanced wellness medicine, with providers offerin
 2. **Savou Med Spa** — 5.0★ (138 reviews)
 3. **SJI Dermatology** — 5.0★ (138 reviews)
 
-[View all Testosterone Replacement Therapy providers in Surfside →](https://glowroute.sealey.ai/?search=Surfside)
+[View all Testosterone Replacement Therapy providers in Surfside →](https://glowroute.io/?search=Surfside)
 
 ## What to Expect from Testosterone Replacement Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Testosterone Replacement Therapy. If medically 
 
 GlowRoute has 107+ verified clinics in Surfside offering Testosterone Replacement Therapy and related wellness services.
 
-[Search Testosterone Replacement Therapy in Surfside →](https://glowroute.sealey.ai/?search=Surfside&treatment=testosterone-replacement)
+[Search Testosterone Replacement Therapy in Surfside →](https://glowroute.io/?search=Surfside&treatment=testosterone-replacement)

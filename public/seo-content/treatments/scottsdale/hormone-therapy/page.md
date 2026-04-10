@@ -27,7 +27,7 @@ Scottsdale has become a hub for advanced wellness medicine, with providers offer
 2. **Look Lab Med Spa** — 5.0★ (829 reviews)
 3. **Alani Skin MD** — 5.0★ (663 reviews)
 
-[View all Hormone Therapy providers in Scottsdale →](https://glowroute.sealey.ai/?search=Scottsdale)
+[View all Hormone Therapy providers in Scottsdale →](https://glowroute.io/?search=Scottsdale)
 
 ## What to Expect from Hormone Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Hormone Therapy. If medically necessary, partia
 
 GlowRoute has 28+ verified clinics in Scottsdale offering Hormone Therapy and related wellness services.
 
-[Search Hormone Therapy in Scottsdale →](https://glowroute.sealey.ai/?search=Scottsdale&treatment=hormone-therapy)
+[Search Hormone Therapy in Scottsdale →](https://glowroute.io/?search=Scottsdale&treatment=hormone-therapy)

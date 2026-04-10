@@ -25,7 +25,7 @@ Palm Beach Gardens has become a hub for advanced wellness medicine, with provide
 
 Browse verified Hormone Therapy providers on GlowRoute.
 
-[View all Hormone Therapy providers in Palm Beach Gardens →](https://glowroute.sealey.ai/?search=Palm%20Beach%20Gardens)
+[View all Hormone Therapy providers in Palm Beach Gardens →](https://glowroute.io/?search=Palm%20Beach%20Gardens)
 
 ## What to Expect from Hormone Therapy
 
@@ -60,4 +60,4 @@ Most plans do not cover elective Hormone Therapy. If medically necessary, partia
 
 GlowRoute has 34+ verified clinics in Palm Beach Gardens offering Hormone Therapy and related wellness services.
 
-[Search Hormone Therapy in Palm Beach Gardens →](https://glowroute.sealey.ai/?search=Palm%20Beach%20Gardens&treatment=hormone-therapy)
+[Search Hormone Therapy in Palm Beach Gardens →](https://glowroute.io/?search=Palm%20Beach%20Gardens&treatment=hormone-therapy)

@@ -27,7 +27,7 @@ Orlando has become a hub for advanced wellness medicine, with providers offering
 2. **Sanctuary Salon & Med Spa** — 5.0★ (732 reviews)
 3. **Evolving Aesthetics** — 5.0★ (553 reviews)
 
-[View all Wellness & Preventive Care providers in Orlando →](https://glowroute.sealey.ai/?search=Orlando)
+[View all Wellness & Preventive Care providers in Orlando →](https://glowroute.io/?search=Orlando)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 55+ verified clinics in Orlando offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in Orlando →](https://glowroute.sealey.ai/?search=Orlando&treatment=wellness)
+[Search Wellness & Preventive Care in Orlando →](https://glowroute.io/?search=Orlando&treatment=wellness)

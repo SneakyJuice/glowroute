@@ -27,7 +27,7 @@ Nashville has become a hub for advanced wellness medicine, with providers offeri
 2. **NakedMD Med Spa Nashville** — 5.0★ (530 reviews)
 3. **Hatef Aesthetics & Plastic Surgery** — 5.0★ (437 reviews)
 
-[View all Longevity & Anti-Aging providers in Nashville →](https://glowroute.sealey.ai/?search=Nashville)
+[View all Longevity & Anti-Aging providers in Nashville →](https://glowroute.io/?search=Nashville)
 
 ## What to Expect from Longevity & Anti-Aging
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Longevity & Anti-Aging. If medically necessary,
 
 GlowRoute has 32+ verified clinics in Nashville offering Longevity & Anti-Aging and related wellness services.
 
-[Search Longevity & Anti-Aging in Nashville →](https://glowroute.sealey.ai/?search=Nashville&treatment=longevity)
+[Search Longevity & Anti-Aging in Nashville →](https://glowroute.io/?search=Nashville&treatment=longevity)

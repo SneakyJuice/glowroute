@@ -27,7 +27,7 @@ Boca Raton has become a hub for advanced wellness medicine, with providers offer
 2. **Rendon Aesthetics** — 5.0★ (346 reviews)
 3. **Ora Wellness and Aesthetics** — 5.0★ (217 reviews)
 
-[View all Peptide Therapy providers in Boca Raton →](https://glowroute.sealey.ai/?search=Boca%20Raton)
+[View all Peptide Therapy providers in Boca Raton →](https://glowroute.io/?search=Boca%20Raton)
 
 ## What to Expect from Peptide Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Peptide Therapy. If medically necessary, partia
 
 GlowRoute has 21+ verified clinics in Boca Raton offering Peptide Therapy and related wellness services.
 
-[Search Peptide Therapy in Boca Raton →](https://glowroute.sealey.ai/?search=Boca%20Raton&treatment=peptide-therapy)
+[Search Peptide Therapy in Boca Raton →](https://glowroute.io/?search=Boca%20Raton&treatment=peptide-therapy)

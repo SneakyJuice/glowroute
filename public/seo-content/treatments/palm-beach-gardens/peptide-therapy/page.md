@@ -25,7 +25,7 @@ Palm Beach Gardens has become a hub for advanced wellness medicine, with provide
 
 Browse verified Peptide Therapy providers on GlowRoute.
 
-[View all Peptide Therapy providers in Palm Beach Gardens →](https://glowroute.sealey.ai/?search=Palm%20Beach%20Gardens)
+[View all Peptide Therapy providers in Palm Beach Gardens →](https://glowroute.io/?search=Palm%20Beach%20Gardens)
 
 ## What to Expect from Peptide Therapy
 
@@ -60,4 +60,4 @@ Most plans do not cover elective Peptide Therapy. If medically necessary, partia
 
 GlowRoute has 34+ verified clinics in Palm Beach Gardens offering Peptide Therapy and related wellness services.
 
-[Search Peptide Therapy in Palm Beach Gardens →](https://glowroute.sealey.ai/?search=Palm%20Beach%20Gardens&treatment=peptide-therapy)
+[Search Peptide Therapy in Palm Beach Gardens →](https://glowroute.io/?search=Palm%20Beach%20Gardens&treatment=peptide-therapy)

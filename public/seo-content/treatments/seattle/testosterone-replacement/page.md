@@ -27,7 +27,7 @@ Seattle has become a hub for advanced wellness medicine, with providers offering
 2. **Pinch Med Spa Seattle | Concierge, Mobile & At Home BOTOX, Microneedling & Chemical Peels** — 5.0★ (314 reviews)
 3. **SkinSpirit Seattle - University Village** — 5.0★ (292 reviews)
 
-[View all Testosterone Replacement Therapy providers in Seattle →](https://glowroute.sealey.ai/?search=Seattle)
+[View all Testosterone Replacement Therapy providers in Seattle →](https://glowroute.io/?search=Seattle)
 
 ## What to Expect from Testosterone Replacement Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Testosterone Replacement Therapy. If medically 
 
 GlowRoute has 30+ verified clinics in Seattle offering Testosterone Replacement Therapy and related wellness services.
 
-[Search Testosterone Replacement Therapy in Seattle →](https://glowroute.sealey.ai/?search=Seattle&treatment=testosterone-replacement)
+[Search Testosterone Replacement Therapy in Seattle →](https://glowroute.io/?search=Seattle&treatment=testosterone-replacement)

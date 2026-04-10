@@ -27,7 +27,7 @@ Scottsdale has become a hub for advanced wellness medicine, with providers offer
 2. **Look Lab Med Spa** — 5.0★ (829 reviews)
 3. **Alani Skin MD** — 5.0★ (663 reviews)
 
-[View all IV Therapy & Vitamin Infusions providers in Scottsdale →](https://glowroute.sealey.ai/?search=Scottsdale)
+[View all IV Therapy & Vitamin Infusions providers in Scottsdale →](https://glowroute.io/?search=Scottsdale)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -62,4 +62,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 28+ verified clinics in Scottsdale offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in Scottsdale →](https://glowroute.sealey.ai/?search=Scottsdale&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Scottsdale →](https://glowroute.io/?search=Scottsdale&treatment=iv-therapy)

@@ -27,7 +27,7 @@ Margate has become a hub for advanced wellness medicine, with providers offering
 2. **Threading and glow by Faye** — 5.0★ (379 reviews)
 3. **Stretch Sesh - Margate** — 5.0★ (286 reviews)
 
-[View all IV Therapy & Vitamin Infusions providers in Margate →](https://glowroute.sealey.ai/?search=Margate)
+[View all IV Therapy & Vitamin Infusions providers in Margate →](https://glowroute.io/?search=Margate)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -62,4 +62,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 31+ verified clinics in Margate offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in Margate →](https://glowroute.sealey.ai/?search=Margate&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Margate →](https://glowroute.io/?search=Margate&treatment=iv-therapy)

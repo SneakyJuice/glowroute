@@ -27,7 +27,7 @@ Nashville has become a hub for advanced wellness medicine, with providers offeri
 2. **NakedMD Med Spa Nashville** — 5.0★ (530 reviews)
 3. **Hatef Aesthetics & Plastic Surgery** — 5.0★ (437 reviews)
 
-[View all Testosterone Replacement Therapy providers in Nashville →](https://glowroute.sealey.ai/?search=Nashville)
+[View all Testosterone Replacement Therapy providers in Nashville →](https://glowroute.io/?search=Nashville)
 
 ## What to Expect from Testosterone Replacement Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Testosterone Replacement Therapy. If medically 
 
 GlowRoute has 32+ verified clinics in Nashville offering Testosterone Replacement Therapy and related wellness services.
 
-[Search Testosterone Replacement Therapy in Nashville →](https://glowroute.sealey.ai/?search=Nashville&treatment=testosterone-replacement)
+[Search Testosterone Replacement Therapy in Nashville →](https://glowroute.io/?search=Nashville&treatment=testosterone-replacement)

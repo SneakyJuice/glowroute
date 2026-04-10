@@ -27,7 +27,7 @@ Denver has become a hub for advanced wellness medicine, with providers offering 
 2. **Look Lab Med Spa** — 5.0★ (752 reviews)
 3. **Cara Mia Dermatology** — 5.0★ (690 reviews)
 
-[View all Longevity & Anti-Aging providers in Denver →](https://glowroute.sealey.ai/?search=Denver)
+[View all Longevity & Anti-Aging providers in Denver →](https://glowroute.io/?search=Denver)
 
 ## What to Expect from Longevity & Anti-Aging
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Longevity & Anti-Aging. If medically necessary,
 
 GlowRoute has 42+ verified clinics in Denver offering Longevity & Anti-Aging and related wellness services.
 
-[Search Longevity & Anti-Aging in Denver →](https://glowroute.sealey.ai/?search=Denver&treatment=longevity)
+[Search Longevity & Anti-Aging in Denver →](https://glowroute.io/?search=Denver&treatment=longevity)

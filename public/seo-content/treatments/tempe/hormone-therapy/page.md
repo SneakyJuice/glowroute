@@ -27,7 +27,7 @@ Tempe has become a hub for advanced wellness medicine, with providers offering e
 2. **ZONA MED SPA** — 5.0★ (509 reviews)
 3. **Perfect Skin Center** — 5.0★ (470 reviews)
 
-[View all Hormone Therapy providers in Tempe →](https://glowroute.sealey.ai/?search=Tempe)
+[View all Hormone Therapy providers in Tempe →](https://glowroute.io/?search=Tempe)
 
 ## What to Expect from Hormone Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Hormone Therapy. If medically necessary, partia
 
 GlowRoute has 24+ verified clinics in Tempe offering Hormone Therapy and related wellness services.
 
-[Search Hormone Therapy in Tempe →](https://glowroute.sealey.ai/?search=Tempe&treatment=hormone-therapy)
+[Search Hormone Therapy in Tempe →](https://glowroute.io/?search=Tempe&treatment=hormone-therapy)

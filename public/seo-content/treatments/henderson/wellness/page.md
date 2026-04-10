@@ -27,7 +27,7 @@ Henderson has become a hub for advanced wellness medicine, with providers offeri
 2. **LaserAway Henderson** — 5.0★ (690 reviews)
 3. **Exotica Skin Care** — 5.0★ (543 reviews)
 
-[View all Wellness & Preventive Care providers in Henderson →](https://glowroute.sealey.ai/?search=Henderson)
+[View all Wellness & Preventive Care providers in Henderson →](https://glowroute.io/?search=Henderson)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 23+ verified clinics in Henderson offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in Henderson →](https://glowroute.sealey.ai/?search=Henderson&treatment=wellness)
+[Search Wellness & Preventive Care in Henderson →](https://glowroute.io/?search=Henderson&treatment=wellness)

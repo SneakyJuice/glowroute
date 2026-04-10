@@ -27,7 +27,7 @@ Phoenix has become a hub for advanced wellness medicine, with providers offering
 2. **Suddenly Slimmer Med Spa** — 5.0★ (1062 reviews)
 3. **NakedMD Med Spa Phoenix** — 5.0★ (493 reviews)
 
-[View all Longevity & Anti-Aging providers in Phoenix →](https://glowroute.sealey.ai/?search=Phoenix)
+[View all Longevity & Anti-Aging providers in Phoenix →](https://glowroute.io/?search=Phoenix)
 
 ## What to Expect from Longevity & Anti-Aging
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Longevity & Anti-Aging. If medically necessary,
 
 GlowRoute has 58+ verified clinics in Phoenix offering Longevity & Anti-Aging and related wellness services.
 
-[Search Longevity & Anti-Aging in Phoenix →](https://glowroute.sealey.ai/?search=Phoenix&treatment=longevity)
+[Search Longevity & Anti-Aging in Phoenix →](https://glowroute.io/?search=Phoenix&treatment=longevity)

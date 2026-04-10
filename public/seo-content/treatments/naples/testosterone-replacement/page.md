@@ -27,7 +27,7 @@ Naples has become a hub for advanced wellness medicine, with providers offering 
 2. **Skin Wellness Physicians** — 5.0★ (446 reviews)
 3. **Beauty Studio by Tatiana** — 5.0★ (424 reviews)
 
-[View all Testosterone Replacement Therapy providers in Naples →](https://glowroute.sealey.ai/?search=Naples)
+[View all Testosterone Replacement Therapy providers in Naples →](https://glowroute.io/?search=Naples)
 
 ## What to Expect from Testosterone Replacement Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Testosterone Replacement Therapy. If medically 
 
 GlowRoute has 120+ verified clinics in Naples offering Testosterone Replacement Therapy and related wellness services.
 
-[Search Testosterone Replacement Therapy in Naples →](https://glowroute.sealey.ai/?search=Naples&treatment=testosterone-replacement)
+[Search Testosterone Replacement Therapy in Naples →](https://glowroute.io/?search=Naples&treatment=testosterone-replacement)

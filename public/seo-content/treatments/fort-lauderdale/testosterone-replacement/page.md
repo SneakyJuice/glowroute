@@ -27,7 +27,7 @@ Fort Lauderdale has become a hub for advanced wellness medicine, with providers 
 2. **The Beauty Clinic** — 5.0★ (568 reviews)
 3. **Las Olas Med Spa** — 5.0★ (412 reviews)
 
-[View all Testosterone Replacement Therapy providers in Fort Lauderdale →](https://glowroute.sealey.ai/?search=Fort%20Lauderdale)
+[View all Testosterone Replacement Therapy providers in Fort Lauderdale →](https://glowroute.io/?search=Fort%20Lauderdale)
 
 ## What to Expect from Testosterone Replacement Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Testosterone Replacement Therapy. If medically 
 
 GlowRoute has 42+ verified clinics in Fort Lauderdale offering Testosterone Replacement Therapy and related wellness services.
 
-[Search Testosterone Replacement Therapy in Fort Lauderdale →](https://glowroute.sealey.ai/?search=Fort%20Lauderdale&treatment=testosterone-replacement)
+[Search Testosterone Replacement Therapy in Fort Lauderdale →](https://glowroute.io/?search=Fort%20Lauderdale&treatment=testosterone-replacement)

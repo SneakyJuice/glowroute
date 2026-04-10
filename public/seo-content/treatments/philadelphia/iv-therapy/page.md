@@ -27,7 +27,7 @@ Philadelphia has become a hub for advanced wellness medicine, with providers off
 2. **Revive Medical** — 5.0★ (697 reviews)
 3. **Shiloh Cosmetics** — 5.0★ (649 reviews)
 
-[View all IV Therapy & Vitamin Infusions providers in Philadelphia →](https://glowroute.sealey.ai/?search=Philadelphia)
+[View all IV Therapy & Vitamin Infusions providers in Philadelphia →](https://glowroute.io/?search=Philadelphia)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -62,4 +62,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 40+ verified clinics in Philadelphia offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in Philadelphia →](https://glowroute.sealey.ai/?search=Philadelphia&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Philadelphia →](https://glowroute.io/?search=Philadelphia&treatment=iv-therapy)

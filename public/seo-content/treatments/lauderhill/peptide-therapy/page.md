@@ -25,7 +25,7 @@ Lauderhill has become a hub for advanced wellness medicine, with providers offer
 
 Browse verified Peptide Therapy providers on GlowRoute.
 
-[View all Peptide Therapy providers in Lauderhill →](https://glowroute.sealey.ai/?search=Lauderhill)
+[View all Peptide Therapy providers in Lauderhill →](https://glowroute.io/?search=Lauderhill)
 
 ## What to Expect from Peptide Therapy
 
@@ -60,4 +60,4 @@ Most plans do not cover elective Peptide Therapy. If medically necessary, partia
 
 GlowRoute has 25+ verified clinics in Lauderhill offering Peptide Therapy and related wellness services.
 
-[Search Peptide Therapy in Lauderhill →](https://glowroute.sealey.ai/?search=Lauderhill&treatment=peptide-therapy)
+[Search Peptide Therapy in Lauderhill →](https://glowroute.io/?search=Lauderhill&treatment=peptide-therapy)

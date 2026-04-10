@@ -27,7 +27,7 @@ Davie has become a hub for advanced wellness medicine, with providers offering e
 2. **Zemits A-Esthetic - Spa Aesthetic Equipment** — 5.0★ (1714 reviews)
 3. **Barehandspa LLC** — 5.0★ (528 reviews)
 
-[View all IV Therapy & Vitamin Infusions providers in Davie →](https://glowroute.sealey.ai/?search=Davie)
+[View all IV Therapy & Vitamin Infusions providers in Davie →](https://glowroute.io/?search=Davie)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -62,4 +62,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 86+ verified clinics in Davie offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in Davie →](https://glowroute.sealey.ai/?search=Davie&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Davie →](https://glowroute.io/?search=Davie&treatment=iv-therapy)

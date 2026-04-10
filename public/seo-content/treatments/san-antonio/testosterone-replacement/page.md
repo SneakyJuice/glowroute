@@ -27,7 +27,7 @@ San Antonio has become a hub for advanced wellness medicine, with providers offe
 2. **Nova Aesthetics** — 5.0★ (1052 reviews)
 3. **Esthetica Medspa San Antonio** — 5.0★ (1039 reviews)
 
-[View all Testosterone Replacement Therapy providers in San Antonio →](https://glowroute.sealey.ai/?search=San%20Antonio)
+[View all Testosterone Replacement Therapy providers in San Antonio →](https://glowroute.io/?search=San%20Antonio)
 
 ## What to Expect from Testosterone Replacement Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Testosterone Replacement Therapy. If medically 
 
 GlowRoute has 67+ verified clinics in San Antonio offering Testosterone Replacement Therapy and related wellness services.
 
-[Search Testosterone Replacement Therapy in San Antonio →](https://glowroute.sealey.ai/?search=San%20Antonio&treatment=testosterone-replacement)
+[Search Testosterone Replacement Therapy in San Antonio →](https://glowroute.io/?search=San%20Antonio&treatment=testosterone-replacement)

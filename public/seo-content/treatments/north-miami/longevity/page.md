@@ -27,7 +27,7 @@ North Miami has become a hub for advanced wellness medicine, with providers offe
 2. **Diane Walder Dermatology by Riverchase** — 5.0★ (648 reviews)
 3. **Pler Clinics** — 5.0★ (494 reviews)
 
-[View all Longevity & Anti-Aging providers in North Miami →](https://glowroute.sealey.ai/?search=North%20Miami)
+[View all Longevity & Anti-Aging providers in North Miami →](https://glowroute.io/?search=North%20Miami)
 
 ## What to Expect from Longevity & Anti-Aging
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Longevity & Anti-Aging. If medically necessary,
 
 GlowRoute has 79+ verified clinics in North Miami offering Longevity & Anti-Aging and related wellness services.
 
-[Search Longevity & Anti-Aging in North Miami →](https://glowroute.sealey.ai/?search=North%20Miami&treatment=longevity)
+[Search Longevity & Anti-Aging in North Miami →](https://glowroute.io/?search=North%20Miami&treatment=longevity)

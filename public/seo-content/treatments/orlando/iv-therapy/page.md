@@ -27,7 +27,7 @@ Orlando has become a hub for advanced wellness medicine, with providers offering
 2. **Sanctuary Salon & Med Spa** — 5.0★ (732 reviews)
 3. **Evolving Aesthetics** — 5.0★ (553 reviews)
 
-[View all IV Therapy & Vitamin Infusions providers in Orlando →](https://glowroute.sealey.ai/?search=Orlando)
+[View all IV Therapy & Vitamin Infusions providers in Orlando →](https://glowroute.io/?search=Orlando)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -62,4 +62,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 55+ verified clinics in Orlando offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in Orlando →](https://glowroute.sealey.ai/?search=Orlando&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Orlando →](https://glowroute.io/?search=Orlando&treatment=iv-therapy)

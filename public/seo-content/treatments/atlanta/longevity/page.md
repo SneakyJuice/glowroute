@@ -27,7 +27,7 @@ Atlanta has become a hub for advanced wellness medicine, with providers offering
 2. **4Ever Young Med Spa & Wellness Center - Atlanta Midtown** — 5.0★ (1010 reviews)
 3. **The Ageless Center** — 5.0★ (471 reviews)
 
-[View all Longevity & Anti-Aging providers in Atlanta →](https://glowroute.sealey.ai/?search=Atlanta)
+[View all Longevity & Anti-Aging providers in Atlanta →](https://glowroute.io/?search=Atlanta)
 
 ## What to Expect from Longevity & Anti-Aging
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Longevity & Anti-Aging. If medically necessary,
 
 GlowRoute has 59+ verified clinics in Atlanta offering Longevity & Anti-Aging and related wellness services.
 
-[Search Longevity & Anti-Aging in Atlanta →](https://glowroute.sealey.ai/?search=Atlanta&treatment=longevity)
+[Search Longevity & Anti-Aging in Atlanta →](https://glowroute.io/?search=Atlanta&treatment=longevity)

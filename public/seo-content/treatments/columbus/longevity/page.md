@@ -27,7 +27,7 @@ Columbus has become a hub for advanced wellness medicine, with providers offerin
 2. **Jiva Med Spa Columbus** — 5.0★ (1119 reviews)
 3. **Monarch Aesthetic Medicine** — 5.0★ (790 reviews)
 
-[View all Longevity & Anti-Aging providers in Columbus →](https://glowroute.sealey.ai/?search=Columbus)
+[View all Longevity & Anti-Aging providers in Columbus →](https://glowroute.io/?search=Columbus)
 
 ## What to Expect from Longevity & Anti-Aging
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Longevity & Anti-Aging. If medically necessary,
 
 GlowRoute has 23+ verified clinics in Columbus offering Longevity & Anti-Aging and related wellness services.
 
-[Search Longevity & Anti-Aging in Columbus →](https://glowroute.sealey.ai/?search=Columbus&treatment=longevity)
+[Search Longevity & Anti-Aging in Columbus →](https://glowroute.io/?search=Columbus&treatment=longevity)

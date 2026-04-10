@@ -27,7 +27,7 @@ Boca Raton has become a hub for advanced wellness medicine, with providers offer
 2. **Rendon Aesthetics** — 5.0★ (346 reviews)
 3. **Ora Wellness and Aesthetics** — 5.0★ (217 reviews)
 
-[View all IV Therapy & Vitamin Infusions providers in Boca Raton →](https://glowroute.sealey.ai/?search=Boca%20Raton)
+[View all IV Therapy & Vitamin Infusions providers in Boca Raton →](https://glowroute.io/?search=Boca%20Raton)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -62,4 +62,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 21+ verified clinics in Boca Raton offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in Boca Raton →](https://glowroute.sealey.ai/?search=Boca%20Raton&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Boca Raton →](https://glowroute.io/?search=Boca%20Raton&treatment=iv-therapy)

@@ -27,7 +27,7 @@ Newport Beach has become a hub for advanced wellness medicine, with providers of
 2. **PCH MedSpa** — 5.0★ (404 reviews)
 3. **MeSO Medspa Newport Beach** — 5.0★ (303 reviews)
 
-[View all Semaglutide / GLP-1 Weight Loss providers in Newport Beach →](https://glowroute.sealey.ai/?search=Newport%20Beach)
+[View all Semaglutide / GLP-1 Weight Loss providers in Newport Beach →](https://glowroute.io/?search=Newport%20Beach)
 
 ## What to Expect from Semaglutide / GLP-1 Weight Loss
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Semaglutide / GLP-1 Weight Loss. If medically n
 
 GlowRoute has 24+ verified clinics in Newport Beach offering Semaglutide / GLP-1 Weight Loss and related wellness services.
 
-[Search Semaglutide / GLP-1 Weight Loss in Newport Beach →](https://glowroute.sealey.ai/?search=Newport%20Beach&treatment=semaglutide)
+[Search Semaglutide / GLP-1 Weight Loss in Newport Beach →](https://glowroute.io/?search=Newport%20Beach&treatment=semaglutide)

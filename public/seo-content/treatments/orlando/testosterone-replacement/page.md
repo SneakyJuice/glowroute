@@ -27,7 +27,7 @@ Orlando has become a hub for advanced wellness medicine, with providers offering
 2. **Sanctuary Salon & Med Spa** — 5.0★ (732 reviews)
 3. **Evolving Aesthetics** — 5.0★ (553 reviews)
 
-[View all Testosterone Replacement Therapy providers in Orlando →](https://glowroute.sealey.ai/?search=Orlando)
+[View all Testosterone Replacement Therapy providers in Orlando →](https://glowroute.io/?search=Orlando)
 
 ## What to Expect from Testosterone Replacement Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Testosterone Replacement Therapy. If medically 
 
 GlowRoute has 55+ verified clinics in Orlando offering Testosterone Replacement Therapy and related wellness services.
 
-[Search Testosterone Replacement Therapy in Orlando →](https://glowroute.sealey.ai/?search=Orlando&treatment=testosterone-replacement)
+[Search Testosterone Replacement Therapy in Orlando →](https://glowroute.io/?search=Orlando&treatment=testosterone-replacement)

@@ -25,7 +25,7 @@ Bradenton has become a hub for advanced wellness medicine, with providers offeri
 
 Browse verified Peptide Therapy providers on GlowRoute.
 
-[View all Peptide Therapy providers in Bradenton →](https://glowroute.sealey.ai/?search=Bradenton)
+[View all Peptide Therapy providers in Bradenton →](https://glowroute.io/?search=Bradenton)
 
 ## What to Expect from Peptide Therapy
 
@@ -60,4 +60,4 @@ Most plans do not cover elective Peptide Therapy. If medically necessary, partia
 
 GlowRoute has 31+ verified clinics in Bradenton offering Peptide Therapy and related wellness services.
 
-[Search Peptide Therapy in Bradenton →](https://glowroute.sealey.ai/?search=Bradenton&treatment=peptide-therapy)
+[Search Peptide Therapy in Bradenton →](https://glowroute.io/?search=Bradenton&treatment=peptide-therapy)

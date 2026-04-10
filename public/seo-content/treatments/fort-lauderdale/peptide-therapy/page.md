@@ -27,7 +27,7 @@ Fort Lauderdale has become a hub for advanced wellness medicine, with providers 
 2. **The Beauty Clinic** — 5.0★ (568 reviews)
 3. **Las Olas Med Spa** — 5.0★ (412 reviews)
 
-[View all Peptide Therapy providers in Fort Lauderdale →](https://glowroute.sealey.ai/?search=Fort%20Lauderdale)
+[View all Peptide Therapy providers in Fort Lauderdale →](https://glowroute.io/?search=Fort%20Lauderdale)
 
 ## What to Expect from Peptide Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Peptide Therapy. If medically necessary, partia
 
 GlowRoute has 42+ verified clinics in Fort Lauderdale offering Peptide Therapy and related wellness services.
 
-[Search Peptide Therapy in Fort Lauderdale →](https://glowroute.sealey.ai/?search=Fort%20Lauderdale&treatment=peptide-therapy)
+[Search Peptide Therapy in Fort Lauderdale →](https://glowroute.io/?search=Fort%20Lauderdale&treatment=peptide-therapy)

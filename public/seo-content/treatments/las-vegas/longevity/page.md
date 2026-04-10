@@ -27,7 +27,7 @@ Las Vegas has become a hub for advanced wellness medicine, with providers offeri
 2. **Novuskin Med Spa** — 5.0★ (2171 reviews)
 3. **Advanced Aesthetics - Centennial** — 5.0★ (677 reviews)
 
-[View all Longevity & Anti-Aging providers in Las Vegas →](https://glowroute.sealey.ai/?search=Las%20Vegas)
+[View all Longevity & Anti-Aging providers in Las Vegas →](https://glowroute.io/?search=Las%20Vegas)
 
 ## What to Expect from Longevity & Anti-Aging
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Longevity & Anti-Aging. If medically necessary,
 
 GlowRoute has 76+ verified clinics in Las Vegas offering Longevity & Anti-Aging and related wellness services.
 
-[Search Longevity & Anti-Aging in Las Vegas →](https://glowroute.sealey.ai/?search=Las%20Vegas&treatment=longevity)
+[Search Longevity & Anti-Aging in Las Vegas →](https://glowroute.io/?search=Las%20Vegas&treatment=longevity)

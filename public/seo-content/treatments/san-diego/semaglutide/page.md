@@ -27,7 +27,7 @@ San Diego has become a hub for advanced wellness medicine, with providers offeri
 2. **SDBotox - Mission Valley** — 5.0★ (630 reviews)
 3. **Botoxie - North Park** — 5.0★ (473 reviews)
 
-[View all Semaglutide / GLP-1 Weight Loss providers in San Diego →](https://glowroute.sealey.ai/?search=San%20Diego)
+[View all Semaglutide / GLP-1 Weight Loss providers in San Diego →](https://glowroute.io/?search=San%20Diego)
 
 ## What to Expect from Semaglutide / GLP-1 Weight Loss
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Semaglutide / GLP-1 Weight Loss. If medically n
 
 GlowRoute has 58+ verified clinics in San Diego offering Semaglutide / GLP-1 Weight Loss and related wellness services.
 
-[Search Semaglutide / GLP-1 Weight Loss in San Diego →](https://glowroute.sealey.ai/?search=San%20Diego&treatment=semaglutide)
+[Search Semaglutide / GLP-1 Weight Loss in San Diego →](https://glowroute.io/?search=San%20Diego&treatment=semaglutide)

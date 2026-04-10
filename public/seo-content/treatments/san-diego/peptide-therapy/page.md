@@ -27,7 +27,7 @@ San Diego has become a hub for advanced wellness medicine, with providers offeri
 2. **SDBotox - Mission Valley** — 5.0★ (630 reviews)
 3. **Botoxie - North Park** — 5.0★ (473 reviews)
 
-[View all Peptide Therapy providers in San Diego →](https://glowroute.sealey.ai/?search=San%20Diego)
+[View all Peptide Therapy providers in San Diego →](https://glowroute.io/?search=San%20Diego)
 
 ## What to Expect from Peptide Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Peptide Therapy. If medically necessary, partia
 
 GlowRoute has 58+ verified clinics in San Diego offering Peptide Therapy and related wellness services.
 
-[Search Peptide Therapy in San Diego →](https://glowroute.sealey.ai/?search=San%20Diego&treatment=peptide-therapy)
+[Search Peptide Therapy in San Diego →](https://glowroute.io/?search=San%20Diego&treatment=peptide-therapy)

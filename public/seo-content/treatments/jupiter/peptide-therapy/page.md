@@ -27,7 +27,7 @@ Jupiter has become a hub for advanced wellness medicine, with providers offering
 2. **The Medical Group of South Florida** — 4.0★ (780 reviews)
 3. **4Ever Young Med Spa & Wellness Center - Jupiter** — 5.0★ (754 reviews)
 
-[View all Peptide Therapy providers in Jupiter →](https://glowroute.sealey.ai/?search=Jupiter)
+[View all Peptide Therapy providers in Jupiter →](https://glowroute.io/?search=Jupiter)
 
 ## What to Expect from Peptide Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Peptide Therapy. If medically necessary, partia
 
 GlowRoute has 100+ verified clinics in Jupiter offering Peptide Therapy and related wellness services.
 
-[Search Peptide Therapy in Jupiter →](https://glowroute.sealey.ai/?search=Jupiter&treatment=peptide-therapy)
+[Search Peptide Therapy in Jupiter →](https://glowroute.io/?search=Jupiter&treatment=peptide-therapy)

@@ -27,7 +27,7 @@ Miami Lakes has become a hub for advanced wellness medicine, with providers offe
 2. **Chinitas Beauty** — 5.0★ (546 reviews)
 3. **Enrique Hanabergh Jr, MD** — 5.0★ (249 reviews)
 
-[View all IV Therapy & Vitamin Infusions providers in Miami Lakes →](https://glowroute.sealey.ai/?search=Miami%20Lakes)
+[View all IV Therapy & Vitamin Infusions providers in Miami Lakes →](https://glowroute.io/?search=Miami%20Lakes)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -62,4 +62,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 61+ verified clinics in Miami Lakes offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in Miami Lakes →](https://glowroute.sealey.ai/?search=Miami%20Lakes&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Miami Lakes →](https://glowroute.io/?search=Miami%20Lakes&treatment=iv-therapy)

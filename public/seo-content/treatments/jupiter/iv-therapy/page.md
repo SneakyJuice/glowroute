@@ -27,7 +27,7 @@ Jupiter has become a hub for advanced wellness medicine, with providers offering
 2. **The Medical Group of South Florida** — 4.0★ (780 reviews)
 3. **4Ever Young Med Spa & Wellness Center - Jupiter** — 5.0★ (754 reviews)
 
-[View all IV Therapy & Vitamin Infusions providers in Jupiter →](https://glowroute.sealey.ai/?search=Jupiter)
+[View all IV Therapy & Vitamin Infusions providers in Jupiter →](https://glowroute.io/?search=Jupiter)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -62,4 +62,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 100+ verified clinics in Jupiter offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in Jupiter →](https://glowroute.sealey.ai/?search=Jupiter&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Jupiter →](https://glowroute.io/?search=Jupiter&treatment=iv-therapy)

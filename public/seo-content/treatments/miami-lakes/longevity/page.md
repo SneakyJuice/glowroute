@@ -27,7 +27,7 @@ Miami Lakes has become a hub for advanced wellness medicine, with providers offe
 2. **Chinitas Beauty** — 5.0★ (546 reviews)
 3. **Enrique Hanabergh Jr, MD** — 5.0★ (249 reviews)
 
-[View all Longevity & Anti-Aging providers in Miami Lakes →](https://glowroute.sealey.ai/?search=Miami%20Lakes)
+[View all Longevity & Anti-Aging providers in Miami Lakes →](https://glowroute.io/?search=Miami%20Lakes)
 
 ## What to Expect from Longevity & Anti-Aging
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Longevity & Anti-Aging. If medically necessary,
 
 GlowRoute has 61+ verified clinics in Miami Lakes offering Longevity & Anti-Aging and related wellness services.
 
-[Search Longevity & Anti-Aging in Miami Lakes →](https://glowroute.sealey.ai/?search=Miami%20Lakes&treatment=longevity)
+[Search Longevity & Anti-Aging in Miami Lakes →](https://glowroute.io/?search=Miami%20Lakes&treatment=longevity)

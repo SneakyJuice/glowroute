@@ -27,7 +27,7 @@ Newport Beach has become a hub for advanced wellness medicine, with providers of
 2. **PCH MedSpa** — 5.0★ (404 reviews)
 3. **MeSO Medspa Newport Beach** — 5.0★ (303 reviews)
 
-[View all Longevity & Anti-Aging providers in Newport Beach →](https://glowroute.sealey.ai/?search=Newport%20Beach)
+[View all Longevity & Anti-Aging providers in Newport Beach →](https://glowroute.io/?search=Newport%20Beach)
 
 ## What to Expect from Longevity & Anti-Aging
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Longevity & Anti-Aging. If medically necessary,
 
 GlowRoute has 24+ verified clinics in Newport Beach offering Longevity & Anti-Aging and related wellness services.
 
-[Search Longevity & Anti-Aging in Newport Beach →](https://glowroute.sealey.ai/?search=Newport%20Beach&treatment=longevity)
+[Search Longevity & Anti-Aging in Newport Beach →](https://glowroute.io/?search=Newport%20Beach&treatment=longevity)

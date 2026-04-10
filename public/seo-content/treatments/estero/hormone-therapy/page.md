@@ -27,7 +27,7 @@ Estero has become a hub for advanced wellness medicine, with providers offering 
 2. **Riverchase Dermatology - Estero** — 5.0★ (873 reviews)
 3. **Spavia Day Spa - Estero** — 5.0★ (451 reviews)
 
-[View all Hormone Therapy providers in Estero →](https://glowroute.sealey.ai/?search=Estero)
+[View all Hormone Therapy providers in Estero →](https://glowroute.io/?search=Estero)
 
 ## What to Expect from Hormone Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Hormone Therapy. If medically necessary, partia
 
 GlowRoute has 43+ verified clinics in Estero offering Hormone Therapy and related wellness services.
 
-[Search Hormone Therapy in Estero →](https://glowroute.sealey.ai/?search=Estero&treatment=hormone-therapy)
+[Search Hormone Therapy in Estero →](https://glowroute.io/?search=Estero&treatment=hormone-therapy)

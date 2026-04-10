@@ -27,7 +27,7 @@ Key Biscayne has become a hub for advanced wellness medicine, with providers off
 2. **B. Care Salon SPA** — 5.0★ (173 reviews)
 3. **GM Salon** — 5.0★ (73 reviews)
 
-[View all Wellness & Preventive Care providers in Key Biscayne →](https://glowroute.sealey.ai/?search=Key%20Biscayne)
+[View all Wellness & Preventive Care providers in Key Biscayne →](https://glowroute.io/?search=Key%20Biscayne)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 107+ verified clinics in Key Biscayne offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in Key Biscayne →](https://glowroute.sealey.ai/?search=Key%20Biscayne&treatment=wellness)
+[Search Wellness & Preventive Care in Key Biscayne →](https://glowroute.io/?search=Key%20Biscayne&treatment=wellness)

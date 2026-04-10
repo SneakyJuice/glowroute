@@ -25,7 +25,7 @@ Hallandale Beach has become a hub for advanced wellness medicine, with providers
 
 Browse verified Testosterone Replacement Therapy providers on GlowRoute.
 
-[View all Testosterone Replacement Therapy providers in Hallandale Beach →](https://glowroute.sealey.ai/?search=Hallandale%20Beach)
+[View all Testosterone Replacement Therapy providers in Hallandale Beach →](https://glowroute.io/?search=Hallandale%20Beach)
 
 ## What to Expect from Testosterone Replacement Therapy
 
@@ -60,4 +60,4 @@ Most plans do not cover elective Testosterone Replacement Therapy. If medically 
 
 GlowRoute has 60+ verified clinics in Hallandale Beach offering Testosterone Replacement Therapy and related wellness services.
 
-[Search Testosterone Replacement Therapy in Hallandale Beach →](https://glowroute.sealey.ai/?search=Hallandale%20Beach&treatment=testosterone-replacement)
+[Search Testosterone Replacement Therapy in Hallandale Beach →](https://glowroute.io/?search=Hallandale%20Beach&treatment=testosterone-replacement)

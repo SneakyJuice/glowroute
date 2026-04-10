@@ -30,7 +30,7 @@ Bal Harbour has become a hub for advanced wellness and aesthetic medicine, with 
 2. **Red Market Miami Salon** — 5★ (343 reviews)
 3. **SKINNEY Medspa** — 5★ (93 reviews)
 
-[View all Testosterone Replacement Therapy (TRT) providers in Bal Harbour →](https://glowroute.sealey.ai/?search=Bal%20Harbour)
+[View all Testosterone Replacement Therapy (TRT) providers in Bal Harbour →](https://glowroute.io/?search=Bal%20Harbour)
 
 ## What to Expect from Testosterone Replacement Therapy (TRT)
 
@@ -74,4 +74,4 @@ Most insurance plans do not cover elective Testosterone Replacement Therapy (TRT
 
 GlowRoute has verified 99+ clinics in Bal Harbour offering Testosterone Replacement Therapy (TRT) and related wellness services. Browse real patient reviews, compare GlowScores, and find the right provider for your goals.
 
-[Search Testosterone Replacement Therapy (TRT) in Bal Harbour →](https://glowroute.sealey.ai/?search=Bal%20Harbour&treatment=testosterone-replacement)
+[Search Testosterone Replacement Therapy (TRT) in Bal Harbour →](https://glowroute.io/?search=Bal%20Harbour&treatment=testosterone-replacement)

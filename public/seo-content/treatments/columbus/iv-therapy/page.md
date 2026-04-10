@@ -27,7 +27,7 @@ Columbus has become a hub for advanced wellness medicine, with providers offerin
 2. **Jiva Med Spa Columbus** — 5.0★ (1119 reviews)
 3. **Monarch Aesthetic Medicine** — 5.0★ (790 reviews)
 
-[View all IV Therapy & Vitamin Infusions providers in Columbus →](https://glowroute.sealey.ai/?search=Columbus)
+[View all IV Therapy & Vitamin Infusions providers in Columbus →](https://glowroute.io/?search=Columbus)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -62,4 +62,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 23+ verified clinics in Columbus offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in Columbus →](https://glowroute.sealey.ai/?search=Columbus&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Columbus →](https://glowroute.io/?search=Columbus&treatment=iv-therapy)

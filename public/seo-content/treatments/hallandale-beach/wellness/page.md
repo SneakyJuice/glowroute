@@ -25,7 +25,7 @@ Hallandale Beach has become a hub for advanced wellness medicine, with providers
 
 Browse verified Wellness & Preventive Care providers on GlowRoute.
 
-[View all Wellness & Preventive Care providers in Hallandale Beach →](https://glowroute.sealey.ai/?search=Hallandale%20Beach)
+[View all Wellness & Preventive Care providers in Hallandale Beach →](https://glowroute.io/?search=Hallandale%20Beach)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -60,4 +60,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 60+ verified clinics in Hallandale Beach offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in Hallandale Beach →](https://glowroute.sealey.ai/?search=Hallandale%20Beach&treatment=wellness)
+[Search Wellness & Preventive Care in Hallandale Beach →](https://glowroute.io/?search=Hallandale%20Beach&treatment=wellness)

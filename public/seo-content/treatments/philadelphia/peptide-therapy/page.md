@@ -27,7 +27,7 @@ Philadelphia has become a hub for advanced wellness medicine, with providers off
 2. **Revive Medical** — 5.0★ (697 reviews)
 3. **Shiloh Cosmetics** — 5.0★ (649 reviews)
 
-[View all Peptide Therapy providers in Philadelphia →](https://glowroute.sealey.ai/?search=Philadelphia)
+[View all Peptide Therapy providers in Philadelphia →](https://glowroute.io/?search=Philadelphia)
 
 ## What to Expect from Peptide Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Peptide Therapy. If medically necessary, partia
 
 GlowRoute has 40+ verified clinics in Philadelphia offering Peptide Therapy and related wellness services.
 
-[Search Peptide Therapy in Philadelphia →](https://glowroute.sealey.ai/?search=Philadelphia&treatment=peptide-therapy)
+[Search Peptide Therapy in Philadelphia →](https://glowroute.io/?search=Philadelphia&treatment=peptide-therapy)

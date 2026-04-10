@@ -27,7 +27,7 @@ Jacksonville has become a hub for advanced wellness medicine, with providers off
 2. **CMA - Center for Modern Aesthetic Medicine** — 5.0★ (246 reviews)
 3. **Med Spa by Voupre** — 5.0★ (242 reviews)
 
-[View all IV Therapy & Vitamin Infusions providers in Jacksonville →](https://glowroute.sealey.ai/?search=Jacksonville)
+[View all IV Therapy & Vitamin Infusions providers in Jacksonville →](https://glowroute.io/?search=Jacksonville)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -62,4 +62,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 44+ verified clinics in Jacksonville offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in Jacksonville →](https://glowroute.sealey.ai/?search=Jacksonville&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Jacksonville →](https://glowroute.io/?search=Jacksonville&treatment=iv-therapy)

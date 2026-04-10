@@ -27,7 +27,7 @@ Dallas has become a hub for advanced wellness medicine, with providers offering 
 2. **Mara's Med Spa** — 5.0★ (596 reviews)
 3. **NakedMD Med Spa Dallas** — 5.0★ (504 reviews)
 
-[View all Semaglutide / GLP-1 Weight Loss providers in Dallas →](https://glowroute.sealey.ai/?search=Dallas)
+[View all Semaglutide / GLP-1 Weight Loss providers in Dallas →](https://glowroute.io/?search=Dallas)
 
 ## What to Expect from Semaglutide / GLP-1 Weight Loss
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Semaglutide / GLP-1 Weight Loss. If medically n
 
 GlowRoute has 69+ verified clinics in Dallas offering Semaglutide / GLP-1 Weight Loss and related wellness services.
 
-[Search Semaglutide / GLP-1 Weight Loss in Dallas →](https://glowroute.sealey.ai/?search=Dallas&treatment=semaglutide)
+[Search Semaglutide / GLP-1 Weight Loss in Dallas →](https://glowroute.io/?search=Dallas&treatment=semaglutide)

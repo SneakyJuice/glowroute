@@ -27,7 +27,7 @@ North Miami has become a hub for advanced wellness medicine, with providers offe
 2. **Diane Walder Dermatology by Riverchase** — 5.0★ (648 reviews)
 3. **Pler Clinics** — 5.0★ (494 reviews)
 
-[View all Wellness & Preventive Care providers in North Miami →](https://glowroute.sealey.ai/?search=North%20Miami)
+[View all Wellness & Preventive Care providers in North Miami →](https://glowroute.io/?search=North%20Miami)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 79+ verified clinics in North Miami offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in North Miami →](https://glowroute.sealey.ai/?search=North%20Miami&treatment=wellness)
+[Search Wellness & Preventive Care in North Miami →](https://glowroute.io/?search=North%20Miami&treatment=wellness)

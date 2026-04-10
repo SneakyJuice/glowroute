@@ -27,7 +27,7 @@ San Diego has become a hub for advanced wellness medicine, with providers offeri
 2. **SDBotox - Mission Valley** — 5.0★ (630 reviews)
 3. **Botoxie - North Park** — 5.0★ (473 reviews)
 
-[View all IV Therapy & Vitamin Infusions providers in San Diego →](https://glowroute.sealey.ai/?search=San%20Diego)
+[View all IV Therapy & Vitamin Infusions providers in San Diego →](https://glowroute.io/?search=San%20Diego)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -62,4 +62,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 58+ verified clinics in San Diego offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in San Diego →](https://glowroute.sealey.ai/?search=San%20Diego&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in San Diego →](https://glowroute.io/?search=San%20Diego&treatment=iv-therapy)

@@ -25,7 +25,7 @@ Hallandale Beach has become a hub for advanced wellness medicine, with providers
 
 Browse verified IV Therapy & Vitamin Infusions providers on GlowRoute.
 
-[View all IV Therapy & Vitamin Infusions providers in Hallandale Beach →](https://glowroute.sealey.ai/?search=Hallandale%20Beach)
+[View all IV Therapy & Vitamin Infusions providers in Hallandale Beach →](https://glowroute.io/?search=Hallandale%20Beach)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -60,4 +60,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 60+ verified clinics in Hallandale Beach offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in Hallandale Beach →](https://glowroute.sealey.ai/?search=Hallandale%20Beach&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Hallandale Beach →](https://glowroute.io/?search=Hallandale%20Beach&treatment=iv-therapy)

@@ -27,7 +27,7 @@ Boca Raton has become a hub for advanced wellness medicine, with providers offer
 2. **Rendon Aesthetics** — 5.0★ (346 reviews)
 3. **Ora Wellness and Aesthetics** — 5.0★ (217 reviews)
 
-[View all Testosterone Replacement Therapy providers in Boca Raton →](https://glowroute.sealey.ai/?search=Boca%20Raton)
+[View all Testosterone Replacement Therapy providers in Boca Raton →](https://glowroute.io/?search=Boca%20Raton)
 
 ## What to Expect from Testosterone Replacement Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Testosterone Replacement Therapy. If medically 
 
 GlowRoute has 21+ verified clinics in Boca Raton offering Testosterone Replacement Therapy and related wellness services.
 
-[Search Testosterone Replacement Therapy in Boca Raton →](https://glowroute.sealey.ai/?search=Boca%20Raton&treatment=testosterone-replacement)
+[Search Testosterone Replacement Therapy in Boca Raton →](https://glowroute.io/?search=Boca%20Raton&treatment=testosterone-replacement)

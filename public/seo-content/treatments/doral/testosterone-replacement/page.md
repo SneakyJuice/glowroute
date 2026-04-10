@@ -25,7 +25,7 @@ Doral has become a hub for advanced wellness medicine, with providers offering e
 
 Browse verified Testosterone Replacement Therapy providers on GlowRoute.
 
-[View all Testosterone Replacement Therapy providers in Doral →](https://glowroute.sealey.ai/?search=Doral)
+[View all Testosterone Replacement Therapy providers in Doral →](https://glowroute.io/?search=Doral)
 
 ## What to Expect from Testosterone Replacement Therapy
 
@@ -60,4 +60,4 @@ Most plans do not cover elective Testosterone Replacement Therapy. If medically 
 
 GlowRoute has 17+ verified clinics in Doral offering Testosterone Replacement Therapy and related wellness services.
 
-[Search Testosterone Replacement Therapy in Doral →](https://glowroute.sealey.ai/?search=Doral&treatment=testosterone-replacement)
+[Search Testosterone Replacement Therapy in Doral →](https://glowroute.io/?search=Doral&treatment=testosterone-replacement)

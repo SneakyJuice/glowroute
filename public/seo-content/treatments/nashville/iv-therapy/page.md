@@ -27,7 +27,7 @@ Nashville has become a hub for advanced wellness medicine, with providers offeri
 2. **NakedMD Med Spa Nashville** — 5.0★ (530 reviews)
 3. **Hatef Aesthetics & Plastic Surgery** — 5.0★ (437 reviews)
 
-[View all IV Therapy & Vitamin Infusions providers in Nashville →](https://glowroute.sealey.ai/?search=Nashville)
+[View all IV Therapy & Vitamin Infusions providers in Nashville →](https://glowroute.io/?search=Nashville)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -62,4 +62,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 32+ verified clinics in Nashville offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in Nashville →](https://glowroute.sealey.ai/?search=Nashville&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Nashville →](https://glowroute.io/?search=Nashville&treatment=iv-therapy)

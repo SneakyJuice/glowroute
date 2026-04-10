@@ -27,7 +27,7 @@ Key Biscayne has become a hub for advanced wellness medicine, with providers off
 2. **B. Care Salon SPA** — 5.0★ (173 reviews)
 3. **GM Salon** — 5.0★ (73 reviews)
 
-[View all IV Therapy & Vitamin Infusions providers in Key Biscayne →](https://glowroute.sealey.ai/?search=Key%20Biscayne)
+[View all IV Therapy & Vitamin Infusions providers in Key Biscayne →](https://glowroute.io/?search=Key%20Biscayne)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -62,4 +62,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 107+ verified clinics in Key Biscayne offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in Key Biscayne →](https://glowroute.sealey.ai/?search=Key%20Biscayne&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Key Biscayne →](https://glowroute.io/?search=Key%20Biscayne&treatment=iv-therapy)

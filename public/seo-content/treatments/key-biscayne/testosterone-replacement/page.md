@@ -27,7 +27,7 @@ Key Biscayne has become a hub for advanced wellness medicine, with providers off
 2. **B. Care Salon SPA** — 5.0★ (173 reviews)
 3. **GM Salon** — 5.0★ (73 reviews)
 
-[View all Testosterone Replacement Therapy providers in Key Biscayne →](https://glowroute.sealey.ai/?search=Key%20Biscayne)
+[View all Testosterone Replacement Therapy providers in Key Biscayne →](https://glowroute.io/?search=Key%20Biscayne)
 
 ## What to Expect from Testosterone Replacement Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Testosterone Replacement Therapy. If medically 
 
 GlowRoute has 107+ verified clinics in Key Biscayne offering Testosterone Replacement Therapy and related wellness services.
 
-[Search Testosterone Replacement Therapy in Key Biscayne →](https://glowroute.sealey.ai/?search=Key%20Biscayne&treatment=testosterone-replacement)
+[Search Testosterone Replacement Therapy in Key Biscayne →](https://glowroute.io/?search=Key%20Biscayne&treatment=testosterone-replacement)

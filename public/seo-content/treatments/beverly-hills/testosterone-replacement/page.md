@@ -27,7 +27,7 @@ Beverly Hills has become a hub for advanced wellness medicine, with providers of
 2. **Skin Verse Medical Spa** — 5.0★ (224 reviews)
 3. **LYEV Beverly Hills- Medical Spa** — 5.0★ (209 reviews)
 
-[View all Testosterone Replacement Therapy providers in Beverly Hills →](https://glowroute.sealey.ai/?search=Beverly%20Hills)
+[View all Testosterone Replacement Therapy providers in Beverly Hills →](https://glowroute.io/?search=Beverly%20Hills)
 
 ## What to Expect from Testosterone Replacement Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Testosterone Replacement Therapy. If medically 
 
 GlowRoute has 24+ verified clinics in Beverly Hills offering Testosterone Replacement Therapy and related wellness services.
 
-[Search Testosterone Replacement Therapy in Beverly Hills →](https://glowroute.sealey.ai/?search=Beverly%20Hills&treatment=testosterone-replacement)
+[Search Testosterone Replacement Therapy in Beverly Hills →](https://glowroute.io/?search=Beverly%20Hills&treatment=testosterone-replacement)

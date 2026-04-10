@@ -27,7 +27,7 @@ Houston has become a hub for advanced wellness medicine, with providers offering
 2. **Mia Aesthetics Houston** — 4.0★ (650 reviews)
 3. **Aesthetic Center for Plastic Surgery & MedSpa (ACPS)** — 5.0★ (487 reviews)
 
-[View all IV Therapy & Vitamin Infusions providers in Houston →](https://glowroute.sealey.ai/?search=Houston)
+[View all IV Therapy & Vitamin Infusions providers in Houston →](https://glowroute.io/?search=Houston)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -62,4 +62,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 55+ verified clinics in Houston offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in Houston →](https://glowroute.sealey.ai/?search=Houston&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Houston →](https://glowroute.io/?search=Houston&treatment=iv-therapy)

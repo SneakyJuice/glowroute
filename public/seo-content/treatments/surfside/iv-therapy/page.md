@@ -27,7 +27,7 @@ Surfside has become a hub for advanced wellness medicine, with providers offerin
 2. **Savou Med Spa** — 5.0★ (138 reviews)
 3. **SJI Dermatology** — 5.0★ (138 reviews)
 
-[View all IV Therapy & Vitamin Infusions providers in Surfside →](https://glowroute.sealey.ai/?search=Surfside)
+[View all IV Therapy & Vitamin Infusions providers in Surfside →](https://glowroute.io/?search=Surfside)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -62,4 +62,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 107+ verified clinics in Surfside offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in Surfside →](https://glowroute.sealey.ai/?search=Surfside&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Surfside →](https://glowroute.io/?search=Surfside&treatment=iv-therapy)

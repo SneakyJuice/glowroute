@@ -27,7 +27,7 @@ Scottsdale has become a hub for advanced wellness medicine, with providers offer
 2. **Look Lab Med Spa** — 5.0★ (829 reviews)
 3. **Alani Skin MD** — 5.0★ (663 reviews)
 
-[View all Wellness & Preventive Care providers in Scottsdale →](https://glowroute.sealey.ai/?search=Scottsdale)
+[View all Wellness & Preventive Care providers in Scottsdale →](https://glowroute.io/?search=Scottsdale)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 28+ verified clinics in Scottsdale offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in Scottsdale →](https://glowroute.sealey.ai/?search=Scottsdale&treatment=wellness)
+[Search Wellness & Preventive Care in Scottsdale →](https://glowroute.io/?search=Scottsdale&treatment=wellness)

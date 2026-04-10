@@ -27,7 +27,7 @@ Houston has become a hub for advanced wellness medicine, with providers offering
 2. **Mia Aesthetics Houston** — 4.0★ (650 reviews)
 3. **Aesthetic Center for Plastic Surgery & MedSpa (ACPS)** — 5.0★ (487 reviews)
 
-[View all Semaglutide / GLP-1 Weight Loss providers in Houston →](https://glowroute.sealey.ai/?search=Houston)
+[View all Semaglutide / GLP-1 Weight Loss providers in Houston →](https://glowroute.io/?search=Houston)
 
 ## What to Expect from Semaglutide / GLP-1 Weight Loss
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Semaglutide / GLP-1 Weight Loss. If medically n
 
 GlowRoute has 55+ verified clinics in Houston offering Semaglutide / GLP-1 Weight Loss and related wellness services.
 
-[Search Semaglutide / GLP-1 Weight Loss in Houston →](https://glowroute.sealey.ai/?search=Houston&treatment=semaglutide)
+[Search Semaglutide / GLP-1 Weight Loss in Houston →](https://glowroute.io/?search=Houston&treatment=semaglutide)

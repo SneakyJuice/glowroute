@@ -27,7 +27,7 @@ Miami Beach has become a hub for advanced wellness medicine, with providers offe
 2. **Charette Cosmetics Medical Spa - Miami Beach** — 5.0★ (554 reviews)
 3. **Tao Spa Miami** — 5.0★ (503 reviews)
 
-[View all Hormone Therapy providers in Miami Beach →](https://glowroute.sealey.ai/?search=Miami%20Beach)
+[View all Hormone Therapy providers in Miami Beach →](https://glowroute.io/?search=Miami%20Beach)
 
 ## What to Expect from Hormone Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Hormone Therapy. If medically necessary, partia
 
 GlowRoute has 173+ verified clinics in Miami Beach offering Hormone Therapy and related wellness services.
 
-[Search Hormone Therapy in Miami Beach →](https://glowroute.sealey.ai/?search=Miami%20Beach&treatment=hormone-therapy)
+[Search Hormone Therapy in Miami Beach →](https://glowroute.io/?search=Miami%20Beach&treatment=hormone-therapy)

@@ -27,7 +27,7 @@ Atlanta has become a hub for advanced wellness medicine, with providers offering
 2. **4Ever Young Med Spa & Wellness Center - Atlanta Midtown** — 5.0★ (1010 reviews)
 3. **The Ageless Center** — 5.0★ (471 reviews)
 
-[View all Semaglutide / GLP-1 Weight Loss providers in Atlanta →](https://glowroute.sealey.ai/?search=Atlanta)
+[View all Semaglutide / GLP-1 Weight Loss providers in Atlanta →](https://glowroute.io/?search=Atlanta)
 
 ## What to Expect from Semaglutide / GLP-1 Weight Loss
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Semaglutide / GLP-1 Weight Loss. If medically n
 
 GlowRoute has 59+ verified clinics in Atlanta offering Semaglutide / GLP-1 Weight Loss and related wellness services.
 
-[Search Semaglutide / GLP-1 Weight Loss in Atlanta →](https://glowroute.sealey.ai/?search=Atlanta&treatment=semaglutide)
+[Search Semaglutide / GLP-1 Weight Loss in Atlanta →](https://glowroute.io/?search=Atlanta&treatment=semaglutide)

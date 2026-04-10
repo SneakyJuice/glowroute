@@ -25,7 +25,7 @@ Doral has become a hub for advanced wellness medicine, with providers offering e
 
 Browse verified Longevity & Anti-Aging providers on GlowRoute.
 
-[View all Longevity & Anti-Aging providers in Doral →](https://glowroute.sealey.ai/?search=Doral)
+[View all Longevity & Anti-Aging providers in Doral →](https://glowroute.io/?search=Doral)
 
 ## What to Expect from Longevity & Anti-Aging
 
@@ -60,4 +60,4 @@ Most plans do not cover elective Longevity & Anti-Aging. If medically necessary,
 
 GlowRoute has 17+ verified clinics in Doral offering Longevity & Anti-Aging and related wellness services.
 
-[Search Longevity & Anti-Aging in Doral →](https://glowroute.sealey.ai/?search=Doral&treatment=longevity)
+[Search Longevity & Anti-Aging in Doral →](https://glowroute.io/?search=Doral&treatment=longevity)

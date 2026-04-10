@@ -27,7 +27,7 @@ North Miami has become a hub for advanced wellness medicine, with providers offe
 2. **Diane Walder Dermatology by Riverchase** — 5.0★ (648 reviews)
 3. **Pler Clinics** — 5.0★ (494 reviews)
 
-[View all IV Therapy & Vitamin Infusions providers in North Miami →](https://glowroute.sealey.ai/?search=North%20Miami)
+[View all IV Therapy & Vitamin Infusions providers in North Miami →](https://glowroute.io/?search=North%20Miami)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -62,4 +62,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 79+ verified clinics in North Miami offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in North Miami →](https://glowroute.sealey.ai/?search=North%20Miami&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in North Miami →](https://glowroute.io/?search=North%20Miami&treatment=iv-therapy)

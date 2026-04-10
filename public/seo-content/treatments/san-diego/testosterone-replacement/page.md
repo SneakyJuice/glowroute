@@ -27,7 +27,7 @@ San Diego has become a hub for advanced wellness medicine, with providers offeri
 2. **SDBotox - Mission Valley** — 5.0★ (630 reviews)
 3. **Botoxie - North Park** — 5.0★ (473 reviews)
 
-[View all Testosterone Replacement Therapy providers in San Diego →](https://glowroute.sealey.ai/?search=San%20Diego)
+[View all Testosterone Replacement Therapy providers in San Diego →](https://glowroute.io/?search=San%20Diego)
 
 ## What to Expect from Testosterone Replacement Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Testosterone Replacement Therapy. If medically 
 
 GlowRoute has 58+ verified clinics in San Diego offering Testosterone Replacement Therapy and related wellness services.
 
-[Search Testosterone Replacement Therapy in San Diego →](https://glowroute.sealey.ai/?search=San%20Diego&treatment=testosterone-replacement)
+[Search Testosterone Replacement Therapy in San Diego →](https://glowroute.io/?search=San%20Diego&treatment=testosterone-replacement)

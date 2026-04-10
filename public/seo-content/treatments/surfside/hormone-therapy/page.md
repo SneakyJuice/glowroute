@@ -27,7 +27,7 @@ Surfside has become a hub for advanced wellness medicine, with providers offerin
 2. **Savou Med Spa** — 5.0★ (138 reviews)
 3. **SJI Dermatology** — 5.0★ (138 reviews)
 
-[View all Hormone Therapy providers in Surfside →](https://glowroute.sealey.ai/?search=Surfside)
+[View all Hormone Therapy providers in Surfside →](https://glowroute.io/?search=Surfside)
 
 ## What to Expect from Hormone Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Hormone Therapy. If medically necessary, partia
 
 GlowRoute has 107+ verified clinics in Surfside offering Hormone Therapy and related wellness services.
 
-[Search Hormone Therapy in Surfside →](https://glowroute.sealey.ai/?search=Surfside&treatment=hormone-therapy)
+[Search Hormone Therapy in Surfside →](https://glowroute.io/?search=Surfside&treatment=hormone-therapy)

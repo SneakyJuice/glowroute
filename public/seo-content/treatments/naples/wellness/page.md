@@ -27,7 +27,7 @@ Naples has become a hub for advanced wellness medicine, with providers offering 
 2. **Skin Wellness Physicians** — 5.0★ (446 reviews)
 3. **Beauty Studio by Tatiana** — 5.0★ (424 reviews)
 
-[View all Wellness & Preventive Care providers in Naples →](https://glowroute.sealey.ai/?search=Naples)
+[View all Wellness & Preventive Care providers in Naples →](https://glowroute.io/?search=Naples)
 
 ## What to Expect from Wellness & Preventive Care
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Wellness & Preventive Care. If medically necess
 
 GlowRoute has 120+ verified clinics in Naples offering Wellness & Preventive Care and related wellness services.
 
-[Search Wellness & Preventive Care in Naples →](https://glowroute.sealey.ai/?search=Naples&treatment=wellness)
+[Search Wellness & Preventive Care in Naples →](https://glowroute.io/?search=Naples&treatment=wellness)

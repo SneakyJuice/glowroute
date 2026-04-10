@@ -27,7 +27,7 @@ San Antonio has become a hub for advanced wellness medicine, with providers offe
 2. **Nova Aesthetics** — 5.0★ (1052 reviews)
 3. **Esthetica Medspa San Antonio** — 5.0★ (1039 reviews)
 
-[View all Semaglutide / GLP-1 Weight Loss providers in San Antonio →](https://glowroute.sealey.ai/?search=San%20Antonio)
+[View all Semaglutide / GLP-1 Weight Loss providers in San Antonio →](https://glowroute.io/?search=San%20Antonio)
 
 ## What to Expect from Semaglutide / GLP-1 Weight Loss
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Semaglutide / GLP-1 Weight Loss. If medically n
 
 GlowRoute has 67+ verified clinics in San Antonio offering Semaglutide / GLP-1 Weight Loss and related wellness services.
 
-[Search Semaglutide / GLP-1 Weight Loss in San Antonio →](https://glowroute.sealey.ai/?search=San%20Antonio&treatment=semaglutide)
+[Search Semaglutide / GLP-1 Weight Loss in San Antonio →](https://glowroute.io/?search=San%20Antonio&treatment=semaglutide)

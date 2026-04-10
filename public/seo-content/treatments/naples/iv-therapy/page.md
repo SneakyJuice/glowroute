@@ -27,7 +27,7 @@ Naples has become a hub for advanced wellness medicine, with providers offering 
 2. **Skin Wellness Physicians** — 5.0★ (446 reviews)
 3. **Beauty Studio by Tatiana** — 5.0★ (424 reviews)
 
-[View all IV Therapy & Vitamin Infusions providers in Naples →](https://glowroute.sealey.ai/?search=Naples)
+[View all IV Therapy & Vitamin Infusions providers in Naples →](https://glowroute.io/?search=Naples)
 
 ## What to Expect from IV Therapy & Vitamin Infusions
 
@@ -62,4 +62,4 @@ Most plans do not cover elective IV Therapy & Vitamin Infusions. If medically ne
 
 GlowRoute has 120+ verified clinics in Naples offering IV Therapy & Vitamin Infusions and related wellness services.
 
-[Search IV Therapy & Vitamin Infusions in Naples →](https://glowroute.sealey.ai/?search=Naples&treatment=iv-therapy)
+[Search IV Therapy & Vitamin Infusions in Naples →](https://glowroute.io/?search=Naples&treatment=iv-therapy)

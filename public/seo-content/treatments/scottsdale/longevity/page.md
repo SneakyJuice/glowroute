@@ -27,7 +27,7 @@ Scottsdale has become a hub for advanced wellness medicine, with providers offer
 2. **Look Lab Med Spa** — 5.0★ (829 reviews)
 3. **Alani Skin MD** — 5.0★ (663 reviews)
 
-[View all Longevity & Anti-Aging providers in Scottsdale →](https://glowroute.sealey.ai/?search=Scottsdale)
+[View all Longevity & Anti-Aging providers in Scottsdale →](https://glowroute.io/?search=Scottsdale)
 
 ## What to Expect from Longevity & Anti-Aging
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Longevity & Anti-Aging. If medically necessary,
 
 GlowRoute has 28+ verified clinics in Scottsdale offering Longevity & Anti-Aging and related wellness services.
 
-[Search Longevity & Anti-Aging in Scottsdale →](https://glowroute.sealey.ai/?search=Scottsdale&treatment=longevity)
+[Search Longevity & Anti-Aging in Scottsdale →](https://glowroute.io/?search=Scottsdale&treatment=longevity)

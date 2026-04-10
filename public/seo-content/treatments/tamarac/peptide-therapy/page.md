@@ -27,7 +27,7 @@ Tamarac has become a hub for advanced wellness medicine, with providers offering
 2. **BeU Medical Spa** — 5.0★ (671 reviews)
 3. **Soaplab Laundromat & Wash and Fold** — 5.0★ (272 reviews)
 
-[View all Peptide Therapy providers in Tamarac →](https://glowroute.sealey.ai/?search=Tamarac)
+[View all Peptide Therapy providers in Tamarac →](https://glowroute.io/?search=Tamarac)
 
 ## What to Expect from Peptide Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Peptide Therapy. If medically necessary, partia
 
 GlowRoute has 36+ verified clinics in Tamarac offering Peptide Therapy and related wellness services.
 
-[Search Peptide Therapy in Tamarac →](https://glowroute.sealey.ai/?search=Tamarac&treatment=peptide-therapy)
+[Search Peptide Therapy in Tamarac →](https://glowroute.io/?search=Tamarac&treatment=peptide-therapy)

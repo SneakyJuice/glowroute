@@ -27,7 +27,7 @@ Miami has become a hub for advanced wellness medicine, with providers offering e
 2. **Dr. Deborah Longwill, DO, FAOCD** — 5.0★ (1393 reviews)
 3. **Miami Center for Dermatology** — 5.0★ (1340 reviews)
 
-[View all Semaglutide / GLP-1 Weight Loss providers in Miami →](https://glowroute.sealey.ai/?search=Miami)
+[View all Semaglutide / GLP-1 Weight Loss providers in Miami →](https://glowroute.io/?search=Miami)
 
 ## What to Expect from Semaglutide / GLP-1 Weight Loss
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Semaglutide / GLP-1 Weight Loss. If medically n
 
 GlowRoute has 136+ verified clinics in Miami offering Semaglutide / GLP-1 Weight Loss and related wellness services.
 
-[Search Semaglutide / GLP-1 Weight Loss in Miami →](https://glowroute.sealey.ai/?search=Miami&treatment=semaglutide)
+[Search Semaglutide / GLP-1 Weight Loss in Miami →](https://glowroute.io/?search=Miami&treatment=semaglutide)

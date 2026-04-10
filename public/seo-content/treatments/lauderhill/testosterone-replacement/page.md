@@ -25,7 +25,7 @@ Lauderhill has become a hub for advanced wellness medicine, with providers offer
 
 Browse verified Testosterone Replacement Therapy providers on GlowRoute.
 
-[View all Testosterone Replacement Therapy providers in Lauderhill →](https://glowroute.sealey.ai/?search=Lauderhill)
+[View all Testosterone Replacement Therapy providers in Lauderhill →](https://glowroute.io/?search=Lauderhill)
 
 ## What to Expect from Testosterone Replacement Therapy
 
@@ -60,4 +60,4 @@ Most plans do not cover elective Testosterone Replacement Therapy. If medically 
 
 GlowRoute has 25+ verified clinics in Lauderhill offering Testosterone Replacement Therapy and related wellness services.
 
-[Search Testosterone Replacement Therapy in Lauderhill →](https://glowroute.sealey.ai/?search=Lauderhill&treatment=testosterone-replacement)
+[Search Testosterone Replacement Therapy in Lauderhill →](https://glowroute.io/?search=Lauderhill&treatment=testosterone-replacement)

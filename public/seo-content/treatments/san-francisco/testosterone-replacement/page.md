@@ -27,7 +27,7 @@ San Francisco has become a hub for advanced wellness medicine, with providers of
 2. **Restore Hyper Wellness** — 5.0★ (399 reviews)
 3. **Serenity Aesthetics & Wellness** — 5.0★ (297 reviews)
 
-[View all Testosterone Replacement Therapy providers in San Francisco →](https://glowroute.sealey.ai/?search=San%20Francisco)
+[View all Testosterone Replacement Therapy providers in San Francisco →](https://glowroute.io/?search=San%20Francisco)
 
 ## What to Expect from Testosterone Replacement Therapy
 
@@ -62,4 +62,4 @@ Most plans do not cover elective Testosterone Replacement Therapy. If medically 
 
 GlowRoute has 19+ verified clinics in San Francisco offering Testosterone Replacement Therapy and related wellness services.
 
-[Search Testosterone Replacement Therapy in San Francisco →](https://glowroute.sealey.ai/?search=San%20Francisco&treatment=testosterone-replacement)
+[Search Testosterone Replacement Therapy in San Francisco →](https://glowroute.io/?search=San%20Francisco&treatment=testosterone-replacement)
