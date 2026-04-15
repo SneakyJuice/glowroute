@@ -36,7 +36,8 @@ const DEFAULT_FILTERS: FilterState = {
 const ITEMS_PER_PAGE = 20
 
 interface ClinicsClientProps {
-  allClinics: Clinic[];
+  allClinics: Clinic[];       // Full dataset — used as filter/search pool
+  displayClinics?: Clinic[]; // Paginated display list (optional, from infinite scroll)
   initialClinics: Clinic[];
   featuredClinic: Clinic | null;
   totalCount?: number;
