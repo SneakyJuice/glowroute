@@ -16,6 +16,7 @@ import BottomCTA from '@/components/BottomCTA'
 import Footer from '@/components/Footer'
 import { FilterState, Clinic } from '@/types/clinic'
 import { CATEGORIES, matchCategories } from '@/data/categories'
+import taxonomy from '@/lib/taxonomy.json'
 import type { CategorySlug } from '@/data/categories'
 import { haversine } from '@/lib/geo'
 
@@ -149,14 +150,9 @@ function ClinicsPageInner({ allClinics, initialClinics, featuredClinic }: Clinic
     if (filters.verifiedOnly) {
       result = result.filter(c => c.verified)
     }
-    if (filters.treatmentTypes.length > 0 && !filters.treatmentTypes.includes('All Treatments')) {
-      result = result.filter(c => {
-        return filters.treatmentTypes.some(ft => {
-          if (ft === 'Peptide Therapy') return isPeptideClinic(c)
-          const allTreatments = [...(c.treatments || []), ...(c.specialtyTreatments || [])]
-          return allTreatments.some(t => t.toLowerCase().includes(ft.toLowerCase()))
-        })
-      })
+    // SERVICE FILTER — match canonical slugs against clinic.services (normalized) + alias fallback
+    if (filters.treatmentTypes.length > 0) {
+      result = result.filter(c => matchesServiceFilter(c, filters.treatmentTypes))
     }
     // Goal filter — powered by taxonomy goals layer
     if (filters.goals.length > 0) {
