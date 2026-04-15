@@ -306,6 +306,22 @@ function ClinicsPageInner({ allClinics, initialClinics, featuredClinic }: Clinic
   )
 }
 
+// ── Service alias lookup — built from taxonomy.serviceFilters ──────────────
+const SERVICE_ALIAS_MAP: Record<string, string[]> = {};
+((taxonomy as any).serviceFilters || []).forEach((f: { slug: string; aliases: string[] }) => {
+  SERVICE_ALIAS_MAP[f.slug] = f.aliases.map((a: string) => a.toLowerCase());
+});
+
+function matchesServiceFilter(clinic: Clinic, slugs: string[]): boolean {
+  if (!slugs || !slugs.length) return true;
+  const clinicServices = [...(clinic.services || []), ...(clinic.treatments || [])].map(s => s.toLowerCase());
+  return slugs.some(slug => {
+    const aliases = SERVICE_ALIAS_MAP[slug] || [slug.toLowerCase()];
+    return clinicServices.some(s => aliases.some(a => s === a || s.includes(a)));
+  });
+}
+// ─────────────────────────────────────────────────────────────────────────────
+
 export default function ClinicsPage(props: ClinicsClientProps) {
   return (
     <Suspense fallback={<div className="min-h-screen bg-ivory flex items-center justify-center"><p className="text-stone">Loading...</p></div>}>
