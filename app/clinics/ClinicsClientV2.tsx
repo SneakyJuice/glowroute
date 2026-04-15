@@ -18,10 +18,12 @@ export default function ClinicsClientV2({
   allClinics,
   initialClinics,
   featuredClinic,
+  totalCount,
 }: {
   allClinics: Clinic[]
   initialClinics: Clinic[]
   featuredClinic: Clinic | null
+  totalCount?: number
 }) {
   const [clinics, setClinics] = useState<Clinic[]>(initialClinics)
   const [isLoading, setIsLoading] = useState(false)
@@ -78,6 +80,7 @@ export default function ClinicsClientV2({
         allClinics={clinics}
         initialClinics={clinics}
         featuredClinic={featuredClinic}
+        totalCount={totalCount ?? allClinics.length}
       />
       
       {/* Sentinel for infinite scroll */}
