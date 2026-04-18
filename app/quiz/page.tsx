@@ -9,7 +9,7 @@ const QuizPage = () => {
   const [answers, setAnswers] = useState({
     goal: '',
     triedPrograms: '',
-    conditions: [],
+    conditions: [] as string[],
     carePreference: '',
     name: '',
     email: '',
