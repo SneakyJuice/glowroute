@@ -40,18 +40,41 @@ export async function POST(request: NextRequest) {
     const matchedSlug = getMatchedSlug(goal, sex);
     const affiliateSlug = matchedSlug.split('/').pop() || '';
 
-    // Insert lead — non-blocking, never fails the redirect
-    try {
-      await supabase.from('patient_leads').insert([{
+    // Map quiz fields to patient_leads table schema
+    // The table has comprehensive schema from migration SQL
+    const leadData = {
+      // Basic info (required fields from table)
+      email: `quiz_${Date.now()}@placeholder.glowroute.io`, // Placeholder since quiz doesn't collect email
+      source: 'quiz',
+      
+      // Map quiz answers to table columns
+      primary_concern: goal,
+      zip: zip,
+      
+      // Map budget values to budget_range enum
+      budget_range: mapBudgetToRange(budget),
+      
+      // Store other quiz data in quiz_payload JSON for future use
+      quiz_payload: {
         goal,
         sex: sex === 'Prefer not to say' ? null : sex,
-        age_range: age,
+        age,
         budget,
-        zip,
         affiliate_slug: affiliateSlug,
-        source: 'quiz',
-        created_at: new Date().toISOString()
-      }]);
+        matched_telehealth_slug: matchedSlug
+      },
+      
+      // Routing info
+      routing_notes: `Quiz match: ${affiliateSlug}`,
+      
+      // Timestamps
+      created_at: new Date().toISOString(),
+      updated_at: new Date().toISOString()
+    };
+
+    // Insert lead — non-blocking, never fails the redirect
+    try {
+      await supabase.from('patient_leads').insert([leadData]);
     } catch (err) {
       console.error('[quiz] Supabase insert failed:', err);
     }
@@ -62,4 +85,23 @@ export async function POST(request: NextRequest) {
     console.error('[quiz] API error:', error);
     return NextResponse.json({ redirect_url: '/telehealth' }, { status: 200 });
   }
+}
+
+// Helper to map quiz budget values to budget_range enum
+// Quiz has monthly telehealth budget, table has aesthetic treatment budget ranges
+// Store raw in quiz_payload, use 'not_sure' for budget_range
+function mapBudgetToRange(budget: string): string {
+  // Try to map if there's a clear correspondence
+  const mapping: Record<string, string> = {
+    'Under $100': 'under_500',  // Rough mapping
+    '$100-$200': 'under_500',
+    '$200-$400': '500_1500',
+    '$400+': '1500_3000',
+    'under_500': 'under_500',
+    '500_1500': '500_1500', 
+    '1500_3000': '1500_3000',
+    '3000_plus': '3000_plus',
+    'not_sure': 'not_sure'
+  };
+  return mapping[budget] || 'not_sure';
 }
