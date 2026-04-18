@@ -336,7 +336,6 @@ export const ARTICLES: Article[] = [
     contentFile: 'batch-006-08-peptide-reactivation.md',
     imageUrl: 'https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80',
   },
-]
   // GR-024: Peptide 12 Sprint — April 18, 2026
   {
     slug: 'bpc-157-guide',
