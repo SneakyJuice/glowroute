@@ -2,6 +2,7 @@
 
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { useState } from 'react';
 
 const TelehealthPage = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
