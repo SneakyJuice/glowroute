@@ -1,9 +1,11 @@
 'use client'
 import { useState, useMemo, useEffect, Suspense } from 'react'
-import { useSearchParams } from 'next/navigation'
+import { useSearchParams, useRouter } from 'next/navigation'
+import { GOALS } from '@/lib/goals'
 import Navbar from '@/components/Navbar'
 import HeroSearch from '@/components/HeroSearch'
 import { isPeptideClinic } from '@/lib/peptide'
+import { resolveCity } from '@/lib/metro-aliases'
 import { calculateGlowScore } from '@/lib/glowscore'
 import FilterSidebar from '@/components/FilterSidebar'
 import ResultsHeader from '@/components/ResultsHeader'
@@ -14,11 +16,13 @@ import BottomCTA from '@/components/BottomCTA'
 import Footer from '@/components/Footer'
 import { FilterState, Clinic } from '@/types/clinic'
 import { CATEGORIES, matchCategories } from '@/data/categories'
+import taxonomy from '@/lib/taxonomy.json'
 import type { CategorySlug } from '@/data/categories'
 import { haversine } from '@/lib/geo'
 
 const DEFAULT_FILTERS: FilterState = {
   treatmentTypes: [],
+  goals: [],
   distanceMiles: 25,
   minRating: 0,
   priceTiers: [],
@@ -29,22 +33,36 @@ const DEFAULT_FILTERS: FilterState = {
   freeConsultation: false,
 }
 
-const ITEMS_PER_PAGE = 6
+const ITEMS_PER_PAGE = 20
 
 interface ClinicsClientProps {
-  allClinics: Clinic[];
+  allClinics: Clinic[];       // Full dataset — used as filter/search pool
+  displayClinics?: Clinic[]; // Paginated display list (optional, from infinite scroll)
   initialClinics: Clinic[];
   featuredClinic: Clinic | null;
+  totalCount?: number;
 }
 
-function ClinicsPageInner({ allClinics, initialClinics, featuredClinic }: ClinicsClientProps) {
+function ClinicsPageInner({ allClinics, initialClinics, featuredClinic, totalCount }: ClinicsClientProps) {
+  // Hide the SSR preview once the client component mounts
+  useEffect(() => {
+    const ssrPreview = document.getElementById('ssr-clinic-preview')
+    if (ssrPreview) ssrPreview.style.display = 'none'
+  }, [])
+
+  const router = useRouter()
   const searchParams = useSearchParams()
   const specialtyParam = searchParams.get('specialty') as CategorySlug | null
   const activeSpecialty = specialtyParam
     ? CATEGORIES.find(c => c.slug === specialtyParam) ?? null
     : null
 
-  const [filters, setFilters] = useState<FilterState>(DEFAULT_FILTERS)
+  // Pre-seed goal filter from ?goal= URL param
+  const goalParam = searchParams.get('goal')
+  const [filters, setFilters] = useState<FilterState>({
+    ...DEFAULT_FILTERS,
+    goals: goalParam ? [goalParam] : [],
+  })
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
   const [view, setView] = useState<'grid' | 'list'>('grid')
   const [sort, setSort] = useState('GlowScore™')
@@ -55,21 +73,35 @@ function ClinicsPageInner({ allClinics, initialClinics, featuredClinic }: Clinic
   const [userLat, setUserLat] = useState<number | null>(null)
   const [userLng, setUserLng] = useState<number | null>(null)
 
-  const handleNearMe = (lat: number, lng: number) => {
+  const handleNearMe = async (lat: number, lng: number) => {
     setUserLat(lat)
     setUserLng(lng)
     setSort('Nearest First')
     setPage(1)
+    // Reverse geocode to get city name and filter results
+    try {
+      const res = await fetch(
+        `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lng}&localityLanguage=en`
+      )
+      const data = await res.json()
+      const city = data.city || data.locality || ''
+      if (city) {
+        const resolved = resolveCity(city)
+        setSearchCity(resolved.toLowerCase().trim())
+      }
+    } catch { /* silent fail — lat/lng sort still applies */ }
   }
 
   const handleSearch = (treatment: string, city: string) => {
     setSearchTreatment(treatment.toLowerCase().trim())
-    setSearchCity(city.toLowerCase().replace(',', '').trim())
+    // Resolve metro aliases: "boca" → "Boca Raton", "south beach" → "Miami Beach", etc.
+    const resolved = resolveCity(city)
+    setSearchCity(resolved.toLowerCase().replace(',', '').trim())
     setPage(1)
   }
 
   const filteredClinics = useMemo(() => {
-    let result = [...allClinics] // Use allClinics prop as base
+    let result = allClinics.filter(c => c.city && c.slug) // exclude clinics with no city/slug (broken batch records)
 
     // SPECIALTY FILTER — pre-filter by category slug from ?specialty= param
     if (activeSpecialty) {
@@ -107,8 +139,8 @@ function ClinicsPageInner({ allClinics, initialClinics, featuredClinic }: Clinic
       })
     }
 
-    // Always exclude clinics with no rating data (broken scrape records)
-    result = result.filter(c => c.googleRating > 0)
+    // Filter to clinics with real GMB ratings (glow_score > 1 = has actual star rating)
+    result = result.filter(c => c.googleRating > 1)
 
     // Existing filters (rating, price, verified, treatment type)
     if (filters.minRating > 0) {
@@ -120,14 +152,15 @@ function ClinicsPageInner({ allClinics, initialClinics, featuredClinic }: Clinic
     if (filters.verifiedOnly) {
       result = result.filter(c => c.verified)
     }
-    if (filters.treatmentTypes.length > 0 && !filters.treatmentTypes.includes('All Treatments')) {
-      result = result.filter(c => {
-        return filters.treatmentTypes.some(ft => {
-          if (ft === 'Peptide Therapy') return isPeptideClinic(c)
-          const allTreatments = [...(c.treatments || []), ...(c.specialtyTreatments || [])]
-          return allTreatments.some(t => t.toLowerCase().includes(ft.toLowerCase()))
-        })
-      })
+    // SERVICE FILTER — match canonical slugs against clinic.services (normalized) + alias fallback
+    if (filters.treatmentTypes.length > 0) {
+      result = result.filter(c => matchesServiceFilter(c, filters.treatmentTypes))
+    }
+    // Goal filter — powered by taxonomy goals layer
+    if (filters.goals.length > 0) {
+      result = result.filter(c =>
+        filters.goals.some(g => (c.goals || []).includes(g))
+      )
     }
 
     // Sort
@@ -160,7 +193,11 @@ function ClinicsPageInner({ allClinics, initialClinics, featuredClinic }: Clinic
   }, [filters, sort, searchTreatment, searchCity, userLat, userLng, activeSpecialty, allClinics])
 
   // Featured clinic — show for Miami (default) or Tampa
-  const showFeatured = (!searchCity || searchCity.toLowerCase().includes('miami') || searchCity.toLowerCase().includes('tampa')) && featuredClinic
+  // Only show featured if it has real review data AND city matches current search
+  const showFeatured = featuredClinic &&
+    (featuredClinic.googleRating ?? 0) > 0 &&
+    (featuredClinic.googleReviewCount ?? 0) > 0 &&
+    (!searchCity || searchCity.toLowerCase().includes((featuredClinic.city ?? '').toLowerCase().split(',')[0].trim()))
   const resultCount = filteredClinics.length + (showFeatured ? 1 : 0)
 
   const totalPages = Math.ceil(filteredClinics.length / ITEMS_PER_PAGE)
@@ -184,8 +221,7 @@ function ClinicsPageInner({ allClinics, initialClinics, featuredClinic }: Clinic
   return (
     <div className="min-h-screen bg-ivory font-sans">
       <Navbar />
-      {/* clinicCount should be allClinics.length, but HeroSearch needs it directly. Maybe pass totalCount */}
-      <HeroSearch clinicCount={4871} defaultCity="Miami, FL" onSearch={handleSearch} onNearMe={handleNearMe} />
+      <HeroSearch clinicCount={totalCount ?? allClinics.length} defaultCity="Miami, FL" onSearch={handleSearch} onNearMe={handleNearMe} />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
         {/* Mobile filter toggle */}
@@ -271,6 +307,22 @@ function ClinicsPageInner({ allClinics, initialClinics, featuredClinic }: Clinic
     </div>
   )
 }
+
+// ── Service alias lookup — built from taxonomy.serviceFilters ──────────────
+const SERVICE_ALIAS_MAP: Record<string, string[]> = {};
+((taxonomy as any).serviceFilters || []).forEach((f: { slug: string; aliases: string[] }) => {
+  SERVICE_ALIAS_MAP[f.slug] = f.aliases.map((a: string) => a.toLowerCase());
+});
+
+function matchesServiceFilter(clinic: Clinic, slugs: string[]): boolean {
+  if (!slugs || !slugs.length) return true;
+  const clinicServices = [...(clinic.services || []), ...(clinic.treatments || [])].map(s => s.toLowerCase());
+  return slugs.some(slug => {
+    const aliases = SERVICE_ALIAS_MAP[slug] || [slug.toLowerCase()];
+    return clinicServices.some(s => aliases.some(a => s === a || s.includes(a)));
+  });
+}
+// ─────────────────────────────────────────────────────────────────────────────
 
 export default function ClinicsPage(props: ClinicsClientProps) {
   return (

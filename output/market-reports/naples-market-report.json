@@ -1,0 +1,57 @@
+{
+  "city": "Naples",
+  "total": 120,
+  "avgScore": "4.0",
+  "avgReviews": 48,
+  "withImages": 46,
+  "withWebsite": 114,
+  "unclaimed": 120,
+  "tiers": {
+    "1": 15,
+    "2": 15,
+    "3": 15,
+    "4": 70
+  },
+  "top5": [
+    {
+      "name": "Optimal Wellness",
+      "score": 5,
+      "reviews": 448,
+      "website": "https://www.optimalwellnessnaples.com/"
+    },
+    {
+      "name": "Skin Wellness Physicians",
+      "score": 5,
+      "reviews": 446,
+      "website": "https://www.skinwellnessflorida.com/?utm_source=Google%20My%20Business&utm_medium=Organic"
+    },
+    {
+      "name": "Beauty Studio by Tatiana",
+      "score": 5,
+      "reviews": 424,
+      "website": "https://beautybrowstudio.com/"
+    },
+    {
+      "name": "The Woodruff Institute for Dermatology & Cosmetic Surgery",
+      "score": 5,
+      "reviews": 407,
+      "website": "http://www.thewoodruffinstitute.com/"
+    },
+    {
+      "name": "Yag-Howard Cosmetic Dermatology",
+      "score": 5,
+      "reviews": 334,
+      "website": "http://www.yhderm.com/?utm_source=googlemybusiness&utm_medium=organic&utm_campaign=yhderm"
+    }
+  ],
+  "topServices": [
+    "anti-aging (71)",
+    "hydrafacial (29)",
+    "botox-fillers (23)",
+    "microneedling (17)",
+    "prp-treatments (10)",
+    "iv-therapy (9)",
+    "coolsculpting (8)",
+    "laser-hair-removal (7)"
+  ]
+}

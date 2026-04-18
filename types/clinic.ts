@@ -31,10 +31,17 @@ export interface Clinic {
   brandValues?: string[]
   lat?: number
   lng?: number
+  goals?: string[]
+  services?: string[]
+  visibility?: 'visible' | 'hidden' | 'removed' | 'needs_review'
+  heroImageUrl?: string
+  isClaimed?: boolean
+  isVerified?: boolean
 }
 
 export interface FilterState {
   treatmentTypes: string[]
+  goals: string[]
   distanceMiles: number
   minRating: number
   priceTiers: string[]

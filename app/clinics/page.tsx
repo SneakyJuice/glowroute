@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Discover and compare the best clinics in Florida for your needs. Filter by specialty, location, ratings, and more.',
 }
 
-const SSR_PAGE_SIZE = 24
+const SSR_PAGE_SIZE = 20
 
 function citySlug(city: string) {
   return city.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
@@ -125,13 +125,14 @@ function SSRFeaturedCard({ clinic }: { clinic: Clinic }) {
 }
 
 export default async function ClinicsPage() {
-  const allClinics = await fetchAllClinicsFromSupabase()
+  const allClinicsRaw = await fetchAllClinicsFromSupabase()
+  const allClinics = allClinicsRaw.filter(c => c.city && c.slug) // exclude null-city/slug records
   const initialFeaturedClinic = await fetchFeaturedClinic()
 
   const getInitialClinics = () => {
     if (!initialFeaturedClinic) return allClinics.slice(0, SSR_PAGE_SIZE)
     return allClinics
-      .filter(c => c.id !== initialFeaturedClinic.id && c.googleRating > 0)
+      .filter(c => c.id !== initialFeaturedClinic.id && (c.googleRating ?? 0) > 1)
       .sort((a, b) => calculateGlowScore(b).total - calculateGlowScore(a).total)
       .slice(0, SSR_PAGE_SIZE)
   }
@@ -155,7 +156,7 @@ export default async function ClinicsPage() {
           </header>
 
           <div className="grid gap-5 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            {initialFeaturedClinic && <SSRFeaturedCard clinic={initialFeaturedClinic} />}
+            {initialFeaturedClinic && (initialFeaturedClinic.googleRating ?? 0) > 0 && (initialFeaturedClinic.googleReviewCount ?? 0) > 0 && <SSRFeaturedCard clinic={initialFeaturedClinic} />}
             {initialClinics.map(clinic => (
               <SSRClinicCard key={clinic.id} clinic={clinic} />
             ))}

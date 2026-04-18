@@ -1,0 +1,662 @@
+id,name,city,state,website,phone,glow_score,review_count,quality_score,review_reason,has_website,has_phone,services_count
+"4ffc4e72-755d-46d9-a173-a041bab0e1d4","Elia Med Spa","Orlando",,"","",,0,25,"missing_image,no_website,no_phone,low_reviews",false,false,1
+"3d1dc3e3-74cc-4f70-8c91-450099ac4750","Luxury Smile Aesthetics","Miami","FL","","",0,0,25,"missing_image,no_website,no_phone,low_reviews",false,false,1
+"c82dcdd6-3d2b-4e9b-9cbc-fbe3a70cd6d0","AESTHETIC CLINIC","North Miami Beach","FL","","",0,0,25,"missing_image,no_website,no_phone,low_reviews",false,false,1
+"c96136a7-cea8-4658-9437-1a858fb0718d","Perimeter Weight and Wellness LLC","","","http://perimeterwellness.com/","",0,0,30,"missing_image,no_phone,no_address,low_reviews",true,false,1
+"1194c512-d2cc-451a-81ee-7038ac8f8df4","Windermere Aesthetics","Orlando",,"","(407) 630-8950",0,0,40,"missing_image,no_website,low_reviews",false,true,1
+"5bdac3b1-d222-477f-b1b7-9bad6219999c","Under the Clouds","Naples","FL","","",5,2,40,"missing_image,no_website,no_phone,low_reviews",false,false,1
+"6f8acd28-f29d-46f8-bc01-428a1e9de9da","Beautiful Skin Boston","Brookline","Massachusetts","","(617) 735-1800",0,0,40,"missing_image,no_website,low_reviews",false,true,1
+"43cbfa51-2947-467e-a4ed-2f0681cb72c8","Orlando Medical Center","Orlando",,"","(407) 345-8766",0,0,40,"missing_image,no_website,low_reviews",false,true,1
+"f13c2e77-1b27-4a4b-855c-cbc7bd73e040","Bonsai Holistic Spa","Largo","FL","","(727) 518-6008",,0,40,"missing_image,no_website,low_reviews",false,true,1
+"e84752ef-029f-4cf1-b52e-e70aa648d917","Aesthetics Collective Skin Care","Miami Gardens","FL","http://www.aestheticscollectiveny.com/","",,0,45,"missing_image,no_phone,low_reviews",true,false,1
+"d8292edb-0890-43a2-92ea-8ab88ca82b65","Michy Aesthetics - Clearwater","Clearwater",,"http://www.michyaesthetics.com/","",0,0,45,"missing_image,no_phone,low_reviews",true,false,1
+"e62ebde8-f4fa-4975-b43c-456138f36c22","Somar MD Medspa","Ocala","FL","https://www.somarmd.com/","(352) 844-7935",,0,45,"missing_image,no_address,low_reviews",true,true,1
+"011b1dad-d054-45a7-aca8-b2afe7e24fb1","The Orange Drip","Lauderhill","FL","","(888) 800-8626",5,0,55,"missing_image,no_website,low_reviews",false,true,1
+"f329b643-811d-4af9-b42e-55f2ada188c7","LALA RIVERS HAIR SALON & SPA","Hallandale Beach","FL","","(305) 988-3069",5,0,55,"missing_image,no_website,low_reviews",false,true,1
+"6e54d133-e70c-4750-88be-2fe121f6c70b","Hair Specialist Lucas Fustinoni VQ Clinic Trichologist Orlando","Orlando",,"","(407) 412-6080",5,4,55,"missing_image,no_website,low_reviews",false,true,1
+"943355a4-9b12-41a6-9f85-5ece82183120","Calmed Medical Spa","Hallandale Beach","FL","","(954) 455-3434",5,0,55,"missing_image,no_website,low_reviews",false,true,1
+"83da5fef-5728-43ca-8ff2-b57926beb7f9","Laser Treatments","Hallandale Beach","FL","","(954) 854-8484",5,0,55,"missing_image,no_website,low_reviews",false,true,1
+"3ceae66e-8fcb-4280-afbe-e6118af9629f","Body By Jenny","Hallandale Beach","FL","","(954) 706-0565",5,0,55,"missing_image,no_website,low_reviews",false,true,1
+"39efc65a-8dc8-4b55-8b41-a5be8b039069","Ella Davis Day Spa","Lauderhill","FL","","(954) 741-0203",5,0,55,"missing_image,no_website,low_reviews",false,true,1
+"8a30363c-65c4-4b8b-9f10-dda9efdbb3c5","Brooke Esthetics Lash | Brow","Naples","FL","","(239) 260-5060",5,3,55,"missing_image,no_website,low_reviews",false,true,1
+"56776489-b084-47bd-a03c-5450eb99e9a2","Estero Wellness Center","Estero","FL","","(239) 317-2948",4,3,55,"missing_image,no_website,low_reviews",false,true,1
+"5dc83a1b-844f-4448-8ab4-2c04c80bf870","Come Get Bodied","Miami Gardens","FL","","(786) 457-7837",5,2,55,"missing_image,no_website,low_reviews",false,true,2
+"eb2c9ebc-e92a-4184-9ff9-af85929388ec","MG Cosmetic Center","Miami Gardens","FL","","(786) 414-1603",4,6,55,"missing_image,no_website",false,true,1
+"57197c6f-cba5-4a74-bae5-ae4b240a7c33","Hade Skincare & Therapy","Hallandale Beach","FL","","(786) 647-3218",5,0,55,"missing_image,no_website,low_reviews",false,true,1
+"ece7f4cb-43d8-42a7-90dc-736254cdf1f4","Jill Art Aesthetics","Hallandale Beach","FL","","(415) 815-7938",5,0,55,"missing_image,no_website,low_reviews",false,true,1
+"268bfcf7-c4a3-4c17-967f-66dab960b708","J.A. Esthetics","Hallandale Beach","FL","","(347) 361-8559",5,0,55,"missing_image,no_website,low_reviews",false,true,1
+"02bc401f-2c2a-4cf5-a9d2-a79e677877ca","Primal Aesthetics - Delray Beach","Delray Beach",,"https://primalaesthetics.net/","(561) 870-0295",,0,60,"missing_image,low_reviews",true,true,7
+"e7674d12-53f1-4b61-9dd0-a69a4589cbcf","Minni John Do","Fort Pierce","FL","https://www.wederm.com/provider/john-minni-do/","(772) 595-5995",,0,60,"missing_image,low_reviews",true,true,4
+"bd1b9aec-d929-43fb-90b7-ac8b445ac3d4","CARE Esthetics","Vero Beach","FL","http://www.care-esthetics.com/","(772) 770-4787",,0,60,"missing_image,low_reviews",true,true,1
+"2bb7820e-e498-4b2d-8a06-ef51fa06f46b","Vixen Doll Esthetics","Estero","FL","https://vixendollesthetics.as.me/schedule/089ae316","",5,8,60,"missing_image,no_phone",true,false,1
+"9f46c58e-6d1b-4094-8249-eb4dbee7cee5","Westover Hills Laser Med Spa","San Antonio","Texas","http://westoverhillsmedspa.com/","(210) 463-9033",0,0,60,"missing_image,low_reviews",true,true,1
+"eb37b6ff-c171-4402-b600-0cbb52dbc0b2","The DRIPBaR Austin The Domain","Austin","Texas","https://austin-the-domain.thedripbar.com/","(512) 649-8323",0,0,60,"missing_image,low_reviews",true,true,1
+"26e659dd-abb5-4163-8a3d-eb3022943eb2","Serenity Holistic OB/GYN, Research Center & Wellness Spa","North Miami Beach","FL","https://serenityobgyn.com/","(305) 705-3377",0,0,60,"missing_image,low_reviews",true,true,1
+"8034fb2b-fc69-4a12-9044-aae69aa7467a","Alejandra Moros Med Spa","North Miami Beach","FL","https://alemorosmedspa.square.site/","(305) 989-8632",,0,60,"missing_image,low_reviews",true,true,1
+"8948e684-2dc4-4954-95f8-caec7c758ead","Summer Plastic Surgery","North Miami Beach","FL","https://www.summerplastic.surgery/","(786) 363-9810",,0,60,"missing_image,low_reviews",true,true,1
+"67bf6c7d-a14d-4fef-bc49-488314091fd1","Marra's Beauty Bar","North Miami Beach","FL","https://www.marrasbeautybar.com/","(305) 440-4312",0,0,60,"missing_image,low_reviews",true,true,1
+"c63ee91f-07fd-4cb8-90d9-6e0e8854afe0","Skin By Ashley","Estero","FL","http://skinbyashley.co/","",5,5,60,"missing_image,no_phone",true,false,1
+"6c271f5f-86dd-4fce-a75a-607766900f69","Bella’s Image Salon","Miami Gardens","FL","https://bellas-image.square.site/","(954) 258-2154",0,0,60,"missing_image,low_reviews",true,true,2
+"4a2fa5b1-8e2c-44e8-b8f6-29dad18b7a24","Adore Aesthetics & Wellness","Boynton Beach",,"https://adorebymz.com/","(561) 481-3751",0,0,60,"missing_image,low_reviews",true,true,3
+"635f4a8f-ea9b-48d8-bacf-9b3dc7242287","Ageless Aesthetics & Wellness","Lakeland",,"http://www.agelesslakeland.com/","(863) 225-5400",0,0,60,"missing_image,low_reviews",true,true,4
+"a65ec039-e162-41d6-be21-ac550a6930f6","Bella Viságe Medical & Aesthetic Rejuvenation","Lakeland",,"https://bellavisagelakeland.com/","(863) 333-0553",0,0,60,"missing_image,low_reviews",true,true,3
+"a772438f-976e-4350-b04b-42fee1dea1a4","Medical Spa at Watson Clinic","Lakeland",,"https://www.watsonclinic.com/services/medical-spa-at-watson-clinic.html","(863) 904-6204",0,0,60,"missing_image,low_reviews",true,true,3
+"4591f89c-b541-4d05-b742-19943ae0e1e3","DayDreams Day Spa & Massage","Lakeland",,"https://www.daydreamsdayspa.com/","(863) 686-5859",0,0,60,"missing_image,low_reviews",true,true,4
+"183b8571-5031-47cc-84af-17509adece87","Dermafix Spa (Lakeland)","Lakeland",,"https://dermafixspalk.com/","(863) 250-4058",0,0,60,"missing_image,low_reviews",true,true,2
+"aa12bac3-5b92-440b-98b1-818e97fe781b","4Ever Young Med Spa & Wellness Center - Doral","Doral",,"https://4everyoungantiaging.com/doral/?utm_source=google&utm_medium=organic&utm_campaign=gbp-doral","(305) 629-9992",0,0,60,"missing_image,low_reviews",true,true,6
+"8e644afc-376f-494f-8456-0deea4b26e70","Royal Esthetics Laser Dentistry Bradenton - Dr. Ruba Reyal","Bradenton",,"https://www.laserdentistryonline.com/","(941) 748-0660",0,0,60,"missing_image,low_reviews",true,true,1
+"e7f72e74-83c7-4883-aaef-dab9864750b8","Ageless Spa Center","Bradenton",,"https://bradenton-spacenter.com/","(941) 263-2765",0,0,60,"missing_image,low_reviews",true,true,1
+"feb045df-2726-4d31-bac5-0199af76df7e","Aspire for Wellness Together","Bradenton",,"http://www.aspire4wt.com/","(941) 260-7804",0,0,60,"missing_image,low_reviews",true,true,3
+"9453cd95-a01b-4f0e-ab3b-74c6e44bb2a9","Keyla Colon","Hallandale Beach","FL","https://www.hollywooddermatology.com/cosmetic-dermatology/esthetician-services/","(954) 456-5050",,0,60,"missing_image,low_reviews",true,true,1
+"7ea5267a-12c8-4062-b1a6-3c17dfc9d13f","Wo/Man Luxe Med Spa","Hallandale Beach","FL","https://womanmedspa.com/","(305) 336-9373",,0,60,"missing_image,low_reviews",true,true,1
+"355633d7-255c-468a-8772-712ecfd3a9f6","The Med Spa","Las Vegas","Nevada","http://www.themedspalasvegas.com/","(702) 755-7947",0,0,60,"missing_image,low_reviews",true,true,1
+"440cac6e-5342-4993-9767-1f77a2486240","White Coat Aesthetics","Las Vegas","Nevada","https://whitecoataesthetics.com/","(702) 919-0017",0,0,60,"missing_image,low_reviews",true,true,1
+"4caeccca-ee07-43a5-81c2-8572c84ffe74","Chic la Vie","Las Vegas","Nevada","https://chiclavie.com/","(702) 233-8535",0,0,60,"missing_image,low_reviews",true,true,1
+"b84d85f7-67ad-433f-a5af-2f56afe134cc","The Look Med Spa","Las Vegas","Nevada","http://thelookmedspalv.com/","(702) 246-2238",0,0,60,"missing_image,low_reviews",true,true,1
+"703d8d84-680b-4d56-9673-2feffbf25e35","Ageless Las Vegas","Las Vegas","Nevada","https://agelesslasvegas.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp","(702) 874-3796",0,0,60,"missing_image,low_reviews",true,true,1
+"7bd725ad-7d65-4cfe-b8d5-3f7c074f0243","New Life New Image Medical Spa","Las Vegas","Nevada","http://newlifenewimage.com/","(702) 918-5057",0,0,60,"missing_image,low_reviews",true,true,1
+"4edb487e-ee51-4765-b6a5-c6b47f1fa49f","Skin Artisans at Edina Plastic Surgery","Edina","Minnesota","https://skinartisans.com/","(952) 592-6022",0,0,60,"missing_image,low_reviews",true,true,1
+"7664dd25-ebdc-45d3-be87-b1663d001f5f","Pure Lux Medspa","Edina","Minnesota","https://www.mypurelux.com/","(952) 460-0160",0,0,60,"missing_image,low_reviews",true,true,1
+"df01f220-01f1-43dd-b862-0d51de83afbc","Skin Rejuvenation Clinic PA","Edina","Minnesota","https://www.skinrejuvenationclinic.net/?utm_source=gbp&utm_medium=organic","(952) 920-6545",0,0,60,"missing_image,low_reviews",true,true,1
+"3613fd5b-b6e8-4f4c-a3b4-ceac6f322f58","Medi-Weightloss Dallas/Preston Hollow","Dallas","Texas","https://mediweightloss.com/weight-loss-clinic/preston/?_ppc=RLTMYKTS5E&utm_source=listings&utm_medium=organic&utm_campaign=listings","(972) 587-0003",0,0,60,"missing_image,low_reviews",true,true,1
+"57ec7fe5-bac4-4e4e-8949-1205be99b251","Taylor'd Wellness & Aesthetics","Dallas","Texas","http://www.taylordwellnessaesthetics.com/","(972) 799-3444",0,0,60,"missing_image,low_reviews",true,true,1
+"5e7d5a50-b9d4-470f-9ff1-805149c1f5b6","MSkin Med Spa","Dallas","Texas","https://www.mskinmedspa.com/","(469) 318-4019",0,0,60,"missing_image,low_reviews",true,true,1
+"c824a80b-a16f-471a-bc3d-776e93da37bb","Genesis Lifestyle Medicine","Dallas","Texas","https://www.genesislifestylemedicine.com/dallas/","(469) 694-8678",0,0,60,"missing_image,low_reviews",true,true,1
+"aafdf5a8-ea7d-4de5-a9a9-9134c0896db0","Renaissance Rejuvenating Medicine","Cape Coral",,"http://renaissanceam.net/","(239) 800-3028",0,0,60,"missing_image,low_reviews",true,true,2
+"77d34e85-fbaa-424a-a81f-c1115ac56219","SDBotox - Pacific Beach","San Diego","California","https://www.sdbotox.com/","(844) 732-6869",0,0,60,"missing_image,low_reviews",true,true,1
+"8279c980-5fee-4e66-8249-0e87b2d628fe","LaserAway Hillcrest","San Diego","California","https://www.laseraway.com/locations/ca/san-diego-hillcrest/?utm_source=google&utm_medium=organic&utm_campaign=website-link","(619) 295-2929",0,0,60,"missing_image,low_reviews",true,true,1
+"ca3de34a-12b8-4fa7-8eae-f4ecc1932ef0","Cutella Medical Spa","San Antonio","Texas","https://www.cutellamedspa.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp","(210) 201-5090",0,0,60,"missing_image,low_reviews",true,true,1
+"05198bd2-2b44-4cf6-aee9-40645a20b559","Mirror Mirror Med Spa","Los Angeles","California","https://mirrormedspa.com/","(310) 909-9747",0,0,60,"missing_image,low_reviews",true,true,1
+"194d3ef0-5922-4247-bfa8-b4817d7bb844","Vermont Med spa","Los Angeles","California","https://vermontmedspa.com/","(323) 906-7830",0,0,60,"missing_image,low_reviews",true,true,1
+"ab16d6c7-8884-404d-acf5-c3384f226dfc","Cosmetic Medicine of Coral Gables","Coral Gables",,"http://www.reimaginecosmetics.com/","(786) 939-1225",0,0,60,"missing_image,low_reviews",true,true,1
+"da145f15-8082-4888-a520-3121a0de1b54","Prime IV Hydration & Wellness (West University, TX)","Houston","Texas","https://primeivhydration.com/locations/texas/west-university-houston-77005/","(281) 843-3238",0,0,60,"missing_image,low_reviews",true,true,1
+"a744cfaa-68aa-4a7e-b8b1-93def8fbd555","The DRIPBaR Houston Heights","Houston","Texas","https://houston-heights.thedripbar.com/?utm_campaign=gmb&utm_medium=organic&utm_source=houston-heights-tx-google-my-business","(713) 597-2618",0,0,60,"missing_image,low_reviews",true,true,1
+"ecfde89b-4f30-4b57-a5cc-3d270cafb1b4","Platinum Medical Wellness & Aesthetics","Houston","Texas","https://platinummedicaltx.com/","(832) 400-4153",0,0,60,"missing_image,low_reviews",true,true,1
+"4ab1e418-7c9e-463e-93da-804fd5c1b6df","Be Happy IV Hydration & Wellness - Houston IV Drip Health Spa & Weight Loss","Houston","Texas","https://behappyiv.com/social-bio/?utm_source=social_links&utm_medium=google&utm_campaign=link_page&utm_id=Website","(713) 428-2170",0,0,60,"missing_image,low_reviews",true,true,1
+"fb691e7e-22db-48d0-bd41-a7584f6be3d6","4Ever Young Med Spa & Wellness Center - Vintage Park","Houston","Texas","https://4everyoungantiaging.com/vintage-houston/?utm_source=google&utm_medium=organic&utm_campaign=gbp-vintage-houston","(346) 527-0501",0,0,60,"missing_image,low_reviews",true,true,1
+"6e480461-5eef-4ebe-ae40-1deb23a2052a","Drip Hydration - Mobile IV Therapy - Los Angeles","Los Angeles","California","https://driphydration.com/coverage-areas/los-angeles/?utm_source=google&utm_medium=organic&utm_campaign=gmb&utm_content=website","(323) 931-4084",0,0,60,"missing_image,low_reviews",true,true,1
+"6131936c-cba6-4bb3-9142-97415ba03994","Sculpt Med Spa Downtown Los Angeles","Los Angeles","California","https://www.sculptdtla.com/","(213) 265-7285",0,0,60,"missing_image,low_reviews",true,true,1
+"607d6046-163a-4f52-aae3-37c4d69b5feb","South Coast MedSpa","Los Angeles","California","https://www.southcoastmedspa.com/los-angeles/","(877) 650-7267",0,0,60,"missing_image,low_reviews",true,true,1
+"b3f54a20-9259-4e8f-9c1b-42a29e85827d","Doctor Drip IV Hydration","Los Angeles","California","https://ivdrdrip.com/","(424) 229-2329",0,0,60,"missing_image,low_reviews",true,true,1
+"0688b1a0-e97d-450c-95b1-dfd111802e51","Dr. Lanna Aesthetics","New York","New York","https://doctorlanna.com/","(929) 492-2052",0,0,60,"missing_image,low_reviews",true,true,1
+"776c20c8-9876-4918-9618-f1cce5dca673","BeautyFix Medspa Flatiron","New York","New York","http://www.beautyfixmedspa.com/","(212) 366-4787",0,0,60,"missing_image,low_reviews",true,true,1
+"910fe3b8-5957-400d-8df8-29bb859b4cd6","4Ever Young Med Spa & Wellness Center - Marietta","Marietta","Georgia","https://4everyoungantiaging.com/marietta-sprayberry-square/?utm_source=google&utm_medium=organic&utm_campaign=gbp-marietta-sprayberry-square","(470) 740-6847",0,0,60,"missing_image,low_reviews",true,true,1
+"2f13323f-381c-4fcc-b99a-eca4d67b27fa","Hebe Aesthetics and Vitality","Atlanta","Georgia","https://hebeaestheticsandvitality.com/","(470) 607-3866",0,0,60,"missing_image,low_reviews",true,true,1
+"1898cbce-4fd1-4ab6-aabf-e2a7cdb764e9","Charette Cosmetics Medical Spa - Atlanta","Atlanta","Georgia","https://charettecosmetics.com/atlanta/?utm_source=google&utm_medium=organic&utm_campaign=GBPAtlanta","(404) 430-4378",0,0,60,"missing_image,low_reviews",true,true,1
+"15d8c186-f414-4105-b2fc-3b7d8a3f9e3b","A Bless Beauty Medspa and Clinic","Atlanta","Georgia","https://ablessbeauty.com/?utm_source=google&utm_medium=organic&utm_campaign=google_my_business","(404) 513-5625",0,0,60,"missing_image,low_reviews",true,true,1
+"a1340118-963d-4fb2-a83b-fd84177b75ec","dermani MEDSPA® Summerhill","Atlanta","Georgia","https://dermanimedspa.com/summerhill-atlanta-ga/","(678) 261-7744",0,0,60,"missing_image,low_reviews",true,true,1
+"0609ae52-1ce1-4a66-881e-647c858732b5","Beautiful You Weight and Skin Solutions","Atlanta","GA","http://www.beautifulyouatlanta.com/","(678) 424-1176",0,0,60,"missing_image,low_reviews",true,true,1
+"2654829b-07b7-4876-b1b1-b59a7bfe2cb0","Clinique des Champs Élysées","New York","New York","https://newyork.crpce.com/","(212) 812-1107",0,0,60,"missing_image,low_reviews",true,true,1
+"e64e5052-d0f7-4f81-ad4d-51870b66931a","Perfect Med Spa","New York","New York","https://www.perfectmedspa.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp&utm_term=Perfect-Med-Spa&utm_content=website","(212) 901-0656",0,0,60,"missing_image,low_reviews",true,true,1
+"067d9b2e-6538-4e3a-97ff-ebe948484b94","Derma Beauty Infinity Medical Spa","Pembroke Pines",,"http://dermabeautyinfinity.com/","(954) 374-8571",0,0,60,"missing_image,low_reviews",true,true,3
+"78e0fb83-cab2-425c-ae0e-cc17c710c624","Prime IV Hydration & Wellness - Beaverton","Beaverton","Oregon","https://primeivhydration.com/locations/oregon/beaverton-97007/","(503) 782-9843",0,0,60,"missing_image,low_reviews",true,true,1
+"8898f447-4d51-4393-a45c-5d4215638f1e","LaserAway Portland","Tualatin","Oregon","https://www.laseraway.com/locations/or/portland-tigard/?utm_source=google&utm_medium=organic&utm_campaign=website-link","(503) 809-2810",0,0,60,"missing_image,low_reviews",true,true,1
+"040f4aab-f318-4081-a2a5-5ca45466883a","Weight Loss Clinic Portland","Portland","Oregon","https://weightlossclinicportland.com/","(971) 435-5677",0,0,60,"missing_image,low_reviews",true,true,1
+"1be3543d-2693-40b1-b0b8-02741cdc93a3","Health Plus","Portland","Oregon","http://healthplustoday.com/","(503) 251-8876",0,0,60,"missing_image,low_reviews",true,true,1
+"65665c11-8a28-4bb5-b015-d18c40a4f007","Optifit Medical Weight Loss & Wellness Clinic","Portland","Oregon","https://optifitclinics.com/","(503) 419-9724",0,0,60,"missing_image,low_reviews",true,true,1
+"19596815-da4d-491c-9f7d-adc2f5d85fd6","Four Seasons Laser Center","Boston","Massachusetts","http://www.fourseasonslasercenter.com/","(561) 419-0022",0,0,60,"missing_image,low_reviews",true,true,1
+"4cce0b8c-391d-49ef-a3d6-ccd127c6d91e","Medical Spa by Nurse Fiona","Framingham","Massachusetts","http://www.nursefiona.com/","(855) 762-6869",0,0,60,"missing_image,low_reviews",true,true,1
+"66136490-0eee-4917-8137-26272f5b32c6","Hollywood Body & Face Westminster","Westminster","Colorado","https://hollywoodbodyandface.com/westminster/?utm_source=google&utm_medium=organic&utm_campaign=gmb-denver","(303) 466-0100",0,0,60,"missing_image,low_reviews",true,true,1
+"4abcfd07-69b8-4558-b508-5eedf6ae925a","Dermamode Spa (Cape Coral)","Cape Coral",,"https://www.dermamodespacc.com/","(239) 323-4333",0,0,60,"missing_image,low_reviews",true,true,1
+"e3457f2f-4f12-453c-984a-9520f40d4e48","Optimal Wellness","Cape Coral",,"http://www.optimalwellnesscapecoral.com/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=13075942150011284242","(239) 766-6248",0,0,60,"missing_image,low_reviews",true,true,3
+"11bed910-e8bf-4b71-bba7-4a052a1add9d","Ageless Remedies SouthPark","Charlotte","North Carolina","https://agelessremediessouthpark.com/?utm_source=GMBlisting&utm_medium=organic&utm_campaign=gmb","(704) 385-1681",0,0,60,"missing_image,low_reviews",true,true,1
+"70d6752a-5e1c-42dc-ace1-7a02b0cfd0aa","REFRESH Laser Spa","Charlotte","North Carolina","https://www.readysetrefreshed.com/","(704) 729-4485",0,0,60,"missing_image,low_reviews",true,true,1
+"7b0b0aec-958d-4a7f-a8a0-8364d1b888bc","Essential Aesthetics and Laser","Charlotte","North Carolina","https://ealasercenter.com/","(704) 625-6567",0,0,60,"missing_image,low_reviews",true,true,1
+"55c1e127-18b1-4ef1-b691-3ff5340d02c1","Dr Girouards Weight Loss & Wellness Clinic - Charlotte","Charlotte","North Carolina","https://drgirouardmd.com/","(704) 766-1000",0,0,60,"missing_image,low_reviews",true,true,1
+"9cf515d0-3a16-4fc9-8d35-d4dad3a7f9cd","Urban Medspa & Weight Loss Center","Charlotte","North Carolina","https://urbanmedspacharlotte.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp","(704) 971-9191",0,0,60,"missing_image,low_reviews",true,true,1
+"a3667efb-2003-45f3-a203-3c13192433d8","LightRx - Charlotte","Charlotte","North Carolina","https://www.lightrx.com/locations/charlotte/","(704) 307-2562",0,0,60,"missing_image,low_reviews",true,true,1
+"ba788964-cde7-408e-92ae-ef7b7d2fe1c6","Semper Laser","Charlotte","North Carolina","https://www.semperlaser.com/","(980) 236-1803",0,0,60,"missing_image,low_reviews",true,true,1
+"3695ca16-09b4-4f1e-a37d-d1d7a92387fb","Pines Aesthetics Coral Springs","Coral Springs",,"https://pinesaesthetics.com/","(754) 225-5152",0,0,60,"missing_image,low_reviews",true,true,2
+"2d5e0a5a-f217-4bbb-8526-489bae48047c","Icon MD Medical Spa + Laser Center Waltham","Waltham","Massachusetts","https://www.iconmd.com/massachusetts/","(781) 907-7891",0,0,60,"missing_image,low_reviews",true,true,1
+"38cd916d-05b2-4bff-b74e-ea8c42907487","LaserAway Fenway","Boston","Massachusetts","https://www.laseraway.com/locations/ma/boston-fenway/?utm_source=google&utm_medium=organic&utm_campaign=website-link","(617) 420-6080",0,0,60,"missing_image,low_reviews",true,true,1
+"43fb20f1-d7d5-4dc2-ba97-b67a03372ebc","Skin Defyne Medspa","Westwood","Massachusetts","http://www.skindefynemedspa.com/","(781) 410-2920",0,0,60,"missing_image,low_reviews",true,true,2
+"e3f9191a-6fe7-44a6-9d63-689960b8e839","LuxDerm Medspa","Concord","Massachusetts","https://luxdermmedspa.com/","(978) 951-6280",0,0,60,"missing_image,low_reviews",true,true,1
+"7a15947d-6a7e-46e6-af38-72a808d9cac6","Lormin Med Spa","Coral Springs",,"https://www.lorminmedspa.com/reserve-online","(305) 250-8837",0,0,60,"missing_image,low_reviews",true,true,3
+"356f0a60-9183-47eb-a5a9-8cadf4ba6788","Lueur Aesthetics","Clearwater",,"https://lueuraesthetics360.com/","(727) 592-5414",0,0,60,"missing_image,low_reviews",true,true,1
+"073b3065-ec5b-4f00-9bdc-8c08dcd94d39","Healthy Aesthetics","Clearwater",,"https://weightlossandaesthetics.com/","(727) 242-2224",0,0,60,"missing_image,low_reviews",true,true,1
+"8423ea59-1404-466a-8554-bf829b0bbfd9","Aesthetic skin studio","Clearwater",,"https://aestheticskinstudioclearwater.com/","(727) 418-1684",0,0,60,"missing_image,low_reviews",true,true,1
+"e052925e-25ab-4c3a-a290-bcec753af09c","Epic Aesthetics & Surgery","Clearwater",,"http://www.hrthouse.com/","(727) 477-3636",0,0,60,"missing_image,low_reviews",true,true,1
+"8d381025-3cb2-4fb5-9ed3-074c540c8715","BLISS Medical","Clearwater",,"https://blissmedical.com/?utm_source=googlemaps&utm_medium=organic&utm_campaign=gmaps_click","(727) 777-6108",0,0,60,"missing_image,low_reviews",true,true,1
+"09f7f1f1-503c-452c-af71-17e0ed7758a1","Chelsea Vacca Medical Aesthetics (FKA Lotus Aesthetics)","Sarasota",,"http://chelseavaccamedical.com/","(941) 441-4744",0,0,60,"missing_image,low_reviews",true,true,1
+"ad2ad22d-9590-4727-8dca-19365bca65a5","Facial Mania Med Spa - Coral Gables","Coral Gables",,"https://facialmaniamedspamiami.com/","(305) 376-7261",0,0,60,"missing_image,low_reviews",true,true,4
+"2c648509-b328-4ed5-94a2-b892af079d6f","Med Aesthetics Miami","Coral Gables",,"https://medaestheticsmiami.com/?utm_source=google&utm_medium=organic&utm_content=gables&utm_campaign=gmb","(305) 356-7402",0,0,60,"missing_image,low_reviews",true,true,5
+"d2f57c59-d92c-492d-9e54-0f79811571a8","Bliss Wellness and Aesthetic Studios","Fort Lauderdale",,"http://www.blisswellnessstudios.com/","(800) 332-1088",,0,60,"missing_image,low_reviews",true,true,1
+"da8c2423-484a-40e0-bb79-ab2103439008","AARX Weight Loss Jacksonville","Jacksonville",,"https://www.aarxweightloss.com/","(904) 621-2202",,0,60,"missing_image,low_reviews",true,true,1
+"160b76ab-9a8f-42ea-80df-2b04639e2c12","LS Aesthetic Studio","Jacksonville",,"http://www.lsaestheticstudio.com/","(813) 358-8598",,0,60,"missing_image,low_reviews",true,true,1
+"81cdec72-416c-4a53-a975-47232a2ce13b","UF Health Aesthetics and Head and Neck Surgery - North","Jacksonville",,"https://ufhealthjax.org/locations/uf-health-aesthetics-and-head-and-neck-surgery-north","(904) 383-1480",,0,60,"missing_image,low_reviews",true,true,1
+"2e9a177a-2cb7-4582-b507-560e7f6b0e6c","CARE Esthetics","Miami",,"http://www.care-esthetics.com/","(305) 572-1600",0,0,60,"missing_image,low_reviews",true,true,4
+"43af59ce-70e3-457d-9527-d843e1376b19","Vital Essence Med Spa","Miami",,"https://spaamos.shop/","(440) 613-8494",,0,60,"missing_image,low_reviews",true,true,1
+"6472261f-a584-40dd-a6eb-85b0a6d4cb7d","Reign Medical Aesthetics & Wellness - Windermere","Orlando",,"https://www.reignmedicalaesthetics.com/?utm_source=GMBlisting&utm_medium=organic&utm_campaign=gmb","(352) 241-4221",0,0,60,"missing_image,low_reviews",true,true,1
+"65400e30-8d86-4b2f-8b56-4db6b4686b93","Elements Rejuvenating Med Spa - Orlando","Orlando",,"https://skinandstem.com/","(407) 450-5747",,0,60,"missing_image,low_reviews",true,true,1
+"ed050bf6-194b-49b0-a56c-a83f9e6cdd48","BioHp Med Spa & Wellness","Orlando",,"https://biohpmedspa.com/","(407) 921-5228",,0,60,"missing_image,low_reviews",true,true,1
+"361d38f9-29b5-49ca-914f-b21bfe3d66cd","Crown & Ryxes: Hair Restoration & Men's Sexual Wellness","Orlando",,"https://crownandryxes.com/","(352) 241-4221",,0,60,"missing_image,low_reviews",true,true,1
+"5cb13db4-11cb-4401-a71a-1396eba870c5","Renew Vitality Testosterone Clinic of Orlando","Orlando",,"https://www.vitalityhrt.com/location/testosterone-clinic-of-orlando-fl/","(407) 584-5375",,0,60,"missing_image,low_reviews",true,true,2
+"a912bd3b-dfd7-4cd6-bbb3-885cd4970e91","Beau Terre MedSpa","Orlando",,"https://orlandodermatologyinc.com/","(407) 966-4691",,0,60,"missing_image,low_reviews",true,true,2
+"30b865ad-8cf8-417b-b337-90c4291cffc5","Acra Medical Aesthetics","Coral Gables",,"http://www.acramedical.com/","(305) 774-1116",0,0,60,"missing_image,low_reviews",true,true,1
+"07b740fa-5365-4d7b-9e8c-2aea883a8693","Skinelite-Aesthetics","Coral Gables",,"https://www.skinelite-aesthetics.com/","(305) 890-6254",0,0,60,"missing_image,low_reviews",true,true,2
+"a2a8fb2d-ac4e-45a4-b15c-dbbce1703697","Belle Aestheticss","Coral Springs",,"https://belleaestheticss.com/","(561) 464-1702",0,0,60,"missing_image,low_reviews",true,true,1
+"53186648-6079-4c98-9363-3ad150a8765c","Coast to Coast Wellness and Aesthetics","Daytona Beach",,"https://coasttocoastmedspa.com/","(386) 872-3488",0,0,60,"missing_image,low_reviews",true,true,3
+"bd28954e-6c9d-4e40-b50f-d17fbfb55149","You First Medical Aesthetics","Daytona Beach",,"http://youfirstaesthetics.com/","(386) 310-2052",0,0,60,"missing_image,low_reviews",true,true,1
+"39bcc0bd-aabd-41b8-a4fa-0ac506ec0614","A Beautiful You by Ada","Delray Beach",,"https://beautifulyoubyada.com/","(561) 988-2329",0,0,60,"missing_image,low_reviews",true,true,3
+"ae4141ad-be9f-43f3-8216-081b55b8757e","DermaVeda Aesthetics & Wellness (Delray Beach)","Delray Beach",,"https://www.dermaveda-aesthetics-db.com/","(561) 654-2734",0,0,60,"missing_image,low_reviews",true,true,2
+"2d3b5118-10d4-41ae-9081-3eb6dd8894db","Palm Beach Advanced Aesthetics","West Palm Beach",,"https://pbaaesthetics.com/","(561) 360-2446",0,0,60,"missing_image,low_reviews",true,true,4
+"b35244e5-3e30-4c26-964e-ca1d84fb42db","4Ever Young Med Spa & Wellness Center - Fort Myers","Fort Myers",,"https://4everyoungantiaging.com/fort-myers/?utm_source=google&utm_medium=organic&utm_campaign=gbp-fort-myers","(239) 414-3844",0,0,60,"missing_image,low_reviews",true,true,6
+"140dd39e-c791-48f3-a1ee-a35717c04a31","Tracey Botha MD - Mooi Medical Spa & Laser Center","Gainesville",,"https://traceybotha.com/","(352) 339-4845",0,0,60,"missing_image,low_reviews",true,true,3
+"d742bdc0-ad1b-4b55-a874-38cd6d59b29a","The Acne Scar Center","Gainesville",,"https://acnescarflorida.com/","(888) 235-7227",0,0,60,"missing_image,low_reviews",true,true,3
+"f1a2ea5d-f9f8-481c-871c-cf37328aac61","Luxe Escape","Hollywood",,"https://www.luxeescapemiami.com/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=8420922034510052609","(954) 391-8203",0,0,60,"missing_image,low_reviews",true,true,1
+"885bd91b-44a7-4b7b-9e55-7c82bcb6cb68","Amazing Skin Care Med Spa","Hollywood",,"http://www.amazingskincaremedspa.com/","(954) 716-0521",0,0,60,"missing_image,low_reviews",true,true,2
+"351d98b9-80ac-46cc-b4d0-4a0e531543c1","Juves Aesthetics & Cosmetic Procedures","Kissimmee",,"http://juvesaesthetics.com/","(407) 967-3414",0,0,60,"missing_image,low_reviews",true,true,1
+"3c63c58b-4dd6-4ae0-aaa4-8e2d2c650429","Beautiful Orlando Spa and Cosmetic","Kissimmee",,"https://beautifulorlando.com/?utm_source=google&utm_medium=localsearch&utm_campaign=gmb","(407) 766-6080",0,0,60,"missing_image,low_reviews",true,true,2
+"8722b891-c54b-4866-8f52-6c48a8adcb1b","Couture Med Spa","Kissimmee",,"https://www.couturemedspa.com/locations/kissimmee?utm_source=google&utm_medium=organic&utm_campaign=gbp","(407) 214-2121",0,0,60,"missing_image,low_reviews",true,true,2
+"3ded5a6e-c4dc-437d-bb00-59f565f10ed7","Dermave spa","Melbourne",,"https://www.dermavespamel.com/","(321) 220-3757",0,0,60,"missing_image,low_reviews",true,true,1
+"c4052d4c-038f-4818-bfb6-e7755d577bd6","Imami Skin & Cosmetic Center","Melbourne",,"https://www.drimami.com/","(321) 312-4198",0,0,60,"missing_image,low_reviews",true,true,2
+"584a32b8-1444-4cf0-b538-068fa4bdf36b","The Laser Lounge Spa Naples","Naples",,"https://naples.thelaserloungespa.com/","(239) 747-0211",0,0,60,"missing_image,low_reviews",true,true,2
+"09f51a57-195f-4a47-b956-b94e6b216707","The Aesthetic Center SWFL Naples","Naples",,"https://southwestfloridamedspa.com/naples/","(239) 323-1100",0,0,60,"missing_image,low_reviews",true,true,1
+"83befe92-5cfc-40a6-9c88-27f21efbf0d1","4Ever Young Med Spa & Wellness Center - Naples","Naples",,"https://4everyoungantiaging.com/naples/?utm_source=google&utm_medium=organic&utm_campaign=gbp-naples","(239) 674-0879",0,0,60,"missing_image,low_reviews",true,true,6
+"0a773880-ee41-429a-8bdd-d5392e7d302b","Nouveau Health & Wellness","Palm Beach Gardens",,"http://www.nouveauhealthandwellness.com/","(561) 240-3000",0,0,60,"missing_image,low_reviews",true,true,5
+"b3ddf91f-27fa-44a5-9499-a0f988d577a5","Panacean Med Spa","Weston",,"http://www.panaceanmedspa.com/","(954) 937-6193",0,0,60,"missing_image,low_reviews",true,true,1
+"88ca6081-1d00-4210-a849-e65946e7266a","Palm Beach Aesthetics Group","Palm Beach Gardens",,"http://www.palmbeachaestheticsgroup.com/","(561) 508-2379",0,0,60,"missing_image,low_reviews",true,true,1
+"051d0044-7584-4f2d-af6e-ca2212a1fef1","Touch Of Life Med Spa","Pembroke Pines",,"https://www.touchoflifemedspa.com/","(786) 691-4510",0,0,60,"missing_image,low_reviews",true,true,1
+"47db53f4-7d8a-4982-849e-27aede9deda5","Pines aesthetics","Pembroke Pines",,"http://pinesaesthetics.com/","(954) 374-8807",0,0,60,"missing_image,low_reviews",true,true,2
+"304fe269-0f3b-451b-81f8-de635e363e7b","New Wave Med Spa","Pembroke Pines",,"https://newwavemedspa.com/","(305) 631-2057",0,0,60,"missing_image,low_reviews",true,true,3
+"bfb25c1f-57f7-48de-b561-e666579ca08b","M G Medical Facility Inc","Pembroke Pines",,"http://www.mgmedicalfacility.com/","(954) 432-8856",0,0,60,"missing_image,low_reviews",true,true,1
+"c61e65e5-327c-4daf-a268-119f7a596992","Florida Academy of Medical Aesthetics","Pembroke Pines",,"https://www.famaedu.com/","(954) 432-4349",0,0,60,"missing_image,low_reviews",true,true,3
+"5aeacf11-734b-4a5f-ac5b-91187088e465","MELA Medical Spa","Pensacola",,"http://melamedspa.com/","(850) 480-3075",0,0,60,"missing_image,low_reviews",true,true,3
+"40c53bdd-ac85-4411-8f9a-aafd1cfdcfb1","USA Aesthetics","Port St. Lucie",,"http://www.usaaesthetics.com/","(772) 230-1000",0,0,60,"missing_image,low_reviews",true,true,3
+"05d30a03-1c7b-4b92-a822-391e8c415974","Relive Tradition","Port St. Lucie",,"http://www.relivetradition.com/","(772) 408-9418",0,0,60,"missing_image,low_reviews",true,true,4
+"3f676d48-3f0b-43bc-88cb-be6b8ab67bb0","Ah...Massage & Skincare","Port St. Lucie",,"http://www.ahmassageandskincare.com/","(772) 828-1599",0,0,60,"missing_image,low_reviews",true,true,1
+"8700de6e-f715-4757-9674-b8919c0d02e2","Elite Medical Spa of Sarasota","Sarasota",,"https://elitemedicalspa.com/","(941) 203-5111",0,0,60,"missing_image,low_reviews",true,true,2
+"cdc738d5-f86c-407d-8338-603d2002bb63","HCA Florida St. Lucie Cosmetic and Reconstructive Surgery","Port St. Lucie",,"https://www.hcafloridaphysicians.com/locations/st-lucie-cosmetic-and-reconstructive-surgery?utm_campaign=corp_listings_mgmt&utm_source=google&utm_medium=business_listing","(772) 204-8870",0,0,60,"missing_image,low_reviews",true,true,1
+"93c9cf21-92fa-4d45-a0ed-0d05fcc26b2c","The Aesthetic Center","Sarasota",,"http://topmedspasarasota.com/","(941) 315-1700",0,0,60,"missing_image,low_reviews",true,true,2
+"d5ca0fba-171f-4ee9-b294-999841fbacee","Rita Medical Elite","Sarasota",,"https://www.ritamedicalelite.com/","(941) 951-2161",0,0,60,"missing_image,low_reviews",true,true,1
+"8e871fd5-6173-43b1-ba6f-35d3846e3479","Facial Mania Med Spa Sarasota","Sarasota",,"https://www.facialmaniamedspa.com/locations/facial-mania-med-spa-sarasota/","(941) 337-7710",0,0,60,"missing_image,low_reviews",true,true,4
+"653ce0cd-74da-430f-85ed-7c49db2b4caf","Skin Science Aesthetics","Tallahassee",,"http://skinsciencetallahassee.com/","(850) 253-7745",0,0,60,"missing_image,low_reviews",true,true,4
+"2954c5c6-3ca6-45fc-af62-755234211be4","Allure Laser MediSpa","Tallahassee",,"http://www.allurelasermedispa.com/","(850) 727-5088",0,0,60,"missing_image,low_reviews",true,true,3
+"d8c71d1d-c541-467a-9424-965eee564b43","MD Beauty Labs","West Palm Beach",,"https://mdbeautylabs.com/?utm_source=googlemybusiness&utm_medium=organic&utm_campaign=westpalmbeach","(561) 655-6325",0,0,60,"missing_image,low_reviews",true,true,5
+"39f7f043-fc33-4746-b17f-0a8c2ecbd9d2","Pulsar Health - Dr. Roop Monica Gill","West Palm Beach",,"https://www.pulsarhealth.com/?utm_source=gmb_auth","(561) 388-9571",0,0,60,"missing_image,low_reviews",true,true,1
+"d088b157-0870-4643-b8e0-ed0cac16492e","Ava Beauty Medical Aesthetics, LLC","West Palm Beach",,"https://avabeautymedspa.com/","(561) 402-2557",0,0,60,"missing_image,low_reviews",true,true,1
+"2306d4c7-4426-47a0-a7e4-7ec7cabe679c","LiceDoctors Lice Treatment West Palm Beach FL","West Palm Beach",,"https://www.licedoctors.com/locations/west-palm-beach?utm_source=GBP&utm_medium=organic&utm_campaign=west-palm-beach_website","(561) 232-3490",5,0,60,"missing_image,no_address,low_reviews",true,true,2
+"6084c77a-6571-4132-9faf-d51edf33f204","Aesthetic Element","Weston",,"https://aestheticelement.com/","(954) 303-9700",0,0,60,"missing_image,low_reviews",true,true,1
+"862b4a7c-6c5f-4d75-997f-cf24290f9bcb","Weston Center for Plastic Surgery","Weston",,"https://www.plasticsurgeryweston.com/","(954) 507-4540",0,0,60,"missing_image,low_reviews",true,true,1
+"ea9e2c05-357b-49a0-9049-43f5a2fb96c0","Radiance Medical Spa of Weston","Weston",,"http://radianceweston.com/","(954) 659-0199",0,0,60,"missing_image,low_reviews",true,true,5
+"aeca8867-9f55-438f-8cb0-27eaa9e8194d","Weston Center for Aesthetic Medicine & Surgery","Weston",,"https://www.westonsurgery.com/","(954) 526-0066",0,0,60,"missing_image,low_reviews",true,true,2
+"d178de1a-820c-4935-93a6-61ce9521f662","New Life Beauty & Wellness","Weston",,"http://www.newlifeandwellness.us/","(954) 385-6196",0,0,60,"missing_image,low_reviews",true,true,1
+"77773390-8a7d-439b-b1f4-1a288ccfe28a","Biovital MedSpa LLC","Weston",,"http://biovitalmedspa.com/","(954) 217-1221",0,0,60,"missing_image,low_reviews",true,true,3
+"aeeb6408-861b-4ab0-8c53-688ef459e2f7","Kaua'i MedSpa","Surfside","FL","https://www.kauaimedspa.com/","(808) 652-1122",0,0,60,"missing_image,low_reviews",true,true,2
+"dd61c4a2-ed12-4200-ae4b-91ed8d02ff8b","Kaua'i MedSpa","Fisher Island","FL","https://www.kauaimedspa.com/","(808) 652-1122",0,0,60,"missing_image,low_reviews",true,true,2
+"89872a6c-cc5b-4935-ba5a-31a1d9ac8022","DayDreams Day Spa & Massage | Lakeland, FL","Lakeland","FL","https://www.daydreamsdayspa.com/","(863) 686-5859",0,0,60,"missing_image,low_reviews",true,true,4
+"3a807e51-75d8-4e97-9424-3c97c9040f23","Colibri Aesthetics","Vero Beach","FL","https://www.colibriaesthetics.com/","(772) 321-0300",5,0,60,"missing_image,no_address,low_reviews",true,true,1
+"b16851fa-80d7-4db8-b489-50bb60c967e6","One Stop Med Spa","Brandon","FL","https://onestopmedspa.com/","(813) 315-8044",,0,60,"missing_image,low_reviews",true,true,3
+"bb0fd43f-e146-406f-bf16-21294898a9f5","Prescription-Skincare","Miami Beach","FL","https://prescription-skincare.com/","(786) 449-1518",,0,60,"missing_image,low_reviews",true,true,1
+"cf479b55-11de-4269-b544-8529a34563b0","Laser Hair Removal Med Spa","Hallandale Beach","FL","https://www.vipaestheticcenter.com/book-online","(844) 847-5477",,0,60,"missing_image,low_reviews",true,true,1
+"d0c3ec92-97c2-4c1a-bb1f-03d4e6199639","MM MedSpa & Laser Center","Miami",,"","(786) 201-6784",5,20,65,"missing_image,no_website",false,true,1
+"0fe6d999-60e7-49b5-a39b-dc2a8756a7f1","Christ-Ann Magloire, MD, FACOG","North Miami Beach","FL","","(305) 705-3377",3,19,65,"missing_image,no_website",false,true,1
+"b1a64715-8e88-4994-8d2e-5199706dc6ef","On Point Beauty By Meli","Miami Gardens","FL","","(786) 447-0933",5,18,65,"missing_image,no_website",false,true,1
+"ee3a0470-456c-4c77-8029-905bde67b2f6","Regal Nails, Salon & Spa","Miami Gardens","FL","","(786) 428-0079",3,47,65,"missing_image,no_website",false,true,1
+"c34654f8-2176-4fee-952d-1bed9c50199f","WinR Aesthetics","Fort Lauderdale",,"","(772) 227-0857",5,19,65,"missing_image,no_website",false,true,1
+"b1f510fc-7e2a-4307-bc0a-24843e9454a0","sovero cosmetics","Estero","FL","http://soverocosmetics.com/","",5,176,70,"missing_image,no_phone",true,false,1
+"efaad540-d55a-499a-bcec-f34bd9236e33","Skin Stories Aesthetics","Chandler","AZ","https://skinstoriesbyvanessa.square.site/s/appointments","",5,21,70,"missing_image,no_phone",true,false,1
+"80889c1e-2058-4787-816e-40c0eca607f3","The MedSpa at Galleria","Houston","TX","https://www.themedspatx.com/","",5,89,70,"missing_image,no_phone",true,false,1
+"31586f3b-90d1-47d1-859d-e0418a46d764","ZEVASTIANSBEAUTYPLACE MIA","Hallandale Beach","FL","http://zevastian.com/","(786) 486-2508",5,0,75,"missing_image,low_reviews",true,true,1
+"e5c7623b-af47-4198-a46e-51fd34832b6f","GoldenTouch Med Spa","Kissimmee",,"https://goldentouchmedspa.com/","(407) 437-0784",5,0,75,"missing_image,low_reviews",true,true,1
+"67b4b4fc-fb52-48f9-a00d-a6ad4b7c65f4","LASERIN AESTHETICS","Hallandale Beach","FL","https://laserinaesthetics.com/","(954) 854-4848",5,0,75,"missing_image,low_reviews",true,true,1
+"222d5a2e-c91b-4797-b454-75db196a6ba0","KC Medical Aesthetics","Doral",,"http://www.kcma.miami/","(305) 322-9029",5,0,75,"missing_image,low_reviews",true,true,3
+"7ee70fe6-cce5-4488-98d9-d3b7a91910fd","Trinity Natural Health & Pain Management, Inc.","North Miami Beach","FL","https://trinitynaturalhealth.chrone.work/?utm_source=googlemaps&utm_medium=googlemapsprofile&utm_campaign=googlemaps","(954) 548-8086",5,3,75,"missing_image,low_reviews",true,true,1
+"f7bbdac2-0729-4fe9-9cc8-5eefb6ae7458","MK Beauty Salon","Hallandale Beach","FL","http://mkbeautysalon.com/","(786) 815-1515",5,0,75,"missing_image,low_reviews",true,true,1
+"936f68c3-65d0-4836-a128-1b04a7ed71e7","RevIV Aesthetics and Hydration, PLLC","Daytona Beach",,"http://revivaestheticsandhydration.com/","(386) 248-5713",5,0,75,"missing_image,low_reviews",true,true,4
+"a9b6e76c-e434-4011-a88d-3f5fcf50cb46","True U Medical Spa","Orlando",,"https://therealuessence.com/","(321) 662-8055",5,9,75,"missing_image",true,true,1
+"88c18b91-a039-4f97-ac84-2bbe0cc85464","Glamaderm Skincare","Gainesville",,"http://www.glamadermskincare.com/","(352) 871-4990",5,0,75,"missing_image,low_reviews",true,true,8
+"73a728ca-d9d7-4ceb-ad6d-227df954b065","Brightan Spray Tan at Estetika Medspa","Hallandale Beach","FL","https://brightan.glossgenius.com/","(786) 625-2386",5,0,75,"missing_image,low_reviews",true,true,1
+"50c9c8bd-b46d-4859-ba6d-1140128ae596","Aesthetic Technologies","Daytona Beach",,"https://www.aesthetictechfl.com/","(386) 900-0523",5,0,75,"missing_image,low_reviews",true,true,3
+"113dd383-5e63-4474-a547-9b94cf6eb055","MZA MIAMI","Hallandale Beach","FL","http://www.mzamiami.com/","(754) 802-8070",5,0,75,"missing_image,low_reviews",true,true,1
+"f18c51a9-f1ea-44cf-be3f-9826b17e3039","SeeU skincare","Hallandale Beach","FL","https://www.seeubeauty.com/","(305) 924-6292",5,0,75,"missing_image,low_reviews",true,true,1
+"4723cc57-617e-4cd3-92a6-ab9afe6b8a4c","The Brow Aesthetic","Immokalee","FL","https://thebrowaesthetic.square.site/","(305) 563-3666",5,3,75,"missing_image,low_reviews",true,true,1
+"6374676e-0b19-41fa-a9c2-f1161492cabb","Oakland Eyes","Lauderhill","FL","http://www.oaklandeyesfl.com/","(954) 306-2409",5,0,75,"missing_image,low_reviews",true,true,1
+"6ac1fd3e-3bae-4059-9e2c-6f1b0baabea3","The Face Clinic","Weston",,"http://thefaceclinic.janeapp.com/","(305) 548-1332",5,0,75,"missing_image,low_reviews",true,true,1
+"5ce45e8b-a7ce-41e7-8f82-c01b17d6b787","Skincare With Alyssa","Naples","FL","https://www.skincarewithalyssa.com/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=17159081053428140395","(239) 260-5060",5,5,75,"missing_image",true,true,1
+"bf79c849-1067-4165-b31e-09c9b94a9de1","Aesthetic Awakening","West Palm Beach",,"http://westpalmbeachlaserhairremoval.com/","(561) 331-3011",5,0,75,"missing_image,low_reviews",true,true,1
+"cb569435-1d5f-4e75-89e1-fc955c047270","Zwellness Clinic","Miramar","FL","http://zwellnessclinic.com/","(561) 801-4496",5,0,75,"missing_image,low_reviews",true,true,1
+"91bc19fe-ea8b-41b4-813b-ee549bd20eba","NUEVA Aesthetics (Previously Hahn Advanced Aesthetics)","st-petersburg",,"https://www.nuevaaesthetics.com/","(727) 506-8157",5,0,75,"missing_image,low_reviews",true,true,6
+"141d3176-6e12-43e7-8d67-eb3d75670f13","Or Olam Skin Solutions","Hallandale Beach","FL","http://www.or-olam.com/","(954) 549-4995",5,0,75,"missing_image,low_reviews",true,true,1
+"006813c5-0ffb-4b6e-a7c5-86328683de48","Silver Lux Aesthetics, LLC","Delray Beach",,"https://www.vagaro.com/silverluxaesthetics","(561) 414-8322",5,0,75,"missing_image,low_reviews",true,true,1
+"9138dde6-bc59-454a-bffd-6480e69c7c11","Plasma Med Spa","Weston",,"https://plasmamedspa.com/","(954) 719-5634",5,0,75,"missing_image,low_reviews",true,true,4
+"dca7a28f-a08e-4dab-9167-17b0f3b9c91a","PD SPA & BEAUTY","Miami Gardens","FL","https://purediamondexperience.as.me/schedule.php?fbclid=PAZXh0bgNhZW0BMQABpgiF4G9GKBHahNXVTZ9Z0DW7ol0q-xGAE6r4uokoSV2Jrm0chkJCljBdAw_aem_AWKPQ18eynWDJfNOVU1fN2C-3eEgCbTpZNAC7VDm7CngUUdTQ0_nm7cYu8jDshS2r2I","(800) 972-4082",5,4,75,"missing_image,low_reviews",true,true,1
+"6bf3108a-51e9-4b3d-9ac7-09c9d68a01b0","Karen MedSpa","Sarasota",,"https://www.karenmedspa.com/","(941) 685-7236",5,0,75,"missing_image,low_reviews",true,true,2
+"6b45170d-cc76-4da5-b1d2-e15ecae1bf37","Lilly Rose Aesthetics","Clearwater",,"https://lillyroseaesthetics.com/","(727) 388-5220",5,0,75,"missing_image,low_reviews",true,true,6
+"0acf90ad-4296-4806-9cdf-e16cde48aba2","ReSpa Palm Beach","Palm Beach Gardens",,"https://respapalmbeach.com/","(561) 782-1474",5,0,75,"missing_image,low_reviews",true,true,6
+"3c1003a9-ede0-4546-bec6-ba45dce30c96","BioAesthetics of Naples","Naples","FL","https://bioaestheticsofnaples.com/","(239) 799-4147",5,10,75,"missing_image",true,true,1
+"f0fb4ade-4aa7-42c4-8b2c-ea6d267d0026","Aesthetic Health Naples","Naples","FL","https://www.aesthetichealthnaples.com/","(239) 610-0123",5,1,75,"missing_image,low_reviews",true,true,1
+"7e0ba4af-5d25-4b1b-acbb-9bc370b3d40a","Skin renewal aesthetics","Naples","FL","https://www.skinrenewalaesthetics.com/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=6413504936459165344","(239) 285-6063",5,7,75,"missing_image",true,true,1
+"cae379b4-1d0d-4021-94fa-0ada74cd91cd","Naples Facial Botox Med Spa","Naples","FL","https://naplesfacialbotoxmedspa.com/","(203) 439-1000",5,2,75,"missing_image,low_reviews",true,true,1
+"e5f8196c-f769-4d3c-97f2-5b0cf39db512","L&J Med Spa","Miami Gardens","FL","http://www.ljmedspa.us/","(305) 454-9612",5,0,75,"missing_image,low_reviews",true,true,1
+"7e79d53d-3e86-4847-9dcc-f1cae06331d5","Healing Hands Medi Spa","Miami Gardens","FL","https://healinghandsmedispa.com/","(786) 657-3181",5,1,75,"missing_image,low_reviews",true,true,1
+"8132304b-dcb5-41c9-8983-47d92b4313ca","Sculpted Aesthetic","Miami Gardens","FL","https://www.fresha.com/a/sculpted-aesthetic-miami-miami-gardens-17325-northwest-27th-avenue-rfdcto9a","(786) 530-2271",5,4,75,"missing_image,low_reviews",true,true,1
+"ab28e0a9-ce94-4626-820e-557ebfaa79d9","MASSAGE MEDIC, LLC.","Naples","FL","http://www.massagemedic.com/","(239) 331-3624",5,10,75,"missing_image",true,true,1
+"16c156e0-b7b3-4fc0-843f-616614642eaf","Advanced Dermatology & Skin","Naples","FL","http://www.yhderm.com/","(239) 529-3376",3,2,75,"missing_image,low_reviews",true,true,1
+"a85a8935-a48a-42bd-a6f8-0d53409bce1f","Advanced Skincare & Laser by Jessica","Naples","FL","https://advancedcorrectiveskincare.glossgenius.com/","(239) 877-6782",5,8,75,"missing_image",true,true,1
+"18bc61dd-f508-4eb9-ac2f-0b037624975b","Edwin J Dean MD Medical Wellness Center","Naples","FL","https://naplesawi.com/meet-the-nawi-team-naples/","(239) 202-0441",5,1,75,"missing_image,low_reviews",true,true,1
+"54153374-27e9-4ba1-9f8b-ada8bbdf25dd","A -Esthetics","Estero","FL","http://aesthetics-grace.com/","(239) 327-3767",5,7,75,"missing_image",true,true,1
+"cf3cb973-7c1f-4b61-a354-9dd5b1277edf","Core Aesthetics Spa","Estero","FL","https://www.coreaestheticsspa.com/","(239) 503-9216",5,9,75,"missing_image",true,true,1
+"a6406579-5fd0-4ff4-a3d1-20af2b3e1e75","Kyle A. Burton, MD","Estero","FL","https://www.thewoodruffinstitute.com/","(239) 498-3376",5,4,75,"missing_image,low_reviews",true,true,1
+"05f67335-f6c7-4354-a85f-5e608191cb3d","Advanced Eye Care & Laser Center","Estero","FL","http://www.stanciueyecare.com/","(239) 949-2020",5,9,75,"missing_image",true,true,1
+"a4090743-49ef-4a6d-bd6f-ceb158ba0523","Ayo's Esthetics Studio","Miami Gardens","FL","http://aes.glossgenius.com/","(954) 483-9153",5,0,75,"missing_image,low_reviews",true,true,1
+"ef334d5b-3d47-4989-82b8-ece7f548181a","Skin + Sculpt Holistic Medi Spa","Naples","FL","https://skinandsculptmedispa.com/","(239) 420-4569",5,7,75,"missing_image",true,true,2
+"58b69a21-509d-4aff-831c-c22c777957e6","Annas Medical Care","Kissimmee",,"https://www.edenbyannasmedical.com/","(407) 743-4233",5,0,75,"missing_image,low_reviews",true,true,4
+"3b4e5ccd-3cd9-4a2e-86af-53bcabdf6394","The Skin Boutique","Lakeland",,"https://tsb.janeapp.com/","(863) 225-2578",5,0,75,"missing_image,low_reviews",true,true,1
+"cb1787f5-2f6d-4d33-aa6c-755a4f35bcdc","Dynasty Health and Wellness Medspa","Bethesda","MD","https://www.dynastyhealthandwellnessmedspa.com/","(301) 541-8399",4,7,75,"missing_image",true,true,2
+"a5854fda-4a66-43fb-91e4-5760036e18d8","Meridian Medical Spa","Naples","FL","http://www.meridianmedicalspa.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp","(239) 319-2200",5,8,75,"missing_image",true,true,1
+"c80f9a77-68b8-4fcf-bbc3-7a644b86c74a","MD Health Spa","Naples",,"https://ymdhealthspa.com/","(239) 963-6022",5,0,75,"missing_image,low_reviews",true,true,4
+"af41da75-3359-45a0-b05b-a8bf6c8344ea","Beauty Office","Hallandale Beach","FL","https://l.instagram.com/?u=https://beautyoffice.godaddysites.com/&e=AT1LMuKRBEIsrtGU-wxELXsY9K4G6BT78Zhuk4_n2Dh-jWHL8DCV_HFYNUcsKUjhOuSBBYoz3swe-hQ33ZwIJ3P0XwJ6ZaSds2QvkqgdkBgl0tk4pUnHHQQ","(347) 445-2050",5,0,75,"missing_image,low_reviews",true,true,1
+"b799de03-5edc-47fb-882b-1117f9ccc888","UniqueBeauty Aesthetics","Long Island City","NY","https://uniquebeautynyc.square.site/","(347) 819-7222",5,10,75,"missing_image",true,true,1
+"33a932a2-0096-4149-86f1-ac2544a8cd2f","Laser Aesthetics Clinic","Long Island City","NY","https://laseraestheticsclinic.com/","(718) 790-8090",3,2,75,"missing_image,low_reviews",true,true,1
+"b9dd2a1d-420e-47b4-9db5-25f967415d9e","BeU Medical Spa Naples","Naples",,"https://www.beumedspa.com/","(239) 734-3741",5,0,75,"missing_image,low_reviews",true,true,10
+"ea6c3db7-ef16-4ed1-b393-35579f79fc26","Elite Medical Spa of Lakewood Ranch","Bradenton",,"https://elitemedicalspalwr.com/","(941) 666-4638",5,0,75,"missing_image,low_reviews",true,true,1
+"7d645ace-78a6-439f-ab63-1d86c120dbf7","Drift MedSpa","Bradenton",,"https://driftmedspa.com/","(941) 933-7438",5,0,75,"missing_image,low_reviews",true,true,3
+"d76d0f35-eeae-4cba-a835-4c6dafc4e433","The Beverly Hills Medspa","Beverly Hills","CA","https://thebeverlyhillsmedspa.com/","(310) 438-6422",4,5,75,"missing_image",true,true,1
+"951c9ba0-4620-4864-a2cd-b7ef26a7f4a0","Beverly Hills Aesthetic Group","Beverly Hills","CA","https://beverlyhillsaestheticgroup.com/host/","(424) 424-0260",5,4,75,"missing_image,low_reviews",true,true,1
+"190793cb-2baf-4233-882c-143a7e6c194b","Blissful Beauty of SW FL, LLC","Bradenton",,"https://blissfulbeauty.pro/","(941) 726-6384",5,0,75,"missing_image,low_reviews",true,true,1
+"e650720a-0e30-47d7-836c-b48c2e335cf8","Total Face & Body Care","Bradenton",,"https://totalfaceandbodycare.com/","(941) 977-9700",5,0,75,"missing_image,low_reviews",true,true,3
+"a5ede84e-295f-4647-bc1e-e5e86ccfd4d9","iRadiant Aesthetics | Emsculpt, Facials, Tox (Botox, Dysport), & Weight Loss Clinic Summerlin","Summerlin","NV","https://www.iradiantaesthetics.com/","(725) 305-2819",5,6,75,"missing_image",true,true,3
+"6e65406f-bd89-4975-98fe-fbd0b2873c20","Olive Medical Aesthetic Center San Diego","San Diego","CA","http://olivemedical.com/","(949) 861-0033",5,1,75,"missing_image,low_reviews",true,true,1
+"8f6e1a84-8e7d-4c3c-96ad-dc8780469955","Glow Medspa","Hallandale Beach","FL","http://www.glow-med-spa.com/","(786) 822-1105",5,0,75,"missing_image,low_reviews",true,true,1
+"ab35e319-3328-402c-b623-5394d1bf6666","BeautyFi Medical Spa","Hallandale Beach","FL","https://beautyfi.net/","(954) 458-8007",5,0,75,"missing_image,low_reviews",true,true,1
+"7e716daa-972f-4686-b99a-2c889f7bd043","Near me spa wellness & aesthetics","Hallandale Beach","FL","http://near-me-spa.squarespace.com/","(305) 793-5455",5,0,75,"missing_image,low_reviews",true,true,1
+"472c07d0-22ee-4c96-90cf-6d8f59a54ae7","Vital MedSpa | Morpheus8 Burst Specialist","Hallandale Beach","FL","https://vitalmedspa1.com/","(954) 787-1337",5,0,75,"missing_image,low_reviews",true,true,1
+"d5880661-c597-486e-9770-096b06d0dfc4","AMAPURE LLC","Hallandale Beach","FL","http://amapurellc.com/","(954) 807-4127",5,0,75,"missing_image,low_reviews",true,true,1
+"eaedb947-2d48-42b8-b5f1-98bed64a41b4","GitelCare Longevity Center by Dr. Dimitri Gitelmaker, MD","Hallandale Beach","FL","http://www.gitelcare.com/","(305) 771-0034",5,0,75,"missing_image,low_reviews",true,true,1
+"b51abbeb-dda3-43c2-8343-da2528b08e49","Beauty Future","Hallandale Beach","FL","https://www.beautyfuturemiami.com/","(954) 842-0720",5,0,75,"missing_image,low_reviews",true,true,1
+"71b029cb-6e7a-44f2-aa64-49ecf88dd085","Glow Your Skin | Facials & Microneedling","Hallandale Beach","FL","https://glow-your-skin.zoca.ai/?utm_source=googlemaps&utm_medium=googlemaps&utm_campaign=googlemaps","(832) 488-4945",5,0,75,"missing_image,low_reviews",true,true,1
+"0272236f-113e-455b-83ad-7cb549967e72","Yamila's Faces Skin Care - Hallandale Beach","Hallandale Beach","FL","http://yamilasfacesskincareinstitute.com/","(954) 456-7110",5,0,75,"missing_image,low_reviews",true,true,1
+"5331b324-5dcb-477a-af45-a8ffc4bf50ee","Facegym Miami","Hallandale Beach","FL","http://miamifacegym.com/","(786) 301-3219",5,0,75,"missing_image,low_reviews",true,true,1
+"e78c8eaf-5cfc-46e6-b53d-43a53b6fce82","Beauty Bar 305","Hallandale Beach","FL","http://www.beautybar305.com/","(786) 683-9281",5,0,75,"missing_image,low_reviews",true,true,1
+"8f561c7e-ffee-49d3-ad94-68cb71c5fa7f","SKIN Las Vegas Med Spa","Las Vegas","Nevada","http://skinlv.com/","(702) 705-7546",5,0,75,"missing_image,low_reviews",true,true,1
+"4e979847-bf93-45ac-801e-c2b1a5a8c534","Bliss Point Medical Spa","Los Angeles","California","http://www.blisspointmedspa.com/","(310) 923-8451",5,0,75,"missing_image,low_reviews",true,true,1
+"ff3bda7c-4f3b-4868-bf79-05486ede8bf0","Skin Story Med Spa","Los Angeles","California","http://www.skinstorymedspa.com/","(323) 577-2311",5,0,75,"missing_image,low_reviews",true,true,1
+"5b53a5df-4eec-42f5-8298-a7d3e1fe1008","Kian Aesthetic Institute","Los Angeles","California","https://www.thekianinstitute.com/","(310) 295-6422",5,0,75,"missing_image,low_reviews",true,true,2
+"65afd01a-2050-42c7-9100-22ef4129c24c","Radiance Medspa Atlanta","Atlanta","Georgia","http://www.radiancemedspaatlanta.com/","(770) 435-7700",5,0,75,"missing_image,low_reviews",true,true,1
+"439aa990-5dd5-4bc4-8cdf-f70cf71780e6","Pines Dental Aesthetics","Pembroke Pines",,"https://www.pinesdentalaesthetics.com/?utm_source=gmb&utm_medium=organic","(954) 440-5092",5,0,75,"missing_image,low_reviews",true,true,1
+"3595ccc7-b8f5-4cc2-a33e-2e2bf7ec811f","Aqua medspa and wellness","Cape Coral",,"http://www.aquamedspaandwellness.com/","(239) 541-8481",5,0,75,"missing_image,low_reviews",true,true,4
+"fb59daf6-a55d-4e6f-8b43-2eef3fc75bda","Pines Aesthetics Cooper City","Pembroke Pines",,"https://www.pinesaesthetics.com/","(754) 216-6865",5,0,75,"missing_image,low_reviews",true,true,2
+"8709b7a6-b333-4250-8bf3-be0000b8a7ca","Dee's Laser & Medspa","Cape Coral",,"https://www.deeslaserandmedspa.com/contact","(239) 245-1390",5,0,75,"missing_image,low_reviews",true,true,5
+"dd7ce18b-c165-46d2-8087-39a5848c3aed","Slim Drip Wellness & Spa","Cape Coral",,"https://slimdripwellness.com/","(239) 699-2899",5,0,75,"missing_image,low_reviews",true,true,1
+"2b5da213-9702-4d54-8497-54bb9bfd530f","Revive Medical Spa LLC.","Clearwater",,"https://www.myrevivespa.com/","(727) 218-8364",5,0,75,"missing_image,low_reviews",true,true,3
+"2c91e36c-c000-4e7e-8974-d78c19bc2770","Aurivita Medspa","Clearwater",,"http://www.aurivitamedspa.com/","(727) 605-4510",5,0,75,"missing_image,low_reviews",true,true,4
+"6bd71e5c-757e-4b14-a732-ec59bc1b31c5","NATURAL HEALTH ESSENTIALS","Clearwater",,"https://naturalhealth-essentials.com/","(727) 476-6339",5,0,75,"missing_image,low_reviews",true,true,1
+"a633a3a8-acc7-4136-be86-fb4921329ed4","SkinLab Aesthetic Clinic","Tallahassee",,"https://skinsciencetallahassee.com/","(850) 253-7745",5,0,75,"missing_image,low_reviews",true,true,4
+"118618cf-7127-409b-a70b-569e4ca7f8f7","Revital Aesthetics & Anti-Aging","Tallahassee",,"https://revitalhealthcare.com/","(850) 820-6129",5,0,75,"missing_image,low_reviews",true,true,4
+"50be2009-01e0-452a-92c7-a460344d60b9","Plenitude MedSpa","Coral Gables",,"https://plenitudemedspa.com/","(786) 400-1615",5,0,75,"missing_image,low_reviews",true,true,5
+"65fe881d-d497-476c-b99f-eb9e1a5ddb13","Chadia Ali MedSpa & Aesthetics","Coral Gables",,"https://www.chadiaalimedspa.com/","(754) 327-9802",5,0,75,"missing_image,low_reviews",true,true,2
+"8b68e614-2aa8-4a98-8012-076e7cf90be4","Prime Body Wellness","Fort Lauderdale",,"http://primebodywellness.com/","(954) 880-3035",5,0,75,"missing_image,low_reviews",true,true,1
+"bc2d00b4-99d0-407c-883a-4225fbbfd69e","BodyhackRX Integrative & Aesthetic Medicine","Fort Lauderdale",,"https://thebodyhackrx.com/","(305) 239-5315",5,10,75,"missing_image",true,true,1
+"546a0110-c624-47d0-b61c-cdc9c4ddc9ec","JV Aesthetic Lab","Miami",,"http://jv-aesthetics.square.site/","(786) 985-3006",5,4,75,"missing_image,low_reviews",true,true,1
+"e122a928-c801-46e2-b3c8-0a9b824a803c","Skin care by Gretchen","Daytona Beach",,"https://www.epicspaandwellness.com/","(386) 310-4157",5,0,75,"missing_image,low_reviews",true,true,1
+"5796a33f-e788-4ab6-908a-a607f9d57cf1","Premiere Aesthetics","Fort Myers",,"https://premiereaesthetics.com/?utm_source=gbp&utm_medium=organic","(239) 910-7763",5,0,75,"missing_image,low_reviews",true,true,3
+"567b768e-5cc2-4685-8228-262e9939dfe5","Honest Aesthetics","Fort Myers",,"http://honestfl.com/","(239) 212-0017",5,0,75,"missing_image,low_reviews",true,true,4
+"fb01aade-99ac-40c4-b06b-d111042b7afb","Dermafix Spa (Fort Myers)","Fort Myers",,"https://dermafixspafm.com/","(239) 217-1406",5,0,75,"missing_image,low_reviews",true,true,2
+"555858b7-e1e1-49fa-a2f2-83e63402b233","E Aesthetics","West Palm Beach",,"https://michelle-aesthetics.square.site/","(612) 900-9999",5,0,75,"missing_image,low_reviews",true,true,3
+"0baf6f0e-55af-419d-bbc6-5ed1aefe6890","FCMA Med Spa","Hollywood",,"https://fcmaesthetics.com/","(954) 280-5253",5,0,75,"missing_image,low_reviews",true,true,2
+"86443f1c-fa72-42b3-91bf-cbd165ee0823","Oracle Aesthetics","Hollywood",,"http://theoracleaesthetics.com/","(954) 243-4803",5,0,75,"missing_image,low_reviews",true,true,1
+"b8e33d38-ed7e-4b77-89f7-c21247cf647b","Fountain of You","Melbourne",,"https://fountainofyou.md/","(321) 574-5376",5,0,75,"missing_image,low_reviews",true,true,4
+"a77a40eb-632d-463d-9066-cc90d8ae5ee9","Arielle's Aesthetics","Melbourne",,"http://www.ariellesaesthetics.com/","(321) 200-0378",5,0,75,"missing_image,low_reviews",true,true,2
+"711dd945-16dc-4380-80e2-4e04e8ec7690","Tactical Aesthetics","Melbourne",,"https://www.tactical-aesthetics.com/","(478) 731-8298",5,0,75,"missing_image,low_reviews",true,true,1
+"80380531-3f66-4315-8ce8-bd541e4fc1c5","Gulf Coast Medspa","Naples",,"http://www.gcmedspa.com/","(239) 682-1885",5,0,75,"missing_image,low_reviews",true,true,5
+"b8e2aebe-d357-4fad-abe4-08b1836904dd","Healing Rivers Aesthetics","Naples",,"http://healingriversaesthetics.com/","(239) 397-0747",5,0,75,"missing_image,low_reviews",true,true,1
+"d1ca6715-3cb6-40df-b65f-9fb329d6ce1f","La Vie Spa Gardens","Palm Beach Gardens",,"https://laviespagardens.com/","(561) 429-3958",5,0,75,"missing_image,low_reviews",true,true,2
+"c2286888-a15a-4d81-92f8-dffbaf95801e","Palm Beach Facial Plastic Surgery","Palm Beach Gardens",,"http://www.palmbeachfacialplastic.com/","(561) 659-9766",5,0,75,"missing_image,low_reviews",true,true,5
+"e648fa8b-144c-418f-954b-1d85a31714a5","Oceanside Aesthetics","Palm Beach Gardens",,"https://www.oceansidemodernmedicine.com/","(561) 221-2245",5,0,75,"missing_image,low_reviews",true,true,5
+"18db8af7-9023-48f8-8fe3-8b7149b7a278","Perfection Aesthetics & Wellness","Pembroke Pines",,"https://perfectionaesthetics.com/","(754) 285-5822",5,0,75,"missing_image,low_reviews",true,true,2
+"c8466eaf-49a4-43de-abb9-005211073d99","Emerald Aesthetics Medical Spa","Pensacola",,"https://www.emeraldaestheticsfl.com/","(850) 378-2205",5,0,75,"missing_image,low_reviews",true,true,3
+"3c2f10d1-1d89-4557-8720-40b8185a5fa0","SELF Med Spa","Pensacola",,"https://selfmedicalaesthetics.janeapp.com/","(850) 375-2538",5,0,75,"missing_image,low_reviews",true,true,1
+"e46bafd0-718c-4d97-8eb4-d6be46a1bc1c","Sandy Key Medical","Pensacola",,"http://www.sandykeymedical.com/","(850) 602-0828",5,0,75,"missing_image,low_reviews",true,true,5
+"d8f0a913-ab30-4839-beee-7338849d1c9e","Elevate Med and Aesthetics","Plantation",,"https://www.elevatemedandaesthetics.com/","(954) 716-6220",5,0,75,"missing_image,low_reviews",true,true,6
+"3a83cfaf-5f00-4af1-88e7-8fa0143221d6","Oasis Iv Med Spa","Plantation",,"http://www.oasisivmedspa.com/","(954) 444-1969",5,0,75,"missing_image,low_reviews",true,true,4
+"b27a6ee4-0563-4990-b5a7-c95d3b775aa5","PSL Laser and Aesthetics","Port St. Lucie",,"https://www.vagaro.com/psllaserandaesthetics/","(772) 335-3110",5,0,75,"missing_image,low_reviews",true,true,1
+"b5230b4d-5e19-4082-9bce-93d17c31311b","Lavish L Aesthetics","Port St. Lucie",,"http://www.lavishlaesthetics.com/","(561) 294-1824",5,0,75,"missing_image,low_reviews",true,true,1
+"dec37782-5e5a-4bc9-ab1e-67348dfbb775","Treasure Coast Laser and Aesthetics","Port St. Lucie",,"http://treasurecoastlaser.com/","(772) 873-5600",5,0,75,"missing_image,low_reviews",true,true,1
+"3a123fb4-8eeb-4ecb-92ec-1b38293d21eb","Facecare Acne Solutions","Port St. Lucie",,"https://facecarefl.com/","(772) 837-3442",5,0,75,"missing_image,low_reviews",true,true,3
+"1a26e317-1bac-4c42-b3c9-c56cd2987efc","Angelic Glow Esthetics","Port St. Lucie",,"https://book.squareup.com/appointments/uspi1gvpsgyxif/location/LGDC7YEMN9AT2/services?gei=X852adC-CIOHwbkP_M-s6AE&hl=en-US&rwg_token=AFd1xnFGXLGcaabjOt-SUlu2Y5OMsiNtQ6Hhw2sDEnXrTamRci6McZDisTjNCp33uwoCevwUHhZXJsqHqwi6970L9KKKSfFjkg==","(786) 716-4900",5,0,75,"missing_image,low_reviews",true,true,1
+"b819d3be-5ab2-48b8-ade2-54b6f765de5f","Jessica Simone, AGNP-C","Sarasota",,"https://www.harmonymedspafl.com/","(941) 923-8990",5,0,75,"missing_image,low_reviews",true,true,2
+"b41d48cb-d5be-4324-b901-372f416c3657","Amy’s Aesthetics & Wellness","Sarasota",,"https://injectoramy.com/","(941) 422-1290",5,0,75,"missing_image,low_reviews",true,true,6
+"2f317d38-0d3c-43be-a02d-92b785b737c1","LJ Aesthetics Medicine, LLC","st-petersburg",,"http://www.ljaestheticsmed.com/","(727) 201-2471",5,0,75,"missing_image,low_reviews",true,true,2
+"6e27de15-6549-4cb4-b774-da6b3fd449e3","Amaris' Aesthetics, Inc.","st-petersburg",,"https://amariskin.com/","(727) 647-7659",5,0,75,"missing_image,low_reviews",true,true,1
+"2c7c51a9-8228-4a1d-96c5-12e0bb4105a6","SkinLogic Aesthetics Spa","Tallahassee",,"https://www.skinlogicaestheticsspa.com/","(850) 328-5450",5,0,75,"missing_image,low_reviews",true,true,1
+"3abab3f7-7801-4b0c-adb1-4085fbab863c","Essential Beauty & Wellness Spa LLC","Tallahassee",,"https://essentialbeautyspa.as.me/schedule.php?fbclid=PAAaY5ALXGKl8fOm6XLDS-9-Ue-g2AuJz4lafhe2kUrBWliFARd8vRnVntZfg_aem_ARpRrHy_jBM1_spDlWLh0-ZLVJ0Qd8tVvYLbHbF1ppqoWz56LwnG7Wcblgy_1b_VT18","(850) 815-0660",5,0,75,"missing_image,low_reviews",true,true,1
+"80987836-b7ff-4700-9500-b38a257aea12","Renew You Palm Beach","West Palm Beach",,"https://www.renewyoupalmbeach.com/","(561) 247-7991",5,0,75,"missing_image,low_reviews",true,true,5
+"ea501e54-723b-49e5-b62a-a21f3e959ffc","Pure Skin Palm Beach","West Palm Beach",,"https://www.pureskinpalmbeach.com/","(561) 346-0833",5,0,75,"missing_image,low_reviews",true,true,3
+"8a17ab5d-2df0-4fcc-8502-bd6fbf364ee4","Just Me Med Spa","Weston",,"http://www.justmemedspa.com/","(754) 755-6575",5,0,75,"missing_image,low_reviews",true,true,1
+"9fe3a858-b2ac-4ba3-89d8-cb37d2e4e7e2","Beverly Hills Skin Clinic","Beverly Hills","CA","http://www.bhskinclinic.com/","(310) 596-0156",5,2,75,"missing_image,low_reviews",true,true,1
+"7afdc25d-23e9-4fe1-b547-3cf695993797","Balanced Body Wellness and Aesthetic's","Ocala","FL","https://www.yourbalancedbodywellness.com/","(352) 208-2792",5,0,75,"missing_image,low_reviews",true,true,1
+"e955531f-d37d-4f32-bb39-94cff885f6bd","Regen and Restore","Largo","FL","https://www.regenandrestore.me/","(727) 618-3838",5,0,75,"missing_image,low_reviews",true,true,1
+"ec65bae9-da41-4fd5-8c62-7877a2fbe76c","Pure Essence Spa LLC","Land O Lakes","FL","https://sntcas8.wixsite.com/pureessencespa-3","(727) 657-3869",5,0,75,"missing_image,low_reviews",true,true,1
+"90040710-a961-471c-811c-532584cfdf20","Cosmetic Gynecology Florida","Ponte Vedra Beach","FL","http://www.cosmeticgynecologyfl.com/","(904) 496-4848",5,0,75,"missing_image,low_reviews",true,true,3
+"cbde9af9-7ae6-4140-81ea-12b1e8880ddd","Attain Bliss Massage","Riverview","FL","http://www.attainbliss.com/","(727) 851-6772",5,0,75,"missing_image,low_reviews",true,true,1
+"d386dd49-84ee-49e0-9003-c450783406ed","L'esthetique Skin Care LLC","North Miami Beach","FL","https://lscmedspa.com/","(786) 564-4504",5,0,75,"missing_image,low_reviews",true,true,1
+"5c875906-ca91-41a3-a778-70795d28eb51","Pestana Aesthetics","Hallandale Beach","FL","https://www.instagram.com/pestanaesthetics2?igsh=cW01cmExNGFiNzhw","(786) 657-5957",5,0,75,"missing_image,low_reviews",true,true,1
+"7bb41d12-95d2-4313-b383-7be6e25b1153","Estetika Med Spa","Hallandale Beach","FL","http://estetikamedspa.com/","(954) 998-4640",5,0,75,"missing_image,low_reviews",true,true,1
+"8701e83c-9807-41a7-b390-c9e35c89db82","Neo Aesthetics & Medical Int. Academy - Massage Therapist, Medical Assistant, Electrology & Laser, Aesthetics and Nails","Hallandale Beach","FL","http://neobeautyschool.com/","(754) 888-4360",5,0,75,"missing_image,low_reviews",true,true,1
+"87f60b0f-8d1d-4c84-b5de-5ccd754671ba","Oya Wellness Hallandale","Hallandale Beach","FL","https://oyawellness.com/","(305) 399-4140",5,0,75,"missing_image,low_reviews",true,true,1
+"2c123320-44bd-44ae-9cc2-8d1645069296","Bogat Aesthetics & Wellness","Hallandale Beach","FL","https://www.bogat.com/","(954) 900-9090",5,0,75,"missing_image,low_reviews",true,true,1
+"3fe26b6f-3151-46eb-919a-1b5a7d73bfdf","Nikkiesthetics","Hallandale Beach","FL","https://nikkiesthetics.com/","(954) 348-5914",5,0,75,"missing_image,low_reviews",true,true,1
+"0850c23d-21c7-4223-ba61-74fb8f2ca5c9","Lambert Wellness Center - Acupuncture & Massage","Estero","FL","http://www.lambertwellnesscenter.com/","(239) 776-4055",5,14,85,"missing_image",true,true,1
+"2624a4e5-dfdb-43c0-9d50-d24919aeb124","New You Medical","Fort Lauderdale",,"https://www.newyoumedical.com/","(954) 858-5888",5,21,85,"missing_image",true,true,1
+"71a7a60b-e560-4fb4-b4b7-ee5cc946a557","The Remedy IV Health + Wellness","Fort Lauderdale",,"https://theremedyiv.com/","(844) 468-3747",5,210,85,"missing_image",true,true,4
+"0dc39ca8-6255-4c8c-be95-907cd3942b77","Rituals Aesthetics","Miami",,"http://www.ritualsaesthetic.com/","(954) 812-2582",5,31,85,"missing_image",true,true,1
+"de0efff0-b73e-4ca9-83ca-5db27e989a37","Rhaine Health & Wellness","Jacksonville",,"https://www.rhainehealth.com/","(904) 515-3337",5,17,85,"missing_image",true,true,1
+"41d2bd18-9823-4e6c-8698-795bc796be15","VitaLuxx Med Spa","Orlando",,"https://www.vitaluxxmedspa.com/","(407) 720-6453",5,115,85,"missing_image",true,true,1
+"244ad705-a571-4510-9af9-f6964a50b671","Tatiesto","Jacksonville",,"http://www.tatiesto.com/","(425) 770-2939",5,88,85,"missing_image",true,true,1
+"61414473-aec4-4e0f-832e-83a379fe8de6","Red Rose Cosmetic and Surgical Arts","North Miami Beach","FL","http://redrosesurgical.com/","(954) 754-4877",5,69,85,"missing_image",true,true,1
+"80e81056-3cf2-4151-8f54-818bc2616c77","Precision Medicine and Wellness by Elizabeth Bagan, APRN","Jacksonville",,"https://www.precisionmedicinejax.com/","(904) 454-4937",5,115,85,"missing_image",true,true,1
+"171f2bb0-7dc3-44c3-8ff1-194d15914f30","Elevate Aesthetics","Orlando",,"https://lookfeelelevated.com/","(407) 362-5927",5,125,85,"missing_image",true,true,1
+"e82cd919-996c-4d09-aa03-6c9ac658dab9","IVolve Med Spa","Jacksonville",,"http://www.ivolvemedspa.com/","(904) 560-2020",5,63,85,"missing_image",true,true,1
+"54f3a010-6158-4a83-85cc-ef4969f9fdbc","Boca Raton Cosmetic Dermatology","Boca Raton",,"https://www.bocacosmeticderm.com/","(561) 212-7148",5,63,85,"missing_image",true,true,1
+"88b0ebde-3233-4626-94b4-b4e2fe1cc745","Skintastic Med Spa","Plano","TX","https://www.skintastic.com/","(972) 535-6000",5,26,85,"missing_image",true,true,2
+"fe93b099-d6eb-4700-9200-15ad81e14dd4","Avant Garde Aesthetics","Estero","FL","https://avantgardeaesthetics.com/","(941) 677-3469",5,146,85,"missing_image",true,true,1
+"f9c05c6d-b9b6-4c89-a2ce-287f20b78143","Infinity IV Hydration","Fort Lauderdale",,"http://www.infinityivh.com/","(954) 469-7061",5,86,85,"missing_image",true,true,1
+"5ae5708a-5248-4f33-a391-ed17fd4234e4","[ Skin + Tonic ]","Henderson","NV","https://www.skinandtonic702.com/","(702) 854-6654",5,109,85,"missing_image",true,true,1
+"a8c35dc1-316c-4ce4-83f1-7490265051d5","Essential Aesthetics & Health","Fort Lauderdale",,"https://www.essentialaestheticsfl.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp","(754) 778-7375",5,122,85,"missing_image",true,true,1
+"08eddbd1-0309-481b-a0f7-7c0375c78f3e","Beauty Studio by Tatiana","Naples","FL","https://beautybrowstudio.com/","(239) 300-0920",5,424,85,"missing_image",true,true,1
+"ebf9146c-dfb1-41aa-9bcc-8daeed302177","Blonde Girl Aesthetics by Dr. Alex, DNP","Miami",,"http://www.blondegirlaesthetics.com/","(786) 833-8366",5,151,85,"missing_image",true,true,3
+"5e66555a-b201-45b5-9e17-7f6379c7dbb2","Core Medical Group","Boca Raton",,"https://coremedicalgrp.com/?utm_campaign=boca101gmb","(561) 956-3550",5,90,85,"missing_image",true,true,1
+"5feef496-cb97-4b30-9cf3-53e9d6c0485f","Diana Medina Skincare and wellness","North Miami Beach","FL","https://dmedinaskincare.square.site/","(786) 320-4887",5,74,85,"missing_image",true,true,1
+"741a6276-95d1-4c2b-acd7-43f0b4c4b173","Perfect Body By Yuly","Miami Gardens","FL","https://perfectbodybyyuly.com/","(786) 574-1064",5,67,85,"missing_image",true,true,1
+"a9286a39-e161-4541-b6c7-10317198f5de","Asōka MedSpa","Boca Raton",,"https://www.asokamedspa.com/","(561) 444-0769",5,40,85,"missing_image",true,true,4
+"d4b72a90-3cac-4c44-b63c-1e517e5d03a4","The Aesthetic Label","Fort Lauderdale",,"http://www.aestheticlabel.com/","(954) 580-3190",5,177,85,"missing_image",true,true,2
+"d3a11096-e03d-44a7-b12e-3e34d8f5bbf8","Enriquez Aesthetics LLC","Jacksonville",,"https://enriquezesthetics.com/","(808) 383-2036",5,17,85,"missing_image",true,true,2
+"8fcef9ed-3c63-4bc1-82bf-04958990a648","Modern Beauty Bar","Orlando",,"https://themodernbeautybar.com/","(407) 634-3912",5,314,85,"missing_image",true,true,1
+"c1444ca6-78e8-41d5-bd2f-436d935f0a75","Face by Alexandra Francesca","Miami",,"https://facebyalexandrafrancesca.com/","(786) 512-0997",5,61,85,"missing_image",true,true,1
+"8f988fa7-1121-4427-8eb2-22df50557660","All In One Care Solutions Medical Center","Miami Gardens","FL","https://allinonecaresolutions.com/","(786) 446-9414",5,121,85,"missing_image",true,true,1
+"5f1a6156-e838-4b51-9f2e-972fdeb4e04b","Cardona Direct Primary Care and RefineMD Aesthetics","Jacksonville",,"http://www.cardonadpc.com/","(904) 551-4625",5,108,85,"missing_image",true,true,1
+"dad903b0-ad3c-4b5f-ac3c-21f66c07caac","SkinSpirit","Miami",,"https://www.skinspirit.com/locations/miami","(786) 983-9700",5,103,85,"missing_image",true,true,3
+"2fe4857a-5281-4eb0-920b-5a8f61002bf5","LUX MedSpa Brickell","Miami",,"https://www.luxmedspabrickell.com/","(305) 988-9388",5,2179,85,"missing_image",true,true,4
+"d7806da8-4ac6-4df9-a48f-24c96f7a80dd","MedChic Aesthetics","Fort Lauderdale",,"https://medchicfl.com/","(954) 306-3373",5,158,85,"missing_image",true,true,3
+"6f8c3b1f-f7b9-4363-9021-001755218c43","Target","Estero","FL","https://www.target.com/sl/coconut-point/2317","(239) 495-4920",4,387,85,"missing_image",true,true,10
+"68301871-391b-4b2b-90bc-cf103f62ab29","Dermatology Center of Wellington","Wellington","FL","http://dermatologycenterofwellington.com/","(561) 784-7884",4,31,85,"missing_image",true,true,1
+"d4a2d361-1775-4281-bf34-74a7d4a43266","Steven Rueda","Wellington","FL","https://precisionmds.com/dr-steven-rueda/","(561) 557-3115",4,13,85,"missing_image",true,true,1
+"46ec9556-9d8f-4ba2-abe6-3fe911ce387d","Latin Beauty Salon Andreas","North Miami Beach","FL","http://www.andreaslatinbeauty.com/","(305) 940-8372",5,197,85,"missing_image",true,true,1
+"f740db01-4976-47ae-acec-24c2555a95be","All Asian Massage 6, DBA","North Miami Beach","FL","http://www.allasianmassage6.com/","(786) 647-0190",5,17,85,"missing_image",true,true,1
+"ed42f9f5-a4e9-4d6c-8e10-1dba29b51133","Pillersdorf Alan B MD FACS","Wellington","FL","http://www.plasticsurgerypb.com/","(561) 968-7111",4,21,85,"missing_image",true,true,1
+"9234d8bb-65ce-4af5-851d-8b6d90d02b16","Yag-Howard Cosmetic Dermatology","Naples","FL","http://www.yhderm.com/?utm_source=googlemybusiness&utm_medium=organic&utm_campaign=yhderm","(239) 529-3376",5,334,85,"missing_image",true,true,1
+"85ffc10a-cb86-4662-ae0e-3c7c659e1820","DNA Wellness and Longevity Institute","Naples","FL","https://defynaturalaging.com/","(239) 250-7930",5,32,85,"missing_image",true,true,1
+"c13dd4e2-20bd-4de7-824b-1389e416fcfa","Dr. Elizabeth Fox","Naples","FL","http://www.elizabethfoxmd.com/","(239) 262-8585",5,76,85,"missing_image",true,true,3
+"284c6494-2028-427f-b6bd-b8843a6e1a76","Dr. Irina Toma Aesthetics","Naples","FL","http://drtomaaesthetics.co/","(239) 290-5002",5,18,85,"missing_image",true,true,1
+"2b450f83-6500-4ae9-a434-c8d1c5ca3d8d","Flanagan Concierge & Aesthetics","Naples","FL","http://phuongflanaganmd.com/","(239) 276-7074",5,23,85,"missing_image",true,true,1
+"737d552e-aa40-400e-a266-fcb1d596fef8","Skin Wellness Physicians","Naples","FL","https://www.skinwellnessflorida.com/?utm_source=Google%20My%20Business&utm_medium=Organic","(239) 732-0044",5,446,85,"missing_image",true,true,2
+"3d409e7c-8e24-4e22-8477-bdbaddc30e36","Le Bella Spa","Naples","FL","https://lebellaspa.com/","(239) 398-9712",4,34,85,"missing_image",true,true,1
+"449678ea-b08e-4cca-bdb5-10f65e1be2a5","The Wellness Lab","Naples","FL","http://thewellnesslabiv.com/","(239) 682-8177",5,235,85,"missing_image",true,true,1
+"b93a8592-94f1-424e-ac1e-520a4714eaf9","One Place Wellness","Naples","FL","http://www.oneplacewellness.com/","(239) 262-8585",5,12,85,"missing_image",true,true,1
+"bee0ed56-dc31-4ae1-8f98-291cf6c65555","Aesthetique","Naples","FL","http://aesthetique.skin/","(239) 399-1996",5,44,85,"missing_image",true,true,1
+"910ec714-6de0-42e7-b7b1-8c85b7f62c58","Esthetic-Lines by Alexandra","Naples","FL","http://www.esthetic-lines.com/","(239) 200-0704",5,68,85,"missing_image",true,true,1
+"c53572b8-2b3b-426d-a8e7-9eafa37777f6","Blue Magnolia Med Spa","Naples","FL","http://www.bluemagnoliamed.com/","(239) 262-1505",5,17,85,"missing_image",true,true,2
+"da6aba33-f901-4c0f-a030-60c0f1d0acb5","Aesthetic Justice by Chrissy Taylor","Naples","FL","https://facialnaples.com/","(239) 986-5358",5,15,85,"missing_image",true,true,1
+"e4f23d0a-a9cc-4961-9a52-3422b29a0e98","SkinCo Naples","Naples","FL","https://naplesskinco.com/","(239) 986-9096",5,74,85,"missing_image",true,true,1
+"1a29f115-c8f3-4422-9a8f-acedb950e65c","Naples Laser Studio","Naples","FL","https://napleslaserstudio.com/","(239) 397-9177",5,55,85,"missing_image",true,true,2
+"b8a18106-1272-4428-af6e-98f715c8430e","Sagewood Institute","Naples","FL","http://www.sagewoodfl.com/","(239) 434-9710",5,31,85,"missing_image",true,true,1
+"711cd8e3-5b13-4eb4-aa61-5f8bdf586b84","Dr. Charina Yango Cadavos Integrity Medical & Aesthetics","Naples","FL","https://integritymedicalphysicians.com/","(239) 497-0365",5,34,85,"missing_image",true,true,2
+"4f02d54a-3ee5-4b78-9c0c-46a6a259b713","Optimal Wellness","Naples","FL","https://www.optimalwellnessnaples.com/","(239) 360-6253",5,448,85,"missing_image",true,true,1
+"e3a4833f-3c28-4628-868f-e5d3f2dc9595","Hester Pediatric Dentistry","Naples","FL","https://hesterpediatricdentistry.com/","(239) 234-6325",5,74,85,"missing_image",true,true,1
+"5a7bb6af-689b-4205-b306-e4e95ad48337","BodyMorph MD - Naples","Naples","FL","https://bodymorphmd.com/naples/?utm_source=google&utm_medium=organic&utm_campaign=gmb-naples","(914) 953-2955",5,11,85,"missing_image",true,true,1
+"9569ff8d-0b0c-4e44-b141-e5ef0d3817d5","Anavaya Med Spa","Naples","FL","https://anavayamedspanaples.com/","(239) 234-6001",5,127,85,"missing_image",true,true,1
+"651dee78-2a8d-4b08-9c90-bb08fc69f5b4","Fifth Avenue Wax Center and Spa","Naples","FL","https://www.vagaro.com/fifthavenuewaxcenter","(239) 234-2823",5,121,85,"missing_image",true,true,2
+"72cba1f8-4fd7-4bbf-9030-e9472073d648","Von & Co Medical Aesthetics Studio","Naples","FL","http://www.vonandcoaesthetics.com/?utm_campaign=gmb","(239) 448-3897",5,80,85,"missing_image",true,true,1
+"b6fd45fa-b209-4c52-b290-8dd03699d787","Reset Wellness Lounge & IV Therapy","Naples","FL","https://resetwellnesslounge.com/?utm_source=gbp&utm_medium=organic&utm_campaign=profile","(239) 234-6854",5,95,85,"missing_image",true,true,1
+"c2bec156-b4cb-4a91-9e99-06c5dec1a334","Project Glammers","Naples","FL","https://irenegladsteinmd.com/","(877) 208-2882",5,21,85,"missing_image",true,true,1
+"52d88007-9ec2-4ecc-83c9-1e4dcfe2eb7b","Deanna Carell Aesthetics + Acupuncture","Naples","FL","https://www.deannacarell.com/locations/naples-fl","(239) 784-7660",5,39,85,"missing_image",true,true,1
+"cd111cda-6203-4b2a-adb4-c10ccc7df8f2","Pure Beauty Salon & Aesthetics Lounge","Naples","FL","http://www.purebeautynaples.com/","(239) 434-0770",5,88,85,"missing_image",true,true,2
+"dadb86ce-ffc0-47b5-8ef9-3b7a0deb2bbd","The Woodruff Institute for Dermatology & Cosmetic Surgery","Naples","FL","http://www.thewoodruffinstitute.com/","(239) 307-4605",5,407,85,"missing_image",true,true,1
+"d8c0fc69-754c-4d38-9eec-d834696b7f6e","Prime IV Hydration & Wellness - Central Naples","Naples","FL","https://primeivhydration.com/locations/florida/gateway-fl/","(239) 326-6837",5,169,85,"missing_image",true,true,2
+"35c6b217-ec6f-45df-b48b-36d5616d5b28","Med Spa on 5th","Naples","FL","https://www.medspaon5th.com/","(239) 331-3693",5,16,85,"missing_image",true,true,1
+"edf85692-2003-4430-9003-29a4b67c6a19","Terra Dō Sol Med Spa","Miami Gardens","FL","https://tdsmedspa.com/","(305) 525-7826",5,88,85,"missing_image",true,true,1
+"f7ff3d68-57a9-4da7-ad9d-634c75267bc4","Terra Salvet Spa","Miami Gardens","FL","https://pocketsuite.io/book/terrasalvetspa","(954) 858-8201",5,13,85,"missing_image",true,true,1
+"68a3b849-6ad6-4ddf-950f-1cf474b11f21","Impact Glamour Med Spa | Lashes | Brows","Miami Gardens","FL","https://www.vagaro.com/impactglamour/services","(786) 604-3595",5,574,85,"missing_image",true,true,3
+"68ed1d0c-f426-4bbc-9e43-38214e8ba91c","Destiny Med Spa","Miami Gardens","FL","http://www.destinymedspa.com/","(305) 800-5476",5,377,85,"missing_image",true,true,1
+"3fa70bda-6676-459a-b84d-eb8e0d6fce56","Javier G. Lugo MD","Naples","FL","https://javierlugomd.com/","(239) 263-4133",5,157,85,"missing_image",true,true,1
+"cdc0d3af-732f-4623-aa08-59702c1403d2","OMNI Balanced Life Center","Naples","FL","https://omninaples.com/","(239) 426-6226",5,142,85,"missing_image",true,true,1
+"5078a873-657f-4fd6-ace2-cdbcd7771d3d","iBrows and beauty","Naples","FL","http://www.ibrowsandbeauty.com/","(239) 228-6987",5,115,85,"missing_image",true,true,1
+"72a96299-2e2b-4319-822a-048df68cb41b","FACE FOUNDRIÉ - Naples","Naples","FL","https://www.facefoundrie.com/location/naples","(239) 777-2013",5,268,85,"missing_image",true,true,1
+"ced488a5-9c6e-4036-8f32-75f1e7087518","Joli Visage Naples","Naples","FL","https://www.noneedleneeded.com/pages/joli-visage-spa-promo-page#bookingBlock","(239) 234-6855",5,46,85,"missing_image",true,true,1
+"f4201912-1b3d-43f2-9bdc-4713f58fe0fe","Cura Holistic Health and Massage Center by TEO-SSAGE, INC.","Naples","FL","http://www.feelhealed.com/","(239) 450-4325",5,18,85,"missing_image",true,true,1
+"98a6d986-6143-4a94-9601-673e2e048b72","5th Avenue Spa","Naples","FL","https://www.5thavenuespafl.com/","(239) 980-1641",5,19,85,"missing_image",true,true,1
+"296b7df2-38bd-4929-9dab-ac968c1d2245","TIME 4 U Naples","Naples","FL","https://www.time4unaples.com/","(844) 848-7935",5,15,85,"missing_image",true,true,1
+"eb687c54-0b2b-40e1-bb3a-6c46061c4463","Serenity Spa and Massage","Naples","FL","https://serenitymassage-naples.com/","(239) 403-1000",5,219,85,"missing_image",true,true,1
+"b9238179-546f-48bb-98d1-b0baba81a8da","Infinity Massage and Spa","Naples","FL","https://naplesinfinityspa.com/","(239) 919-3557",5,42,85,"missing_image",true,true,1
+"673e1340-91cf-4e31-897a-174827def204","Spa On Fifth","Naples","FL","https://www.innonfifth.com/spa-wellness/?utm_source=gmb-spa&utm_medium=organic&utm_campaign=gmb","(239) 280-2777",4,13,85,"missing_image",true,true,1
+"937be424-1a35-4b93-a18a-afe7b0e663ce","Dr. Orlando Fernandez","Estero","FL","http://www.endocrineflorida.com/","(239) 301-0105",3,94,85,"missing_image",true,true,1
+"8f5abb7a-f188-45f6-8e8e-c8b623a20a47","Naples Non-Surgical Body Sculpting","Naples","FL","https://www.flharmony.com/naples-non-surgical-body-sculpting","(239) 596-4801",5,40,85,"missing_image",true,true,1
+"a1f9ea9b-72dd-442b-ae07-6a9042ba2884","Salons by JC Naples","Naples","FL","https://salonsbyjc.com/location/florida-naples/","(239) 290-2894",5,67,85,"missing_image",true,true,1
+"df2c4a7c-933d-484b-af46-9b59fbf3035f","The Woodruff Institute for Dermatology & Cosmetic Surgery","Estero","FL","http://www.thewoodruffinstitute.com/","(239) 498-3376",5,323,85,"missing_image",true,true,2
+"e50cd147-80df-4a4e-9f7d-1db8c3927258","Bella Facial Lounge","Naples","FL","http://bellafaciallounge.com/","(239) 298-0661",5,40,85,"missing_image",true,true,1
+"832842c8-6f3e-446b-88ae-d2d0220c2c49","Kaitlyn A. Benjamin, MMS, PA-C","Naples","FL","https://www.kirschderm.com/kaitlyn-benjamin/","(239) 300-9767",5,32,85,"missing_image",true,true,1
+"7790f065-a818-4515-91bc-51d7a4591ed1","Dermatology Specialists of Naples","Naples","FL","http://www.cstrohmeyer.com/","(239) 261-2255",5,18,85,"missing_image",true,true,1
+"398d9123-ec0b-47bf-bae9-59607d827054","Houck Dermatology","Estero","FL","https://www.houckdermatology.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp&utm_term=Houck-Dermatology-Estero&utm_content=website","(239) 390-3376",5,352,85,"missing_image",true,true,1
+"beb565ff-527d-4d3c-a78a-1a3aca7efa3e","Dr Mel Irvine","Estero","FL","http://drmelirvine.com/","(239) 351-5663",5,42,85,"missing_image",true,true,1
+"42e1ec6c-2907-4e47-b1d1-7b151d34282b","Sola Salons Coconut Point","Estero","FL","https://www.solasalonstudios.com/locations/coconut-point?utm_source=gmb&utm_medium=organic","(239) 331-9958",5,57,85,"missing_image",true,true,1
+"7ac50668-0af7-405c-ac99-3e36ee89fd4e","Starz Pediatrics - Primary & Urgent Care","Estero","FL","http://www.starzpeds.com/","(239) 966-7827",5,230,85,"missing_image",true,true,3
+"818e5ccd-69ae-4064-901e-25d60c4e975b","GIVE SKIN CARE","Estero","FL","https://giveskincare.glossgenius.com/","(239) 297-8748",5,11,85,"missing_image",true,true,2
+"e91cd844-115b-4ede-8d15-fb9a7f61c412","Restore Hyper Wellness","Estero","FL","http://www.restore.com/locations/fl-estero-fl047?utm_source=gmb&utm_medium=Yext&y_source=1_NTMwODg0ODEtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D","(239) 301-0907",5,138,85,"missing_image",true,true,2
+"22d17454-71f7-42e0-a287-9545c9781036","Spa Renova","Estero","FL","https://spa-renova.com/","(239) 676-7340",5,52,85,"missing_image",true,true,1
+"5c29eaf3-e857-485f-9f04-bfeb6c141189","Face It Botox Bar Aesthetics & Wellness - Estero","Estero","FL","https://www.faceitbotoxbar.com/","(239) 323-3737",5,249,85,"missing_image",true,true,1
+"7f56bb00-cb64-44cf-84c5-91ba9c09d976","Riverchase Dermatology - Estero","Estero","FL","https://www.riverchasedermatology.com/location/estero/?utm_source=google&utm_medium=organic&utm_campaign=RCD_GMB_Estero&utm_id=01","(239) 237-0770",5,873,85,"missing_image",true,true,1
+"9adc8275-00fe-4f4b-baaa-b16d41504279","Massage Envy","Estero","FL","https://locations.massageenvy.com/florida/estero/8001-plaza-del-lago-drive.html?utm_source=GMB&utm_medium=useractions&utm_campaign=website","(239) 947-3689",5,1266,85,"missing_image",true,true,1
+"1c25f738-64bf-4e18-986e-5ba133a8bce5","Lash and Company - Estero","Estero","FL","https://www.lashandcompany.com/estero/","(239) 544-5274",5,51,85,"missing_image",true,true,1
+"6c17f802-6b95-4d2e-a632-4c5829ec04ba","FACE FOUNDRIÉ - Estero (Coconut Point)","Estero","FL","https://facefoundrie.com/location/estero-coconut-point/","(239) 944-0287",5,178,85,"missing_image",true,true,1
+"dd85ea11-a452-48ec-91fd-88b4ca53e7fe","MASSAGE POINT","Estero","FL","http://massagepoint.co/massage-therapy-estero-florida/","(239) 949-4847",5,285,85,"missing_image",true,true,1
+"217a1143-d645-4a77-8061-c381a8fd1db2","Revive & Renew Med Spa","Estero","FL","https://reviveandrenewmedspa.com/","(239) 799-1102",5,14,85,"missing_image",true,true,2
+"ab81d32a-8963-4918-bb12-f6fb132e08ae","Hand & Stone Massage and Facial Spa","Estero","FL","https://handandstone.com/locations/estero-corkscrew-village/?utm_source=google&utm_medium=organic&utm_campaign=businesslisting","(239) 999-6564",5,439,85,"missing_image",true,true,1
+"543c1d8c-7540-4cc0-9727-5df95d71ea53","Gulf Coast Medical Associates","Estero","FL","https://www.mygulfcoastmedical.com/","(239) 301-0968",5,17,85,"missing_image",true,true,1
+"1342a025-47a7-4737-b7b0-3cb2ed848741","Ulta Beauty","Estero","FL","https://www.ulta.com/stores/estero-fl-200","(239) 992-0361",4,295,85,"missing_image",true,true,1
+"8c88dbf4-2e5a-4b9b-9b6f-12d9671a2c0a","The Laser Lounge Spa Estero","Estero","FL","https://estero.thelaserloungespa.com/","(239) 728-1234",5,399,85,"missing_image",true,true,2
+"ebf40b85-10e0-4432-9752-2120097f8475","Spavia Day Spa - Estero","Estero","FL","https://esterofl.spaviadayspa.com/","(239) 900-1211",5,451,85,"missing_image",true,true,1
+"e992b2a1-d25a-484f-a850-c1368c8c155b","MassageLuXe Estero","Estero","FL","https://massageluxe.com/locations/estero-fl/","(239) 244-8789",5,230,85,"missing_image",true,true,1
+"5a9fb2db-8c13-41b0-b444-97854bc26ddd","Bonita Beauty & Wellness Academy","Estero","FL","https://www.bonitaspringscareers.com/","(239) 495-0714",5,29,85,"missing_image",true,true,1
+"0cf3fec3-a0e4-4488-97fb-eb1a181230e0","SHINE Medical Aesthetics","Alpharetta","GA","https://shinemedstudios.com/","(470) 470-9986",5,139,85,"missing_image",true,true,4
+"afc65208-fc1f-4ba2-b079-96bb9c978f73","Alpha Aesthetics and Health","Alpharetta","GA","https://alphaaesthetichealth.com/","(470) 610-4550",5,12,85,"missing_image",true,true,5
+"b056a5bd-a395-40b3-83f5-01e01dfa4ca1","blue sky laser & tox","Arlington","VA","https://www.blueskylasertox.com/","(703) 966-3223",5,176,85,"missing_image",true,true,1
+"1be892ef-32b9-4a98-96c7-145fbc2021f2","Georgetown Rejuvenation Med Spa","Arlington","VA","https://gtskincare.com/","(703) 522-2078",5,178,85,"missing_image",true,true,2
+"af865798-4edd-4470-b05d-42a7883a6a15","Honey Skincare Studio - Medical Spa","Arlington","VA","http://www.honeyskincarestudio.com/?utm_source=GMBlisting&utm_medium=organic&utm_campaign=gmb","(703) 991-2705",5,581,85,"missing_image",true,true,2
+"88006854-3723-470e-ac24-487d5e5d7ddd","The Spa Clinic","Arlington","VA","http://www.spaclinic.net/","(703) 745-5132",5,46,85,"missing_image",true,true,3
+"2a240141-de8a-4cbb-93e7-f6856c644e41","Sculpted Contours MedSpa","Alpharetta","GA","https://sculptedcontours.com/","(404) 872-8578",5,75,85,"missing_image",true,true,4
+"f6e34129-5743-40f4-b84d-33d860e5f9eb","Skën Med Spa","Arlington","VA","https://www.skenmedspa.com/","(703) 862-4236",5,118,85,"missing_image",true,true,1
+"e16b2023-965a-4d97-8af3-6f5025fd5623","Infini Spa","Arlington","VA","https://in-medspa.com/","(786) 543-7410",5,39,85,"missing_image",true,true,1
+"7880ec47-128b-44ba-9b5f-d060c80e254d","Alé Aesthetics","Atlanta","GA","https://www.aleaesthetics.com/","(404) 939-3360",5,54,85,"missing_image",true,true,3
+"666bba62-8eb4-4644-8ff7-77d933cfab00","Clinical Dermatology Center","Arlington","VA","https://clinicaldermatologycenter.com/","(703) 936-7115",5,498,85,"missing_image",true,true,2
+"e13c9354-9e81-4af7-8ace-d6ead47ced3b","SkinDC","Arlington","VA","http://www.skindcderm.com/","(703) 966-7127",5,1465,85,"missing_image",true,true,2
+"d760721e-6405-4d42-98f8-bd74c2f5afac","Heartfelt Facials by Jana, LLC","Naples","FL","http://www.heartfeltfacials.com/","(239) 961-2580",5,22,85,"missing_image",true,true,1
+"4bab8ae0-1bb1-425a-89ae-6bf6d87a878c","4Ever Young Med Spa & Wellness Center - Atlanta Midtown","Atlanta","GA","https://4everyoungantiaging.com/atlanta-midtown/?utm_source=google&utm_medium=organic&utm_campaign=gbp-atlanta-midtown","(470) 943-4448",5,1010,85,"missing_image",true,true,6
+"cb77f032-261a-4eca-b1d7-01124899b1c4","Laser Aesthetics Career Institute","Atlanta","GA","https://laseraestheticscareer.com/","(229) 699-6232",5,124,85,"missing_image",true,true,2
+"69f88a5b-4fd3-439c-9595-d052a6df1c7a","Skinology Aesthetics","Atlanta","GA","https://www.skinologyaestheticsatl.com/","(404) 939-2395",5,56,85,"missing_image",true,true,1
+"737e0703-f46e-47c6-8bee-204b30a7770a","CULT Aesthetics","Atlanta","GA","https://www.cultaesthetics.com/atlanta/","(678) 812-2212",5,288,85,"missing_image",true,true,1
+"9b9bbeea-9c11-4470-9262-9f00857ce7f5","Rejuva Glow Beauty","Bethesda","MD","https://rejuvaglowbeauty.zoca.com/?utm_source=googlemaps&utm_medium=googlemaps&utm_campaign=googlemaps","(240) 380-4294",5,61,85,"missing_image",true,true,3
+"f7f6961c-1743-459a-ae2b-7658dcc017fe","Amethyst Aesthetics","Henderson","NV","https://vagaro.com/amethystaesthetics","(702) 490-8046",5,19,85,"missing_image",true,true,2
+"42032ecf-6d74-4d8b-b3eb-15c9c9f400e6","Veristic Aesthetics","Henderson","NV","http://www.veristicaesthetics.com/","(702) 623-9424",5,52,85,"missing_image",true,true,1
+"15dc937c-9ada-4050-8943-f0771cfe1fdb","NkdSkin Aesthetics Lounge","Henderson","NV","http://www.nkdskin.com/","(702) 370-2527",5,43,85,"missing_image",true,true,2
+"31b7a6ac-ee4f-4ee7-acdc-aa6d1d657615","Bella Bliss Med Spa","Bethesda","MD","https://www.bellablissmedspa.com/","(301) 300-0914",5,58,85,"missing_image",true,true,2
+"79cce0c9-51b5-4a42-83a1-c0f203539c75","Excelsior Medspa","Bethesda","MD","http://www.excelsiormedspa.com/","(240) 753-7310",5,25,85,"missing_image",true,true,2
+"500e6db9-dd03-4aad-afda-4e2daefbf515","Icon MD Medical Spa + Laser Center Boston","Boston","MA","https://www.iconmd.com/massachusetts/","(617) 982-6781",5,286,85,"missing_image",true,true,2
+"50cd6918-964e-4042-9939-b84c0ce8cf41","Dynamic 3 Med Spa","Buckhead","GA","https://skincareclinicatlanta.com/","(678) 990-8462",5,37,85,"missing_image",true,true,5
+"21db532d-2d8e-486b-a8fd-a8a2491ab510","eLeMeNtal aesthetics","Boston","MA","https://elemental-aesthetics.com/","(617) 829-3500",5,21,85,"missing_image",true,true,3
+"c2f10a82-0f60-4f58-914f-65fc77ef7328","Regenerative MedSpa of Buckhead","Buckhead","GA","https://www.regenmedspabuckhead.com/","(404) 816-8557",5,76,85,"missing_image",true,true,2
+"a7d5e620-26fc-48de-8ed2-5f7e92f87c7f","VivaMD Clinic","Buckhead","GA","https://www.vivamd.org/","(404) 618-4142",5,114,85,"missing_image",true,true,3
+"8da32101-7fd1-4b9e-8826-610ae9e9d274","Breeze Med Spa","Chandler","AZ","http://www.breezemedspaaz.com/","(480) 262-9218",5,236,85,"missing_image",true,true,4
+"ca805dd8-bf00-46c0-9918-56dba2858de0","Emory Aesthetic Center","Buckhead","GA","https://www.emoryhealthcare.org/locations/offices/emory-aesthetic-center.html?&utm_campaign=brand_all_ra_gmb-locations&utm_source=google&utm_medium=gmb&utm_content=gmb_locations?&utm_campaign=brand_all_non&utm_source=google&utm_medium=gmb&utm_content=gmb-locations","(404) 778-6880",4,37,85,"missing_image",true,true,1
+"1b94812b-a299-41f8-977a-56bc42b34a23","LaVida MedSpa – Chandler","Chandler","AZ","http://www.lavidamedspa.com/","(480) 629-4985",5,997,85,"missing_image",true,true,2
+"3d45236b-5b59-4742-b877-eb94527f2036","Precision Skin Studio","Chandler","AZ","http://precisionskinstudio.com/","(623) 777-8270",5,93,85,"missing_image",true,true,1
+"24aaae22-843e-421d-acb8-3566ec2e3fa6","Desert Glow Aesthetics","Chandler","AZ","https://www.facebook.com/desertglowaesthetics/","(951) 240-9619",5,41,85,"missing_image",true,true,1
+"bf49da63-edba-44f6-a131-2720bb930a42","Elysium Aesthetics + Longevity","Chicago","IL","https://elysiumchicago.com/?utm_source=google&utm_medium=localsearch&utm_campaign=gmb","(312) 888-9361",5,531,85,"missing_image",true,true,5
+"cba1ddcb-6246-4ef2-afdc-c84a31c06cd9","Skin Lab","Charlotte","NC","https://skinlabnc.com/","(980) 309-3768",5,74,85,"missing_image",true,true,4
+"78e5806b-3eee-439f-8ca0-355671f668d0","Pure Med Spa","Chicago","IL","https://www.puremedicalspa.us/locations/north-dearborn-chicago/","(312) 312-7873",5,761,85,"missing_image",true,true,6
+"1cc92d17-8882-45bc-8a90-776091345411","Liv Aesthetics Chicago","Chicago","IL","https://www.livaestheticschicago.com/","(312) 833-9004",5,72,85,"missing_image",true,true,4
+"861b6b96-bd2e-4873-89ed-c96ae3d4c292","Beyond Skin Aesthetics","Columbus","OH","https://beyondskinaesthetics.com/contact/#","(614) 532-6423",5,281,85,"missing_image",true,true,5
+"4fbac6d9-1bc8-4a9a-aab8-21482fb543f6","SIMMETRIA MedSpa","Columbus","OH","https://simmetria.us/","(617) 412-7323",5,101,85,"missing_image",true,true,4
+"40d11b06-45ec-413f-8d68-e94a2687b4fe","Reverse Aesthetics","Columbus","OH","http://www.reverse-aesthetics.com/","(614) 656-4000",5,280,85,"missing_image",true,true,2
+"9c4744b5-4095-4a70-a2d5-df6d8d1b0eb7","Skin Laundry - Arsenal Yards","Dallas","TX","https://www.skinlaundry.com/locations/arsenal_yards","(617) 849-9502",5,170,85,"missing_image",true,true,2
+"f4afb11a-75f5-4288-9379-53d15b6661f5","Skin! Medical Aesthetics","Denver","CO","http://www.skindenver.co/","(720) 902-9597",5,98,85,"missing_image",true,true,1
+"3a561ee2-efd6-4746-817b-fd0c0c3cf803","Highline Aesthetics Denver","Denver","CO","https://highlineaestheticsdenver.zoca.com/?utm_source=googlemaps&utm_medium=googlemaps&utm_campaign=googlemaps","(720) 778-0189",5,88,85,"missing_image",true,true,5
+"a6555aa4-f2e3-4e36-aed8-79dccc441f36","Aesthetic Surgery & Dermatology of Cherry Creek","Denver","CO","https://www.adriennestewartmd.com/","(303) 333-6060",5,509,85,"missing_image",true,true,4
+"3fbb27d1-4bf7-45c2-9158-bc7b13e9be0b","Natura Med Spa & IV Bar - Denver","Denver","CO","https://naturamedspaivbar.com/","(720) 599-4126",5,332,85,"missing_image",true,true,2
+"5ad6334e-4171-4eab-91c5-be7d312581c8","Aspire Medical Spa - RiNo","Denver","CO","https://denvermedispa.com/","(720) 670-2983",5,25,85,"missing_image",true,true,1
+"d33a7dc4-6a8c-4a4e-ad65-92eac200f708","VITAHL Medical Aesthetics","Denver","CO","https://vitahl.com/","(303) 388-7380",5,237,85,"missing_image",true,true,3
+"7fcc0147-c1e6-4f05-96cb-e75655aae24d","H2 Wellness & MedSpa","Fort Worth","TX","https://h2medspa.com/","(817) 241-2485",5,76,85,"missing_image",true,true,3
+"dab9cc1d-3d3d-40ee-8c28-7f009ef907bd","Vitalyc Medspa | Fort Worth","Fort Worth","TX","https://www.vitalyc.com/locations/fort-worth/?utm_source=google&utm_medium=organic&utm_campaign=google+business+profile","(817) 670-3283",5,378,85,"missing_image",true,true,3
+"70b56303-c1f0-4911-a892-c52c7dbc5ee1","Deep Blue Med Spa","Long Island City","NY","https://www.deepbluemedspa.com/?utm_source=googlemybusiness&utm_medium=organic&utm_campaign=deep+blue+med+spa+garden+city","(516) 665-1922",5,323,85,"missing_image",true,true,3
+"f1331ce3-229f-4659-9dd3-0a52c8566a64","LL Blossoms Cosmetic Clinic","Long Island City","NY","http://www.llbny.com/","(917) 522-1299",5,30,85,"missing_image",true,true,1
+"c1caa473-cfa4-41cf-9279-1fd2fd8e583f","Perfect Med Spa","Long Island City","NY","https://perfectmedspa.com/","(516) 636-5758",5,61,85,"missing_image",true,true,4
+"d3af5255-8a62-478c-99a8-74cf0726a09e","Advanced Aesthetics - Centennial","Las Vegas","NV","https://advancedaestheticslv.com/?utm_source=gbp&utm_medium=organic","(702) 838-4644",5,677,85,"missing_image",true,true,1
+"6589d9a5-ddfd-4a19-af3a-6710f40f7588","Glamour Me Medical Spa","Henderson","NV","https://glamourmemedspa.com/","(702) 481-3949",5,60,85,"missing_image",true,true,2
+"3ce71dec-0ae1-4795-a7da-e3e068fff777","Dallas Pro Aesthetics","Dallas","TX","https://dallasproaesthetics.com/","(945) 312-1585",5,60,85,"missing_image",true,true,1
+"4fcd8ea5-f1c4-4c29-a8b5-d920ce4e4bc8","Bella MedSpa - Dallas MedSpa","Dallas","TX","http://www.bellamedspadfw.com/","(972) 762-4636",5,501,85,"missing_image",true,true,1
+"80e88889-ff41-4f93-ba37-93374635a9e7","Modern Medical Spa","Dallas","TX","http://www.modernmedicalspa.com/","(972) 331-7727",5,109,85,"missing_image",true,true,1
+"9661630b-1adb-4037-8619-08b535ef9409","the L.A.B. med spa Dallas","Dallas","TX","https://www.thelabmedspa.com/","(817) 251-1000",5,57,85,"missing_image",true,true,2
+"d8651566-9f5a-429d-b61c-90bb2829ce89","D'Allure Medspa","Dallas","TX","https://www.dalluremedspa.com/?utm_source=gmb_auth","(214) 442-0011",5,172,85,"missing_image",true,true,1
+"b7161f3f-58c1-473d-846c-7ca763cf356e","ALTA Medispa","Beverly Hills","CA","https://www.altamedispa.com/","(424) 202-2868",5,59,85,"missing_image",true,true,1
+"9459c576-764f-4f5c-a9ef-424af26d352c","Beverly Wilshire Aesthetics Beverly Hills Medical Spa","Beverly Hills","CA","https://www.bwaesthetics.com/medical-spa-beverly-hills/","(424) 453-5340",5,127,85,"missing_image",true,true,3
+"abee8ab6-a175-4d50-a914-0432d9108ddc","Elite Med Spa of Texas","Dallas","TX","https://elitemedspaoftexas.com/","(214) 241-4475",5,31,85,"missing_image",true,true,2
+"572b70dd-b374-4cab-8e79-25f80acf4423","Beverly Hills Plaza Medi Spa","Beverly Hills","CA","https://plazamedspa.com/","(310) 254-2371",4,209,85,"missing_image",true,true,2
+"441551f4-9689-41a3-8fd0-d00f78d873d9","Beverly Hills Beauty & Aesthetics","Beverly Hills","CA","http://www.beverlyhillsbeauty.com/","(310) 367-3024",5,101,85,"missing_image",true,true,1
+"ffd85685-5ae1-4731-99a1-ecd918ce11f3","BevMed LA","Beverly Hills","CA","https://www.bevmedla.com/","(310) 879-1066",5,100,85,"missing_image",true,true,1
+"89893b8b-be4b-4f65-92c4-d8eda91f08c5","Skin Verse Medical Spa","Beverly Hills","CA","https://skinversemedspa.com/","(424) 255-9289",5,224,85,"missing_image",true,true,4
+"19e0b444-0547-42ce-ae41-e13b999dafd3","Beverly Hills Aesthetic Medics","Beverly Hills","CA","http://bhaestheticmedics.com/","(310) 273-4247",4,66,85,"missing_image",true,true,2
+"7b646035-0b03-4332-b8a3-ad17d2ad436a","Health Med Spa IV Therapy – Los Angeles","Los Angeles","CA","https://www.healthmedspa.com/","(323) 604-9868",5,75,85,"missing_image",true,true,1
+"ec6aa1fe-e14f-4cfb-8103-4768f1a1bca7","Bright Medical Spa","Los Angeles","CA","http://www.bright-medical-spa.com/","(424) 653-9278",5,82,85,"missing_image",true,true,4
+"a63c5e79-3544-4e36-b94a-ec2b5d6f42fc","MedBeautyLA","Los Angeles","CA","https://medbeautyla.com/","(213) 640-4008",5,142,85,"missing_image",true,true,4
+"f538333d-7142-4bbe-b7bd-89b9eb60919e","Luxe Aesthetic Surgery & Medical Spa -","Beverly Hills","CA","https://luxeaestheticsurgery.com/","(310) 402-2849",5,43,85,"missing_image",true,true,1
+"e4101a6d-4ef8-46ce-adbc-0248bd0ed084","Cabana Medical Spa","Austin","TX","https://www.cabanamedspa.com/","(512) 522-8661",5,49,85,"missing_image",true,true,1
+"dca5908b-e7ff-4267-9ccf-d40471c9c300","Alabama Med Spa By Voupre","Houston","TX","https://www.alabamaspahtx.com/","(832) 504-0575",5,342,85,"missing_image",true,true,1
+"700e04a3-27aa-456c-a792-d5da11917895","Sousan Med Spa","Houston","TX","https://sousanmedspahouston.net/","(713) 527-9878",5,168,85,"missing_image",true,true,1
+"ed1be6b8-66d4-43e4-97d6-c47da46decbd","Persona Medical Spa","Houston","TX","http://personamedicalspa.com/","(713) 630-0772",5,146,85,"missing_image",true,true,2
+"49b360ae-e888-49ac-bdcb-f2c7f9fe7ca3","Hi Beautiful Aesthetics","Houston","TX","http://www.hibeautifulaesthetics.com/","(281) 846-6895",5,436,85,"missing_image",true,true,1
+"29110019-42cb-42f3-b424-8f1828947434","Alpha Medical Aesthetics","Summerlin","NV","https://alphamedicalaesthetics.com/","(702) 683-2156",5,16,85,"missing_image",true,true,1
+"101959d6-673d-4030-88ee-910301fc8190","Advanced Aesthetics","Summerlin","NV","http://advancedaestheticslv.com/?utm_source=gbp&utm_medium=organic","(702) 838-4644",5,2427,85,"missing_image",true,true,1
+"80340247-610d-4c36-956e-4a4d82fc054b","Nuance Aesthetics & Plastic Surgery","Summerlin","NV","http://nuancelasvegas.com/","(702) 762-3223",5,18,85,"missing_image",true,true,2
+"f6c088a2-e32f-482e-988a-d6aebc4f09b4","Flawless Medspa Las Vegas","Summerlin","NV","http://www.flawlessmedspas.com/","(702) 337-2526",5,221,85,"missing_image",true,true,1
+"3e6e6bce-0d21-474f-9950-2dfca90b797c","Las Vegas Aesthetics®","Summerlin","NV","https://www.lvamedspa.com/","(725) 527-8211",5,218,85,"missing_image",true,true,3
+"e113b713-759b-4018-8138-ab03445be0b4","CeR Aesthetics","Summerlin","NV","https://ceraesthetics.com/","(702) 666-1961",5,28,85,"missing_image",true,true,1
+"f1787c81-7eda-4a1b-86ee-d14ce85548ab","White Coat Aesthetics","Summerlin","NV","https://whitecoataesthetics.com/","(702) 919-0017",5,205,85,"missing_image",true,true,3
+"d0a9118a-e74c-42c8-8836-d39117cc1947","The Aesthetics Lab","Summerlin","NV","https://theaestheticslabmedspa.com/","(702) 640-0689",5,108,85,"missing_image",true,true,1
+"543ec48e-eead-46c7-bb00-f57c60c08da9","Michelle Aesthetics","Minneapolis","MN","https://michelle-aesthetics.square.site/","(612) 900-9999",5,21,85,"missing_image",true,true,1
+"ae7e7067-4e51-4344-af9a-637e6fc26d56","Nostalgia Aesthetics","Minneapolis","MN","https://www.nostalgiaaesthetics.com/","(952) 222-7448",5,46,85,"missing_image",true,true,4
+"ded3217e-c89e-4200-8b50-9baae70021f2","Smiley Aesthetics Medical Spa – Botox & Weight Loss Clinic Nashville West","Nashville","TN","https://smileyaesthetics.com/locations/west-nashville/","(629) 276-8951",5,170,85,"missing_image",true,true,4
+"3aee1b0a-9ece-4331-a1de-86ad340181b1","Amálie Aesthetics and Wellness","Nashville","TN","http://www.amalieaesthetics.com/","(615) 982-0829",5,41,85,"missing_image",true,true,1
+"3a380f34-c68f-4267-9acf-bc775bbd3ebc","Smiley Aesthetics Training Facility & Med Spa – Nashville","Nashville","TN","https://smileyaesthetics.com/?utm_source=cumulus&utm_medium=onlinepresence&utm_campaign=gbp","(629) 276-8944",5,222,85,"missing_image",true,true,1
+"cb8a9f9e-0f4a-4dee-9c15-da425250f8fc","BeRejuved Medical Spa & Wellness Studio - NYC","New York City","NY","https://berejuvednyc.zoca.com/?utm_source=googlemaps&utm_medium=googlemapsprofile&utm_campaign=googlemaps","(646) 992-2122",5,631,85,"missing_image",true,true,5
+"6130e43c-6abf-4e31-b8d7-e4a8baa5b8cc","Lexington Aesthetics","New York City","NY","https://lexingtonaestheticsnyc.com/","(646) 483-0203",5,12,85,"missing_image",true,true,1
+"ef65c8e6-b49c-43e1-a1e8-c4f900ef2ec5","MCNYC - The Medical Clinic Spa New York","New York City","NY","http://www.mcnyc.net/","(646) 647-9163",5,32,85,"missing_image",true,true,4
+"153c9a6d-4007-4447-b3d5-b4d1eadbc015","Studio Esthetique Skin & Laser Center NYC","New York City","NY","https://studioesthetique.com/","(212) 671-0606",5,186,85,"missing_image",true,true,3
+"c1998cc0-2bf2-4aea-a5d1-4e2e3515804b","Timeless MedSpa NYC","New York City","NY","https://timelessbyvantage.com/","(212) 931-1877",5,12,85,"missing_image",true,true,3
+"df23cd5f-fe32-4607-a96f-401dea0121b2","Central Park West Med Spa","New York City","NY","https://centralparkwestmedspa.com/","(917) 696-9085",5,18,85,"missing_image",true,true,4
+"2e4ca7ee-9080-4a17-8ef2-412c1f108817","Koru Wellness Aesthetics NYC: Med Spa Upper East Side & Midtown","New York City","NY","http://www.korunyc.com/","(212) 396-3672",5,85,85,"missing_image",true,true,4
+"9ef98720-f3ff-4352-82f4-ff615c081a75","Muguet Aesthetics","Newport Beach","CA","https://muguetmedspa.com/?utm_source=google&utm_medium=organic&utm_campaign=gmb","(949) 385-5449",5,65,85,"missing_image",true,true,1
+"de3d0abf-39cf-41cb-bbdc-bd0058198564","Ann Aesthetics Anti-Aging and Wellness","Newport Beach","CA","https://annaesthetic.net/","(424) 282-0230",5,76,85,"missing_image",true,true,3
+"57deefd6-37c8-4748-95ae-d7296d96cc53","Sea Glass Med Spa","Newport Beach","CA","https://www.seaglassmedspaoc.com/","(949) 648-7964",5,19,85,"missing_image",true,true,5
+"b3cfdae0-e666-4fea-8b32-3efbc613f1fb","Ari Blanc Medical Spa","Philadelphia","PA","https://ariblancmedspa.com/?y_source=1_MjkyMTY4MTktNzE1LWxvY2F0aW9uLndlYnNpdGU%3D","(267) 687-7436",5,134,85,"missing_image",true,true,4
+"fe0aab66-d4e1-47bf-a344-47d8d817025c","Skin Maison Med Spa","Newport Beach","CA","https://www.skinmaison.com/","(949) 484-4401",5,58,85,"missing_image",true,true,2
+"79081bb7-a993-4d58-92ab-e792b725e09d","Yofi Aesthetics","Philadelphia","PA","https://www.yofiaesthetics.com/","(267) 200-2858",5,164,85,"missing_image",true,true,3
+"76f39f08-c2bd-4cb6-bb4e-9895d0d75b63","Rescue Spa","Philadelphia","PA","https://www.rescuespa.com/","(866) 772-2766",5,430,85,"missing_image",true,true,1
+"ed58f20e-5a59-4553-9fdf-6547cd4a9acd","About Face Aesthetics","Philadelphia","PA","https://www.aboutfaceskincare.com/","(215) 923-5001",5,719,85,"missing_image",true,true,4
+"277f3769-81d3-4f91-be51-c3a45db62b1e","Dermacenter Medical Spa","Philadelphia","PA","http://dermacenter.com/","(215) 735-7990",5,52,85,"missing_image",true,true,3
+"a4a40dea-23b7-4344-9ea8-fe77e2b182cc","IGLO Med Spa- Plano","Plano","TX","https://www.iglomedispa.com/","(972) 612-2253",5,13,85,"missing_image",true,true,1
+"42486921-2a78-420a-ba99-ae875d339321","EmmaMac Beauty","Philadelphia","PA","http://www.emmamacbeauty.com/","(484) 961-8272",5,119,85,"missing_image",true,true,3
+"c5e43292-2941-48c7-a2fd-452b11663690","Raven Med Spa","Plano","TX","https://ravenmedspa.com/","(214) 480-4330",5,99,85,"missing_image",true,true,4
+"6e3b277f-2997-4099-910f-e74cbebf2c6a","Uplift Medspa Health & Wellness","Plano","TX","http://upliftmedspa.com/","(972) 665-8664",5,145,85,"missing_image",true,true,1
+"e9024467-58e0-4769-b2a6-1cc812cb6667","The Aesthetic Touch by Raya","Plano","TX","https://www.aesthetictouchbyraya.com/","(949) 323-1639",5,41,85,"missing_image",true,true,3
+"85aaa36d-bbbc-4e92-a6a4-678c88e0f280","Revived Aesthetics","Plano","TX","https://www.revived-aesthetics.com/","(214) 885-7131",5,111,85,"missing_image",true,true,5
+"ddf9614a-d8dd-441d-9f8b-7632fda75a4d","Lift N Fill Aesthetics By Sandra (liftnfill)","Plano","TX","https://liftnfillaestheticsbysandra.janeapp.com/","(469) 769-0108",5,26,85,"missing_image",true,true,3
+"6a103157-0675-430e-8a67-0377c1ad0666","MEDICTECH SPA - MED SPA","San Antonio","TX","https://www.medictechspa.com/","(210) 972-8685",5,492,85,"missing_image",true,true,1
+"f1c6028f-fee7-4d0b-ba9f-627d0ec75ebb","Khronos MedSpa & Laser","San Antonio","TX","http://www.khronosmedspa.com/","(210) 842-7758",5,466,85,"missing_image",true,true,4
+"1122cbce-3f3f-4775-928c-f379eceb8df8","Skin Medical Spa in San Diego | Skin Tightening | Cryo Fat Freezing | Lipo Cavitation","San Diego","CA","https://skinmedicalsd.com/","(858) 203-3422",5,415,85,"missing_image",true,true,1
+"eaa3b510-47ca-4b42-824a-986f896b06c5","ALOderma Med Spa","San Diego","CA","https://alodermaspa.com/","(858) 392-3590",5,136,85,"missing_image",true,true,2
+"b95311af-64d9-4529-8647-cac4b80e0630","Skin Laundry - Arsenal Yards","San Francisco","CA","https://www.skinlaundry.com/locations/arsenal_yards","(617) 849-9502",5,170,85,"missing_image",true,true,2
+"5cd4778d-39b8-4b7c-9ffe-7c0fd85c5113","SDIM & Spa | San Diego Integrative Medicine & Spa","San Diego","CA","https://www.sdimspa.com/","(858) 208-3676",5,68,85,"missing_image",true,true,3
+"a5c9bea4-9b65-4bf7-b731-e7142ca2281a","REJUV Medical","San Francisco","CA","https://rejuvsf.com/","(415) 712-1937",5,87,85,"missing_image",true,true,1
+"00e5e613-8c5c-484f-b4ee-641c25a708a2","Evergreen Aesthetics","San Francisco","CA","http://evergreen-aesthetics.com/","(628) 232-3837",5,57,85,"missing_image",true,true,3
+"b2dd1537-29ed-4126-8dd3-3c830a241cdf","San Francisco Plastic Surgery & Laser Center: Dr. Usha Rajagopal","San Francisco","CA","http://www.sfcosmeticsurgery.com/","(415) 392-3333",5,106,85,"missing_image",true,true,1
+"da5e1958-1b60-46ee-9ffc-b999083c1d96","Element MedSpa","Seattle","WA","https://elementmedicalspa.com/","(206) 569-8631",5,63,85,"missing_image",true,true,2
+"952197d2-c2d7-4fb7-b2f7-4cd005b44dad","And Beauty - Seattle Esthetician","Seattle","WA","https://www.amirraandbeauty.com/","(206) 925-3253",5,25,85,"missing_image",true,true,2
+"3d6ce964-e3a0-44c7-a05d-7697702c1c14","Belle La Vie Med Spa","Tempe","AZ","http://www.bellelaviemedspa.com/","(480) 570-9478",4,18,85,"missing_image",true,true,2
+"2866d176-5f88-4da7-baf2-963657c45efa","Elite Medical Aesthetics","Tempe","AZ","http://elitemedicalaz.com/","(480) 522-8875",5,41,85,"missing_image",true,true,3
+"48eded3d-a253-4566-b66d-852bb1c9332a","Sedora Medical Aesthetics - White Plains MedSpa","White Plains","NY","https://www.sedoramedspa.com/","(914) 902-8087",5,641,85,"missing_image",true,true,2
+"6e10fc79-a8dc-45ab-9537-6e87e189daa0","Elite Beauty Medical Spa","White Plains","NY","http://myelitebeauty.com/","(914) 559-9172",5,100,85,"missing_image",true,true,6
+"9df6714b-c6b8-4c9c-b0bf-f5f0cd33e33a","Embry Aesthetics","Tempe","AZ","http://www.embryaesthetics.com/?utm_source=google&utm_medium=organic&utm_campaign=gmb_listing","(480) 701-3315",5,37,85,"missing_image",true,true,3
+"88c5c371-ed3e-4cd8-b275-959a2f649a1d","About You Aesthetics","White Plains","NY","https://aboutyouaestheticsny.com/","(914) 208-1629",5,22,85,"missing_image",true,true,1
+"ac04aa65-2662-4a04-b501-4be2579f51e5","BBY Aesthetics Lip Blush Studio","Tempe","AZ","https://bbyspa.com/","(602) 600-6723",5,64,85,"missing_image",true,true,2
+"299c4a17-9cc6-43cc-87b1-6534af3e96b3","Skin and Self","White Plains","NY","https://www.myskinandself.com/?utm_source=yext&utm_medium=paid_search&utm_campaign=yext_listings","(914) 948-1989",5,743,85,"missing_image",true,true,3
+"2912b98c-c0d6-45e7-9bb9-3c6b693d6ea4","European Luxury Day Spa","White Plains","NY","http://europeanluxurydayspa.com/","(914) 848-4617",5,197,85,"missing_image",true,true,1
+"b54ac0d2-eb90-4915-93f3-12bb27da6e4f","Park Avenue Medical Spa","White Plains","NY","https://www.parkavenuemedicalspa.com/?utm_source=googlemybusiness&utm_medium=organic&utm_campaign=nyc-armonk","(914) 730-3333",5,221,85,"missing_image",true,true,4
+"732895cd-c8dd-4649-9bec-b376ee396bda","White Plains Spa","White Plains","NY","https://www.whiteplainsspa.com/","(914) 328-2303",5,42,85,"missing_image",true,true,1
+"6dddd79b-5c6f-446c-888d-0fc812766d71","Skinsations Aesthetics","White Plains","NY","https://skinsationsny.com/contact/","(914) 623-2735",5,116,85,"missing_image",true,true,3
+"c61e1139-1d6a-4ad8-a032-9cf676a52fda","Perfect Skin Las Vegas LLC","Summerlin","NV","https://www.perfectskinlasvegas.com/","(702) 542-3128",5,107,85,"missing_image",true,true,1
+"34d8a34e-69ef-4eaa-b8f8-d2b67e179011","Skin by Lovely","Santa Monica","CA","https://www.skinbylovely.com/","(877) 568-3594",5,541,85,"missing_image",true,true,1
+"0d486d42-ade4-4f48-a448-d1295b2fd72a","Skin Artisans at Edina Plastic Surgery","Minneapolis","MN","https://skinartisans.com/","(952) 592-6022",5,445,85,"missing_image",true,true,4
+"5502d5e9-5343-4618-bdb2-a550a19de536","Aesthetica clinic","Los Angeles","CA","http://aestheticabh.com/","(213) 806-9660",5,20,85,"missing_image",true,true,1
+"71f98d49-7ea6-455b-b792-56616829c2bf","re:fresh skin + injectables","White Plains","NY","http://www.refreshskinject.com/","(914) 627-8400",5,46,85,"missing_image",true,true,2
+"22f66e99-443e-4daf-a57b-0858393cc70a","KAO Aesthetics","Santa Monica","CA","https://www.kaoaesthetics.com/","(310) 315-3022",5,35,85,"missing_image",true,true,2
+"edec52a3-9a2e-487a-96a7-a3e12d34bd10","Rouge & Wright Medical Aesthetics","Phoenix","AZ","https://rougeandwright.com/","(602) 469-8693",5,47,85,"missing_image",true,true,4
+"a18837c2-3a36-4f46-bc8b-8ceb95af15f1","SkinCeuticals SkinLab Santa Monica by Cavendish Clinic","Santa Monica","CA","http://www.skinlab-la.com/","(310) 310-2003",5,157,85,"missing_image",true,true,2
+"87900a35-0743-4f33-bf72-a3b783aed38d","Ocean Aesthetics","Santa Monica","CA","https://theoceanaesthetics.com/","(310) 829-4449",5,53,85,"missing_image",true,true,3
+"5444ca75-8bfd-443b-be65-89148ea2ed8b","Deluxe Cosmetic Center","Los Angeles","CA","https://www.deluxecosmeticcenter.com/","(213) 900-9777",5,340,85,"missing_image",true,true,2
+"6397ec91-7133-4e19-aee4-dae2730d9c43","Santa Monica Medical Aesthetics","Santa Monica","CA","https://santamonicamedicalaesthetics.com/","(310) 403-9576",5,35,85,"missing_image",true,true,1
+"e2d85174-408f-4827-9404-468f7804d141","Younique Surgery Center & Medical Spa - Santa Monica","Santa Monica","CA","https://www.youniquecosmeticsurgery.com/?utm_source=google&utm_medium=organic&utm_campaign=google_business_profile&utm_content=santa_monica","(424) 622-0502",5,230,85,"missing_image",true,true,2
+"1c885dd5-66d1-4d7c-9a0e-3de8f50c3afb","Love Aesthetics & Wellness","Scottsdale","AZ","https://www.loveaestheticswellness.com/","(480) 999-8383",5,219,85,"missing_image",true,true,1
+"b3472845-a9c4-4db9-a6ed-746d8b7a1eed","Pearl Med Spa","Scottsdale","AZ","http://pearlmedspa.com/","(480) 409-2717",5,50,85,"missing_image",true,true,4
+"682b44af-2f9a-48e8-8977-3a18664aa923","The Beauty Clinic","Fort Lauderdale",,"http://thebeautyclinic.com/","(954) 719-7123",5,568,85,"missing_image",true,true,1
+"51cfc0df-7f53-4acd-b772-43c4fa0283b0","Liquivida Wellness Center | Lauderdale Beach","Fort Lauderdale",,"https://www.liquivida.com/fort-lauderdale","(954) 909-4998",5,1255,85,"missing_image",true,true,3
+"0d61c294-90a0-4f83-abee-245bbd2b73d3","Dolce Medical Spa Las Olas | Facial | Skin Tightening | Microneedling","Fort Lauderdale",,"http://dolcemedicalspas.com/","(305) 504-7477",5,364,85,"missing_image",true,true,2
+"632934b3-578e-446e-a0e5-0552d620f243","Amaira Med Spa & Surgical","Fort Lauderdale",,"https://amairamedspa.com/","(954) 982-2841",5,340,85,"missing_image",true,true,2
+"6f473eb1-4423-43b2-a923-647c63c08518","Millennium Wellness Center","Fort Lauderdale",,"http://mwellcenter.com/","(954) 699-0699",5,327,85,"missing_image",true,true,1
+"9de93020-e396-4cb5-a7ca-67c7ad235524","Las Olas Med Spa","Fort Lauderdale",,"https://www.topaesthetics.com/?utm_source=GMBlisting&utm_medium=organic&utm_campaign=gmb-medspa","(954) 906-3373",5,412,85,"missing_image",true,true,2
+"36341044-856c-46fb-970b-b2f591e52e78","Preferred Men's Medical Center","Fort Lauderdale",,"https://www.preferredmensmedical.com/","(800) 897-4307",5,182,85,"missing_image",true,true,2
+"471b820d-10ff-4c00-8d16-3956688b215f","Baltic Beauty Cosmedical Centre","Fort Lauderdale",,"https://www.balticbeautycentre.com/?utm_source=GMB&utm_medium=organic&utm_campaign=GMB%20Homepage","(954) 944-1174",5,119,85,"missing_image",true,true,2
+"2b5d0f86-ec94-496c-9dd9-e0ad721b2352","Flourish Aesthetics","Fort Lauderdale",,"https://flourishaesthetics.glossgenius.com/about","(954) 789-1964",5,27,85,"missing_image",true,true,2
+"326a0b87-6c15-4bdb-9964-3068a1f55a79","Hydro Med Spa","Jacksonville",,"https://www.hydromedspa.com/","(904) 567-3998",5,191,85,"missing_image",true,true,1
+"e3860244-519d-4236-a933-b3112d4a6a1f","The Sanctuary Wellness Institute","Jacksonville",,"https://sanctuarywellnessinstitute.com/jacksonville-fl-medical-wellness.php?utm_source=gbp&utm_medium=organic&utm_campaign=gbp-listing-jacksonville","(904) 204-0361",5,194,85,"missing_image",true,true,2
+"99ce9374-4f4a-4389-82ad-2c00133e530e","Luminess Med Spa","Jacksonville",,"http://luminessmedspa.com/","(904) 999-1992",5,57,85,"missing_image",true,true,6
+"3f463496-6561-4599-9317-73bb7f2b5023","Cenegenics Jacksonville","Jacksonville",,"https://cenegenics.com/jacksonville","(904) 674-0404",5,54,85,"missing_image",true,true,1
+"f65675b7-fb43-4d39-8ece-416f5d63ea3f","Avalii Aesthetics","Jacksonville",,"http://www.avalii.com/","(904) 816-0337",5,38,85,"missing_image",true,true,1
+"93c3eeb5-53cf-4c59-8f8c-859197c13550","Face II Face Aesthetics","Jacksonville",,"https://linktr.ee/facellfaceaesthetics","(904) 323-0777",5,35,85,"missing_image",true,true,1
+"c7d949e5-030b-41c3-9ba6-b0f57979164f","REVAMP Wellness Center","Jacksonville",,"https://www.revampmen.com/","(904) 544-7900",5,51,85,"missing_image",true,true,2
+"b4bc4780-0f84-4b20-81ea-6d271202e8c5","Alicia Med Spa","Miami",,"https://www.aliciamedspa.com/","(917) 854-9121",5,132,85,"missing_image",true,true,1
+"1009ff4d-2312-4c92-816f-a8f111233c35","No Filter Medical Spa","Miami",,"https://nofiltermedspa.com/","(305) 619-2651",5,199,85,"missing_image",true,true,3
+"308017ee-3c7a-45d6-a51e-d9c0db2b6102","Miami Skin Spa Aesthetics & Wellness","Miami",,"https://www.miamiskinspa.com/?utm_source=gmb&utm_medium=organic&utm_campaign=directory","(305) 557-1615",5,146,85,"missing_image",true,true,3
+"2eb94bbc-f38d-4167-aaf7-eff2e112af4d","Caruna Med Spa & Laser Center","Miami",,"https://www.carunamedspa.com/","(305) 456-9336",5,154,85,"missing_image",true,true,3
+"9455d976-631c-42b6-a719-e316b5f8515a","The Clinic USA (Training Academy)","Miami",,"http://www.getbasal.com/","(561) 786-5592",5,143,85,"missing_image",true,true,1
+"c6c79531-08d9-47d2-8ab0-04ca0bdb9a7e","Bella Vida Aesthetics & Wellness","Miami",,"https://bellavidaaesthetics.com/","(786) 338-8346",5,149,85,"missing_image",true,true,1
+"22d53362-ad68-42a0-a247-2ae72e3a6339","Brickell Cosmetic Center-Aesthetics & Dermatology","Miami",,"https://brickellcosmetic.com/","(305) 456-6001",5,417,85,"missing_image",true,true,1
+"6688553a-10d8-4f02-91c0-712617469a00","Miami Aesthetic - Pat Pazmiño, MD, FACS","Miami",,"https://miamiaesthetic.com/?UTM_source=GBP_listing&UTM_medium=organic&source=gmb","(305) 576-3443",5,338,85,"missing_image",true,true,2
+"9e0f599c-2b9d-40fc-985c-659fbf28810d","Arviv Medical Aesthetics Miami","Miami",,"https://arvivaesthetics.com/miami/","(813) 855-0111",5,375,85,"missing_image",true,true,5
+"7afdc87a-57b1-479b-b36b-7920d149f855","Lavish Laser Med Spa Midtown Miami","Miami",,"https://lavishlasermedspa.com/?utm_source=google-business-profile&utm_content=midtown","(754) 287-2084",5,25,85,"missing_image",true,true,3
+"c09ebfd5-9fa4-4aa1-b5ce-77a5a1691d76","Aesthetic Medicine Institute of Miami","Miami",,"https://www.aestheticinstitutemiami.com/?y_source=1_NTY1MDI0OTktNzE1LWxvY2F0aW9uLndlYnNpdGU%3D","(305) 807-3133",5,14,85,"missing_image",true,true,1
+"9dce4517-25b2-427f-b911-9a03667634bc","Nectar Aesthetics® Med Spa - Orlando","Orlando",,"https://www.nectaraesthetics.com/orlando-med-spa","(321) 386-2218",5,236,85,"missing_image",true,true,1
+"db08d2a8-b6fa-472e-a4db-d721227564f4","Loren Marsura Medspa","Orlando",,"https://lorenmarsuramedspa.com/home-2/","(407) 497-1514",5,30,85,"missing_image",true,true,1
+"7795df75-748f-4b52-95c9-33f5d76fefe1","ELITE CARE AESTHETIC","Orlando",,"https://elitecareaesthetic.com/","(407) 635-0003",5,46,85,"missing_image",true,true,1
+"fbfdacbb-eb12-49b6-8012-5567873ac60b","Pelham Medical Consulting & Aesthetic Lounge, LLC","Orlando",,"http://www.pelhammed.com/","(407) 893-1181",5,38,85,"missing_image",true,true,1
+"1d1bea31-e478-4dc7-8ce4-bc87b90fba7e","Soft Aesthetics SkinCare Clinic","Orlando",,"http://www.softaestheticsskincare.com/","(407) 517-8669",4,83,85,"missing_image",true,true,2
+"4b537cbd-d354-4562-bf31-94c7f2675909","Hayati Aesthetics And Laser","Orlando",,"https://www.vagaro.com/hayatiaestheticsandlaser","(689) 318-5715",5,38,85,"missing_image",true,true,3
+"c0b69ba5-62e6-4c02-9d38-b1eb9af35415","The Aesthetics Lounge and Spa Downtown Orlando","Orlando",,"https://downtownorlando.theaestheticsloungeandspa.com/","(407) 309-3900",5,32,85,"missing_image",true,true,1
+"8feb9b31-bd47-480f-9d32-646b002ac456","Le Spa by Rosi","Orlando",,"http://www.lespabyrosi.com/","(321) 217-0224",5,27,85,"missing_image",true,true,3
+"3515be86-74b1-4267-9ffe-09faf69ed0ab","Luna Aesthetics & Weight Loss","Orlando",,"http://www.lunaorlando.com/","(407) 586-5677",5,19,85,"missing_image",true,true,1
+"9e311ce6-5713-4719-a4a6-aec36b38a08e","Skin and Face Phoenix","Phoenix","AZ","https://skinandfacephoenix.com/","(602) 428-1775",5,31,85,"missing_image",true,true,4
+"5338a712-3f84-401a-8a85-b52772f742f0","Cienega Medical","Los Angeles","CA","https://cienegaspa.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp-los-angeles","(310) 928-1300",5,760,85,"missing_image",true,true,2
+"53e69307-1bd1-4642-a46f-42960041754b","Hush LA Medspa","Los Angeles","CA","https://www.hushla.net/","(323) 486-7339",5,105,85,"missing_image",true,true,3
+"afebffc7-350d-4c63-b609-360621712d27","Cienega Medical - Santa Monica","Santa Monica","CA","https://cienegaspa.com/","(310) 341-2741",5,571,85,"missing_image",true,true,3
+"b7774eb8-0a26-4dc9-9bff-0e4441a5161b","Harmony Aesthetics Center","Santa Monica","CA","https://www.harmonyaestheticscenter.com/?utm_source=gbp&utm_medium=organic&utm_campaign=google_business_organic_la","(424) 372-9088",5,255,85,"missing_image",true,true,3
+"ca8da7bf-56ff-45c6-9d67-df0b371b5ee4","Holländer Clinic","Santa Monica","CA","https://www.hollanderclinic.com/?utm_source=GMBlisting&utm_medium=organic&utm_campaign=gmb","(310) 388-9854",5,16,85,"missing_image",true,true,2
+"14a4a714-8e3c-42f2-80e9-e9ba1b7bd185","LA Aesthetics Center - Concierge Longevity Clinic","Beverly Hills","CA","https://www.laaestheticscenter.com/","(747) 327-8259",5,19,85,"missing_image",true,true,1
+"fda748f5-fc3e-4065-8112-ec4c591ee9bf","SkinSpirit at Lasky","Beverly Hills","CA","https://www.skinspirit.com/locations/beverly-hills/","(310) 552-8010",5,96,85,"missing_image",true,true,1
+"f0fbf78c-9b4b-4e12-8ff7-e46bf4a4f63b","Henderson Med Spa","Henderson","NV","https://www.hendersonmedspa.com/","(702) 448-9977",5,48,85,"missing_image",true,true,1
+"bcde5a43-52ed-4636-8028-32d53b805e91","NakedMD Med Spa Henderson","Henderson","NV","https://www.nakedmd.com/pages/med-spa-henderson-nv","(702) 483-8184",5,409,85,"missing_image",true,true,2
+"0fe9e053-0ac6-4443-9507-c3dec9d12946","Advanced Aesthetics - Henderson","Henderson","NV","https://advancedaestheticslv.com/","(702) 838-4644",5,1409,85,"missing_image",true,true,1
+"b797396a-c11d-4f58-94df-4d31fbac7190","BP Royal Medspa","Henderson","NV","https://bproyalmedspa.com/?utm_source=gmb_auth","(702) 899-7100",5,97,85,"missing_image",true,true,1
+"1ae8fe56-0097-465e-adc0-609c52c2a086","Esthetika MedSpa - By Ageless Las Vegas","Henderson","NV","https://esthetika.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp","(702) 625-5688",5,51,85,"missing_image",true,true,1
+"2e217ceb-e199-491b-93ec-bbb9e19f5395","Beverly Hills Med Spa","Beverly Hills","CA","https://www.beverlyhillsmedspa.com/","(310) 359-8832",5,35,85,"missing_image",true,true,1
+"cad92eba-0379-4a03-b6d2-facd5afed5c2","The MedSpa at Beverly Hills","Beverly Hills","CA","http://www.themedspaatbeverlyhills.com/","(424) 355-0116",5,125,85,"missing_image",true,true,2
+"cddeb05f-5222-4713-a928-baacd217ca87","NakedMD Med Spa Beverly Hills","Beverly Hills","CA","https://www.nakedmd.com/pages/locations-beverly-hills-ca","(424) 285-0886",5,485,85,"missing_image",true,true,2
+"70b1554d-297d-4c4c-b596-b24e7936c872","Bliss Point Medical Spa","Los Angeles","CA","http://www.blisspointmedspa.com/","(310) 923-8451",5,27,85,"missing_image",true,true,4
+"78cbccd4-da46-45ea-99c7-96e7d9cce8f2","me.losangeles aesthetics","Los Angeles","CA","https://www.melosangeles.com/","(213) 583-5905",5,156,85,"missing_image",true,true,6
+"6ab21a7f-fa89-4f61-99ae-5fa3d427e729","Double J Medical Aesthetics and Hair Clinic","Los Angeles","CA","https://www.doublejaesthetics.com/","(213) 808-7780",5,514,85,"missing_image",true,true,1
+"f13deed0-11ad-4fe2-a300-5a3a882a6a3a","me.losangeles aesthetics","West Hollywood","CA","https://www.melosangeles.com/","(213) 583-5905",5,156,85,"missing_image",true,true,6
+"5e8320a4-b0ae-4123-98f1-9a7c369b5ccc","BLUE Med Center & Spa","Atlanta","GA","http://www.bluemedcenter.com/","(404) 815-8880",5,417,85,"missing_image",true,true,1
+"f9b76243-1998-4440-a6d1-0f6b7bbd3aca","The House of Wellness Med Spa","Atlanta","GA","https://thowmedspa.org/","(404) 963-7531",5,50,85,"missing_image",true,true,2
+"5893e666-45f0-4735-a8c0-ba1e0073f8f1","Austin Med Spa","Austin","TX","http://austinmedspa.com/","(512) 479-9997",5,197,85,"missing_image",true,true,3
+"81238bfd-29d5-485d-8ea0-e5382abfb8db","Nu'u Aesthetics","Phoenix","AZ","http://www.nuuaesthetics.com/","(480) 825-8383",5,156,85,"missing_image",true,true,2
+"f9723d22-b152-4bcc-ab86-0259c5f89aa6","Beauty By RN Medical Aesthetics","Phoenix","AZ","https://beautybyrn.com/","(480) 747-1966",5,53,85,"missing_image",true,true,2
+"f6012018-e630-4e87-af4b-51d9bd11293d","NK Aesthetics","Phoenix","AZ","http://www.nkaesthetics.com/","(602) 777-0125",5,158,85,"missing_image",true,true,1
+"b5af3a67-1fea-4227-9f69-2e4a2be7f017","Arcadia Skin","Phoenix","AZ","http://arcadiaskin.com/","(480) 712-5575",5,68,85,"missing_image",true,true,1

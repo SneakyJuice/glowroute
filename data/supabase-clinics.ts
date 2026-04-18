@@ -48,24 +48,30 @@ export function clean(clinic: Clinic): Clinic {
 
 /**
  * Map a Supabase clinic row to the Clinic interface.
- * Note: googleRating and googleReviewCount are not in Supabase schema,
+ * Note: googleRating maps from glow_score; googleReviewCount maps from review_count column (added 2026-03-31).
  * so we provide defaults. Treatments are mapped from services array.
  */
 export function mapSupabaseRow(row: any): Clinic {
   return {
     id: row.id,
-    slug: row.slug,
+    slug: (row.slug || '').replace(/^\/+/, ''), // strip leading slashes that break Next.js routing
     name: row.name,
     city: row.city,
     state: row.state || 'FL',
     neighborhood: undefined,
     distance: undefined,
-    googleRating: 0, // TODO: add column to Supabase or compute from elsewhere
-    googleReviewCount: 0,
+    googleRating: row.glow_score ?? 0,         // GMB star rating (0.0-5.0)
+    googleReviewCount: row.review_count ?? 0,  // Real GMB review count — backfilled 2026-03-31
+    goals: row.goals ?? [],                    // Health goal tags — backfilled 2026-03-31
+    services: Array.isArray(row.services) ? row.services : [],  // canonical service slugs
+    visibility: row.visibility ?? 'visible',   // Visibility control — added 2026-03-31
     treatments: Array.isArray(row.services) ? row.services : [],
     specialtyTreatments: [],
     verified: row.is_verified || false,
+    isVerified: row.is_verified || false,
+    isClaimed: row.is_claimed || false,
     featured: row.is_featured || false,
+    heroImageUrl: row.hero_image_url || undefined,
     isNew: false,
     priceTier: '$$', // TODO: map claim_tier if possible
     availability: undefined,
@@ -111,6 +117,7 @@ export async function fetchAllClinicsFromSupabase(): Promise<Clinic[]> {
       const { data, error } = await supabase
         .from('clinics')
         .select('*')
+        .in('visibility', ['visible'])   // exclude hidden / removed / needs_review
         .range(from, to)
       
       if (error) {

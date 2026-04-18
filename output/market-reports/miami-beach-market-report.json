@@ -1,0 +1,57 @@
+{
+  "city": "Miami Beach",
+  "total": 173,
+  "avgScore": "3.3",
+  "avgReviews": 51,
+  "withImages": 172,
+  "withWebsite": 163,
+  "unclaimed": 173,
+  "tiers": {
+    "1": 23,
+    "2": 18,
+    "3": 16,
+    "4": 103
+  },
+  "top5": [
+    {
+      "name": "Greater Miami Skin & Laser Center",
+      "score": 5,
+      "reviews": 979,
+      "website": "https://miamiskinandlaser.com/"
+    },
+    {
+      "name": "Charette Cosmetics Medical Spa - Miami Beach",
+      "score": 5,
+      "reviews": 554,
+      "website": "https://charettecosmetics.com/miami/?utm_source=google&utm_medium=organic&utm_campaign=GBPMiami"
+    },
+    {
+      "name": "Tao Spa Miami",
+      "score": 5,
+      "reviews": 503,
+      "website": "https://taospamiami.com/"
+    },
+    {
+      "name": "Spa e",
+      "score": 5,
+      "reviews": 381,
+      "website": "https://spaesouthbeach.com/"
+    },
+    {
+      "name": "USA Sports Medicine South Beach",
+      "score": 5,
+      "reviews": 332,
+      "website": "https://usasportsmedicine.com/locations/south-beach?utm_source=google&utm_medium=organic&utm_campaign=gbp_listing"
+    }
+  ],
+  "topServices": [
+    "botox-fillers (58)",
+    "anti-aging (45)",
+    "hydrafacial (45)",
+    "microneedling (25)",
+    "iv-therapy (22)",
+    "chemical-peels (22)",
+    "prp-treatments (21)",
+    "coolsculpting (19)"
+  ]
+}

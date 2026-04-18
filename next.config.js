@@ -6,6 +6,7 @@ const nextConfig = {
   images: {
     domains: ['maps.googleapis.com', 'lh3.googleusercontent.com'],
   },
+  trailingSlash: false,
 }
 
 module.exports = nextConfig

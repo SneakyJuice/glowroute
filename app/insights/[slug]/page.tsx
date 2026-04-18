@@ -5,6 +5,7 @@ import fs from 'fs'
 import path from 'path'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import InsightActions from '@/components/InsightActions'
 import { INSIGHTS } from '@/data/insights'
 
 interface PageProps {
@@ -64,6 +65,12 @@ function getInsightContent(contentFile?: string): string | null {
 export default function InsightDetailPage({ params }: PageProps) {
   const insight = INSIGHTS.find(i => i.slug === params.slug)
   if (!insight) notFound()
+
+  // Full HTML reports get their own standalone renderer (preserves Chart.js, CSS, scripts)
+  if (insight.contentFile?.endsWith('.html')) {
+    const { redirect } = require('next/navigation')
+    redirect(`/insights-full/${params.slug}`)
+  }
 
   const htmlContent = getInsightContent(insight.contentFile)
 
@@ -139,6 +146,13 @@ export default function InsightDetailPage({ params }: PageProps) {
         <p className="font-serif text-xl text-onyx/70 leading-relaxed border-l-2 border-champagne pl-5 mb-10 italic">
           {insight.subtitle}
         </p>
+
+        {/* Action Bar — PDF + Email Share */}
+        <InsightActions
+          title={insight.title}
+          url={`https://glowroute.io/insights/${insight.slug}`}
+          excerpt={insight.excerpt}
+        />
 
         {/* Report Body */}
         {htmlContent ? (

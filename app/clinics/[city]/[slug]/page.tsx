@@ -22,8 +22,8 @@ import { TREATMENTS, TREATMENT_SLUGS } from '@/lib/treatments'
 import ClinicCard from '@/components/ClinicCard'
 
 /** Normalize a city name to a URL-safe slug */
-function citySlug(city: string) {
-  return city.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
+function citySlug(city: string | undefined | null) {
+  return (city || '').toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
 }
 
 interface PageProps {
@@ -45,10 +45,13 @@ async function fetchClinicBySlug(city: string, slug: string): Promise<Clinic | n
 
 export async function generateStaticParams() {
   const all = await fetchAllClinicsFromSupabase()
-  return all.map(clinic => ({
-    city: citySlug(clinic.city),
-    slug: clinic.slug,
-  }))
+  return all
+    .filter(clinic => clinic.city && clinic.slug) // skip records with missing city or slug
+    .map(clinic => ({
+      city: citySlug(clinic.city),
+      slug: clinic.slug,
+    }))
+    .filter(p => p.city && p.slug) // double-check after slug normalization
 }
 
 /** Truncate a string to maxLen, appending suffix if cut */
@@ -131,13 +134,30 @@ async function TreatmentCityPage({ city, treatment }: { city: string; treatment:
   let clinics: import('@/types/clinic').Clinic[] = []
   if (supabase) {
     const displayCity = city.split('-').map(w => w[0].toUpperCase() + w.slice(1)).join(' ')
-    const { data } = await supabase
+
+    // First: try exact services match
+    const { data: matched } = await supabase
       .from('clinics')
       .select('*')
       .ilike('city', displayCity)
       .contains('services', [treatment])
+      .gt('glow_score', 0)
+      .order('glow_score', { ascending: false })
       .limit(50)
-    clinics = (data || []) as import('@/types/clinic').Clinic[]
+
+    if (matched && matched.length > 0) {
+      clinics = matched as import('@/types/clinic').Clinic[]
+    } else {
+      // Fallback: show all rated clinics in the city (services data not yet populated)
+      const { data: cityAll } = await supabase
+        .from('clinics')
+        .select('*')
+        .ilike('city', displayCity)
+        .gt('glow_score', 0)
+        .order('glow_score', { ascending: false })
+        .limit(50)
+      clinics = (cityAll || []) as import('@/types/clinic').Clinic[]
+    }
   }
   return (
     <div className="min-h-screen bg-ivory font-sans">
