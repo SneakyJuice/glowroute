@@ -7,6 +7,7 @@ import path from 'path'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { ARTICLES } from '@/data/articles'
+import QuizCTA from '@/components/QuizCTA'
 
 interface PageProps {
   params: { slug: string }
@@ -256,6 +257,11 @@ export default function ArticleDetailPage({ params }: PageProps) {
         )}
 
         {/* Tags */}
+        {/* Quiz CTA */}
+        <div className="mt-10">
+          <QuizCTA variant="inline" />
+        </div>
+
         {article.tags && article.tags.length > 0 && (
           <div className="mt-10 pt-6 border-t border-stone/15">
             <div className="flex flex-wrap gap-2">

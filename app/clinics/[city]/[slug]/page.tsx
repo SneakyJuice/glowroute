@@ -9,6 +9,7 @@ import VerifiedBadge from '@/components/VerifiedBadge'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import LeadCaptureForm from '@/components/LeadCaptureForm'
+import QuizCTA from '@/components/QuizCTA'
 import AvailabilityBadge from '@/components/AvailabilityBadge'
 import CreatorBadge from '@/components/CreatorBadge'
 import { SITE_URL } from '@/lib/config'
@@ -724,6 +725,9 @@ export default async function ClinicProfilePage({ params }: PageProps) {
                 </a>
               </div>
             )}
+
+            {/* Find Your Match */}
+            <QuizCTA variant="sidebar" />
 
             {/* Lead Capture Form */}
             <LeadCaptureForm

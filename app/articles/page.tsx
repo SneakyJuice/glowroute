@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { ARTICLES } from '@/data/articles'
+import QuizCTA from '@/components/QuizCTA'
 
 type AudienceFilter = 'all' | 'consumer' | 'clinic'
 
@@ -61,6 +62,11 @@ export default function ArticlesPage() {
               {tab === 'all' ? 'All Articles' : tab === 'consumer' ? 'For Patients' : 'For Clinics'}
             </button>
           ))}
+        </div>
+
+        {/* Quiz CTA */}
+        <div className="mb-8">
+          <QuizCTA variant="inline" />
         </div>
 
         {/* Featured Articles */}
