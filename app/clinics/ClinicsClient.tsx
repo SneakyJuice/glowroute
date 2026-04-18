@@ -16,6 +16,7 @@ import BottomCTA from '@/components/BottomCTA'
 import Footer from '@/components/Footer'
 import { FilterState, Clinic } from '@/types/clinic'
 import { CATEGORIES, matchCategories } from '@/data/categories'
+import taxonomy from '@/lib/taxonomy.json'
 import type { CategorySlug } from '@/data/categories'
 import { haversine } from '@/lib/geo'
 
@@ -35,12 +36,14 @@ const DEFAULT_FILTERS: FilterState = {
 const ITEMS_PER_PAGE = 20
 
 interface ClinicsClientProps {
-  allClinics: Clinic[];
+  allClinics: Clinic[];       // Full dataset — used as filter/search pool
+  displayClinics?: Clinic[]; // Paginated display list (optional, from infinite scroll)
   initialClinics: Clinic[];
   featuredClinic: Clinic | null;
+  totalCount?: number;
 }
 
-function ClinicsPageInner({ allClinics, initialClinics, featuredClinic }: ClinicsClientProps) {
+function ClinicsPageInner({ allClinics, initialClinics, featuredClinic, totalCount }: ClinicsClientProps) {
   // Hide the SSR preview once the client component mounts
   useEffect(() => {
     const ssrPreview = document.getElementById('ssr-clinic-preview')
@@ -149,14 +152,9 @@ function ClinicsPageInner({ allClinics, initialClinics, featuredClinic }: Clinic
     if (filters.verifiedOnly) {
       result = result.filter(c => c.verified)
     }
-    if (filters.treatmentTypes.length > 0 && !filters.treatmentTypes.includes('All Treatments')) {
-      result = result.filter(c => {
-        return filters.treatmentTypes.some(ft => {
-          if (ft === 'Peptide Therapy') return isPeptideClinic(c)
-          const allTreatments = [...(c.treatments || []), ...(c.specialtyTreatments || [])]
-          return allTreatments.some(t => t.toLowerCase().includes(ft.toLowerCase()))
-        })
-      })
+    // SERVICE FILTER — match canonical slugs against clinic.services (normalized) + alias fallback
+    if (filters.treatmentTypes.length > 0) {
+      result = result.filter(c => matchesServiceFilter(c, filters.treatmentTypes))
     }
     // Goal filter — powered by taxonomy goals layer
     if (filters.goals.length > 0) {
@@ -223,7 +221,7 @@ function ClinicsPageInner({ allClinics, initialClinics, featuredClinic }: Clinic
   return (
     <div className="min-h-screen bg-ivory font-sans">
       <Navbar />
-      <HeroSearch clinicCount={allClinics.length} defaultCity="Miami, FL" onSearch={handleSearch} onNearMe={handleNearMe} />
+      <HeroSearch clinicCount={totalCount ?? allClinics.length} defaultCity="Miami, FL" onSearch={handleSearch} onNearMe={handleNearMe} />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
         {/* Mobile filter toggle */}
@@ -309,6 +307,22 @@ function ClinicsPageInner({ allClinics, initialClinics, featuredClinic }: Clinic
     </div>
   )
 }
+
+// ── Service alias lookup — built from taxonomy.serviceFilters ──────────────
+const SERVICE_ALIAS_MAP: Record<string, string[]> = {};
+((taxonomy as any).serviceFilters || []).forEach((f: { slug: string; aliases: string[] }) => {
+  SERVICE_ALIAS_MAP[f.slug] = f.aliases.map((a: string) => a.toLowerCase());
+});
+
+function matchesServiceFilter(clinic: Clinic, slugs: string[]): boolean {
+  if (!slugs || !slugs.length) return true;
+  const clinicServices = [...(clinic.services || []), ...(clinic.treatments || [])].map(s => s.toLowerCase());
+  return slugs.some(slug => {
+    const aliases = SERVICE_ALIAS_MAP[slug] || [slug.toLowerCase()];
+    return clinicServices.some(s => aliases.some(a => s === a || s.includes(a)));
+  });
+}
+// ─────────────────────────────────────────────────────────────────────────────
 
 export default function ClinicsPage(props: ClinicsClientProps) {
   return (

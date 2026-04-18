@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GlowRoute Sprint 6 — Gantt Chart</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0f1117; color: #e2e8f0; }
+  
+  .header { background: linear-gradient(135deg, #7c3aed, #4f46e5); padding: 24px 32px; }
+  .header h1 { font-size: 22px; font-weight: 700; }
+  .header p { font-size: 13px; color: rgba(255,255,255,0.75); margin-top: 4px; }
+  .header .meta { display: flex; gap: 24px; margin-top: 12px; }
+  .header .badge { background: rgba(255,255,255,0.15); padding: 4px 10px; border-radius: 20px; font-size: 12px; }
+
+  .legend { display: flex; gap: 16px; padding: 16px 32px; background: #1a1d27; border-bottom: 1px solid #2d3148; flex-wrap: wrap; }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #94a3b8; }
+  .legend-dot { width: 10px; height: 10px; border-radius: 2px; }
+
+  .container { padding: 24px 32px; overflow-x: auto; }
+  
+  .gantt-wrap { min-width: 900px; }
+
+  .timeline-header { display: grid; grid-template-columns: 280px 1fr; margin-bottom: 8px; }
+  .timeline-label { font-size: 11px; color: #64748b; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; padding: 4px 0; }
+  .timeline-weeks { display: flex; }
+  .week-label { font-size: 11px; color: #64748b; text-align: center; border-left: 1px dashed #2d3148; padding: 4px 2px; }
+
+  .section { margin-bottom: 20px; }
+  .section-header { display: grid; grid-template-columns: 280px 1fr; margin-bottom: 4px; align-items: center; }
+  .section-title { font-size: 12px; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.08em; padding: 8px 0 4px; }
+  .section-divider { height: 1px; background: #2d3148; }
+
+  .task-row { display: grid; grid-template-columns: 280px 1fr; margin-bottom: 6px; align-items: center; }
+  .task-row:hover .task-info { background: #1e2130; }
+
+  .task-info { padding: 8px 12px; border-radius: 6px 0 0 6px; cursor: default; transition: background 0.15s; }
+  .task-name { font-size: 13px; font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .task-meta { display: flex; gap: 8px; margin-top: 3px; align-items: center; }
+  .priority-badge { font-size: 10px; padding: 1px 6px; border-radius: 10px; font-weight: 600; }
+  .p-urgent { background: #450a0a; color: #f87171; }
+  .p-high { background: #431407; color: #fb923c; }
+  .p-normal { background: #1e293b; color: #60a5fa; }
+  .task-est { font-size: 11px; color: #64748b; }
+
+  .task-bar-area { position: relative; height: 32px; display: flex; align-items: center; }
+  .week-line { position: absolute; top: 0; bottom: 0; width: 1px; background: #1e2130; }
+
+  .bar { position: absolute; height: 22px; border-radius: 4px; display: flex; align-items: center; padding: 0 8px; font-size: 11px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .bar-revenue  { background: linear-gradient(90deg, #7c3aed, #6d28d9); color: #fff; }
+  .bar-platform { background: linear-gradient(90deg, #0369a1, #0284c7); color: #fff; }
+  .bar-quiz     { background: linear-gradient(90deg, #065f46, #059669); color: #fff; }
+  .bar-compliance { background: linear-gradient(90deg, #92400e, #b45309); color: #fff; }
+  .bar-data     { background: linear-gradient(90deg, #4c1d95, #7c3aed); color: #fff; }
+  .bar-done     { background: linear-gradient(90deg, #14532d, #166534); color: #86efac; }
+  .bar-today    { position: absolute; top: 0; bottom: 0; width: 2px; background: #ef4444; z-index: 10; }
+  .today-label  { position: absolute; top: -18px; font-size: 10px; color: #ef4444; font-weight: 700; transform: translateX(-50%); white-space: nowrap; }
+
+  .status-section { padding: 16px 32px 32px; }
+  .status-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 12px; }
+  .stat-card { background: #1a1d27; border: 1px solid #2d3148; border-radius: 8px; padding: 14px 18px; }
+  .stat-label { font-size: 11px; color: #64748b; text-transform: uppercase; letter-spacing: 0.06em; }
+  .stat-value { font-size: 28px; font-weight: 700; margin-top: 4px; }
+  .stat-sub { font-size: 12px; color: #64748b; margin-top: 2px; }
+  .v-red { color: #f87171; }
+  .v-orange { color: #fb923c; }
+  .v-green { color: #4ade80; }
+  .v-blue { color: #60a5fa; }
+  .v-purple { color: #a78bfa; }
+
+  .footer { padding: 16px 32px; font-size: 11px; color: #475569; border-top: 1px solid #1e2130; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>⚡ GlowRoute Sprint 6 — Revenue Ops</h1>
+  <p>Apr 10 – May 7, 2026 &nbsp;•&nbsp; Charter V6.3 &nbsp;•&nbsp; BRD Active</p>
+  <div class="meta">
+    <span class="badge">17 Tasks</span>
+    <span class="badge">0 Complete</span>
+    <span class="badge">4 Epics</span>
+    <span class="badge">Day 6 of 28</span>
+  </div>
+</div>
+
+<div class="legend">
+  <div class="legend-item"><div class="legend-dot" style="background:#7c3aed"></div> Revenue Ops (Tier 1)</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#0284c7"></div> Platform Ops (Tier 2)</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#059669"></div> Quiz Backend (Tier 3)</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#b45309"></div> Compliance (Tier 4)</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#ef4444"></div> Today (Apr 15)</div>
+</div>
+
+<div class="container">
+<div class="gantt-wrap">
+
+<!-- Timeline header: 4 weeks, each week = 25% -->
+<!-- Apr 10, Apr 17, Apr 24, May 1, May 7 -->
+<div class="timeline-header">
+  <div class="timeline-label">Task</div>
+  <div class="timeline-weeks" id="weekHeaders"></div>
+</div>
+
+<div id="ganttBody"></div>
+
+</div>
+</div>
+
+<div class="status-section">
+  <div style="font-size:13px; font-weight:700; color:#94a3b8; text-transform:uppercase; letter-spacing:0.08em;">Sprint Health</div>
+  <div class="status-grid">
+    <div class="stat-card"><div class="stat-label">Tasks Remaining</div><div class="stat-value v-red">17</div><div class="stat-sub">of 17 total</div></div>
+    <div class="stat-card"><div class="stat-label">Days Elapsed</div><div class="stat-value v-orange">6</div><div class="stat-sub">of 28 (21% through)</div></div>
+    <div class="stat-card"><div class="stat-label">Revenue Ops</div><div class="stat-value v-purple">0/6</div><div class="stat-sub">WF-06 WF-07 WF-02 WF-03 + enrichment</div></div>
+    <div class="stat-card"><div class="stat-label">DB Clinics</div><div class="stat-value v-green">8,671</div><div class="stat-sub">+1,165 this week (GR sprints)</div></div>
+    <div class="stat-card"><div class="stat-label">Email Coverage</div><div class="stat-value v-blue">48%</div><div class="stat-sub">3,606 / 7,506 FL clinics</div></div>
+    <div class="stat-card"><div class="stat-label">GR-020 Running</div><div class="stat-value v-purple">7/7</div><div class="stat-sub">TX CO NV GA NC — in flight</div></div>
+  </div>
+</div>
+
+<div class="footer">
+  Generated by Zion ⚡ &nbsp;•&nbsp; Apr 15, 2026 11:20 UTC &nbsp;•&nbsp; Source: ClickUp Sprint 6 (901712780648) + Charter V6.3
+</div>
+
+<script>
+// Sprint: Apr 10 – May 7 = 28 days
+// Today: Apr 15 = day 6
+const SPRINT_START = new Date('2026-04-10');
+const SPRINT_END   = new Date('2026-05-07');
+const TOTAL_DAYS   = 28;
+const TODAY        = new Date('2026-04-15');
+
+function dayOffset(d) {
+  return Math.max(0, Math.min(TOTAL_DAYS, (new Date(d) - SPRINT_START) / 86400000));
+}
+function pct(days) { return (days / TOTAL_DAYS * 100).toFixed(2) + '%'; }
+
+// Week headers
+const weeks = ['Apr 10', 'Apr 17', 'Apr 24', 'May 1', 'May 7'];
+const wh = document.getElementById('weekHeaders');
+wh.style.cssText = 'display:flex; width:100%; position:relative;';
+weeks.forEach((w, i) => {
+  const el = document.createElement('div');
+  el.className = 'week-label';
+  el.style.cssText = `flex: ${i < 4 ? '1' : '0 0 0'}; min-width: ${i < 4 ? 0 : 1}px;`;
+  el.textContent = w;
+  wh.appendChild(el);
+});
+
+// Tasks data
+const sections = [
+  {
+    title: '🏆 TIER 1 — Revenue Ops Pipeline',
+    color: 'revenue',
+    tasks: [
+      { name: 'WF-06: Clinic Scraping Pipeline',        priority: 'urgent', start: 0,  end: 7,  est: '4h',  desc: 'Apify → new clinics → Supabase. n8n workflow. Trigger: Tue 2AM.' },
+      { name: 'WF-07: Apollo Contact Enrichment',       priority: 'urgent', start: 3,  end: 10, est: '4h',  desc: 'Apollo API → owner contacts for unenriched clinics. Daily 7AM.' },
+      { name: 'WF-02: Outreach Sequences',              priority: 'high',   start: 7,  end: 14, est: '6h',  desc: 'Email sequences for enriched, uncontacted clinics. Build only, send disabled.' },
+      { name: 'WF-03: Clinic Signup Processing',        priority: 'high',   start: 10, end: 17, est: '3h',  desc: 'Webhook → validate → CRM record → Telegram alert Anthony.' },
+      { name: 'GR-013: Apollo Re-Sweep',                priority: 'high',   start: 7,  end: 14, est: '3h',  desc: 'Credential-filtered contact enrichment re-run.' },
+      { name: 'GR-011b: NPI Enrichment v2',             priority: 'high',   start: 5,  end: 12, est: '3h',  desc: 'Improved NPI match rate — currently ~44% contact name coverage.' },
+    ]
+  },
+  {
+    title: '⚙️ TIER 2 — Platform Ops',
+    color: 'platform',
+    tasks: [
+      { name: 'WF-01: Content Generation → Blog',       priority: 'normal', start: 14, end: 21, est: '3h',  desc: 'Weekly blog content + social push. Trigger: Mon 8AM EST.' },
+      { name: 'WF-04: Weekly Activity Report',          priority: 'normal', start: 17, end: 24, est: '2h',  desc: 'Anthony-facing weekly summary. Trigger: Sun 5PM EST.' },
+      { name: 'WF-05: Analytics Aggregation',           priority: 'normal', start: 14, end: 21, est: '2h',  desc: 'Daily metrics sync to Looker Studio. Trigger: Daily 3AM EST.' },
+    ]
+  },
+  {
+    title: '🛡️ TIER 4 — Compliance (Parallel)',
+    color: 'compliance',
+    tasks: [
+      { name: 'WF-09: Affiliate Compliance Gate',       priority: 'high',   start: 7,  end: 18, est: '4h',  desc: 'Compliance layer on affiliate content publication trigger.' },
+    ]
+  },
+  {
+    title: '🧪 TIER 3 — Quiz Backend',
+    color: 'quiz',
+    tasks: [
+      { name: 'Quiz Backend: patient_leads Schema',     priority: 'normal', start: 18, end: 22, est: '2h',  desc: 'Supabase table for quiz pre-qual profiles. Below HIPAA PHI threshold.' },
+      { name: 'WF-08: Quiz Router (n8n Logic)',         priority: 'normal', start: 21, end: 26, est: '4h',  desc: 'Score Q1-Q5, state routing, match providers, write patient_leads.' },
+    ]
+  },
+  {
+    title: '📊 Data — GR Sprint Series (Running)',
+    color: 'data',
+    tasks: [
+      { name: 'GR-014: Firecrawl Staff Scraper',        priority: 'normal', start: 12, end: 20, est: '4h',  desc: 'Zero-contact clinic recovery via Firecrawl staff page scraping.' },
+      { name: 'GR-020: TX/CO/NV/GA/NC Expansion',      priority: 'urgent', start: 5,  end: 6,  est: '1h',  desc: '40+ gap cities across 5 states. 7 DeepSeek workers. IN FLIGHT.' },
+    ]
+  },
+];
+
+const body = document.getElementById('ganttBody');
+const todayPct = (dayOffset(TODAY) / TOTAL_DAYS * 100).toFixed(2);
+
+sections.forEach(sec => {
+  const secDiv = document.createElement('div');
+  secDiv.className = 'section';
+
+  const hdrDiv = document.createElement('div');
+  hdrDiv.className = 'section-header';
+  hdrDiv.innerHTML = `<div class="section-title">${sec.title}</div><div class="section-divider"></div>`;
+  secDiv.appendChild(hdrDiv);
+
+  sec.tasks.forEach(task => {
+    const row = document.createElement('div');
+    row.className = 'task-row';
+    row.title = task.desc;
+
+    const info = document.createElement('div');
+    info.className = 'task-info';
+    info.innerHTML = `
+      <div class="task-name">${task.name}</div>
+      <div class="task-meta">
+        <span class="priority-badge p-${task.priority}">${task.priority}</span>
+        <span class="task-est">est. ${task.est}</span>
+      </div>
+    `;
+
+    const barArea = document.createElement('div');
+    barArea.className = 'task-bar-area';
+    barArea.style.cssText = 'position:relative; flex:1;';
+
+    // Week grid lines
+    [0,1,2,3,4].forEach(w => {
+      const line = document.createElement('div');
+      line.className = 'week-line';
+      line.style.left = (w / 4 * 100) + '%';
+      barArea.appendChild(line);
+    });
+
+    // Today line
+    const todayLine = document.createElement('div');
+    todayLine.className = 'bar-today';
+    todayLine.style.left = todayPct + '%';
+    const todayLbl = document.createElement('div');
+    todayLbl.className = 'today-label';
+    todayLbl.style.left = todayPct + '%';
+    todayLbl.style.position = 'absolute';
+    todayLbl.textContent = 'TODAY';
+    barArea.appendChild(todayLine);
+    barArea.appendChild(todayLbl);
+
+    // Task bar
+    const startPct = (task.start / TOTAL_DAYS * 100);
+    const widthPct = ((task.end - task.start) / TOTAL_DAYS * 100);
+    const bar = document.createElement('div');
+    bar.className = `bar bar-${sec.color}`;
+    bar.style.left = startPct + '%';
+    bar.style.width = Math.max(widthPct, 3) + '%';
+    bar.textContent = task.name.length > 30 ? '' : task.name;
+    barArea.appendChild(bar);
+
+    row.appendChild(info);
+    row.appendChild(barArea);
+    secDiv.appendChild(row);
+  });
+
+  body.appendChild(secDiv);
+});
+</script>
+</body>
+</html>
