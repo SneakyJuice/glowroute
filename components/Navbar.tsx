@@ -11,6 +11,7 @@ export default function Navbar() {
     { label: 'Articles', href: '/articles' },
     { label: 'Intelligence', href: '/insights' },
     { label: 'Near Me', href: '/clinics?near=me' },
+    { label: 'Find Your Match', href: '/quiz' },
   ]
 
   return (
