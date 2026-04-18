@@ -1,8 +1,12 @@
 'use client'
 import { FilterState } from '@/types/clinic'
 import { GOALS } from '@/lib/goals'
+import taxonomy from '@/lib/taxonomy.json'
 
-const TREATMENT_TYPES = ['All Treatments', 'Injectables', 'Body Contouring', 'Laser & Skin', 'Weight Loss', 'Peptide Therapy', 'IV Therapy', 'Hair Restoration', "Men's Health"]
+// Service filter tags pulled from taxonomy — canonical slugs + emoji labels
+const SERVICE_FILTERS: { slug: string; label: string; emoji: string }[] =
+  (taxonomy as any).serviceFilters || []
+
 const RATINGS = [{ label: '4.5+ ★', value: 4.5 }, { label: '4.0+ ★', value: 4.0 }, { label: '3.5+ ★', value: 3.5 }, { label: 'Any', value: 0 }]
 const PRICE_TIERS = ['$', '$$', '$$$', '$$$$']
 
@@ -18,6 +22,11 @@ export default function FilterSidebar({ filters, onChange }: Props) {
   const toggleGoal = (slug: string) => {
     const active = (filters.goals || []).includes(slug)
     onChange({ ...filters, goals: active ? filters.goals.filter(g => g !== slug) : [...(filters.goals || []), slug] })
+  }
+
+  const toggleService = (slug: string) => {
+    const active = (filters.treatmentTypes || []).includes(slug)
+    onChange({ ...filters, treatmentTypes: active ? filters.treatmentTypes.filter(t => t !== slug) : [...(filters.treatmentTypes || []), slug] })
   }
 
   return (
@@ -49,18 +58,28 @@ export default function FilterSidebar({ filters, onChange }: Props) {
         </div>
       </div>
 
-      {/* ── Treatment Specialty ────────────────────────────────────────── */}
+      {/* ── Treatment / Service Tags ───────────────────────────────────── */}
       <div className="mb-6 pb-6 border-b border-gray-100">
-        <span className="block text-[13px] font-semibold text-onyx mb-2.5">Treatment Type</span>
+        <span className="block text-[13px] font-semibold text-onyx mb-0.5">Treatment</span>
+        <span className="block text-[11px] text-gray-400 mb-2.5">Filter by specific service</span>
         <div className="flex flex-wrap gap-1.5">
-          {TREATMENT_TYPES.map(t => (
-            <button key={t} onClick={() => {
-              const active = filters.treatmentTypes.includes(t)
-              onChange({ ...filters, treatmentTypes: active ? filters.treatmentTypes.filter(x => x !== t) : [...filters.treatmentTypes, t] })
-            }} className={`text-[12px] font-medium px-2.5 py-1 rounded-full border cursor-pointer transition-all ${filters.treatmentTypes.includes(t) ? 'bg-sage/10 border-sage text-sage font-semibold' : 'bg-gray-100 border-gray-200 text-gray-700 hover:bg-ivory hover:border-sage hover:text-sage'}`}>
-              {t}
-            </button>
-          ))}
+          {SERVICE_FILTERS.map(svc => {
+            const active = (filters.treatmentTypes || []).includes(svc.slug)
+            return (
+              <button
+                key={svc.slug}
+                onClick={() => toggleService(svc.slug)}
+                className={`text-[12px] font-medium px-2.5 py-1 rounded-full border cursor-pointer transition-all flex items-center gap-1 ${
+                  active
+                    ? 'bg-sage/10 border-sage text-sage font-semibold'
+                    : 'bg-gray-100 border-gray-200 text-gray-700 hover:bg-ivory hover:border-sage hover:text-sage'
+                }`}
+              >
+                <span>{svc.emoji}</span>
+                <span>{svc.label}</span>
+              </button>
+            )
+          })}
         </div>
       </div>
 

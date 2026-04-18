@@ -32,6 +32,11 @@ export interface Clinic {
   lat?: number
   lng?: number
   goals?: string[]
+  services?: string[]
+  visibility?: 'visible' | 'hidden' | 'removed' | 'needs_review'
+  heroImageUrl?: string
+  isClaimed?: boolean
+  isVerified?: boolean
 }
 
 export interface FilterState {

@@ -1,0 +1,2802 @@
+[
+  {
+    "city": "Tampa",
+    "state": "FL",
+    "citySlug": "tampa",
+    "treatment": "hormone-therapy",
+    "path": "/locations/tampa/hormone-therapy",
+    "clinicCount": 120
+  },
+  {
+    "city": "Tampa",
+    "state": "FL",
+    "citySlug": "tampa",
+    "treatment": "peptide-therapy",
+    "path": "/locations/tampa/peptide-therapy",
+    "clinicCount": 120
+  },
+  {
+    "city": "Tampa",
+    "state": "FL",
+    "citySlug": "tampa",
+    "treatment": "longevity",
+    "path": "/locations/tampa/longevity",
+    "clinicCount": 120
+  },
+  {
+    "city": "Tampa",
+    "state": "FL",
+    "citySlug": "tampa",
+    "treatment": "wellness",
+    "path": "/locations/tampa/wellness",
+    "clinicCount": 120
+  },
+  {
+    "city": "Tampa",
+    "state": "FL",
+    "citySlug": "tampa",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/tampa/testosterone-replacement",
+    "clinicCount": 120
+  },
+  {
+    "city": "Tampa",
+    "state": "FL",
+    "citySlug": "tampa",
+    "treatment": "semaglutide",
+    "path": "/locations/tampa/semaglutide",
+    "clinicCount": 120
+  },
+  {
+    "city": "Tampa",
+    "state": "FL",
+    "citySlug": "tampa",
+    "treatment": "iv-therapy",
+    "path": "/locations/tampa/iv-therapy",
+    "clinicCount": 120
+  },
+  {
+    "city": "Miami Beach",
+    "state": "FL",
+    "citySlug": "miami-beach",
+    "treatment": "hormone-therapy",
+    "path": "/locations/miami-beach/hormone-therapy",
+    "clinicCount": 173
+  },
+  {
+    "city": "Miami Beach",
+    "state": "FL",
+    "citySlug": "miami-beach",
+    "treatment": "peptide-therapy",
+    "path": "/locations/miami-beach/peptide-therapy",
+    "clinicCount": 173
+  },
+  {
+    "city": "Miami Beach",
+    "state": "FL",
+    "citySlug": "miami-beach",
+    "treatment": "longevity",
+    "path": "/locations/miami-beach/longevity",
+    "clinicCount": 173
+  },
+  {
+    "city": "Miami Beach",
+    "state": "FL",
+    "citySlug": "miami-beach",
+    "treatment": "wellness",
+    "path": "/locations/miami-beach/wellness",
+    "clinicCount": 173
+  },
+  {
+    "city": "Miami Beach",
+    "state": "FL",
+    "citySlug": "miami-beach",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/miami-beach/testosterone-replacement",
+    "clinicCount": 173
+  },
+  {
+    "city": "Miami Beach",
+    "state": "FL",
+    "citySlug": "miami-beach",
+    "treatment": "semaglutide",
+    "path": "/locations/miami-beach/semaglutide",
+    "clinicCount": 173
+  },
+  {
+    "city": "Miami Beach",
+    "state": "FL",
+    "citySlug": "miami-beach",
+    "treatment": "iv-therapy",
+    "path": "/locations/miami-beach/iv-therapy",
+    "clinicCount": 173
+  },
+  {
+    "city": "Charlotte",
+    "state": "NC",
+    "citySlug": "charlotte",
+    "treatment": "hormone-therapy",
+    "path": "/locations/charlotte/hormone-therapy",
+    "clinicCount": 65
+  },
+  {
+    "city": "Charlotte",
+    "state": "NC",
+    "citySlug": "charlotte",
+    "treatment": "peptide-therapy",
+    "path": "/locations/charlotte/peptide-therapy",
+    "clinicCount": 65
+  },
+  {
+    "city": "Charlotte",
+    "state": "NC",
+    "citySlug": "charlotte",
+    "treatment": "longevity",
+    "path": "/locations/charlotte/longevity",
+    "clinicCount": 65
+  },
+  {
+    "city": "Charlotte",
+    "state": "NC",
+    "citySlug": "charlotte",
+    "treatment": "wellness",
+    "path": "/locations/charlotte/wellness",
+    "clinicCount": 65
+  },
+  {
+    "city": "Charlotte",
+    "state": "NC",
+    "citySlug": "charlotte",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/charlotte/testosterone-replacement",
+    "clinicCount": 65
+  },
+  {
+    "city": "Charlotte",
+    "state": "NC",
+    "citySlug": "charlotte",
+    "treatment": "semaglutide",
+    "path": "/locations/charlotte/semaglutide",
+    "clinicCount": 65
+  },
+  {
+    "city": "Charlotte",
+    "state": "NC",
+    "citySlug": "charlotte",
+    "treatment": "iv-therapy",
+    "path": "/locations/charlotte/iv-therapy",
+    "clinicCount": 65
+  },
+  {
+    "city": "Miami",
+    "state": "FL",
+    "citySlug": "miami",
+    "treatment": "hormone-therapy",
+    "path": "/locations/miami/hormone-therapy",
+    "clinicCount": 136
+  },
+  {
+    "city": "Miami",
+    "state": "FL",
+    "citySlug": "miami",
+    "treatment": "peptide-therapy",
+    "path": "/locations/miami/peptide-therapy",
+    "clinicCount": 136
+  },
+  {
+    "city": "Miami",
+    "state": "FL",
+    "citySlug": "miami",
+    "treatment": "longevity",
+    "path": "/locations/miami/longevity",
+    "clinicCount": 136
+  },
+  {
+    "city": "Miami",
+    "state": "FL",
+    "citySlug": "miami",
+    "treatment": "wellness",
+    "path": "/locations/miami/wellness",
+    "clinicCount": 136
+  },
+  {
+    "city": "Miami",
+    "state": "FL",
+    "citySlug": "miami",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/miami/testosterone-replacement",
+    "clinicCount": 136
+  },
+  {
+    "city": "Miami",
+    "state": "FL",
+    "citySlug": "miami",
+    "treatment": "semaglutide",
+    "path": "/locations/miami/semaglutide",
+    "clinicCount": 136
+  },
+  {
+    "city": "Miami",
+    "state": "FL",
+    "citySlug": "miami",
+    "treatment": "iv-therapy",
+    "path": "/locations/miami/iv-therapy",
+    "clinicCount": 136
+  },
+  {
+    "city": "Naples",
+    "state": "FL",
+    "citySlug": "naples",
+    "treatment": "hormone-therapy",
+    "path": "/locations/naples/hormone-therapy",
+    "clinicCount": 120
+  },
+  {
+    "city": "Naples",
+    "state": "FL",
+    "citySlug": "naples",
+    "treatment": "peptide-therapy",
+    "path": "/locations/naples/peptide-therapy",
+    "clinicCount": 120
+  },
+  {
+    "city": "Naples",
+    "state": "FL",
+    "citySlug": "naples",
+    "treatment": "longevity",
+    "path": "/locations/naples/longevity",
+    "clinicCount": 120
+  },
+  {
+    "city": "Naples",
+    "state": "FL",
+    "citySlug": "naples",
+    "treatment": "wellness",
+    "path": "/locations/naples/wellness",
+    "clinicCount": 120
+  },
+  {
+    "city": "Naples",
+    "state": "FL",
+    "citySlug": "naples",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/naples/testosterone-replacement",
+    "clinicCount": 120
+  },
+  {
+    "city": "Naples",
+    "state": "FL",
+    "citySlug": "naples",
+    "treatment": "semaglutide",
+    "path": "/locations/naples/semaglutide",
+    "clinicCount": 120
+  },
+  {
+    "city": "Naples",
+    "state": "FL",
+    "citySlug": "naples",
+    "treatment": "iv-therapy",
+    "path": "/locations/naples/iv-therapy",
+    "clinicCount": 120
+  },
+  {
+    "city": "Las Vegas",
+    "state": "NV",
+    "citySlug": "las-vegas",
+    "treatment": "hormone-therapy",
+    "path": "/locations/las-vegas/hormone-therapy",
+    "clinicCount": 76
+  },
+  {
+    "city": "Las Vegas",
+    "state": "NV",
+    "citySlug": "las-vegas",
+    "treatment": "peptide-therapy",
+    "path": "/locations/las-vegas/peptide-therapy",
+    "clinicCount": 76
+  },
+  {
+    "city": "Las Vegas",
+    "state": "NV",
+    "citySlug": "las-vegas",
+    "treatment": "longevity",
+    "path": "/locations/las-vegas/longevity",
+    "clinicCount": 76
+  },
+  {
+    "city": "Las Vegas",
+    "state": "NV",
+    "citySlug": "las-vegas",
+    "treatment": "wellness",
+    "path": "/locations/las-vegas/wellness",
+    "clinicCount": 76
+  },
+  {
+    "city": "Las Vegas",
+    "state": "NV",
+    "citySlug": "las-vegas",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/las-vegas/testosterone-replacement",
+    "clinicCount": 76
+  },
+  {
+    "city": "Las Vegas",
+    "state": "NV",
+    "citySlug": "las-vegas",
+    "treatment": "semaglutide",
+    "path": "/locations/las-vegas/semaglutide",
+    "clinicCount": 76
+  },
+  {
+    "city": "Las Vegas",
+    "state": "NV",
+    "citySlug": "las-vegas",
+    "treatment": "iv-therapy",
+    "path": "/locations/las-vegas/iv-therapy",
+    "clinicCount": 76
+  },
+  {
+    "city": "Surfside",
+    "state": "FL",
+    "citySlug": "surfside",
+    "treatment": "hormone-therapy",
+    "path": "/locations/surfside/hormone-therapy",
+    "clinicCount": 107
+  },
+  {
+    "city": "Surfside",
+    "state": "FL",
+    "citySlug": "surfside",
+    "treatment": "peptide-therapy",
+    "path": "/locations/surfside/peptide-therapy",
+    "clinicCount": 107
+  },
+  {
+    "city": "Surfside",
+    "state": "FL",
+    "citySlug": "surfside",
+    "treatment": "longevity",
+    "path": "/locations/surfside/longevity",
+    "clinicCount": 107
+  },
+  {
+    "city": "Surfside",
+    "state": "FL",
+    "citySlug": "surfside",
+    "treatment": "wellness",
+    "path": "/locations/surfside/wellness",
+    "clinicCount": 107
+  },
+  {
+    "city": "Surfside",
+    "state": "FL",
+    "citySlug": "surfside",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/surfside/testosterone-replacement",
+    "clinicCount": 107
+  },
+  {
+    "city": "Surfside",
+    "state": "FL",
+    "citySlug": "surfside",
+    "treatment": "semaglutide",
+    "path": "/locations/surfside/semaglutide",
+    "clinicCount": 107
+  },
+  {
+    "city": "Surfside",
+    "state": "FL",
+    "citySlug": "surfside",
+    "treatment": "iv-therapy",
+    "path": "/locations/surfside/iv-therapy",
+    "clinicCount": 107
+  },
+  {
+    "city": "Orlando",
+    "state": "FL",
+    "citySlug": "orlando",
+    "treatment": "hormone-therapy",
+    "path": "/locations/orlando/hormone-therapy",
+    "clinicCount": 55
+  },
+  {
+    "city": "Orlando",
+    "state": "FL",
+    "citySlug": "orlando",
+    "treatment": "peptide-therapy",
+    "path": "/locations/orlando/peptide-therapy",
+    "clinicCount": 55
+  },
+  {
+    "city": "Orlando",
+    "state": "FL",
+    "citySlug": "orlando",
+    "treatment": "longevity",
+    "path": "/locations/orlando/longevity",
+    "clinicCount": 55
+  },
+  {
+    "city": "Orlando",
+    "state": "FL",
+    "citySlug": "orlando",
+    "treatment": "wellness",
+    "path": "/locations/orlando/wellness",
+    "clinicCount": 55
+  },
+  {
+    "city": "Orlando",
+    "state": "FL",
+    "citySlug": "orlando",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/orlando/testosterone-replacement",
+    "clinicCount": 55
+  },
+  {
+    "city": "Orlando",
+    "state": "FL",
+    "citySlug": "orlando",
+    "treatment": "semaglutide",
+    "path": "/locations/orlando/semaglutide",
+    "clinicCount": 55
+  },
+  {
+    "city": "Orlando",
+    "state": "FL",
+    "citySlug": "orlando",
+    "treatment": "iv-therapy",
+    "path": "/locations/orlando/iv-therapy",
+    "clinicCount": 55
+  },
+  {
+    "city": "Key Biscayne",
+    "state": "FL",
+    "citySlug": "key-biscayne",
+    "treatment": "hormone-therapy",
+    "path": "/locations/key-biscayne/hormone-therapy",
+    "clinicCount": 107
+  },
+  {
+    "city": "Key Biscayne",
+    "state": "FL",
+    "citySlug": "key-biscayne",
+    "treatment": "peptide-therapy",
+    "path": "/locations/key-biscayne/peptide-therapy",
+    "clinicCount": 107
+  },
+  {
+    "city": "Key Biscayne",
+    "state": "FL",
+    "citySlug": "key-biscayne",
+    "treatment": "longevity",
+    "path": "/locations/key-biscayne/longevity",
+    "clinicCount": 107
+  },
+  {
+    "city": "Key Biscayne",
+    "state": "FL",
+    "citySlug": "key-biscayne",
+    "treatment": "wellness",
+    "path": "/locations/key-biscayne/wellness",
+    "clinicCount": 107
+  },
+  {
+    "city": "Key Biscayne",
+    "state": "FL",
+    "citySlug": "key-biscayne",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/key-biscayne/testosterone-replacement",
+    "clinicCount": 107
+  },
+  {
+    "city": "Key Biscayne",
+    "state": "FL",
+    "citySlug": "key-biscayne",
+    "treatment": "semaglutide",
+    "path": "/locations/key-biscayne/semaglutide",
+    "clinicCount": 107
+  },
+  {
+    "city": "Key Biscayne",
+    "state": "FL",
+    "citySlug": "key-biscayne",
+    "treatment": "iv-therapy",
+    "path": "/locations/key-biscayne/iv-therapy",
+    "clinicCount": 107
+  },
+  {
+    "city": "Hallandale Beach",
+    "state": "FL",
+    "citySlug": "hallandale-beach",
+    "treatment": "hormone-therapy",
+    "path": "/locations/hallandale-beach/hormone-therapy",
+    "clinicCount": 60
+  },
+  {
+    "city": "Hallandale Beach",
+    "state": "FL",
+    "citySlug": "hallandale-beach",
+    "treatment": "peptide-therapy",
+    "path": "/locations/hallandale-beach/peptide-therapy",
+    "clinicCount": 60
+  },
+  {
+    "city": "Hallandale Beach",
+    "state": "FL",
+    "citySlug": "hallandale-beach",
+    "treatment": "longevity",
+    "path": "/locations/hallandale-beach/longevity",
+    "clinicCount": 60
+  },
+  {
+    "city": "Hallandale Beach",
+    "state": "FL",
+    "citySlug": "hallandale-beach",
+    "treatment": "wellness",
+    "path": "/locations/hallandale-beach/wellness",
+    "clinicCount": 60
+  },
+  {
+    "city": "Hallandale Beach",
+    "state": "FL",
+    "citySlug": "hallandale-beach",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/hallandale-beach/testosterone-replacement",
+    "clinicCount": 60
+  },
+  {
+    "city": "Hallandale Beach",
+    "state": "FL",
+    "citySlug": "hallandale-beach",
+    "treatment": "semaglutide",
+    "path": "/locations/hallandale-beach/semaglutide",
+    "clinicCount": 60
+  },
+  {
+    "city": "Hallandale Beach",
+    "state": "FL",
+    "citySlug": "hallandale-beach",
+    "treatment": "iv-therapy",
+    "path": "/locations/hallandale-beach/iv-therapy",
+    "clinicCount": 60
+  },
+  {
+    "city": "Jupiter",
+    "state": "FL",
+    "citySlug": "jupiter",
+    "treatment": "hormone-therapy",
+    "path": "/locations/jupiter/hormone-therapy",
+    "clinicCount": 100
+  },
+  {
+    "city": "Jupiter",
+    "state": "FL",
+    "citySlug": "jupiter",
+    "treatment": "peptide-therapy",
+    "path": "/locations/jupiter/peptide-therapy",
+    "clinicCount": 100
+  },
+  {
+    "city": "Jupiter",
+    "state": "FL",
+    "citySlug": "jupiter",
+    "treatment": "longevity",
+    "path": "/locations/jupiter/longevity",
+    "clinicCount": 100
+  },
+  {
+    "city": "Jupiter",
+    "state": "FL",
+    "citySlug": "jupiter",
+    "treatment": "wellness",
+    "path": "/locations/jupiter/wellness",
+    "clinicCount": 100
+  },
+  {
+    "city": "Jupiter",
+    "state": "FL",
+    "citySlug": "jupiter",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/jupiter/testosterone-replacement",
+    "clinicCount": 100
+  },
+  {
+    "city": "Jupiter",
+    "state": "FL",
+    "citySlug": "jupiter",
+    "treatment": "semaglutide",
+    "path": "/locations/jupiter/semaglutide",
+    "clinicCount": 100
+  },
+  {
+    "city": "Jupiter",
+    "state": "FL",
+    "citySlug": "jupiter",
+    "treatment": "iv-therapy",
+    "path": "/locations/jupiter/iv-therapy",
+    "clinicCount": 100
+  },
+  {
+    "city": "Lauderhill",
+    "state": "FL",
+    "citySlug": "lauderhill",
+    "treatment": "hormone-therapy",
+    "path": "/locations/lauderhill/hormone-therapy",
+    "clinicCount": 25
+  },
+  {
+    "city": "Lauderhill",
+    "state": "FL",
+    "citySlug": "lauderhill",
+    "treatment": "peptide-therapy",
+    "path": "/locations/lauderhill/peptide-therapy",
+    "clinicCount": 25
+  },
+  {
+    "city": "Lauderhill",
+    "state": "FL",
+    "citySlug": "lauderhill",
+    "treatment": "longevity",
+    "path": "/locations/lauderhill/longevity",
+    "clinicCount": 25
+  },
+  {
+    "city": "Lauderhill",
+    "state": "FL",
+    "citySlug": "lauderhill",
+    "treatment": "wellness",
+    "path": "/locations/lauderhill/wellness",
+    "clinicCount": 25
+  },
+  {
+    "city": "Lauderhill",
+    "state": "FL",
+    "citySlug": "lauderhill",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/lauderhill/testosterone-replacement",
+    "clinicCount": 25
+  },
+  {
+    "city": "Lauderhill",
+    "state": "FL",
+    "citySlug": "lauderhill",
+    "treatment": "semaglutide",
+    "path": "/locations/lauderhill/semaglutide",
+    "clinicCount": 25
+  },
+  {
+    "city": "Lauderhill",
+    "state": "FL",
+    "citySlug": "lauderhill",
+    "treatment": "iv-therapy",
+    "path": "/locations/lauderhill/iv-therapy",
+    "clinicCount": 25
+  },
+  {
+    "city": "Boca Raton",
+    "state": "FL",
+    "citySlug": "boca-raton",
+    "treatment": "hormone-therapy",
+    "path": "/locations/boca-raton/hormone-therapy",
+    "clinicCount": 21
+  },
+  {
+    "city": "Boca Raton",
+    "state": "FL",
+    "citySlug": "boca-raton",
+    "treatment": "peptide-therapy",
+    "path": "/locations/boca-raton/peptide-therapy",
+    "clinicCount": 21
+  },
+  {
+    "city": "Boca Raton",
+    "state": "FL",
+    "citySlug": "boca-raton",
+    "treatment": "longevity",
+    "path": "/locations/boca-raton/longevity",
+    "clinicCount": 21
+  },
+  {
+    "city": "Boca Raton",
+    "state": "FL",
+    "citySlug": "boca-raton",
+    "treatment": "wellness",
+    "path": "/locations/boca-raton/wellness",
+    "clinicCount": 21
+  },
+  {
+    "city": "Boca Raton",
+    "state": "FL",
+    "citySlug": "boca-raton",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/boca-raton/testosterone-replacement",
+    "clinicCount": 21
+  },
+  {
+    "city": "Boca Raton",
+    "state": "FL",
+    "citySlug": "boca-raton",
+    "treatment": "semaglutide",
+    "path": "/locations/boca-raton/semaglutide",
+    "clinicCount": 21
+  },
+  {
+    "city": "Boca Raton",
+    "state": "FL",
+    "citySlug": "boca-raton",
+    "treatment": "iv-therapy",
+    "path": "/locations/boca-raton/iv-therapy",
+    "clinicCount": 21
+  },
+  {
+    "city": "San Antonio",
+    "state": "TX",
+    "citySlug": "san-antonio",
+    "treatment": "hormone-therapy",
+    "path": "/locations/san-antonio/hormone-therapy",
+    "clinicCount": 67
+  },
+  {
+    "city": "San Antonio",
+    "state": "TX",
+    "citySlug": "san-antonio",
+    "treatment": "peptide-therapy",
+    "path": "/locations/san-antonio/peptide-therapy",
+    "clinicCount": 67
+  },
+  {
+    "city": "San Antonio",
+    "state": "TX",
+    "citySlug": "san-antonio",
+    "treatment": "longevity",
+    "path": "/locations/san-antonio/longevity",
+    "clinicCount": 67
+  },
+  {
+    "city": "San Antonio",
+    "state": "TX",
+    "citySlug": "san-antonio",
+    "treatment": "wellness",
+    "path": "/locations/san-antonio/wellness",
+    "clinicCount": 67
+  },
+  {
+    "city": "San Antonio",
+    "state": "TX",
+    "citySlug": "san-antonio",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/san-antonio/testosterone-replacement",
+    "clinicCount": 67
+  },
+  {
+    "city": "San Antonio",
+    "state": "TX",
+    "citySlug": "san-antonio",
+    "treatment": "semaglutide",
+    "path": "/locations/san-antonio/semaglutide",
+    "clinicCount": 67
+  },
+  {
+    "city": "San Antonio",
+    "state": "TX",
+    "citySlug": "san-antonio",
+    "treatment": "iv-therapy",
+    "path": "/locations/san-antonio/iv-therapy",
+    "clinicCount": 67
+  },
+  {
+    "city": "Fort Lauderdale",
+    "state": "FL",
+    "citySlug": "fort-lauderdale",
+    "treatment": "hormone-therapy",
+    "path": "/locations/fort-lauderdale/hormone-therapy",
+    "clinicCount": 42
+  },
+  {
+    "city": "Fort Lauderdale",
+    "state": "FL",
+    "citySlug": "fort-lauderdale",
+    "treatment": "peptide-therapy",
+    "path": "/locations/fort-lauderdale/peptide-therapy",
+    "clinicCount": 42
+  },
+  {
+    "city": "Fort Lauderdale",
+    "state": "FL",
+    "citySlug": "fort-lauderdale",
+    "treatment": "longevity",
+    "path": "/locations/fort-lauderdale/longevity",
+    "clinicCount": 42
+  },
+  {
+    "city": "Fort Lauderdale",
+    "state": "FL",
+    "citySlug": "fort-lauderdale",
+    "treatment": "wellness",
+    "path": "/locations/fort-lauderdale/wellness",
+    "clinicCount": 42
+  },
+  {
+    "city": "Fort Lauderdale",
+    "state": "FL",
+    "citySlug": "fort-lauderdale",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/fort-lauderdale/testosterone-replacement",
+    "clinicCount": 42
+  },
+  {
+    "city": "Fort Lauderdale",
+    "state": "FL",
+    "citySlug": "fort-lauderdale",
+    "treatment": "semaglutide",
+    "path": "/locations/fort-lauderdale/semaglutide",
+    "clinicCount": 42
+  },
+  {
+    "city": "Fort Lauderdale",
+    "state": "FL",
+    "citySlug": "fort-lauderdale",
+    "treatment": "iv-therapy",
+    "path": "/locations/fort-lauderdale/iv-therapy",
+    "clinicCount": 42
+  },
+  {
+    "city": "Wellington",
+    "state": "FL",
+    "citySlug": "wellington",
+    "treatment": "hormone-therapy",
+    "path": "/locations/wellington/hormone-therapy",
+    "clinicCount": 67
+  },
+  {
+    "city": "Wellington",
+    "state": "FL",
+    "citySlug": "wellington",
+    "treatment": "peptide-therapy",
+    "path": "/locations/wellington/peptide-therapy",
+    "clinicCount": 67
+  },
+  {
+    "city": "Wellington",
+    "state": "FL",
+    "citySlug": "wellington",
+    "treatment": "longevity",
+    "path": "/locations/wellington/longevity",
+    "clinicCount": 67
+  },
+  {
+    "city": "Wellington",
+    "state": "FL",
+    "citySlug": "wellington",
+    "treatment": "wellness",
+    "path": "/locations/wellington/wellness",
+    "clinicCount": 67
+  },
+  {
+    "city": "Wellington",
+    "state": "FL",
+    "citySlug": "wellington",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/wellington/testosterone-replacement",
+    "clinicCount": 67
+  },
+  {
+    "city": "Wellington",
+    "state": "FL",
+    "citySlug": "wellington",
+    "treatment": "semaglutide",
+    "path": "/locations/wellington/semaglutide",
+    "clinicCount": 67
+  },
+  {
+    "city": "Wellington",
+    "state": "FL",
+    "citySlug": "wellington",
+    "treatment": "iv-therapy",
+    "path": "/locations/wellington/iv-therapy",
+    "clinicCount": 67
+  },
+  {
+    "city": "Jacksonville",
+    "state": "FL",
+    "citySlug": "jacksonville",
+    "treatment": "hormone-therapy",
+    "path": "/locations/jacksonville/hormone-therapy",
+    "clinicCount": 44
+  },
+  {
+    "city": "Jacksonville",
+    "state": "FL",
+    "citySlug": "jacksonville",
+    "treatment": "peptide-therapy",
+    "path": "/locations/jacksonville/peptide-therapy",
+    "clinicCount": 44
+  },
+  {
+    "city": "Jacksonville",
+    "state": "FL",
+    "citySlug": "jacksonville",
+    "treatment": "longevity",
+    "path": "/locations/jacksonville/longevity",
+    "clinicCount": 44
+  },
+  {
+    "city": "Jacksonville",
+    "state": "FL",
+    "citySlug": "jacksonville",
+    "treatment": "wellness",
+    "path": "/locations/jacksonville/wellness",
+    "clinicCount": 44
+  },
+  {
+    "city": "Jacksonville",
+    "state": "FL",
+    "citySlug": "jacksonville",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/jacksonville/testosterone-replacement",
+    "clinicCount": 44
+  },
+  {
+    "city": "Jacksonville",
+    "state": "FL",
+    "citySlug": "jacksonville",
+    "treatment": "semaglutide",
+    "path": "/locations/jacksonville/semaglutide",
+    "clinicCount": 44
+  },
+  {
+    "city": "Jacksonville",
+    "state": "FL",
+    "citySlug": "jacksonville",
+    "treatment": "iv-therapy",
+    "path": "/locations/jacksonville/iv-therapy",
+    "clinicCount": 44
+  },
+  {
+    "city": "Austin",
+    "state": "TX",
+    "citySlug": "austin",
+    "treatment": "hormone-therapy",
+    "path": "/locations/austin/hormone-therapy",
+    "clinicCount": 49
+  },
+  {
+    "city": "Austin",
+    "state": "TX",
+    "citySlug": "austin",
+    "treatment": "peptide-therapy",
+    "path": "/locations/austin/peptide-therapy",
+    "clinicCount": 49
+  },
+  {
+    "city": "Austin",
+    "state": "TX",
+    "citySlug": "austin",
+    "treatment": "longevity",
+    "path": "/locations/austin/longevity",
+    "clinicCount": 49
+  },
+  {
+    "city": "Austin",
+    "state": "TX",
+    "citySlug": "austin",
+    "treatment": "wellness",
+    "path": "/locations/austin/wellness",
+    "clinicCount": 49
+  },
+  {
+    "city": "Austin",
+    "state": "TX",
+    "citySlug": "austin",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/austin/testosterone-replacement",
+    "clinicCount": 49
+  },
+  {
+    "city": "Austin",
+    "state": "TX",
+    "citySlug": "austin",
+    "treatment": "semaglutide",
+    "path": "/locations/austin/semaglutide",
+    "clinicCount": 49
+  },
+  {
+    "city": "Austin",
+    "state": "TX",
+    "citySlug": "austin",
+    "treatment": "iv-therapy",
+    "path": "/locations/austin/iv-therapy",
+    "clinicCount": 49
+  },
+  {
+    "city": "Dallas",
+    "state": "TX",
+    "citySlug": "dallas",
+    "treatment": "hormone-therapy",
+    "path": "/locations/dallas/hormone-therapy",
+    "clinicCount": 69
+  },
+  {
+    "city": "Dallas",
+    "state": "TX",
+    "citySlug": "dallas",
+    "treatment": "peptide-therapy",
+    "path": "/locations/dallas/peptide-therapy",
+    "clinicCount": 69
+  },
+  {
+    "city": "Dallas",
+    "state": "TX",
+    "citySlug": "dallas",
+    "treatment": "longevity",
+    "path": "/locations/dallas/longevity",
+    "clinicCount": 69
+  },
+  {
+    "city": "Dallas",
+    "state": "TX",
+    "citySlug": "dallas",
+    "treatment": "wellness",
+    "path": "/locations/dallas/wellness",
+    "clinicCount": 69
+  },
+  {
+    "city": "Dallas",
+    "state": "TX",
+    "citySlug": "dallas",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/dallas/testosterone-replacement",
+    "clinicCount": 69
+  },
+  {
+    "city": "Dallas",
+    "state": "TX",
+    "citySlug": "dallas",
+    "treatment": "semaglutide",
+    "path": "/locations/dallas/semaglutide",
+    "clinicCount": 69
+  },
+  {
+    "city": "Dallas",
+    "state": "TX",
+    "citySlug": "dallas",
+    "treatment": "iv-therapy",
+    "path": "/locations/dallas/iv-therapy",
+    "clinicCount": 69
+  },
+  {
+    "city": "Chicago",
+    "state": "IL",
+    "citySlug": "chicago",
+    "treatment": "hormone-therapy",
+    "path": "/locations/chicago/hormone-therapy",
+    "clinicCount": 65
+  },
+  {
+    "city": "Chicago",
+    "state": "IL",
+    "citySlug": "chicago",
+    "treatment": "peptide-therapy",
+    "path": "/locations/chicago/peptide-therapy",
+    "clinicCount": 65
+  },
+  {
+    "city": "Chicago",
+    "state": "IL",
+    "citySlug": "chicago",
+    "treatment": "longevity",
+    "path": "/locations/chicago/longevity",
+    "clinicCount": 65
+  },
+  {
+    "city": "Chicago",
+    "state": "IL",
+    "citySlug": "chicago",
+    "treatment": "wellness",
+    "path": "/locations/chicago/wellness",
+    "clinicCount": 65
+  },
+  {
+    "city": "Chicago",
+    "state": "IL",
+    "citySlug": "chicago",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/chicago/testosterone-replacement",
+    "clinicCount": 65
+  },
+  {
+    "city": "Chicago",
+    "state": "IL",
+    "citySlug": "chicago",
+    "treatment": "semaglutide",
+    "path": "/locations/chicago/semaglutide",
+    "clinicCount": 65
+  },
+  {
+    "city": "Chicago",
+    "state": "IL",
+    "citySlug": "chicago",
+    "treatment": "iv-therapy",
+    "path": "/locations/chicago/iv-therapy",
+    "clinicCount": 65
+  },
+  {
+    "city": "North Miami",
+    "state": "FL",
+    "citySlug": "north-miami",
+    "treatment": "hormone-therapy",
+    "path": "/locations/north-miami/hormone-therapy",
+    "clinicCount": 79
+  },
+  {
+    "city": "North Miami",
+    "state": "FL",
+    "citySlug": "north-miami",
+    "treatment": "peptide-therapy",
+    "path": "/locations/north-miami/peptide-therapy",
+    "clinicCount": 79
+  },
+  {
+    "city": "North Miami",
+    "state": "FL",
+    "citySlug": "north-miami",
+    "treatment": "longevity",
+    "path": "/locations/north-miami/longevity",
+    "clinicCount": 79
+  },
+  {
+    "city": "North Miami",
+    "state": "FL",
+    "citySlug": "north-miami",
+    "treatment": "wellness",
+    "path": "/locations/north-miami/wellness",
+    "clinicCount": 79
+  },
+  {
+    "city": "North Miami",
+    "state": "FL",
+    "citySlug": "north-miami",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/north-miami/testosterone-replacement",
+    "clinicCount": 79
+  },
+  {
+    "city": "North Miami",
+    "state": "FL",
+    "citySlug": "north-miami",
+    "treatment": "semaglutide",
+    "path": "/locations/north-miami/semaglutide",
+    "clinicCount": 79
+  },
+  {
+    "city": "North Miami",
+    "state": "FL",
+    "citySlug": "north-miami",
+    "treatment": "iv-therapy",
+    "path": "/locations/north-miami/iv-therapy",
+    "clinicCount": 79
+  },
+  {
+    "city": "Minneapolis",
+    "state": "MN",
+    "citySlug": "minneapolis",
+    "treatment": "hormone-therapy",
+    "path": "/locations/minneapolis/hormone-therapy",
+    "clinicCount": 34
+  },
+  {
+    "city": "Minneapolis",
+    "state": "MN",
+    "citySlug": "minneapolis",
+    "treatment": "peptide-therapy",
+    "path": "/locations/minneapolis/peptide-therapy",
+    "clinicCount": 34
+  },
+  {
+    "city": "Minneapolis",
+    "state": "MN",
+    "citySlug": "minneapolis",
+    "treatment": "longevity",
+    "path": "/locations/minneapolis/longevity",
+    "clinicCount": 34
+  },
+  {
+    "city": "Minneapolis",
+    "state": "MN",
+    "citySlug": "minneapolis",
+    "treatment": "wellness",
+    "path": "/locations/minneapolis/wellness",
+    "clinicCount": 34
+  },
+  {
+    "city": "Minneapolis",
+    "state": "MN",
+    "citySlug": "minneapolis",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/minneapolis/testosterone-replacement",
+    "clinicCount": 34
+  },
+  {
+    "city": "Minneapolis",
+    "state": "MN",
+    "citySlug": "minneapolis",
+    "treatment": "semaglutide",
+    "path": "/locations/minneapolis/semaglutide",
+    "clinicCount": 34
+  },
+  {
+    "city": "Minneapolis",
+    "state": "MN",
+    "citySlug": "minneapolis",
+    "treatment": "iv-therapy",
+    "path": "/locations/minneapolis/iv-therapy",
+    "clinicCount": 34
+  },
+  {
+    "city": "Miami Lakes",
+    "state": "FL",
+    "citySlug": "miami-lakes",
+    "treatment": "hormone-therapy",
+    "path": "/locations/miami-lakes/hormone-therapy",
+    "clinicCount": 61
+  },
+  {
+    "city": "Miami Lakes",
+    "state": "FL",
+    "citySlug": "miami-lakes",
+    "treatment": "peptide-therapy",
+    "path": "/locations/miami-lakes/peptide-therapy",
+    "clinicCount": 61
+  },
+  {
+    "city": "Miami Lakes",
+    "state": "FL",
+    "citySlug": "miami-lakes",
+    "treatment": "longevity",
+    "path": "/locations/miami-lakes/longevity",
+    "clinicCount": 61
+  },
+  {
+    "city": "Miami Lakes",
+    "state": "FL",
+    "citySlug": "miami-lakes",
+    "treatment": "wellness",
+    "path": "/locations/miami-lakes/wellness",
+    "clinicCount": 61
+  },
+  {
+    "city": "Miami Lakes",
+    "state": "FL",
+    "citySlug": "miami-lakes",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/miami-lakes/testosterone-replacement",
+    "clinicCount": 61
+  },
+  {
+    "city": "Miami Lakes",
+    "state": "FL",
+    "citySlug": "miami-lakes",
+    "treatment": "semaglutide",
+    "path": "/locations/miami-lakes/semaglutide",
+    "clinicCount": 61
+  },
+  {
+    "city": "Miami Lakes",
+    "state": "FL",
+    "citySlug": "miami-lakes",
+    "treatment": "iv-therapy",
+    "path": "/locations/miami-lakes/iv-therapy",
+    "clinicCount": 61
+  },
+  {
+    "city": "Henderson",
+    "state": "NV",
+    "citySlug": "henderson",
+    "treatment": "hormone-therapy",
+    "path": "/locations/henderson/hormone-therapy",
+    "clinicCount": 23
+  },
+  {
+    "city": "Henderson",
+    "state": "NV",
+    "citySlug": "henderson",
+    "treatment": "peptide-therapy",
+    "path": "/locations/henderson/peptide-therapy",
+    "clinicCount": 23
+  },
+  {
+    "city": "Henderson",
+    "state": "NV",
+    "citySlug": "henderson",
+    "treatment": "longevity",
+    "path": "/locations/henderson/longevity",
+    "clinicCount": 23
+  },
+  {
+    "city": "Henderson",
+    "state": "NV",
+    "citySlug": "henderson",
+    "treatment": "wellness",
+    "path": "/locations/henderson/wellness",
+    "clinicCount": 23
+  },
+  {
+    "city": "Henderson",
+    "state": "NV",
+    "citySlug": "henderson",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/henderson/testosterone-replacement",
+    "clinicCount": 23
+  },
+  {
+    "city": "Henderson",
+    "state": "NV",
+    "citySlug": "henderson",
+    "treatment": "semaglutide",
+    "path": "/locations/henderson/semaglutide",
+    "clinicCount": 23
+  },
+  {
+    "city": "Henderson",
+    "state": "NV",
+    "citySlug": "henderson",
+    "treatment": "iv-therapy",
+    "path": "/locations/henderson/iv-therapy",
+    "clinicCount": 23
+  },
+  {
+    "city": "Phoenix",
+    "state": "AZ",
+    "citySlug": "phoenix",
+    "treatment": "hormone-therapy",
+    "path": "/locations/phoenix/hormone-therapy",
+    "clinicCount": 58
+  },
+  {
+    "city": "Phoenix",
+    "state": "AZ",
+    "citySlug": "phoenix",
+    "treatment": "peptide-therapy",
+    "path": "/locations/phoenix/peptide-therapy",
+    "clinicCount": 58
+  },
+  {
+    "city": "Phoenix",
+    "state": "AZ",
+    "citySlug": "phoenix",
+    "treatment": "longevity",
+    "path": "/locations/phoenix/longevity",
+    "clinicCount": 58
+  },
+  {
+    "city": "Phoenix",
+    "state": "AZ",
+    "citySlug": "phoenix",
+    "treatment": "wellness",
+    "path": "/locations/phoenix/wellness",
+    "clinicCount": 58
+  },
+  {
+    "city": "Phoenix",
+    "state": "AZ",
+    "citySlug": "phoenix",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/phoenix/testosterone-replacement",
+    "clinicCount": 58
+  },
+  {
+    "city": "Phoenix",
+    "state": "AZ",
+    "citySlug": "phoenix",
+    "treatment": "semaglutide",
+    "path": "/locations/phoenix/semaglutide",
+    "clinicCount": 58
+  },
+  {
+    "city": "Phoenix",
+    "state": "AZ",
+    "citySlug": "phoenix",
+    "treatment": "iv-therapy",
+    "path": "/locations/phoenix/iv-therapy",
+    "clinicCount": 58
+  },
+  {
+    "city": "Bradenton",
+    "state": "FL",
+    "citySlug": "bradenton",
+    "treatment": "hormone-therapy",
+    "path": "/locations/bradenton/hormone-therapy",
+    "clinicCount": 31
+  },
+  {
+    "city": "Bradenton",
+    "state": "FL",
+    "citySlug": "bradenton",
+    "treatment": "peptide-therapy",
+    "path": "/locations/bradenton/peptide-therapy",
+    "clinicCount": 31
+  },
+  {
+    "city": "Bradenton",
+    "state": "FL",
+    "citySlug": "bradenton",
+    "treatment": "longevity",
+    "path": "/locations/bradenton/longevity",
+    "clinicCount": 31
+  },
+  {
+    "city": "Bradenton",
+    "state": "FL",
+    "citySlug": "bradenton",
+    "treatment": "wellness",
+    "path": "/locations/bradenton/wellness",
+    "clinicCount": 31
+  },
+  {
+    "city": "Bradenton",
+    "state": "FL",
+    "citySlug": "bradenton",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/bradenton/testosterone-replacement",
+    "clinicCount": 31
+  },
+  {
+    "city": "Bradenton",
+    "state": "FL",
+    "citySlug": "bradenton",
+    "treatment": "semaglutide",
+    "path": "/locations/bradenton/semaglutide",
+    "clinicCount": 31
+  },
+  {
+    "city": "Bradenton",
+    "state": "FL",
+    "citySlug": "bradenton",
+    "treatment": "iv-therapy",
+    "path": "/locations/bradenton/iv-therapy",
+    "clinicCount": 31
+  },
+  {
+    "city": "Denver",
+    "state": "CO",
+    "citySlug": "denver",
+    "treatment": "hormone-therapy",
+    "path": "/locations/denver/hormone-therapy",
+    "clinicCount": 42
+  },
+  {
+    "city": "Denver",
+    "state": "CO",
+    "citySlug": "denver",
+    "treatment": "peptide-therapy",
+    "path": "/locations/denver/peptide-therapy",
+    "clinicCount": 42
+  },
+  {
+    "city": "Denver",
+    "state": "CO",
+    "citySlug": "denver",
+    "treatment": "longevity",
+    "path": "/locations/denver/longevity",
+    "clinicCount": 42
+  },
+  {
+    "city": "Denver",
+    "state": "CO",
+    "citySlug": "denver",
+    "treatment": "wellness",
+    "path": "/locations/denver/wellness",
+    "clinicCount": 42
+  },
+  {
+    "city": "Denver",
+    "state": "CO",
+    "citySlug": "denver",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/denver/testosterone-replacement",
+    "clinicCount": 42
+  },
+  {
+    "city": "Denver",
+    "state": "CO",
+    "citySlug": "denver",
+    "treatment": "semaglutide",
+    "path": "/locations/denver/semaglutide",
+    "clinicCount": 42
+  },
+  {
+    "city": "Denver",
+    "state": "CO",
+    "citySlug": "denver",
+    "treatment": "iv-therapy",
+    "path": "/locations/denver/iv-therapy",
+    "clinicCount": 42
+  },
+  {
+    "city": "San Diego",
+    "state": "CA",
+    "citySlug": "san-diego",
+    "treatment": "hormone-therapy",
+    "path": "/locations/san-diego/hormone-therapy",
+    "clinicCount": 58
+  },
+  {
+    "city": "San Diego",
+    "state": "CA",
+    "citySlug": "san-diego",
+    "treatment": "peptide-therapy",
+    "path": "/locations/san-diego/peptide-therapy",
+    "clinicCount": 58
+  },
+  {
+    "city": "San Diego",
+    "state": "CA",
+    "citySlug": "san-diego",
+    "treatment": "longevity",
+    "path": "/locations/san-diego/longevity",
+    "clinicCount": 58
+  },
+  {
+    "city": "San Diego",
+    "state": "CA",
+    "citySlug": "san-diego",
+    "treatment": "wellness",
+    "path": "/locations/san-diego/wellness",
+    "clinicCount": 58
+  },
+  {
+    "city": "San Diego",
+    "state": "CA",
+    "citySlug": "san-diego",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/san-diego/testosterone-replacement",
+    "clinicCount": 58
+  },
+  {
+    "city": "San Diego",
+    "state": "CA",
+    "citySlug": "san-diego",
+    "treatment": "semaglutide",
+    "path": "/locations/san-diego/semaglutide",
+    "clinicCount": 58
+  },
+  {
+    "city": "San Diego",
+    "state": "CA",
+    "citySlug": "san-diego",
+    "treatment": "iv-therapy",
+    "path": "/locations/san-diego/iv-therapy",
+    "clinicCount": 58
+  },
+  {
+    "city": "Lake Worth",
+    "state": "FL",
+    "citySlug": "lake-worth",
+    "treatment": "hormone-therapy",
+    "path": "/locations/lake-worth/hormone-therapy",
+    "clinicCount": 57
+  },
+  {
+    "city": "Lake Worth",
+    "state": "FL",
+    "citySlug": "lake-worth",
+    "treatment": "peptide-therapy",
+    "path": "/locations/lake-worth/peptide-therapy",
+    "clinicCount": 57
+  },
+  {
+    "city": "Lake Worth",
+    "state": "FL",
+    "citySlug": "lake-worth",
+    "treatment": "longevity",
+    "path": "/locations/lake-worth/longevity",
+    "clinicCount": 57
+  },
+  {
+    "city": "Lake Worth",
+    "state": "FL",
+    "citySlug": "lake-worth",
+    "treatment": "wellness",
+    "path": "/locations/lake-worth/wellness",
+    "clinicCount": 57
+  },
+  {
+    "city": "Lake Worth",
+    "state": "FL",
+    "citySlug": "lake-worth",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/lake-worth/testosterone-replacement",
+    "clinicCount": 57
+  },
+  {
+    "city": "Lake Worth",
+    "state": "FL",
+    "citySlug": "lake-worth",
+    "treatment": "semaglutide",
+    "path": "/locations/lake-worth/semaglutide",
+    "clinicCount": 57
+  },
+  {
+    "city": "Lake Worth",
+    "state": "FL",
+    "citySlug": "lake-worth",
+    "treatment": "iv-therapy",
+    "path": "/locations/lake-worth/iv-therapy",
+    "clinicCount": 57
+  },
+  {
+    "city": "Estero",
+    "state": "FL",
+    "citySlug": "estero",
+    "treatment": "hormone-therapy",
+    "path": "/locations/estero/hormone-therapy",
+    "clinicCount": 43
+  },
+  {
+    "city": "Estero",
+    "state": "FL",
+    "citySlug": "estero",
+    "treatment": "peptide-therapy",
+    "path": "/locations/estero/peptide-therapy",
+    "clinicCount": 43
+  },
+  {
+    "city": "Estero",
+    "state": "FL",
+    "citySlug": "estero",
+    "treatment": "longevity",
+    "path": "/locations/estero/longevity",
+    "clinicCount": 43
+  },
+  {
+    "city": "Estero",
+    "state": "FL",
+    "citySlug": "estero",
+    "treatment": "wellness",
+    "path": "/locations/estero/wellness",
+    "clinicCount": 43
+  },
+  {
+    "city": "Estero",
+    "state": "FL",
+    "citySlug": "estero",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/estero/testosterone-replacement",
+    "clinicCount": 43
+  },
+  {
+    "city": "Estero",
+    "state": "FL",
+    "citySlug": "estero",
+    "treatment": "semaglutide",
+    "path": "/locations/estero/semaglutide",
+    "clinicCount": 43
+  },
+  {
+    "city": "Estero",
+    "state": "FL",
+    "citySlug": "estero",
+    "treatment": "iv-therapy",
+    "path": "/locations/estero/iv-therapy",
+    "clinicCount": 43
+  },
+  {
+    "city": "Columbus",
+    "state": "OH",
+    "citySlug": "columbus",
+    "treatment": "hormone-therapy",
+    "path": "/locations/columbus/hormone-therapy",
+    "clinicCount": 23
+  },
+  {
+    "city": "Columbus",
+    "state": "OH",
+    "citySlug": "columbus",
+    "treatment": "peptide-therapy",
+    "path": "/locations/columbus/peptide-therapy",
+    "clinicCount": 23
+  },
+  {
+    "city": "Columbus",
+    "state": "OH",
+    "citySlug": "columbus",
+    "treatment": "longevity",
+    "path": "/locations/columbus/longevity",
+    "clinicCount": 23
+  },
+  {
+    "city": "Columbus",
+    "state": "OH",
+    "citySlug": "columbus",
+    "treatment": "wellness",
+    "path": "/locations/columbus/wellness",
+    "clinicCount": 23
+  },
+  {
+    "city": "Columbus",
+    "state": "OH",
+    "citySlug": "columbus",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/columbus/testosterone-replacement",
+    "clinicCount": 23
+  },
+  {
+    "city": "Columbus",
+    "state": "OH",
+    "citySlug": "columbus",
+    "treatment": "semaglutide",
+    "path": "/locations/columbus/semaglutide",
+    "clinicCount": 23
+  },
+  {
+    "city": "Columbus",
+    "state": "OH",
+    "citySlug": "columbus",
+    "treatment": "iv-therapy",
+    "path": "/locations/columbus/iv-therapy",
+    "clinicCount": 23
+  },
+  {
+    "city": "Winter Park",
+    "state": "FL",
+    "citySlug": "winter-park",
+    "treatment": "hormone-therapy",
+    "path": "/locations/winter-park/hormone-therapy",
+    "clinicCount": 56
+  },
+  {
+    "city": "Winter Park",
+    "state": "FL",
+    "citySlug": "winter-park",
+    "treatment": "peptide-therapy",
+    "path": "/locations/winter-park/peptide-therapy",
+    "clinicCount": 56
+  },
+  {
+    "city": "Winter Park",
+    "state": "FL",
+    "citySlug": "winter-park",
+    "treatment": "longevity",
+    "path": "/locations/winter-park/longevity",
+    "clinicCount": 56
+  },
+  {
+    "city": "Winter Park",
+    "state": "FL",
+    "citySlug": "winter-park",
+    "treatment": "wellness",
+    "path": "/locations/winter-park/wellness",
+    "clinicCount": 56
+  },
+  {
+    "city": "Winter Park",
+    "state": "FL",
+    "citySlug": "winter-park",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/winter-park/testosterone-replacement",
+    "clinicCount": 56
+  },
+  {
+    "city": "Winter Park",
+    "state": "FL",
+    "citySlug": "winter-park",
+    "treatment": "semaglutide",
+    "path": "/locations/winter-park/semaglutide",
+    "clinicCount": 56
+  },
+  {
+    "city": "Winter Park",
+    "state": "FL",
+    "citySlug": "winter-park",
+    "treatment": "iv-therapy",
+    "path": "/locations/winter-park/iv-therapy",
+    "clinicCount": 56
+  },
+  {
+    "city": "Philadelphia",
+    "state": "PA",
+    "citySlug": "philadelphia",
+    "treatment": "hormone-therapy",
+    "path": "/locations/philadelphia/hormone-therapy",
+    "clinicCount": 40
+  },
+  {
+    "city": "Philadelphia",
+    "state": "PA",
+    "citySlug": "philadelphia",
+    "treatment": "peptide-therapy",
+    "path": "/locations/philadelphia/peptide-therapy",
+    "clinicCount": 40
+  },
+  {
+    "city": "Philadelphia",
+    "state": "PA",
+    "citySlug": "philadelphia",
+    "treatment": "longevity",
+    "path": "/locations/philadelphia/longevity",
+    "clinicCount": 40
+  },
+  {
+    "city": "Philadelphia",
+    "state": "PA",
+    "citySlug": "philadelphia",
+    "treatment": "wellness",
+    "path": "/locations/philadelphia/wellness",
+    "clinicCount": 40
+  },
+  {
+    "city": "Philadelphia",
+    "state": "PA",
+    "citySlug": "philadelphia",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/philadelphia/testosterone-replacement",
+    "clinicCount": 40
+  },
+  {
+    "city": "Philadelphia",
+    "state": "PA",
+    "citySlug": "philadelphia",
+    "treatment": "semaglutide",
+    "path": "/locations/philadelphia/semaglutide",
+    "clinicCount": 40
+  },
+  {
+    "city": "Philadelphia",
+    "state": "PA",
+    "citySlug": "philadelphia",
+    "treatment": "iv-therapy",
+    "path": "/locations/philadelphia/iv-therapy",
+    "clinicCount": 40
+  },
+  {
+    "city": "Tamarac",
+    "state": "FL",
+    "citySlug": "tamarac",
+    "treatment": "hormone-therapy",
+    "path": "/locations/tamarac/hormone-therapy",
+    "clinicCount": 36
+  },
+  {
+    "city": "Tamarac",
+    "state": "FL",
+    "citySlug": "tamarac",
+    "treatment": "peptide-therapy",
+    "path": "/locations/tamarac/peptide-therapy",
+    "clinicCount": 36
+  },
+  {
+    "city": "Tamarac",
+    "state": "FL",
+    "citySlug": "tamarac",
+    "treatment": "longevity",
+    "path": "/locations/tamarac/longevity",
+    "clinicCount": 36
+  },
+  {
+    "city": "Tamarac",
+    "state": "FL",
+    "citySlug": "tamarac",
+    "treatment": "wellness",
+    "path": "/locations/tamarac/wellness",
+    "clinicCount": 36
+  },
+  {
+    "city": "Tamarac",
+    "state": "FL",
+    "citySlug": "tamarac",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/tamarac/testosterone-replacement",
+    "clinicCount": 36
+  },
+  {
+    "city": "Tamarac",
+    "state": "FL",
+    "citySlug": "tamarac",
+    "treatment": "semaglutide",
+    "path": "/locations/tamarac/semaglutide",
+    "clinicCount": 36
+  },
+  {
+    "city": "Tamarac",
+    "state": "FL",
+    "citySlug": "tamarac",
+    "treatment": "iv-therapy",
+    "path": "/locations/tamarac/iv-therapy",
+    "clinicCount": 36
+  },
+  {
+    "city": "Newport Beach",
+    "state": "CA",
+    "citySlug": "newport-beach",
+    "treatment": "hormone-therapy",
+    "path": "/locations/newport-beach/hormone-therapy",
+    "clinicCount": 24
+  },
+  {
+    "city": "Newport Beach",
+    "state": "CA",
+    "citySlug": "newport-beach",
+    "treatment": "peptide-therapy",
+    "path": "/locations/newport-beach/peptide-therapy",
+    "clinicCount": 24
+  },
+  {
+    "city": "Newport Beach",
+    "state": "CA",
+    "citySlug": "newport-beach",
+    "treatment": "longevity",
+    "path": "/locations/newport-beach/longevity",
+    "clinicCount": 24
+  },
+  {
+    "city": "Newport Beach",
+    "state": "CA",
+    "citySlug": "newport-beach",
+    "treatment": "wellness",
+    "path": "/locations/newport-beach/wellness",
+    "clinicCount": 24
+  },
+  {
+    "city": "Newport Beach",
+    "state": "CA",
+    "citySlug": "newport-beach",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/newport-beach/testosterone-replacement",
+    "clinicCount": 24
+  },
+  {
+    "city": "Newport Beach",
+    "state": "CA",
+    "citySlug": "newport-beach",
+    "treatment": "semaglutide",
+    "path": "/locations/newport-beach/semaglutide",
+    "clinicCount": 24
+  },
+  {
+    "city": "Newport Beach",
+    "state": "CA",
+    "citySlug": "newport-beach",
+    "treatment": "iv-therapy",
+    "path": "/locations/newport-beach/iv-therapy",
+    "clinicCount": 24
+  },
+  {
+    "city": "Seattle",
+    "state": "WA",
+    "citySlug": "seattle",
+    "treatment": "hormone-therapy",
+    "path": "/locations/seattle/hormone-therapy",
+    "clinicCount": 30
+  },
+  {
+    "city": "Seattle",
+    "state": "WA",
+    "citySlug": "seattle",
+    "treatment": "peptide-therapy",
+    "path": "/locations/seattle/peptide-therapy",
+    "clinicCount": 30
+  },
+  {
+    "city": "Seattle",
+    "state": "WA",
+    "citySlug": "seattle",
+    "treatment": "longevity",
+    "path": "/locations/seattle/longevity",
+    "clinicCount": 30
+  },
+  {
+    "city": "Seattle",
+    "state": "WA",
+    "citySlug": "seattle",
+    "treatment": "wellness",
+    "path": "/locations/seattle/wellness",
+    "clinicCount": 30
+  },
+  {
+    "city": "Seattle",
+    "state": "WA",
+    "citySlug": "seattle",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/seattle/testosterone-replacement",
+    "clinicCount": 30
+  },
+  {
+    "city": "Seattle",
+    "state": "WA",
+    "citySlug": "seattle",
+    "treatment": "semaglutide",
+    "path": "/locations/seattle/semaglutide",
+    "clinicCount": 30
+  },
+  {
+    "city": "Seattle",
+    "state": "WA",
+    "citySlug": "seattle",
+    "treatment": "iv-therapy",
+    "path": "/locations/seattle/iv-therapy",
+    "clinicCount": 30
+  },
+  {
+    "city": "Aventura",
+    "state": "FL",
+    "citySlug": "aventura",
+    "treatment": "hormone-therapy",
+    "path": "/locations/aventura/hormone-therapy",
+    "clinicCount": 19
+  },
+  {
+    "city": "Aventura",
+    "state": "FL",
+    "citySlug": "aventura",
+    "treatment": "peptide-therapy",
+    "path": "/locations/aventura/peptide-therapy",
+    "clinicCount": 19
+  },
+  {
+    "city": "Aventura",
+    "state": "FL",
+    "citySlug": "aventura",
+    "treatment": "longevity",
+    "path": "/locations/aventura/longevity",
+    "clinicCount": 19
+  },
+  {
+    "city": "Aventura",
+    "state": "FL",
+    "citySlug": "aventura",
+    "treatment": "wellness",
+    "path": "/locations/aventura/wellness",
+    "clinicCount": 19
+  },
+  {
+    "city": "Aventura",
+    "state": "FL",
+    "citySlug": "aventura",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/aventura/testosterone-replacement",
+    "clinicCount": 19
+  },
+  {
+    "city": "Aventura",
+    "state": "FL",
+    "citySlug": "aventura",
+    "treatment": "semaglutide",
+    "path": "/locations/aventura/semaglutide",
+    "clinicCount": 19
+  },
+  {
+    "city": "Aventura",
+    "state": "FL",
+    "citySlug": "aventura",
+    "treatment": "iv-therapy",
+    "path": "/locations/aventura/iv-therapy",
+    "clinicCount": 19
+  },
+  {
+    "city": "Palm Beach Gardens",
+    "state": "FL",
+    "citySlug": "palm-beach-gardens",
+    "treatment": "hormone-therapy",
+    "path": "/locations/palm-beach-gardens/hormone-therapy",
+    "clinicCount": 34
+  },
+  {
+    "city": "Palm Beach Gardens",
+    "state": "FL",
+    "citySlug": "palm-beach-gardens",
+    "treatment": "peptide-therapy",
+    "path": "/locations/palm-beach-gardens/peptide-therapy",
+    "clinicCount": 34
+  },
+  {
+    "city": "Palm Beach Gardens",
+    "state": "FL",
+    "citySlug": "palm-beach-gardens",
+    "treatment": "longevity",
+    "path": "/locations/palm-beach-gardens/longevity",
+    "clinicCount": 34
+  },
+  {
+    "city": "Palm Beach Gardens",
+    "state": "FL",
+    "citySlug": "palm-beach-gardens",
+    "treatment": "wellness",
+    "path": "/locations/palm-beach-gardens/wellness",
+    "clinicCount": 34
+  },
+  {
+    "city": "Palm Beach Gardens",
+    "state": "FL",
+    "citySlug": "palm-beach-gardens",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/palm-beach-gardens/testosterone-replacement",
+    "clinicCount": 34
+  },
+  {
+    "city": "Palm Beach Gardens",
+    "state": "FL",
+    "citySlug": "palm-beach-gardens",
+    "treatment": "semaglutide",
+    "path": "/locations/palm-beach-gardens/semaglutide",
+    "clinicCount": 34
+  },
+  {
+    "city": "Palm Beach Gardens",
+    "state": "FL",
+    "citySlug": "palm-beach-gardens",
+    "treatment": "iv-therapy",
+    "path": "/locations/palm-beach-gardens/iv-therapy",
+    "clinicCount": 34
+  },
+  {
+    "city": "Houston",
+    "state": "TX",
+    "citySlug": "houston",
+    "treatment": "hormone-therapy",
+    "path": "/locations/houston/hormone-therapy",
+    "clinicCount": 55
+  },
+  {
+    "city": "Houston",
+    "state": "TX",
+    "citySlug": "houston",
+    "treatment": "peptide-therapy",
+    "path": "/locations/houston/peptide-therapy",
+    "clinicCount": 55
+  },
+  {
+    "city": "Houston",
+    "state": "TX",
+    "citySlug": "houston",
+    "treatment": "longevity",
+    "path": "/locations/houston/longevity",
+    "clinicCount": 55
+  },
+  {
+    "city": "Houston",
+    "state": "TX",
+    "citySlug": "houston",
+    "treatment": "wellness",
+    "path": "/locations/houston/wellness",
+    "clinicCount": 55
+  },
+  {
+    "city": "Houston",
+    "state": "TX",
+    "citySlug": "houston",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/houston/testosterone-replacement",
+    "clinicCount": 55
+  },
+  {
+    "city": "Houston",
+    "state": "TX",
+    "citySlug": "houston",
+    "treatment": "semaglutide",
+    "path": "/locations/houston/semaglutide",
+    "clinicCount": 55
+  },
+  {
+    "city": "Houston",
+    "state": "TX",
+    "citySlug": "houston",
+    "treatment": "iv-therapy",
+    "path": "/locations/houston/iv-therapy",
+    "clinicCount": 55
+  },
+  {
+    "city": "Atlanta",
+    "state": "GA",
+    "citySlug": "atlanta",
+    "treatment": "hormone-therapy",
+    "path": "/locations/atlanta/hormone-therapy",
+    "clinicCount": 59
+  },
+  {
+    "city": "Atlanta",
+    "state": "GA",
+    "citySlug": "atlanta",
+    "treatment": "peptide-therapy",
+    "path": "/locations/atlanta/peptide-therapy",
+    "clinicCount": 59
+  },
+  {
+    "city": "Atlanta",
+    "state": "GA",
+    "citySlug": "atlanta",
+    "treatment": "longevity",
+    "path": "/locations/atlanta/longevity",
+    "clinicCount": 59
+  },
+  {
+    "city": "Atlanta",
+    "state": "GA",
+    "citySlug": "atlanta",
+    "treatment": "wellness",
+    "path": "/locations/atlanta/wellness",
+    "clinicCount": 59
+  },
+  {
+    "city": "Atlanta",
+    "state": "GA",
+    "citySlug": "atlanta",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/atlanta/testosterone-replacement",
+    "clinicCount": 59
+  },
+  {
+    "city": "Atlanta",
+    "state": "GA",
+    "citySlug": "atlanta",
+    "treatment": "semaglutide",
+    "path": "/locations/atlanta/semaglutide",
+    "clinicCount": 59
+  },
+  {
+    "city": "Atlanta",
+    "state": "GA",
+    "citySlug": "atlanta",
+    "treatment": "iv-therapy",
+    "path": "/locations/atlanta/iv-therapy",
+    "clinicCount": 59
+  },
+  {
+    "city": "Margate",
+    "state": "FL",
+    "citySlug": "margate",
+    "treatment": "hormone-therapy",
+    "path": "/locations/margate/hormone-therapy",
+    "clinicCount": 31
+  },
+  {
+    "city": "Margate",
+    "state": "FL",
+    "citySlug": "margate",
+    "treatment": "peptide-therapy",
+    "path": "/locations/margate/peptide-therapy",
+    "clinicCount": 31
+  },
+  {
+    "city": "Margate",
+    "state": "FL",
+    "citySlug": "margate",
+    "treatment": "longevity",
+    "path": "/locations/margate/longevity",
+    "clinicCount": 31
+  },
+  {
+    "city": "Margate",
+    "state": "FL",
+    "citySlug": "margate",
+    "treatment": "wellness",
+    "path": "/locations/margate/wellness",
+    "clinicCount": 31
+  },
+  {
+    "city": "Margate",
+    "state": "FL",
+    "citySlug": "margate",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/margate/testosterone-replacement",
+    "clinicCount": 31
+  },
+  {
+    "city": "Margate",
+    "state": "FL",
+    "citySlug": "margate",
+    "treatment": "semaglutide",
+    "path": "/locations/margate/semaglutide",
+    "clinicCount": 31
+  },
+  {
+    "city": "Margate",
+    "state": "FL",
+    "citySlug": "margate",
+    "treatment": "iv-therapy",
+    "path": "/locations/margate/iv-therapy",
+    "clinicCount": 31
+  },
+  {
+    "city": "Davie",
+    "state": "FL",
+    "citySlug": "davie",
+    "treatment": "hormone-therapy",
+    "path": "/locations/davie/hormone-therapy",
+    "clinicCount": 86
+  },
+  {
+    "city": "Davie",
+    "state": "FL",
+    "citySlug": "davie",
+    "treatment": "peptide-therapy",
+    "path": "/locations/davie/peptide-therapy",
+    "clinicCount": 86
+  },
+  {
+    "city": "Davie",
+    "state": "FL",
+    "citySlug": "davie",
+    "treatment": "longevity",
+    "path": "/locations/davie/longevity",
+    "clinicCount": 86
+  },
+  {
+    "city": "Davie",
+    "state": "FL",
+    "citySlug": "davie",
+    "treatment": "wellness",
+    "path": "/locations/davie/wellness",
+    "clinicCount": 86
+  },
+  {
+    "city": "Davie",
+    "state": "FL",
+    "citySlug": "davie",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/davie/testosterone-replacement",
+    "clinicCount": 86
+  },
+  {
+    "city": "Davie",
+    "state": "FL",
+    "citySlug": "davie",
+    "treatment": "semaglutide",
+    "path": "/locations/davie/semaglutide",
+    "clinicCount": 86
+  },
+  {
+    "city": "Davie",
+    "state": "FL",
+    "citySlug": "davie",
+    "treatment": "iv-therapy",
+    "path": "/locations/davie/iv-therapy",
+    "clinicCount": 86
+  },
+  {
+    "city": "Deerfield Beach",
+    "state": "FL",
+    "citySlug": "deerfield-beach",
+    "treatment": "hormone-therapy",
+    "path": "/locations/deerfield-beach/hormone-therapy",
+    "clinicCount": 100
+  },
+  {
+    "city": "Deerfield Beach",
+    "state": "FL",
+    "citySlug": "deerfield-beach",
+    "treatment": "peptide-therapy",
+    "path": "/locations/deerfield-beach/peptide-therapy",
+    "clinicCount": 100
+  },
+  {
+    "city": "Deerfield Beach",
+    "state": "FL",
+    "citySlug": "deerfield-beach",
+    "treatment": "longevity",
+    "path": "/locations/deerfield-beach/longevity",
+    "clinicCount": 100
+  },
+  {
+    "city": "Deerfield Beach",
+    "state": "FL",
+    "citySlug": "deerfield-beach",
+    "treatment": "wellness",
+    "path": "/locations/deerfield-beach/wellness",
+    "clinicCount": 100
+  },
+  {
+    "city": "Deerfield Beach",
+    "state": "FL",
+    "citySlug": "deerfield-beach",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/deerfield-beach/testosterone-replacement",
+    "clinicCount": 100
+  },
+  {
+    "city": "Deerfield Beach",
+    "state": "FL",
+    "citySlug": "deerfield-beach",
+    "treatment": "semaglutide",
+    "path": "/locations/deerfield-beach/semaglutide",
+    "clinicCount": 100
+  },
+  {
+    "city": "Deerfield Beach",
+    "state": "FL",
+    "citySlug": "deerfield-beach",
+    "treatment": "iv-therapy",
+    "path": "/locations/deerfield-beach/iv-therapy",
+    "clinicCount": 100
+  },
+  {
+    "city": "San Francisco",
+    "state": "CA",
+    "citySlug": "san-francisco",
+    "treatment": "hormone-therapy",
+    "path": "/locations/san-francisco/hormone-therapy",
+    "clinicCount": 19
+  },
+  {
+    "city": "San Francisco",
+    "state": "CA",
+    "citySlug": "san-francisco",
+    "treatment": "peptide-therapy",
+    "path": "/locations/san-francisco/peptide-therapy",
+    "clinicCount": 19
+  },
+  {
+    "city": "San Francisco",
+    "state": "CA",
+    "citySlug": "san-francisco",
+    "treatment": "longevity",
+    "path": "/locations/san-francisco/longevity",
+    "clinicCount": 19
+  },
+  {
+    "city": "San Francisco",
+    "state": "CA",
+    "citySlug": "san-francisco",
+    "treatment": "wellness",
+    "path": "/locations/san-francisco/wellness",
+    "clinicCount": 19
+  },
+  {
+    "city": "San Francisco",
+    "state": "CA",
+    "citySlug": "san-francisco",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/san-francisco/testosterone-replacement",
+    "clinicCount": 19
+  },
+  {
+    "city": "San Francisco",
+    "state": "CA",
+    "citySlug": "san-francisco",
+    "treatment": "semaglutide",
+    "path": "/locations/san-francisco/semaglutide",
+    "clinicCount": 19
+  },
+  {
+    "city": "San Francisco",
+    "state": "CA",
+    "citySlug": "san-francisco",
+    "treatment": "iv-therapy",
+    "path": "/locations/san-francisco/iv-therapy",
+    "clinicCount": 19
+  },
+  {
+    "city": "Tempe",
+    "state": "AZ",
+    "citySlug": "tempe",
+    "treatment": "hormone-therapy",
+    "path": "/locations/tempe/hormone-therapy",
+    "clinicCount": 24
+  },
+  {
+    "city": "Tempe",
+    "state": "AZ",
+    "citySlug": "tempe",
+    "treatment": "peptide-therapy",
+    "path": "/locations/tempe/peptide-therapy",
+    "clinicCount": 24
+  },
+  {
+    "city": "Tempe",
+    "state": "AZ",
+    "citySlug": "tempe",
+    "treatment": "longevity",
+    "path": "/locations/tempe/longevity",
+    "clinicCount": 24
+  },
+  {
+    "city": "Tempe",
+    "state": "AZ",
+    "citySlug": "tempe",
+    "treatment": "wellness",
+    "path": "/locations/tempe/wellness",
+    "clinicCount": 24
+  },
+  {
+    "city": "Tempe",
+    "state": "AZ",
+    "citySlug": "tempe",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/tempe/testosterone-replacement",
+    "clinicCount": 24
+  },
+  {
+    "city": "Tempe",
+    "state": "AZ",
+    "citySlug": "tempe",
+    "treatment": "semaglutide",
+    "path": "/locations/tempe/semaglutide",
+    "clinicCount": 24
+  },
+  {
+    "city": "Tempe",
+    "state": "AZ",
+    "citySlug": "tempe",
+    "treatment": "iv-therapy",
+    "path": "/locations/tempe/iv-therapy",
+    "clinicCount": 24
+  },
+  {
+    "city": "New York City",
+    "state": "NY",
+    "citySlug": "new-york-city",
+    "treatment": "hormone-therapy",
+    "path": "/locations/new-york-city/hormone-therapy",
+    "clinicCount": 25
+  },
+  {
+    "city": "New York City",
+    "state": "NY",
+    "citySlug": "new-york-city",
+    "treatment": "peptide-therapy",
+    "path": "/locations/new-york-city/peptide-therapy",
+    "clinicCount": 25
+  },
+  {
+    "city": "New York City",
+    "state": "NY",
+    "citySlug": "new-york-city",
+    "treatment": "longevity",
+    "path": "/locations/new-york-city/longevity",
+    "clinicCount": 25
+  },
+  {
+    "city": "New York City",
+    "state": "NY",
+    "citySlug": "new-york-city",
+    "treatment": "wellness",
+    "path": "/locations/new-york-city/wellness",
+    "clinicCount": 25
+  },
+  {
+    "city": "New York City",
+    "state": "NY",
+    "citySlug": "new-york-city",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/new-york-city/testosterone-replacement",
+    "clinicCount": 25
+  },
+  {
+    "city": "New York City",
+    "state": "NY",
+    "citySlug": "new-york-city",
+    "treatment": "semaglutide",
+    "path": "/locations/new-york-city/semaglutide",
+    "clinicCount": 25
+  },
+  {
+    "city": "New York City",
+    "state": "NY",
+    "citySlug": "new-york-city",
+    "treatment": "iv-therapy",
+    "path": "/locations/new-york-city/iv-therapy",
+    "clinicCount": 25
+  },
+  {
+    "city": "Beverly Hills",
+    "state": "CA",
+    "citySlug": "beverly-hills",
+    "treatment": "hormone-therapy",
+    "path": "/locations/beverly-hills/hormone-therapy",
+    "clinicCount": 24
+  },
+  {
+    "city": "Beverly Hills",
+    "state": "CA",
+    "citySlug": "beverly-hills",
+    "treatment": "peptide-therapy",
+    "path": "/locations/beverly-hills/peptide-therapy",
+    "clinicCount": 24
+  },
+  {
+    "city": "Beverly Hills",
+    "state": "CA",
+    "citySlug": "beverly-hills",
+    "treatment": "longevity",
+    "path": "/locations/beverly-hills/longevity",
+    "clinicCount": 24
+  },
+  {
+    "city": "Beverly Hills",
+    "state": "CA",
+    "citySlug": "beverly-hills",
+    "treatment": "wellness",
+    "path": "/locations/beverly-hills/wellness",
+    "clinicCount": 24
+  },
+  {
+    "city": "Beverly Hills",
+    "state": "CA",
+    "citySlug": "beverly-hills",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/beverly-hills/testosterone-replacement",
+    "clinicCount": 24
+  },
+  {
+    "city": "Beverly Hills",
+    "state": "CA",
+    "citySlug": "beverly-hills",
+    "treatment": "semaglutide",
+    "path": "/locations/beverly-hills/semaglutide",
+    "clinicCount": 24
+  },
+  {
+    "city": "Beverly Hills",
+    "state": "CA",
+    "citySlug": "beverly-hills",
+    "treatment": "iv-therapy",
+    "path": "/locations/beverly-hills/iv-therapy",
+    "clinicCount": 24
+  },
+  {
+    "city": "Doral",
+    "state": "FL",
+    "citySlug": "doral",
+    "treatment": "hormone-therapy",
+    "path": "/locations/doral/hormone-therapy",
+    "clinicCount": 17
+  },
+  {
+    "city": "Doral",
+    "state": "FL",
+    "citySlug": "doral",
+    "treatment": "peptide-therapy",
+    "path": "/locations/doral/peptide-therapy",
+    "clinicCount": 17
+  },
+  {
+    "city": "Doral",
+    "state": "FL",
+    "citySlug": "doral",
+    "treatment": "longevity",
+    "path": "/locations/doral/longevity",
+    "clinicCount": 17
+  },
+  {
+    "city": "Doral",
+    "state": "FL",
+    "citySlug": "doral",
+    "treatment": "wellness",
+    "path": "/locations/doral/wellness",
+    "clinicCount": 17
+  },
+  {
+    "city": "Doral",
+    "state": "FL",
+    "citySlug": "doral",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/doral/testosterone-replacement",
+    "clinicCount": 17
+  },
+  {
+    "city": "Doral",
+    "state": "FL",
+    "citySlug": "doral",
+    "treatment": "semaglutide",
+    "path": "/locations/doral/semaglutide",
+    "clinicCount": 17
+  },
+  {
+    "city": "Doral",
+    "state": "FL",
+    "citySlug": "doral",
+    "treatment": "iv-therapy",
+    "path": "/locations/doral/iv-therapy",
+    "clinicCount": 17
+  },
+  {
+    "city": "Scottsdale",
+    "state": "AZ",
+    "citySlug": "scottsdale",
+    "treatment": "hormone-therapy",
+    "path": "/locations/scottsdale/hormone-therapy",
+    "clinicCount": 28
+  },
+  {
+    "city": "Scottsdale",
+    "state": "AZ",
+    "citySlug": "scottsdale",
+    "treatment": "peptide-therapy",
+    "path": "/locations/scottsdale/peptide-therapy",
+    "clinicCount": 28
+  },
+  {
+    "city": "Scottsdale",
+    "state": "AZ",
+    "citySlug": "scottsdale",
+    "treatment": "longevity",
+    "path": "/locations/scottsdale/longevity",
+    "clinicCount": 28
+  },
+  {
+    "city": "Scottsdale",
+    "state": "AZ",
+    "citySlug": "scottsdale",
+    "treatment": "wellness",
+    "path": "/locations/scottsdale/wellness",
+    "clinicCount": 28
+  },
+  {
+    "city": "Scottsdale",
+    "state": "AZ",
+    "citySlug": "scottsdale",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/scottsdale/testosterone-replacement",
+    "clinicCount": 28
+  },
+  {
+    "city": "Scottsdale",
+    "state": "AZ",
+    "citySlug": "scottsdale",
+    "treatment": "semaglutide",
+    "path": "/locations/scottsdale/semaglutide",
+    "clinicCount": 28
+  },
+  {
+    "city": "Scottsdale",
+    "state": "AZ",
+    "citySlug": "scottsdale",
+    "treatment": "iv-therapy",
+    "path": "/locations/scottsdale/iv-therapy",
+    "clinicCount": 28
+  },
+  {
+    "city": "Nashville",
+    "state": "TN",
+    "citySlug": "nashville",
+    "treatment": "hormone-therapy",
+    "path": "/locations/nashville/hormone-therapy",
+    "clinicCount": 32
+  },
+  {
+    "city": "Nashville",
+    "state": "TN",
+    "citySlug": "nashville",
+    "treatment": "peptide-therapy",
+    "path": "/locations/nashville/peptide-therapy",
+    "clinicCount": 32
+  },
+  {
+    "city": "Nashville",
+    "state": "TN",
+    "citySlug": "nashville",
+    "treatment": "longevity",
+    "path": "/locations/nashville/longevity",
+    "clinicCount": 32
+  },
+  {
+    "city": "Nashville",
+    "state": "TN",
+    "citySlug": "nashville",
+    "treatment": "wellness",
+    "path": "/locations/nashville/wellness",
+    "clinicCount": 32
+  },
+  {
+    "city": "Nashville",
+    "state": "TN",
+    "citySlug": "nashville",
+    "treatment": "testosterone-replacement",
+    "path": "/locations/nashville/testosterone-replacement",
+    "clinicCount": 32
+  },
+  {
+    "city": "Nashville",
+    "state": "TN",
+    "citySlug": "nashville",
+    "treatment": "semaglutide",
+    "path": "/locations/nashville/semaglutide",
+    "clinicCount": 32
+  },
+  {
+    "city": "Nashville",
+    "state": "TN",
+    "citySlug": "nashville",
+    "treatment": "iv-therapy",
+    "path": "/locations/nashville/iv-therapy",
+    "clinicCount": 32
+  }
+]

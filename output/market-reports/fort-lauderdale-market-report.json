@@ -1,0 +1,57 @@
+{
+  "city": "Fort Lauderdale",
+  "total": 42,
+  "avgScore": "4.9",
+  "avgReviews": 163,
+  "withImages": 22,
+  "withWebsite": 41,
+  "unclaimed": 42,
+  "tiers": {
+    "1": 24,
+    "2": 3,
+    "3": 7,
+    "4": 7
+  },
+  "top5": [
+    {
+      "name": "Liquivida Wellness Center | Lauderdale Beach",
+      "score": 5,
+      "reviews": 1255,
+      "website": "https://www.liquivida.com/fort-lauderdale"
+    },
+    {
+      "name": "The Beauty Clinic",
+      "score": 5,
+      "reviews": 568,
+      "website": "http://thebeautyclinic.com/"
+    },
+    {
+      "name": "Las Olas Med Spa",
+      "score": 5,
+      "reviews": 412,
+      "website": "https://www.topaesthetics.com/?utm_source=GMBlisting&utm_medium=organic&utm_campaign=gmb-medspa"
+    },
+    {
+      "name": "Dolce Medical Spa Las Olas | Facial | Skin Tightening | Microneedling",
+      "score": 5,
+      "reviews": 364,
+      "website": "http://dolcemedicalspas.com/"
+    },
+    {
+      "name": "Amaira Med Spa & Surgical",
+      "score": 5,
+      "reviews": 340,
+      "website": "https://amairamedspa.com/"
+    }
+  ],
+  "topServices": [
+    "anti-aging (35)",
+    "hydrafacial (9)",
+    "laser-hair-removal (4)",
+    "iv-therapy (4)",
+    "cosmetic-surgery (3)",
+    "trt-testosterone (2)",
+    "microneedling (2)",
+    "prp-treatments (2)"
+  ]
+}

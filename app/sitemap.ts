@@ -4,6 +4,8 @@ import { TREATMENTS, TREATMENT_SLUGS } from '@/lib/treatments'
 import { SITE_URL } from '@/lib/config'
 import { ARTICLES } from '@/data/articles'
 import { INSIGHTS } from '@/data/insights'
+import fs from 'fs'
+import path from 'path'
 
 function citySlug(city: string): string {
   return city.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
@@ -25,6 +27,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${SITE_URL}/quiz`,          lastModified: today, changeFrequency: 'weekly',  priority: 0.8 },
     { url: `${SITE_URL}/telehealth`,    lastModified: today, changeFrequency: 'weekly',  priority: 0.8 },
   ]
+
+  // Telehealth provider pages
+  let telehealthProviderRoutes: MetadataRoute.Sitemap = []
+  try {
+    const telehealthDir = path.join(process.cwd(), 'app', 'telehealth')
+    const items = fs.readdirSync(telehealthDir, { withFileTypes: true })
+    const providerSlugs = items
+      .filter(dirent => dirent.isDirectory())
+      .map(dirent => dirent.name)
+    telehealthProviderRoutes = providerSlugs.map(slug => ({
+      url: `${SITE_URL}/telehealth/${slug}`,
+      lastModified: today,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    }))
+  } catch { /* telehealth directory not found */ }
 
   // ── Treatment pages ───────────────────────────────────────────────────────
   const treatmentPages: MetadataRoute.Sitemap = TREATMENT_SLUGS.map(slug => ({
@@ -102,6 +120,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   const all = [
     ...staticPages,
+    ...telehealthProviderRoutes,
     ...treatmentPages,
     ...cityPages,
     ...cityTreatmentPages,

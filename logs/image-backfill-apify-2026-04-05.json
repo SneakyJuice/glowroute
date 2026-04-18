@@ -1,0 +1,4972 @@
+[
+  {
+    "id": "3d1c91c8-ee30-41c1-a519-73cbc753185a",
+    "name": "Seissa Belmondo Beauty & Spa",
+    "city": "North Miami Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "2bb75f1c-7c30-41dc-ab79-be18de19dd83",
+    "name": "Essence Glow Spa",
+    "city": "North Miami Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "417b05e1-f6fc-4d1e-b4ba-4830495f318e",
+    "name": "Botoplace",
+    "city": "North Miami Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "6f72d69b-bb78-4390-8091-996fbfbdb860",
+    "name": "Look Lab Med Spa",
+    "city": "Denver",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "97fb5e91-a927-4e05-b585-f8744158b376",
+    "name": "Bodyworks by Ellice & Aidee",
+    "city": "Denver",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "a5e0147c-74d2-4c43-b6da-b4b488759cdc",
+    "name": "OVME",
+    "city": "Denver",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "132b6cf6-e246-4e55-8615-787a1a19c129",
+    "name": "JuicyFace",
+    "city": "Denver",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "d6f6ec3f-07d1-435c-8d32-bbd2845b0ee7",
+    "name": "VIVE Med Spa",
+    "city": "Denver",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "13de29ea-a913-4397-bdad-673c05fb4e33",
+    "name": "MD Aesthetics and Body Sculpting",
+    "city": "Englewood",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "8be9f4b6-e718-48c4-bcc4-3f741db9bb67",
+    "name": "Veloura Aesthetics",
+    "city": "North Miami Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "85e36593-68f2-406a-bbb1-6c6d74e98311",
+    "name": "NassifMD",
+    "city": "Lauderhill",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "a7912c3d-a013-4609-a4f8-7c6f00e565c0",
+    "name": "Glowtox Aesthetics",
+    "city": "North Miami Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "f321365b-94d3-4fb9-b45e-c8fc9e32e040",
+    "name": "Rock Your Body Med Spa",
+    "city": "Denver",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "fed94aa4-3f75-4269-a650-316a75c70bc8",
+    "name": "Allura Health & Wellness",
+    "city": "North Miami Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "be85b7ba-9111-41b1-b22b-756523051148",
+    "name": "Beautiful Skin Denver",
+    "city": "Denver",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "b4895b51-07ed-48ed-a03a-e5c362f0a482",
+    "name": "The Maxim Clinic - South End",
+    "city": "Charlotte",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "c1f1e88b-e2b4-4a30-b0d4-9e480a3bfaa5",
+    "name": "Whole Body Sculpting Spa",
+    "city": "Lakewood",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "ca381ff2-3af4-41df-8785-84c55f6d7284",
+    "name": "NuJo Wellness Spa – CoolSculpting, Fat Loss, Lymphatic Drainage, Red Light & Menopause Support",
+    "city": "Denver",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "787be83b-78f2-43af-90dc-ef0e67747c96",
+    "name": "Drip IV Wellness & MedSpa",
+    "city": "Charlotte",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "0c47790f-8410-44fd-881a-0849a909cab0",
+    "name": "The Modern Aesthetic",
+    "city": "Charlotte",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "058e36cb-0ce8-4879-978c-2dc1b7b21fd4",
+    "name": "Modern Skin & Laser Clinic",
+    "city": "Charlotte",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "9df3b4c6-f895-4415-9868-959276bd97db",
+    "name": "Infinity MedSpa and Wellness",
+    "city": "Charlotte",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "8929df79-280f-4fec-bd7a-b3d6504506b3",
+    "name": "OVME",
+    "city": "Charlotte",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "a1c2bb56-6f1f-4018-874d-add196f87b41",
+    "name": "Milan Laser Hair Removal",
+    "city": "Charlotte",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "ac10d7bb-d1b4-4e99-ac18-986e92965181",
+    "name": "M2 Medical Spa and Wellness",
+    "city": "Charlotte",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "1f01340c-9ae7-4314-a7f5-db5123bf6d2b",
+    "name": "DG Rejuvenation Med Spa",
+    "city": "Hallandale Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "30eaee94-7ad2-4e15-84bb-b834ef8cde3c",
+    "name": "GS MED SPA",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "0a6d28dd-486e-46d2-b165-04e4ef2a0e12",
+    "name": "Anna Lazer",
+    "city": "Hallandale Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "8be748ed-2816-40e7-9520-606e2bf7def8",
+    "name": "Brows & Brows",
+    "city": "Hallandale Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "2732244f-1526-49f1-913f-a324fac1dde3",
+    "name": "Sole Naturale Wellness Feet Care",
+    "city": "Lauderhill",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "59cb75e1-5d98-4cdf-8bd5-926574d53745",
+    "name": "Glow Lab Medspa",
+    "city": "Philadelphia",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "c57747f2-4220-42f4-a916-d0253c819e6e",
+    "name": "Laser Queen MD Beauty Studio",
+    "city": "Hallandale Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "d49a1ace-1cf6-4667-9493-7dce3793b45a",
+    "name": "Concierge Aesthetics of the Palm Beaches",
+    "city": "Lake Worth",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "d1696254-7887-45f7-893e-5031436d4cae",
+    "name": "Lennox Aesthetics",
+    "city": "Boca Raton",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "20b36268-ee6f-4ef7-8140-295ad5dc9b0b",
+    "name": "Purpose Advanced Esthetics",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "65f4f400-70d5-40ca-a292-d493fbf17c78",
+    "name": "KG Bare Skin",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "469cdff8-073e-483d-a3c1-2b7852a941d7",
+    "name": "TruDerm Medspa",
+    "city": "Wellington",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "8162507e-a2a5-4add-add8-ab5ce4ecdef3",
+    "name": "Derma By Chi",
+    "city": "Lauderhill",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "64366c89-c66c-4fcc-afd9-cd9c0485969b",
+    "name": "Ckm Beauty Studios",
+    "city": "Palm Beach Gardens",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "c255f05b-5a62-4140-9d36-1a1c5ab2feea",
+    "name": "The Esthetic Center",
+    "city": "Boynton Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "b9b89d51-463c-4e21-9e96-a853f3bfc1a7",
+    "name": "Keamy Cosmetic Florida",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "556f3402-f659-4394-96fc-ae8f27335cb1",
+    "name": "Angel Aesthetics Med Spa",
+    "city": "Orlando",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "5d2e841a-1731-408a-afc7-e0b3fdd9999b",
+    "name": "Kenzi Medical and Aesthetics Group",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "3e496e73-1b0d-4511-9f66-b1cadc176a9c",
+    "name": "Luna Med Spa",
+    "city": "West Palm Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "7ac8ad1a-a811-416a-bac8-5fc97f49a1bc",
+    "name": "VITRA Aesthetics Clinic",
+    "city": "Long Island City",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "548ed813-9859-4d7d-84d9-012681db36e4",
+    "name": "Diamond Face Esthetics",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "ceb67947-0cd5-47d9-a538-7038ef04e6e3",
+    "name": "The Fort Lauderdale MedSpa",
+    "city": "Fort Lauderdale",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "776e8ee1-08b5-4bc0-a285-2d20d20fd92b",
+    "name": "Monaco MedSpa",
+    "city": "Miami",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "7a258820-4877-48ed-8c1b-d0756ad90908",
+    "name": "Brazilian Touch Aesthetics Clinic",
+    "city": "Pembroke Pines",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "0850c23d-21c7-4223-ba61-74fb8f2ca5c9",
+    "name": "Lambert Wellness Center - Acupuncture & Massage",
+    "city": "Estero",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "011b1dad-d054-45a7-aca8-b2afe7e24fb1",
+    "name": "The Orange Drip",
+    "city": "Lauderhill",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "31586f3b-90d1-47d1-859d-e0418a46d764",
+    "name": "ZEVASTIANSBEAUTYPLACE MIA",
+    "city": "Hallandale Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "2624a4e5-dfdb-43c0-9d50-d24919aeb124",
+    "name": "New You Medical",
+    "city": "Fort Lauderdale",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "71a7a60b-e560-4fb4-b4b7-ee5cc946a557",
+    "name": "The Remedy IV Health + Wellness",
+    "city": "Fort Lauderdale",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "0dc39ca8-6255-4c8c-be95-907cd3942b77",
+    "name": "Rituals Aesthetics",
+    "city": "Miami",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "02bc401f-2c2a-4cf5-a9d2-a79e677877ca",
+    "name": "Primal Aesthetics - Delray Beach",
+    "city": "Delray Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "de0efff0-b73e-4ca9-83ca-5db27e989a37",
+    "name": "Rhaine Health & Wellness",
+    "city": "Jacksonville",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "1194c512-d2cc-451a-81ee-7038ac8f8df4",
+    "name": "Windermere Aesthetics",
+    "city": "Orlando",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "e5c7623b-af47-4198-a46e-51fd34832b6f",
+    "name": "GoldenTouch Med Spa",
+    "city": "Kissimmee",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "67b4b4fc-fb52-48f9-a00d-a6ad4b7c65f4",
+    "name": "LASERIN AESTHETICS",
+    "city": "Hallandale Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "f329b643-811d-4af9-b42e-55f2ada188c7",
+    "name": "LALA RIVERS HAIR SALON & SPA",
+    "city": "Hallandale Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "41d2bd18-9823-4e6c-8698-795bc796be15",
+    "name": "VitaLuxx Med Spa",
+    "city": "Orlando",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "e7674d12-53f1-4b61-9dd0-a69a4589cbcf",
+    "name": "Minni John Do",
+    "city": "Fort Pierce",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "222d5a2e-c91b-4797-b454-75db196a6ba0",
+    "name": "KC Medical Aesthetics",
+    "city": "Doral",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "6e54d133-e70c-4750-88be-2fe121f6c70b",
+    "name": "Hair Specialist Lucas Fustinoni VQ Clinic Trichologist Orlando",
+    "city": "Orlando",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "943355a4-9b12-41a6-9f85-5ece82183120",
+    "name": "Calmed Medical Spa",
+    "city": "Hallandale Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "7ee70fe6-cce5-4488-98d9-d3b7a91910fd",
+    "name": "Trinity Natural Health & Pain Management, Inc.",
+    "city": "North Miami Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "f7bbdac2-0729-4fe9-9cc8-5eefb6ae7458",
+    "name": "MK Beauty Salon",
+    "city": "Hallandale Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "244ad705-a571-4510-9af9-f6964a50b671",
+    "name": "Tatiesto",
+    "city": "Jacksonville",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "936f68c3-65d0-4836-a128-1b04a7ed71e7",
+    "name": "RevIV Aesthetics and Hydration, PLLC",
+    "city": "Daytona Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "a9b6e76c-e434-4011-a88d-3f5fcf50cb46",
+    "name": "True U Medical Spa",
+    "city": "Orlando",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "bd1b9aec-d929-43fb-90b7-ac8b445ac3d4",
+    "name": "CARE Esthetics",
+    "city": "Vero Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "88c18b91-a039-4f97-ac84-2bbe0cc85464",
+    "name": "Glamaderm Skincare",
+    "city": "Gainesville",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "61414473-aec4-4e0f-832e-83a379fe8de6",
+    "name": "Red Rose Cosmetic and Surgical Arts",
+    "city": "North Miami Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "73a728ca-d9d7-4ceb-ad6d-227df954b065",
+    "name": "Brightan Spray Tan at Estetika Medspa",
+    "city": "Hallandale Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "50c9c8bd-b46d-4859-ba6d-1140128ae596",
+    "name": "Aesthetic Technologies",
+    "city": "Daytona Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "80e81056-3cf2-4151-8f54-818bc2616c77",
+    "name": "Precision Medicine and Wellness by Elizabeth Bagan, APRN",
+    "city": "Jacksonville",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "113dd383-5e63-4474-a547-9b94cf6eb055",
+    "name": "MZA MIAMI",
+    "city": "Hallandale Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "f18c51a9-f1ea-44cf-be3f-9826b17e3039",
+    "name": "SeeU skincare",
+    "city": "Hallandale Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "171f2bb0-7dc3-44c3-8ff1-194d15914f30",
+    "name": "Elevate Aesthetics",
+    "city": "Orlando",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "4723cc57-617e-4cd3-92a6-ab9afe6b8a4c",
+    "name": "The Brow Aesthetic",
+    "city": "Immokalee",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "83da5fef-5728-43ca-8ff2-b57926beb7f9",
+    "name": "Laser Treatments",
+    "city": "Hallandale Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "e82cd919-996c-4d09-aa03-6c9ac658dab9",
+    "name": "IVolve Med Spa",
+    "city": "Jacksonville",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "54f3a010-6158-4a83-85cc-ef4969f9fdbc",
+    "name": "Boca Raton Cosmetic Dermatology",
+    "city": "Boca Raton",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "88b0ebde-3233-4626-94b4-b4e2fe1cc745",
+    "name": "Skintastic Med Spa",
+    "city": "Plano",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "fe93b099-d6eb-4700-9200-15ad81e14dd4",
+    "name": "Avant Garde Aesthetics",
+    "city": "Estero",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "f9c05c6d-b9b6-4c89-a2ce-287f20b78143",
+    "name": "Infinity IV Hydration",
+    "city": "Fort Lauderdale",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "5ae5708a-5248-4f33-a391-ed17fd4234e4",
+    "name": "[ Skin + Tonic ]",
+    "city": "Henderson",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "a8c35dc1-316c-4ce4-83f1-7490265051d5",
+    "name": "Essential Aesthetics & Health",
+    "city": "Fort Lauderdale",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "3ceae66e-8fcb-4280-afbe-e6118af9629f",
+    "name": "Body By Jenny",
+    "city": "Hallandale Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "08eddbd1-0309-481b-a0f7-7c0375c78f3e",
+    "name": "Beauty Studio by Tatiana",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "ebf9146c-dfb1-41aa-9bcc-8daeed302177",
+    "name": "Blonde Girl Aesthetics by Dr. Alex, DNP",
+    "city": "Miami",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "39efc65a-8dc8-4b55-8b41-a5be8b039069",
+    "name": "Ella Davis Day Spa",
+    "city": "Lauderhill",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "2bb7820e-e498-4b2d-8a06-ef51fa06f46b",
+    "name": "Vixen Doll Esthetics",
+    "city": "Estero",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "9f46c58e-6d1b-4094-8249-eb4dbee7cee5",
+    "name": "Westover Hills Laser Med Spa",
+    "city": "San Antonio",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "5e66555a-b201-45b5-9e17-7f6379c7dbb2",
+    "name": "Core Medical Group",
+    "city": "Boca Raton",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "6374676e-0b19-41fa-a9c2-f1161492cabb",
+    "name": "Oakland Eyes",
+    "city": "Lauderhill",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "5feef496-cb97-4b30-9cf3-53e9d6c0485f",
+    "name": "Diana Medina Skincare and wellness",
+    "city": "North Miami Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "6ac1fd3e-3bae-4059-9e2c-6f1b0baabea3",
+    "name": "The Face Clinic",
+    "city": "Weston",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "741a6276-95d1-4c2b-acd7-43f0b4c4b173",
+    "name": "Perfect Body By Yuly",
+    "city": "Miami Gardens",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "5ce45e8b-a7ce-41e7-8f82-c01b17d6b787",
+    "name": "Skincare With Alyssa",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "bf79c849-1067-4165-b31e-09c9b94a9de1",
+    "name": "Aesthetic Awakening",
+    "city": "West Palm Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "a9286a39-e161-4541-b6c7-10317198f5de",
+    "name": "Asōka MedSpa",
+    "city": "Boca Raton",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "eb37b6ff-c171-4402-b600-0cbb52dbc0b2",
+    "name": "The DRIPBaR Austin The Domain",
+    "city": "Austin",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "d4b72a90-3cac-4c44-b63c-1e517e5d03a4",
+    "name": "The Aesthetic Label",
+    "city": "Fort Lauderdale",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "cb569435-1d5f-4e75-89e1-fc955c047270",
+    "name": "Zwellness Clinic",
+    "city": "Miramar",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "d3a11096-e03d-44a7-b12e-3e34d8f5bbf8",
+    "name": "Enriquez Aesthetics LLC",
+    "city": "Jacksonville",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "8fcef9ed-3c63-4bc1-82bf-04958990a648",
+    "name": "Modern Beauty Bar",
+    "city": "Orlando",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "c1444ca6-78e8-41d5-bd2f-436d935f0a75",
+    "name": "Face by Alexandra Francesca",
+    "city": "Miami",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "91bc19fe-ea8b-41b4-813b-ee549bd20eba",
+    "name": "NUEVA Aesthetics (Previously Hahn Advanced Aesthetics)",
+    "city": "st-petersburg",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "8f988fa7-1121-4427-8eb2-22df50557660",
+    "name": "All In One Care Solutions Medical Center",
+    "city": "Miami Gardens",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "141d3176-6e12-43e7-8d67-eb3d75670f13",
+    "name": "Or Olam Skin Solutions",
+    "city": "Hallandale Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "5f1a6156-e838-4b51-9f2e-972fdeb4e04b",
+    "name": "Cardona Direct Primary Care and RefineMD Aesthetics",
+    "city": "Jacksonville",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "d0c3ec92-97c2-4c1a-bb1f-03d4e6199639",
+    "name": "MM MedSpa & Laser Center",
+    "city": "Miami",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "dad903b0-ad3c-4b5f-ac3c-21f66c07caac",
+    "name": "SkinSpirit",
+    "city": "Miami",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "2fe4857a-5281-4eb0-920b-5a8f61002bf5",
+    "name": "LUX MedSpa Brickell",
+    "city": "Miami",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "006813c5-0ffb-4b6e-a7c5-86328683de48",
+    "name": "Silver Lux Aesthetics, LLC",
+    "city": "Delray Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "9138dde6-bc59-454a-bffd-6480e69c7c11",
+    "name": "Plasma Med Spa",
+    "city": "Weston",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "d7806da8-4ac6-4df9-a48f-24c96f7a80dd",
+    "name": "MedChic Aesthetics",
+    "city": "Fort Lauderdale",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "dca7a28f-a08e-4dab-9167-17b0f3b9c91a",
+    "name": "PD SPA & BEAUTY",
+    "city": "Miami Gardens",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "6bf3108a-51e9-4b3d-9ac7-09c9d68a01b0",
+    "name": "Karen MedSpa",
+    "city": "Sarasota",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "6b45170d-cc76-4da5-b1d2-e15ecae1bf37",
+    "name": "Lilly Rose Aesthetics",
+    "city": "Clearwater",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "0acf90ad-4296-4806-9cdf-e16cde48aba2",
+    "name": "ReSpa Palm Beach",
+    "city": "Palm Beach Gardens",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "6f8c3b1f-f7b9-4363-9021-001755218c43",
+    "name": "Target",
+    "city": "Estero",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "68301871-391b-4b2b-90bc-cf103f62ab29",
+    "name": "Dermatology Center of Wellington",
+    "city": "Wellington",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "d4a2d361-1775-4281-bf34-74a7d4a43266",
+    "name": "Steven Rueda",
+    "city": "Wellington",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "46ec9556-9d8f-4ba2-abe6-3fe911ce387d",
+    "name": "Latin Beauty Salon Andreas",
+    "city": "North Miami Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "26e659dd-abb5-4163-8a3d-eb3022943eb2",
+    "name": "Serenity Holistic OB/GYN, Research Center & Wellness Spa",
+    "city": "North Miami Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "8034fb2b-fc69-4a12-9044-aae69aa7467a",
+    "name": "Alejandra Moros Med Spa",
+    "city": "North Miami Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "8948e684-2dc4-4954-95f8-caec7c758ead",
+    "name": "Summer Plastic Surgery",
+    "city": "North Miami Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "f740db01-4976-47ae-acec-24c2555a95be",
+    "name": "All Asian Massage 6, DBA",
+    "city": "North Miami Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "ed42f9f5-a4e9-4d6c-8e10-1dba29b51133",
+    "name": "Pillersdorf Alan B MD FACS",
+    "city": "Wellington",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "3c1003a9-ede0-4546-bec6-ba45dce30c96",
+    "name": "BioAesthetics of Naples",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "9234d8bb-65ce-4af5-851d-8b6d90d02b16",
+    "name": "Yag-Howard Cosmetic Dermatology",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "85ffc10a-cb86-4662-ae0e-3c7c659e1820",
+    "name": "DNA Wellness and Longevity Institute",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "c13dd4e2-20bd-4de7-824b-1389e416fcfa",
+    "name": "Dr. Elizabeth Fox",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "284c6494-2028-427f-b6bd-b8843a6e1a76",
+    "name": "Dr. Irina Toma Aesthetics",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "2b450f83-6500-4ae9-a434-c8d1c5ca3d8d",
+    "name": "Flanagan Concierge & Aesthetics",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "737d552e-aa40-400e-a266-fcb1d596fef8",
+    "name": "Skin Wellness Physicians",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "3d409e7c-8e24-4e22-8477-bdbaddc30e36",
+    "name": "Le Bella Spa",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "449678ea-b08e-4cca-bdb5-10f65e1be2a5",
+    "name": "The Wellness Lab",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "f0fb4ade-4aa7-42c4-8b2c-ea6d267d0026",
+    "name": "Aesthetic Health Naples",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "7e0ba4af-5d25-4b1b-acbb-9bc370b3d40a",
+    "name": "Skin renewal aesthetics",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "b93a8592-94f1-424e-ac1e-520a4714eaf9",
+    "name": "One Place Wellness",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "bee0ed56-dc31-4ae1-8f98-291cf6c65555",
+    "name": "Aesthetique",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "910ec714-6de0-42e7-b7b1-8c85b7f62c58",
+    "name": "Esthetic-Lines by Alexandra",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "c53572b8-2b3b-426d-a8e7-9eafa37777f6",
+    "name": "Blue Magnolia Med Spa",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "da6aba33-f901-4c0f-a030-60c0f1d0acb5",
+    "name": "Aesthetic Justice by Chrissy Taylor",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "e4f23d0a-a9cc-4961-9a52-3422b29a0e98",
+    "name": "SkinCo Naples",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "1a29f115-c8f3-4422-9a8f-acedb950e65c",
+    "name": "Naples Laser Studio",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "b8a18106-1272-4428-af6e-98f715c8430e",
+    "name": "Sagewood Institute",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "711cd8e3-5b13-4eb4-aa61-5f8bdf586b84",
+    "name": "Dr. Charina Yango Cadavos Integrity Medical & Aesthetics",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "8a30363c-65c4-4b8b-9f10-dda9efdbb3c5",
+    "name": "Brooke Esthetics Lash | Brow",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "4f02d54a-3ee5-4b78-9c0c-46a6a259b713",
+    "name": "Optimal Wellness",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "e3a4833f-3c28-4628-868f-e5d3f2dc9595",
+    "name": "Hester Pediatric Dentistry",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "5a7bb6af-689b-4205-b306-e4e95ad48337",
+    "name": "BodyMorph MD - Naples",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "9569ff8d-0b0c-4e44-b141-e5ef0d3817d5",
+    "name": "Anavaya Med Spa",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "651dee78-2a8d-4b08-9c90-bb08fc69f5b4",
+    "name": "Fifth Avenue Wax Center and Spa",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "cae379b4-1d0d-4021-94fa-0ada74cd91cd",
+    "name": "Naples Facial Botox Med Spa",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "72cba1f8-4fd7-4bbf-9030-e9472073d648",
+    "name": "Von & Co Medical Aesthetics Studio",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "b6fd45fa-b209-4c52-b290-8dd03699d787",
+    "name": "Reset Wellness Lounge & IV Therapy",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "c2bec156-b4cb-4a91-9e99-06c5dec1a334",
+    "name": "Project Glammers",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "52d88007-9ec2-4ecc-83c9-1e4dcfe2eb7b",
+    "name": "Deanna Carell Aesthetics + Acupuncture",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "cd111cda-6203-4b2a-adb4-c10ccc7df8f2",
+    "name": "Pure Beauty Salon & Aesthetics Lounge",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "dadb86ce-ffc0-47b5-8ef9-3b7a0deb2bbd",
+    "name": "The Woodruff Institute for Dermatology & Cosmetic Surgery",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "d8c0fc69-754c-4d38-9eec-d834696b7f6e",
+    "name": "Prime IV Hydration & Wellness - Central Naples",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "35c6b217-ec6f-45df-b48b-36d5616d5b28",
+    "name": "Med Spa on 5th",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "e5f8196c-f769-4d3c-97f2-5b0cf39db512",
+    "name": "L&J Med Spa",
+    "city": "Miami Gardens",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "edf85692-2003-4430-9003-29a4b67c6a19",
+    "name": "Terra Dō Sol Med Spa",
+    "city": "Miami Gardens",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "f7ff3d68-57a9-4da7-ad9d-634c75267bc4",
+    "name": "Terra Salvet Spa",
+    "city": "Miami Gardens",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "68a3b849-6ad6-4ddf-950f-1cf474b11f21",
+    "name": "Impact Glamour Med Spa | Lashes | Brows",
+    "city": "Miami Gardens",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "0fe6d999-60e7-49b5-a39b-dc2a8756a7f1",
+    "name": "Christ-Ann Magloire, MD, FACOG",
+    "city": "North Miami Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "67bf6c7d-a14d-4fef-bc49-488314091fd1",
+    "name": "Marra's Beauty Bar",
+    "city": "North Miami Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "68ed1d0c-f426-4bbc-9e43-38214e8ba91c",
+    "name": "Destiny Med Spa",
+    "city": "Miami Gardens",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "7e79d53d-3e86-4847-9dcc-f1cae06331d5",
+    "name": "Healing Hands Medi Spa",
+    "city": "Miami Gardens",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "8132304b-dcb5-41c9-8983-47d92b4313ca",
+    "name": "Sculpted Aesthetic",
+    "city": "Miami Gardens",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "3fa70bda-6676-459a-b84d-eb8e0d6fce56",
+    "name": "Javier G. Lugo MD",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "cdc0d3af-732f-4623-aa08-59702c1403d2",
+    "name": "OMNI Balanced Life Center",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "5078a873-657f-4fd6-ace2-cdbcd7771d3d",
+    "name": "iBrows and beauty",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "72a96299-2e2b-4319-822a-048df68cb41b",
+    "name": "FACE FOUNDRIÉ - Naples",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "ced488a5-9c6e-4036-8f32-75f1e7087518",
+    "name": "Joli Visage Naples",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "f4201912-1b3d-43f2-9bdc-4713f58fe0fe",
+    "name": "Cura Holistic Health and Massage Center by TEO-SSAGE, INC.",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "ab28e0a9-ce94-4626-820e-557ebfaa79d9",
+    "name": "MASSAGE MEDIC, LLC.",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "98a6d986-6143-4a94-9601-673e2e048b72",
+    "name": "5th Avenue Spa",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "16c156e0-b7b3-4fc0-843f-616614642eaf",
+    "name": "Advanced Dermatology & Skin",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "296b7df2-38bd-4929-9dab-ac968c1d2245",
+    "name": "TIME 4 U Naples",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "eb687c54-0b2b-40e1-bb3a-6c46061c4463",
+    "name": "Serenity Spa and Massage",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "b9238179-546f-48bb-98d1-b0baba81a8da",
+    "name": "Infinity Massage and Spa",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "a85a8935-a48a-42bd-a6f8-0d53409bce1f",
+    "name": "Advanced Skincare & Laser by Jessica",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "673e1340-91cf-4e31-897a-174827def204",
+    "name": "Spa On Fifth",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "937be424-1a35-4b93-a18a-afe7b0e663ce",
+    "name": "Dr. Orlando Fernandez",
+    "city": "Estero",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "8f5abb7a-f188-45f6-8e8e-c8b623a20a47",
+    "name": "Naples Non-Surgical Body Sculpting",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "a1f9ea9b-72dd-442b-ae07-6a9042ba2884",
+    "name": "Salons by JC Naples",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "df2c4a7c-933d-484b-af46-9b59fbf3035f",
+    "name": "The Woodruff Institute for Dermatology & Cosmetic Surgery",
+    "city": "Estero",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "e50cd147-80df-4a4e-9f7d-1db8c3927258",
+    "name": "Bella Facial Lounge",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "832842c8-6f3e-446b-88ae-d2d0220c2c49",
+    "name": "Kaitlyn A. Benjamin, MMS, PA-C",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "5bdac3b1-d222-477f-b1b7-9bad6219999c",
+    "name": "Under the Clouds",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "18bc61dd-f508-4eb9-ac2f-0b037624975b",
+    "name": "Edwin J Dean MD Medical Wellness Center",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "7790f065-a818-4515-91bc-51d7a4591ed1",
+    "name": "Dermatology Specialists of Naples",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "398d9123-ec0b-47bf-bae9-59607d827054",
+    "name": "Houck Dermatology",
+    "city": "Estero",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "beb565ff-527d-4d3c-a78a-1a3aca7efa3e",
+    "name": "Dr Mel Irvine",
+    "city": "Estero",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "42e1ec6c-2907-4e47-b1d1-7b151d34282b",
+    "name": "Sola Salons Coconut Point",
+    "city": "Estero",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "7ac50668-0af7-405c-ac99-3e36ee89fd4e",
+    "name": "Starz Pediatrics - Primary & Urgent Care",
+    "city": "Estero",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "818e5ccd-69ae-4064-901e-25d60c4e975b",
+    "name": "GIVE SKIN CARE",
+    "city": "Estero",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "e91cd844-115b-4ede-8d15-fb9a7f61c412",
+    "name": "Restore Hyper Wellness",
+    "city": "Estero",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "b1f510fc-7e2a-4307-bc0a-24843e9454a0",
+    "name": "sovero cosmetics",
+    "city": "Estero",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "22d17454-71f7-42e0-a287-9545c9781036",
+    "name": "Spa Renova",
+    "city": "Estero",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "54153374-27e9-4ba1-9f8b-ada8bbdf25dd",
+    "name": "A -Esthetics",
+    "city": "Estero",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "5c29eaf3-e857-485f-9f04-bfeb6c141189",
+    "name": "Face It Botox Bar Aesthetics & Wellness - Estero",
+    "city": "Estero",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "7f56bb00-cb64-44cf-84c5-91ba9c09d976",
+    "name": "Riverchase Dermatology - Estero",
+    "city": "Estero",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "9adc8275-00fe-4f4b-baaa-b16d41504279",
+    "name": "Massage Envy",
+    "city": "Estero",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "1c25f738-64bf-4e18-986e-5ba133a8bce5",
+    "name": "Lash and Company - Estero",
+    "city": "Estero",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "cf3cb973-7c1f-4b61-a354-9dd5b1277edf",
+    "name": "Core Aesthetics Spa",
+    "city": "Estero",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "6c17f802-6b95-4d2e-a632-4c5829ec04ba",
+    "name": "FACE FOUNDRIÉ - Estero (Coconut Point)",
+    "city": "Estero",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "dd85ea11-a452-48ec-91fd-88b4ca53e7fe",
+    "name": "MASSAGE POINT",
+    "city": "Estero",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "217a1143-d645-4a77-8061-c381a8fd1db2",
+    "name": "Revive & Renew Med Spa",
+    "city": "Estero",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "ab81d32a-8963-4918-bb12-f6fb132e08ae",
+    "name": "Hand & Stone Massage and Facial Spa",
+    "city": "Estero",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "543c1d8c-7540-4cc0-9727-5df95d71ea53",
+    "name": "Gulf Coast Medical Associates",
+    "city": "Estero",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "56776489-b084-47bd-a03c-5450eb99e9a2",
+    "name": "Estero Wellness Center",
+    "city": "Estero",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "1342a025-47a7-4737-b7b0-3cb2ed848741",
+    "name": "Ulta Beauty",
+    "city": "Estero",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "8c88dbf4-2e5a-4b9b-9b6f-12d9671a2c0a",
+    "name": "The Laser Lounge Spa Estero",
+    "city": "Estero",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "a6406579-5fd0-4ff4-a3d1-20af2b3e1e75",
+    "name": "Kyle A. Burton, MD",
+    "city": "Estero",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "c63ee91f-07fd-4cb8-90d9-6e0e8854afe0",
+    "name": "Skin By Ashley",
+    "city": "Estero",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "ebf40b85-10e0-4432-9752-2120097f8475",
+    "name": "Spavia Day Spa - Estero",
+    "city": "Estero",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "e992b2a1-d25a-484f-a850-c1368c8c155b",
+    "name": "MassageLuXe Estero",
+    "city": "Estero",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "5a9fb2db-8c13-41b0-b444-97854bc26ddd",
+    "name": "Bonita Beauty & Wellness Academy",
+    "city": "Estero",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "05f67335-f6c7-4354-a85f-5e608191cb3d",
+    "name": "Advanced Eye Care & Laser Center",
+    "city": "Estero",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "5dc83a1b-844f-4448-8ab4-2c04c80bf870",
+    "name": "Come Get Bodied",
+    "city": "Miami Gardens",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "6c271f5f-86dd-4fce-a75a-607766900f69",
+    "name": "Bella’s Image Salon",
+    "city": "Miami Gardens",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "a4090743-49ef-4a6d-bd6f-ceb158ba0523",
+    "name": "Ayo's Esthetics Studio",
+    "city": "Miami Gardens",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "b1a64715-8e88-4994-8d2e-5199706dc6ef",
+    "name": "On Point Beauty By Meli",
+    "city": "Miami Gardens",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "ee3a0470-456c-4c77-8029-905bde67b2f6",
+    "name": "Regal Nails, Salon & Spa",
+    "city": "Miami Gardens",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "e84752ef-029f-4cf1-b52e-e70aa648d917",
+    "name": "Aesthetics Collective Skin Care",
+    "city": "Miami Gardens",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "eb2c9ebc-e92a-4184-9ff9-af85929388ec",
+    "name": "MG Cosmetic Center",
+    "city": "Miami Gardens",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "0cf3fec3-a0e4-4488-97fb-eb1a181230e0",
+    "name": "SHINE Medical Aesthetics",
+    "city": "Alpharetta",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "afc65208-fc1f-4ba2-b079-96bb9c978f73",
+    "name": "Alpha Aesthetics and Health",
+    "city": "Alpharetta",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "4a2fa5b1-8e2c-44e8-b8f6-29dad18b7a24",
+    "name": "Adore Aesthetics & Wellness",
+    "city": "Boynton Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "b056a5bd-a395-40b3-83f5-01e01dfa4ca1",
+    "name": "blue sky laser & tox",
+    "city": "Arlington",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "1be892ef-32b9-4a98-96c7-145fbc2021f2",
+    "name": "Georgetown Rejuvenation Med Spa",
+    "city": "Arlington",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "af865798-4edd-4470-b05d-42a7883a6a15",
+    "name": "Honey Skincare Studio - Medical Spa",
+    "city": "Arlington",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "88006854-3723-470e-ac24-487d5e5d7ddd",
+    "name": "The Spa Clinic",
+    "city": "Arlington",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "2a240141-de8a-4cbb-93e7-f6856c644e41",
+    "name": "Sculpted Contours MedSpa",
+    "city": "Alpharetta",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "f6e34129-5743-40f4-b84d-33d860e5f9eb",
+    "name": "Skën Med Spa",
+    "city": "Arlington",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "e16b2023-965a-4d97-8af3-6f5025fd5623",
+    "name": "Infini Spa",
+    "city": "Arlington",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "7880ec47-128b-44ba-9b5f-d060c80e254d",
+    "name": "Alé Aesthetics",
+    "city": "Atlanta",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "ef334d5b-3d47-4989-82b8-ece7f548181a",
+    "name": "Skin + Sculpt Holistic Medi Spa",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "666bba62-8eb4-4644-8ff7-77d933cfab00",
+    "name": "Clinical Dermatology Center",
+    "city": "Arlington",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "e13c9354-9e81-4af7-8ace-d6ead47ced3b",
+    "name": "SkinDC",
+    "city": "Arlington",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "635f4a8f-ea9b-48d8-bacf-9b3dc7242287",
+    "name": "Ageless Aesthetics & Wellness",
+    "city": "Lakeland",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "58b69a21-509d-4aff-831c-c22c777957e6",
+    "name": "Annas Medical Care",
+    "city": "Kissimmee",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "a65ec039-e162-41d6-be21-ac550a6930f6",
+    "name": "Bella Viságe Medical & Aesthetic Rejuvenation",
+    "city": "Lakeland",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "d760721e-6405-4d42-98f8-bd74c2f5afac",
+    "name": "Heartfelt Facials by Jana, LLC",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "4bab8ae0-1bb1-425a-89ae-6bf6d87a878c",
+    "name": "4Ever Young Med Spa & Wellness Center - Atlanta Midtown",
+    "city": "Atlanta",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "a772438f-976e-4350-b04b-42fee1dea1a4",
+    "name": "Medical Spa at Watson Clinic",
+    "city": "Lakeland",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "3b4e5ccd-3cd9-4a2e-86af-53bcabdf6394",
+    "name": "The Skin Boutique",
+    "city": "Lakeland",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "4591f89c-b541-4d05-b742-19943ae0e1e3",
+    "name": "DayDreams Day Spa & Massage",
+    "city": "Lakeland",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "cb77f032-261a-4eca-b1d7-01124899b1c4",
+    "name": "Laser Aesthetics Career Institute",
+    "city": "Atlanta",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "183b8571-5031-47cc-84af-17509adece87",
+    "name": "Dermafix Spa (Lakeland)",
+    "city": "Lakeland",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "69f88a5b-4fd3-439c-9595-d052a6df1c7a",
+    "name": "Skinology Aesthetics",
+    "city": "Atlanta",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "737e0703-f46e-47c6-8bee-204b30a7770a",
+    "name": "CULT Aesthetics",
+    "city": "Atlanta",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "9b9bbeea-9c11-4470-9262-9f00857ce7f5",
+    "name": "Rejuva Glow Beauty",
+    "city": "Bethesda",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "f7f6961c-1743-459a-ae2b-7658dcc017fe",
+    "name": "Amethyst Aesthetics",
+    "city": "Henderson",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "cb1787f5-2f6d-4d33-aa6c-755a4f35bcdc",
+    "name": "Dynasty Health and Wellness Medspa",
+    "city": "Bethesda",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "42032ecf-6d74-4d8b-b3eb-15c9c9f400e6",
+    "name": "Veristic Aesthetics",
+    "city": "Henderson",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "15dc937c-9ada-4050-8943-f0771cfe1fdb",
+    "name": "NkdSkin Aesthetics Lounge",
+    "city": "Henderson",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "31b7a6ac-ee4f-4ee7-acdc-aa6d1d657615",
+    "name": "Bella Bliss Med Spa",
+    "city": "Bethesda",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "79cce0c9-51b5-4a42-83a1-c0f203539c75",
+    "name": "Excelsior Medspa",
+    "city": "Bethesda",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "500e6db9-dd03-4aad-afda-4e2daefbf515",
+    "name": "Icon MD Medical Spa + Laser Center Boston",
+    "city": "Boston",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "50cd6918-964e-4042-9939-b84c0ce8cf41",
+    "name": "Dynamic 3 Med Spa",
+    "city": "Buckhead",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "21db532d-2d8e-486b-a8fd-a8a2491ab510",
+    "name": "eLeMeNtal aesthetics",
+    "city": "Boston",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "c2f10a82-0f60-4f58-914f-65fc77ef7328",
+    "name": "Regenerative MedSpa of Buckhead",
+    "city": "Buckhead",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "a7d5e620-26fc-48de-8ed2-5f7e92f87c7f",
+    "name": "VivaMD Clinic",
+    "city": "Buckhead",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "8da32101-7fd1-4b9e-8826-610ae9e9d274",
+    "name": "Breeze Med Spa",
+    "city": "Chandler",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "ca805dd8-bf00-46c0-9918-56dba2858de0",
+    "name": "Emory Aesthetic Center",
+    "city": "Buckhead",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "1b94812b-a299-41f8-977a-56bc42b34a23",
+    "name": "LaVida MedSpa – Chandler",
+    "city": "Chandler",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "3d45236b-5b59-4742-b877-eb94527f2036",
+    "name": "Precision Skin Studio",
+    "city": "Chandler",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "24aaae22-843e-421d-acb8-3566ec2e3fa6",
+    "name": "Desert Glow Aesthetics",
+    "city": "Chandler",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "efaad540-d55a-499a-bcec-f34bd9236e33",
+    "name": "Skin Stories Aesthetics",
+    "city": "Chandler",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "a5854fda-4a66-43fb-91e4-5760036e18d8",
+    "name": "Meridian Medical Spa",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "bf49da63-edba-44f6-a131-2720bb930a42",
+    "name": "Elysium Aesthetics + Longevity",
+    "city": "Chicago",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "cba1ddcb-6246-4ef2-afdc-c84a31c06cd9",
+    "name": "Skin Lab",
+    "city": "Charlotte",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "78e5806b-3eee-439f-8ca0-355671f668d0",
+    "name": "Pure Med Spa",
+    "city": "Chicago",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "1cc92d17-8882-45bc-8a90-776091345411",
+    "name": "Liv Aesthetics Chicago",
+    "city": "Chicago",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "861b6b96-bd2e-4873-89ed-c96ae3d4c292",
+    "name": "Beyond Skin Aesthetics",
+    "city": "Columbus",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "4fbac6d9-1bc8-4a9a-aab8-21482fb543f6",
+    "name": "SIMMETRIA MedSpa",
+    "city": "Columbus",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "40d11b06-45ec-413f-8d68-e94a2687b4fe",
+    "name": "Reverse Aesthetics",
+    "city": "Columbus",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "9c4744b5-4095-4a70-a2d5-df6d8d1b0eb7",
+    "name": "Skin Laundry - Arsenal Yards",
+    "city": "Dallas",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "aa12bac3-5b92-440b-98b1-818e97fe781b",
+    "name": "4Ever Young Med Spa & Wellness Center - Doral",
+    "city": "Doral",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "f4afb11a-75f5-4288-9379-53d15b6661f5",
+    "name": "Skin! Medical Aesthetics",
+    "city": "Denver",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "c80f9a77-68b8-4fcf-bbc3-7a644b86c74a",
+    "name": "MD Health Spa",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "3a561ee2-efd6-4746-817b-fd0c0c3cf803",
+    "name": "Highline Aesthetics Denver",
+    "city": "Denver",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "a6555aa4-f2e3-4e36-aed8-79dccc441f36",
+    "name": "Aesthetic Surgery & Dermatology of Cherry Creek",
+    "city": "Denver",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "af41da75-3359-45a0-b05b-a8bf6c8344ea",
+    "name": "Beauty Office",
+    "city": "Hallandale Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "3fbb27d1-4bf7-45c2-9158-bc7b13e9be0b",
+    "name": "Natura Med Spa & IV Bar - Denver",
+    "city": "Denver",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "5ad6334e-4171-4eab-91c5-be7d312581c8",
+    "name": "Aspire Medical Spa - RiNo",
+    "city": "Denver",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "d33a7dc4-6a8c-4a4e-ad65-92eac200f708",
+    "name": "VITAHL Medical Aesthetics",
+    "city": "Denver",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "7fcc0147-c1e6-4f05-96cb-e75655aae24d",
+    "name": "H2 Wellness & MedSpa",
+    "city": "Fort Worth",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "dab9cc1d-3d3d-40ee-8c28-7f009ef907bd",
+    "name": "Vitalyc Medspa | Fort Worth",
+    "city": "Fort Worth",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "70b56303-c1f0-4911-a892-c52c7dbc5ee1",
+    "name": "Deep Blue Med Spa",
+    "city": "Long Island City",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "b799de03-5edc-47fb-882b-1117f9ccc888",
+    "name": "UniqueBeauty Aesthetics",
+    "city": "Long Island City",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "f1331ce3-229f-4659-9dd3-0a52c8566a64",
+    "name": "LL Blossoms Cosmetic Clinic",
+    "city": "Long Island City",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "c1caa473-cfa4-41cf-9279-1fd2fd8e583f",
+    "name": "Perfect Med Spa",
+    "city": "Long Island City",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "33a932a2-0096-4149-86f1-ac2544a8cd2f",
+    "name": "Laser Aesthetics Clinic",
+    "city": "Long Island City",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "d3af5255-8a62-478c-99a8-74cf0726a09e",
+    "name": "Advanced Aesthetics - Centennial",
+    "city": "Las Vegas",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "6589d9a5-ddfd-4a19-af3a-6710f40f7588",
+    "name": "Glamour Me Medical Spa",
+    "city": "Henderson",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "b9dd2a1d-420e-47b4-9db5-25f967415d9e",
+    "name": "BeU Medical Spa Naples",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "3ce71dec-0ae1-4795-a7da-e3e068fff777",
+    "name": "Dallas Pro Aesthetics",
+    "city": "Dallas",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "ea6c3db7-ef16-4ed1-b393-35579f79fc26",
+    "name": "Elite Medical Spa of Lakewood Ranch",
+    "city": "Bradenton",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "7d645ace-78a6-439f-ab63-1d86c120dbf7",
+    "name": "Drift MedSpa",
+    "city": "Bradenton",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "8e644afc-376f-494f-8456-0deea4b26e70",
+    "name": "Royal Esthetics Laser Dentistry Bradenton - Dr. Ruba Reyal",
+    "city": "Bradenton",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "e7f72e74-83c7-4883-aaef-dab9864750b8",
+    "name": "Ageless Spa Center",
+    "city": "Bradenton",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "4fcd8ea5-f1c4-4c29-a8b5-d920ce4e4bc8",
+    "name": "Bella MedSpa - Dallas MedSpa",
+    "city": "Dallas",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "80e88889-ff41-4f93-ba37-93374635a9e7",
+    "name": "Modern Medical Spa",
+    "city": "Dallas",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "9661630b-1adb-4037-8619-08b535ef9409",
+    "name": "the L.A.B. med spa Dallas",
+    "city": "Dallas",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "d8651566-9f5a-429d-b61c-90bb2829ce89",
+    "name": "D'Allure Medspa",
+    "city": "Dallas",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "b7161f3f-58c1-473d-846c-7ca763cf356e",
+    "name": "ALTA Medispa",
+    "city": "Beverly Hills",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "9459c576-764f-4f5c-a9ef-424af26d352c",
+    "name": "Beverly Wilshire Aesthetics Beverly Hills Medical Spa",
+    "city": "Beverly Hills",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "abee8ab6-a175-4d50-a914-0432d9108ddc",
+    "name": "Elite Med Spa of Texas",
+    "city": "Dallas",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "572b70dd-b374-4cab-8e79-25f80acf4423",
+    "name": "Beverly Hills Plaza Medi Spa",
+    "city": "Beverly Hills",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "d76d0f35-eeae-4cba-a835-4c6dafc4e433",
+    "name": "The Beverly Hills Medspa",
+    "city": "Beverly Hills",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "441551f4-9689-41a3-8fd0-d00f78d873d9",
+    "name": "Beverly Hills Beauty & Aesthetics",
+    "city": "Beverly Hills",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "ffd85685-5ae1-4731-99a1-ecd918ce11f3",
+    "name": "BevMed LA",
+    "city": "Beverly Hills",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "89893b8b-be4b-4f65-92c4-d8eda91f08c5",
+    "name": "Skin Verse Medical Spa",
+    "city": "Beverly Hills",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "19e0b444-0547-42ce-ae41-e13b999dafd3",
+    "name": "Beverly Hills Aesthetic Medics",
+    "city": "Beverly Hills",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "7b646035-0b03-4332-b8a3-ad17d2ad436a",
+    "name": "Health Med Spa IV Therapy – Los Angeles",
+    "city": "Los Angeles",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "ec6aa1fe-e14f-4cfb-8103-4768f1a1bca7",
+    "name": "Bright Medical Spa",
+    "city": "Los Angeles",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "a63c5e79-3544-4e36-b94a-ec2b5d6f42fc",
+    "name": "MedBeautyLA",
+    "city": "Los Angeles",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "f538333d-7142-4bbe-b7bd-89b9eb60919e",
+    "name": "Luxe Aesthetic Surgery & Medical Spa -",
+    "city": "Beverly Hills",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "951c9ba0-4620-4864-a2cd-b7ef26a7f4a0",
+    "name": "Beverly Hills Aesthetic Group",
+    "city": "Beverly Hills",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "e4101a6d-4ef8-46ce-adbc-0248bd0ed084",
+    "name": "Cabana Medical Spa",
+    "city": "Austin",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "feb045df-2726-4d31-bac5-0199af76df7e",
+    "name": "Aspire for Wellness Together",
+    "city": "Bradenton",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "190793cb-2baf-4233-882c-143a7e6c194b",
+    "name": "Blissful Beauty of SW FL, LLC",
+    "city": "Bradenton",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "e650720a-0e30-47d7-836c-b48c2e335cf8",
+    "name": "Total Face & Body Care",
+    "city": "Bradenton",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "dca5908b-e7ff-4267-9ccf-d40471c9c300",
+    "name": "Alabama Med Spa By Voupre",
+    "city": "Houston",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "700e04a3-27aa-456c-a792-d5da11917895",
+    "name": "Sousan Med Spa",
+    "city": "Houston",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "ed1be6b8-66d4-43e4-97d6-c47da46decbd",
+    "name": "Persona Medical Spa",
+    "city": "Houston",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "80889c1e-2058-4787-816e-40c0eca607f3",
+    "name": "The MedSpa at Galleria",
+    "city": "Houston",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "49b360ae-e888-49ac-bdcb-f2c7f9fe7ca3",
+    "name": "Hi Beautiful Aesthetics",
+    "city": "Houston",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "29110019-42cb-42f3-b424-8f1828947434",
+    "name": "Alpha Medical Aesthetics",
+    "city": "Summerlin",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "101959d6-673d-4030-88ee-910301fc8190",
+    "name": "Advanced Aesthetics",
+    "city": "Summerlin",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "80340247-610d-4c36-956e-4a4d82fc054b",
+    "name": "Nuance Aesthetics & Plastic Surgery",
+    "city": "Summerlin",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "f6c088a2-e32f-482e-988a-d6aebc4f09b4",
+    "name": "Flawless Medspa Las Vegas",
+    "city": "Summerlin",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "3e6e6bce-0d21-474f-9950-2dfca90b797c",
+    "name": "Las Vegas Aesthetics®",
+    "city": "Summerlin",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "e113b713-759b-4018-8138-ab03445be0b4",
+    "name": "CeR Aesthetics",
+    "city": "Summerlin",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "f1787c81-7eda-4a1b-86ee-d14ce85548ab",
+    "name": "White Coat Aesthetics",
+    "city": "Summerlin",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "a5ede84e-295f-4647-bc1e-e5e86ccfd4d9",
+    "name": "iRadiant Aesthetics | Emsculpt, Facials, Tox (Botox, Dysport), & Weight Loss Clinic Summerlin",
+    "city": "Summerlin",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "d0a9118a-e74c-42c8-8836-d39117cc1947",
+    "name": "The Aesthetics Lab",
+    "city": "Summerlin",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "543ec48e-eead-46c7-bb00-f57c60c08da9",
+    "name": "Michelle Aesthetics",
+    "city": "Minneapolis",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "ae7e7067-4e51-4344-af9a-637e6fc26d56",
+    "name": "Nostalgia Aesthetics",
+    "city": "Minneapolis",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "ded3217e-c89e-4200-8b50-9baae70021f2",
+    "name": "Smiley Aesthetics Medical Spa – Botox & Weight Loss Clinic Nashville West",
+    "city": "Nashville",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "3aee1b0a-9ece-4331-a1de-86ad340181b1",
+    "name": "Amálie Aesthetics and Wellness",
+    "city": "Nashville",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "3a380f34-c68f-4267-9acf-bc775bbd3ebc",
+    "name": "Smiley Aesthetics Training Facility & Med Spa – Nashville",
+    "city": "Nashville",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "cb8a9f9e-0f4a-4dee-9c15-da425250f8fc",
+    "name": "BeRejuved Medical Spa & Wellness Studio - NYC",
+    "city": "New York City",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "6130e43c-6abf-4e31-b8d7-e4a8baa5b8cc",
+    "name": "Lexington Aesthetics",
+    "city": "New York City",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "ef65c8e6-b49c-43e1-a1e8-c4f900ef2ec5",
+    "name": "MCNYC - The Medical Clinic Spa New York",
+    "city": "New York City",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "153c9a6d-4007-4447-b3d5-b4d1eadbc015",
+    "name": "Studio Esthetique Skin & Laser Center NYC",
+    "city": "New York City",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "c1998cc0-2bf2-4aea-a5d1-4e2e3515804b",
+    "name": "Timeless MedSpa NYC",
+    "city": "New York City",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "df23cd5f-fe32-4607-a96f-401dea0121b2",
+    "name": "Central Park West Med Spa",
+    "city": "New York City",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "2e4ca7ee-9080-4a17-8ef2-412c1f108817",
+    "name": "Koru Wellness Aesthetics NYC: Med Spa Upper East Side & Midtown",
+    "city": "New York City",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "9ef98720-f3ff-4352-82f4-ff615c081a75",
+    "name": "Muguet Aesthetics",
+    "city": "Newport Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "de3d0abf-39cf-41cb-bbdc-bd0058198564",
+    "name": "Ann Aesthetics Anti-Aging and Wellness",
+    "city": "Newport Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "57deefd6-37c8-4748-95ae-d7296d96cc53",
+    "name": "Sea Glass Med Spa",
+    "city": "Newport Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "b3cfdae0-e666-4fea-8b32-3efbc613f1fb",
+    "name": "Ari Blanc Medical Spa",
+    "city": "Philadelphia",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "fe0aab66-d4e1-47bf-a344-47d8d817025c",
+    "name": "Skin Maison Med Spa",
+    "city": "Newport Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "79081bb7-a993-4d58-92ab-e792b725e09d",
+    "name": "Yofi Aesthetics",
+    "city": "Philadelphia",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "76f39f08-c2bd-4cb6-bb4e-9895d0d75b63",
+    "name": "Rescue Spa",
+    "city": "Philadelphia",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "ed58f20e-5a59-4553-9fdf-6547cd4a9acd",
+    "name": "About Face Aesthetics",
+    "city": "Philadelphia",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "277f3769-81d3-4f91-be51-c3a45db62b1e",
+    "name": "Dermacenter Medical Spa",
+    "city": "Philadelphia",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "a4a40dea-23b7-4344-9ea8-fe77e2b182cc",
+    "name": "IGLO Med Spa- Plano",
+    "city": "Plano",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "42486921-2a78-420a-ba99-ae875d339321",
+    "name": "EmmaMac Beauty",
+    "city": "Philadelphia",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "c5e43292-2941-48c7-a2fd-452b11663690",
+    "name": "Raven Med Spa",
+    "city": "Plano",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "6e3b277f-2997-4099-910f-e74cbebf2c6a",
+    "name": "Uplift Medspa Health & Wellness",
+    "city": "Plano",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "e9024467-58e0-4769-b2a6-1cc812cb6667",
+    "name": "The Aesthetic Touch by Raya",
+    "city": "Plano",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "85aaa36d-bbbc-4e92-a6a4-678c88e0f280",
+    "name": "Revived Aesthetics",
+    "city": "Plano",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "ddf9614a-d8dd-441d-9f8b-7632fda75a4d",
+    "name": "Lift N Fill Aesthetics By Sandra (liftnfill)",
+    "city": "Plano",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "6a103157-0675-430e-8a67-0377c1ad0666",
+    "name": "MEDICTECH SPA - MED SPA",
+    "city": "San Antonio",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "f1c6028f-fee7-4d0b-ba9f-627d0ec75ebb",
+    "name": "Khronos MedSpa & Laser",
+    "city": "San Antonio",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "1122cbce-3f3f-4775-928c-f379eceb8df8",
+    "name": "Skin Medical Spa in San Diego | Skin Tightening | Cryo Fat Freezing | Lipo Cavitation",
+    "city": "San Diego",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "eaa3b510-47ca-4b42-824a-986f896b06c5",
+    "name": "ALOderma Med Spa",
+    "city": "San Diego",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "b95311af-64d9-4529-8647-cac4b80e0630",
+    "name": "Skin Laundry - Arsenal Yards",
+    "city": "San Francisco",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "5cd4778d-39b8-4b7c-9ffe-7c0fd85c5113",
+    "name": "SDIM & Spa | San Diego Integrative Medicine & Spa",
+    "city": "San Diego",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "6e65406f-bd89-4975-98fe-fbd0b2873c20",
+    "name": "Olive Medical Aesthetic Center San Diego",
+    "city": "San Diego",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "8f6e1a84-8e7d-4c3c-96ad-dc8780469955",
+    "name": "Glow Medspa",
+    "city": "Hallandale Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "ab35e319-3328-402c-b623-5394d1bf6666",
+    "name": "BeautyFi Medical Spa",
+    "city": "Hallandale Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "9453cd95-a01b-4f0e-ab3b-74c6e44bb2a9",
+    "name": "Keyla Colon",
+    "city": "Hallandale Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "7e716daa-972f-4686-b99a-2c889f7bd043",
+    "name": "Near me spa wellness & aesthetics",
+    "city": "Hallandale Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "472c07d0-22ee-4c96-90cf-6d8f59a54ae7",
+    "name": "Vital MedSpa | Morpheus8 Burst Specialist",
+    "city": "Hallandale Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "a5c9bea4-9b65-4bf7-b731-e7142ca2281a",
+    "name": "REJUV Medical",
+    "city": "San Francisco",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "00e5e613-8c5c-484f-b4ee-641c25a708a2",
+    "name": "Evergreen Aesthetics",
+    "city": "San Francisco",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "b2dd1537-29ed-4126-8dd3-3c830a241cdf",
+    "name": "San Francisco Plastic Surgery & Laser Center: Dr. Usha Rajagopal",
+    "city": "San Francisco",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "da5e1958-1b60-46ee-9ffc-b999083c1d96",
+    "name": "Element MedSpa",
+    "city": "Seattle",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "d5880661-c597-486e-9770-096b06d0dfc4",
+    "name": "AMAPURE LLC",
+    "city": "Hallandale Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "eaedb947-2d48-42b8-b5f1-98bed64a41b4",
+    "name": "GitelCare Longevity Center by Dr. Dimitri Gitelmaker, MD",
+    "city": "Hallandale Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "b51abbeb-dda3-43c2-8343-da2528b08e49",
+    "name": "Beauty Future",
+    "city": "Hallandale Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "71b029cb-6e7a-44f2-aa64-49ecf88dd085",
+    "name": "Glow Your Skin | Facials & Microneedling",
+    "city": "Hallandale Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "0272236f-113e-455b-83ad-7cb549967e72",
+    "name": "Yamila's Faces Skin Care - Hallandale Beach",
+    "city": "Hallandale Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "7ea5267a-12c8-4062-b1a6-3c17dfc9d13f",
+    "name": "Wo/Man Luxe Med Spa",
+    "city": "Hallandale Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "5331b324-5dcb-477a-af45-a8ffc4bf50ee",
+    "name": "Facegym Miami",
+    "city": "Hallandale Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "57197c6f-cba5-4a74-bae5-ae4b240a7c33",
+    "name": "Hade Skincare & Therapy",
+    "city": "Hallandale Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "952197d2-c2d7-4fb7-b2f7-4cd005b44dad",
+    "name": "And Beauty - Seattle Esthetician",
+    "city": "Seattle",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "3d6ce964-e3a0-44c7-a05d-7697702c1c14",
+    "name": "Belle La Vie Med Spa",
+    "city": "Tempe",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "2866d176-5f88-4da7-baf2-963657c45efa",
+    "name": "Elite Medical Aesthetics",
+    "city": "Tempe",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "48eded3d-a253-4566-b66d-852bb1c9332a",
+    "name": "Sedora Medical Aesthetics - White Plains MedSpa",
+    "city": "White Plains",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "6e10fc79-a8dc-45ab-9537-6e87e189daa0",
+    "name": "Elite Beauty Medical Spa",
+    "city": "White Plains",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "9df6714b-c6b8-4c9c-b0bf-f5f0cd33e33a",
+    "name": "Embry Aesthetics",
+    "city": "Tempe",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "88c5c371-ed3e-4cd8-b275-959a2f649a1d",
+    "name": "About You Aesthetics",
+    "city": "White Plains",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "ac04aa65-2662-4a04-b501-4be2579f51e5",
+    "name": "BBY Aesthetics Lip Blush Studio",
+    "city": "Tempe",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "299c4a17-9cc6-43cc-87b1-6534af3e96b3",
+    "name": "Skin and Self",
+    "city": "White Plains",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "2912b98c-c0d6-45e7-9bb9-3c6b693d6ea4",
+    "name": "European Luxury Day Spa",
+    "city": "White Plains",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "b54ac0d2-eb90-4915-93f3-12bb27da6e4f",
+    "name": "Park Avenue Medical Spa",
+    "city": "White Plains",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "e78c8eaf-5cfc-46e6-b53d-43a53b6fce82",
+    "name": "Beauty Bar 305",
+    "city": "Hallandale Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "732895cd-c8dd-4649-9bec-b376ee396bda",
+    "name": "White Plains Spa",
+    "city": "White Plains",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "6dddd79b-5c6f-446c-888d-0fc812766d71",
+    "name": "Skinsations Aesthetics",
+    "city": "White Plains",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "c61e1139-1d6a-4ad8-a032-9cf676a52fda",
+    "name": "Perfect Skin Las Vegas LLC",
+    "city": "Summerlin",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "34d8a34e-69ef-4eaa-b8f8-d2b67e179011",
+    "name": "Skin by Lovely",
+    "city": "Santa Monica",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "0d486d42-ade4-4f48-a448-d1295b2fd72a",
+    "name": "Skin Artisans at Edina Plastic Surgery",
+    "city": "Minneapolis",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "5502d5e9-5343-4618-bdb2-a550a19de536",
+    "name": "Aesthetica clinic",
+    "city": "Los Angeles",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "71f98d49-7ea6-455b-b792-56616829c2bf",
+    "name": "re:fresh skin + injectables",
+    "city": "White Plains",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "22f66e99-443e-4daf-a57b-0858393cc70a",
+    "name": "KAO Aesthetics",
+    "city": "Santa Monica",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "edec52a3-9a2e-487a-96a7-a3e12d34bd10",
+    "name": "Rouge & Wright Medical Aesthetics",
+    "city": "Phoenix",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "a18837c2-3a36-4f46-bc8b-8ceb95af15f1",
+    "name": "SkinCeuticals SkinLab Santa Monica by Cavendish Clinic",
+    "city": "Santa Monica",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "87900a35-0743-4f33-bf72-a3b783aed38d",
+    "name": "Ocean Aesthetics",
+    "city": "Santa Monica",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "5444ca75-8bfd-443b-be65-89148ea2ed8b",
+    "name": "Deluxe Cosmetic Center",
+    "city": "Los Angeles",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "6397ec91-7133-4e19-aee4-dae2730d9c43",
+    "name": "Santa Monica Medical Aesthetics",
+    "city": "Santa Monica",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "e2d85174-408f-4827-9404-468f7804d141",
+    "name": "Younique Surgery Center & Medical Spa - Santa Monica",
+    "city": "Santa Monica",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "1c885dd5-66d1-4d7c-9a0e-3de8f50c3afb",
+    "name": "Love Aesthetics & Wellness",
+    "city": "Scottsdale",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "b3472845-a9c4-4db9-a6ed-746d8b7a1eed",
+    "name": "Pearl Med Spa",
+    "city": "Scottsdale",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "355633d7-255c-468a-8772-712ecfd3a9f6",
+    "name": "The Med Spa",
+    "city": "Las Vegas",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "440cac6e-5342-4993-9767-1f77a2486240",
+    "name": "White Coat Aesthetics",
+    "city": "Las Vegas",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "4caeccca-ee07-43a5-81c2-8572c84ffe74",
+    "name": "Chic la Vie",
+    "city": "Las Vegas",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "b84d85f7-67ad-433f-a5af-2f56afe134cc",
+    "name": "The Look Med Spa",
+    "city": "Las Vegas",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "703d8d84-680b-4d56-9673-2feffbf25e35",
+    "name": "Ageless Las Vegas",
+    "city": "Las Vegas",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "7bd725ad-7d65-4cfe-b8d5-3f7c074f0243",
+    "name": "New Life New Image Medical Spa",
+    "city": "Las Vegas",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "8f561c7e-ffee-49d3-ad94-68cb71c5fa7f",
+    "name": "SKIN Las Vegas Med Spa",
+    "city": "Las Vegas",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "4edb487e-ee51-4765-b6a5-c6b47f1fa49f",
+    "name": "Skin Artisans at Edina Plastic Surgery",
+    "city": "Edina",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "7664dd25-ebdc-45d3-be87-b1663d001f5f",
+    "name": "Pure Lux Medspa",
+    "city": "Edina",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "df01f220-01f1-43dd-b862-0d51de83afbc",
+    "name": "Skin Rejuvenation Clinic PA",
+    "city": "Edina",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "3613fd5b-b6e8-4f4c-a3b4-ceac6f322f58",
+    "name": "Medi-Weightloss Dallas/Preston Hollow",
+    "city": "Dallas",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "57ec7fe5-bac4-4e4e-8949-1205be99b251",
+    "name": "Taylor'd Wellness & Aesthetics",
+    "city": "Dallas",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "5e7d5a50-b9d4-470f-9ff1-805149c1f5b6",
+    "name": "MSkin Med Spa",
+    "city": "Dallas",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "c824a80b-a16f-471a-bc3d-776e93da37bb",
+    "name": "Genesis Lifestyle Medicine",
+    "city": "Dallas",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "aafdf5a8-ea7d-4de5-a9a9-9134c0896db0",
+    "name": "Renaissance Rejuvenating Medicine",
+    "city": "Cape Coral",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "77d34e85-fbaa-424a-a81f-c1115ac56219",
+    "name": "SDBotox - Pacific Beach",
+    "city": "San Diego",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "8279c980-5fee-4e66-8249-0e87b2d628fe",
+    "name": "LaserAway Hillcrest",
+    "city": "San Diego",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "ca3de34a-12b8-4fa7-8eae-f4ecc1932ef0",
+    "name": "Cutella Medical Spa",
+    "city": "San Antonio",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "05198bd2-2b44-4cf6-aee9-40645a20b559",
+    "name": "Mirror Mirror Med Spa",
+    "city": "Los Angeles",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "194d3ef0-5922-4247-bfa8-b4817d7bb844",
+    "name": "Vermont Med spa",
+    "city": "Los Angeles",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "4e979847-bf93-45ac-801e-c2b1a5a8c534",
+    "name": "Bliss Point Medical Spa",
+    "city": "Los Angeles",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "ff3bda7c-4f3b-4868-bf79-05486ede8bf0",
+    "name": "Skin Story Med Spa",
+    "city": "Los Angeles",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "ab16d6c7-8884-404d-acf5-c3384f226dfc",
+    "name": "Cosmetic Medicine of Coral Gables",
+    "city": "Coral Gables",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "da145f15-8082-4888-a520-3121a0de1b54",
+    "name": "Prime IV Hydration & Wellness (West University, TX)",
+    "city": "Houston",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "a744cfaa-68aa-4a7e-b8b1-93def8fbd555",
+    "name": "The DRIPBaR Houston Heights",
+    "city": "Houston",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "ecfde89b-4f30-4b57-a5cc-3d270cafb1b4",
+    "name": "Platinum Medical Wellness & Aesthetics",
+    "city": "Houston",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "4ab1e418-7c9e-463e-93da-804fd5c1b6df",
+    "name": "Be Happy IV Hydration & Wellness - Houston IV Drip Health Spa & Weight Loss",
+    "city": "Houston",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "fb691e7e-22db-48d0-bd41-a7584f6be3d6",
+    "name": "4Ever Young Med Spa & Wellness Center - Vintage Park",
+    "city": "Houston",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "6e480461-5eef-4ebe-ae40-1deb23a2052a",
+    "name": "Drip Hydration - Mobile IV Therapy - Los Angeles",
+    "city": "Los Angeles",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "6131936c-cba6-4bb3-9142-97415ba03994",
+    "name": "Sculpt Med Spa Downtown Los Angeles",
+    "city": "Los Angeles",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "607d6046-163a-4f52-aae3-37c4d69b5feb",
+    "name": "South Coast MedSpa",
+    "city": "Los Angeles",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "b3f54a20-9259-4e8f-9c1b-42a29e85827d",
+    "name": "Doctor Drip IV Hydration",
+    "city": "Los Angeles",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "5b53a5df-4eec-42f5-8298-a7d3e1fe1008",
+    "name": "Kian Aesthetic Institute",
+    "city": "Los Angeles",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "65afd01a-2050-42c7-9100-22ef4129c24c",
+    "name": "Radiance Medspa Atlanta",
+    "city": "Atlanta",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "0688b1a0-e97d-450c-95b1-dfd111802e51",
+    "name": "Dr. Lanna Aesthetics",
+    "city": "New York",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "776c20c8-9876-4918-9618-f1cce5dca673",
+    "name": "BeautyFix Medspa Flatiron",
+    "city": "New York",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "910fe3b8-5957-400d-8df8-29bb859b4cd6",
+    "name": "4Ever Young Med Spa & Wellness Center - Marietta",
+    "city": "Marietta",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "2f13323f-381c-4fcc-b99a-eca4d67b27fa",
+    "name": "Hebe Aesthetics and Vitality",
+    "city": "Atlanta",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "c96136a7-cea8-4658-9437-1a858fb0718d",
+    "name": "Perimeter Weight and Wellness LLC",
+    "city": "",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "1898cbce-4fd1-4ab6-aabf-e2a7cdb764e9",
+    "name": "Charette Cosmetics Medical Spa - Atlanta",
+    "city": "Atlanta",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "15d8c186-f414-4105-b2fc-3b7d8a3f9e3b",
+    "name": "A Bless Beauty Medspa and Clinic",
+    "city": "Atlanta",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "a1340118-963d-4fb2-a83b-fd84177b75ec",
+    "name": "dermani MEDSPA® Summerhill",
+    "city": "Atlanta",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "0609ae52-1ce1-4a66-881e-647c858732b5",
+    "name": "Beautiful You Weight and Skin Solutions",
+    "city": "Atlanta",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "2654829b-07b7-4876-b1b1-b59a7bfe2cb0",
+    "name": "Clinique des Champs Élysées",
+    "city": "New York",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "e64e5052-d0f7-4f81-ad4d-51870b66931a",
+    "name": "Perfect Med Spa",
+    "city": "New York",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "067d9b2e-6538-4e3a-97ff-ebe948484b94",
+    "name": "Derma Beauty Infinity Medical Spa",
+    "city": "Pembroke Pines",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "439aa990-5dd5-4bc4-8cdf-f70cf71780e6",
+    "name": "Pines Dental Aesthetics",
+    "city": "Pembroke Pines",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "3595ccc7-b8f5-4cc2-a33e-2e2bf7ec811f",
+    "name": "Aqua medspa and wellness",
+    "city": "Cape Coral",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "78e0fb83-cab2-425c-ae0e-cc17c710c624",
+    "name": "Prime IV Hydration & Wellness - Beaverton",
+    "city": "Beaverton",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "8898f447-4d51-4393-a45c-5d4215638f1e",
+    "name": "LaserAway Portland",
+    "city": "Tualatin",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "040f4aab-f318-4081-a2a5-5ca45466883a",
+    "name": "Weight Loss Clinic Portland",
+    "city": "Portland",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "1be3543d-2693-40b1-b0b8-02741cdc93a3",
+    "name": "Health Plus",
+    "city": "Portland",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "65665c11-8a28-4bb5-b015-d18c40a4f007",
+    "name": "Optifit Medical Weight Loss & Wellness Clinic",
+    "city": "Portland",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "fb59daf6-a55d-4e6f-8b43-2eef3fc75bda",
+    "name": "Pines Aesthetics Cooper City",
+    "city": "Pembroke Pines",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "19596815-da4d-491c-9f7d-adc2f5d85fd6",
+    "name": "Four Seasons Laser Center",
+    "city": "Boston",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "4cce0b8c-391d-49ef-a3d6-ccd127c6d91e",
+    "name": "Medical Spa by Nurse Fiona",
+    "city": "Framingham",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "6f8acd28-f29d-46f8-bc01-428a1e9de9da",
+    "name": "Beautiful Skin Boston",
+    "city": "Brookline",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "66136490-0eee-4917-8137-26272f5b32c6",
+    "name": "Hollywood Body & Face Westminster",
+    "city": "Westminster",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "8709b7a6-b333-4250-8bf3-be0000b8a7ca",
+    "name": "Dee's Laser & Medspa",
+    "city": "Cape Coral",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "4abcfd07-69b8-4558-b508-5eedf6ae925a",
+    "name": "Dermamode Spa (Cape Coral)",
+    "city": "Cape Coral",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "e3457f2f-4f12-453c-984a-9520f40d4e48",
+    "name": "Optimal Wellness",
+    "city": "Cape Coral",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "11bed910-e8bf-4b71-bba7-4a052a1add9d",
+    "name": "Ageless Remedies SouthPark",
+    "city": "Charlotte",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "70d6752a-5e1c-42dc-ace1-7a02b0cfd0aa",
+    "name": "REFRESH Laser Spa",
+    "city": "Charlotte",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "7b0b0aec-958d-4a7f-a8a0-8364d1b888bc",
+    "name": "Essential Aesthetics and Laser",
+    "city": "Charlotte",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "55c1e127-18b1-4ef1-b691-3ff5340d02c1",
+    "name": "Dr Girouards Weight Loss & Wellness Clinic - Charlotte",
+    "city": "Charlotte",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "9cf515d0-3a16-4fc9-8d35-d4dad3a7f9cd",
+    "name": "Urban Medspa & Weight Loss Center",
+    "city": "Charlotte",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "a3667efb-2003-45f3-a203-3c13192433d8",
+    "name": "LightRx - Charlotte",
+    "city": "Charlotte",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "ba788964-cde7-408e-92ae-ef7b7d2fe1c6",
+    "name": "Semper Laser",
+    "city": "Charlotte",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "dd7ce18b-c165-46d2-8087-39a5848c3aed",
+    "name": "Slim Drip Wellness & Spa",
+    "city": "Cape Coral",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "2b5da213-9702-4d54-8497-54bb9bfd530f",
+    "name": "Revive Medical Spa LLC.",
+    "city": "Clearwater",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "3695ca16-09b4-4f1e-a37d-d1d7a92387fb",
+    "name": "Pines Aesthetics Coral Springs",
+    "city": "Coral Springs",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "2d5e0a5a-f217-4bbb-8526-489bae48047c",
+    "name": "Icon MD Medical Spa + Laser Center Waltham",
+    "city": "Waltham",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "38cd916d-05b2-4bff-b74e-ea8c42907487",
+    "name": "LaserAway Fenway",
+    "city": "Boston",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "43fb20f1-d7d5-4dc2-ba97-b67a03372ebc",
+    "name": "Skin Defyne Medspa",
+    "city": "Westwood",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "e3f9191a-6fe7-44a6-9d63-689960b8e839",
+    "name": "LuxDerm Medspa",
+    "city": "Concord",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "7a15947d-6a7e-46e6-af38-72a808d9cac6",
+    "name": "Lormin Med Spa",
+    "city": "Coral Springs",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "2c91e36c-c000-4e7e-8974-d78c19bc2770",
+    "name": "Aurivita Medspa",
+    "city": "Clearwater",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "356f0a60-9183-47eb-a5a9-8cadf4ba6788",
+    "name": "Lueur Aesthetics",
+    "city": "Clearwater",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "073b3065-ec5b-4f00-9bdc-8c08dcd94d39",
+    "name": "Healthy Aesthetics",
+    "city": "Clearwater",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "d8292edb-0890-43a2-92ea-8ab88ca82b65",
+    "name": "Michy Aesthetics - Clearwater",
+    "city": "Clearwater",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "6bd71e5c-757e-4b14-a732-ec59bc1b31c5",
+    "name": "NATURAL HEALTH ESSENTIALS",
+    "city": "Clearwater",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "8423ea59-1404-466a-8554-bf829b0bbfd9",
+    "name": "Aesthetic skin studio",
+    "city": "Clearwater",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "e052925e-25ab-4c3a-a290-bcec753af09c",
+    "name": "Epic Aesthetics & Surgery",
+    "city": "Clearwater",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "8d381025-3cb2-4fb5-9ed3-074c540c8715",
+    "name": "BLISS Medical",
+    "city": "Clearwater",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "09f7f1f1-503c-452c-af71-17e0ed7758a1",
+    "name": "Chelsea Vacca Medical Aesthetics (FKA Lotus Aesthetics)",
+    "city": "Sarasota",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "a633a3a8-acc7-4136-be86-fb4921329ed4",
+    "name": "SkinLab Aesthetic Clinic",
+    "city": "Tallahassee",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "118618cf-7127-409b-a70b-569e4ca7f8f7",
+    "name": "Revital Aesthetics & Anti-Aging",
+    "city": "Tallahassee",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "50be2009-01e0-452a-92c7-a460344d60b9",
+    "name": "Plenitude MedSpa",
+    "city": "Coral Gables",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "ad2ad22d-9590-4727-8dca-19365bca65a5",
+    "name": "Facial Mania Med Spa - Coral Gables",
+    "city": "Coral Gables",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "2c648509-b328-4ed5-94a2-b892af079d6f",
+    "name": "Med Aesthetics Miami",
+    "city": "Coral Gables",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "65fe881d-d497-476c-b99f-eb9e1a5ddb13",
+    "name": "Chadia Ali MedSpa & Aesthetics",
+    "city": "Coral Gables",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "682b44af-2f9a-48e8-8977-3a18664aa923",
+    "name": "The Beauty Clinic",
+    "city": "Fort Lauderdale",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "51cfc0df-7f53-4acd-b772-43c4fa0283b0",
+    "name": "Liquivida Wellness Center | Lauderdale Beach",
+    "city": "Fort Lauderdale",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "0d61c294-90a0-4f83-abee-245bbd2b73d3",
+    "name": "Dolce Medical Spa Las Olas | Facial | Skin Tightening | Microneedling",
+    "city": "Fort Lauderdale",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "632934b3-578e-446e-a0e5-0552d620f243",
+    "name": "Amaira Med Spa & Surgical",
+    "city": "Fort Lauderdale",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "6f473eb1-4423-43b2-a923-647c63c08518",
+    "name": "Millennium Wellness Center",
+    "city": "Fort Lauderdale",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "9de93020-e396-4cb5-a7ca-67c7ad235524",
+    "name": "Las Olas Med Spa",
+    "city": "Fort Lauderdale",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "36341044-856c-46fb-970b-b2f591e52e78",
+    "name": "Preferred Men's Medical Center",
+    "city": "Fort Lauderdale",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "471b820d-10ff-4c00-8d16-3956688b215f",
+    "name": "Baltic Beauty Cosmedical Centre",
+    "city": "Fort Lauderdale",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "2b5d0f86-ec94-496c-9dd9-e0ad721b2352",
+    "name": "Flourish Aesthetics",
+    "city": "Fort Lauderdale",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "8b68e614-2aa8-4a98-8012-076e7cf90be4",
+    "name": "Prime Body Wellness",
+    "city": "Fort Lauderdale",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "bc2d00b4-99d0-407c-883a-4225fbbfd69e",
+    "name": "BodyhackRX Integrative & Aesthetic Medicine",
+    "city": "Fort Lauderdale",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "c34654f8-2176-4fee-952d-1bed9c50199f",
+    "name": "WinR Aesthetics",
+    "city": "Fort Lauderdale",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "d2f57c59-d92c-492d-9e54-0f79811571a8",
+    "name": "Bliss Wellness and Aesthetic Studios",
+    "city": "Fort Lauderdale",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "326a0b87-6c15-4bdb-9964-3068a1f55a79",
+    "name": "Hydro Med Spa",
+    "city": "Jacksonville",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "e3860244-519d-4236-a933-b3112d4a6a1f",
+    "name": "The Sanctuary Wellness Institute",
+    "city": "Jacksonville",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "99ce9374-4f4a-4389-82ad-2c00133e530e",
+    "name": "Luminess Med Spa",
+    "city": "Jacksonville",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "3f463496-6561-4599-9317-73bb7f2b5023",
+    "name": "Cenegenics Jacksonville",
+    "city": "Jacksonville",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "f65675b7-fb43-4d39-8ece-416f5d63ea3f",
+    "name": "Avalii Aesthetics",
+    "city": "Jacksonville",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "93c3eeb5-53cf-4c59-8f8c-859197c13550",
+    "name": "Face II Face Aesthetics",
+    "city": "Jacksonville",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "c7d949e5-030b-41c3-9ba6-b0f57979164f",
+    "name": "REVAMP Wellness Center",
+    "city": "Jacksonville",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "b4bc4780-0f84-4b20-81ea-6d271202e8c5",
+    "name": "Alicia Med Spa",
+    "city": "Miami",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "da8c2423-484a-40e0-bb79-ab2103439008",
+    "name": "AARX Weight Loss Jacksonville",
+    "city": "Jacksonville",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "1009ff4d-2312-4c92-816f-a8f111233c35",
+    "name": "No Filter Medical Spa",
+    "city": "Miami",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "308017ee-3c7a-45d6-a51e-d9c0db2b6102",
+    "name": "Miami Skin Spa Aesthetics & Wellness",
+    "city": "Miami",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "2eb94bbc-f38d-4167-aaf7-eff2e112af4d",
+    "name": "Caruna Med Spa & Laser Center",
+    "city": "Miami",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "9455d976-631c-42b6-a719-e316b5f8515a",
+    "name": "The Clinic USA (Training Academy)",
+    "city": "Miami",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "c6c79531-08d9-47d2-8ab0-04ca0bdb9a7e",
+    "name": "Bella Vida Aesthetics & Wellness",
+    "city": "Miami",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "160b76ab-9a8f-42ea-80df-2b04639e2c12",
+    "name": "LS Aesthetic Studio",
+    "city": "Jacksonville",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "81cdec72-416c-4a53-a975-47232a2ce13b",
+    "name": "UF Health Aesthetics and Head and Neck Surgery - North",
+    "city": "Jacksonville",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "22d53362-ad68-42a0-a247-2ae72e3a6339",
+    "name": "Brickell Cosmetic Center-Aesthetics & Dermatology",
+    "city": "Miami",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "6688553a-10d8-4f02-91c0-712617469a00",
+    "name": "Miami Aesthetic - Pat Pazmiño, MD, FACS",
+    "city": "Miami",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "9e0f599c-2b9d-40fc-985c-659fbf28810d",
+    "name": "Arviv Medical Aesthetics Miami",
+    "city": "Miami",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "7afdc87a-57b1-479b-b36b-7920d149f855",
+    "name": "Lavish Laser Med Spa Midtown Miami",
+    "city": "Miami",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "2e9a177a-2cb7-4582-b507-560e7f6b0e6c",
+    "name": "CARE Esthetics",
+    "city": "Miami",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "c09ebfd5-9fa4-4aa1-b5ce-77a5a1691d76",
+    "name": "Aesthetic Medicine Institute of Miami",
+    "city": "Miami",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "43af59ce-70e3-457d-9527-d843e1376b19",
+    "name": "Vital Essence Med Spa",
+    "city": "Miami",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "546a0110-c624-47d0-b61c-cdc9c4ddc9ec",
+    "name": "JV Aesthetic Lab",
+    "city": "Miami",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "9dce4517-25b2-427f-b911-9a03667634bc",
+    "name": "Nectar Aesthetics® Med Spa - Orlando",
+    "city": "Orlando",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "db08d2a8-b6fa-472e-a4db-d721227564f4",
+    "name": "Loren Marsura Medspa",
+    "city": "Orlando",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "7795df75-748f-4b52-95c9-33f5d76fefe1",
+    "name": "ELITE CARE AESTHETIC",
+    "city": "Orlando",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "fbfdacbb-eb12-49b6-8012-5567873ac60b",
+    "name": "Pelham Medical Consulting & Aesthetic Lounge, LLC",
+    "city": "Orlando",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "1d1bea31-e478-4dc7-8ce4-bc87b90fba7e",
+    "name": "Soft Aesthetics SkinCare Clinic",
+    "city": "Orlando",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "4b537cbd-d354-4562-bf31-94c7f2675909",
+    "name": "Hayati Aesthetics And Laser",
+    "city": "Orlando",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "c0b69ba5-62e6-4c02-9d38-b1eb9af35415",
+    "name": "The Aesthetics Lounge and Spa Downtown Orlando",
+    "city": "Orlando",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "6472261f-a584-40dd-a6eb-85b0a6d4cb7d",
+    "name": "Reign Medical Aesthetics & Wellness - Windermere",
+    "city": "Orlando",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "65400e30-8d86-4b2f-8b56-4db6b4686b93",
+    "name": "Elements Rejuvenating Med Spa - Orlando",
+    "city": "Orlando",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "ed050bf6-194b-49b0-a56c-a83f9e6cdd48",
+    "name": "BioHp Med Spa & Wellness",
+    "city": "Orlando",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "8feb9b31-bd47-480f-9d32-646b002ac456",
+    "name": "Le Spa by Rosi",
+    "city": "Orlando",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "3515be86-74b1-4267-9ffe-09faf69ed0ab",
+    "name": "Luna Aesthetics & Weight Loss",
+    "city": "Orlando",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "361d38f9-29b5-49ca-914f-b21bfe3d66cd",
+    "name": "Crown & Ryxes: Hair Restoration & Men's Sexual Wellness",
+    "city": "Orlando",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "4ffc4e72-755d-46d9-a173-a041bab0e1d4",
+    "name": "Elia Med Spa",
+    "city": "Orlando",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "5cb13db4-11cb-4401-a71a-1396eba870c5",
+    "name": "Renew Vitality Testosterone Clinic of Orlando",
+    "city": "Orlando",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "43cbfa51-2947-467e-a4ed-2f0681cb72c8",
+    "name": "Orlando Medical Center",
+    "city": "Orlando",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "a912bd3b-dfd7-4cd6-bbb3-885cd4970e91",
+    "name": "Beau Terre MedSpa",
+    "city": "Orlando",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "30b865ad-8cf8-417b-b337-90c4291cffc5",
+    "name": "Acra Medical Aesthetics",
+    "city": "Coral Gables",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "07b740fa-5365-4d7b-9e8c-2aea883a8693",
+    "name": "Skinelite-Aesthetics",
+    "city": "Coral Gables",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "a2a8fb2d-ac4e-45a4-b15c-dbbce1703697",
+    "name": "Belle Aestheticss",
+    "city": "Coral Springs",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "53186648-6079-4c98-9363-3ad150a8765c",
+    "name": "Coast to Coast Wellness and Aesthetics",
+    "city": "Daytona Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "e122a928-c801-46e2-b3c8-0a9b824a803c",
+    "name": "Skin care by Gretchen",
+    "city": "Daytona Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "bd28954e-6c9d-4e40-b50f-d17fbfb55149",
+    "name": "You First Medical Aesthetics",
+    "city": "Daytona Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "39bcc0bd-aabd-41b8-a4fa-0ac506ec0614",
+    "name": "A Beautiful You by Ada",
+    "city": "Delray Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "ae4141ad-be9f-43f3-8216-081b55b8757e",
+    "name": "DermaVeda Aesthetics & Wellness (Delray Beach)",
+    "city": "Delray Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "5796a33f-e788-4ab6-908a-a607f9d57cf1",
+    "name": "Premiere Aesthetics",
+    "city": "Fort Myers",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "567b768e-5cc2-4685-8228-262e9939dfe5",
+    "name": "Honest Aesthetics",
+    "city": "Fort Myers",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "2d3b5118-10d4-41ae-9081-3eb6dd8894db",
+    "name": "Palm Beach Advanced Aesthetics",
+    "city": "West Palm Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "fb01aade-99ac-40c4-b06b-d111042b7afb",
+    "name": "Dermafix Spa (Fort Myers)",
+    "city": "Fort Myers",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "b35244e5-3e30-4c26-964e-ca1d84fb42db",
+    "name": "4Ever Young Med Spa & Wellness Center - Fort Myers",
+    "city": "Fort Myers",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "555858b7-e1e1-49fa-a2f2-83e63402b233",
+    "name": "E Aesthetics",
+    "city": "West Palm Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "140dd39e-c791-48f3-a1ee-a35717c04a31",
+    "name": "Tracey Botha MD - Mooi Medical Spa & Laser Center",
+    "city": "Gainesville",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "d742bdc0-ad1b-4b55-a874-38cd6d59b29a",
+    "name": "The Acne Scar Center",
+    "city": "Gainesville",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "0baf6f0e-55af-419d-bbc6-5ed1aefe6890",
+    "name": "FCMA Med Spa",
+    "city": "Hollywood",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "f1a2ea5d-f9f8-481c-871c-cf37328aac61",
+    "name": "Luxe Escape",
+    "city": "Hollywood",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "86443f1c-fa72-42b3-91bf-cbd165ee0823",
+    "name": "Oracle Aesthetics",
+    "city": "Hollywood",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "885bd91b-44a7-4b7b-9e55-7c82bcb6cb68",
+    "name": "Amazing Skin Care Med Spa",
+    "city": "Hollywood",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "351d98b9-80ac-46cc-b4d0-4a0e531543c1",
+    "name": "Juves Aesthetics & Cosmetic Procedures",
+    "city": "Kissimmee",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "3c63c58b-4dd6-4ae0-aaa4-8e2d2c650429",
+    "name": "Beautiful Orlando Spa and Cosmetic",
+    "city": "Kissimmee",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "8722b891-c54b-4866-8f52-6c48a8adcb1b",
+    "name": "Couture Med Spa",
+    "city": "Kissimmee",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "b8e33d38-ed7e-4b77-89f7-c21247cf647b",
+    "name": "Fountain of You",
+    "city": "Melbourne",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "3ded5a6e-c4dc-437d-bb00-59f565f10ed7",
+    "name": "Dermave spa",
+    "city": "Melbourne",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "c4052d4c-038f-4818-bfb6-e7755d577bd6",
+    "name": "Imami Skin & Cosmetic Center",
+    "city": "Melbourne",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "a77a40eb-632d-463d-9066-cc90d8ae5ee9",
+    "name": "Arielle's Aesthetics",
+    "city": "Melbourne",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "711dd945-16dc-4380-80e2-4e04e8ec7690",
+    "name": "Tactical Aesthetics",
+    "city": "Melbourne",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "584a32b8-1444-4cf0-b538-068fa4bdf36b",
+    "name": "The Laser Lounge Spa Naples",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "80380531-3f66-4315-8ce8-bd541e4fc1c5",
+    "name": "Gulf Coast Medspa",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "09f51a57-195f-4a47-b956-b94e6b216707",
+    "name": "The Aesthetic Center SWFL Naples",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "83befe92-5cfc-40a6-9c88-27f21efbf0d1",
+    "name": "4Ever Young Med Spa & Wellness Center - Naples",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "b8e2aebe-d357-4fad-abe4-08b1836904dd",
+    "name": "Healing Rivers Aesthetics",
+    "city": "Naples",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "0a773880-ee41-429a-8bdd-d5392e7d302b",
+    "name": "Nouveau Health & Wellness",
+    "city": "Palm Beach Gardens",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "d1ca6715-3cb6-40df-b65f-9fb329d6ce1f",
+    "name": "La Vie Spa Gardens",
+    "city": "Palm Beach Gardens",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "c2286888-a15a-4d81-92f8-dffbaf95801e",
+    "name": "Palm Beach Facial Plastic Surgery",
+    "city": "Palm Beach Gardens",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "b3ddf91f-27fa-44a5-9499-a0f988d577a5",
+    "name": "Panacean Med Spa",
+    "city": "Weston",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "e648fa8b-144c-418f-954b-1d85a31714a5",
+    "name": "Oceanside Aesthetics",
+    "city": "Palm Beach Gardens",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "88ca6081-1d00-4210-a849-e65946e7266a",
+    "name": "Palm Beach Aesthetics Group",
+    "city": "Palm Beach Gardens",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "051d0044-7584-4f2d-af6e-ca2212a1fef1",
+    "name": "Touch Of Life Med Spa",
+    "city": "Pembroke Pines",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "47db53f4-7d8a-4982-849e-27aede9deda5",
+    "name": "Pines aesthetics",
+    "city": "Pembroke Pines",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "18db8af7-9023-48f8-8fe3-8b7149b7a278",
+    "name": "Perfection Aesthetics & Wellness",
+    "city": "Pembroke Pines",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "304fe269-0f3b-451b-81f8-de635e363e7b",
+    "name": "New Wave Med Spa",
+    "city": "Pembroke Pines",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "bfb25c1f-57f7-48de-b561-e666579ca08b",
+    "name": "M G Medical Facility Inc",
+    "city": "Pembroke Pines",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "c61e65e5-327c-4daf-a268-119f7a596992",
+    "name": "Florida Academy of Medical Aesthetics",
+    "city": "Pembroke Pines",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "c8466eaf-49a4-43de-abb9-005211073d99",
+    "name": "Emerald Aesthetics Medical Spa",
+    "city": "Pensacola",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "5aeacf11-734b-4a5f-ac5b-91187088e465",
+    "name": "MELA Medical Spa",
+    "city": "Pensacola",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "3c2f10d1-1d89-4557-8720-40b8185a5fa0",
+    "name": "SELF Med Spa",
+    "city": "Pensacola",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "e46bafd0-718c-4d97-8eb4-d6be46a1bc1c",
+    "name": "Sandy Key Medical",
+    "city": "Pensacola",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "d8f0a913-ab30-4839-beee-7338849d1c9e",
+    "name": "Elevate Med and Aesthetics",
+    "city": "Plantation",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "3a83cfaf-5f00-4af1-88e7-8fa0143221d6",
+    "name": "Oasis Iv Med Spa",
+    "city": "Plantation",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "b27a6ee4-0563-4990-b5a7-c95d3b775aa5",
+    "name": "PSL Laser and Aesthetics",
+    "city": "Port St. Lucie",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "b5230b4d-5e19-4082-9bce-93d17c31311b",
+    "name": "Lavish L Aesthetics",
+    "city": "Port St. Lucie",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "dec37782-5e5a-4bc9-ab1e-67348dfbb775",
+    "name": "Treasure Coast Laser and Aesthetics",
+    "city": "Port St. Lucie",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "40c53bdd-ac85-4411-8f9a-aafd1cfdcfb1",
+    "name": "USA Aesthetics",
+    "city": "Port St. Lucie",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "3a123fb4-8eeb-4ecb-92ec-1b38293d21eb",
+    "name": "Facecare Acne Solutions",
+    "city": "Port St. Lucie",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "1a26e317-1bac-4c42-b3c9-c56cd2987efc",
+    "name": "Angelic Glow Esthetics",
+    "city": "Port St. Lucie",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "05d30a03-1c7b-4b92-a822-391e8c415974",
+    "name": "Relive Tradition",
+    "city": "Port St. Lucie",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "3f676d48-3f0b-43bc-88cb-be6b8ab67bb0",
+    "name": "Ah...Massage & Skincare",
+    "city": "Port St. Lucie",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "8700de6e-f715-4757-9674-b8919c0d02e2",
+    "name": "Elite Medical Spa of Sarasota",
+    "city": "Sarasota",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "cdc738d5-f86c-407d-8338-603d2002bb63",
+    "name": "HCA Florida St. Lucie Cosmetic and Reconstructive Surgery",
+    "city": "Port St. Lucie",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "93c9cf21-92fa-4d45-a0ed-0d05fcc26b2c",
+    "name": "The Aesthetic Center",
+    "city": "Sarasota",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "9e311ce6-5713-4719-a4a6-aec36b38a08e",
+    "name": "Skin and Face Phoenix",
+    "city": "Phoenix",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "b819d3be-5ab2-48b8-ade2-54b6f765de5f",
+    "name": "Jessica Simone, AGNP-C",
+    "city": "Sarasota",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "b41d48cb-d5be-4324-b901-372f416c3657",
+    "name": "Amy’s Aesthetics & Wellness",
+    "city": "Sarasota",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "d5ca0fba-171f-4ee9-b294-999841fbacee",
+    "name": "Rita Medical Elite",
+    "city": "Sarasota",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "8e871fd5-6173-43b1-ba6f-35d3846e3479",
+    "name": "Facial Mania Med Spa Sarasota",
+    "city": "Sarasota",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "2f317d38-0d3c-43be-a02d-92b785b737c1",
+    "name": "LJ Aesthetics Medicine, LLC",
+    "city": "st-petersburg",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "653ce0cd-74da-430f-85ed-7c49db2b4caf",
+    "name": "Skin Science Aesthetics",
+    "city": "Tallahassee",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "6e27de15-6549-4cb4-b774-da6b3fd449e3",
+    "name": "Amaris' Aesthetics, Inc.",
+    "city": "st-petersburg",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "2c7c51a9-8228-4a1d-96c5-12e0bb4105a6",
+    "name": "SkinLogic Aesthetics Spa",
+    "city": "Tallahassee",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "3abab3f7-7801-4b0c-adb1-4085fbab863c",
+    "name": "Essential Beauty & Wellness Spa LLC",
+    "city": "Tallahassee",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "2954c5c6-3ca6-45fc-af62-755234211be4",
+    "name": "Allure Laser MediSpa",
+    "city": "Tallahassee",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "d8c71d1d-c541-467a-9424-965eee564b43",
+    "name": "MD Beauty Labs",
+    "city": "West Palm Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "80987836-b7ff-4700-9500-b38a257aea12",
+    "name": "Renew You Palm Beach",
+    "city": "West Palm Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "ea501e54-723b-49e5-b62a-a21f3e959ffc",
+    "name": "Pure Skin Palm Beach",
+    "city": "West Palm Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "39f7f043-fc33-4746-b17f-0a8c2ecbd9d2",
+    "name": "Pulsar Health - Dr. Roop Monica Gill",
+    "city": "West Palm Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "d088b157-0870-4643-b8e0-ed0cac16492e",
+    "name": "Ava Beauty Medical Aesthetics, LLC",
+    "city": "West Palm Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "2306d4c7-4426-47a0-a7e4-7ec7cabe679c",
+    "name": "LiceDoctors Lice Treatment West Palm Beach FL",
+    "city": "West Palm Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "6084c77a-6571-4132-9faf-d51edf33f204",
+    "name": "Aesthetic Element",
+    "city": "Weston",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "862b4a7c-6c5f-4d75-997f-cf24290f9bcb",
+    "name": "Weston Center for Plastic Surgery",
+    "city": "Weston",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "ea9e2c05-357b-49a0-9049-43f5a2fb96c0",
+    "name": "Radiance Medical Spa of Weston",
+    "city": "Weston",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "aeca8867-9f55-438f-8cb0-27eaa9e8194d",
+    "name": "Weston Center for Aesthetic Medicine & Surgery",
+    "city": "Weston",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "8a17ab5d-2df0-4fcc-8502-bd6fbf364ee4",
+    "name": "Just Me Med Spa",
+    "city": "Weston",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "d178de1a-820c-4935-93a6-61ce9521f662",
+    "name": "New Life Beauty & Wellness",
+    "city": "Weston",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "77773390-8a7d-439b-b1f4-1a288ccfe28a",
+    "name": "Biovital MedSpa LLC",
+    "city": "Weston",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "5338a712-3f84-401a-8a85-b52772f742f0",
+    "name": "Cienega Medical",
+    "city": "Los Angeles",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "53e69307-1bd1-4642-a46f-42960041754b",
+    "name": "Hush LA Medspa",
+    "city": "Los Angeles",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "afebffc7-350d-4c63-b609-360621712d27",
+    "name": "Cienega Medical - Santa Monica",
+    "city": "Santa Monica",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "aeeb6408-861b-4ab0-8c53-688ef459e2f7",
+    "name": "Kaua'i MedSpa",
+    "city": "Surfside",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "b7774eb8-0a26-4dc9-9bff-0e4441a5161b",
+    "name": "Harmony Aesthetics Center",
+    "city": "Santa Monica",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "ca8da7bf-56ff-45c6-9d67-df0b371b5ee4",
+    "name": "Holländer Clinic",
+    "city": "Santa Monica",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "14a4a714-8e3c-42f2-80e9-e9ba1b7bd185",
+    "name": "LA Aesthetics Center - Concierge Longevity Clinic",
+    "city": "Beverly Hills",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "fda748f5-fc3e-4065-8112-ec4c591ee9bf",
+    "name": "SkinSpirit at Lasky",
+    "city": "Beverly Hills",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "9fe3a858-b2ac-4ba3-89d8-cb37d2e4e7e2",
+    "name": "Beverly Hills Skin Clinic",
+    "city": "Beverly Hills",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "f0fbf78c-9b4b-4e12-8ff7-e46bf4a4f63b",
+    "name": "Henderson Med Spa",
+    "city": "Henderson",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "bcde5a43-52ed-4636-8028-32d53b805e91",
+    "name": "NakedMD Med Spa Henderson",
+    "city": "Henderson",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "0fe9e053-0ac6-4443-9507-c3dec9d12946",
+    "name": "Advanced Aesthetics - Henderson",
+    "city": "Henderson",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "b797396a-c11d-4f58-94df-4d31fbac7190",
+    "name": "BP Royal Medspa",
+    "city": "Henderson",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "1ae8fe56-0097-465e-adc0-609c52c2a086",
+    "name": "Esthetika MedSpa - By Ageless Las Vegas",
+    "city": "Henderson",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "dd61c4a2-ed12-4200-ae4b-91ed8d02ff8b",
+    "name": "Kaua'i MedSpa",
+    "city": "Fisher Island",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "2e217ceb-e199-491b-93ec-bbb9e19f5395",
+    "name": "Beverly Hills Med Spa",
+    "city": "Beverly Hills",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "cad92eba-0379-4a03-b6d2-facd5afed5c2",
+    "name": "The MedSpa at Beverly Hills",
+    "city": "Beverly Hills",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "cddeb05f-5222-4713-a928-baacd217ca87",
+    "name": "NakedMD Med Spa Beverly Hills",
+    "city": "Beverly Hills",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "70b1554d-297d-4c4c-b596-b24e7936c872",
+    "name": "Bliss Point Medical Spa",
+    "city": "Los Angeles",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "78cbccd4-da46-45ea-99c7-96e7d9cce8f2",
+    "name": "me.losangeles aesthetics",
+    "city": "Los Angeles",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "6ab21a7f-fa89-4f61-99ae-5fa3d427e729",
+    "name": "Double J Medical Aesthetics and Hair Clinic",
+    "city": "Los Angeles",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "f13deed0-11ad-4fe2-a300-5a3a882a6a3a",
+    "name": "me.losangeles aesthetics",
+    "city": "West Hollywood",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "5e8320a4-b0ae-4123-98f1-9a7c369b5ccc",
+    "name": "BLUE Med Center & Spa",
+    "city": "Atlanta",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "f9b76243-1998-4440-a6d1-0f6b7bbd3aca",
+    "name": "The House of Wellness Med Spa",
+    "city": "Atlanta",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "5893e666-45f0-4735-a8c0-ba1e0073f8f1",
+    "name": "Austin Med Spa",
+    "city": "Austin",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "81238bfd-29d5-485d-8ea0-e5382abfb8db",
+    "name": "Nu'u Aesthetics",
+    "city": "Phoenix",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "f9723d22-b152-4bcc-ab86-0259c5f89aa6",
+    "name": "Beauty By RN Medical Aesthetics",
+    "city": "Phoenix",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "f6012018-e630-4e87-af4b-51d9bd11293d",
+    "name": "NK Aesthetics",
+    "city": "Phoenix",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "b5af3a67-1fea-4227-9f69-2e4a2be7f017",
+    "name": "Arcadia Skin",
+    "city": "Phoenix",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "89872a6c-cc5b-4935-ba5a-31a1d9ac8022",
+    "name": "DayDreams Day Spa & Massage | Lakeland, FL",
+    "city": "Lakeland",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "e62ebde8-f4fa-4975-b43c-456138f36c22",
+    "name": "Somar MD Medspa",
+    "city": "Ocala",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "7afdc25d-23e9-4fe1-b547-3cf695993797",
+    "name": "Balanced Body Wellness and Aesthetic's",
+    "city": "Ocala",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "3a807e51-75d8-4e97-9424-3c97c9040f23",
+    "name": "Colibri Aesthetics",
+    "city": "Vero Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "e955531f-d37d-4f32-bb39-94cff885f6bd",
+    "name": "Regen and Restore",
+    "city": "Largo",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "f13c2e77-1b27-4a4b-855c-cbc7bd73e040",
+    "name": "Bonsai Holistic Spa",
+    "city": "Largo",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "ec65bae9-da41-4fd5-8c62-7877a2fbe76c",
+    "name": "Pure Essence Spa LLC",
+    "city": "Land O Lakes",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "90040710-a961-471c-811c-532584cfdf20",
+    "name": "Cosmetic Gynecology Florida",
+    "city": "Ponte Vedra Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "b16851fa-80d7-4db8-b489-50bb60c967e6",
+    "name": "One Stop Med Spa",
+    "city": "Brandon",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "cbde9af9-7ae6-4140-81ea-12b1e8880ddd",
+    "name": "Attain Bliss Massage",
+    "city": "Riverview",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "bb0fd43f-e146-406f-bf16-21294898a9f5",
+    "name": "Prescription-Skincare",
+    "city": "Miami Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "3d1dc3e3-74cc-4f70-8c91-450099ac4750",
+    "name": "Luxury Smile Aesthetics",
+    "city": "Miami",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "c82dcdd6-3d2b-4e9b-9cbc-fbe3a70cd6d0",
+    "name": "AESTHETIC CLINIC",
+    "city": "North Miami Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "d386dd49-84ee-49e0-9003-c450783406ed",
+    "name": "L'esthetique Skin Care LLC",
+    "city": "North Miami Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "5c875906-ca91-41a3-a778-70795d28eb51",
+    "name": "Pestana Aesthetics",
+    "city": "Hallandale Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "7bb41d12-95d2-4313-b383-7be6e25b1153",
+    "name": "Estetika Med Spa",
+    "city": "Hallandale Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "8701e83c-9807-41a7-b390-c9e35c89db82",
+    "name": "Neo Aesthetics & Medical Int. Academy - Massage Therapist, Medical Assistant, Electrology & Laser, Aesthetics and Nails",
+    "city": "Hallandale Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "87f60b0f-8d1d-4c84-b5de-5ccd754671ba",
+    "name": "Oya Wellness Hallandale",
+    "city": "Hallandale Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "cf479b55-11de-4269-b544-8529a34563b0",
+    "name": "Laser Hair Removal Med Spa",
+    "city": "Hallandale Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "ece7f4cb-43d8-42a7-90dc-736254cdf1f4",
+    "name": "Jill Art Aesthetics",
+    "city": "Hallandale Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "268bfcf7-c4a3-4c17-967f-66dab960b708",
+    "name": "J.A. Esthetics",
+    "city": "Hallandale Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "2c123320-44bd-44ae-9cc2-8d1645069296",
+    "name": "Bogat Aesthetics & Wellness",
+    "city": "Hallandale Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  },
+  {
+    "id": "3fe26b6f-3151-46eb-919a-1b5a7d73bfdf",
+    "name": "Nikkiesthetics",
+    "city": "Hallandale Beach",
+    "imageUrl": "https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic",
+    "source": "unsplash-fallback"
+  }
+]
