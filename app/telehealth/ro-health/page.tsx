@@ -5,11 +5,11 @@ import Footer from '@/components/Footer'
 import { SITE_URL } from '@/lib/config'
 
 export const metadata: Metadata = {
-  title: 'Ro Review — Telehealth GLP-1 Weight Loss | GlowRoute',
+  title: 'Ro Review  -  Telehealth GLP-1 Weight Loss | GlowRoute',
   description: 'Ro is a direct-to-patient telehealth platform offering physician-supervised treatment for weight loss, sexual health, hair, and primary care conditions.',
   alternates: { canonical: `${SITE_URL}/telehealth/ro-health` },
   openGraph: {
-    title: 'Ro — Weight loss, ED, hair, and primary care — one telehealth platform',
+    title: 'Ro  -  Weight loss, ED, hair, and primary care  -  one telehealth platform',
     description: 'Ro is a direct-to-patient telehealth platform offering physician-supervised treatment for weight loss, sexual health, hair, and primary care conditions.',
     url: `${SITE_URL}/telehealth/ro-health`,
     type: 'website',
@@ -31,10 +31,10 @@ export default function RoPage() {
             </div>
             <div className="flex items-center gap-3 mb-4">
               <span className="bg-sage text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide">Telehealth</span>
-              <span className="bg-white/10 text-white/80 text-xs px-3 py-1 rounded-full">$69–$299/month</span>
+              <span className="bg-white/10 text-white/80 text-xs px-3 py-1 rounded-full">$69-$299/month</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-display font-light mb-4">Ro</h1>
-            <p className="text-xl text-white/80 mb-6">Weight loss, ED, hair, and primary care — one telehealth platform</p>
+            <p className="text-xl text-white/80 mb-6">Weight loss, ED, hair, and primary care  -  one telehealth platform</p>
             <div className="flex flex-wrap gap-2 mb-8">
             <span className="inline-block bg-sage/10 text-sage text-xs font-medium px-3 py-1 rounded-full">GLP-1 Weight Loss</span>
             <span className="inline-block bg-sage/10 text-sage text-xs font-medium px-3 py-1 rounded-full">ED Treatment</span>
@@ -64,7 +64,7 @@ export default function RoPage() {
         <section className="max-w-4xl mx-auto px-4 py-12">
           <div className="grid md:grid-cols-3 gap-8">
 
-            {/* Left — Main info */}
+            {/* Left  -  Main info */}
             <div className="md:col-span-2 space-y-8">
 
               {/* About */}
@@ -104,7 +104,7 @@ export default function RoPage() {
               </div>
             </div>
 
-            {/* Right — Sidebar */}
+            {/* Right  -  Sidebar */}
             <div className="space-y-4">
 
               {/* Quick Facts */}
@@ -113,7 +113,7 @@ export default function RoPage() {
                 <dl className="space-y-2 text-sm">
                   <div className="flex justify-between">
                     <dt className="text-stone-500">Price Range</dt>
-                    <dd className="font-medium text-onyx">$69–$299/month</dd>
+                    <dd className="font-medium text-onyx">$69-$299/month</dd>
                   </div>
                   <div className="flex justify-between">
                     <dt className="text-stone-500">Telehealth</dt>
@@ -133,7 +133,7 @@ export default function RoPage() {
               {/* CTA */}
               <div className="bg-onyx text-white rounded-xl p-5">
                 <h3 className="font-semibold mb-2">Ready to start?</h3>
-                <p className="text-white/70 text-sm mb-4">Complete an online intake — most patients get a response within 24–48 hours.</p>
+                <p className="text-white/70 text-sm mb-4">Complete an online intake  -  most patients get a response within 24-48 hours.</p>
                 <a
                   href="https://ro.co"
                   target="_blank"

@@ -5,11 +5,11 @@ import Footer from '@/components/Footer'
 import { SITE_URL } from '@/lib/config'
 
 export const metadata: Metadata = {
-  title: 'Henry Meds Review — Telehealth GLP-1 Weight Loss | GlowRoute',
+  title: 'Henry Meds Review  -  Telehealth GLP-1 Weight Loss | GlowRoute',
   description: 'Henry Meds makes medically supervised weight loss and hormone therapy accessible and affordable, with transparent pricing and no insurance required.',
   alternates: { canonical: `${SITE_URL}/telehealth/henry-meds` },
   openGraph: {
-    title: 'Henry Meds — GLP-1, TRT, and metabolic health — affordable telehealth at scale',
+    title: 'Henry Meds  -  GLP-1, TRT, and metabolic health  -  affordable telehealth at scale',
     description: 'Henry Meds makes medically supervised weight loss and hormone therapy accessible and affordable, with transparent pricing and no insurance required.',
     url: `${SITE_URL}/telehealth/henry-meds`,
     type: 'website',
@@ -31,10 +31,10 @@ export default function HenryMedsPage() {
             </div>
             <div className="flex items-center gap-3 mb-4">
               <span className="bg-sage text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide">Telehealth</span>
-              <span className="bg-white/10 text-white/80 text-xs px-3 py-1 rounded-full">$35–$199/month</span>
+              <span className="bg-white/10 text-white/80 text-xs px-3 py-1 rounded-full">$35-$199/month</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-display font-light mb-4">Henry Meds</h1>
-            <p className="text-xl text-white/80 mb-6">GLP-1, TRT, and metabolic health — affordable telehealth at scale</p>
+            <p className="text-xl text-white/80 mb-6">GLP-1, TRT, and metabolic health  -  affordable telehealth at scale</p>
             <div className="flex flex-wrap gap-2 mb-8">
             <span className="inline-block bg-sage/10 text-sage text-xs font-medium px-3 py-1 rounded-full">GLP-1 Weight Loss</span>
             <span className="inline-block bg-sage/10 text-sage text-xs font-medium px-3 py-1 rounded-full">Testosterone</span>
@@ -64,7 +64,7 @@ export default function HenryMedsPage() {
         <section className="max-w-4xl mx-auto px-4 py-12">
           <div className="grid md:grid-cols-3 gap-8">
 
-            {/* Left — Main info */}
+            {/* Left  -  Main info */}
             <div className="md:col-span-2 space-y-8">
 
               {/* About */}
@@ -103,7 +103,7 @@ export default function HenryMedsPage() {
               </div>
             </div>
 
-            {/* Right — Sidebar */}
+            {/* Right  -  Sidebar */}
             <div className="space-y-4">
 
               {/* Quick Facts */}
@@ -112,7 +112,7 @@ export default function HenryMedsPage() {
                 <dl className="space-y-2 text-sm">
                   <div className="flex justify-between">
                     <dt className="text-stone-500">Price Range</dt>
-                    <dd className="font-medium text-onyx">$35–$199/month</dd>
+                    <dd className="font-medium text-onyx">$35-$199/month</dd>
                   </div>
                   <div className="flex justify-between">
                     <dt className="text-stone-500">Telehealth</dt>
@@ -132,7 +132,7 @@ export default function HenryMedsPage() {
               {/* CTA */}
               <div className="bg-onyx text-white rounded-xl p-5">
                 <h3 className="font-semibold mb-2">Ready to start?</h3>
-                <p className="text-white/70 text-sm mb-4">Complete an online intake — most patients get a response within 24–48 hours.</p>
+                <p className="text-white/70 text-sm mb-4">Complete an online intake  -  most patients get a response within 24-48 hours.</p>
                 <a
                   href="https://henrymeds.com"
                   target="_blank"

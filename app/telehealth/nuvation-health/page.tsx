@@ -5,11 +5,11 @@ import Footer from '@/components/Footer'
 import { SITE_URL } from '@/lib/config'
 
 export const metadata: Metadata = {
-  title: 'Nuvation Health Review — Telehealth Longevity | GlowRoute',
+  title: 'Nuvation Health Review  -  Telehealth Longevity | GlowRoute',
   description: 'Nuvation Health combines advanced diagnostics, hormone optimization, and metabolic health coaching into a precision longevity program delivered entirely on',
   alternates: { canonical: `${SITE_URL}/telehealth/nuvation-health` },
   openGraph: {
-    title: 'Nuvation Health — Personalized longevity and metabolic health — precision telehealth',
+    title: 'Nuvation Health  -  Personalized longevity and metabolic health  -  precision telehealth',
     description: 'Nuvation Health combines advanced diagnostics, hormone optimization, and metabolic health coaching into a precision longevity program delivered entirely on',
     url: `${SITE_URL}/telehealth/nuvation-health`,
     type: 'website',
@@ -31,10 +31,10 @@ export default function NuvationHealthPage() {
             </div>
             <div className="flex items-center gap-3 mb-4">
               <span className="bg-sage text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide">Telehealth</span>
-              <span className="bg-white/10 text-white/80 text-xs px-3 py-1 rounded-full">$199–$499/month</span>
+              <span className="bg-white/10 text-white/80 text-xs px-3 py-1 rounded-full">$199-$499/month</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-display font-light mb-4">Nuvation Health</h1>
-            <p className="text-xl text-white/80 mb-6">Personalized longevity and metabolic health — precision telehealth</p>
+            <p className="text-xl text-white/80 mb-6">Personalized longevity and metabolic health  -  precision telehealth</p>
             <div className="flex flex-wrap gap-2 mb-8">
             <span className="inline-block bg-sage/10 text-sage text-xs font-medium px-3 py-1 rounded-full">Longevity</span>
             <span className="inline-block bg-sage/10 text-sage text-xs font-medium px-3 py-1 rounded-full">Metabolic Health</span>
@@ -64,7 +64,7 @@ export default function NuvationHealthPage() {
         <section className="max-w-4xl mx-auto px-4 py-12">
           <div className="grid md:grid-cols-3 gap-8">
 
-            {/* Left — Main info */}
+            {/* Left  -  Main info */}
             <div className="md:col-span-2 space-y-8">
 
               {/* About */}
@@ -100,11 +100,11 @@ export default function NuvationHealthPage() {
               {/* Best For */}
               <div className="bg-sage/5 border border-sage/20 rounded-xl p-6">
                 <h2 className="text-lg font-semibold text-onyx mb-2">Best For</h2>
-                <p className="text-stone-700">Patients who want a data-driven longevity protocol — not just symptom treatment</p>
+                <p className="text-stone-700">Patients who want a data-driven longevity protocol  -  not just symptom treatment</p>
               </div>
             </div>
 
-            {/* Right — Sidebar */}
+            {/* Right  -  Sidebar */}
             <div className="space-y-4">
 
               {/* Quick Facts */}
@@ -113,7 +113,7 @@ export default function NuvationHealthPage() {
                 <dl className="space-y-2 text-sm">
                   <div className="flex justify-between">
                     <dt className="text-stone-500">Price Range</dt>
-                    <dd className="font-medium text-onyx">$199–$499/month</dd>
+                    <dd className="font-medium text-onyx">$199-$499/month</dd>
                   </div>
                   <div className="flex justify-between">
                     <dt className="text-stone-500">Telehealth</dt>
@@ -133,7 +133,7 @@ export default function NuvationHealthPage() {
               {/* CTA */}
               <div className="bg-onyx text-white rounded-xl p-5">
                 <h3 className="font-semibold mb-2">Ready to start?</h3>
-                <p className="text-white/70 text-sm mb-4">Complete an online intake — most patients get a response within 24–48 hours.</p>
+                <p className="text-white/70 text-sm mb-4">Complete an online intake  -  most patients get a response within 24-48 hours.</p>
                 <a
                   href="https://nuvationhealth.com"
                   target="_blank"
