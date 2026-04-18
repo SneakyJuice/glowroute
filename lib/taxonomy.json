@@ -1,8 +1,8 @@
 {
   "_meta": {
-    "version": "2.1.1",
-    "lastUpdated": "2026-03-31",
-    "description": "GlowRoute canonical treatment taxonomy \u2014 dual layer: modalities (what it is) + goals (what patients want). Goals are peptide-research-driven using 14 Cat-1 reclassified compounds as the authority. Run scripts/taxonomy-backfill.js after changes.",
+    "version": "2.2.0",
+    "lastUpdated": "2026-04-15",
+    "description": "GlowRoute canonical treatment taxonomy — dual layer: modalities (what it is) + goals (what patients want). Goals are peptide-research-driven using 14 Cat-1 reclassified compounds as the authority. Run scripts/taxonomy-backfill.js after changes. serviceFilters added for directory tag search.",
     "maintenanceSchedule": "First Monday of each month",
     "signalSources": [
       "posthog:search_query",
@@ -44,7 +44,7 @@
         "Radiesse",
         "juvederm",
         "Juvederm",
-        "juv\u00e9derm",
+        "juvéderm",
         "restylane",
         "Restylane",
         "xeomin",
@@ -738,13 +738,13 @@
   },
   "goals": {
     "_meta": {
-      "description": "Goal layer maps patient health goals \u2192 canonical modality slugs. Goals are peptide-research-driven \u2014 the 14 Cat-1 reclassified compounds define the recovery/anti-aging/weight/cognitive/immune buckets. Each goal can match multiple modalities, enabling cross-category clinic discovery.",
+      "description": "Goal layer maps patient health goals → canonical modality slugs. Goals are peptide-research-driven — the 14 Cat-1 reclassified compounds define the recovery/anti-aging/weight/cognitive/immune buckets. Each goal can match multiple modalities, enabling cross-category clinic discovery.",
       "peptideResearchSource": "RFK Jr. Feb 27, 2026 FDA reclassification. 14 Cat-1 compounds: BPC-157, TB-500, Sermorelin, Ipamorelin, CJC-1295, AOD-9604, Selank, Semax, GHK-Cu, Thymosin Alpha-1, Thymosin Beta-4, Tesamorelin, PT-141, NAD+. Cat-2 (not returning): Epitalon, DSIP, SNAP-8, Humanin.",
       "usageNote": "Goals drive /clinics?goal=[slug] filter and are computed from services[] via modality overlap. A clinic needs >=1 matching modality to qualify for a goal."
     },
     "recovery-repair": {
       "label": "Recovery & Repair",
-      "emoji": "\ud83d\udd27",
+      "emoji": "🔧",
       "description": "For athletes, injury recovery, post-surgery healing, and tissue repair",
       "searchTerms": [
         "injury recovery",
@@ -768,8 +768,8 @@
     },
     "anti-aging-longevity": {
       "label": "Anti-Aging & Longevity",
-      "emoji": "\u23f3",
-      "description": "Slow the clock \u2014 growth hormone optimization, cellular regeneration, skin health, cognitive sharpness",
+      "emoji": "⏳",
+      "description": "Slow the clock — growth hormone optimization, cellular regeneration, skin health, cognitive sharpness",
       "searchTerms": [
         "anti-aging",
         "longevity",
@@ -800,7 +800,7 @@
     },
     "muscle-performance": {
       "label": "Muscle & Performance",
-      "emoji": "\ud83d\udcaa",
+      "emoji": "💪",
       "description": "Build lean muscle, optimize testosterone, enhance athletic performance and body composition",
       "searchTerms": [
         "muscle building",
@@ -826,7 +826,7 @@
     },
     "weight-metabolic": {
       "label": "Weight & Metabolic Health",
-      "emoji": "\u2696\ufe0f",
+      "emoji": "⚖️",
       "description": "Medical weight loss, GLP-1 therapies, metabolic optimization, body contouring",
       "searchTerms": [
         "weight loss",
@@ -852,8 +852,8 @@
     },
     "hormone-balance": {
       "label": "Hormone Balance",
-      "emoji": "\u2697\ufe0f",
-      "description": "TRT, HRT, bioidentical hormones, thyroid, adrenal \u2014 comprehensive hormone optimization for men and women",
+      "emoji": "⚗️",
+      "description": "TRT, HRT, bioidentical hormones, thyroid, adrenal — comprehensive hormone optimization for men and women",
       "searchTerms": [
         "hormone therapy",
         "trt",
@@ -879,7 +879,7 @@
     },
     "cognitive-mood": {
       "label": "Cognitive & Mood",
-      "emoji": "\ud83e\udde0",
+      "emoji": "🧠",
       "description": "Mental clarity, focus, anxiety relief, libido, neuropeptides for brain optimization",
       "searchTerms": [
         "cognitive enhancement",
@@ -905,7 +905,7 @@
     },
     "immune-wellness": {
       "label": "Immune & Wellness",
-      "emoji": "\ud83d\udee1\ufe0f",
+      "emoji": "🛡️",
       "description": "Immune system support, inflammation reduction, cellular health, preventive wellness",
       "searchTerms": [
         "immune support",
@@ -931,8 +931,8 @@
     },
     "skin-rejuvenation": {
       "label": "Skin Rejuvenation",
-      "emoji": "\u2728",
-      "description": "Aesthetic skin treatments \u2014 injectables, lasers, facials, resurfacing for a younger appearance",
+      "emoji": "✨",
+      "description": "Aesthetic skin treatments — injectables, lasers, facials, resurfacing for a younger appearance",
       "searchTerms": [
         "skin rejuvenation",
         "anti-aging skin",
@@ -960,7 +960,7 @@
     },
     "body-sculpting": {
       "label": "Body Sculpting",
-      "emoji": "\ud83c\udfcb\ufe0f",
+      "emoji": "🏋️",
       "description": "Non-surgical body contouring, fat reduction, muscle definition without going under the knife",
       "searchTerms": [
         "body contouring",
@@ -982,7 +982,7 @@
     },
     "hair-scalp": {
       "label": "Hair & Scalp",
-      "emoji": "\ud83d\udc86",
+      "emoji": "💆",
       "description": "Hair restoration, PRP for hair loss, transplants, scalp health treatments",
       "searchTerms": [
         "hair loss",
@@ -1002,5 +1002,201 @@
       ],
       "minModalities": 1
     }
-  }
+  },
+  "serviceFilters": [
+    {
+      "slug": "botox",
+      "label": "Botox",
+      "emoji": "💉",
+      "aliases": [
+        "botox",
+        "botox injections",
+        "botox®",
+        "dysport",
+        "xeomin",
+        "neuromodulator",
+        "neurotoxin"
+      ]
+    },
+    {
+      "slug": "filler",
+      "label": "Dermal Filler",
+      "emoji": "✨",
+      "aliases": [
+        "filler",
+        "fillers",
+        "dermal filler",
+        "lip filler",
+        "cheek filler",
+        "juvederm",
+        "restylane",
+        "radiesse",
+        "sculptra",
+        "voluma",
+        "versa",
+        "lip augmentation"
+      ]
+    },
+    {
+      "slug": "microneedling",
+      "label": "Microneedling",
+      "emoji": "🔬",
+      "aliases": [
+        "microneedling",
+        "micro-needling"
+      ]
+    },
+    {
+      "slug": "laser-hair-removal",
+      "label": "Laser & IPL",
+      "emoji": "⚡",
+      "aliases": [
+        "laser-hair-removal",
+        "laser hair removal",
+        "ipl",
+        "photofacial",
+        "laser resurfacing",
+        "intense pulsed light"
+      ]
+    },
+    {
+      "slug": "hydrafacial",
+      "label": "HydraFacial",
+      "emoji": "💦",
+      "aliases": [
+        "hydrafacial",
+        "hydra-facial"
+      ]
+    },
+    {
+      "slug": "chemical-peel",
+      "label": "Chemical Peel",
+      "emoji": "🧪",
+      "aliases": [
+        "chemical peel",
+        "chemical peels"
+      ]
+    },
+    {
+      "slug": "facials",
+      "label": "Facials",
+      "emoji": "🧖",
+      "aliases": [
+        "facial",
+        "facials",
+        "aesthetics"
+      ]
+    },
+    {
+      "slug": "body-contouring",
+      "label": "Body Contouring",
+      "emoji": "🏋️",
+      "aliases": [
+        "body contouring",
+        "body-contouring",
+        "coolsculpting",
+        "emsculpt",
+        "kybella",
+        "radiofrequency"
+      ]
+    },
+    {
+      "slug": "weight-loss",
+      "label": "Weight Loss",
+      "emoji": "⚖️",
+      "aliases": [
+        "weight loss",
+        "weight-loss",
+        "weight-loss-ozempic",
+        "semaglutide",
+        "ozempic",
+        "glp-1",
+        "hormone"
+      ]
+    },
+    {
+      "slug": "prp",
+      "label": "PRP Therapy",
+      "emoji": "🩸",
+      "aliases": [
+        "prp",
+        "platelet rich plasma",
+        "prp-treatments"
+      ]
+    },
+    {
+      "slug": "iv-therapy",
+      "label": "IV Therapy",
+      "emoji": "💧",
+      "aliases": [
+        "iv therapy",
+        "iv-therapy"
+      ]
+    },
+    {
+      "slug": "anti-aging",
+      "label": "Anti-Aging",
+      "emoji": "⏳",
+      "aliases": [
+        "anti-aging",
+        "anti aging"
+      ]
+    },
+    {
+      "slug": "dermaplaning",
+      "label": "Dermaplaning",
+      "emoji": "🪒",
+      "aliases": [
+        "dermaplaning"
+      ]
+    },
+    {
+      "slug": "skincare",
+      "label": "Skincare",
+      "emoji": "🌿",
+      "aliases": [
+        "skincare",
+        "skin care",
+        "skin rejuvenation"
+      ]
+    },
+    {
+      "slug": "acne",
+      "label": "Acne & Rosacea",
+      "emoji": "🔴",
+      "aliases": [
+        "acne",
+        "rosacea"
+      ]
+    },
+    {
+      "slug": "tattoo-removal",
+      "label": "Tattoo Removal",
+      "emoji": "🎨",
+      "aliases": [
+        "tattoo removal",
+        "tattoo-removal"
+      ]
+    },
+    {
+      "slug": "mens-health",
+      "label": "Men's Health",
+      "emoji": "♂️",
+      "aliases": [
+        "men's health",
+        "mens health",
+        "trt-testosterone"
+      ]
+    },
+    {
+      "slug": "peptide-therapy",
+      "label": "Peptide Therapy",
+      "emoji": "🧬",
+      "aliases": [
+        "peptide",
+        "peptide therapy",
+        "peptide-therapy"
+      ]
+    }
+  ]
 }

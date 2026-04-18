@@ -1,0 +1,56 @@
+{
+  "city": "Las Vegas",
+  "total": 76,
+  "avgScore": "1.7",
+  "avgReviews": 107,
+  "withImages": 68,
+  "withWebsite": 75,
+  "unclaimed": 76,
+  "tiers": {
+    "1": 11,
+    "2": 5,
+    "3": 5,
+    "4": 54
+  },
+  "top5": [
+    {
+      "name": "Advanced Aesthetics",
+      "score": 5,
+      "reviews": 2427,
+      "website": "http://advancedaestheticslv.com/?utm_source=gbp&utm_medium=organic"
+    },
+    {
+      "name": "Novuskin Med Spa",
+      "score": 5,
+      "reviews": 2171,
+      "website": "https://novuskin.com/"
+    },
+    {
+      "name": "Advanced Aesthetics - Centennial",
+      "score": 5,
+      "reviews": 677,
+      "website": "https://advancedaestheticslv.com/?utm_source=gbp&utm_medium=organic"
+    },
+    {
+      "name": "The Look Med Spa",
+      "score": 5,
+      "reviews": 396,
+      "website": "http://thelookmedspalv.com/"
+    },
+    {
+      "name": "Parie Med Spa",
+      "score": 5,
+      "reviews": 327,
+      "website": "https://pariemedspa.com/"
+    }
+  ],
+  "topServices": [
+    "laser-hair-removal (33)",
+    "anti-aging (25)",
+    "iv-therapy (20)",
+    "weight-loss-ozempic (11)",
+    "hydrafacial (6)",
+    "cosmetic-surgery (2)",
+    "hair-restoration (1)"
+  ]
+}

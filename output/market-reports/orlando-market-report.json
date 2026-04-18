@@ -1,0 +1,57 @@
+{
+  "city": "Orlando",
+  "total": 55,
+  "avgScore": "4.1",
+  "avgReviews": 110,
+  "withImages": 31,
+  "withWebsite": 48,
+  "unclaimed": 55,
+  "tiers": {
+    "1": 18,
+    "2": 9,
+    "3": 5,
+    "4": 20
+  },
+  "top5": [
+    {
+      "name": "LUXE Med Spa Aesthetics",
+      "score": 5,
+      "reviews": 750,
+      "website": "https://www.luxemedspaaesthetics.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp"
+    },
+    {
+      "name": "Sanctuary Salon & Med Spa",
+      "score": 5,
+      "reviews": 732,
+      "website": "https://www.sanctuarysalondayspa.com/"
+    },
+    {
+      "name": "Evolving Aesthetics",
+      "score": 5,
+      "reviews": 553,
+      "website": "https://www.evolvingaesthetics.com/"
+    },
+    {
+      "name": "4Ever Young Anti-Aging & Wellness Center",
+      "score": 5,
+      "reviews": 511,
+      "website": "https://4everyoungantiaging.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp-orlando-lake-ivanhoe"
+    },
+    {
+      "name": "Modern Beauty Bar",
+      "score": 5,
+      "reviews": 314,
+      "website": "https://themodernbeautybar.com/"
+    }
+  ],
+  "topServices": [
+    "anti-aging (48)",
+    "hydrafacial (8)",
+    "laser-hair-removal (3)",
+    "trt-testosterone (3)",
+    "iv-therapy (2)",
+    "prp-treatments (1)",
+    "botox-fillers (1)",
+    "coolsculpting (1)"
+  ]
+}

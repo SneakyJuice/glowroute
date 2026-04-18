@@ -63,10 +63,15 @@ export function mapSupabaseRow(row: any): Clinic {
     googleRating: row.glow_score ?? 0,         // GMB star rating (0.0-5.0)
     googleReviewCount: row.review_count ?? 0,  // Real GMB review count — backfilled 2026-03-31
     goals: row.goals ?? [],                    // Health goal tags — backfilled 2026-03-31
+    services: Array.isArray(row.services) ? row.services : [],  // canonical service slugs
+    visibility: row.visibility ?? 'visible',   // Visibility control — added 2026-03-31
     treatments: Array.isArray(row.services) ? row.services : [],
     specialtyTreatments: [],
     verified: row.is_verified || false,
+    isVerified: row.is_verified || false,
+    isClaimed: row.is_claimed || false,
     featured: row.is_featured || false,
+    heroImageUrl: row.hero_image_url || undefined,
     isNew: false,
     priceTier: '$$', // TODO: map claim_tier if possible
     availability: undefined,
@@ -112,6 +117,7 @@ export async function fetchAllClinicsFromSupabase(): Promise<Clinic[]> {
       const { data, error } = await supabase
         .from('clinics')
         .select('*')
+        .in('visibility', ['visible'])   // exclude hidden / removed / needs_review
         .range(from, to)
       
       if (error) {
