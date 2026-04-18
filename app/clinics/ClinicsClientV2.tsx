@@ -13,15 +13,21 @@ import ClinicsClient from './ClinicsClient'
  * 2. Client hydrates and replaces with interactive ClinicsClient
  * 3. When user scrolls near bottom, fetch next page via /api/clinics
  * 4. Append to list and re-render
+ *
+ * IMPORTANT: allClinics (full dataset from SSR) is passed as the search/filter pool.
+ * The `clinics` state (paginated display list) is only used for the visible card grid.
+ * This ensures city/treatment search works across all ~14k clinics, not just the first 25.
  */
 export default function ClinicsClientV2({
   allClinics,
   initialClinics,
   featuredClinic,
+  totalCount,
 }: {
   allClinics: Clinic[]
   initialClinics: Clinic[]
   featuredClinic: Clinic | null
+  totalCount?: number
 }) {
   const [clinics, setClinics] = useState<Clinic[]>(initialClinics)
   const [isLoading, setIsLoading] = useState(false)
@@ -75,9 +81,11 @@ export default function ClinicsClientV2({
   return (
     <>
       <ClinicsClient
-        allClinics={clinics}
+        allClinics={allClinics}
+        displayClinics={clinics}
         initialClinics={clinics}
         featuredClinic={featuredClinic}
+        totalCount={totalCount ?? allClinics.length}
       />
       
       {/* Sentinel for infinite scroll */}
