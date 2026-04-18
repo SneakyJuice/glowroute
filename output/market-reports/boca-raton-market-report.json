@@ -1,0 +1,57 @@
+{
+  "city": "Boca Raton",
+  "total": 21,
+  "avgScore": "5.0",
+  "avgReviews": 148,
+  "withImages": 17,
+  "withWebsite": 20,
+  "unclaimed": 21,
+  "tiers": {
+    "1": 5,
+    "2": 9,
+    "3": 3,
+    "4": 4
+  },
+  "top5": [
+    {
+      "name": "4Ever Young Med Spa & Wellness Center - Boca Raton",
+      "score": 5,
+      "reviews": 1525,
+      "website": "https://4everyoungantiaging.com/boca-raton/?utm_source=google&utm_medium=organic&utm_campaign=gbp-boca-raton"
+    },
+    {
+      "name": "Rendon Aesthetics",
+      "score": 5,
+      "reviews": 346,
+      "website": "https://www.rendonaesthetics.com/"
+    },
+    {
+      "name": "Ora Wellness and Aesthetics",
+      "score": 5,
+      "reviews": 217,
+      "website": "https://ora-wellness.com/"
+    },
+    {
+      "name": "My Skin Dealer",
+      "score": 5,
+      "reviews": 147,
+      "website": "http://www.myskindealer.com/"
+    },
+    {
+      "name": "Everybody Is Beautiful Med Spa",
+      "score": 5,
+      "reviews": 107,
+      "website": "http://www.ebbmedspa.com/"
+    }
+  ],
+  "topServices": [
+    "anti-aging (16)",
+    "hydrafacial (3)",
+    "laser-hair-removal (2)",
+    "trt-testosterone (1)",
+    "massage-wellness (1)",
+    "b12-injections (1)",
+    "botox-fillers (1)",
+    "iv-therapy (1)"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "city": "Charlotte",
+  "total": 65,
+  "avgScore": "1.9",
+  "avgReviews": 103,
+  "withImages": 49,
+  "withWebsite": 64,
+  "unclaimed": 65,
+  "tiers": {
+    "1": 13,
+    "2": 6,
+    "3": 2,
+    "4": 43
+  },
+  "top5": [
+    {
+      "name": "Urban Medspa & Weight Loss Center",
+      "score": 5,
+      "reviews": 1836,
+      "website": "https://urbanmedspacharlotte.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp"
+    },
+    {
+      "name": "Lifted Aesthetics Charlotte",
+      "score": 5,
+      "reviews": 934,
+      "website": "http://www.liftedaestheticsclt.com/"
+    },
+    {
+      "name": "Ageless Remedies SouthPark",
+      "score": 5,
+      "reviews": 696,
+      "website": "https://agelessremediessouthpark.com/?utm_source=GMBlisting&utm_medium=organic&utm_campaign=gmb"
+    },
+    {
+      "name": "Infinity MedSpa and Wellness",
+      "score": 5,
+      "reviews": 582,
+      "website": "https://www.infinitymedspaandwellness.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp"
+    },
+    {
+      "name": "Aesthetic Surgery of Charlotte",
+      "score": 5,
+      "reviews": 400,
+      "website": "https://aestheticsurgerycharlotte.com/?utm_campaign=gmb&utm_medium=local&utm_source=google"
+    }
+  ],
+  "topServices": [
+    "botox-fillers (23)",
+    "laser-hair-removal (16)",
+    "weight-loss-ozempic (16)",
+    "hydrafacial (15)",
+    "microneedling (15)",
+    "iv-therapy (10)",
+    "coolsculpting (7)",
+    "prp-treatments (5)"
+  ]
+}

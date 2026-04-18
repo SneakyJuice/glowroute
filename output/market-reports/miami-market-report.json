@@ -1,0 +1,57 @@
+{
+  "city": "Miami",
+  "total": 136,
+  "avgScore": "4.6",
+  "avgReviews": 129,
+  "withImages": 114,
+  "withWebsite": 122,
+  "unclaimed": 136,
+  "tiers": {
+    "1": 37,
+    "2": 22,
+    "3": 14,
+    "4": 47
+  },
+  "top5": [
+    {
+      "name": "LUX MedSpa Brickell",
+      "score": 5,
+      "reviews": 2179,
+      "website": "https://www.luxmedspabrickell.com/"
+    },
+    {
+      "name": "Dr. Deborah Longwill, DO, FAOCD",
+      "score": 5,
+      "reviews": 1393,
+      "website": "https://miamicenterfordermatology.com/"
+    },
+    {
+      "name": "Miami Center for Dermatology",
+      "score": 5,
+      "reviews": 1340,
+      "website": "https://miamicenterfordermatology.com/"
+    },
+    {
+      "name": "Dolce Medical Spa - Miami",
+      "score": 5,
+      "reviews": 1051,
+      "website": "https://mia.dolcemedicalspas.com/facial-promo/"
+    },
+    {
+      "name": "4Ever Young Med Spa & Wellness Center - Miami Dadeland",
+      "score": 5,
+      "reviews": 780,
+      "website": "https://4everyoungantiaging.com/miami-dadeland/?utm_source=google&utm_medium=organic&utm_campaign=gbp-miami-dadeland"
+    }
+  ],
+  "topServices": [
+    "hydrafacial (55)",
+    "botox-fillers (52)",
+    "anti-aging (46)",
+    "laser-hair-removal (36)",
+    "coolsculpting (27)",
+    "microneedling (23)",
+    "chemical-peels (21)",
+    "iv-therapy (12)"
+  ]
+}

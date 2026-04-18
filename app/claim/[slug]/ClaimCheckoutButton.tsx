@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import type { PlanKey } from '@/lib/stripe'
+import { trackClaimStarted, trackClaimSubmitted } from '@/components/PostHogClinicTracker'
 
 interface Props {
   tier: PlanKey
@@ -17,6 +18,7 @@ export default function ClaimCheckoutButton({ tier, clinicSlug, clinicName, high
   async function handleClick() {
     setLoading(true)
     setError('')
+    trackClaimStarted(clinicSlug)
     try {
       const res = await fetch('/api/checkout', {
         method: 'POST',
@@ -29,6 +31,7 @@ export default function ClaimCheckoutButton({ tier, clinicSlug, clinicName, high
       }
       const { url } = await res.json()
       if (!url) throw new Error('No checkout URL returned')
+      trackClaimSubmitted(clinicSlug, tier)
       window.location.href = url
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Something went wrong')

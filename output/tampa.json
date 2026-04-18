@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Elase Medical Spa - South Tampa",
+    "address": "1155 S Dale Mabry Hwy #8, Tampa, FL 33629",
+    "city": "Tampa",
+    "state": "FL",
+    "phone": "(813) 921-8770",
+    "website": "https://elase.com/locations/south-tampa/?UTM_source=GMB_listing&UTM_medium=organic&utm_campaign=southtampa",
+    "rating": 4.9,
+    "reviewCount": 160,
+    "lat": 27.9323808,
+    "lng": -82.5062706,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=Elase%20Medical%20Spa%20-%20South%20Tampa&query_place_id=ChIJ4QnfbmLDwogRmsptZCmSDCU",
+    "categories": [
+      "Medical spa",
+      "Facial spa",
+      "Hair replacement service",
+      "Skin care clinic"
+    ],
+    "services": [
+      "Botox",
+      "Filler",
+      "Laser",
+      "Hydrafacial",
+      "Microneedling",
+      "Prp",
+      "Sculptra",
+      "Chemical Peel"
+    ],
+    "description": "At Elase Med Spa in South Tampa, we proudly serve the Tampa Bay area with state-of-the-art medical spa services.",
+    "about_text": "",
+    "brand_values": [],
+    "price_tier": "$$$$",
+    "imageUrl": "https://elase.com/wp-content/uploads/2024/02/STampa_reception-scaled.jpg",
+    "logo": null,
+    "enriched": true,
+    "enriched_at": "2026-04-10T11:58:06.068Z"
+  },
+  {
+    "name": "The Aesthetics Lab",
+    "address": "4014 W Estrella St STE A, Tampa, FL 33629",
+    "city": "Tampa",
+    "state": "FL",
+    "phone": "(813) 773-3661",
+    "website": "https://theaestheticslabtampa.com/?utm_source=google&utm_medium=localsearch&utm_campaign=gmb",
+    "rating": 4.9,
+    "reviewCount": 379,
+    "lat": 27.9280702,
+    "lng": -82.5117975,
+    "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=The%20Aesthetics%20Lab&query_place_id=ChIJW9ZHMUHDwogRLV-8cf-sa2c",
+    "categories": [
+      "Skin care clinic",
+      "Endocrinologist",
+      "Facial spa",
+      "Laser hair removal service",
+      "Medical spa",
+      "Tattoo removal service",
+      "Weight loss service"
+    ],
+    "services": [
+      "Filler",
+      "Laser",
+      "Hydrafacial"
+    ],
+    "description": "[Research](https://theaestheticslabtampa.com/services/laser/laser-hair-removal-tampa-fl)",
+    "about_text": "",
+    "brand_values": [],
+    "price_tier": "$$$",
+    "imageUrl": "//assets.theaestheticslabtampa.com/Images/Sites/B/BellaMia/Facility/1282141.jpg",
+    "logo": null,
+    "enriched": true,
+    "enriched_at": "2026-04-10T11:58:19.175Z"
+  }
+]

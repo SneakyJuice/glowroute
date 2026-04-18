@@ -1,0 +1,57 @@
+{
+  "city": "Tampa",
+  "total": 120,
+  "avgScore": "46.7",
+  "avgReviews": 224,
+  "withImages": 120,
+  "withWebsite": 114,
+  "unclaimed": 120,
+  "tiers": {
+    "1": 66,
+    "2": 22,
+    "3": 11,
+    "4": 15
+  },
+  "top5": [
+    {
+      "name": "Forever Young Aesthetics - Tampa",
+      "score": 100,
+      "reviews": 297,
+      "website": "http://www.foreveryoungtampa.com/"
+    },
+    {
+      "name": "VIVIFY Med Spa",
+      "score": 100,
+      "reviews": 161,
+      "website": "https://www.vivifyps.com/vivify-medspa/?utm_source=GMBlisting&utm_medium=organic&utm_campaign=gmb-medspa"
+    },
+    {
+      "name": "Viso Juve",
+      "score": 99,
+      "reviews": 333,
+      "website": "https://visojuve.com/"
+    },
+    {
+      "name": "Aspire MedSpa & Beauty Bar",
+      "score": 98,
+      "reviews": 674,
+      "website": "https://aspiremedspas.com/"
+    },
+    {
+      "name": "Elase Medical Spa - South Tampa",
+      "score": 98,
+      "reviews": 159,
+      "website": "https://elase.com/locations/south-tampa/?UTM_source=GMB_listing&UTM_medium=organic&utm_campaign=southtampa"
+    }
+  ],
+  "topServices": [
+    "anti-aging (67)",
+    "botox-fillers (19)",
+    "peptide-therapy (18)",
+    "laser-hair-removal (17)",
+    "hydrafacial (16)",
+    "Botox (14)",
+    "Filler (13)",
+    "microneedling (13)"
+  ]
+}

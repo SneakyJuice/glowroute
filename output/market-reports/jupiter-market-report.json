@@ -1,0 +1,57 @@
+{
+  "city": "Jupiter",
+  "total": 100,
+  "avgScore": "4.2",
+  "avgReviews": 84,
+  "withImages": 100,
+  "withWebsite": 88,
+  "unclaimed": 100,
+  "tiers": {
+    "1": 19,
+    "2": 11,
+    "3": 11,
+    "4": 45
+  },
+  "top5": [
+    {
+      "name": "Refresh Palm Beach Medical Aesthetics",
+      "score": 5,
+      "reviews": 1238,
+      "website": "https://refreshmedical.com/?utm_source=GMB&utm_medium=Google&utm_campaign=Organic&utm_id=GMB+Refresh+Palm+Beach"
+    },
+    {
+      "name": "4Ever Young Med Spa & Wellness Center - Jupiter",
+      "score": 5,
+      "reviews": 754,
+      "website": "https://4everyoungantiaging.com/jupiter/?utm_source=google&utm_medium=organic&utm_campaign=gbp-jupiter"
+    },
+    {
+      "name": "Suncoast Skin Solutions",
+      "score": 5,
+      "reviews": 515,
+      "website": "https://www.suncoastskin.com/locations-jupiter-fl/"
+    },
+    {
+      "name": "Begin Anew Med Spa & Wellness",
+      "score": 5,
+      "reviews": 400,
+      "website": "http://beginanewmed.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp"
+    },
+    {
+      "name": "Dr. Jean-Paul Azzi, MD | The Palm Beach Center for Facial Plastic & Laser Surgery",
+      "score": 5,
+      "reviews": 301,
+      "website": "http://www.palmbeachfacialsurgery.com/"
+    }
+  ],
+  "topServices": [
+    "anti-aging (57)",
+    "cosmetic-surgery (11)",
+    "hydrafacial (8)",
+    "botox-fillers (5)",
+    "laser-hair-removal (4)",
+    "microneedling (4)",
+    "chemical-peels (3)",
+    "trt-testosterone (3)"
+  ]
+}

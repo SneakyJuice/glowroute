@@ -1,0 +1,50 @@
+[
+  {
+    "clinic_name": "Bella Med Spa",
+    "website_url": "https://www.bellamedspa.com/",
+    "phone": "(813) 898-2511",
+    "email": "inquiry@bellamedspa.com",
+    "city": "Tampa",
+    "state": "FL",
+    "zip": "33606",
+    "services_offered": [
+      "Botox",
+      "Laser",
+      "Hydrafacial",
+      "Microneedling",
+      "Dysport",
+      "Chemical Peel",
+      "Facial",
+      "Skin Rejuvenation",
+      "Restylane"
+    ],
+    "social_links": [
+      "https://www.facebook.com/bellamedspa)[Instagram](https://www.instagram.com/bellamedicalspa/)[X-twitter](https://x.com/Bellamedicalspa)"
+    ],
+    "scraped_at": "2026-04-10T12:00:32.010Z",
+    "source_city": "Tampa",
+    "source_state": "FL",
+    "raw_address": "201 N Howard Ave, Tampa, FL 33606",
+    "rating": null,
+    "review_count": 0
+  },
+  {
+    "clinic_name": "Laser Assure",
+    "website_url": "https://www.laserassure.com/",
+    "phone": "(813) 657-6100",
+    "email": "drmarkbrewin@gmail.com",
+    "city": "Tampa",
+    "state": "FL",
+    "zip": "33596",
+    "services_offered": [
+      "Laser"
+    ],
+    "social_links": [],
+    "scraped_at": "2026-04-10T12:00:35.456Z",
+    "source_city": "Tampa",
+    "source_state": "FL",
+    "raw_address": "2237 Lithia Pinecrest Rd, Valrico, FL 33596",
+    "rating": null,
+    "review_count": 0
+  }
+]

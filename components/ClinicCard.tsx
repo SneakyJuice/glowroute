@@ -86,7 +86,7 @@ export function FeaturedClinicCard({ clinic }: ClinicCardProps) {
           <div className="flex items-center gap-2">
             <StarRating rating={clinic.googleRating} />
             <span className="text-sm font-bold text-onyx">{clinic.googleRating}</span>
-            <span className="text-xs text-gray-400">({clinic.googleReviewCount} reviews)</span>
+            {clinic.googleReviewCount > 0 && <span className="text-xs text-gray-400">({clinic.googleReviewCount.toLocaleString()} reviews)</span>}
             {clinic.availability && <span className="flex items-center gap-1 text-[11px] font-medium text-green-600"><span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />{clinic.availability}</span>}
           </div>
           {clinic.address && (
@@ -171,7 +171,7 @@ export default function ClinicCard({ clinic, distanceMi }: ClinicCardProps) {
         <div className="flex items-center gap-1.5 flex-wrap">
           <StarRating rating={clinic.googleRating} />
           <span className="text-sm font-bold text-onyx">{clinic.googleRating}</span>
-          <span className="text-xs text-gray-400">({clinic.googleReviewCount})</span>
+          {clinic.googleReviewCount > 0 && <span className="text-xs text-gray-400">({clinic.googleReviewCount.toLocaleString()})</span>}
           {distanceMi != null && (
             <span className="text-xs text-stone font-medium bg-stone/10 px-2 py-0.5 rounded-full">
               {distanceMi.toFixed(1)} mi
