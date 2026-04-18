@@ -5,11 +5,11 @@ import Footer from '@/components/Footer'
 import { SITE_URL } from '@/lib/config'
 
 export const metadata: Metadata = {
-  title: 'Hims Review — Telehealth ED | GlowRoute',
+  title: 'Hims Review  -  Telehealth ED | GlowRoute',
   description: 'Hims makes men\'s healthcare simple and stigma-free, offering treatments for ED, hair loss, weight, skin, and mental health through a consumer-friendly tele',
   alternates: { canonical: `${SITE_URL}/telehealth/hims` },
   openGraph: {
-    title: 'Hims — Men's health made simple — ED, hair loss, weight, and mental health',
+  title: "Hims - Mens Health | ED, Hair Loss, Weight Loss | GlowRoute",
     description: 'Hims makes men\'s healthcare simple and stigma-free, offering treatments for ED, hair loss, weight, skin, and mental health through a consumer-friendly tele',
     url: `${SITE_URL}/telehealth/hims`,
     type: 'website',
@@ -31,10 +31,10 @@ export default function HimsPage() {
             </div>
             <div className="flex items-center gap-3 mb-4">
               <span className="bg-sage text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide">Telehealth</span>
-              <span className="bg-white/10 text-white/80 text-xs px-3 py-1 rounded-full">$25–$199/month</span>
+              <span className="bg-white/10 text-white/80 text-xs px-3 py-1 rounded-full">$25-$199/month</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-display font-light mb-4">Hims</h1>
-            <p className="text-xl text-white/80 mb-6">Men's health made simple — ED, hair loss, weight, and mental health</p>
+            <p className="text-xl text-white/80 mb-6">Men's health made simple  -  ED, hair loss, weight, and mental health</p>
             <div className="flex flex-wrap gap-2 mb-8">
             <span className="inline-block bg-sage/10 text-sage text-xs font-medium px-3 py-1 rounded-full">ED</span>
             <span className="inline-block bg-sage/10 text-sage text-xs font-medium px-3 py-1 rounded-full">Hair Loss</span>
@@ -64,7 +64,7 @@ export default function HimsPage() {
         <section className="max-w-4xl mx-auto px-4 py-12">
           <div className="grid md:grid-cols-3 gap-8">
 
-            {/* Left — Main info */}
+            {/* Left  -  Main info */}
             <div className="md:col-span-2 space-y-8">
 
               {/* About */}
@@ -104,7 +104,7 @@ export default function HimsPage() {
               </div>
             </div>
 
-            {/* Right — Sidebar */}
+            {/* Right  -  Sidebar */}
             <div className="space-y-4">
 
               {/* Quick Facts */}
@@ -113,7 +113,7 @@ export default function HimsPage() {
                 <dl className="space-y-2 text-sm">
                   <div className="flex justify-between">
                     <dt className="text-stone-500">Price Range</dt>
-                    <dd className="font-medium text-onyx">$25–$199/month</dd>
+                    <dd className="font-medium text-onyx">$25-$199/month</dd>
                   </div>
                   <div className="flex justify-between">
                     <dt className="text-stone-500">Telehealth</dt>
@@ -125,7 +125,7 @@ export default function HimsPage() {
                   </div>
                   <div className="flex justify-between">
                     <dt className="text-stone-500">Target Patient</dt>
-                    <dd className="font-medium text-onyx text-right text-xs leading-tight">Men 25–55 seeking discreet, convenient a</dd>
+                    <dd className="font-medium text-onyx text-right text-xs leading-tight">Men 25-55 seeking discreet, convenient a</dd>
                   </div>
                 </dl>
               </div>
@@ -133,7 +133,7 @@ export default function HimsPage() {
               {/* CTA */}
               <div className="bg-onyx text-white rounded-xl p-5">
                 <h3 className="font-semibold mb-2">Ready to start?</h3>
-                <p className="text-white/70 text-sm mb-4">Complete an online intake — most patients get a response within 24–48 hours.</p>
+                <p className="text-white/70 text-sm mb-4">Complete an online intake  -  most patients get a response within 24-48 hours.</p>
                 <a
                   href="https://forhims.com"
                   target="_blank"

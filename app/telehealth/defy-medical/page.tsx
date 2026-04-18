@@ -5,11 +5,11 @@ import Footer from '@/components/Footer'
 import { SITE_URL } from '@/lib/config'
 
 export const metadata: Metadata = {
-  title: 'Defy Medical Review — Telehealth TRT | GlowRoute',
+  title: 'Defy Medical Review  -  Telehealth TRT | GlowRoute',
   description: 'Defy Medical is one of the most comprehensive telehealth hormone clinics in the US, offering advanced TRT, peptide protocols, thyroid optimization, and fem',
   alternates: { canonical: `${SITE_URL}/telehealth/defy-medical` },
   openGraph: {
-    title: 'Defy Medical — Comprehensive hormone optimization and peptide therapy — nationwide',
+    title: 'Defy Medical  -  Comprehensive hormone optimization and peptide therapy  -  nationwide',
     description: 'Defy Medical is one of the most comprehensive telehealth hormone clinics in the US, offering advanced TRT, peptide protocols, thyroid optimization, and fem',
     url: `${SITE_URL}/telehealth/defy-medical`,
     type: 'website',
@@ -31,10 +31,10 @@ export default function DefyMedicalPage() {
             </div>
             <div className="flex items-center gap-3 mb-4">
               <span className="bg-sage text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide">Telehealth</span>
-              <span className="bg-white/10 text-white/80 text-xs px-3 py-1 rounded-full">$200–$500/month</span>
+              <span className="bg-white/10 text-white/80 text-xs px-3 py-1 rounded-full">$200-$500/month</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-display font-light mb-4">Defy Medical</h1>
-            <p className="text-xl text-white/80 mb-6">Comprehensive hormone optimization and peptide therapy — nationwide</p>
+            <p className="text-xl text-white/80 mb-6">Comprehensive hormone optimization and peptide therapy  -  nationwide</p>
             <div className="flex flex-wrap gap-2 mb-8">
             <span className="inline-block bg-sage/10 text-sage text-xs font-medium px-3 py-1 rounded-full">TRT</span>
             <span className="inline-block bg-sage/10 text-sage text-xs font-medium px-3 py-1 rounded-full">Peptides</span>
@@ -65,7 +65,7 @@ export default function DefyMedicalPage() {
         <section className="max-w-4xl mx-auto px-4 py-12">
           <div className="grid md:grid-cols-3 gap-8">
 
-            {/* Left — Main info */}
+            {/* Left  -  Main info */}
             <div className="md:col-span-2 space-y-8">
 
               {/* About */}
@@ -103,11 +103,11 @@ export default function DefyMedicalPage() {
               {/* Best For */}
               <div className="bg-sage/5 border border-sage/20 rounded-xl p-6">
                 <h2 className="text-lg font-semibold text-onyx mb-2">Best For</h2>
-                <p className="text-stone-700">Patients who want a comprehensive, long-term optimization partner — not just a prescription</p>
+                <p className="text-stone-700">Patients who want a comprehensive, long-term optimization partner  -  not just a prescription</p>
               </div>
             </div>
 
-            {/* Right — Sidebar */}
+            {/* Right  -  Sidebar */}
             <div className="space-y-4">
 
               {/* Quick Facts */}
@@ -116,7 +116,7 @@ export default function DefyMedicalPage() {
                 <dl className="space-y-2 text-sm">
                   <div className="flex justify-between">
                     <dt className="text-stone-500">Price Range</dt>
-                    <dd className="font-medium text-onyx">$200–$500/month</dd>
+                    <dd className="font-medium text-onyx">$200-$500/month</dd>
                   </div>
                   <div className="flex justify-between">
                     <dt className="text-stone-500">Telehealth</dt>
@@ -136,7 +136,7 @@ export default function DefyMedicalPage() {
               {/* CTA */}
               <div className="bg-onyx text-white rounded-xl p-5">
                 <h3 className="font-semibold mb-2">Ready to start?</h3>
-                <p className="text-white/70 text-sm mb-4">Complete an online intake — most patients get a response within 24–48 hours.</p>
+                <p className="text-white/70 text-sm mb-4">Complete an online intake  -  most patients get a response within 24-48 hours.</p>
                 <a
                   href="https://defymedical.com"
                   target="_blank"

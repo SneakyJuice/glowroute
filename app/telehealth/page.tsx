@@ -31,13 +31,13 @@ export default function TelehealthIndexPage() {
               Find the Right Telehealth Provider
             </h1>
             <p className="text-xl text-white/80 max-w-2xl mx-auto mb-8">
-              Compare the top online clinics for testosterone therapy, GLP-1 weight loss, peptides, and hormone optimization — all physician-supervised, all from home.
+              Compare the top online clinics for testosterone therapy, GLP-1 weight loss, peptides, and hormone optimization  -  all physician-supervised, all from home.
             </p>
             <Link
               href="/quiz"
               className="inline-block bg-sage text-white font-semibold px-8 py-3 rounded hover:bg-sage/90 transition-colors"
             >
-              Take the Quiz — Find Your Match →
+              Take the Quiz  -  Find Your Match →
             </Link>
           </div>
         </section>
@@ -65,11 +65,11 @@ export default function TelehealthIndexPage() {
             <div className="flex items-start justify-between mb-3">
               <div>
                 <h2 className="text-xl font-display font-light text-onyx group-hover:text-sage transition-colors">Hone Health</h2>
-                <p className="text-stone-500 text-sm mt-1">$75–$200/month</p>
+                <p className="text-stone-500 text-sm mt-1">$75-$200/month</p>
               </div>
               <span className="bg-sage/10 text-sage text-xs font-medium px-2 py-1 rounded-full whitespace-nowrap">Testosterone Replacement Therapy</span>
             </div>
-            <p className="text-stone-600 text-sm leading-relaxed mb-4">Hormone optimization for men — TRT, peptides, and metabolic health</p>
+            <p className="text-stone-600 text-sm leading-relaxed mb-4">Hormone optimization for men  -  TRT, peptides, and metabolic health</p>
             <div className="flex flex-wrap gap-1 mb-4">
               <span className="bg-stone-100 text-stone-600 text-xs px-2 py-0.5 rounded-full">Testosterone Replacement Therapy</span>
               <span className="bg-stone-100 text-stone-600 text-xs px-2 py-0.5 rounded-full">Peptide Therapy</span>
@@ -81,11 +81,11 @@ export default function TelehealthIndexPage() {
             <div className="flex items-start justify-between mb-3">
               <div>
                 <h2 className="text-xl font-display font-light text-onyx group-hover:text-sage transition-colors">Henry Meds</h2>
-                <p className="text-stone-500 text-sm mt-1">$35–$199/month</p>
+                <p className="text-stone-500 text-sm mt-1">$35-$199/month</p>
               </div>
               <span className="bg-sage/10 text-sage text-xs font-medium px-2 py-1 rounded-full whitespace-nowrap">GLP-1 Weight Loss</span>
             </div>
-            <p className="text-stone-600 text-sm leading-relaxed mb-4">GLP-1, TRT, and metabolic health — affordable telehealth at scale</p>
+            <p className="text-stone-600 text-sm leading-relaxed mb-4">GLP-1, TRT, and metabolic health  -  affordable telehealth at scale</p>
             <div className="flex flex-wrap gap-1 mb-4">
               <span className="bg-stone-100 text-stone-600 text-xs px-2 py-0.5 rounded-full">GLP-1 Weight Loss</span>
               <span className="bg-stone-100 text-stone-600 text-xs px-2 py-0.5 rounded-full">Testosterone</span>
@@ -97,7 +97,7 @@ export default function TelehealthIndexPage() {
             <div className="flex items-start justify-between mb-3">
               <div>
                 <h2 className="text-xl font-display font-light text-onyx group-hover:text-sage transition-colors">Maximus</h2>
-                <p className="text-stone-500 text-sm mt-1">$129–$299/month</p>
+                <p className="text-stone-500 text-sm mt-1">$129-$299/month</p>
               </div>
               <span className="bg-sage/10 text-sage text-xs font-medium px-2 py-1 rounded-full whitespace-nowrap">Testosterone</span>
             </div>
@@ -113,11 +113,11 @@ export default function TelehealthIndexPage() {
             <div className="flex items-start justify-between mb-3">
               <div>
                 <h2 className="text-xl font-display font-light text-onyx group-hover:text-sage transition-colors">Winona</h2>
-                <p className="text-stone-500 text-sm mt-1">$99–$249/month</p>
+                <p className="text-stone-500 text-sm mt-1">$99-$249/month</p>
               </div>
               <span className="bg-sage/10 text-sage text-xs font-medium px-2 py-1 rounded-full whitespace-nowrap">Menopause HRT</span>
             </div>
-            <p className="text-stone-600 text-sm leading-relaxed mb-4">Menopause hormone therapy — physician-prescribed, delivered to your door</p>
+            <p className="text-stone-600 text-sm leading-relaxed mb-4">Menopause hormone therapy  -  physician-prescribed, delivered to your door</p>
             <div className="flex flex-wrap gap-1 mb-4">
               <span className="bg-stone-100 text-stone-600 text-xs px-2 py-0.5 rounded-full">Menopause HRT</span>
               <span className="bg-stone-100 text-stone-600 text-xs px-2 py-0.5 rounded-full">Bioidentical Hormones</span>
@@ -129,11 +129,11 @@ export default function TelehealthIndexPage() {
             <div className="flex items-start justify-between mb-3">
               <div>
                 <h2 className="text-xl font-display font-light text-onyx group-hover:text-sage transition-colors">Ro</h2>
-                <p className="text-stone-500 text-sm mt-1">$69–$299/month</p>
+                <p className="text-stone-500 text-sm mt-1">$69-$299/month</p>
               </div>
               <span className="bg-sage/10 text-sage text-xs font-medium px-2 py-1 rounded-full whitespace-nowrap">GLP-1 Weight Loss</span>
             </div>
-            <p className="text-stone-600 text-sm leading-relaxed mb-4">Weight loss, ED, hair, and primary care — one telehealth platform</p>
+            <p className="text-stone-600 text-sm leading-relaxed mb-4">Weight loss, ED, hair, and primary care  -  one telehealth platform</p>
             <div className="flex flex-wrap gap-1 mb-4">
               <span className="bg-stone-100 text-stone-600 text-xs px-2 py-0.5 rounded-full">GLP-1 Weight Loss</span>
               <span className="bg-stone-100 text-stone-600 text-xs px-2 py-0.5 rounded-full">ED Treatment</span>
@@ -145,11 +145,11 @@ export default function TelehealthIndexPage() {
             <div className="flex items-start justify-between mb-3">
               <div>
                 <h2 className="text-xl font-display font-light text-onyx group-hover:text-sage transition-colors">Hims</h2>
-                <p className="text-stone-500 text-sm mt-1">$25–$199/month</p>
+                <p className="text-stone-500 text-sm mt-1">$25-$199/month</p>
               </div>
               <span className="bg-sage/10 text-sage text-xs font-medium px-2 py-1 rounded-full whitespace-nowrap">ED</span>
             </div>
-            <p className="text-stone-600 text-sm leading-relaxed mb-4">Men's health made simple — ED, hair loss, weight, and mental health</p>
+            <p className="text-stone-600 text-sm leading-relaxed mb-4">Men's health made simple  -  ED, hair loss, weight, and mental health</p>
             <div className="flex flex-wrap gap-1 mb-4">
               <span className="bg-stone-100 text-stone-600 text-xs px-2 py-0.5 rounded-full">ED</span>
               <span className="bg-stone-100 text-stone-600 text-xs px-2 py-0.5 rounded-full">Hair Loss</span>
@@ -161,7 +161,7 @@ export default function TelehealthIndexPage() {
             <div className="flex items-start justify-between mb-3">
               <div>
                 <h2 className="text-xl font-display font-light text-onyx group-hover:text-sage transition-colors">Fountain TRT</h2>
-                <p className="text-stone-500 text-sm mt-1">$149–$249/month</p>
+                <p className="text-stone-500 text-sm mt-1">$149-$249/month</p>
               </div>
               <span className="bg-sage/10 text-sage text-xs font-medium px-2 py-1 rounded-full whitespace-nowrap">Testosterone Replacement</span>
             </div>
@@ -177,11 +177,11 @@ export default function TelehealthIndexPage() {
             <div className="flex items-start justify-between mb-3">
               <div>
                 <h2 className="text-xl font-display font-light text-onyx group-hover:text-sage transition-colors">Defy Medical</h2>
-                <p className="text-stone-500 text-sm mt-1">$200–$500/month</p>
+                <p className="text-stone-500 text-sm mt-1">$200-$500/month</p>
               </div>
               <span className="bg-sage/10 text-sage text-xs font-medium px-2 py-1 rounded-full whitespace-nowrap">TRT</span>
             </div>
-            <p className="text-stone-600 text-sm leading-relaxed mb-4">Comprehensive hormone optimization and peptide therapy — nationwide</p>
+            <p className="text-stone-600 text-sm leading-relaxed mb-4">Comprehensive hormone optimization and peptide therapy  -  nationwide</p>
             <div className="flex flex-wrap gap-1 mb-4">
               <span className="bg-stone-100 text-stone-600 text-xs px-2 py-0.5 rounded-full">TRT</span>
               <span className="bg-stone-100 text-stone-600 text-xs px-2 py-0.5 rounded-full">Peptides</span>
@@ -193,7 +193,7 @@ export default function TelehealthIndexPage() {
             <div className="flex items-start justify-between mb-3">
               <div>
                 <h2 className="text-xl font-display font-light text-onyx group-hover:text-sage transition-colors">Evolve Telemedicine</h2>
-                <p className="text-stone-500 text-sm mt-1">$150–$400/month</p>
+                <p className="text-stone-500 text-sm mt-1">$150-$400/month</p>
               </div>
               <span className="bg-sage/10 text-sage text-xs font-medium px-2 py-1 rounded-full whitespace-nowrap">Peptides</span>
             </div>
@@ -209,11 +209,11 @@ export default function TelehealthIndexPage() {
             <div className="flex items-start justify-between mb-3">
               <div>
                 <h2 className="text-xl font-display font-light text-onyx group-hover:text-sage transition-colors">Nuvation Health</h2>
-                <p className="text-stone-500 text-sm mt-1">$199–$499/month</p>
+                <p className="text-stone-500 text-sm mt-1">$199-$499/month</p>
               </div>
               <span className="bg-sage/10 text-sage text-xs font-medium px-2 py-1 rounded-full whitespace-nowrap">Longevity</span>
             </div>
-            <p className="text-stone-600 text-sm leading-relaxed mb-4">Personalized longevity and metabolic health — precision telehealth</p>
+            <p className="text-stone-600 text-sm leading-relaxed mb-4">Personalized longevity and metabolic health  -  precision telehealth</p>
             <div className="flex flex-wrap gap-1 mb-4">
               <span className="bg-stone-100 text-stone-600 text-xs px-2 py-0.5 rounded-full">Longevity</span>
               <span className="bg-stone-100 text-stone-600 text-xs px-2 py-0.5 rounded-full">Metabolic Health</span>

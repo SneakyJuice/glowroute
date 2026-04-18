@@ -5,12 +5,12 @@ import Footer from '@/components/Footer'
 import { SITE_URL } from '@/lib/config'
 
 export const metadata: Metadata = {
-  title: 'Winona Review — Telehealth Menopause HRT | GlowRoute',
-  description: 'Winona specializes in women\'s hormone health, offering bioidentical HRT, personalized menopause protocols, and ongoing physician care — entirely online.',
+  title: 'Winona Review  -  Telehealth Menopause HRT | GlowRoute',
+  description: 'Winona specializes in women\'s hormone health, offering bioidentical HRT, personalized menopause protocols, and ongoing physician care  -  entirely online.',
   alternates: { canonical: `${SITE_URL}/telehealth/winona` },
   openGraph: {
-    title: 'Winona — Menopause hormone therapy — physician-prescribed, delivered to your door',
-    description: 'Winona specializes in women\'s hormone health, offering bioidentical HRT, personalized menopause protocols, and ongoing physician care — entirely online.',
+    title: 'Winona  -  Menopause hormone therapy  -  physician-prescribed, delivered to your door',
+    description: 'Winona specializes in women\'s hormone health, offering bioidentical HRT, personalized menopause protocols, and ongoing physician care  -  entirely online.',
     url: `${SITE_URL}/telehealth/winona`,
     type: 'website',
     siteName: 'GlowRoute',
@@ -31,10 +31,10 @@ export default function WinonaPage() {
             </div>
             <div className="flex items-center gap-3 mb-4">
               <span className="bg-sage text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide">Telehealth</span>
-              <span className="bg-white/10 text-white/80 text-xs px-3 py-1 rounded-full">$99–$249/month</span>
+              <span className="bg-white/10 text-white/80 text-xs px-3 py-1 rounded-full">$99-$249/month</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-display font-light mb-4">Winona</h1>
-            <p className="text-xl text-white/80 mb-6">Menopause hormone therapy — physician-prescribed, delivered to your door</p>
+            <p className="text-xl text-white/80 mb-6">Menopause hormone therapy  -  physician-prescribed, delivered to your door</p>
             <div className="flex flex-wrap gap-2 mb-8">
             <span className="inline-block bg-sage/10 text-sage text-xs font-medium px-3 py-1 rounded-full">Menopause HRT</span>
             <span className="inline-block bg-sage/10 text-sage text-xs font-medium px-3 py-1 rounded-full">Bioidentical Hormones</span>
@@ -64,13 +64,13 @@ export default function WinonaPage() {
         <section className="max-w-4xl mx-auto px-4 py-12">
           <div className="grid md:grid-cols-3 gap-8">
 
-            {/* Left — Main info */}
+            {/* Left  -  Main info */}
             <div className="md:col-span-2 space-y-8">
 
               {/* About */}
               <div className="bg-white rounded-xl p-6 shadow-sm">
                 <h2 className="text-2xl font-display font-light text-onyx mb-4">About Winona</h2>
-                <p className="text-stone-600 leading-relaxed">Winona specializes in women's hormone health, offering bioidentical HRT, personalized menopause protocols, and ongoing physician care — entirely online.</p>
+                <p className="text-stone-600 leading-relaxed">Winona specializes in women's hormone health, offering bioidentical HRT, personalized menopause protocols, and ongoing physician care  -  entirely online.</p>
               </div>
 
               {/* Treatments */}
@@ -104,7 +104,7 @@ export default function WinonaPage() {
               </div>
             </div>
 
-            {/* Right — Sidebar */}
+            {/* Right  -  Sidebar */}
             <div className="space-y-4">
 
               {/* Quick Facts */}
@@ -113,7 +113,7 @@ export default function WinonaPage() {
                 <dl className="space-y-2 text-sm">
                   <div className="flex justify-between">
                     <dt className="text-stone-500">Price Range</dt>
-                    <dd className="font-medium text-onyx">$99–$249/month</dd>
+                    <dd className="font-medium text-onyx">$99-$249/month</dd>
                   </div>
                   <div className="flex justify-between">
                     <dt className="text-stone-500">Telehealth</dt>
@@ -125,7 +125,7 @@ export default function WinonaPage() {
                   </div>
                   <div className="flex justify-between">
                     <dt className="text-stone-500">Target Patient</dt>
-                    <dd className="font-medium text-onyx text-right text-xs leading-tight">Women 40–65 navigating perimenopause, me</dd>
+                    <dd className="font-medium text-onyx text-right text-xs leading-tight">Women 40-65 navigating perimenopause, me</dd>
                   </div>
                 </dl>
               </div>
@@ -133,7 +133,7 @@ export default function WinonaPage() {
               {/* CTA */}
               <div className="bg-onyx text-white rounded-xl p-5">
                 <h3 className="font-semibold mb-2">Ready to start?</h3>
-                <p className="text-white/70 text-sm mb-4">Complete an online intake — most patients get a response within 24–48 hours.</p>
+                <p className="text-white/70 text-sm mb-4">Complete an online intake  -  most patients get a response within 24-48 hours.</p>
                 <a
                   href="https://bywinona.com"
                   target="_blank"

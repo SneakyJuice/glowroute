@@ -5,12 +5,12 @@ import Footer from '@/components/Footer'
 import { SITE_URL } from '@/lib/config'
 
 export const metadata: Metadata = {
-  title: 'Fountain TRT Review — Telehealth Testosterone Replacement | GlowRoute',
-  description: 'Fountain TRT is a specialized men\'s TRT clinic focused exclusively on testosterone optimization — with fast onboarding, at-home labs, and monthly check-ins',
+  title: 'Fountain TRT Review  -  Telehealth Testosterone Replacement | GlowRoute',
+  description: 'Fountain TRT is a specialized men\'s TRT clinic focused exclusively on testosterone optimization  -  with fast onboarding, at-home labs, and monthly check-ins',
   alternates: { canonical: `${SITE_URL}/telehealth/fountain-trt` },
   openGraph: {
-    title: 'Fountain TRT — Testosterone therapy built for men who want results fast',
-    description: 'Fountain TRT is a specialized men\'s TRT clinic focused exclusively on testosterone optimization — with fast onboarding, at-home labs, and monthly check-ins',
+    title: 'Fountain TRT  -  Testosterone therapy built for men who want results fast',
+    description: 'Fountain TRT is a specialized men\'s TRT clinic focused exclusively on testosterone optimization  -  with fast onboarding, at-home labs, and monthly check-ins',
     url: `${SITE_URL}/telehealth/fountain-trt`,
     type: 'website',
     siteName: 'GlowRoute',
@@ -31,7 +31,7 @@ export default function FountainTRTPage() {
             </div>
             <div className="flex items-center gap-3 mb-4">
               <span className="bg-sage text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide">Telehealth</span>
-              <span className="bg-white/10 text-white/80 text-xs px-3 py-1 rounded-full">$149–$249/month</span>
+              <span className="bg-white/10 text-white/80 text-xs px-3 py-1 rounded-full">$149-$249/month</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-display font-light mb-4">Fountain TRT</h1>
             <p className="text-xl text-white/80 mb-6">Testosterone therapy built for men who want results fast</p>
@@ -63,13 +63,13 @@ export default function FountainTRTPage() {
         <section className="max-w-4xl mx-auto px-4 py-12">
           <div className="grid md:grid-cols-3 gap-8">
 
-            {/* Left — Main info */}
+            {/* Left  -  Main info */}
             <div className="md:col-span-2 space-y-8">
 
               {/* About */}
               <div className="bg-white rounded-xl p-6 shadow-sm">
                 <h2 className="text-2xl font-display font-light text-onyx mb-4">About Fountain TRT</h2>
-                <p className="text-stone-600 leading-relaxed">Fountain TRT is a specialized men's TRT clinic focused exclusively on testosterone optimization — with fast onboarding, at-home labs, and monthly check-ins.</p>
+                <p className="text-stone-600 leading-relaxed">Fountain TRT is a specialized men's TRT clinic focused exclusively on testosterone optimization  -  with fast onboarding, at-home labs, and monthly check-ins.</p>
               </div>
 
               {/* Treatments */}
@@ -89,7 +89,7 @@ export default function FountainTRTPage() {
                 <h2 className="text-2xl font-display font-light text-onyx mb-4">Why Fountain TRT?</h2>
                 <ul className="space-y-2 text-stone-700">
               <li className="flex items-start gap-2"><span className="text-sage font-bold mt-0.5">→</span><span>TRT-only focus</span></li>
-              <li className="flex items-start gap-2"><span className="text-sage font-bold mt-0.5">→</span><span>Rapid start (<1 week)</span></li>
+              <li className="flex items-start gap-2"><span className="text-sage font-bold mt-0.5">→</span><span>Rapid start (&lt;1 week)</span></li>
               <li className="flex items-start gap-2"><span className="text-sage font-bold mt-0.5">→</span><span>Competitive pricing</span></li>
               <li className="flex items-start gap-2"><span className="text-sage font-bold mt-0.5">→</span><span>Dedicated medical team</span></li>
                 </ul>
@@ -98,11 +98,11 @@ export default function FountainTRTPage() {
               {/* Best For */}
               <div className="bg-sage/5 border border-sage/20 rounded-xl p-6">
                 <h2 className="text-lg font-semibold text-onyx mb-2">Best For</h2>
-                <p className="text-stone-700">Men who want a TRT-focused clinic without upsells — fast diagnosis and treatment</p>
+                <p className="text-stone-700">Men who want a TRT-focused clinic without upsells  -  fast diagnosis and treatment</p>
               </div>
             </div>
 
-            {/* Right — Sidebar */}
+            {/* Right  -  Sidebar */}
             <div className="space-y-4">
 
               {/* Quick Facts */}
@@ -111,7 +111,7 @@ export default function FountainTRTPage() {
                 <dl className="space-y-2 text-sm">
                   <div className="flex justify-between">
                     <dt className="text-stone-500">Price Range</dt>
-                    <dd className="font-medium text-onyx">$149–$249/month</dd>
+                    <dd className="font-medium text-onyx">$149-$249/month</dd>
                   </div>
                   <div className="flex justify-between">
                     <dt className="text-stone-500">Telehealth</dt>
@@ -123,7 +123,7 @@ export default function FountainTRTPage() {
                   </div>
                   <div className="flex justify-between">
                     <dt className="text-stone-500">Target Patient</dt>
-                    <dd className="font-medium text-onyx text-right text-xs leading-tight">Men 30–60 with diagnosed or suspected lo</dd>
+                    <dd className="font-medium text-onyx text-right text-xs leading-tight">Men 30-60 with diagnosed or suspected lo</dd>
                   </div>
                 </dl>
               </div>
@@ -131,7 +131,7 @@ export default function FountainTRTPage() {
               {/* CTA */}
               <div className="bg-onyx text-white rounded-xl p-5">
                 <h3 className="font-semibold mb-2">Ready to start?</h3>
-                <p className="text-white/70 text-sm mb-4">Complete an online intake — most patients get a response within 24–48 hours.</p>
+                <p className="text-white/70 text-sm mb-4">Complete an online intake  -  most patients get a response within 24-48 hours.</p>
                 <a
                   href="https://fountaintrt.com"
                   target="_blank"

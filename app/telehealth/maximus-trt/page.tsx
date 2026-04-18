@@ -5,12 +5,12 @@ import Footer from '@/components/Footer'
 import { SITE_URL } from '@/lib/config'
 
 export const metadata: Metadata = {
-  title: 'Maximus Review — Telehealth Testosterone | GlowRoute',
-  description: 'Maximus is a men\'s health platform built for performance optimization — combining TRT, peptide protocols, and precision monitoring for men serious about th',
+  title: 'Maximus Review  -  Telehealth Testosterone | GlowRoute',
+  description: 'Maximus is a men\'s health platform built for performance optimization  -  combining TRT, peptide protocols, and precision monitoring for men serious about th',
   alternates: { canonical: `${SITE_URL}/telehealth/maximus-trt` },
   openGraph: {
-    title: 'Maximus — Male optimization: TRT, peptides, and peak performance protocols',
-    description: 'Maximus is a men\'s health platform built for performance optimization — combining TRT, peptide protocols, and precision monitoring for men serious about th',
+    title: 'Maximus  -  Male optimization: TRT, peptides, and peak performance protocols',
+    description: 'Maximus is a men\'s health platform built for performance optimization  -  combining TRT, peptide protocols, and precision monitoring for men serious about th',
     url: `${SITE_URL}/telehealth/maximus-trt`,
     type: 'website',
     siteName: 'GlowRoute',
@@ -31,7 +31,7 @@ export default function MaximusPage() {
             </div>
             <div className="flex items-center gap-3 mb-4">
               <span className="bg-sage text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wide">Telehealth</span>
-              <span className="bg-white/10 text-white/80 text-xs px-3 py-1 rounded-full">$129–$299/month</span>
+              <span className="bg-white/10 text-white/80 text-xs px-3 py-1 rounded-full">$129-$299/month</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-display font-light mb-4">Maximus</h1>
             <p className="text-xl text-white/80 mb-6">Male optimization: TRT, peptides, and peak performance protocols</p>
@@ -64,13 +64,13 @@ export default function MaximusPage() {
         <section className="max-w-4xl mx-auto px-4 py-12">
           <div className="grid md:grid-cols-3 gap-8">
 
-            {/* Left — Main info */}
+            {/* Left  -  Main info */}
             <div className="md:col-span-2 space-y-8">
 
               {/* About */}
               <div className="bg-white rounded-xl p-6 shadow-sm">
                 <h2 className="text-2xl font-display font-light text-onyx mb-4">About Maximus</h2>
-                <p className="text-stone-600 leading-relaxed">Maximus is a men's health platform built for performance optimization — combining TRT, peptide protocols, and precision monitoring for men serious about their health.</p>
+                <p className="text-stone-600 leading-relaxed">Maximus is a men's health platform built for performance optimization  -  combining TRT, peptide protocols, and precision monitoring for men serious about their health.</p>
               </div>
 
               {/* Treatments */}
@@ -104,7 +104,7 @@ export default function MaximusPage() {
               </div>
             </div>
 
-            {/* Right — Sidebar */}
+            {/* Right  -  Sidebar */}
             <div className="space-y-4">
 
               {/* Quick Facts */}
@@ -113,7 +113,7 @@ export default function MaximusPage() {
                 <dl className="space-y-2 text-sm">
                   <div className="flex justify-between">
                     <dt className="text-stone-500">Price Range</dt>
-                    <dd className="font-medium text-onyx">$129–$299/month</dd>
+                    <dd className="font-medium text-onyx">$129-$299/month</dd>
                   </div>
                   <div className="flex justify-between">
                     <dt className="text-stone-500">Telehealth</dt>
@@ -125,7 +125,7 @@ export default function MaximusPage() {
                   </div>
                   <div className="flex justify-between">
                     <dt className="text-stone-500">Target Patient</dt>
-                    <dd className="font-medium text-onyx text-right text-xs leading-tight">Performance-focused men 25–55 optimizing</dd>
+                    <dd className="font-medium text-onyx text-right text-xs leading-tight">Performance-focused men 25-55 optimizing</dd>
                   </div>
                 </dl>
               </div>
@@ -133,7 +133,7 @@ export default function MaximusPage() {
               {/* CTA */}
               <div className="bg-onyx text-white rounded-xl p-5">
                 <h3 className="font-semibold mb-2">Ready to start?</h3>
-                <p className="text-white/70 text-sm mb-4">Complete an online intake — most patients get a response within 24–48 hours.</p>
+                <p className="text-white/70 text-sm mb-4">Complete an online intake  -  most patients get a response within 24-48 hours.</p>
                 <a
                   href="https://maximustribe.com"
                   target="_blank"
