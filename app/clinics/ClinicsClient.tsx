@@ -13,6 +13,7 @@ import ClinicCard, { FeaturedClinicCard } from '@/components/ClinicCard'
 import MapStrip from '@/components/MapStrip'
 import Pagination from '@/components/Pagination'
 import BottomCTA from '@/components/BottomCTA'
+import QuizCTA from '@/components/QuizCTA'
 import Footer from '@/components/Footer'
 import { FilterState, Clinic } from '@/types/clinic'
 import { CATEGORIES, matchCategories } from '@/data/categories'
@@ -222,6 +223,7 @@ function ClinicsPageInner({ allClinics, initialClinics, featuredClinic, totalCou
     <div className="min-h-screen bg-ivory font-sans">
       <Navbar />
       <HeroSearch clinicCount={totalCount ?? allClinics.length} defaultCity="Miami, FL" onSearch={handleSearch} onNearMe={handleNearMe} />
+      <QuizCTA variant="banner" />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
         {/* Mobile filter toggle */}

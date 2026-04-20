@@ -14,13 +14,12 @@
     "@vercel/analytics": "^2.0.1",
     "ical": "^0.8.0",
     "next": "14.2.5",
-    "next-mdx-remote": "^6.0.0",
-    "posthog-js": "^1.240.6",
+    "pg": "^8.20.0",
+    "posthog-js": "^1.364.1",
     "react": "^18",
     "react-dom": "^18",
     "resend": "^6.9.4",
-    "stripe": "^20.4.1",
-    "styled-jsx": "5.1.1"
+    "stripe": "^20.4.1"
   },
   "devDependencies": {
     "@types/ical": "^0.8.3",
