@@ -2,6 +2,11 @@
   "framework": "nextjs",
   "redirects": [
     {
+      "source": "/insight/:slug",
+      "destination": "/insights/:slug",
+      "permanent": true
+    },
+    {
       "source": "/(.*)",
       "has": [{ "type": "host", "value": "www.glowroute.io" }],
       "destination": "https://glowroute.io/$1",
