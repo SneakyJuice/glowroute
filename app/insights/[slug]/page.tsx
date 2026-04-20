@@ -69,7 +69,7 @@ export default function InsightDetailPage({ params }: PageProps) {
   // Full HTML reports get their own standalone renderer (preserves Chart.js, CSS, scripts)
   if (insight.contentFile?.endsWith('.html')) {
     const { redirect } = require('next/navigation')
-    redirect(`/insights-full/${params.slug}`)
+    redirect('/insights-full/' + params.slug, 'permanent')
   }
 
   const htmlContent = getInsightContent(insight.contentFile)
