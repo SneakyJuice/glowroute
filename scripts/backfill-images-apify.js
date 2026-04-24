@@ -136,7 +136,7 @@ async function fetchImagesViaApify(clinics) {
     }
   );
 
-  if (res.status !== 200) {
+  if (res.status !== 200 && res.status !== 201) {
     console.error(`  ❌ Apify error ${res.status}: ${res.body.slice(0, 200)}`);
     return [];
   }
@@ -148,24 +148,30 @@ async function fetchImagesViaApify(clinics) {
 
 // ── Match Apify result back to clinic ────────────────────────────────────────
 
-function matchResult(clinic, apifyResults) {
-  // Apify returns results in same order as search strings (usually)
-  // Try name match first, then position
-  const clinicNameNorm = clinic.name.toLowerCase().replace(/[^a-z0-9]/g, '');
-  for (const r of apifyResults) {
-    if (!r.imageUrls || r.imageUrls.length === 0) continue;
-    const rNameNorm = (r.title || r.name || '').toLowerCase().replace(/[^a-z0-9]/g, '');
-    if (rNameNorm && clinicNameNorm.includes(rNameNorm.slice(0, 8))) {
-      return r.imageUrls[0];
-    }
-  }
-  return null;
+function nameSimilarity(a, b) {
+  // Returns 0.0-1.0 overlap score based on shared significant words
+  const stopWords = new Set(['the','and','of','at','by','for','in','a','an','llc','inc','pllc','pc','md','dba','center','clinic','medical','spa','wellness','health','aesthetics','beauty','care']);
+  const words = (s) => s.toLowerCase().replace(/[^a-z0-9 ]/g, ' ').split(/\s+/).filter(w => w.length > 2 && !stopWords.has(w));
+  const wa = new Set(words(a));
+  const wb = new Set(words(b));
+  if (wa.size === 0 || wb.size === 0) return 0;
+  const intersection = [...wa].filter(w => wb.has(w)).length;
+  return intersection / Math.min(wa.size, wb.size);
 }
 
-// ── Unsplash fallback ─────────────────────────────────────────────────────────
-
-function unsplashFallback(city) {
-  return `https://source.unsplash.com/featured/800x600/?medspa,wellness,aesthetic,clinic`;
+function matchResult(clinic, apifyResults) {
+  // Must meet minimum name similarity threshold — no position-based fallback
+  const MIN_SCORE = 0.5; // at least 50% of significant words must match
+  let best = null, bestScore = 0;
+  for (const r of apifyResults) {
+    if (!r.imageUrls || r.imageUrls.length === 0) continue;
+    const resultName = r.title || r.name || '';
+    if (!resultName) continue;
+    const score = nameSimilarity(clinic.name, resultName);
+    if (score > bestScore) { bestScore = score; best = r; }
+  }
+  if (best && bestScore >= MIN_SCORE) return best.imageUrls[0];
+  return null;
 }
 
 // ── Main ──────────────────────────────────────────────────────────────────────
@@ -188,7 +194,7 @@ async function main() {
 
   console.log(`\nProcessing ${clinics.length} clinics in batches of ${BATCH_SIZE}...\n`);
 
-  let updated = 0, apifyHits = 0, fallbacks = 0, errors = 0;
+  let updated = 0, apifyHits = 0, errors = 0;
   const log = [];
 
   for (let i = 0; i < clinics.length; i += BATCH_SIZE) {
@@ -203,30 +209,28 @@ async function main() {
       apifyResults = await fetchImagesViaApify(batch);
       console.log(`  📦 Apify returned ${apifyResults.length} results`);
     } catch (err) {
-      console.error(`  ❌ Apify call failed: ${err.message} — using fallbacks for this batch`);
+      console.error(`  ❌ Apify call failed: ${err.message} — skipping this batch (all will stay null)`);
     }
 
     // Match results to clinics and update
     for (let j = 0; j < batch.length; j++) {
       const clinic = batch[j];
-      // Try to match by position first (Apify preserves order), then by name
-      let imageUrl = apifyResults[j]?.imageUrls?.[0] || matchResult(clinic, apifyResults);
-      let source = 'apify-google-maps';
+      // Try to match by name first, then by position
+      const imageUrl = matchResult(clinic, apifyResults) || apifyResults[j]?.imageUrls?.[0];
+      const source = 'apify-google-maps';
 
       if (!imageUrl) {
-        imageUrl = unsplashFallback(clinic.city);
-        source = 'unsplash-fallback';
+        console.log(`  ⏭️  ${clinic.name} — no Apify result, skipping (stays null)`);
+        continue;
       }
 
       try {
         const ok = await updateHeroImage(clinic.id, imageUrl);
         if (ok) {
-          const icon = source === 'apify-google-maps' ? '📸' : '🎨';
-          console.log(`  ${icon} ${clinic.name} [${source}]${DRY_RUN ? ' (dry-run)' : ''}`);
+          console.log(`  📸 ${clinic.name} [${source}]${DRY_RUN ? ' (dry-run)' : ''}`);
           log.push({ id: clinic.id, name: clinic.name, city: clinic.city, imageUrl, source });
           updated++;
-          if (source === 'apify-google-maps') apifyHits++;
-          else fallbacks++;
+          apifyHits++;
         }
       } catch (err) {
         console.log(`  ❌ ${clinic.name} — update failed: ${err.message}`);
@@ -236,8 +240,8 @@ async function main() {
 
     // Pause between batches (respect Apify rate limits)
     if (i + BATCH_SIZE < clinics.length) {
-      console.log(`  ⏳ Waiting 2s before next batch...`);
-      await new Promise(r => setTimeout(r, 2000));
+      console.log(`  ⏳ Waiting 5s before next batch...`);
+      await new Promise(r => setTimeout(r, 5000));
     }
   }
 
@@ -253,7 +257,7 @@ async function main() {
   console.log('\n════════════════════════════════');
   console.log(`✅ Total updated:      ${updated}`);
   console.log(`📸 Google Maps photos: ${apifyHits}`);
-  console.log(`🎨 Unsplash fallback:  ${fallbacks}`);
+  console.log(`⏭️  Skipped (no match): ${clinics.length - updated - errors}`);
   console.log(`❌ Errors:             ${errors}`);
   if (DRY_RUN) console.log('\n(Dry run — no writes performed)');
   console.log('════════════════════════════════\n');
