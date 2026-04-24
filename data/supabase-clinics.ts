@@ -61,6 +61,8 @@ export function mapSupabaseRow(row: any): Clinic {
     neighborhood: undefined,
     distance: undefined,
     googleRating: row.glow_score ?? 0,         // GMB star rating (0.0-5.0)
+    glowScore: row.glow_score ?? 0,            // Quality tier (0-5)
+    dataQualityScore: row.data_quality_score ?? 0, // Completeness score (0-100)
     googleReviewCount: row.review_count ?? 0,  // Real GMB review count — backfilled 2026-03-31
     goals: row.goals ?? [],                    // Health goal tags — backfilled 2026-03-31
     services: Array.isArray(row.services) ? row.services : [],  // canonical service slugs
@@ -118,6 +120,7 @@ export async function fetchAllClinicsFromSupabase(): Promise<Clinic[]> {
         .from('clinics')
         .select('*')
         .in('visibility', ['visible'])   // exclude hidden / removed / needs_review
+        .order('glow_score', { ascending: false })  // highest quality first
         .range(from, to)
       
       if (error) {
@@ -146,9 +149,18 @@ export async function fetchAllClinicsFromSupabase(): Promise<Clinic[]> {
       seen.add(c.slug)
       return true
     })
-    
+
+    // Sort: glow_score DESC, then image-first as tiebreaker
+    const sorted = deduped.sort((a, b) => {
+      const scoreDiff = (b.glowScore ?? 0) - (a.glowScore ?? 0)
+      if (scoreDiff !== 0) return scoreDiff
+      const aHasImg = a.heroImageUrl ? 1 : 0
+      const bHasImg = b.heroImageUrl ? 1 : 0
+      return bHasImg - aHasImg
+    })
+
     // Clean each record
-    const cleaned = deduped.map(clean)
+    const cleaned = sorted.map(clean)
     
     console.log(`[supabase-clinics] Returning ${cleaned.length} clinics`)
     return cleaned

@@ -37,6 +37,8 @@ export interface Clinic {
   heroImageUrl?: string
   isClaimed?: boolean
   isVerified?: boolean
+  dataQualityScore?: number
+  glowScore?: number
 }
 
 export interface FilterState {
