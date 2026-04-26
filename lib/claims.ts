@@ -24,6 +24,8 @@ export interface Lead {
   email: string
   phone?: string
   treatment?: string
+  quiz_outcome?: string
+  notes?: string
   created_at: string
 }
 
