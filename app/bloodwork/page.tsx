@@ -15,7 +15,7 @@ const PARTNERS = [
     badge: 'Most Popular',
     badgeColor: 'bg-sage',
     highlights: ['At-home collection (no lab visit)', '20+ biomarkers tracked', 'Monthly subscription', 'Personalized insights'],
-    href: 'https://rythmhealth.com', // TODO: replace with affiliate link
+    href: 'https://rythmhealth.com',
     affiliateParam: 'rythm',
   },
   {
@@ -28,7 +28,7 @@ const PARTNERS = [
     badge: 'Most Comprehensive',
     badgeColor: 'bg-champagne',
     highlights: ['100+ biomarkers', 'Physician review included', 'HSA/FSA eligible', 'Trending over time'],
-    href: 'https://functionhealth.com', // TODO: replace with affiliate link via Impact
+    href: 'https://functionhealth.com',
     affiliateParam: 'function',
   },
   {
@@ -36,12 +36,12 @@ const PARTNERS = [
     name: 'Ulta Lab Tests',
     tagline: 'Order any test, no prescription needed',
     description:
-      'Choose from 2,000+ individual tests or panels. No doctor's order required. Walk into any LabCorp or Quest location near you.',
+      'Choose from 2,000+ individual tests or panels. No doctor order required. Walk into any LabCorp or Quest location near you.',
     price: 'From $19',
     badge: 'Most Flexible',
     badgeColor: 'bg-onyx',
     highlights: ['2,000+ tests available', 'No Rx required', 'Walk-in at LabCorp/Quest', '10% affiliate savings'],
-    href: 'https://ultalabtests.com', // TODO: replace with affiliate link
+    href: 'https://ultalabtests.com',
     affiliateParam: 'ulta',
   },
 ];
@@ -74,7 +74,6 @@ export default function BloodworkPage() {
 
     setSubmitted(true);
 
-    // Redirect after brief delay
     setTimeout(() => {
       window.open(
         `${selectedPartner.href}?ref=glowroute&partner=${selectedPartner.affiliateParam}`,
@@ -89,7 +88,6 @@ export default function BloodworkPage() {
     <div className="min-h-screen bg-ivory text-onyx">
       <Navbar />
 
-      {/* Hero */}
       <section className="py-20 text-center bg-white border-b border-onyx/10">
         <div className="container mx-auto px-4 max-w-3xl">
           <div className="text-5xl mb-6">🧬</div>
@@ -106,7 +104,6 @@ export default function BloodworkPage() {
         </div>
       </section>
 
-      {/* Why Bloodwork Section */}
       <section className="py-14 bg-ivory">
         <div className="container mx-auto px-4 max-w-4xl">
           <h2 className="text-2xl font-semibold text-center mb-10">Why get tested before starting a program?</h2>
@@ -126,7 +123,6 @@ export default function BloodworkPage() {
         </div>
       </section>
 
-      {/* Partner Cards */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 max-w-5xl">
           <h2 className="text-3xl font-serif font-semibold text-center mb-4">Choose your lab partner</h2>
@@ -165,7 +161,6 @@ export default function BloodworkPage() {
         </div>
       </section>
 
-      {/* Lead Gate Modal */}
       {showGate && selectedPartner && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded-2xl shadow-xl p-8 max-w-md w-full">
@@ -215,7 +210,6 @@ export default function BloodworkPage() {
         </div>
       )}
 
-      {/* Quiz CTA */}
       <section className="py-14 bg-ivory text-center">
         <div className="container mx-auto px-4 max-w-2xl">
           <h2 className="text-2xl font-semibold mb-4">Not sure which test you need?</h2>
