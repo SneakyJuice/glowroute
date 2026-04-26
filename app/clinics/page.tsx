@@ -3,6 +3,7 @@ import { fetchAllClinicsFromSupabase, fetchFeaturedClinic } from '@/data/supabas
 import { calculateGlowScore } from '@/lib/glowscore'
 import { Clinic } from '@/types/clinic'
 import ClinicsClient from './ClinicsClient'
+export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
   title: 'Find Top-Rated Clinics in Florida | GlowRoute',
