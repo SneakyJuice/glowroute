@@ -1,3 +1,6 @@
+// Force dynamic SSR — prevents build-time SSG timeout when fetching 15k clinic slugs
+export const dynamic = 'force-dynamic'
+
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import Script from 'next/script'
@@ -44,16 +47,7 @@ async function fetchClinicBySlug(city: string, slug: string): Promise<Clinic | n
   return clean(mapSupabaseRow(data[0]))
 }
 
-export async function generateStaticParams() {
-  const all = await fetchAllClinicsFromSupabase()
-  return all
-    .filter(clinic => clinic.city && clinic.slug) // skip records with missing city or slug
-    .map(clinic => ({
-      city: citySlug(clinic.city),
-      slug: clinic.slug,
-    }))
-    .filter(p => p.city && p.slug) // double-check after slug normalization
-}
+// generateStaticParams removed — force-dynamic handles routing at request time
 
 /** Truncate a string to maxLen, appending suffix if cut */
 function truncate(str: string, maxLen: number, suffix = '…'): string {
