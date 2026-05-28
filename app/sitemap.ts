@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic' // Sitemap times out at build time with 15k+ clinics
+
 import { MetadataRoute } from 'next'
 import { allClinics } from '@/data/all-clinics'
 import { TREATMENT_SLUGS } from '@/lib/treatments'
