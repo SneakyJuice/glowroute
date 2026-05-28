@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import type { Metadata } from 'next'
@@ -20,11 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export async function generateStaticParams() {
-  // Pre-render first 200 slugs; the rest are on-demand
-  const all = await allClinics
-  return all.slice(0, 200).map(c => ({ slug: c.slug }))
-}
+// generateStaticParams removed — force-dynamic handles routing at request time
 
 const PLAN_ORDER = ['starter', 'growth', 'pro'] as const
 

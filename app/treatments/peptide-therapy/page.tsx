@@ -8,7 +8,7 @@ import { SITE_URL } from '@/lib/config'
 import { GOALS, type GoalDef } from '@/lib/goals'
 import type { Clinic } from '@/types/clinic'
 
-export const revalidate = 3600 // ISR — 1 hour
+export const dynamic = 'force-dynamic' // ISR replaced — build-time fetch times out with 15k clinics
 
 export const metadata: Metadata = {
   title: 'Peptide Therapy Clinics Near You — GlowRoute',

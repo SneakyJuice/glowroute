@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic'
+
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import type { Metadata } from 'next'
@@ -27,12 +29,7 @@ function toClinicSlug(city: string): string {
   return city.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
 }
 
-export async function generateStaticParams() {
-  const clinics = await allClinics
-  const slugs = new Set(clinics.filter(c => c.city).map(c => toCitySlug(c.city)))
-  slugs.delete('') // remove empty string from null cities
-  return Array.from(slugs).map(city => ({ city }))
-}
+// generateStaticParams removed — force-dynamic handles routing at request time
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const clinics = await allClinics
