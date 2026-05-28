@@ -4,6 +4,10 @@ import { calculateGlowScore } from '@/lib/glowscore'
 import { Clinic } from '@/types/clinic'
 import ClinicsClientV2 from '@/app/clinics/ClinicsClientV2'
 
+// Force dynamic SSR — fetches live from Supabase on each request.
+// Build-time SSG was timing out with 15k clinics.
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = {
   title: 'GlowRoute — Find Top-Rated Med Spas & Aesthetic Clinics in Florida',
   description: 'Discover and compare 4,000+ med spas and aesthetic clinics across Florida. Filter by treatment, city, and ratings. Powered by GlowScore™.',
