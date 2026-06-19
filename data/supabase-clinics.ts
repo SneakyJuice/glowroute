@@ -171,6 +171,98 @@ export async function fetchAllClinicsFromSupabase(): Promise<Clinic[]> {
 }
 
 /**
+ * Fetch clinics for a specific city slug (e.g. "miami-beach" → matches city "Miami Beach").
+ * Uses server-side .ilike() filter — avoids full-table scan.
+ * Sorted by glow_score DESC, then review_count DESC.
+ */
+export async function fetchClinicsByCity(citySlug: string): Promise<Clinic[]> {
+  const supabase = getSupabaseAdmin()
+  if (!supabase) {
+    console.warn('[supabase-clinics] Supabase admin client not available, returning empty array')
+    return []
+  }
+
+  // Convert slug back to display name for matching: "miami-beach" → "Miami Beach"
+  const displayName = citySlug
+    .split('-')
+    .map(w => w.charAt(0).toUpperCase() + w.slice(1))
+    .join(' ')
+
+  // Use .eq() on the city column — exact match on display name (canonical in DB).
+  // Fall back to .ilike() for slugified mismatches (e.g. "St. Pete" vs "St Pete").
+  const CITY_BATCH = 1000
+  let allRows: any[] = []
+  let page = 0
+  let hasMore = true
+
+  console.log(`[supabase-clinics] fetchClinicsByCity: slug=${citySlug} display=${displayName}`)
+
+  try {
+    // First try exact match
+    while (hasMore) {
+      const from = page * CITY_BATCH
+      const to = from + CITY_BATCH - 1
+      const { data, error } = await supabase
+        .from('clinics')
+        .select('*')
+        .eq('city', displayName)
+        .in('visibility', ['visible'])
+        .order('glow_score', { ascending: false })
+        .order('review_count', { ascending: false })
+        .range(from, to)
+
+      if (error) {
+        console.error('[supabase-clinics] fetchClinicsByCity error:', error.message)
+        break
+      }
+
+      if (data && data.length > 0) {
+        allRows = allRows.concat(data)
+      }
+
+      if (!data || data.length < CITY_BATCH) {
+        hasMore = false
+      }
+      page++
+    }
+
+    // If exact match yields nothing, fall back to ilike for slug variant mismatches
+    if (allRows.length === 0) {
+      console.log(`[supabase-clinics] Exact city match empty, falling back to ilike for ${displayName}`)
+      const { data: fallbackData, error: fallbackError } = await supabase
+        .from('clinics')
+        .select('*')
+        .ilike('city', displayName.replace(/-/g, '%'))
+        .in('visibility', ['visible'])
+        .order('glow_score', { ascending: false })
+        .order('review_count', { ascending: false })
+        .limit(1000)
+
+      if (!fallbackError && fallbackData) {
+        allRows = fallbackData
+      }
+    }
+
+    console.log(`[supabase-clinics] fetchClinicsByCity: ${allRows.length} rows for ${displayName}`)
+
+    const mapped = allRows.map(mapSupabaseRow)
+
+    // Deduplicate by slug
+    const seen = new Set<string>()
+    const deduped = mapped.filter(c => {
+      if (!c.slug || seen.has(c.slug)) return false
+      seen.add(c.slug)
+      return true
+    })
+
+    return deduped.map(clean)
+  } catch (err) {
+    console.error('[supabase-clinics] fetchClinicsByCity unexpected error:', err)
+    return []
+  }
+}
+
+/**
  * Featured clinic: first clinic with featured flag, or first clinic.
  */
 export async function fetchFeaturedClinic(): Promise<Clinic | null> {

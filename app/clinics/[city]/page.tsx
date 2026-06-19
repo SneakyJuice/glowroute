@@ -6,7 +6,7 @@ import type { Metadata } from 'next'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import ClinicCard from '@/components/ClinicCard'
-import { allClinics } from '@/data/all-clinics'
+import { fetchClinicsByCity, fetchAllClinicsFromSupabase } from '@/data/supabase-clinics'
 import { SITE_URL } from '@/lib/config'
 
 interface Props { params: { city: string } }
@@ -32,9 +32,8 @@ function toClinicSlug(city: string): string {
 // generateStaticParams removed — force-dynamic handles routing at request time
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const clinics = await allClinics
+  const cityClinics = await fetchClinicsByCity(params.city)
   const displayCity = citySlugToDisplay(params.city)
-  const cityClinics = clinics.filter(c => toCitySlug(c.city) === params.city)
   if (cityClinics.length === 0) return { title: 'Clinics — GlowRoute' }
 
   const count = cityClinics.length
@@ -60,16 +59,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function CityPage({ params }: Props) {
   const displayCity = citySlugToDisplay(params.city)
-  const all = await allClinics
-  const cityClinics = all
-    .filter(c => toCitySlug(c.city) === params.city)
-    .sort((a, b) => b.googleRating - a.googleRating || b.googleReviewCount - a.googleReviewCount)
+  // fetchClinicsByCity does server-side .eq() filter — no full-table scan
+  const [cityClinics, all] = await Promise.all([
+    fetchClinicsByCity(params.city),
+    fetchAllClinicsFromSupabase(),
+  ])
+  const sortedCityClinics = [...cityClinics].sort(
+    (a, b) => b.googleRating - a.googleRating || b.googleReviewCount - a.googleReviewCount
+  )
 
-  if (cityClinics.length === 0) notFound()
+  if (sortedCityClinics.length === 0) notFound()
 
-  const count = cityClinics.length
-  const topClinics = cityClinics.slice(0, 6)
-  const avgRating = (cityClinics.reduce((s, c) => s + c.googleRating, 0) / count).toFixed(1)
+  const count = sortedCityClinics.length
+  const topClinics = sortedCityClinics.slice(0, 6)
+  const avgRating = (sortedCityClinics.reduce((s, c) => s + c.googleRating, 0) / count).toFixed(1)
 
   // ItemList schema for top 5 clinics
   const itemListSchema = {
@@ -78,8 +81,8 @@ export default async function CityPage({ params }: Props) {
     name: `Best MedSpas in ${displayCity}, FL`,
     description: `Top-rated medical spas and aesthetic clinics in ${displayCity}, Florida`,
     url: `${SITE_URL}/clinics/${params.city}`,
-    numberOfItems: Math.min(5, cityClinics.length),
-    itemListElement: cityClinics.slice(0, 5).map((c, i) => ({
+    numberOfItems: Math.min(5, sortedCityClinics.length),
+    itemListElement: sortedCityClinics.slice(0, 5).map((c, i) => ({
       '@type': 'ListItem',
       position: i + 1,
       name: c.name,
@@ -159,16 +162,16 @@ export default async function CityPage({ params }: Props) {
         </div>
 
         {/* Show more if more clinics exist */}
-        {cityClinics.length > 6 && (
+        {sortedCityClinics.length > 6 && (
           <div className="text-center py-6 border-t border-onyx/8">
             <p className="text-stone text-sm mb-3">
-              Showing 6 of {cityClinics.length} clinics in {displayCity}
+              Showing 6 of {sortedCityClinics.length} clinics in {displayCity}
             </p>
             <Link
               href={`/clinics?city=${encodeURIComponent(displayCity)}`}
               className="inline-block bg-sage text-white text-sm font-semibold px-6 py-2.5 rounded-xl hover:bg-onyx transition-colors"
             >
-              View All {count} Clinics →
+              View All {sortedCityClinics.length} Clinics →
             </Link>
           </div>
         )}
@@ -180,7 +183,7 @@ export default async function CityPage({ params }: Props) {
             {Array.from(new Set(
               all
                 .map(c => c.city)
-                .filter(c => c !== cityClinics[0]?.city)
+                .filter(c => c !== sortedCityClinics[0]?.city)
             ))
               .slice(0, 16)
               .map(city => (
