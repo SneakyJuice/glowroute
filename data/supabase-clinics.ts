@@ -172,7 +172,7 @@ export async function fetchAllClinicsFromSupabase(): Promise<Clinic[]> {
 
 /**
  * Fetch clinics for a specific city slug (e.g. "miami-beach" → matches city "Miami Beach").
- * Uses server-side .ilike() filter — avoids full-table scan.
+ * Uses server-side .eq() filter (with .ilike() fallback) — avoids full-table scan.
  * Sorted by glow_score DESC, then review_count DESC.
  */
 export async function fetchClinicsByCity(citySlug: string): Promise<Clinic[]> {

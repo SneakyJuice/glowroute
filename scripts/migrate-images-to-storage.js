@@ -20,8 +20,10 @@ const { createClient } = require('@supabase/supabase-js')
 // ── Config ────────────────────────────────────────────────────────────────────
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL ||
   'https://psiuknphchmhsthvhkpt.supabase.co'
-const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY ||
-  'REMOVED_LEAKED_SUPABASE_SERVICE_KEY'
+const SUPABASE_SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY
+if (!SUPABASE_SERVICE_KEY) {
+  console.error('[migrate] SUPABASE_SERVICE_ROLE_KEY env var required'); process.exit(1)
+}
 const BUCKET = 'clinic-images'
 const BATCH_CONCURRENCY = 5
 const BATCH_DELAY_MS = 100
