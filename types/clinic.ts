@@ -15,8 +15,8 @@ export interface Clinic {
   isNew?: boolean
   priceTier?: '$' | '$$' | '$$$' | '$$$$'
   availability?: string
-  imageUrl?: string
-  images?: string[]
+  imageUrl?: string          // canonical single hero image field
+  images?: string[]           // multi-image gallery; NOT a 1-element echo of imageUrl
   logo?: string
   description?: string
   address?: string
@@ -34,6 +34,7 @@ export interface Clinic {
   goals?: string[]
   services?: string[]
   visibility?: 'visible' | 'hidden' | 'removed' | 'needs_review'
+  /** @deprecated alias for imageUrl — use imageUrl instead */
   heroImageUrl?: string
   isClaimed?: boolean
   isVerified?: boolean

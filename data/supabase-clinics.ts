@@ -73,12 +73,12 @@ export function mapSupabaseRow(row: any): Clinic {
     isVerified: row.is_verified || false,
     isClaimed: row.is_claimed || false,
     featured: row.is_featured || false,
-    heroImageUrl: row.hero_image_url || undefined,
+    heroImageUrl: row.hero_image_url || undefined, // alias for imageUrl — kept for backward compat
     isNew: false,
     priceTier: '$$', // TODO: map claim_tier if possible
     availability: undefined,
-    imageUrl: row.hero_image_url || undefined,
-    images: row.hero_image_url ? [row.hero_image_url] : [],
+    imageUrl: row.hero_image_url || undefined, // single canonical image field
+    images: [], // images[] is no longer a 1-element echo of imageUrl; populate only when multi-image gallery exists
     logo: row.logo_url || undefined,
     description: row.description || undefined,
     address: row.address || undefined,

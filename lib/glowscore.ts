@@ -129,7 +129,7 @@ export function calculateGlowScore(clinic: Clinic): GlowScoreBreakdown {
   // ── PROFILE QUALITY ───────────────────────────────────────────────────
   const descLen = (clinic.description ?? '').length
   const description = descLen > 100 ? 8 : descLen > 30 ? 4 : 0
-  const heroImage   = !!(clinic.imageUrl || clinic.heroImageUrl || (clinic.images && clinic.images.length > 0)) ? 4 : 0
+  const heroImage   = !!(clinic.imageUrl || (clinic.images && clinic.images.length > 0)) ? 4 : 0 // heroImageUrl removed: use imageUrl as canonical
   const website     = !!clinic.website ? 3 : 0
 
   // ── TRUST LAYER (reserved) ────────────────────────────────────────────

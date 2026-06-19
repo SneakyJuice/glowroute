@@ -71,8 +71,8 @@ export async function generateMetadata({ params }: PageProps) {
   )
 
   const image =
+    clinic.imageUrl ||
     clinic.images?.[0] ||
-    (clinic as any).imageUrl ||
     clinic.logo ||
     `${SITE_URL}/og-default.jpg`
 
@@ -202,8 +202,9 @@ export default async function ClinicProfilePage({ params }: PageProps) {
     ...(clinic.specialtyTreatments || []),
   ].filter((t, idx, arr) => arr.indexOf(t) === idx)
 
-  const primaryImage = clinic.images?.[0] || null
-  const galleryImages = clinic.images?.slice(1) || []
+  // imageUrl is the canonical single hero image; images[] is for multi-photo galleries only
+  const primaryImage = clinic.imageUrl || clinic.images?.[0] || null
+  const galleryImages = clinic.images?.length ? clinic.images.slice(clinic.imageUrl ? 0 : 1) : []
 
   const googleMapsUrl =
     clinic.mapsUrl ||
@@ -237,7 +238,7 @@ export default async function ClinicProfilePage({ params }: PageProps) {
     medicalSpecialty: 'MedicalSpa',
   }
 
-  const schemaImage = primaryImage || clinic.logo || clinic.images?.[0]
+  const schemaImage = clinic.imageUrl || primaryImage || clinic.logo
   if (schemaImage) clinicSchema.image = schemaImage
   if (clinic.phone) clinicSchema.telephone = clinic.phone
   if (clinic.priceTier) clinicSchema.priceRange = clinic.priceTier
