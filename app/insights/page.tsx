@@ -33,6 +33,12 @@ function formatDate(dateStr: string) {
   })
 }
 
+function insightHref(insight: { slug: string; contentFile?: string }) {
+  return insight.contentFile?.endsWith(".html")
+    ? `/insights-full/${insight.slug}`
+    : `/insights/${insight.slug}`
+}
+
 export default function InsightsPage() {
   const featured = INSIGHTS.filter(i => i.featured)
   const rest = INSIGHTS.filter(i => !i.featured)
@@ -74,7 +80,7 @@ export default function InsightsPage() {
               {featured.map(insight => (
                 <Link
                   key={insight.slug}
-                  href={`/insights/${insight.slug}`}
+                  href={insightHref(insight)}
                   className="group bg-white rounded-2xl overflow-hidden border border-stone/15 hover:shadow-xl hover:-translate-y-0.5 transition-all duration-200 flex flex-col"
                 >
                   {/* Image */}
@@ -127,7 +133,7 @@ export default function InsightsPage() {
               {rest.map(insight => (
                 <Link
                   key={insight.slug}
-                  href={`/insights/${insight.slug}`}
+                  href={insightHref(insight)}
                   className="group bg-white rounded-2xl overflow-hidden border border-stone/15 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 flex flex-col"
                 >
                   <div className="w-full aspect-[16/9] overflow-hidden bg-stone/10 relative">
