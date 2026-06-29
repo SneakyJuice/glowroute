@@ -4,7 +4,6 @@ export const dynamicParams = true
 
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import Script from 'next/script'
 import { getSupabaseAdmin } from '@/lib/supabase'
 import { mapSupabaseRow, clean, fetchAllClinicsFromSupabase } from '@/data/supabase-clinics'
 import type { Clinic } from '@/types/clinic'
@@ -302,17 +301,32 @@ export default async function ClinicProfilePage({ params }: PageProps) {
   const bookNowUrl = bookingPlatform?.url ?? null
 
   // Nearby clinics in same city
+  // BreadcrumbList for rich-result navigation
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+      { '@type': 'ListItem', position: 2, name: 'Clinics', item: `${SITE_URL}/clinics` },
+      { '@type': 'ListItem', position: 3, name: clinic.city, item: `${SITE_URL}/clinics/${citySlug(clinic.city)}` },
+      { '@type': 'ListItem', position: 4, name: clinic.name, item: pageUrl },
+    ],
+  }
+
   const nearbyClinics: import('@/types/clinic').Clinic[] = [] // Supabase query TBD
 
   return (
     <div className="min-h-screen bg-[#F8F6F1] font-sans">
       <Navbar />
 
-      <Script
-        id={`clinic-schema-${clinic.slug}`}
+      {/* JSON-LD: server-rendered into HTML so crawlers + AI engines can read it */}
+      <script
         type="application/ld+json"
-        strategy="beforeInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(clinicSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
 
       {/* Hero Image Banner */}
