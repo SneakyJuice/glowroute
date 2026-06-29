@@ -54,6 +54,142 @@ export async function generateStaticParams() {
   return TOP_CLINIC_PARAMS
 }
 
+/** Strip HTML tags and escape special chars for plain-text JSON-LD answers */
+function plainText(str: string): string {
+  return str
+    .replace(/<[^>]*>/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#039;/g, "'")
+    .replace(/\s{2,}/g, ' ')
+    .trim()
+}
+
+/** Build a FAQPage JSON-LD object from available clinic fields.
+ *  Only includes a Q&A when the underlying data is present and non-empty.
+ *  Targets 4-6 pairs; never emits an empty answer. */
+function buildFaqSchema(clinic: Clinic): Record<string, any> | null {
+  const pairs: Array<{ '@type': 'Question'; name: string; acceptedAnswer: { '@type': 'Answer'; text: string } }> = []
+
+  // 1. Services offered — requires at least 1 treatment
+  const allTx = [
+    ...(clinic.treatments || []),
+    ...(clinic.specialtyTreatments || []),
+  ].filter((t, i, a) => a.indexOf(t) === i)
+
+  if (allTx.length > 0) {
+    const list = allTx.slice(0, 6).join(', ')
+    pairs.push({
+      '@type': 'Question',
+      name: `What services does ${clinic.name} offer?`,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: plainText(
+          `${clinic.name} offers a range of aesthetic and medical spa treatments including ${list}${
+            allTx.length > 6 ? `, and more` : ''
+          }.`
+        ),
+      },
+    })
+  }
+
+  // 2. Location — requires address or city
+  if (clinic.address || clinic.city) {
+    const loc = [clinic.address, clinic.city, clinic.state || 'FL']
+      .filter(Boolean)
+      .join(', ')
+    pairs.push({
+      '@type': 'Question',
+      name: `Where is ${clinic.name} located?`,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: plainText(`${clinic.name} is located at ${loc}.`),
+      },
+    })
+  }
+
+  // 3. Rating — requires googleRating and googleReviewCount
+  if (clinic.googleRating && clinic.googleReviewCount) {
+    pairs.push({
+      '@type': 'Question',
+      name: `What is ${clinic.name}'s rating?`,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: plainText(
+          `${clinic.name} has a ${clinic.googleRating} out of 5 star rating based on ${
+            clinic.googleReviewCount.toLocaleString()
+          } Google reviews.`
+        ),
+      },
+    })
+  }
+
+  // 4. Top treatment spotlight — requires at least 1 treatment
+  if (allTx.length > 0) {
+    const topTx = allTx[0]
+    pairs.push({
+      '@type': 'Question',
+      name: `Does ${clinic.name} offer ${topTx}?`,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: plainText(
+          `Yes, ${clinic.name} offers ${topTx} as one of their featured services.${allTx.length > 1 ? ` They also provide ${allTx.slice(1, 3).join(' and ')}.` : ''}`
+        ),
+      },
+    })
+  }
+
+  // 5. How to book / contact — requires phone or website or bookingUrl
+  if (clinic.phone || clinic.website || clinic.bookingUrl) {
+    const contactParts: string[] = []
+    if (clinic.bookingUrl) contactParts.push(`book online at ${clinic.bookingUrl}`)
+    if (clinic.phone) contactParts.push(`call ${clinic.phone}`)
+    if (clinic.website && !clinic.bookingUrl) contactParts.push(`visit their website at ${clinic.website}`)
+    pairs.push({
+      '@type': 'Question',
+      name: `How can I book an appointment at ${clinic.name}?`,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: plainText(
+          `You can ${contactParts.join(' or ')} to schedule an appointment at ${clinic.name}.`
+        ),
+      },
+    })
+  }
+
+  // 6. Price range — requires priceTier
+  if (clinic.priceTier) {
+    const tierLabel: Record<string, string> = {
+      '$': 'budget-friendly (under $100 per treatment)',
+      '$$': 'moderately priced ($100–$300 per treatment)',
+      '$$$': 'premium ($300–$600 per treatment)',
+      '$$$$': 'luxury ($600+ per treatment)',
+    }
+    const label = tierLabel[clinic.priceTier] ?? clinic.priceTier
+    pairs.push({
+      '@type': 'Question',
+      name: `What is the price range at ${clinic.name}?`,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: plainText(
+          `${clinic.name} is considered ${label}. Prices may vary by treatment and provider; contact the clinic for a personalized quote.`
+        ),
+      },
+    })
+  }
+
+  // Need at least 2 valid pairs to be meaningful
+  if (pairs.length < 2) return null
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: pairs,
+  }
+}
+
 /** Truncate a string to maxLen, appending suffix if cut */
 function truncate(str: string, maxLen: number, suffix = '…'): string {
   if (str.length <= maxLen) return str
@@ -314,6 +450,18 @@ export default async function ClinicProfilePage({ params }: PageProps) {
         strategy="beforeInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(clinicSchema) }}
       />
+
+      {(() => {
+        const faqSchema = buildFaqSchema(clinic)
+        return faqSchema ? (
+          <Script
+            id={`clinic-faq-schema-${clinic.slug}`}
+            type="application/ld+json"
+            strategy="beforeInteractive"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+          />
+        ) : null
+      })()}
 
       {/* Hero Image Banner */}
       <div className="w-full h-[260px] md:h-[340px] relative overflow-hidden bg-gradient-to-br from-[#0D1B2E] to-[#1a2e4a]">
