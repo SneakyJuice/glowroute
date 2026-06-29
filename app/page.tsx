@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import { SITE_URL } from '@/lib/config'
 import { fetchAllClinicsFromSupabase, fetchFeaturedClinic } from '@/data/supabase-clinics'
 import { calculateGlowScore } from '@/lib/glowscore'
 import { Clinic } from '@/types/clinic'
@@ -148,8 +149,40 @@ export default async function HomePage() {
   const initialClinics = getInitialClinics()
   const totalCount = allClinics.length
 
+  const orgSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    '@id': `${SITE_URL}/#organization`,
+    name: 'GlowRoute',
+    url: SITE_URL,
+    logo: `${SITE_URL}/logo.png`,
+    description: 'Discover and compare top-rated medical spas and aesthetic wellness clinics across Florida.',
+    sameAs: [] as string[],
+  }
+  const websiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${SITE_URL}/#website`,
+    url: SITE_URL,
+    name: 'GlowRoute',
+    publisher: { '@id': `${SITE_URL}/#organization` },
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: { '@type': 'EntryPoint', urlTemplate: `${SITE_URL}/clinics?q={search_term_string}` },
+      'query-input': 'required name=search_term_string',
+    },
+  }
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
       {/* ── SSR Preview: visible to crawlers, replaced by client JS after hydration ── */}
       <div id="ssr-clinic-preview" className="min-h-screen bg-ivory font-sans">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
