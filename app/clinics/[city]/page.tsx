@@ -43,8 +43,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (cityClinics.length === 0) return { title: 'Clinics — GlowRoute' }
 
   const count = cityClinics.length
-  const title = `Best MedSpas in ${displayCity}, FL — GlowRoute`
-  const description = `Discover ${count} verified medical spas and aesthetic clinics in ${displayCity}, FL. Compare services, ratings, and book appointments.`
+  const stateAbbr = (cityClinics.find(c => c.state)?.state || '').toUpperCase()
+  const cityState = stateAbbr ? `${displayCity}, ${stateAbbr}` : displayCity
+  const title = `Best MedSpas in ${cityState} — GlowRoute`
+  const description = `Discover ${count} verified medical spas and aesthetic clinics in ${cityState}. Compare services, ratings, and book appointments.`
   const url = `${SITE_URL}/clinics/${params.city}`
 
   return {
@@ -77,6 +79,10 @@ export default async function CityPage({ params }: Props) {
   if (sortedCityClinics.length === 0) notFound()
 
   const count = sortedCityClinics.length
+  // Market-dynamic: derive the real state from this city's clinics (site is national)
+  const stateAbbr = (sortedCityClinics.find(c => c.state)?.state || '').toUpperCase()
+  const region = stateAbbr || 'US'
+  const cityState = stateAbbr ? `${displayCity}, ${stateAbbr}` : displayCity
   const topClinics = sortedCityClinics.slice(0, 6)
   const avgRating = (sortedCityClinics.reduce((s, c) => s + c.googleRating, 0) / count).toFixed(1)
 
@@ -84,8 +90,8 @@ export default async function CityPage({ params }: Props) {
   const itemListSchema = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: `Best MedSpas in ${displayCity}, FL`,
-    description: `Top-rated medical spas and aesthetic clinics in ${displayCity}, Florida`,
+    name: `Best MedSpas in ${cityState}`,
+    description: `Top-rated medical spas and aesthetic clinics in ${cityState}`,
     url: `${SITE_URL}/clinics/${params.city}`,
     numberOfItems: Math.min(5, sortedCityClinics.length),
     itemListElement: sortedCityClinics.slice(0, 5).map((c, i) => ({
@@ -96,7 +102,7 @@ export default async function CityPage({ params }: Props) {
       item: {
         '@type': 'LocalBusiness',
         name: c.name,
-        address: { '@type': 'PostalAddress', addressLocality: c.city, addressRegion: 'FL', addressCountry: 'US' },
+        address: { '@type': 'PostalAddress', addressLocality: c.city, addressRegion: (c.state || region), addressCountry: 'US' },
         aggregateRating: {
           '@type': 'AggregateRating',
           ratingValue: c.googleRating,
@@ -128,10 +134,10 @@ export default async function CityPage({ params }: Props) {
             <span className="text-white/80">{displayCity}</span>
           </nav>
           <h1 className="font-serif text-3xl sm:text-4xl font-semibold mb-3">
-            Medical Spas in {displayCity}, FL
+            Medical Spas in {cityState}
           </h1>
           <p className="text-white/65 text-base leading-relaxed max-w-2xl mb-5">
-            Discover {count} verified medical spas and aesthetic clinics in {displayCity}, Florida.
+            Discover {count} verified medical spas and aesthetic clinics in {cityState}.
             Compare services, read real patient reviews, and book your appointment today.
           </p>
           {/* Stats row */}
@@ -139,7 +145,7 @@ export default async function CityPage({ params }: Props) {
             {[
               { label: 'Listings', value: count.toString() },
               { label: 'Avg Rating', value: `★ ${avgRating}` },
-              { label: 'City', value: `${displayCity}, FL` },
+              { label: 'City', value: cityState },
             ].map(({ label, value }) => (
               <div key={label}>
                 <p className="text-[11px] font-bold uppercase tracking-widest text-white/40 mb-0.5">{label}</p>
@@ -157,7 +163,7 @@ export default async function CityPage({ params }: Props) {
             Top-Rated Clinics in {displayCity}
           </h2>
           <Link href="/clinics" className="text-sm font-semibold text-sage hover:underline">
-            View all FL clinics →
+            View all clinics →
           </Link>
         </div>
 

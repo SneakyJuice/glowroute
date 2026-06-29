@@ -1,5 +1,6 @@
 import { Clinic } from '@/types/clinic'
 import { getSupabaseAdmin } from '@/lib/supabase'
+import { cache } from 'react'
 
 /** Returns true if a description contains garbled/binary/non-Latin encoded text */
 function isGarbledDescription(desc: string): boolean {
@@ -25,7 +26,7 @@ function generateDescription(clinic: Clinic): string {
     .filter((t, i, arr) => arr.indexOf(t) === i)
     .slice(0, 4)
 
-  const base = `${clinic.name} is a med spa and aesthetic wellness clinic in ${clinic.city}, FL.`
+  const base = `${clinic.name} is a med spa and aesthetic wellness clinic in ${clinic.city}${clinic.state ? ", " + clinic.state : ""}.`
   const services = treatments.length
     ? ` Services include ${treatments.join(', ')}.`
     : ''
@@ -100,7 +101,23 @@ export function mapSupabaseRow(row: any): Clinic {
  * Fetch all clinics from Supabase, map to Clinic[], clean, deduplicate.
  * This function is intended for server-side use only.
  */
-export async function fetchAllClinicsFromSupabase(): Promise<Clinic[]> {
+
+/**
+ * Module-level memo: within a single process/worker, fetch the full clinic
+ * table only ONCE. React cache() dedupes within a render pass; the module
+ * promise dedupes across the whole worker lifetime (build + ISR).
+ * This eliminates the N-parallel full-table scans that tripped Supabase's
+ * statement timeout during build (sitemap chunks + index + homepage).
+ */
+let _allClinicsPromise: Promise<Clinic[]> | null = null
+export const fetchAllClinicsFromSupabase = cache(async (): Promise<Clinic[]> => {
+  if (!_allClinicsPromise) {
+    _allClinicsPromise = _fetchAllClinicsImpl()
+  }
+  return _allClinicsPromise
+})
+
+async function _fetchAllClinicsImpl(): Promise<Clinic[]> {
   const supabase = getSupabaseAdmin()
   if (!supabase) {
     console.warn('[supabase-clinics] Supabase admin client not available, returning empty array')
