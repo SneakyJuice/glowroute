@@ -1,5 +1,6 @@
-// Force dynamic SSR — prevents build-time SSG timeout when fetching 15k clinic slugs
-export const dynamic = 'force-dynamic'
+// ISR: pre-render top 923 priority clinics; long tail generated on-demand then cached 24h
+export const revalidate = 86400
+export const dynamicParams = true
 
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
@@ -23,6 +24,7 @@ import { calculateGlowScore } from '@/lib/glowscore'
 import { GlowScoreProfileCard } from '@/components/GlowScoreBadge'
 import { PostHogClinicTracker } from '@/components/PostHogClinicTracker'
 import { TREATMENTS, TREATMENT_SLUGS } from '@/lib/treatments'
+import { TOP_CLINIC_PARAMS } from '@/data/seo-priority-params'
 import ClinicCard from '@/components/ClinicCard'
 
 /** Normalize a city name to a URL-safe slug */
@@ -47,7 +49,10 @@ async function fetchClinicBySlug(city: string, slug: string): Promise<Clinic | n
   return clean(mapSupabaseRow(data[0]))
 }
 
-// generateStaticParams removed — force-dynamic handles routing at request time
+/** Pre-render top-priority clinic pages at build time (ISR seed — no Supabase at build) */
+export async function generateStaticParams() {
+  return TOP_CLINIC_PARAMS
+}
 
 /** Truncate a string to maxLen, appending suffix if cut */
 function truncate(str: string, maxLen: number, suffix = '…'): string {
