@@ -1,4 +1,6 @@
-export const dynamic = 'force-dynamic'
+// ISR: pre-render top 40 city pages; long tail generated on-demand then cached 24h
+export const revalidate = 86400
+export const dynamicParams = true
 
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
@@ -7,6 +9,7 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import ClinicCard from '@/components/ClinicCard'
 import { fetchClinicsByCity, fetchAllClinicsFromSupabase } from '@/data/supabase-clinics'
+import { TOP_CITY_PARAMS } from '@/data/seo-priority-params'
 import { SITE_URL } from '@/lib/config'
 
 interface Props { params: { city: string } }
@@ -29,7 +32,10 @@ function toClinicSlug(city: string): string {
   return city.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
 }
 
-// generateStaticParams removed — force-dynamic handles routing at request time
+/** Pre-render top 40 city pages at build time (ISR seed — no Supabase at build) */
+export async function generateStaticParams() {
+  return TOP_CITY_PARAMS
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const cityClinics = await fetchClinicsByCity(params.city)
