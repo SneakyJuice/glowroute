@@ -1,6 +1,6 @@
 # GlowRoute
 
-> GlowRoute is a curated directory of top-rated medical spas and aesthetic wellness clinics across Florida. We help people discover, compare, and book verified providers for treatments like Botox, fillers, semaglutide/GLP-1, peptide therapy, hormone therapy (TRT), IV therapy, laser hair removal, and HydraFacial.
+> GlowRoute is a curated directory of top-rated medical spas and aesthetic wellness clinics nationwide (all 50 states). We help people discover, compare, and book verified providers for treatments like Botox, fillers, semaglutide/GLP-1, peptide therapy, hormone therapy (TRT), IV therapy, laser hair removal, and HydraFacial.
 
 ## Key pages
 - [All clinics](https://glowroute.io/clinics): Browse and filter every verified clinic by city, treatment, rating, and price.

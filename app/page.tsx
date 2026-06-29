@@ -10,8 +10,8 @@ import ClinicsClientV2 from '@/app/clinics/ClinicsClientV2'
 export const dynamic = 'force-dynamic'
 
 export const metadata: Metadata = {
-  title: 'GlowRoute — Find Top-Rated Med Spas & Aesthetic Clinics in Florida',
-  description: 'Discover and compare 4,000+ med spas and aesthetic clinics across Florida. Filter by treatment, city, and ratings. Powered by GlowScore™.',
+  title: 'GlowRoute — Find Top-Rated Med Spas & Aesthetic Clinics Near You',
+  description: 'Discover and compare 13,000+ med spas and aesthetic clinics nationwide. Filter by treatment, city, and ratings. Powered by GlowScore™.',
   alternates: {
     canonical: 'https://glowroute.io',
   },
@@ -156,7 +156,7 @@ export default async function HomePage() {
     name: 'GlowRoute',
     url: SITE_URL,
     logo: `${SITE_URL}/logo.png`,
-    description: 'Discover and compare top-rated medical spas and aesthetic wellness clinics across Florida.',
+    description: 'Discover and compare top-rated medical spas and aesthetic wellness clinics nationwide.',
     sameAs: [] as string[],
   }
   const websiteSchema = {
@@ -188,7 +188,7 @@ export default async function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <header className="mb-8">
             <h1 className="text-3xl font-bold text-onyx tracking-tight">
-              Find Top-Rated Med Spas &amp; Aesthetic Clinics in Florida
+              Find Top-Rated Med Spas &amp; Aesthetic Clinics Near You
             </h1>
             <p className="text-stone mt-2">
               Discover and compare {totalCount.toLocaleString()} med spas and aesthetic clinics.
