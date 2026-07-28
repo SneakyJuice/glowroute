@@ -14,6 +14,19 @@ export interface Article {
 
 export const ARTICLES: Article[] = [
   {
+    slug: 'peptide-reference-guide',
+    title: 'The GlowRoute Peptide Reference Guide: 40+ Compounds, Clearly Explained',
+    excerpt: 'A visual guide to FDA-approved peptide medicines, investigational candidates, and research-only compounds—organized by category, evidence, and what readers should ask next.',
+    category: 'Peptide Therapy',
+    readTime: '18 min read',
+    publishedAt: '2026-07-28',
+    featured: true,
+    audience: 'consumer',
+    tags: ['peptides', 'FDA-approved', 'research peptides', 'GLP-1', 'wellness guide'],
+    imageUrl: '/images/glowroute-peptide-reference-hero.jpg',
+    contentFile: 'peptide-reference-guide.md',
+  },
+  {
     slug: 'peptides-mainstream-npr-politico',
     title: "Peptides Hit the Mainstream — NPR, Politico, and the Moment That Changes Everything",
     excerpt: "Politico, NPR, and Town & Country just thrust peptides into the national spotlight. Here’s how to lock in a physician-supervised program before the waitlists explode.",

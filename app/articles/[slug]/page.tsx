@@ -185,7 +185,7 @@ export default function ArticleDetailPage({ params }: PageProps) {
       />
 
       {/* Hero Image */}
-      <div className="w-full h-[300px] md:h-[420px] overflow-hidden bg-stone/10">
+      <div className={`w-full h-[300px] md:h-[420px] overflow-hidden bg-stone/10 ${article.slug === 'peptide-reference-guide' ? 'peptide-reference-hero' : ''}`}>
         <img
           src={article.imageUrl}
           alt={article.title}
@@ -194,7 +194,7 @@ export default function ArticleDetailPage({ params }: PageProps) {
       </div>
 
       {/* Article Content */}
-      <main className="max-w-2xl mx-auto px-6 py-12">
+        <main className={`max-w-2xl mx-auto px-6 py-12 ${article.slug === 'peptide-reference-guide' ? 'peptide-reference-page' : ''}`}>
 
         {/* Back Link */}
         <Link

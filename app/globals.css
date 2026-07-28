@@ -262,3 +262,108 @@ body {
   color: var(--sage);
   word-break: break-all;
 }
+
+/* ─── Peptide Reference Guide ─── */
+.peptide-reference-hero img { object-position: center 46%; }
+.peptide-reference-page { max-width: 74rem; }
+.peptide-reference-page .prose-glowroute { max-width: none; }
+.peptide-reference-page .prose-glowroute > .article-h1:first-child { display: none; }
+.peptide-reference-page .article-p { max-width: 72ch; }
+.peptide-reference-page .article-h2 { max-width: 72ch; }
+
+.peptide-article__notice {
+  max-width: 72ch;
+  margin: 1.5rem 0 2rem;
+  padding: 1.1rem 1.25rem;
+  border-radius: 1rem;
+  font-size: .94rem;
+  line-height: 1.65;
+}
+.peptide-article__notice p { margin: .35rem 0 0; }
+.peptide-article__notice--gold { background: rgba(201,169,110,.14); border: 1px solid rgba(201,169,110,.36); }
+.peptide-article__notice--sage { background: rgba(74,103,65,.09); border: 1px solid rgba(74,103,65,.22); }
+.peptide-article__notice--dark { max-width: 72ch; background: var(--onyx); color: rgba(250,248,245,.9); border: 1px solid var(--onyx); }
+
+.peptide-status-grid, .peptide-category-grid, .peptide-card-grid, .peptide-checklist {
+  display: grid; gap: 1rem; margin: 1.5rem 0 2.25rem; max-width: 74rem;
+}
+.peptide-status-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.peptide-status-card { display: flex; gap: .85rem; align-items: flex-start; padding: 1.15rem; border-radius: 1rem; background: white; border: 1px solid rgba(140,130,121,.18); box-shadow: 0 8px 24px rgba(13,13,13,.035); }
+.peptide-status-card p { margin: .35rem 0 0; font-size: .88rem; line-height: 1.55; color: rgba(13,13,13,.68); }
+.peptide-status-card__icon { display: grid; place-items: center; flex: 0 0 2rem; height: 2rem; border-radius: 999px; font-weight: 700; background: rgba(74,103,65,.12); color: var(--sage); }
+.peptide-status-card--trial .peptide-status-card__icon { background: rgba(201,169,110,.18); color: #967535; }
+.peptide-status-card--research .peptide-status-card__icon { background: rgba(232,196,184,.28); color: #9a6656; }
+.peptide-status-card--review .peptide-status-card__icon { background: rgba(115,151,185,.15); color: #52799c; }
+
+.peptide-category-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.peptide-category-card { display: flex; flex-direction: column; min-height: 12rem; padding: 1.25rem; border-radius: 1.1rem; color: var(--onyx); text-decoration: none !important; border: 1px solid rgba(13,13,13,.08); transition: transform .18s ease, box-shadow .18s ease; }
+.peptide-category-card:hover { transform: translateY(-3px); box-shadow: 0 14px 28px rgba(13,13,13,.08); color: var(--onyx) !important; }
+.peptide-category-card strong { margin: .55rem 0 .45rem; font-family: var(--font-serif); font-size: 1.4rem; line-height: 1.1; }
+.peptide-category-card span:not(.peptide-category-card__eyebrow) { font-size: .87rem; line-height: 1.5; color: rgba(13,13,13,.67); }
+.peptide-category-card em { margin-top: auto; padding-top: 1rem; font-size: .72rem; text-transform: uppercase; letter-spacing: .1em; font-style: normal; font-weight: 700; color: rgba(13,13,13,.52); }
+.peptide-category-card__eyebrow { font-size: .66rem; text-transform: uppercase; letter-spacing: .12em; font-weight: 700; color: rgba(13,13,13,.52); }
+.peptide-category-card--sage { background: #e8efe5; }
+.peptide-category-card--gold { background: #f5ecd9; }
+.peptide-category-card--blush { background: #f5e5df; }
+.peptide-category-card--blue { background: #e4edf3; }
+
+.peptide-basics-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; margin: 1.5rem 0 2.25rem; }
+.peptide-basic-card { padding: 1.15rem; border-radius: 1rem; background: #fff; border: 1px solid rgba(140,130,121,.17); box-shadow: 0 8px 24px rgba(13,13,13,.035); }
+.peptide-basic-card__label { display: block; color: var(--champagne); font-size: .66rem; font-weight: 700; letter-spacing: .1em; line-height: 1.35; text-transform: uppercase; }
+.peptide-basic-card h3 { margin: .7rem 0 .45rem; color: var(--onyx); font-family: var(--font-serif); font-size: 1.35rem; line-height: 1.1; }
+.peptide-basic-card p { margin: 0; color: rgba(13,13,13,.68); font-size: .84rem; line-height: 1.6; }
+.peptide-device-feature { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(20rem, .95fr); gap: 1.5rem; align-items: stretch; margin: 1.75rem 0 2.25rem; overflow: hidden; border: 1px solid rgba(140,130,121,.17); border-radius: 1.2rem; background: #f5f0e9; box-shadow: 0 12px 30px rgba(13,13,13,.05); }
+.peptide-device-feature__copy { padding: 1.5rem 1.5rem 1.6rem; }
+.peptide-device-feature__copy h3 { margin: .55rem 0 .55rem; color: var(--onyx); font-family: var(--font-serif); font-size: 1.75rem; line-height: 1.05; }
+.peptide-device-feature__copy p { margin: 0 0 1rem; color: rgba(13,13,13,.7); font-size: .9rem; line-height: 1.65; }
+.peptide-device-feature__copy ul { margin: 0; padding-left: 1.15rem; color: rgba(13,13,13,.7); font-size: .84rem; line-height: 1.58; }
+.peptide-device-feature__copy li { margin: .45rem 0; padding-left: .15rem; }
+.peptide-device-feature__image { display: flex; flex-direction: column; min-height: 100%; background: #eae1d7; }
+.peptide-device-feature__image img { width: 100%; height: 100%; min-height: 22rem; object-fit: cover; object-position: 17% 16%; }
+.peptide-device-feature__image span { display: block; padding: .65rem .9rem .75rem; color: rgba(13,13,13,.55); font-size: .66rem; letter-spacing: .04em; line-height: 1.4; text-transform: uppercase; }
+
+.peptide-section-intro { max-width: 72ch; margin: 1.25rem 0 1.5rem; padding: .95rem 1.1rem; border-left: 3px solid var(--champagne); background: rgba(250,248,245,.9); font-size: .92rem; line-height: 1.65; }
+.peptide-table-wrap { width: 100%; overflow-x: auto; margin: 1.25rem 0 2rem; border: 1px solid rgba(140,130,121,.17); border-radius: 1rem; background: white; box-shadow: 0 8px 24px rgba(13,13,13,.035); }
+.peptide-table { width: 100%; min-width: 760px; border-collapse: collapse; font-size: .86rem; line-height: 1.5; }
+.peptide-table th { padding: .9rem 1rem; text-align: left; font-size: .67rem; text-transform: uppercase; letter-spacing: .1em; color: rgba(250,248,245,.9); background: var(--onyx); }
+.peptide-table td { padding: .9rem 1rem; vertical-align: top; border-bottom: 1px solid rgba(140,130,121,.12); color: rgba(13,13,13,.75); }
+.peptide-table tr:last-child td { border-bottom: none; }
+.peptide-table tr:nth-child(even) td { background: rgba(250,248,245,.62); }
+.peptide-table td:first-child { width: 22%; color: var(--onyx); }
+.peptide-table small { display: block; margin-top: .2rem; color: var(--stone); font-size: .78rem; }
+.peptide-badge { display: inline-flex; align-items: center; gap: .25rem; padding: .28rem .55rem; border-radius: 999px; white-space: nowrap; font-size: .64rem; line-height: 1.1; text-transform: uppercase; letter-spacing: .06em; font-weight: 700; }
+.peptide-badge--approved { color: #3c6035; background: #e6f0e3; }
+.peptide-badge--trial { color: #85671e; background: #f8edc9; }
+.peptide-badge--research { color: #945f50; background: #f6e2dc; }
+.peptide-badge--review { color: #4d7697; background: #e4eff6; }
+
+.peptide-card-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.peptide-info-card { padding: 1.2rem; border: 1px solid rgba(140,130,121,.17); border-radius: 1rem; background: white; box-shadow: 0 8px 24px rgba(13,13,13,.035); }
+.peptide-info-card__top { display: flex; justify-content: space-between; align-items: center; gap: .5rem; min-height: 1.5rem; }
+.peptide-info-card__number { font-size: .7rem; letter-spacing: .1em; color: var(--champagne); font-weight: 700; }
+.peptide-info-card h3 { margin: .9rem 0 .45rem; font-family: var(--font-serif); font-size: 1.45rem; color: var(--onyx); }
+.peptide-info-card p { margin: 0; font-size: .87rem; line-height: 1.6; color: rgba(13,13,13,.7); }
+.peptide-info-card__meta { display: flex; flex-direction: column; gap: .2rem; margin-top: 1rem; padding-top: .75rem; border-top: 1px solid rgba(140,130,121,.15); font-size: .74rem; line-height: 1.45; }
+.peptide-info-card__meta strong { color: var(--onyx); }
+.peptide-info-card__meta span { color: var(--stone); }
+.peptide-pill-row { display: flex; flex-wrap: wrap; gap: .55rem; margin: 1.25rem 0 2rem; }
+.peptide-pill-row span { padding: .5rem .75rem; border-radius: 999px; background: #f1eee8; border: 1px solid rgba(140,130,121,.15); font-size: .8rem; color: rgba(13,13,13,.72); }
+.peptide-checklist { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.peptide-checklist > div { padding: 1rem; border-radius: 1rem; background: #f5f2ed; border: 1px solid rgba(140,130,121,.13); }
+.peptide-checklist span { display: block; margin-bottom: .6rem; font-size: .67rem; letter-spacing: .1em; font-weight: 700; color: var(--champagne); }
+.peptide-checklist strong { display: block; margin-bottom: .35rem; font-family: var(--font-serif); font-size: 1.2rem; }
+.peptide-checklist p { margin: 0; font-size: .82rem; line-height: 1.55; color: rgba(13,13,13,.65); }
+
+@media (max-width: 900px) {
+  .peptide-category-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .peptide-basics-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .peptide-card-grid, .peptide-checklist { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 640px) {
+  .peptide-status-grid, .peptide-category-grid, .peptide-basics-grid, .peptide-card-grid, .peptide-checklist { grid-template-columns: 1fr; }
+  .peptide-device-feature { grid-template-columns: 1fr; }
+  .peptide-device-feature__image { order: -1; }
+  .peptide-device-feature__image img { min-height: 16rem; max-height: 20rem; }
+  .peptide-reference-page { padding-left: 1rem; padding-right: 1rem; }
+  .peptide-table { min-width: 680px; }
+}
