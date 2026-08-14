@@ -14,6 +14,32 @@ export interface Article {
 
 export const ARTICLES: Article[] = [
   {
+    slug: 'glowroute-retatrutide-crackdown-clinics',
+    title: 'What Lilly’s Retatrutide Crackdown Means for Clinics',
+    excerpt: 'Lilly’s enforcement campaign is a reminder that investigational drugs require a different compliance posture from approved GLP-1 treatments.',
+    category: 'Clinic Operations',
+    readTime: '8 min read',
+    publishedAt: '2026-08-14',
+    featured: true,
+    audience: 'clinic',
+    tags: ['retatrutide', 'clinic compliance', 'GLP-1', 'compounding', 'patient safety'],
+    imageUrl: '/images/glowroute-retatrutide-clinic-hero.jpg',
+    contentFile: 'glowroute-retatrutide-crackdown-clinics.md',
+  },
+  {
+    slug: 'retatrutide-biologics-compounding-patient-guide',
+    title: 'Retatrutide, Biologics, and the Compounding Fight: What Patients Need to Know',
+    excerpt: 'Retatrutide is still investigational. Here is what Lilly’s enforcement campaign means—and what it does not mean—for patients.',
+    category: 'Patient Safety',
+    readTime: '8 min read',
+    publishedAt: '2026-08-14',
+    featured: true,
+    audience: 'consumer',
+    tags: ['retatrutide', 'patient safety', 'GLP-1', 'compounding', 'weight management'],
+    imageUrl: '/images/glowroute-retatrutide-patient-hero.jpg',
+    contentFile: 'retatrutide-biologics-compounding-patient-guide.md',
+  },
+  {
     slug: 'peptide-reference-guide',
     title: 'The GlowRoute Peptide Reference Guide: 40+ Compounds, Clearly Explained',
     excerpt: 'A visual guide to FDA-approved peptide medicines, investigational candidates, and research-only compounds—organized by category, evidence, and what readers should ask next.',
