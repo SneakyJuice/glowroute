@@ -4,70 +4,78 @@ import { getSupabaseAdmin } from '@/lib/supabase'
 export const SITEMAP_CHUNK_SIZE = 5000
 
 export type SitemapClinic = {
+  id: string | number
   slug: string
   city: string
 }
 
-export function citySlug(city: string): string {
-  return city.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '')
-}
-
-function normalizeSlug(slug: string): string {
-  return (slug || '').replace(/^\/+/, '')
-}
-
-/** Count only. Used by the sitemap index so /sitemap.xml never loads clinic rows. */
-export async function fetchSitemapClinicCount(): Promise<number> {
-  const supabase = getSupabaseAdmin()
-  if (!supabase) return 0
-
-  const { count, error } = await supabase
-    .from('clinics')
-    .select('id', { count: 'exact', head: true })
-    .in('visibility', ['visible'])
-
-  if (error) {
-    console.error('[sitemap] count failed:', error.message)
-    return 0
+export class SitemapDataError extends Error {
+  constructor(message: string) {
+    super(message)
+    this.name = 'SitemapDataError'
   }
+}
+
+export function citySlug(city: string): string {
+  return city
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, '-')
+    .replace(/[^a-z0-9-]/g, '')
+    .replace(/-+/g, '-')
+}
+
+function requireSupabase() {
+  const supabase = getSupabaseAdmin()
+  if (!supabase) {
+    throw new SitemapDataError('Supabase is not configured for sitemap generation')
+  }
+  return supabase
+}
+
+/**
+ * Count the deduplicated sitemap view. The index and chunk routes are both
+ * dynamic, so this count cannot drift from the routes that actually exist.
+ */
+export async function fetchSitemapClinicCount(): Promise<number> {
+  const supabase = requireSupabase()
+  const { count, error } = await supabase
+    .from('sitemap_clinics')
+    .select('id', { count: 'exact', head: true })
+
+  if (error) throw new SitemapDataError(`Sitemap count failed: ${error.message}`)
   return count ?? 0
 }
 
-/** One chunk of clinic URLs. Only slug + city — never select(*). */
+/** One deterministic, globally deduplicated chunk: only id + slug + city. */
 export async function fetchSitemapClinicChunk(chunkIndex: number): Promise<SitemapClinic[]> {
-  const supabase = getSupabaseAdmin()
-  if (!supabase) return []
+  if (!Number.isInteger(chunkIndex) || chunkIndex < 0) {
+    throw new SitemapDataError(`Invalid sitemap chunk: ${chunkIndex}`)
+  }
 
+  const supabase = requireSupabase()
   const from = chunkIndex * SITEMAP_CHUNK_SIZE
   const to = from + SITEMAP_CHUNK_SIZE - 1
   const { data, error } = await supabase
-    .from('clinics')
-    .select('slug, city')
-    .in('visibility', ['visible'])
-    .order('glow_score', { ascending: false })
+    .from('sitemap_clinics')
+    .select('id, slug, city')
+    // The id tie-breaker makes range pagination stable when scores are equal.
+    .order('glow_score', { ascending: false, nullsFirst: false })
+    .order('id', { ascending: true })
     .range(from, to)
 
-  if (error) {
-    console.error('[sitemap] chunk fetch failed:', error.message)
-    return []
-  }
+  if (error) throw new SitemapDataError(`Sitemap chunk failed: ${error.message}`)
 
-  const seen = new Set<string>()
-  const rows: SitemapClinic[] = []
-  for (const row of data ?? []) {
-    const slug = normalizeSlug(row.slug)
-    if (!slug || seen.has(slug)) continue
-    seen.add(slug)
-    rows.push({ slug, city: row.city || '' })
-  }
-  return rows
+  return (data ?? []).filter((row) => row.slug && row.city).map((row) => ({
+    id: row.id,
+    slug: String(row.slug).replace(/^\/+/, ''),
+    city: String(row.city),
+  }))
 }
 
-/** Unique city slugs for /clinics/{city} pages. City names only. */
+/** Unique city slugs for /clinics/{city} pages. */
 export async function fetchSitemapCities(): Promise<string[]> {
-  const supabase = getSupabaseAdmin()
-  if (!supabase) return []
-
+  const supabase = requireSupabase()
   const BATCH = 1000
   const cities = new Set<string>()
   let page = 0
@@ -76,45 +84,34 @@ export async function fetchSitemapCities(): Promise<string[]> {
     const from = page * BATCH
     const to = from + BATCH - 1
     const { data, error } = await supabase
-      .from('clinics')
-      .select('city')
-      .in('visibility', ['visible'])
+      .from('sitemap_clinics')
+      .select('id, city')
       .order('city', { ascending: true })
+      .order('id', { ascending: true })
       .range(from, to)
 
-    if (error) {
-      console.error('[sitemap] cities fetch failed:', error.message)
-      break
-    }
+    if (error) throw new SitemapDataError(`Sitemap cities failed: ${error.message}`)
     if (!data || data.length === 0) break
 
     for (const row of data) {
-      if (row.city) cities.add(citySlug(row.city))
+      if (row.city) cities.add(citySlug(String(row.city)))
     }
     if (data.length < BATCH) break
     page++
   }
 
-  return Array.from(cities)
+  return Array.from(cities).filter(Boolean)
 }
 
 export async function fetchTopClaimSlugs(limit = 200): Promise<string[]> {
-  const supabase = getSupabaseAdmin()
-  if (!supabase) return []
-
+  const supabase = requireSupabase()
   const { data, error } = await supabase
-    .from('clinics')
+    .from('sitemap_clinics')
     .select('slug')
-    .in('visibility', ['visible'])
-    .order('glow_score', { ascending: false })
+    .order('glow_score', { ascending: false, nullsFirst: false })
+    .order('id', { ascending: true })
     .limit(limit)
 
-  if (error) {
-    console.error('[sitemap] claim slugs failed:', error.message)
-    return []
-  }
-
-  return (data ?? [])
-    .map((row) => normalizeSlug(row.slug))
-    .filter(Boolean)
+  if (error) throw new SitemapDataError(`Sitemap claim pages failed: ${error.message}`)
+  return Array.from(new Set((data ?? []).map((row) => String(row.slug).replace(/^\/+/, '')).filter(Boolean)))
 }
