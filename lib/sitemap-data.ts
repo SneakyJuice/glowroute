@@ -2,6 +2,8 @@ import { getSupabaseAdmin } from '@/lib/supabase'
 
 /** Google allows 50k URLs per file; stay well under for payload size. */
 export const SITEMAP_CHUNK_SIZE = 5000
+/** PostgREST/Supabase default max-rows is 1000; page under that inside each chunk. */
+const SITEMAP_PAGE_SIZE = 1000
 
 export type SitemapClinic = {
   id: string | number
@@ -56,21 +58,33 @@ export async function fetchSitemapClinicChunk(chunkIndex: number): Promise<Sitem
   const supabase = requireSupabase()
   const from = chunkIndex * SITEMAP_CHUNK_SIZE
   const to = from + SITEMAP_CHUNK_SIZE - 1
-  const { data, error } = await supabase
-    .from('sitemap_clinics')
-    .select('id, slug, city')
-    // The id tie-breaker makes range pagination stable when scores are equal.
-    .order('glow_score', { ascending: false, nullsFirst: false })
-    .order('id', { ascending: true })
-    .range(from, to)
+  const rows: SitemapClinic[] = []
 
-  if (error) throw new SitemapDataError(`Sitemap chunk failed: ${error.message}`)
+  for (let start = from; start <= to; start += SITEMAP_PAGE_SIZE) {
+    const end = Math.min(start + SITEMAP_PAGE_SIZE - 1, to)
+    const { data, error } = await supabase
+      .from('sitemap_clinics')
+      .select('id, slug, city')
+      // The id tie-breaker makes range pagination stable when scores are equal.
+      .order('glow_score', { ascending: false, nullsFirst: false })
+      .order('id', { ascending: true })
+      .range(start, end)
 
-  return (data ?? []).filter((row) => row.slug && row.city).map((row) => ({
-    id: row.id,
-    slug: String(row.slug).replace(/^\/+/, ''),
-    city: String(row.city),
-  }))
+    if (error) throw new SitemapDataError(`Sitemap chunk failed: ${error.message}`)
+    if (!data || data.length === 0) break
+
+    for (const row of data) {
+      if (!row.slug || !row.city) continue
+      rows.push({
+        id: row.id,
+        slug: String(row.slug).replace(/^\/+/, ''),
+        city: String(row.city),
+      })
+    }
+    if (data.length < end - start + 1) break
+  }
+
+  return rows
 }
 
 /** Unique city slugs for /clinics/{city} pages. */
