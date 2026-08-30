@@ -8,6 +8,16 @@ const nextConfig = {
     domains: ['maps.googleapis.com', 'lh3.googleusercontent.com', 'psiuknphchmhsthvhkpt.supabase.co'],
   },
   trailingSlash: false,
+  async rewrites() {
+    return {
+      afterFiles: [
+        {
+          source: '/sitemap/:id(\\d+)\\.xml',
+          destination: '/sitemap-chunk/:id',
+        },
+      ],
+    }
+  },
 }
 
 module.exports = nextConfig

@@ -102,16 +102,3 @@ export async function fetchSitemapCities(): Promise<string[]> {
 
   return Array.from(cities).filter(Boolean)
 }
-
-export async function fetchTopClaimSlugs(limit = 200): Promise<string[]> {
-  const supabase = requireSupabase()
-  const { data, error } = await supabase
-    .from('sitemap_clinics')
-    .select('slug')
-    .order('glow_score', { ascending: false, nullsFirst: false })
-    .order('id', { ascending: true })
-    .limit(limit)
-
-  if (error) throw new SitemapDataError(`Sitemap claim pages failed: ${error.message}`)
-  return Array.from(new Set((data ?? []).map((row) => String(row.slug).replace(/^\/+/, '')).filter(Boolean)))
-}
