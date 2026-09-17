@@ -9,6 +9,7 @@ import {
   MIAMI_VIEW_ALL_HREF,
   QUIZ_METADATA,
   SITEMAP0_LOCKED_PATHS,
+  clinicSlugLookupCandidates,
   getCitySeoOverride,
   getClaimSeoOverride,
   getClinicSeoOverride,
@@ -98,6 +99,17 @@ describe('SkinLocal claim SEO', () => {
     assert.equal(isClaimSlugInSitemap('skinlocal-dadeland-miami'), false)
     assert.equal(isClaimSlugInSitemap('skinlocal-dadeland-miami-fl'), false)
     assert.ok(CLAIM_SLUG_OVERRIDES['skinlocal-dadeland-miami'])
+  })
+
+  it('looks up claim clinics by locked slug and -fl alias', () => {
+    assert.deepEqual(clinicSlugLookupCandidates('skinlocal-dadeland-miami'), [
+      'skinlocal-dadeland-miami',
+      'skinlocal-dadeland-miami-fl',
+    ])
+    assert.deepEqual(clinicSlugLookupCandidates('skinlocal-dadeland-miami-fl'), [
+      'skinlocal-dadeland-miami-fl',
+      'skinlocal-dadeland-miami',
+    ])
   })
 })
 

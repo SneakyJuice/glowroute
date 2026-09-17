@@ -5,18 +5,25 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-import { allClinics } from '@/data/all-clinics'
+import { fetchClinicByExactSlug } from '@/data/supabase-clinics'
 import { SITE_URL } from '@/lib/config'
-import { getClaimSeoOverride } from '@/lib/seo-page-overrides'
+import { clinicSlugLookupCandidates, getClaimSeoOverride } from '@/lib/seo-page-overrides'
 import { PLANS } from '@/lib/stripe'
 import ClaimCheckoutButton from './ClaimCheckoutButton'
 import { trackClaimStarted } from '@/components/PostHogClinicTracker'
 
 interface Props { params: { slug: string } }
 
+async function fetchClaimClinic(slug: string) {
+  for (const candidate of clinicSlugLookupCandidates(slug)) {
+    const clinic = await fetchClinicByExactSlug(candidate)
+    if (clinic) return clinic
+  }
+  return null
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const clinics = await allClinics
-  const clinic = clinics.find(c => c.slug === params.slug)
+  const clinic = await fetchClaimClinic(params.slug)
   const claimOverride = getClaimSeoOverride(params.slug)
   const title = claimOverride?.title ?? (clinic ? `Claim ${clinic.name} — GlowRoute` : 'Claim Your Listing — GlowRoute')
   const description = claimOverride?.description ?? (
@@ -48,8 +55,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 const PLAN_ORDER = ['starter', 'growth', 'pro'] as const
 
 export default async function ClaimSlugPage({ params }: Props) {
-  const clinics = await allClinics
-  const clinic = clinics.find(c => c.slug === params.slug)
+  const clinic = await fetchClaimClinic(params.slug)
   if (!clinic) notFound()
   const claimOverride = getClaimSeoOverride(params.slug)
 

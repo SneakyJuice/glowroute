@@ -282,6 +282,21 @@ export async function fetchClinicsByCity(citySlug: string): Promise<Clinic[]> {
 /**
  * Featured clinic: first clinic with featured flag, or first clinic.
  */
+/** Single-row slug lookup. Avoids the full-table scan used by allClinics. */
+export async function fetchClinicByExactSlug(slug: string): Promise<Clinic | null> {
+  const supabase = getSupabaseAdmin()
+  if (!supabase || !slug) return null
+
+  const { data, error } = await supabase
+    .from('clinics')
+    .select('*')
+    .eq('slug', slug)
+    .limit(1)
+
+  if (error || !data || data.length === 0) return null
+  return clean(mapSupabaseRow(data[0]))
+}
+
 export async function fetchFeaturedClinic(): Promise<Clinic | null> {
   const supabase = getSupabaseAdmin()
   if (!supabase) return null

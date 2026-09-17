@@ -112,6 +112,13 @@ function stripFlSuffix(slug: string): string {
   return slug.replace(/-fl$/, '')
 }
 
+/** Locked URLs drop `-fl`; local/static rows sometimes keep it. Try both. */
+export function clinicSlugLookupCandidates(slug: string): string[] {
+  const stripped = stripFlSuffix(slug)
+  const withFl = stripped.endsWith('-fl') ? stripped : `${stripped}-fl`
+  return Array.from(new Set([slug, stripped, withFl].filter(Boolean)))
+}
+
 export function getCitySeoOverride(city: string): CitySeoOverride | undefined {
   if (city === 'miami') return MIAMI_CITY_METADATA
   return undefined
