@@ -1,6 +1,7 @@
 import { Clinic } from '@/types/clinic'
 import { getSupabaseAdmin } from '@/lib/supabase'
 import { cache } from 'react'
+import { aggregateLiveCityHubs, type LiveCityHub } from '@/lib/seo-page-overrides'
 
 /** Returns true if a description contains garbled/binary/non-Latin encoded text */
 function isGarbledDescription(desc: string): boolean {
@@ -183,6 +184,58 @@ async function _fetchAllClinicsImpl(): Promise<Clinic[]> {
     return cleaned
   } catch (err) {
     console.error('[supabase-clinics] Unexpected error:', err)
+    return []
+  }
+}
+
+/**
+ * Distinct live /clinics/{city} hubs from visible clinic rows, with centroid coords.
+ * Lightweight columns only — used for Nearby Cities, not the 6-card grid.
+ */
+let _liveCityHubsPromise: Promise<LiveCityHub[]> | null = null
+export const fetchLiveCityHubs = cache(async (): Promise<LiveCityHub[]> => {
+  if (!_liveCityHubsPromise) {
+    _liveCityHubsPromise = _fetchLiveCityHubsImpl()
+  }
+  return _liveCityHubsPromise
+})
+
+async function _fetchLiveCityHubsImpl(): Promise<LiveCityHub[]> {
+  const supabase = getSupabaseAdmin()
+  if (!supabase) {
+    console.warn('[supabase-clinics] Supabase admin client not available, returning empty city hubs')
+    return []
+  }
+
+  const BATCH_SIZE = 1000
+  const rows: Array<{ city?: string | null; state?: string | null; lat?: number | null; lng?: number | null }> = []
+  let page = 0
+
+  try {
+    while (true) {
+      const from = page * BATCH_SIZE
+      const to = from + BATCH_SIZE - 1
+      const { data, error } = await supabase
+        .from('clinics')
+        .select('city, state, lat, lng')
+        .in('visibility', ['visible'])
+        .range(from, to)
+
+      if (error) {
+        console.error('[supabase-clinics] fetchLiveCityHubs error:', error.message)
+        break
+      }
+      if (!data || data.length === 0) break
+      rows.push(...data)
+      if (data.length < BATCH_SIZE) break
+      page += 1
+    }
+
+    const hubs = aggregateLiveCityHubs(rows)
+    console.log(`[supabase-clinics] fetchLiveCityHubs: ${hubs.length} live city hubs`)
+    return hubs
+  } catch (err) {
+    console.error('[supabase-clinics] fetchLiveCityHubs unexpected error:', err)
     return []
   }
 }

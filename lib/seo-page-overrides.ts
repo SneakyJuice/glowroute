@@ -1,6 +1,19 @@
 /** Locked GlowRoute directory SEO overrides. Targeted slugs only. */
 
 export const GUIDE_YEAR = 2026
+export const NEARBY_HUB_LIMIT = 10
+export const NEARBY_METRO_MILES = 75
+export const NEARBY_MAX_MILES = 100
+
+function milesBetween(lat1: number, lng1: number, lat2: number, lng2: number): number {
+  const earthMiles = 3958.8
+  const dLat = ((lat2 - lat1) * Math.PI) / 180
+  const dLng = ((lng2 - lng1) * Math.PI) / 180
+  const a =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos((lat1 * Math.PI) / 180) * Math.cos((lat2 * Math.PI) / 180) * Math.sin(dLng / 2) ** 2
+  return earthMiles * 2 * Math.asin(Math.sqrt(a))
+}
 
 /** Extra static paths that must appear in sitemap chunk 0. No /claim/{slug}. */
 export const SITEMAP0_LOCKED_PATHS = ['/guides/botox-cost'] as const
@@ -122,9 +135,165 @@ export function clinicSlugLookupCandidates(slug: string): string[] {
   return Array.from(new Set([slug, stripped, withFl].filter(Boolean)))
 }
 
-export function getCitySeoOverride(city: string): CitySeoOverride | undefined {
-  if (city === 'miami') return MIAMI_CITY_METADATA
-  return undefined
+export type LiveCityHub = {
+  slug: string
+  state?: string
+  lat?: number
+  lng?: number
+}
+
+export type CityHubSeoContext = {
+  stateAbbr?: string
+  nearbyHubs?: readonly string[]
+}
+
+export function toCitySlug(city: string): string {
+  return city
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, '-')
+    .replace(/[^a-z0-9-]/g, '')
+    .replace(/-+/g, '-')
+}
+
+export function cityHubKeywords(displayCity: string): string[] {
+  return [
+    `${displayCity} medspa`,
+    `${displayCity} medical spa`,
+    `Botox ${displayCity}`,
+    `HydraFacial ${displayCity}`,
+    `aesthetic clinic ${displayCity}`,
+  ]
+}
+
+export function cityHubViewAllHref(displayCity: string): string {
+  return `/clinics?city=${encodeURIComponent(displayCity)}`
+}
+
+export function cityHubCentroid(
+  clinics: ReadonlyArray<{ lat?: number; lng?: number }>,
+): { lat?: number; lng?: number } {
+  let latSum = 0
+  let lngSum = 0
+  let count = 0
+  for (const clinic of clinics) {
+    const lat = Number(clinic.lat)
+    const lng = Number(clinic.lng)
+    if (!Number.isFinite(lat) || !Number.isFinite(lng) || lat === 0 || lng === 0) continue
+    latSum += lat
+    lngSum += lng
+    count += 1
+  }
+  if (!count) return {}
+  return { lat: latSum / count, lng: lngSum / count }
+}
+
+export function aggregateLiveCityHubs(
+  rows: ReadonlyArray<{ city?: string | null; state?: string | null; lat?: number | null; lng?: number | null }>,
+): LiveCityHub[] {
+  const bySlug: Record<
+    string,
+    { slug: string; states: Record<string, number>; latSum: number; lngSum: number; coordCount: number }
+  > = {}
+
+  for (const row of rows) {
+    if (!row.city) continue
+    const slug = toCitySlug(String(row.city))
+    if (!slug) continue
+    let entry = bySlug[slug]
+    if (!entry) {
+      entry = { slug, states: {}, latSum: 0, lngSum: 0, coordCount: 0 }
+      bySlug[slug] = entry
+    }
+    const state = String(row.state || '').trim().toUpperCase()
+    if (state) entry.states[state] = (entry.states[state] || 0) + 1
+    const lat = Number(row.lat)
+    const lng = Number(row.lng)
+    if (Number.isFinite(lat) && Number.isFinite(lng) && lat !== 0 && lng !== 0) {
+      entry.latSum += lat
+      entry.lngSum += lng
+      entry.coordCount += 1
+    }
+  }
+
+  return Object.keys(bySlug).map((slug) => {
+    const entry = bySlug[slug]
+    let state: string | undefined
+    let best = 0
+    const stateKeys = Object.keys(entry.states)
+    for (let i = 0; i < stateKeys.length; i++) {
+      const abbr = stateKeys[i]
+      const count = entry.states[abbr]
+      if (count > best) {
+        state = abbr
+        best = count
+      }
+    }
+    return {
+      slug: entry.slug,
+      state,
+      lat: entry.coordCount ? entry.latSum / entry.coordCount : undefined,
+      lng: entry.coordCount ? entry.lngSum / entry.coordCount : undefined,
+    }
+  })
+}
+
+/** Live hubs only. Hard max 100 mi for every candidate — never backfill farther same-state hubs. */
+export function selectNearbyCityHubs(
+  city: string,
+  liveHubs: readonly LiveCityHub[],
+  origin?: { lat?: number; lng?: number; state?: string },
+): string[] {
+  if (city === 'miami') return [...MIAMI_NEARBY_HUBS]
+  if (!liveHubs.length) return []
+
+  const self = liveHubs.find((hub) => hub.slug === city)
+  const lat = origin?.lat ?? self?.lat
+  const lng = origin?.lng ?? self?.lng
+  const others = liveHubs.filter((hub) => hub.slug && hub.slug !== city)
+
+  const scored = others.map((hub) => {
+    const hasGeo =
+      Number.isFinite(lat) &&
+      Number.isFinite(lng) &&
+      Number.isFinite(hub.lat) &&
+      Number.isFinite(hub.lng)
+    const miles = hasGeo
+      ? milesBetween(lat as number, lng as number, hub.lat as number, hub.lng as number)
+      : Number.POSITIVE_INFINITY
+    return { slug: hub.slug, miles }
+  })
+
+  const inRange = scored
+    .filter((item) => item.miles <= NEARBY_MAX_MILES)
+    .sort((a, b) => (a.miles !== b.miles ? a.miles - b.miles : a.slug.localeCompare(b.slug)))
+
+  const picked: string[] = []
+  for (const item of inRange) {
+    if (picked.length >= NEARBY_HUB_LIMIT) break
+    picked.push(item.slug)
+  }
+  return picked
+}
+
+export function buildCityHubSeo(city: string, context: CityHubSeoContext = {}): CitySeoOverride {
+  const displayCity = citySlugToDisplay(city)
+  const stateAbbr = (city === 'miami' ? 'FL' : context.stateAbbr || '').toUpperCase()
+  const cityState = stateAbbr ? `${displayCity}, ${stateAbbr}` : displayCity
+  const nearbyHubs = city === 'miami' ? MIAMI_NEARBY_HUBS : (context.nearbyHubs ?? [])
+
+  return {
+    title: `Best MedSpas in ${cityState} — GlowRoute`,
+    description: `Find medical spas and aesthetic clinics in ${cityState}. Compare Botox, HydraFacial, laser, and more on GlowRoute.`,
+    keywords: cityHubKeywords(displayCity),
+    viewAllHref: cityHubViewAllHref(displayCity),
+    canonicalPath: `/clinics/${city}`,
+    nearbyHubs,
+  }
+}
+
+export function getCitySeoOverride(city: string, context: CityHubSeoContext = {}): CitySeoOverride {
+  return buildCityHubSeo(city, context)
 }
 
 export function getClinicSeoOverride(city: string, slug: string): ClinicSeoOverride | undefined {
