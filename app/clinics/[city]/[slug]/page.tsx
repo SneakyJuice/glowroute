@@ -16,7 +16,12 @@ import QuizCTA from '@/components/QuizCTA'
 import AvailabilityBadge from '@/components/AvailabilityBadge'
 import CreatorBadge from '@/components/CreatorBadge'
 import { SITE_URL } from '@/lib/config'
-import { getClinicSeoOverride, sanitizeSeoText } from '@/lib/seo-page-overrides'
+import {
+  clinicClaimPromoCopy,
+  getClinicSeoOverride,
+  sanitizeSeoText,
+  showClinicVerifiedPromo,
+} from '@/lib/seo-page-overrides'
 import { getVibeTags, detectBookingPlatform, VIBE_STYLES } from '@/lib/vibes'
 import type { VibeTag } from '@/lib/vibes'
 import { detectInfluencer, getInfluencerTier } from '@/lib/influencer'
@@ -404,7 +409,9 @@ export default async function ClinicProfilePage({ params }: PageProps) {
                 )}
                 <div className="flex-1 min-w-0">
                   <div className="flex flex-wrap items-center gap-2 mb-1">
-                    {clinic.verified && <VerifiedBadge className="static" />}
+                    {clinic.verified && showClinicVerifiedPromo(clinicOverride) && (
+                      <VerifiedBadge className="static" />
+                    )}
                     {clinic.featured && (
                       <span className="bg-gold text-white text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full">
                         ⭐ Featured
@@ -684,7 +691,11 @@ export default async function ClinicProfilePage({ params }: PageProps) {
                         : 'bg-gray-100 text-gray-500'
                     }`}
                   >
-                    {clinic.verified ? '✓ Verified' : 'Unverified'}
+                    {clinic.verified && showClinicVerifiedPromo(clinicOverride)
+                      ? '✓ Verified'
+                      : clinic.verified
+                        ? 'Listed'
+                        : 'Unverified'}
                   </span>
                 </div>
                 {isUnclaimed && (
@@ -739,7 +750,7 @@ export default async function ClinicProfilePage({ params }: PageProps) {
                 <div className="text-xl mb-1.5 relative">🏢</div>
                 <h3 className="text-white font-bold text-sm mb-1.5 relative">Is this your clinic?</h3>
                 <p className="text-white/60 text-xs mb-4 relative leading-relaxed">
-                  430+ patients searched your area last month. Claim your listing to capture leads.
+                  {clinicClaimPromoCopy(clinicOverride)}
                 </p>
                 <a
                   href={`/claim/${clinic.slug}`}

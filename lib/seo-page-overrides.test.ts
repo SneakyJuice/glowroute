@@ -9,12 +9,14 @@ import {
   MIAMI_VIEW_ALL_HREF,
   QUIZ_METADATA,
   SITEMAP0_LOCKED_PATHS,
+  clinicClaimPromoCopy,
   clinicSlugLookupCandidates,
   getCitySeoOverride,
   getClaimSeoOverride,
   getClinicSeoOverride,
   isClaimSlugInSitemap,
   sanitizeSeoText,
+  showClinicVerifiedPromo,
 } from './seo-page-overrides.ts'
 
 describe('Miami city hub SEO', () => {
@@ -83,6 +85,29 @@ describe('Miami Plastic Surgery clinic SEO', () => {
   it('does not override unrelated clinic slugs', () => {
     assert.equal(getClinicSeoOverride('miami', 'lux-medspa-brickell'), undefined)
     assert.equal(getClinicSeoOverride('tampa', 'miami-plastic-surgery-miami'), undefined)
+  })
+
+  it('does not render 430+ or Verified promo on the locked clinic route', () => {
+    const clinic = getClinicSeoOverride('miami', 'miami-plastic-surgery-miami')
+    const alias = getClinicSeoOverride('miami', 'miami-plastic-surgery-miami-fl')
+    assert.ok(clinic)
+    assert.equal(clinic.suppressRankingPromo, true)
+    assert.equal(alias?.suppressRankingPromo, true)
+
+    const copy = clinicClaimPromoCopy(clinic)
+    assert.notEqual(copy, undefined)
+    assert.equal((copy ?? '').includes('430+'), false)
+    assert.equal(/verified/i.test(copy ?? ''), false)
+    assert.equal(showClinicVerifiedPromo(clinic), false)
+    assert.equal(showClinicVerifiedPromo(undefined), true)
+
+    const defaultCopy = clinicClaimPromoCopy(undefined)
+    assert.match(defaultCopy ?? '', /430\+/)
+
+    const page = readFileSync(new URL('../app/clinics/[city]/[slug]/page.tsx', import.meta.url), 'utf8')
+    assert.match(page, /clinicClaimPromoCopy/)
+    assert.match(page, /showClinicVerifiedPromo/)
+    assert.doesNotMatch(page, /430\+ patients searched your area last month/)
   })
 })
 

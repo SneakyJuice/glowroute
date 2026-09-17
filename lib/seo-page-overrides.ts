@@ -52,6 +52,8 @@ export type ClinicSeoOverride = {
   backHref: string
   backLabel: string
   canonicalPath: string
+  /** Hide invented 430+ / Verified promo chrome on this clinic route. */
+  suppressRankingPromo?: boolean
 }
 
 export type ClaimSeoOverride = {
@@ -79,6 +81,7 @@ export const CLINIC_SLUG_OVERRIDES: Record<string, ClinicSeoOverride> = {
     backHref: '/clinics/miami',
     backLabel: 'Back to Miami clinics',
     canonicalPath: '/clinics/miami/miami-plastic-surgery-miami',
+    suppressRankingPromo: true,
   },
 }
 
@@ -135,6 +138,21 @@ export function getClaimSeoOverride(slug: string): ClaimSeoOverride | undefined 
 /** Claim hub `/claim` may be indexed; individual `/claim/{slug}` pages must not. */
 export function isClaimSlugInSitemap(_slug: string): boolean {
   return false
+}
+
+export const DEFAULT_CLINIC_CLAIM_PROMO =
+  '430+ patients searched your area last month. Claim your listing to capture leads.'
+
+export const LOCKED_CLINIC_CLAIM_PROMO = 'Claim your listing to capture leads.'
+
+/** Claim-CTA body copy. Locked slugs drop 430+ / Verified social proof. */
+export function clinicClaimPromoCopy(override?: ClinicSeoOverride | null): string {
+  if (override?.suppressRankingPromo) return LOCKED_CLINIC_CLAIM_PROMO
+  return DEFAULT_CLINIC_CLAIM_PROMO
+}
+
+export function showClinicVerifiedPromo(override?: ClinicSeoOverride | null): boolean {
+  return !override?.suppressRankingPromo
 }
 
 export function sanitizeSeoText(text: string): string {
