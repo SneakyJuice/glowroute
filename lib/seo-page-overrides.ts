@@ -1,10 +1,18 @@
 /** Locked GlowRoute directory SEO overrides. Targeted slugs only. */
 
-import { haversine } from './geo.ts'
-
 export const GUIDE_YEAR = 2026
 export const NEARBY_HUB_LIMIT = 10
 export const NEARBY_METRO_MILES = 75
+
+function milesBetween(lat1: number, lng1: number, lat2: number, lng2: number): number {
+  const earthMiles = 3958.8
+  const dLat = ((lat2 - lat1) * Math.PI) / 180
+  const dLng = ((lng2 - lng1) * Math.PI) / 180
+  const a =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos((lat1 * Math.PI) / 180) * Math.cos((lat2 * Math.PI) / 180) * Math.sin(dLng / 2) ** 2
+  return earthMiles * 2 * Math.asin(Math.sqrt(a))
+}
 
 /** Extra static paths that must appear in sitemap chunk 0. No /claim/{slug}. */
 export const SITEMAP0_LOCKED_PATHS = ['/guides/botox-cost'] as const
@@ -248,7 +256,7 @@ export function selectNearbyCityHubs(
       Number.isFinite(hub.lat) &&
       Number.isFinite(hub.lng)
     const miles = hasGeo
-      ? haversine(lat as number, lng as number, hub.lat as number, hub.lng as number)
+      ? milesBetween(lat as number, lng as number, hub.lat as number, hub.lng as number)
       : Number.POSITIVE_INFINITY
     return { slug: hub.slug, sameState, miles, inMetro: miles <= NEARBY_METRO_MILES }
   })
