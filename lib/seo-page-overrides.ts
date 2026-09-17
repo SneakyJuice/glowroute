@@ -3,6 +3,7 @@
 export const GUIDE_YEAR = 2026
 export const NEARBY_HUB_LIMIT = 10
 export const NEARBY_METRO_MILES = 75
+export const NEARBY_MAX_MILES = 100
 
 function milesBetween(lat1: number, lng1: number, lat2: number, lng2: number): number {
   const earthMiles = 3958.8
@@ -237,7 +238,7 @@ export function aggregateLiveCityHubs(
   })
 }
 
-/** Live hubs only. Metro radius first, then nearer same-state hubs. Never a national list. */
+/** Live hubs only. Hard max 100 mi for every candidate — never backfill farther same-state hubs. */
 export function selectNearbyCityHubs(
   city: string,
   liveHubs: readonly LiveCityHub[],
@@ -249,11 +250,9 @@ export function selectNearbyCityHubs(
   const self = liveHubs.find((hub) => hub.slug === city)
   const lat = origin?.lat ?? self?.lat
   const lng = origin?.lng ?? self?.lng
-  const state = (origin?.state ?? self?.state ?? '').toUpperCase()
   const others = liveHubs.filter((hub) => hub.slug && hub.slug !== city)
 
   const scored = others.map((hub) => {
-    const sameState = Boolean(state && hub.state && state === hub.state.toUpperCase())
     const hasGeo =
       Number.isFinite(lat) &&
       Number.isFinite(lng) &&
@@ -262,16 +261,15 @@ export function selectNearbyCityHubs(
     const miles = hasGeo
       ? milesBetween(lat as number, lng as number, hub.lat as number, hub.lng as number)
       : Number.POSITIVE_INFINITY
-    return { slug: hub.slug, sameState, miles, inMetro: miles <= NEARBY_METRO_MILES }
+    return { slug: hub.slug, miles }
   })
 
-  const metro = scored.filter((item) => item.inMetro).sort((a, b) => a.miles - b.miles)
-  const sameState = scored
-    .filter((item) => !item.inMetro && item.sameState)
+  const inRange = scored
+    .filter((item) => item.miles <= NEARBY_MAX_MILES)
     .sort((a, b) => (a.miles !== b.miles ? a.miles - b.miles : a.slug.localeCompare(b.slug)))
 
   const picked: string[] = []
-  for (const item of [...metro, ...sameState]) {
+  for (const item of inRange) {
     if (picked.length >= NEARBY_HUB_LIMIT) break
     picked.push(item.slug)
   }
