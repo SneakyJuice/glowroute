@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Script from 'next/script'
 import { COST_GUIDES, getGuideBySlug } from '@/lib/cost-guides'
 import { SITE_URL } from '@/lib/config'
+import { GUIDE_YEAR } from '@/lib/seo-page-overrides'
 import type { Metadata } from 'next'
 
 const priceNumberRegex = /[0-9]+(?:,[0-9]{3})*(?:\.[0-9]+)?/g
@@ -28,10 +29,21 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const guide = getGuideBySlug(params.slug)
   if (!guide) return {}
+  const title = `How Much Does ${guide.treatment} Cost? (${GUIDE_YEAR} Guide) — GlowRoute`
+  const description = `${guide.treatment} pricing guide: low end ${guide.avgLow}, average ${guide.avgMid}. What affects cost and what to look for in a provider.`
+  const url = `${SITE_URL}/guides/${guide.slug}`
   return {
-    title: `How Much Does ${guide.treatment} Cost? (2025 Guide) — GlowRoute`,
-    description: `${guide.treatment} pricing guide: low end ${guide.avgLow}, average ${guide.avgMid}. What affects cost and what to look for in a provider.`,
+    title,
+    description,
     keywords: `${guide.treatment} cost, ${guide.treatment} price, how much does ${guide.treatment} cost, medspa pricing`,
+    alternates: { canonical: url },
+    openGraph: {
+      title,
+      description,
+      url,
+      type: 'article',
+      siteName: 'GlowRoute',
+    },
   }
 }
 
@@ -71,7 +83,7 @@ export default function CostGuidePage({ params }: { params: { slug: string } }) 
   const articleSchema: Record<string, any> = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: `How Much Does ${guide.treatment} Cost? (2025 Guide)`,
+    headline: `How Much Does ${guide.treatment} Cost? (${GUIDE_YEAR} Guide)`,
     description: guide.intro,
     author: {
       '@type': 'Organization',
@@ -129,7 +141,7 @@ export default function CostGuidePage({ params }: { params: { slug: string } }) 
 
         {/* Hero */}
         <section className="px-6 pt-8 pb-10 max-w-3xl mx-auto">
-          <div className="text-xs tracking-[3px] uppercase text-[#028090] mb-4">Cost Guide · 2025</div>
+          <div className="text-xs tracking-[3px] uppercase text-[#028090] mb-4">Cost Guide · {GUIDE_YEAR}</div>
           <h1 className="text-3xl md:text-4xl font-extrabold leading-tight tracking-tight mb-4">
             How Much Does{' '}
             <span className="text-[#c9a96e]">{guide.treatment}</span> Cost?

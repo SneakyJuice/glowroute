@@ -5,20 +5,48 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
-import { allClinics } from '@/data/all-clinics'
+import { fetchClinicByExactSlug } from '@/data/supabase-clinics'
+import { SITE_URL } from '@/lib/config'
+import { clinicSlugLookupCandidates, getClaimSeoOverride } from '@/lib/seo-page-overrides'
 import { PLANS } from '@/lib/stripe'
 import ClaimCheckoutButton from './ClaimCheckoutButton'
 import { trackClaimStarted } from '@/components/PostHogClinicTracker'
 
 interface Props { params: { slug: string } }
 
+async function fetchClaimClinic(slug: string) {
+  for (const candidate of clinicSlugLookupCandidates(slug)) {
+    const clinic = await fetchClinicByExactSlug(candidate)
+    if (clinic) return clinic
+  }
+  return null
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const clinics = await allClinics
-  const clinic = clinics.find(c => c.slug === params.slug)
-  if (!clinic) return { title: 'Claim Your Listing — GlowRoute' }
+  const clinic = await fetchClaimClinic(params.slug)
+  const claimOverride = getClaimSeoOverride(params.slug)
+  const title = claimOverride?.title ?? (clinic ? `Claim ${clinic.name} — GlowRoute` : 'Claim Your Listing — GlowRoute')
+  const description = claimOverride?.description ?? (
+    clinic
+      ? `Take control of your GlowRoute listing for ${clinic.name} in ${clinic.city}, FL. Manage your profile and attract more patients.`
+      : undefined
+  )
+  const url = `${SITE_URL}${claimOverride?.canonicalPath ?? `/claim/${params.slug}`}`
+
+  if (!clinic && !claimOverride) return { title }
+
   return {
-    title: `Claim ${clinic.name} — GlowRoute`,
-    description: `Take control of your GlowRoute listing for ${clinic.name} in ${clinic.city}, FL. Manage your profile and attract more patients.`,
+    title,
+    description,
+    keywords: claimOverride ? [...claimOverride.keywords] : undefined,
+    alternates: { canonical: url },
+    openGraph: {
+      title,
+      description,
+      url,
+      type: 'website',
+      siteName: 'GlowRoute',
+    },
   }
 }
 
@@ -27,9 +55,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 const PLAN_ORDER = ['starter', 'growth', 'pro'] as const
 
 export default async function ClaimSlugPage({ params }: Props) {
-  const clinics = await allClinics
-  const clinic = clinics.find(c => c.slug === params.slug)
+  const clinic = await fetchClaimClinic(params.slug)
   if (!clinic) notFound()
+  const claimOverride = getClaimSeoOverride(params.slug)
 
   const displayCity = `${clinic.city}, FL`
   const rating = clinic.googleRating ?? 0
@@ -42,6 +70,17 @@ export default async function ClaimSlugPage({ params }: Props) {
       {/* ── Hero / Clinic snapshot ─────────────────────────────────────── */}
       <section className="bg-onyx text-white py-12 px-4">
         <div className="max-w-4xl mx-auto">
+          {claimOverride && (
+            <Link
+              href={claimOverride.backHref}
+              className="inline-flex items-center gap-1 text-white/60 text-xs hover:text-white transition-colors mb-4"
+            >
+              <svg className="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+              {claimOverride.backLabel}
+            </Link>
+          )}
           {/* Unclaimed badge */}
           <div className="inline-flex items-center gap-1.5 bg-white/10 border border-white/15 text-white/70 rounded-full text-[11px] font-semibold uppercase tracking-widest px-3 py-1 mb-5">
             <span className="w-1.5 h-1.5 rounded-full bg-white/40" />

@@ -1,5 +1,6 @@
 import { ARTICLES } from '@/data/articles'
 import { SITE_URL } from '@/lib/config'
+import { SITEMAP0_LOCKED_PATHS } from '@/lib/seo-page-overrides'
 import { TREATMENT_SLUGS } from '@/lib/treatments'
 import {
   SITEMAP_CHUNK_SIZE,
@@ -58,6 +59,7 @@ export function staticSitemapUrls(): string[] {
     `${SITE_URL}/specialties`,
     `${SITE_URL}/quiz`,
     `${SITE_URL}/telehealth`,
+    ...SITEMAP0_LOCKED_PATHS.map((path) => `${SITE_URL}${path}`),
     ...TREATMENT_SLUGS.map((slug) => `${SITE_URL}/treatments/${slug}`),
     ...ARTICLES.map((article) => `${SITE_URL}/articles/${article.slug}`),
   ]
