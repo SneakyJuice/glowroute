@@ -190,22 +190,22 @@ export function cityHubCentroid(
 export function aggregateLiveCityHubs(
   rows: ReadonlyArray<{ city?: string | null; state?: string | null; lat?: number | null; lng?: number | null }>,
 ): LiveCityHub[] {
-  const bySlug = new Map<
+  const bySlug: Record<
     string,
-    { slug: string; states: Map<string, number>; latSum: number; lngSum: number; coordCount: number }
-  >()
+    { slug: string; states: Record<string, number>; latSum: number; lngSum: number; coordCount: number }
+  > = {}
 
   for (const row of rows) {
     if (!row.city) continue
     const slug = toCitySlug(String(row.city))
     if (!slug) continue
-    let entry = bySlug.get(slug)
+    let entry = bySlug[slug]
     if (!entry) {
-      entry = { slug, states: new Map(), latSum: 0, lngSum: 0, coordCount: 0 }
-      bySlug.set(slug, entry)
+      entry = { slug, states: {}, latSum: 0, lngSum: 0, coordCount: 0 }
+      bySlug[slug] = entry
     }
     const state = String(row.state || '').trim().toUpperCase()
-    if (state) entry.states.set(state, (entry.states.get(state) || 0) + 1)
+    if (state) entry.states[state] = (entry.states[state] || 0) + 1
     const lat = Number(row.lat)
     const lng = Number(row.lng)
     if (Number.isFinite(lat) && Number.isFinite(lng) && lat !== 0 && lng !== 0) {
@@ -215,10 +215,14 @@ export function aggregateLiveCityHubs(
     }
   }
 
-  return Array.from(bySlug.values()).map((entry) => {
+  return Object.keys(bySlug).map((slug) => {
+    const entry = bySlug[slug]
     let state: string | undefined
     let best = 0
-    for (const [abbr, count] of entry.states) {
+    const stateKeys = Object.keys(entry.states)
+    for (let i = 0; i < stateKeys.length; i++) {
+      const abbr = stateKeys[i]
+      const count = entry.states[abbr]
       if (count > best) {
         state = abbr
         best = count
