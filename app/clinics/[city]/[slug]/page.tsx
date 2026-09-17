@@ -16,6 +16,7 @@ import QuizCTA from '@/components/QuizCTA'
 import AvailabilityBadge from '@/components/AvailabilityBadge'
 import CreatorBadge from '@/components/CreatorBadge'
 import { SITE_URL } from '@/lib/config'
+import { getClinicSeoOverride, sanitizeSeoText } from '@/lib/seo-page-overrides'
 import { getVibeTags, detectBookingPlatform, VIBE_STYLES } from '@/lib/vibes'
 import type { VibeTag } from '@/lib/vibes'
 import { detectInfluencer, getInfluencerTier } from '@/lib/influencer'
@@ -63,15 +64,22 @@ export async function generateMetadata({ params }: PageProps) {
   const clinic = await fetchClinicBySlug(params.city, params.slug)
   if (!clinic) return { title: 'Clinic Not Found | GlowRoute' }
 
-  // Page title: full name (browsers handle overflow)
-  const pageTitle = `${clinic.name} | GlowRoute`
-  // OG title: max 70 chars for social share previews
-  const ogTitle = `${truncate(clinic.name, 55)} | GlowRoute`
+  const clinicOverride = getClinicSeoOverride(params.city, params.slug)
 
-  const description = truncate(
-    clinic.description ||
-      `Discover ${clinic.name} in ${clinic.city}, FL — ${(clinic.treatments || []).slice(0, 3).join(', ')}. Book a consultation today.`,
-    160
+  // Page title: full name (browsers handle overflow). Never prefix "Verified".
+  const pageTitle = clinicOverride?.title ?? `${clinic.name} | GlowRoute`
+  // OG title: max 70 chars for social share previews
+  const ogTitle = clinicOverride
+    ? clinicOverride.title
+    : `${truncate(clinic.name, 55)} | GlowRoute`
+
+  const description = sanitizeSeoText(
+    clinicOverride?.description ??
+      truncate(
+        clinic.description ||
+          `Discover ${clinic.name} in ${clinic.city}, FL — ${(clinic.treatments || []).slice(0, 3).join(', ')}. Book a consultation today.`,
+        160
+      )
   )
 
   const image =
@@ -80,11 +88,12 @@ export async function generateMetadata({ params }: PageProps) {
     clinic.logo ||
     `${SITE_URL}/og-default.jpg`
 
-  const pageUrl = `${SITE_URL}/clinics/${params.city}/${params.slug}`
+  const pageUrl = `${SITE_URL}${clinicOverride?.canonicalPath ?? `/clinics/${params.city}/${params.slug}`}`
 
   return {
     title: pageTitle,
     description,
+    keywords: clinicOverride ? [...clinicOverride.keywords] : undefined,
     openGraph: {
       title: ogTitle,
       description,
@@ -200,6 +209,7 @@ export default async function ClinicProfilePage({ params }: PageProps) {
   }
   const clinic = await fetchClinicBySlug(params.city, params.slug)
   if (!clinic) notFound()
+  const clinicOverride = getClinicSeoOverride(params.city, params.slug)
 
   const allTreatments = [
     ...(clinic.treatments || []),
@@ -355,7 +365,7 @@ export default async function ClinicProfilePage({ params }: PageProps) {
         {/* Breadcrumb */}
         <div className="absolute top-4 left-4 md:left-8">
           <Link
-            href="/clinics"
+            href={clinicOverride?.backHref ?? '/clinics'}
             className="text-white/70 text-xs hover:text-white transition-colors flex items-center gap-1"
           >
             <svg
@@ -367,7 +377,7 @@ export default async function ClinicProfilePage({ params }: PageProps) {
             >
               <path d="M15 18l-6-6 6-6" />
             </svg>
-            Back to Directory
+            {clinicOverride?.backLabel ?? 'Back to Directory'}
           </Link>
         </div>
       </div>

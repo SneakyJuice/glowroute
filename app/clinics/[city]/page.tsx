@@ -11,6 +11,7 @@ import ClinicCard from '@/components/ClinicCard'
 import { fetchClinicsByCity, fetchAllClinicsFromSupabase } from '@/data/supabase-clinics'
 import { TOP_CITY_PARAMS } from '@/data/seo-priority-params'
 import { SITE_URL } from '@/lib/config'
+import { citySlugToDisplay as hubDisplayName, getCitySeoOverride } from '@/lib/seo-page-overrides'
 
 interface Props { params: { city: string } }
 
@@ -38,6 +39,26 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const cityOverride = getCitySeoOverride(params.city)
+  if (cityOverride) {
+    const url = `${SITE_URL}${cityOverride.canonicalPath}`
+    return {
+      title: cityOverride.title,
+      description: cityOverride.description,
+      keywords: [...cityOverride.keywords],
+      alternates: { canonical: url },
+      openGraph: {
+        title: cityOverride.title,
+        description: cityOverride.description,
+        url,
+        type: 'website',
+        siteName: 'GlowRoute',
+        images: [{ url: `${SITE_URL}/og-default.jpg`, width: 1200, height: 630 }],
+      },
+      twitter: { card: 'summary_large_image', title: cityOverride.title, description: cityOverride.description },
+    }
+  }
+
   const cityClinics = await fetchClinicsByCity(params.city)
   const displayCity = citySlugToDisplay(params.city)
   if (cityClinics.length === 0) return { title: 'Clinics — GlowRoute' }
@@ -67,10 +88,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function CityPage({ params }: Props) {
   const displayCity = citySlugToDisplay(params.city)
+  const cityOverride = getCitySeoOverride(params.city)
   // fetchClinicsByCity does server-side .eq() filter — no full-table scan
   const [cityClinics, all] = await Promise.all([
     fetchClinicsByCity(params.city),
-    fetchAllClinicsFromSupabase(),
+    cityOverride ? Promise.resolve([]) : fetchAllClinicsFromSupabase(),
   ])
   const sortedCityClinics = [...cityClinics].sort(
     (a, b) => b.googleRating - a.googleRating || b.googleReviewCount - a.googleReviewCount
@@ -162,7 +184,10 @@ export default async function CityPage({ params }: Props) {
           <h2 className="text-base font-bold text-onyx">
             Top-Rated Clinics in {displayCity}
           </h2>
-          <Link href="/clinics" className="text-sm font-semibold text-sage hover:underline">
+          <Link
+            href={cityOverride?.viewAllHref ?? '/clinics'}
+            className="text-sm font-semibold text-sage hover:underline"
+          >
             View all clinics →
           </Link>
         </div>
@@ -180,7 +205,7 @@ export default async function CityPage({ params }: Props) {
               Showing 6 of {sortedCityClinics.length} clinics in {displayCity}
             </p>
             <Link
-              href={`/clinics?city=${encodeURIComponent(displayCity)}`}
+              href={cityOverride?.viewAllHref ?? `/clinics?city=${encodeURIComponent(displayCity)}`}
               className="inline-block bg-sage text-white text-sm font-semibold px-6 py-2.5 rounded-xl hover:bg-onyx transition-colors"
             >
               View All {sortedCityClinics.length} Clinics →
@@ -192,19 +217,25 @@ export default async function CityPage({ params }: Props) {
         <section className="mt-12 border-t border-onyx/8 pt-8">
           <h2 className="text-base font-bold text-onyx mb-4">Explore Nearby Cities</h2>
           <div className="flex flex-wrap gap-2">
-            {Array.from(new Set(
-              all
-                .map(c => c.city)
-                .filter(c => c !== sortedCityClinics[0]?.city)
-            ))
-              .slice(0, 16)
-              .map(city => (
+            {(cityOverride
+              ? cityOverride.nearbyHubs.map((slug) => ({
+                  slug,
+                  label: hubDisplayName(slug),
+                }))
+              : Array.from(new Set(
+                  all
+                    .map(c => c.city)
+                    .filter(c => c !== sortedCityClinics[0]?.city)
+                ))
+                  .slice(0, 16)
+                  .map(city => ({ slug: toCitySlug(city), label: city }))
+            ).map(({ slug, label }) => (
                 <Link
-                  key={city}
-                  href={`/clinics/${toCitySlug(city)}`}
+                  key={slug}
+                  href={`/clinics/${slug}`}
                   className="text-sm font-medium text-stone border border-onyx/10 bg-white px-3 py-1.5 rounded-full hover:border-sage/40 hover:text-sage transition-colors"
                 >
-                  {city}
+                  {label}
                 </Link>
               ))}
           </div>
