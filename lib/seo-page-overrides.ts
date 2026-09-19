@@ -124,6 +124,15 @@ export const QUIZ_METADATA = {
   canonicalPath: '/quiz',
 } as const
 
+/** Locked `/claim` hub metadata. No clinic counts or verified-network language. */
+export const CLAIM_HUB_METADATA = {
+  title: 'Claim Your GlowRoute Listing — GlowRoute',
+  description:
+    'Claim and manage your medspa or aesthetic clinic listing on GlowRoute. Update your profile and reach patients searching for care near you.',
+  keywords: [] as string[],
+  canonicalPath: '/claim',
+} as const
+
 function stripFlSuffix(slug: string): string {
   return slug.replace(/-fl$/, '')
 }

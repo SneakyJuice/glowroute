@@ -2,6 +2,7 @@ import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { describe, it } from 'node:test'
 import {
+  CLAIM_HUB_METADATA,
   CLAIM_SLUG_OVERRIDES,
   GUIDE_YEAR,
   NEARBY_MAX_MILES,
@@ -377,6 +378,44 @@ describe('Quiz and Botox guide SEO', () => {
     assert.doesNotMatch(sitemapBuild, /\/claim\/\$\{/)
     assert.match(sitemapBuild, /\$\{SITE_URL\}\/quiz/)
     assert.match(sitemapBuild, /\$\{SITE_URL\}\/claim/)
+  })
+})
+
+describe('Claim hub SEO', () => {
+  it('locks unique /claim title, description, and self-canonical', () => {
+    assert.equal(CLAIM_HUB_METADATA.title, 'Claim Your GlowRoute Listing — GlowRoute')
+    assert.equal(
+      CLAIM_HUB_METADATA.description,
+      'Claim and manage your medspa or aesthetic clinic listing on GlowRoute. Update your profile and reach patients searching for care near you.',
+    )
+    assert.equal(CLAIM_HUB_METADATA.canonicalPath, '/claim')
+    assert.deepEqual(CLAIM_HUB_METADATA.keywords, [])
+    assert.equal(/verified/i.test(CLAIM_HUB_METADATA.title), false)
+    assert.equal(/verified/i.test(CLAIM_HUB_METADATA.description), false)
+    assert.match(CLAIM_HUB_METADATA.description, /^[^\d]*$/)
+    assert.notEqual(CLAIM_HUB_METADATA.title, 'GlowRoute — Discover Aesthetic Wellness')
+    assert.notEqual(CLAIM_HUB_METADATA.canonicalPath, '/')
+  })
+
+  it('ships a server-rendered hub with existing claim-flow links and no noindex', () => {
+    const page = readFileSync(new URL('../app/claim/page.tsx', import.meta.url), 'utf8')
+    assert.doesNotMatch(page, /^['"]use client['"]/m)
+    assert.match(page, /export const metadata/)
+    assert.match(page, /CLAIM_HUB_METADATA/)
+    assert.match(page, /Claim Your GlowRoute Listing/)
+    assert.match(page, /What claiming does/)
+    assert.match(page, /href=["']\/clinics["']/)
+    assert.match(page, /href=["']#start-claim["']/)
+    assert.match(page, /<main/)
+    assert.doesNotMatch(page, /noindex/)
+    assert.doesNotMatch(page, /Loading…/)
+    assert.doesNotMatch(page, /useSearchParams/)
+    assert.doesNotMatch(page, /verified clinics/i)
+    assert.doesNotMatch(page, /\b\d{3,}\+/)
+    const sitemapBuild = readFileSync(new URL('./sitemap-build.ts', import.meta.url), 'utf8')
+    assert.match(sitemapBuild, /\$\{SITE_URL\}\/claim/)
+    assert.doesNotMatch(sitemapBuild, /\/claim\/\$\{/)
+    assert.equal(SITEMAP0_LOCKED_PATHS.some((path) => path.startsWith('/claim/')), false)
   })
 })
 
