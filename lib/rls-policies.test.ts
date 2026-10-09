@@ -70,7 +70,14 @@ describe('directory RLS migration', () => {
     assert.match(check, /insufficient_privilege/)
     assert.match(check, /row_count <> 0/)
     assert.match(check, /select \* from public\.clinics/)
-    assert.doesNotMatch(check, /insert into/)
+    assert.match(check, /begin;/)
+    assert.match(check, /rollback;/)
+    assert.match(check, /insert into public\.clinics/)
+    assert.match(check, /visibility = 'visible'/)
+    assert.match(check, /is_approved = true/)
+    assert.match(check, /insert into public\.clinic_treatments/)
+    assert.match(check, /set local role service_role/)
+    assert.match(check, /set local role anon/)
     assert.doesNotMatch(check, /delete from/)
     for (const column of [
       'email',
@@ -92,6 +99,10 @@ describe('directory RLS migration', () => {
     assert.match(script, /SUPABASE_SERVICE_ROLE_KEY/)
     assert.doesNotMatch(script, /select\(\s*['"`]\*['"`]\s*\)/)
     assert.match(script, /select\('id,name,city,glow_score,review_count'\)/)
+    assert.match(script, /\.update\(\{ tier: clinic\.tier \}\)/)
+    assert.match(script, /\.eq\('id', clinic\.id\)/)
+    assert.match(script, /clinics\.tier does not exist/)
+    assert.doesNotMatch(script, /\.upsert\(/)
   })
 
   it('restores service_role table access and does not drop data', () => {

@@ -34,6 +34,21 @@ const TIER_DEFINITIONS = {
   TIER_3: { glow_score: 4.0, review_count: 20 },
 };
 
+function missingTierColumn(error) {
+  const message = `${error && error.message ? error.message : ''} ${error && error.details ? error.details : ''}`;
+  return /tier/i.test(message) && /(does not exist|schema cache|could not find)/i.test(message);
+}
+
+async function requireTierColumn() {
+  const { error } = await supabase.from('clinics').select('tier').limit(1);
+  if (!error) return;
+  if (missingTierColumn(error)) {
+    console.error('clinics.tier does not exist. This script did not update any rows. No migration was added for tier.');
+    process.exit(1);
+  }
+  throw error;
+}
+
 // Function to assign tier based on glow_score and review_count
 function assignTier(clinic) {
   if (clinic.glow_score === TIER_DEFINITIONS.TIER_1.glow_score && clinic.review_count >= TIER_DEFINITIONS.TIER_1.review_count) {
@@ -50,6 +65,8 @@ function assignTier(clinic) {
 // Main function
 async function tierScoring() {
   try {
+    await requireTierColumn();
+
     // Query all clinics
     const { data: clinics, error } = await supabase
       .from('clinics')
@@ -63,16 +80,22 @@ async function tierScoring() {
       return { ...clinic, tier };
     });
 
-    // Attempt to update the `tier` column in Supabase
+    // clinics.tier is not in the current database. Update one row at a time
+    // and stop if that column is still missing. Do not add a migration for it.
     try {
-      const { error: updateError } = await supabase
-        .from('clinics')
-        .upsert(
-          updatedClinics.map((clinic) => ({ id: clinic.id, tier: clinic.tier })),
-          { onConflict: 'id' },
-        );
-
-      if (updateError) throw updateError;
+      for (const clinic of updatedClinics) {
+        const { error: updateError } = await supabase
+          .from('clinics')
+          .update({ tier: clinic.tier })
+          .eq('id', clinic.id);
+        if (updateError) {
+          if (missingTierColumn(updateError)) {
+            console.error('clinics.tier does not exist. This script did not finish updates. No migration was added for tier.');
+            process.exit(1);
+          }
+          throw updateError;
+        }
+      }
       console.log('Successfully updated tiers in Supabase.');
     } catch (updateError) {
       console.warn('Failed to update tiers in Supabase. Saving to JSON/CSV instead.');
