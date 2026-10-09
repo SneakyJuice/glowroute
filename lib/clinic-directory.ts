@@ -137,6 +137,44 @@ export function filterClinicsForCitySlug<T extends CityClinic>(clinics: readonly
   return clinics.filter((clinic) => sqlIlikeMatch(clinic.city, pattern))
 }
 
+export type DirectoryPageBatch<T> = {
+  clinics: T[]
+  nextCursorKey: string
+  done: boolean
+}
+
+/**
+ * Walk keyset pages until the list ends.
+ * Calls `onCap` when the page limit is reached first, so a truncated list is visible.
+ * A failure from `loadPage` propagates and does not return the pages already collected.
+ */
+export async function collectDirectoryPages<T>(
+  loadPage: (cursorKey: string) => Promise<DirectoryPageBatch<T>>,
+  maxPages: number,
+  onCap: (maxPages: number) => void,
+): Promise<T[]> {
+  const pages: T[] = []
+  let cursorKey = ''
+  let reachedEnd = false
+
+  for (let page = 0; page < maxPages; page += 1) {
+    const batch = await loadPage(cursorKey)
+    if (batch.clinics.length === 0) {
+      reachedEnd = true
+      break
+    }
+    pages.push(...batch.clinics)
+    if (batch.done || !batch.nextCursorKey || batch.nextCursorKey === cursorKey) {
+      reachedEnd = true
+      break
+    }
+    cursorKey = batch.nextCursorKey
+  }
+
+  if (!reachedEnd) onCap(maxPages)
+  return pages
+}
+
 export function dedupeClinicsBySlug<T extends CityClinic>(clinics: readonly T[]): T[] {
   const sorted = [...clinics].sort((a, b) =>
     compareDirectoryOrder(

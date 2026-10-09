@@ -8,6 +8,7 @@ import {
   DIRECTORY_REVALIDATE_SECONDS,
   DIRECTORY_SELECT,
   compareDirectoryOrder,
+  collectDirectoryPages,
   cursorFromDirectoryRow,
   decodeDirectoryCursor,
   dedupeClinicsBySlug,
@@ -119,8 +120,32 @@ export function mapSupabaseRow(row: any): Clinic {
 
 const DIRECTORY_CACHE_TTL_MS = DIRECTORY_REVALIDATE_SECONDS * 1000
 const MAX_DIRECTORY_PAGES = 200
+/** Single in-process snapshot. The cap stops the memo from growing with each page. */
+const DIRECTORY_MEMO_MAX_CLINICS = MAX_DIRECTORY_PAGES * DIRECTORY_PAGE_SIZE
+/**
+ * Page entries outlive the version key. A page is not refreshed on its own
+ * while that version is still the one being served.
+ */
+const DIRECTORY_PAGE_REVALIDATE_SECONDS = DIRECTORY_REVALIDATE_SECONDS * 2
 
-let directoryMemo: { at: number; clinics: Clinic[] } | null = null
+type DirectoryMemo = {
+  version: string
+  at: number
+  clinics: Clinic[]
+}
+
+let directoryMemo: DirectoryMemo | null = null
+
+function rememberDirectory(version: string, clinics: Clinic[]) {
+  if (clinics.length === 0) return
+  if (clinics.length > DIRECTORY_MEMO_MAX_CLINICS) {
+    console.warn(
+      `[supabase-clinics] Skipping the in-memory directory memo; ${clinics.length} clinics exceeds ${DIRECTORY_MEMO_MAX_CLINICS}`,
+    )
+    return
+  }
+  directoryMemo = { version, at: Date.now(), clinics }
+}
 
 type DirectoryPage = {
   clinics: Clinic[]
@@ -163,26 +188,38 @@ async function fetchDirectoryPage(cursor: DirectoryCursor | null): Promise<Direc
 }
 
 /**
- * Next.js data cache entries are limited to 2MB, so each keyset page is cached
- * on its own. Pages are also memoized in-process for the same TTL.
+ * One version key for the whole directory snapshot.
+ * Each page key includes that version, and page entries outlive it, so pages
+ * from two versions are never combined when a clinic's glow_score changes.
+ * Pages stay under the Next.js 2MB data-cache entry limit.
  */
-const loadCachedDirectoryPage = unstable_cache(
-  async (cursorKey: string) => fetchDirectoryPage(decodeDirectoryCursor(cursorKey)),
-  ['glowroute-visible-clinics-v1'],
+const loadDirectoryVersion = unstable_cache(
+  async () => ({ version: String(Date.now()) }),
+  ['glowroute-visible-clinics-version-v2'],
   { revalidate: DIRECTORY_REVALIDATE_SECONDS },
 )
 
-async function loadVisibleClinics(): Promise<Clinic[]> {
-  const pages: Clinic[] = []
-  let cursorKey = ''
+const loadVersionedDirectoryPage = unstable_cache(
+  async (version: string, cursorKey: string) => {
+    if (!version) {
+      throw new Error('[supabase-clinics] Directory cache version is missing')
+    }
+    return fetchDirectoryPage(decodeDirectoryCursor(cursorKey))
+  },
+  ['glowroute-visible-clinics-page-v2'],
+  { revalidate: DIRECTORY_PAGE_REVALIDATE_SECONDS },
+)
 
-  for (let page = 0; page < MAX_DIRECTORY_PAGES; page += 1) {
-    const batch = await loadCachedDirectoryPage(cursorKey)
-    if (batch.clinics.length === 0) break
-    pages.push(...batch.clinics)
-    if (batch.done || !batch.nextCursorKey || batch.nextCursorKey === cursorKey) break
-    cursorKey = batch.nextCursorKey
-  }
+async function loadVisibleClinics(version: string): Promise<Clinic[]> {
+  const pages = await collectDirectoryPages(
+    (cursorKey) => loadVersionedDirectoryPage(version, cursorKey),
+    MAX_DIRECTORY_PAGES,
+    (maxPages) => {
+      console.warn(
+        `[supabase-clinics] Stopped after ${maxPages} directory pages; the visible clinic list may be incomplete`,
+      )
+    },
+  )
 
   const unique = dedupeClinicsBySlug(pages)
   unique.sort((a, b) =>
@@ -196,10 +233,6 @@ async function loadVisibleClinics(): Promise<Clinic[]> {
 }
 
 export const fetchAllClinicsFromSupabase = cache(async (): Promise<Clinic[]> => {
-  if (directoryMemo && Date.now() - directoryMemo.at < DIRECTORY_CACHE_TTL_MS) {
-    return directoryMemo.clinics
-  }
-
   const supabase = getSupabaseAdmin()
   if (!supabase) {
     console.warn('[supabase-clinics] Supabase admin client not available, returning empty array')
@@ -207,14 +240,26 @@ export const fetchAllClinicsFromSupabase = cache(async (): Promise<Clinic[]> => 
   }
 
   try {
-    const clinics = await loadVisibleClinics()
-    if (clinics.length > 0) {
-      directoryMemo = { at: Date.now(), clinics }
+    const { version } = await loadDirectoryVersion()
+    if (
+      directoryMemo &&
+      directoryMemo.version === version &&
+      directoryMemo.clinics.length <= DIRECTORY_MEMO_MAX_CLINICS &&
+      Date.now() - directoryMemo.at < DIRECTORY_CACHE_TTL_MS
+    ) {
+      return directoryMemo.clinics
     }
+
+    const clinics = await loadVisibleClinics(version)
+    rememberDirectory(version, clinics)
     return clinics
   } catch (err) {
     console.error('[supabase-clinics] Unexpected error:', err)
-    return []
+    if (directoryMemo && directoryMemo.clinics.length > 0) {
+      console.warn('[supabase-clinics] Serving the last good directory list after a fetch error')
+      return directoryMemo.clinics
+    }
+    throw err
   }
 })
 

@@ -6,6 +6,7 @@ import {
   DIRECTORY_SELECT,
   compareDirectoryOrder,
   cursorFromDirectoryRow,
+  collectDirectoryPages,
   dedupeClinicsBySlug,
   directoryKeysetFilter,
   encodeDirectoryCursor,
@@ -45,6 +46,11 @@ describe('directory column projection', () => {
     assert.match(source, /DIRECTORY_SELECT/)
     assert.match(source, /directoryKeysetFilter/)
     assert.match(source, /unstable_cache/)
+    assert.match(source, /glowroute-visible-clinics-version-v2/)
+    assert.match(source, /loadVersionedDirectoryPage\(version/)
+    assert.match(source, /DIRECTORY_MEMO_MAX_CLINICS/)
+    assert.match(source, /Stopped after/)
+    assert.match(source, /last good directory list/)
   })
 })
 
@@ -107,6 +113,49 @@ describe('directory keyset order', () => {
       glowScore: null,
       id: '12',
     })
+  })
+})
+
+describe('directory page collection', () => {
+  it('warns when the page cap is hit before the list ends', async () => {
+    const warnings: number[] = []
+    const clinics = await collectDirectoryPages(
+      async (cursorKey) => ({
+        clinics: [{ id: cursorKey || '0' }],
+        nextCursorKey: String(Number(cursorKey || '0') + 1),
+        done: false,
+      }),
+      3,
+      (maxPages) => warnings.push(maxPages),
+    )
+    assert.equal(clinics.length, 3)
+    assert.deepEqual(warnings, [3])
+  })
+
+  it('does not warn when the last page finishes the list', async () => {
+    const warnings: number[] = []
+    const clinics = await collectDirectoryPages(
+      async () => ({ clinics: [{ id: 'only' }], nextCursorKey: '', done: true }),
+      3,
+      (maxPages) => warnings.push(maxPages),
+    )
+    assert.equal(clinics.length, 1)
+    assert.deepEqual(warnings, [])
+  })
+
+  it('does not return a partial list when a later page fails', async () => {
+    await assert.rejects(
+      () =>
+        collectDirectoryPages(
+          async (cursorKey) => {
+            if (cursorKey) throw new Error('page failed')
+            return { clinics: [{ id: '1' }], nextCursorKey: 'next', done: false }
+          },
+          5,
+          () => {},
+        ),
+      /page failed/,
+    )
   })
 })
 
