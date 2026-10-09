@@ -40,9 +40,11 @@ async function fetchTopCities(limit = 50) {
 async function fetchClinicsByCity(city, limit = 3) {
   const { data, error } = await supabase
     .from('clinics')
-    .select('*')
+    .select('name, glow_score, services, address, description, website')
     .eq('city', city)
+    .eq('visibility', 'visible')
     .order('glow_score', { ascending: false })
+    .order('id', { ascending: true })
     .limit(limit);
 
   if (error) throw error;
@@ -52,7 +54,7 @@ async function fetchClinicsByCity(city, limit = 3) {
 async function fetchCityStats(city) {
   const { count } = await supabase
     .from('clinics')
-    .select('*', { count: 'exact', head: true })
+    .select('id', { count: 'exact', head: true })
     .eq('city', city)
     .eq('visibility', 'visible');
 
