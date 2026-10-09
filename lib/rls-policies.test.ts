@@ -86,6 +86,14 @@ describe('directory RLS migration', () => {
     }
   })
 
+  it('reads the tier script key from the environment', () => {
+    const script = readFileSync(new URL('../scripts/tier-scoring.js', import.meta.url), 'utf8')
+    assert.equal(script.includes('eyJ'), false)
+    assert.match(script, /SUPABASE_SERVICE_ROLE_KEY/)
+    assert.doesNotMatch(script, /select\(\s*['"`]\*['"`]\s*\)/)
+    assert.match(script, /select\('id,name,city,glow_score,review_count'\)/)
+  })
+
   it('restores service_role table access and does not drop data', () => {
     for (const table of tables) {
       assert.match(sql, new RegExp(`grant all on table public\\.${table} to service_role`))

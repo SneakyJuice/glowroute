@@ -2,10 +2,24 @@ const { createClient } = require('@supabase/supabase-js');
 const fs = require('fs');
 const path = require('path');
 
-// Load environment variables
-const supabaseUrl = 'https://psiuknphchmhsthvhkpt.supabase.co';
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBzaXVrbnBoY2htaHN0aHZoa3B0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ4MTE4NjgsImV4cCI6MjA5MDM4Nzg2OH0.TBvE2W-156B_knhKYRSTK0koNfB3zIkZyykSpAPrMZY';
-const supabase = createClient(supabaseUrl, supabaseKey);
+function loadEnvFile(filePath) {
+  if (!fs.existsSync(filePath)) return;
+  for (const line of fs.readFileSync(filePath, 'utf8').split('\n')) {
+    const match = line.match(/^(?:export\s+)?([A-Z0-9_]+)=(.*)$/);
+    if (!match || process.env[match[1]]) continue;
+    process.env[match[1]] = match[2].trim().replace(/^['"]|['"]$/g, '');
+  }
+}
+
+loadEnvFile(path.join(__dirname, '../.env.local'));
+
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL;
+const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+if (!supabaseUrl || !supabaseKey) {
+  console.error('NEXT_PUBLIC_SUPABASE_URL (or SUPABASE_URL) and SUPABASE_SERVICE_ROLE_KEY are required.');
+  process.exit(1);
+}
+const supabase = createClient(supabaseUrl, supabaseKey, { auth: { persistSession: false } });
 
 // Output directories
 const outputDir = path.join(__dirname, '../../output');
@@ -39,7 +53,7 @@ async function tierScoring() {
     // Query all clinics
     const { data: clinics, error } = await supabase
       .from('clinics')
-      .select('*');
+      .select('id,name,city,glow_score,review_count');
 
     if (error) throw error;
 
@@ -51,9 +65,12 @@ async function tierScoring() {
 
     // Attempt to update the `tier` column in Supabase
     try {
-      const { data: updateResult, error: updateError } = await supabase
+      const { error: updateError } = await supabase
         .from('clinics')
-        .upsert(updatedClinics);
+        .upsert(
+          updatedClinics.map((clinic) => ({ id: clinic.id, tier: clinic.tier })),
+          { onConflict: 'id' },
+        );
 
       if (updateError) throw updateError;
       console.log('Successfully updated tiers in Supabase.');
