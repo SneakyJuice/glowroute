@@ -65,28 +65,28 @@ begin
 end;
 $$;
 
-create or replace function pg_temp.assert_column_denied(role_name text, column_name text)
+create or replace function pg_temp.assert_column_denied(role_name text, denied_column text)
 returns void
 language plpgsql
 as $$
 begin
   if not exists (
     select 1
-    from information_schema.columns
-    where table_schema = 'public'
-      and table_name = 'clinics'
-      and column_name = assert_column_denied.column_name
+    from information_schema.columns as c
+    where c.table_schema = 'public'
+      and c.table_name = 'clinics'
+      and c.column_name = denied_column
   ) then
-    raise exception 'clinics.% does not exist', column_name;
+    raise exception 'clinics.% does not exist', denied_column;
   end if;
 
-  if has_column_privilege(role_name, 'public.clinics'::regclass, column_name, 'SELECT') then
-    raise exception '% still has SELECT on clinics.%', role_name, column_name;
+  if has_column_privilege(role_name, 'public.clinics'::regclass, denied_column, 'SELECT') then
+    raise exception '% still has SELECT on clinics.%', role_name, denied_column;
   end if;
 
   begin
     execute format('set local role %I', role_name);
-    execute format('select %I from public.clinics limit 0', column_name);
+    execute format('select %I from public.clinics limit 0', denied_column);
     raise exception 'column_readable';
   exception
     when insufficient_privilege then
@@ -95,12 +95,12 @@ begin
       end if;
     when raise_exception then
       if sqlerrm = 'column_readable' then
-        raise exception '% read clinics.%', role_name, column_name;
+        raise exception '% read clinics.%', role_name, denied_column;
       end if;
       raise;
   end;
 
-  raise notice '% clinics.%: permission denied', role_name, column_name;
+  raise notice '% clinics.%: permission denied', role_name, denied_column;
 end;
 $$;
 
