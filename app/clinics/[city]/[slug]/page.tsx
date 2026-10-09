@@ -175,6 +175,7 @@ export default async function ClinicProfilePage({ params }: PageProps) {
     return <TreatmentCityPage city={params.city} treatment={params.slug} />
   }
   const clinic = await fetchClinicByExactSlug(params.slug)
+  // null means the clinic is missing. Lookup errors throw and are not stored as a 404.
   if (!clinic) notFound()
   const clinicOverride = getClinicSeoOverride(params.city, params.slug)
 

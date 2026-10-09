@@ -56,6 +56,7 @@ const PLAN_ORDER = ['starter', 'growth', 'pro'] as const
 
 export default async function ClaimSlugPage({ params }: Props) {
   const clinic = await fetchClaimClinic(params.slug)
+  // null means the clinic is missing. Lookup errors throw and are not stored as a 404.
   if (!clinic) notFound()
   const claimOverride = getClaimSeoOverride(params.slug)
 

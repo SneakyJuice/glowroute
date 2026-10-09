@@ -51,6 +51,20 @@ describe('directory column projection', () => {
     assert.match(source, /DIRECTORY_MEMO_MAX_CLINICS/)
     assert.match(source, /Stopped after/)
     assert.match(source, /last good directory list/)
+    assert.match(source, /unstable_noStore\(\)/)
+    assert.match(source, /Error fetching clinic/)
+    assert.doesNotMatch(source, /if \(error \|\| !data \|\| data\.length === 0\) return null/)
+  })
+
+  it('shows a branded unavailable page and a 503 for the clinics API', () => {
+    const errorPage = readFileSync(new URL('../app/error.tsx', import.meta.url), 'utf8')
+    assert.match(errorPage, /Temporarily unavailable/)
+    assert.match(errorPage, /Try again/)
+    assert.match(errorPage, /GlowRoute/)
+    const api = readFileSync(new URL('../app/api/clinics/route.ts', import.meta.url), 'utf8')
+    assert.match(api, /status: 503/)
+    assert.match(api, /Retry-After/)
+    assert.match(api, /no-store/)
   })
 })
 

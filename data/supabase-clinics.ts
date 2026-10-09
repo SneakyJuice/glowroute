@@ -1,7 +1,7 @@
 import { Clinic } from '@/types/clinic'
 import { getSupabaseAdmin } from '@/lib/supabase'
 import { cache } from 'react'
-import { unstable_cache } from 'next/cache'
+import { unstable_cache, unstable_noStore } from 'next/cache'
 import { aggregateLiveCityHubs, type LiveCityHub } from '@/lib/seo-page-overrides'
 import {
   DIRECTORY_PAGE_SIZE,
@@ -259,6 +259,7 @@ export const fetchAllClinicsFromSupabase = cache(async (): Promise<Clinic[]> => 
       console.warn('[supabase-clinics] Serving the last good directory list after a fetch error')
       return directoryMemo.clinics
     }
+    unstable_noStore()
     throw err
   }
 })
@@ -294,10 +295,19 @@ export const fetchClinicsByCity = cache(async (citySlug: string): Promise<Clinic
 /**
  * Featured clinic: first clinic with featured flag, or first clinic.
  */
-/** Single-row slug lookup. Uses the directory columns, not select=*. */
+/**
+ * Single-row slug lookup. Uses the directory columns, not select=*.
+ * Returns null only when the slug is empty or no row exists.
+ * A database error throws, and the response is not stored, so ISR cannot
+ * keep that outage as a 404.
+ */
 export async function fetchClinicByExactSlug(slug: string): Promise<Clinic | null> {
+  if (!slug) return null
   const supabase = getSupabaseAdmin()
-  if (!supabase || !slug) return null
+  if (!supabase) {
+    unstable_noStore()
+    throw new Error('[supabase-clinics] Supabase admin client not available')
+  }
 
   const { data, error } = await supabase
     .from('clinics')
@@ -306,7 +316,11 @@ export async function fetchClinicByExactSlug(slug: string): Promise<Clinic | nul
     .order('id', { ascending: true })
     .limit(1)
 
-  if (error || !data || data.length === 0) return null
+  if (error) {
+    unstable_noStore()
+    throw new Error(`[supabase-clinics] Error fetching clinic: ${error.message}`)
+  }
+  if (!data || data.length === 0) return null
   return clean(mapSupabaseRow(data[0]))
 }
 
