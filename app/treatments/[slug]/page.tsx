@@ -50,7 +50,7 @@ function matchesTreatment(clinic: Clinic, keywords: string[]): boolean {
 }
 
 export default async function TreatmentPage({ params }: Props) {
-  const clinics = await allClinics
+  const clinics = await allClinics()
   const treatment = getTreatmentBySlug(params.slug)
   if (!treatment) notFound()
 

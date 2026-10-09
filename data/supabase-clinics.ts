@@ -1,7 +1,21 @@
 import { Clinic } from '@/types/clinic'
 import { getSupabaseAdmin } from '@/lib/supabase'
 import { cache } from 'react'
+import { unstable_cache } from 'next/cache'
 import { aggregateLiveCityHubs, type LiveCityHub } from '@/lib/seo-page-overrides'
+import {
+  DIRECTORY_PAGE_SIZE,
+  DIRECTORY_REVALIDATE_SECONDS,
+  DIRECTORY_SELECT,
+  compareDirectoryOrder,
+  cursorFromDirectoryRow,
+  decodeDirectoryCursor,
+  dedupeClinicsBySlug,
+  directoryKeysetFilter,
+  encodeDirectoryCursor,
+  filterClinicsForCitySlug,
+  type DirectoryCursor,
+} from '@/lib/clinic-directory'
 
 /** Returns true if a description contains garbled/binary/non-Latin encoded text */
 function isGarbledDescription(desc: string): boolean {
@@ -99,280 +113,162 @@ export function mapSupabaseRow(row: any): Clinic {
 }
 
 /**
- * Fetch all clinics from Supabase, map to Clinic[], clean, deduplicate.
- * This function is intended for server-side use only.
+ * Fetch visible clinics for directory pages.
+ * One shared cached list: narrow columns, keyset pages, glow_score then id.
  */
+
+const DIRECTORY_CACHE_TTL_MS = DIRECTORY_REVALIDATE_SECONDS * 1000
+const MAX_DIRECTORY_PAGES = 200
+
+let directoryMemo: { at: number; clinics: Clinic[] } | null = null
+
+type DirectoryPage = {
+  clinics: Clinic[]
+  nextCursorKey: string
+  done: boolean
+}
+
+async function fetchDirectoryPage(cursor: DirectoryCursor | null): Promise<DirectoryPage> {
+  const supabase = getSupabaseAdmin()
+  if (!supabase) {
+    throw new Error('[supabase-clinics] Supabase admin client not available')
+  }
+
+  let query = supabase
+    .from('clinics')
+    .select(DIRECTORY_SELECT)
+    .in('visibility', ['visible'])
+    .order('glow_score', { ascending: false, nullsFirst: false })
+    .order('id', { ascending: true })
+    .limit(DIRECTORY_PAGE_SIZE)
+
+  const keyset = directoryKeysetFilter(cursor)
+  if (keyset) query = query.or(keyset)
+
+  const { data, error } = await query
+  if (error) {
+    throw new Error(`[supabase-clinics] Error fetching clinics: ${error.message}`)
+  }
+
+  const rows = (data ?? []) as Array<{
+    glow_score?: number | string | null
+    id?: string | number | null
+  }>
+  const last = rows[rows.length - 1]
+  return {
+    clinics: rows.map((row) => clean(mapSupabaseRow(row))),
+    nextCursorKey: last ? encodeDirectoryCursor(cursorFromDirectoryRow(last)) : '',
+    done: rows.length < DIRECTORY_PAGE_SIZE,
+  }
+}
 
 /**
- * Module-level memo: within a single process/worker, fetch the full clinic
- * table only ONCE. React cache() dedupes within a render pass; the module
- * promise dedupes across the whole worker lifetime (build + ISR).
- * This eliminates the N-parallel full-table scans that tripped Supabase's
- * statement timeout during build (sitemap chunks + index + homepage).
+ * Next.js data cache entries are limited to 2MB, so each keyset page is cached
+ * on its own. Pages are also memoized in-process for the same TTL.
  */
-let _allClinicsPromise: Promise<Clinic[]> | null = null
-export const fetchAllClinicsFromSupabase = cache(async (): Promise<Clinic[]> => {
-  if (!_allClinicsPromise) {
-    _allClinicsPromise = _fetchAllClinicsImpl()
-  }
-  return _allClinicsPromise
-})
+const loadCachedDirectoryPage = unstable_cache(
+  async (cursorKey: string) => fetchDirectoryPage(decodeDirectoryCursor(cursorKey)),
+  ['glowroute-visible-clinics-v1'],
+  { revalidate: DIRECTORY_REVALIDATE_SECONDS },
+)
 
-async function _fetchAllClinicsImpl(): Promise<Clinic[]> {
+async function loadVisibleClinics(): Promise<Clinic[]> {
+  const pages: Clinic[] = []
+  let cursorKey = ''
+
+  for (let page = 0; page < MAX_DIRECTORY_PAGES; page += 1) {
+    const batch = await loadCachedDirectoryPage(cursorKey)
+    if (batch.clinics.length === 0) break
+    pages.push(...batch.clinics)
+    if (batch.done || !batch.nextCursorKey || batch.nextCursorKey === cursorKey) break
+    cursorKey = batch.nextCursorKey
+  }
+
+  const unique = dedupeClinicsBySlug(pages)
+  unique.sort((a, b) =>
+    compareDirectoryOrder(
+      { glowScore: a.glowScore ?? null, id: a.id },
+      { glowScore: b.glowScore ?? null, id: b.id },
+    ),
+  )
+  console.log(`[supabase-clinics] Returning ${unique.length} clinics`)
+  return unique
+}
+
+export const fetchAllClinicsFromSupabase = cache(async (): Promise<Clinic[]> => {
+  if (directoryMemo && Date.now() - directoryMemo.at < DIRECTORY_CACHE_TTL_MS) {
+    return directoryMemo.clinics
+  }
+
   const supabase = getSupabaseAdmin()
   if (!supabase) {
     console.warn('[supabase-clinics] Supabase admin client not available, returning empty array')
     return []
   }
 
-  const BATCH_SIZE = 1000
-  let allRows: any[] = []
-  let page = 0
-  let hasMore = true
-
   try {
-    while (hasMore) {
-      const from = page * BATCH_SIZE
-      const to = from + BATCH_SIZE - 1
-      const { data, error } = await supabase
-        .from('clinics')
-        .select('*')
-        .in('visibility', ['visible'])   // exclude hidden / removed / needs_review
-        .order('glow_score', { ascending: false })  // highest quality first
-        .range(from, to)
-      
-      if (error) {
-        console.error('[supabase-clinics] Error fetching clinics:', error.message)
-        break
-      }
-      
-      if (data && data.length > 0) {
-        allRows = allRows.concat(data)
-        console.log(`[supabase-clinics] Fetched ${data.length} clinics (total: ${allRows.length})`)
-      }
-      
-      if (!data || data.length < BATCH_SIZE) {
-        hasMore = false
-      }
-      page++
+    const clinics = await loadVisibleClinics()
+    if (clinics.length > 0) {
+      directoryMemo = { at: Date.now(), clinics }
     }
-
-    // Map rows to Clinic
-    const mapped = allRows.map(mapSupabaseRow)
-    
-    // Deduplicate by slug
-    const seen = new Set<string>()
-    const deduped = mapped.filter(c => {
-      if (!c.slug || seen.has(c.slug)) return false
-      seen.add(c.slug)
-      return true
-    })
-
-    // Sort: glow_score DESC, then image-first as tiebreaker
-    const sorted = deduped.sort((a, b) => {
-      const scoreDiff = (b.glowScore ?? 0) - (a.glowScore ?? 0)
-      if (scoreDiff !== 0) return scoreDiff
-      const aHasImg = a.heroImageUrl ? 1 : 0
-      const bHasImg = b.heroImageUrl ? 1 : 0
-      return bHasImg - aHasImg
-    })
-
-    // Clean each record
-    const cleaned = sorted.map(clean)
-    
-    console.log(`[supabase-clinics] Returning ${cleaned.length} clinics`)
-    return cleaned
+    return clinics
   } catch (err) {
     console.error('[supabase-clinics] Unexpected error:', err)
     return []
   }
-}
-
-/**
- * Distinct live /clinics/{city} hubs from visible clinic rows, with centroid coords.
- * Lightweight columns only — used for Nearby Cities, not the 6-card grid.
- */
-let _liveCityHubsPromise: Promise<LiveCityHub[]> | null = null
-export const fetchLiveCityHubs = cache(async (): Promise<LiveCityHub[]> => {
-  if (!_liveCityHubsPromise) {
-    _liveCityHubsPromise = _fetchLiveCityHubsImpl()
-  }
-  return _liveCityHubsPromise
 })
 
-async function _fetchLiveCityHubsImpl(): Promise<LiveCityHub[]> {
-  const supabase = getSupabaseAdmin()
-  if (!supabase) {
-    console.warn('[supabase-clinics] Supabase admin client not available, returning empty city hubs')
-    return []
-  }
-
-  const BATCH_SIZE = 1000
-  const rows: Array<{ city?: string | null; state?: string | null; lat?: number | null; lng?: number | null }> = []
-  let page = 0
-
-  try {
-    while (true) {
-      const from = page * BATCH_SIZE
-      const to = from + BATCH_SIZE - 1
-      const { data, error } = await supabase
-        .from('clinics')
-        .select('city, state, lat, lng')
-        .in('visibility', ['visible'])
-        .range(from, to)
-
-      if (error) {
-        console.error('[supabase-clinics] fetchLiveCityHubs error:', error.message)
-        break
-      }
-      if (!data || data.length === 0) break
-      rows.push(...data)
-      if (data.length < BATCH_SIZE) break
-      page += 1
-    }
-
-    const hubs = aggregateLiveCityHubs(rows)
-    console.log(`[supabase-clinics] fetchLiveCityHubs: ${hubs.length} live city hubs`)
-    return hubs
-  } catch (err) {
-    console.error('[supabase-clinics] fetchLiveCityHubs unexpected error:', err)
-    return []
-  }
-}
+/**
+ * Distinct live /clinics/{city} hubs from the cached visible directory.
+ */
+export const fetchLiveCityHubs = cache(async (): Promise<LiveCityHub[]> => {
+  const clinics = await fetchAllClinicsFromSupabase()
+  const hubs = aggregateLiveCityHubs(
+    clinics.map((clinic) => ({
+      city: clinic.city,
+      state: clinic.state,
+      lat: clinic.lat,
+      lng: clinic.lng,
+    })),
+  )
+  console.log(`[supabase-clinics] fetchLiveCityHubs: ${hubs.length} live city hubs`)
+  return hubs
+})
 
 /**
- * Fetch clinics for a specific city slug (e.g. "miami-beach" → matches city "Miami Beach").
- * Uses server-side .eq() filter (with .ilike() fallback) — avoids full-table scan.
- * Sorted by glow_score DESC, then review_count DESC.
+ * Clinics for a city slug, taken from the cached visible directory.
+ * Exact display-name match first, then a case-insensitive fallback.
  */
-export async function fetchClinicsByCity(citySlug: string): Promise<Clinic[]> {
-  const supabase = getSupabaseAdmin()
-  if (!supabase) {
-    console.warn('[supabase-clinics] Supabase admin client not available, returning empty array')
-    return []
-  }
-
-  // Convert slug back to display name for matching: "miami-beach" → "Miami Beach"
-  const displayName = citySlug
-    .split('-')
-    .map(w => w.charAt(0).toUpperCase() + w.slice(1))
-    .join(' ')
-
-  // Use .eq() on the city column — exact match on display name (canonical in DB).
-  // Fall back to .ilike() for slugified mismatches (e.g. "St. Pete" vs "St Pete").
-  const CITY_BATCH = 1000
-  let allRows: any[] = []
-  let page = 0
-  let hasMore = true
-
-  console.log(`[supabase-clinics] fetchClinicsByCity: slug=${citySlug} display=${displayName}`)
-
-  try {
-    // First try exact match
-    while (hasMore) {
-      const from = page * CITY_BATCH
-      const to = from + CITY_BATCH - 1
-      const { data, error } = await supabase
-        .from('clinics')
-        .select('*')
-        .eq('city', displayName)
-        .in('visibility', ['visible'])
-        .order('glow_score', { ascending: false })
-        .order('review_count', { ascending: false })
-        .range(from, to)
-
-      if (error) {
-        console.error('[supabase-clinics] fetchClinicsByCity error:', error.message)
-        break
-      }
-
-      if (data && data.length > 0) {
-        allRows = allRows.concat(data)
-      }
-
-      if (!data || data.length < CITY_BATCH) {
-        hasMore = false
-      }
-      page++
-    }
-
-    // If exact match yields nothing, fall back to ilike for slug variant mismatches
-    if (allRows.length === 0) {
-      console.log(`[supabase-clinics] Exact city match empty, falling back to ilike for ${displayName}`)
-      const { data: fallbackData, error: fallbackError } = await supabase
-        .from('clinics')
-        .select('*')
-        .ilike('city', displayName.replace(/-/g, '%'))
-        .in('visibility', ['visible'])
-        .order('glow_score', { ascending: false })
-        .order('review_count', { ascending: false })
-        .limit(1000)
-
-      if (!fallbackError && fallbackData) {
-        allRows = fallbackData
-      }
-    }
-
-    console.log(`[supabase-clinics] fetchClinicsByCity: ${allRows.length} rows for ${displayName}`)
-
-    const mapped = allRows.map(mapSupabaseRow)
-
-    // Deduplicate by slug
-    const seen = new Set<string>()
-    const deduped = mapped.filter(c => {
-      if (!c.slug || seen.has(c.slug)) return false
-      seen.add(c.slug)
-      return true
-    })
-
-    return deduped.map(clean)
-  } catch (err) {
-    console.error('[supabase-clinics] fetchClinicsByCity unexpected error:', err)
-    return []
-  }
-}
+export const fetchClinicsByCity = cache(async (citySlug: string): Promise<Clinic[]> => {
+  const clinics = await fetchAllClinicsFromSupabase()
+  const matched = filterClinicsForCitySlug(clinics, citySlug)
+  console.log(`[supabase-clinics] fetchClinicsByCity: ${matched.length} rows for ${citySlug}`)
+  return matched
+})
 
 /**
  * Featured clinic: first clinic with featured flag, or first clinic.
  */
-/** Single-row slug lookup. Avoids the full-table scan used by allClinics. */
+/** Single-row slug lookup. Uses the directory columns, not select=*. */
 export async function fetchClinicByExactSlug(slug: string): Promise<Clinic | null> {
   const supabase = getSupabaseAdmin()
   if (!supabase || !slug) return null
 
   const { data, error } = await supabase
     .from('clinics')
-    .select('*')
+    .select(DIRECTORY_SELECT)
     .eq('slug', slug)
+    .order('id', { ascending: true })
     .limit(1)
 
   if (error || !data || data.length === 0) return null
   return clean(mapSupabaseRow(data[0]))
 }
 
+/** Featured clinic from the cached visible directory, else the first row in directory order. */
 export async function fetchFeaturedClinic(): Promise<Clinic | null> {
-  const supabase = getSupabaseAdmin()
-  if (!supabase) return null
-  
-  const { data, error } = await supabase
-    .from('clinics')
-    .select('*')
-    .eq('is_featured', true)
-    .limit(1)
-  
-  if (error || !data || data.length === 0) {
-    // Fallback to first clinic
-    const { data: first } = await supabase
-      .from('clinics')
-      .select('*')
-      .limit(1)
-    if (first && first.length > 0) {
-      return clean(mapSupabaseRow(first[0]))
-    }
-    return null
-  }
-  
-  return clean(mapSupabaseRow(data[0]))
+  const clinics = await fetchAllClinicsFromSupabase()
+  return clinics.find((clinic) => clinic.featured) ?? clinics[0] ?? null
 }
 
 /**
