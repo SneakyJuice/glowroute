@@ -6,7 +6,9 @@
 --
 -- anon and authenticated must name columns on clinics, reviews, and
 -- clinic_treatments. A wildcard select is not available to those roles
--- on those tables.
+-- on those tables. Those limits are column-level GRANTs on the tables.
+--
+-- After applying this file, run supabase/tests/rls_directory_policies.sql.
 
 alter table public.clinics enable row level security;
 alter table public.clinic_contacts enable row level security;

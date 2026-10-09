@@ -56,6 +56,36 @@ describe('directory RLS migration', () => {
     )
   })
 
+  it('ships a post-migration SQL check for anon and authenticated', () => {
+    const check = readFileSync(
+      new URL('../supabase/tests/rls_directory_policies.sql', import.meta.url),
+      'utf8',
+    ).toLowerCase()
+    assert.match(check, /set local role/)
+    assert.match(check, /assert_closed_table\('anon', 'clinic_contacts'\)/)
+    assert.match(check, /assert_closed_table\('authenticated', 'clinic_contacts'\)/)
+    assert.match(check, /assert_closed_table\('anon', 'subscriptions'\)/)
+    assert.match(check, /assert_closed_table\('authenticated', 'subscriptions'\)/)
+    assert.match(check, /has_column_privilege/)
+    assert.match(check, /insufficient_privilege/)
+    assert.match(check, /row_count <> 0/)
+    assert.match(check, /select \* from public\.clinics/)
+    assert.doesNotMatch(check, /insert into/)
+    assert.doesNotMatch(check, /delete from/)
+    for (const column of [
+      'email',
+      'contact_email',
+      'stripe_customer_id',
+      'subscription_id',
+      'claim_tier',
+      'plan',
+      'place_id',
+    ]) {
+      assert.match(check, new RegExp(`assert_column_denied\\('anon', '${column}'\\)`))
+      assert.match(check, new RegExp(`assert_column_denied\\('authenticated', '${column}'\\)`))
+    }
+  })
+
   it('restores service_role table access and does not drop data', () => {
     for (const table of tables) {
       assert.match(sql, new RegExp(`grant all on table public\\.${table} to service_role`))
