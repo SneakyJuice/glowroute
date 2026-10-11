@@ -1,0 +1,41 @@
+Production run of supabase/tests/rls_directory_policies.sql
+Project: psiuknphchmhsthvhkpt
+After applying supabase/migrations/20261009130000_add_rls_policies.sql
+Completed apply: 2026-10-11 15:29:46 EDT
+
+The file stopped before the success notice:
+
+ERROR:  P0001: clinics.stripe_customer_id does not exist
+CONTEXT:  PL/pgSQL function pg_temp.assert_column_denied(text,text) line 10 at RAISE
+
+Checks that ran before that error did not raise. Those calls were
+assert_column_denied for anon and authenticated on clinics.email and
+clinics.contact_email.
+
+Columns named by the file:
+  present: email, contact_email, claim_tier, place_id
+  absent:  stripe_customer_id, subscription_id, plan
+
+No rls-check rows were left behind. leftover clinics with slug like
+'rls-check-%': 0.
+
+Follow-up on the same database, using the file's closed-table and
+row-filter logic:
+
+anon SELECT on public.clinic_contacts: false
+authenticated SELECT on public.clinic_contacts: false
+anon SELECT on public.subscriptions: false
+service_role SELECT on public.clinic_contacts: true
+
+set local role anon; select from public.clinic_contacts:
+  permission denied 42501
+
+Closed-table function for anon and authenticated on clinic_contacts and
+subscriptions returned without raising.
+
+Row-filter transaction (insert visible and hidden fixtures, compare anon
+counts to service_role, roll back) completed without an exception.
+leftover clinics with slug like 'rls-check-%' after rollback: 0
+
+The file itself did not print "NOTICE: rls directory checks passed"
+because clinics.stripe_customer_id is not a column on production.

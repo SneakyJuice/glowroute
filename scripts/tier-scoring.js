@@ -2,10 +2,24 @@ const { createClient } = require('@supabase/supabase-js');
 const fs = require('fs');
 const path = require('path');
 
-// Load environment variables
-const supabaseUrl = 'https://psiuknphchmhsthvhkpt.supabase.co';
-const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InBzaXVrbnBoY2htaHN0aHZoa3B0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ4MTE4NjgsImV4cCI6MjA5MDM4Nzg2OH0.TBvE2W-156B_knhKYRSTK0koNfB3zIkZyykSpAPrMZY';
-const supabase = createClient(supabaseUrl, supabaseKey);
+function loadEnvFile(filePath) {
+  if (!fs.existsSync(filePath)) return;
+  for (const line of fs.readFileSync(filePath, 'utf8').split('\n')) {
+    const match = line.match(/^(?:export\s+)?([A-Z0-9_]+)=(.*)$/);
+    if (!match || process.env[match[1]]) continue;
+    process.env[match[1]] = match[2].trim().replace(/^['"]|['"]$/g, '');
+  }
+}
+
+loadEnvFile(path.join(__dirname, '../.env.local'));
+
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.SUPABASE_URL;
+const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+if (!supabaseUrl || !supabaseKey) {
+  console.error('NEXT_PUBLIC_SUPABASE_URL (or SUPABASE_URL) and SUPABASE_SERVICE_ROLE_KEY are required.');
+  process.exit(1);
+}
+const supabase = createClient(supabaseUrl, supabaseKey, { auth: { persistSession: false } });
 
 // Output directories
 const outputDir = path.join(__dirname, '../../output');
@@ -19,6 +33,21 @@ const TIER_DEFINITIONS = {
   TIER_2: { glow_score: 4.0, review_count: 50 },
   TIER_3: { glow_score: 4.0, review_count: 20 },
 };
+
+function missingTierColumn(error) {
+  const message = `${error && error.message ? error.message : ''} ${error && error.details ? error.details : ''}`;
+  return /tier/i.test(message) && /(does not exist|schema cache|could not find)/i.test(message);
+}
+
+async function requireTierColumn() {
+  const { error } = await supabase.from('clinics').select('tier').limit(1);
+  if (!error) return;
+  if (missingTierColumn(error)) {
+    console.error('clinics.tier does not exist. This script did not update any rows. No migration was added for tier.');
+    process.exit(1);
+  }
+  throw error;
+}
 
 // Function to assign tier based on glow_score and review_count
 function assignTier(clinic) {
@@ -36,10 +65,12 @@ function assignTier(clinic) {
 // Main function
 async function tierScoring() {
   try {
+    await requireTierColumn();
+
     // Query all clinics
     const { data: clinics, error } = await supabase
       .from('clinics')
-      .select('*');
+      .select('id,name,city,glow_score,review_count');
 
     if (error) throw error;
 
@@ -49,13 +80,22 @@ async function tierScoring() {
       return { ...clinic, tier };
     });
 
-    // Attempt to update the `tier` column in Supabase
+    // clinics.tier is not in the current database. Update one row at a time
+    // and stop if that column is still missing. Do not add a migration for it.
     try {
-      const { data: updateResult, error: updateError } = await supabase
-        .from('clinics')
-        .upsert(updatedClinics);
-
-      if (updateError) throw updateError;
+      for (const clinic of updatedClinics) {
+        const { error: updateError } = await supabase
+          .from('clinics')
+          .update({ tier: clinic.tier })
+          .eq('id', clinic.id);
+        if (updateError) {
+          if (missingTierColumn(updateError)) {
+            console.error('clinics.tier does not exist. This script did not finish updates. No migration was added for tier.');
+            process.exit(1);
+          }
+          throw updateError;
+        }
+      }
       console.log('Successfully updated tiers in Supabase.');
     } catch (updateError) {
       console.warn('Failed to update tiers in Supabase. Saving to JSON/CSV instead.');
