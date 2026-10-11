@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { appendLead } from '@/lib/claims'
 import { sendLeadEmail } from '@/lib/resend'
-import { allClinics } from '@/data/all-clinics'
+import { fetchClinicByExactSlug } from '@/data/supabase-clinics'
 
 export async function POST(req: NextRequest) {
   try {
@@ -20,8 +20,15 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'name and email are required' }, { status: 400 })
     }
 
-    // Look up clinic name for the notification
-    const clinic = clinicSlug ? (await allClinics).find(c => c.slug === clinicSlug) : undefined
+    // A lookup error is not a missing clinic. Keep the lead and use the slug.
+    let clinic = null
+    if (clinicSlug) {
+      try {
+        clinic = await fetchClinicByExactSlug(clinicSlug)
+      } catch (lookupError) {
+        console.error('[leads] clinic lookup failed', lookupError)
+      }
+    }
     const clinicName = clinic?.name ?? clinicSlug ?? 'GlowRoute Directory'
 
     // Save lead to JSON store

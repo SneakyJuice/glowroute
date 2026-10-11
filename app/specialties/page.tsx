@@ -32,7 +32,7 @@ async function getCategoryCounts(): Promise<Record<CategorySlug, number>> {
     counts[cat.slug as CategorySlug] = 0
   }
   // Count clinics per category
-  for (const clinic of (await allClinics)) {
+  for (const clinic of (await allClinics())) {
     const treatments = [...(clinic.treatments || []), ...(clinic.specialtyTreatments || [])]
     const matched = matchCategories(treatments)
     for (const slug of matched) {

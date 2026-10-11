@@ -71,8 +71,14 @@ export async function GET(req: NextRequest) {
   } catch (err) {
     console.error('[/api/clinics] Error:', err)
     return NextResponse.json(
-      { error: 'Failed to fetch clinics' },
-      { status: 500 }
+      { error: 'Clinic directory is temporarily unavailable. Try again.' },
+      {
+        status: 503,
+        headers: {
+          'Retry-After': '60',
+          'Cache-Control': 'no-store',
+        },
+      },
     )
   }
 }

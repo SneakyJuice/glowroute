@@ -52,7 +52,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function CityPage({ params }: Props) {
   const displayCity = citySlugToDisplay(params.city)
-  // fetchClinicsByCity does server-side .eq() filter — no full-table scan
+  // City rows come from the cached visible directory, not a separate full-table read.
   const [cityClinics, liveHubs] = await Promise.all([
     fetchClinicsByCity(params.city),
     fetchLiveCityHubs(),

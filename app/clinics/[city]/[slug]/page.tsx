@@ -4,8 +4,7 @@ export const dynamicParams = true
 
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { getSupabaseAdmin } from '@/lib/supabase'
-import { mapSupabaseRow, clean, fetchAllClinicsFromSupabase } from '@/data/supabase-clinics'
+import { fetchClinicByExactSlug, fetchClinicsByCity } from '@/data/supabase-clinics'
 import type { Clinic } from '@/types/clinic'
 import TreatmentTag, { getTagVariant } from '@/components/TreatmentTag'
 import VerifiedBadge from '@/components/VerifiedBadge'
@@ -41,19 +40,6 @@ interface PageProps {
   params: { city: string; slug: string }
 }
 
-// Helper to fetch a single clinic from Supabase
-async function fetchClinicBySlug(city: string, slug: string): Promise<Clinic | null> {
-  const supabase = getSupabaseAdmin()
-  if (!supabase) return null
-  const { data, error } = await supabase
-    .from('clinics')
-    .select('*')
-    .eq('slug', slug)
-    .limit(1)
-  if (error || !data || data.length === 0) return null
-  return clean(mapSupabaseRow(data[0]))
-}
-
 /** Pre-render top-priority clinic pages at build time (ISR seed — no Supabase at build) */
 export async function generateStaticParams() {
   return TOP_CLINIC_PARAMS
@@ -66,7 +52,7 @@ function truncate(str: string, maxLen: number, suffix = '…'): string {
 }
 
 export async function generateMetadata({ params }: PageProps) {
-  const clinic = await fetchClinicBySlug(params.city, params.slug)
+  const clinic = await fetchClinicByExactSlug(params.slug)
   if (!clinic) return { title: 'Clinic Not Found | GlowRoute' }
 
   const clinicOverride = getClinicSeoOverride(params.city, params.slug)
@@ -143,35 +129,11 @@ function StarRating({ rating }: { rating: number }) {
 // ─── Treatment City Page (disambiguation) ────────────────────────────────────
 async function TreatmentCityPage({ city, treatment }: { city: string; treatment: string }) {
   const treatmentInfo = TREATMENTS.find(t => t.slug === treatment)
-  const supabase = getSupabaseAdmin()
-  let clinics: import('@/types/clinic').Clinic[] = []
-  if (supabase) {
-    const displayCity = city.split('-').map(w => w[0].toUpperCase() + w.slice(1)).join(' ')
-
-    // First: try exact services match
-    const { data: matched } = await supabase
-      .from('clinics')
-      .select('*')
-      .ilike('city', displayCity)
-      .contains('services', [treatment])
-      .gt('glow_score', 0)
-      .order('glow_score', { ascending: false })
-      .limit(50)
-
-    if (matched && matched.length > 0) {
-      clinics = matched as import('@/types/clinic').Clinic[]
-    } else {
-      // Fallback: show all rated clinics in the city (services data not yet populated)
-      const { data: cityAll } = await supabase
-        .from('clinics')
-        .select('*')
-        .ilike('city', displayCity)
-        .gt('glow_score', 0)
-        .order('glow_score', { ascending: false })
-        .limit(50)
-      clinics = (cityAll || []) as import('@/types/clinic').Clinic[]
-    }
-  }
+  const rated = (await fetchClinicsByCity(city)).filter((clinic) => (clinic.googleRating ?? 0) > 0)
+  const matched = rated.filter((clinic) =>
+    (clinic.services ?? []).includes(treatment) || (clinic.treatments ?? []).includes(treatment),
+  )
+  const clinics = (matched.length > 0 ? matched : rated).slice(0, 50)
   return (
     <div className="min-h-screen bg-ivory font-sans">
       <Navbar />
@@ -212,7 +174,8 @@ export default async function ClinicProfilePage({ params }: PageProps) {
   if (TREATMENT_SLUGS.includes(params.slug)) {
     return <TreatmentCityPage city={params.city} treatment={params.slug} />
   }
-  const clinic = await fetchClinicBySlug(params.city, params.slug)
+  const clinic = await fetchClinicByExactSlug(params.slug)
+  // null means the clinic is missing. Lookup errors throw and are not stored as a 404.
   if (!clinic) notFound()
   const clinicOverride = getClinicSeoOverride(params.city, params.slug)
 

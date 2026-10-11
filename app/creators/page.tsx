@@ -21,7 +21,7 @@ function citySlug(city: string) {
 }
 
 export default async function CreatorsPage() {
-  const all = await allClinics
+  const all = await allClinics()
   const creatorClinics = all
     .filter(detectInfluencer)
     .sort((a, b) => b.googleReviewCount - a.googleReviewCount)

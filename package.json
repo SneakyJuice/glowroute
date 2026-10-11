@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "node --experimental-strip-types --test lib/seo-page-overrides.test.ts"
+    "test": "node --experimental-strip-types --test lib/seo-page-overrides.test.ts lib/clinic-directory.test.ts lib/rls-policies.test.ts"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",

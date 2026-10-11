@@ -1,3 +1,5 @@
+import { unstable_cache } from 'next/cache'
+import { DIRECTORY_REVALIDATE_SECONDS } from '@/lib/clinic-directory'
 import { getSupabaseAdmin } from '@/lib/supabase'
 
 /** Google allows 50k URLs per file; stay well under for payload size. */
@@ -39,7 +41,7 @@ function requireSupabase() {
  * Count the deduplicated sitemap view. The index and chunk routes are both
  * dynamic, so this count cannot drift from the routes that actually exist.
  */
-export async function fetchSitemapClinicCount(): Promise<number> {
+async function fetchSitemapClinicCountUncached(): Promise<number> {
   const supabase = requireSupabase()
   const { count, error } = await supabase
     .from('sitemap_clinics')
@@ -50,7 +52,7 @@ export async function fetchSitemapClinicCount(): Promise<number> {
 }
 
 /** One deterministic, globally deduplicated chunk: only id + slug + city. */
-export async function fetchSitemapClinicChunk(chunkIndex: number): Promise<SitemapClinic[]> {
+async function fetchSitemapClinicChunkUncached(chunkIndex: number): Promise<SitemapClinic[]> {
   if (!Number.isInteger(chunkIndex) || chunkIndex < 0) {
     throw new SitemapDataError(`Invalid sitemap chunk: ${chunkIndex}`)
   }
@@ -88,7 +90,7 @@ export async function fetchSitemapClinicChunk(chunkIndex: number): Promise<Sitem
 }
 
 /** Unique city slugs for /clinics/{city} pages. */
-export async function fetchSitemapCities(): Promise<string[]> {
+async function fetchSitemapCitiesUncached(): Promise<string[]> {
   const supabase = requireSupabase()
   const BATCH = 1000
   const cities = new Set<string>()
@@ -116,3 +118,23 @@ export async function fetchSitemapCities(): Promise<string[]> {
 
   return Array.from(cities).filter(Boolean)
 }
+
+const sitemapCache = { revalidate: DIRECTORY_REVALIDATE_SECONDS }
+
+export const fetchSitemapClinicCount = unstable_cache(
+  fetchSitemapClinicCountUncached,
+  ['sitemap-clinic-count-v1'],
+  sitemapCache,
+)
+
+export const fetchSitemapClinicChunk = unstable_cache(
+  fetchSitemapClinicChunkUncached,
+  ['sitemap-clinic-chunk-v1'],
+  sitemapCache,
+)
+
+export const fetchSitemapCities = unstable_cache(
+  fetchSitemapCitiesUncached,
+  ['sitemap-clinic-cities-v1'],
+  sitemapCache,
+)
