@@ -1,0 +1,23 @@
+{
+  "project_id": "psiuknphchmhsthvhkpt",
+  "project_name": "Glowroute",
+  "captured_at_utc": "2026-10-11T19:28:30Z",
+  "tables": [
+    "clinics",
+    "clinic_contacts",
+    "reviews",
+    "subscriptions",
+    "treatments",
+    "clinic_treatments"
+  ],
+  "rls": {
+    "clinics": { "rls_enabled": false, "rls_forced": false },
+    "clinic_contacts": { "rls_enabled": false, "rls_forced": false },
+    "reviews": { "rls_enabled": false, "rls_forced": false },
+    "subscriptions": { "rls_enabled": false, "rls_forced": false },
+    "treatments": { "rls_enabled": false, "rls_forced": false },
+    "clinic_treatments": { "rls_enabled": false, "rls_forced": false }
+  },
+  "policies": [],
+  "grants": "anon, authenticated, and service_role each had table-level DELETE, INSERT, REFERENCES, SELECT, TRIGGER, TRUNCATE, and UPDATE on all six tables. No policies were present."
+}
