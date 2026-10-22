@@ -1,5 +1,7 @@
 'use client'
 
+import Link from 'next/link'
+
 interface QuizCTAProps {
   variant?: 'banner' | 'inline' | 'sidebar'
 }
@@ -17,18 +19,18 @@ export default function QuizCTA({ variant = 'banner' }: QuizCTAProps) {
             Answer 5 quick questions and get matched to the right provider.
           </p>
           <div className="flex items-center justify-center gap-4 flex-wrap">
-            <a
+            <Link
               href="/quiz?utm_source=banner&utm_medium=cta"
               className="bg-champagne text-white text-sm font-semibold px-6 py-3 rounded-xl hover:opacity-90 transition-opacity"
             >
               Take the Free Quiz →
-            </a>
-            <a
+            </Link>
+            <Link
               href="/clinics"
               className="text-white/60 text-sm underline hover:text-white transition-colors"
             >
               Browse Clinics
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -42,12 +44,12 @@ export default function QuizCTA({ variant = 'banner' }: QuizCTAProps) {
           <h3 className="font-serif text-lg text-onyx font-semibold mb-1">Find your treatment match</h3>
           <p className="text-stone text-sm">Answer 5 quick questions and get personalized provider recommendations.</p>
         </div>
-        <a
+        <Link
           href="/quiz?utm_source=inline&utm_medium=cta"
           className="flex-shrink-0 bg-sage text-white text-sm font-semibold px-5 py-2.5 rounded-xl hover:opacity-90 transition-opacity whitespace-nowrap"
         >
           Take the Quiz →
-        </a>
+        </Link>
       </div>
     )
   }
@@ -57,14 +59,14 @@ export default function QuizCTA({ variant = 'banner' }: QuizCTAProps) {
     <div className="bg-white border border-champagne/30 rounded-2xl p-5">
       <h3 className="font-serif text-lg text-onyx font-semibold mb-1">Find Your Match</h3>
       <p className="text-stone text-xs leading-relaxed mb-4">
-        Not sure what's right for you? Take our 2-minute quiz for personalized recommendations.
+        Not sure what&apos;s right for you? Take our 2-minute quiz for personalized recommendations.
       </p>
-      <a
+      <Link
         href="/quiz?utm_source=sidebar&utm_medium=cta"
         className="block w-full bg-sage text-white text-sm font-semibold text-center py-2.5 rounded-xl hover:opacity-90 transition-opacity"
       >
         Take the Free Quiz →
-      </a>
+      </Link>
     </div>
   )
 }

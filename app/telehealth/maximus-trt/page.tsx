@@ -70,7 +70,7 @@ export default function MaximusPage() {
               {/* About */}
               <div className="bg-white rounded-xl p-6 shadow-sm">
                 <h2 className="text-2xl font-display font-light text-onyx mb-4">About Maximus</h2>
-                <p className="text-stone-600 leading-relaxed">Maximus is a men's health platform built for performance optimization  -  combining TRT, peptide protocols, and precision monitoring for men serious about their health.</p>
+                <p className="text-stone-600 leading-relaxed">Maximus is a men&apos;s health platform built for performance optimization  -  combining TRT, peptide protocols, and precision monitoring for men serious about their health.</p>
               </div>
 
               {/* Treatments */}

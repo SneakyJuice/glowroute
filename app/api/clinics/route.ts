@@ -2,12 +2,13 @@ export const dynamic = 'force-dynamic'
 
 import { NextRequest, NextResponse } from 'next/server'
 import { fetchAllClinicsFromSupabase, fetchFeaturedClinic } from '@/data/supabase-clinics'
+import type { Clinic } from '@/types/clinic'
 
 /**
  * Trim clinic to only essential fields for homepage listing.
  * Reduces ~1,960 bytes per record to ~400 bytes.
  */
-function trimClinic(clinic: any) {
+function trimClinic(clinic: Clinic) {
   return {
     id: clinic.id,
     slug: clinic.slug,

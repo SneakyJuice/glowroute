@@ -18,19 +18,25 @@ import {
   selectNearbyCityHubs,
 } from '@/lib/seo-page-overrides'
 
-interface Props { params: { city: string } }
+interface Props { params: Promise<{ city: string }> }
 
 /** Pre-render top 40 city pages at build time (ISR seed — no Supabase at build) */
 export async function generateStaticParams() {
+  // Rendering these pages needs the directory. Skip the seed when credentials
+  // are absent so a build cannot cache empty 404s.
+  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.SUPABASE_SERVICE_ROLE_KEY) {
+    return []
+  }
   return TOP_CITY_PARAMS
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const cityClinics = await fetchClinicsByCity(params.city)
-  if (cityClinics.length === 0 && params.city !== 'miami') return { title: 'Clinics — GlowRoute' }
+  const { city } = await params
+  const cityClinics = await fetchClinicsByCity(city)
+  if (cityClinics.length === 0 && city !== 'miami') return { title: 'Clinics — GlowRoute' }
 
   const stateAbbr = (cityClinics.find(c => c.state)?.state || '').toUpperCase()
-  const seo = buildCityHubSeo(params.city, { stateAbbr })
+  const seo = buildCityHubSeo(city, { stateAbbr })
   const url = `${SITE_URL}${seo.canonicalPath}`
 
   return {
@@ -51,10 +57,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function CityPage({ params }: Props) {
-  const displayCity = citySlugToDisplay(params.city)
+  const { city } = await params
+  const displayCity = citySlugToDisplay(city)
   // City rows come from the cached visible directory, not a separate full-table read.
   const [cityClinics, liveHubs] = await Promise.all([
-    fetchClinicsByCity(params.city),
+    fetchClinicsByCity(city),
     fetchLiveCityHubs(),
   ])
   const sortedCityClinics = [...cityClinics].sort(
@@ -70,9 +77,9 @@ export default async function CityPage({ params }: Props) {
   const cityState = stateAbbr ? `${displayCity}, ${stateAbbr}` : displayCity
   const topClinics = sortedCityClinics.slice(0, 6)
   const avgRating = (sortedCityClinics.reduce((s, c) => s + c.googleRating, 0) / count).toFixed(1)
-  const seo = buildCityHubSeo(params.city, {
+  const seo = buildCityHubSeo(city, {
     stateAbbr,
-    nearbyHubs: selectNearbyCityHubs(params.city, liveHubs, {
+    nearbyHubs: selectNearbyCityHubs(city, liveHubs, {
       ...cityHubCentroid(sortedCityClinics),
       state: stateAbbr,
     }),
@@ -84,13 +91,13 @@ export default async function CityPage({ params }: Props) {
     '@type': 'ItemList',
     name: `Best MedSpas in ${cityState}`,
     description: `Top-rated medical spas and aesthetic clinics in ${cityState}`,
-    url: `${SITE_URL}/clinics/${params.city}`,
+    url: `${SITE_URL}/clinics/${city}`,
     numberOfItems: Math.min(5, sortedCityClinics.length),
     itemListElement: sortedCityClinics.slice(0, 5).map((c, i) => ({
       '@type': 'ListItem',
       position: i + 1,
       name: c.name,
-      url: `${SITE_URL}/clinics/${params.city}/${c.slug}`,
+      url: `${SITE_URL}/clinics/${city}/${c.slug}`,
       item: {
         '@type': 'LocalBusiness',
         name: c.name,

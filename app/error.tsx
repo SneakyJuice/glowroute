@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
+import Link from 'next/link'
 
 export default function Error({
   error,
@@ -29,9 +30,9 @@ export default function Error({
         >
           Try again
         </button>
-        <a href="/" className="mt-4 block text-sm text-sage">
+        <Link href="/" className="mt-4 block text-sm text-sage">
           Back to GlowRoute
-        </a>
+        </Link>
       </div>
     </main>
   )

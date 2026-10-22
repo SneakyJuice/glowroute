@@ -122,11 +122,12 @@ function clinicsForGoal(clinics: Clinic[], goalSlug: string): Clinic[] {
 export default async function PeptideTherapyPage({
   searchParams,
 }: {
-  searchParams: { goal?: string; city?: string }
+  searchParams: Promise<{ goal?: string; city?: string }>
 }) {
+  const resolvedSearchParams = await searchParams
   const allClinics = await fetchAllClinicsFromSupabase()
-  const activeGoalSlug = searchParams.goal || 'all'
-  const cityFilter = searchParams.city
+  const activeGoalSlug = resolvedSearchParams.goal || 'all'
+  const cityFilter = resolvedSearchParams.city
 
   // Filter to peptide-relevant clinics
   const peptideClinics = allClinics

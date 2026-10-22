@@ -37,11 +37,16 @@ function citySlug(city: string | undefined | null) {
 }
 
 interface PageProps {
-  params: { city: string; slug: string }
+  params: Promise<{ city: string; slug: string }>
 }
 
 /** Pre-render top-priority clinic pages at build time (ISR seed — no Supabase at build) */
 export async function generateStaticParams() {
+  // Each seeded page looks the clinic up. Skip the seed when credentials are
+  // absent so a build cannot fail closed or cache a not-found result.
+  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.SUPABASE_SERVICE_ROLE_KEY) {
+    return []
+  }
   return TOP_CLINIC_PARAMS
 }
 
@@ -52,10 +57,11 @@ function truncate(str: string, maxLen: number, suffix = '…'): string {
 }
 
 export async function generateMetadata({ params }: PageProps) {
-  const clinic = await fetchClinicByExactSlug(params.slug)
+  const { city, slug } = await params
+  const clinic = await fetchClinicByExactSlug(slug)
   if (!clinic) return { title: 'Clinic Not Found | GlowRoute' }
 
-  const clinicOverride = getClinicSeoOverride(params.city, params.slug)
+  const clinicOverride = getClinicSeoOverride(city, slug)
 
   // Page title: full name (browsers handle overflow). Never prefix "Verified".
   const pageTitle = clinicOverride?.title ?? `${clinic.name} | GlowRoute`
@@ -79,7 +85,7 @@ export async function generateMetadata({ params }: PageProps) {
     clinic.logo ||
     `${SITE_URL}/og-default.jpg`
 
-  const pageUrl = `${SITE_URL}${clinicOverride?.canonicalPath ?? `/clinics/${params.city}/${params.slug}`}`
+  const pageUrl = `${SITE_URL}${clinicOverride?.canonicalPath ?? `/clinics/${city}/${slug}`}`
 
   return {
     title: pageTitle,
@@ -160,7 +166,7 @@ async function TreatmentCityPage({ city, treatment }: { city: string; treatment:
         ) : (
           <div className="text-center py-20">
             <p className="text-stone text-lg mb-4">No clinics found for this treatment in this city yet.</p>
-            <a href="/clinics" className="text-blush underline">Browse all clinics →</a>
+            <Link href="/clinics" className="text-blush underline">Browse all clinics →</Link>
           </div>
         )}
       </main>
@@ -170,14 +176,15 @@ async function TreatmentCityPage({ city, treatment }: { city: string; treatment:
 }
 
 export default async function ClinicProfilePage({ params }: PageProps) {
+  const { city, slug } = await params
   // Disambiguate: if slug matches a treatment, show treatment page
-  if (TREATMENT_SLUGS.includes(params.slug)) {
-    return <TreatmentCityPage city={params.city} treatment={params.slug} />
+  if (TREATMENT_SLUGS.includes(slug)) {
+    return <TreatmentCityPage city={city} treatment={slug} />
   }
-  const clinic = await fetchClinicByExactSlug(params.slug)
+  const clinic = await fetchClinicByExactSlug(slug)
   // null means the clinic is missing. Lookup errors throw and are not stored as a 404.
   if (!clinic) notFound()
-  const clinicOverride = getClinicSeoOverride(params.city, params.slug)
+  const clinicOverride = getClinicSeoOverride(city, slug)
 
   const allTreatments = [
     ...(clinic.treatments || []),
@@ -210,7 +217,7 @@ export default async function ClinicProfilePage({ params }: PageProps) {
   if (clinic.website) sameAs.add(clinic.website)
   if (clinic.bookingUrl) sameAs.add(clinic.bookingUrl)
 
-  const clinicSchema: Record<string, any> = {
+  const clinicSchema: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'MedicalBusiness',
     '@id': pageUrl,
@@ -386,7 +393,7 @@ export default async function ClinicProfilePage({ params }: PageProps) {
                       </span>
                     )}
                     {isCreator && creatorTier && (
-                      <CreatorBadge tier={creatorTier} variant="card" instagramUrl={(clinic as any).instagram} />
+                      <CreatorBadge tier={creatorTier} variant="card" instagramUrl={clinic.instagram} />
                     )}
                     {clinic.instagramHandle && (
                       <a
@@ -688,7 +695,7 @@ export default async function ClinicProfilePage({ params }: PageProps) {
                 <CreatorBadge
                   tier={creatorTier}
                   variant="profile"
-                  instagramUrl={(clinic as any).instagram}
+                  instagramUrl={clinic.instagram}
                 />
               </div>
             )}

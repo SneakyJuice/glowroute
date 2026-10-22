@@ -95,7 +95,7 @@ export default function BloodworkPage() {
             Know Your Numbers First
           </h1>
           <p className="text-xl text-gray-600 mb-4">
-            Every effective treatment starts with a baseline. Whether you're exploring
+            Every effective treatment starts with a baseline. Whether you&apos;re exploring
             GLP-1s, peptides, or hormones — your bloodwork tells the full story.
           </p>
           <p className="text-gray-400 text-sm">
@@ -168,7 +168,7 @@ export default function BloodworkPage() {
               <>
                 <h3 className="text-2xl font-semibold mb-2">One quick step</h3>
                 <p className="text-gray-500 mb-6 text-sm">
-                  We'll send your personalized results guide + exclusive discount code for {selectedPartner.name}.
+                  We&apos;ll send your personalized results guide + exclusive discount code for {selectedPartner.name}.
                 </p>
                 <form onSubmit={handleGateSubmit} className="space-y-4">
                   <input
@@ -213,7 +213,7 @@ export default function BloodworkPage() {
       <section className="py-14 bg-ivory text-center">
         <div className="container mx-auto px-4 max-w-2xl">
           <h2 className="text-2xl font-semibold mb-4">Not sure which test you need?</h2>
-          <p className="text-gray-500 mb-6">Take our 2-minute quiz and we'll match you to the right panel for your goal.</p>
+          <p className="text-gray-500 mb-6">Take our 2-minute quiz and we&apos;ll match you to the right panel for your goal.</p>
           <a href="/quiz" className="inline-block bg-champagne text-white py-3 px-8 rounded-lg hover:opacity-90 font-medium">
             Take the Quiz →
           </a>

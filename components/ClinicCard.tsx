@@ -11,8 +11,8 @@ import { calculateGlowScore } from '@/lib/glowscore'
 import { GlowScoreCardBadge } from './GlowScoreBadge'
 
 function getMapUrl(clinic: Clinic): string {
-  const lat = (clinic as any).lat
-  const lng = (clinic as any).lng
+  const lat = clinic.lat
+  const lng = clinic.lng
   if (lat != null && lng != null) {
     return `https://maps.google.com/?q=${lat},${lng}`
   }

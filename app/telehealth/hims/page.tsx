@@ -34,7 +34,7 @@ export default function HimsPage() {
               <span className="bg-white/10 text-white/80 text-xs px-3 py-1 rounded-full">$25-$199/month</span>
             </div>
             <h1 className="text-4xl md:text-5xl font-display font-light mb-4">Hims</h1>
-            <p className="text-xl text-white/80 mb-6">Men's health made simple  -  ED, hair loss, weight, and mental health</p>
+            <p className="text-xl text-white/80 mb-6">Men&apos;s health made simple  -  ED, hair loss, weight, and mental health</p>
             <div className="flex flex-wrap gap-2 mb-8">
             <span className="inline-block bg-sage/10 text-sage text-xs font-medium px-3 py-1 rounded-full">ED</span>
             <span className="inline-block bg-sage/10 text-sage text-xs font-medium px-3 py-1 rounded-full">Hair Loss</span>
@@ -70,7 +70,7 @@ export default function HimsPage() {
               {/* About */}
               <div className="bg-white rounded-xl p-6 shadow-sm">
                 <h2 className="text-2xl font-display font-light text-onyx mb-4">About Hims</h2>
-                <p className="text-stone-600 leading-relaxed">Hims makes men's healthcare simple and stigma-free, offering treatments for ED, hair loss, weight, skin, and mental health through a consumer-friendly telehealth platform.</p>
+                <p className="text-stone-600 leading-relaxed">Hims makes men&apos;s healthcare simple and stigma-free, offering treatments for ED, hair loss, weight, skin, and mental health through a consumer-friendly telehealth platform.</p>
               </div>
 
               {/* Treatments */}

@@ -51,7 +51,7 @@ export function detectInfluencer(clinic: Clinic): boolean {
 
   const hasPractitionerKeyword = PRACTITIONER_KEYWORDS.some(k => hay.includes(k))
   const hasSocialKeyword = SOCIAL_KEYWORDS.some(k => hay.includes(k))
-  const hasInstagram = !!(clinic as any).instagram
+  const hasInstagram = !!clinic.instagram
   const highReviews = clinic.googleReviewCount > 300
   const veryHighReviews = clinic.googleReviewCount > 500
   const isPeptide = isPeptideClinic(clinic)

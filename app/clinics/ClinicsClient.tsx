@@ -1,6 +1,7 @@
 'use client'
 import { useState, useMemo, useEffect, Suspense } from 'react'
 import { useSearchParams, useRouter } from 'next/navigation'
+import Link from 'next/link'
 import { GOALS } from '@/lib/goals'
 import Navbar from '@/components/Navbar'
 import HeroSearch from '@/components/HeroSearch'
@@ -262,9 +263,9 @@ function ClinicsPageInner({ allClinics, initialClinics, featuredClinic, totalCou
                   <p className="text-xs text-stone uppercase tracking-wider font-medium">Showing results for</p>
                   <p className="text-base font-semibold text-onyx">{activeSpecialty.label}</p>
                 </div>
-                <a href="/clinics" className="ml-auto text-xs text-stone hover:text-sage border border-stone/20 hover:border-sage/40 rounded-full px-3 py-1 transition-colors">
+                <Link href="/clinics" className="ml-auto text-xs text-stone hover:text-sage border border-stone/20 hover:border-sage/40 rounded-full px-3 py-1 transition-colors">
                   Clear filter ✕
-                </a>
+                </Link>
               </div>
             )}
 
@@ -312,7 +313,7 @@ function ClinicsPageInner({ allClinics, initialClinics, featuredClinic, totalCou
 
 // ── Service alias lookup — built from taxonomy.serviceFilters ──────────────
 const SERVICE_ALIAS_MAP: Record<string, string[]> = {};
-((taxonomy as any).serviceFilters || []).forEach((f: { slug: string; aliases: string[] }) => {
+((taxonomy as { serviceFilters?: { slug: string; aliases: string[] }[] }).serviceFilters || []).forEach((f: { slug: string; aliases: string[] }) => {
   SERVICE_ALIAS_MAP[f.slug] = f.aliases.map((a: string) => a.toLowerCase());
 });
 

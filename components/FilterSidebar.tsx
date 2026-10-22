@@ -5,7 +5,7 @@ import taxonomy from '@/lib/taxonomy.json'
 
 // Service filter tags pulled from taxonomy — canonical slugs + emoji labels
 const SERVICE_FILTERS: { slug: string; label: string; emoji: string }[] =
-  (taxonomy as any).serviceFilters || []
+  (taxonomy as { serviceFilters?: { slug: string; label: string; emoji: string }[] }).serviceFilters || []
 
 const RATINGS = [{ label: '4.5+ ★', value: 4.5 }, { label: '4.0+ ★', value: 4.0 }, { label: '3.5+ ★', value: 3.5 }, { label: 'Any', value: 0 }]
 const PRICE_TIERS = ['$', '$$', '$$$', '$$$$']

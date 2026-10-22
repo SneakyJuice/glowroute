@@ -23,7 +23,8 @@ export function getVibeTags(clinic: Clinic): VibeTag[] {
   ].join(' ')
 
   // Medical-Grade — peptide/hormone/IV signals
-  if ((clinic as any).peptide || matchesAny(blob, MEDICAL_KEYWORDS)) {
+  const peptideFlag = (clinic as Clinic & { peptide?: boolean }).peptide
+  if (peptideFlag || matchesAny(blob, MEDICAL_KEYWORDS)) {
     tags.push('Medical-Grade')
   }
 

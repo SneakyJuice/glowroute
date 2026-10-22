@@ -69,7 +69,7 @@ export default function FountainTRTPage() {
               {/* About */}
               <div className="bg-white rounded-xl p-6 shadow-sm">
                 <h2 className="text-2xl font-display font-light text-onyx mb-4">About Fountain TRT</h2>
-                <p className="text-stone-600 leading-relaxed">Fountain TRT is a specialized men's TRT clinic focused exclusively on testosterone optimization  -  with fast onboarding, at-home labs, and monthly check-ins.</p>
+                <p className="text-stone-600 leading-relaxed">Fountain TRT is a specialized men&apos;s TRT clinic focused exclusively on testosterone optimization  -  with fast onboarding, at-home labs, and monthly check-ins.</p>
               </div>
 
               {/* Treatments */}

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
@@ -87,7 +88,7 @@ const QuizPage = () => {
 
         {step === 1 && (
           <div className="max-w-2xl mx-auto bg-white border border-onyx/10 rounded-2xl shadow-md p-8">
-            <h3 className="text-2xl font-semibold mb-6">What's your primary goal?</h3>
+            <h3 className="text-2xl font-semibold mb-6">What&apos;s your primary goal?</h3>
             {['Lose weight & keep it off', 'Improve body composition', 'Manage a chronic condition', 'Boost energy & metabolism', 'General wellness'].map((option) => (
               <label key={option} className="flex items-center space-x-3 mb-4 cursor-pointer">
                 <input
@@ -236,7 +237,7 @@ const QuizPage = () => {
                   placeholder="you@example.com"
                 />
               </div>
-              <p className="text-xs text-gray-400">No spam. We'll send your personalized match results + relevant offers.</p>
+              <p className="text-xs text-gray-400">No spam. We&apos;ll send your personalized match results + relevant offers.</p>
               <div className="flex justify-between mt-8">
                 <button type="button" onClick={handlePrev} className="text-onyx underline">← Back</button>
                 <button
@@ -267,7 +268,7 @@ function QuizResults({ goal, carePreference }: { goal: string; carePreference: s
   return (
     <div className="max-w-4xl mx-auto text-center">
       <h2 className="text-3xl font-semibold mb-4">Your personalized plan is ready ✓</h2>
-      <p className="text-gray-500 mb-10">Based on your answers, we've matched you with the best next step.</p>
+      <p className="text-gray-500 mb-10">Based on your answers, we&apos;ve matched you with the best next step.</p>
 
       {isBloodwork ? (
         <div className="bg-white border border-onyx/10 rounded-2xl shadow-md p-8 mb-8">
@@ -292,19 +293,19 @@ function QuizResults({ goal, carePreference }: { goal: string; carePreference: s
             Based on your goal, a GLP-1 or hormone program through a licensed provider
             is your best starting point. No office visit required.
           </p>
-          <a
+          <Link
             href="/telehealth"
             className="inline-block bg-sage text-white py-3 px-8 rounded-lg hover:opacity-90 text-lg font-medium"
           >
             View Telehealth Options →
-          </a>
+          </Link>
         </div>
       )}
 
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/clinics" className="text-sage hover:underline">Find a local clinic near you →</a>
+        <Link href="/clinics" className="text-sage hover:underline">Find a local clinic near you →</Link>
         <span className="hidden sm:inline text-gray-300">|</span>
-        <a href="/bloodwork" className="text-sage hover:underline">Order bloodwork first →</a>
+        <Link href="/bloodwork" className="text-sage hover:underline">Order bloodwork first →</Link>
       </div>
     </div>
   );

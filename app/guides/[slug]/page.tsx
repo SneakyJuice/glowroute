@@ -26,8 +26,9 @@ export function generateStaticParams() {
   return COST_GUIDES.map(g => ({ slug: g.slug }))
 }
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const guide = getGuideBySlug(params.slug)
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params
+  const guide = getGuideBySlug(slug)
   if (!guide) return {}
   const title = `How Much Does ${guide.treatment} Cost? (${GUIDE_YEAR} Guide) — GlowRoute`
   const description = `${guide.treatment} pricing guide: low end ${guide.avgLow}, average ${guide.avgMid}. What affects cost and what to look for in a provider.`
@@ -47,8 +48,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 }
 
-export default function CostGuidePage({ params }: { params: { slug: string } }) {
-  const guide = getGuideBySlug(params.slug)
+export default async function CostGuidePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+  const guide = getGuideBySlug(slug)
   if (!guide) notFound()
 
   const guideUrl = `${SITE_URL}/guides/${guide.slug}`
@@ -62,7 +64,7 @@ export default function CostGuidePage({ params }: { params: { slug: string } }) 
 
   const offerTiers = priceRows.map(row => {
     const parsed = parsePriceRange(row.value)
-    const offer: Record<string, any> = {
+    const offer: Record<string, unknown> = {
       '@type': 'Offer',
       name: `${row.label} ${guide.treatment}`,
       description: row.value,
@@ -80,7 +82,7 @@ export default function CostGuidePage({ params }: { params: { slug: string } }) 
     return offer
   })
 
-  const articleSchema: Record<string, any> = {
+  const articleSchema: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: `How Much Does ${guide.treatment} Cost? (${GUIDE_YEAR} Guide)`,

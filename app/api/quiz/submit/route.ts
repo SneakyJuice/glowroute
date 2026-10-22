@@ -1,10 +1,12 @@
 import { type NextRequest, NextResponse } from 'next/server';
-import { createClient } from '@supabase/supabase-js';
+import { createClient, type SupabaseClient } from '@supabase/supabase-js';
 
-const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
-);
+function getQuizSupabase(): SupabaseClient | null {
+  const url = process.env.NEXT_PUBLIC_SUPABASE_URL
+  const key = process.env.SUPABASE_SERVICE_ROLE_KEY
+  if (!url || !key) return null
+  return createClient(url, key)
+}
 
 type BrandKey = string;
 const BRAND_MAP: Record<BrandKey, string> = {
@@ -72,11 +74,17 @@ export async function POST(request: NextRequest) {
       updated_at: new Date().toISOString()
     };
 
-    // Insert lead — non-blocking, never fails the redirect
-    try {
-      await supabase.from('patient_leads').insert([leadData]);
-    } catch (err) {
-      console.error('[quiz] Supabase insert failed:', err);
+    // Insert lead — non-blocking, never fails the redirect.
+    // The client is created per request so a missing env var does not crash route loading.
+    const supabase = getQuizSupabase()
+    if (supabase) {
+      try {
+        await supabase.from('patient_leads').insert([leadData]);
+      } catch (err) {
+        console.error('[quiz] Supabase insert failed:', err);
+      }
+    } else {
+      console.error('[quiz] Supabase admin client not available')
     }
 
     return NextResponse.json({ redirect_url: matchedSlug }, { status: 200 });

@@ -70,7 +70,7 @@ export default function WinonaPage() {
               {/* About */}
               <div className="bg-white rounded-xl p-6 shadow-sm">
                 <h2 className="text-2xl font-display font-light text-onyx mb-4">About Winona</h2>
-                <p className="text-stone-600 leading-relaxed">Winona specializes in women's hormone health, offering bioidentical HRT, personalized menopause protocols, and ongoing physician care  -  entirely online.</p>
+                <p className="text-stone-600 leading-relaxed">Winona specializes in women&apos;s hormone health, offering bioidentical HRT, personalized menopause protocols, and ongoing physician care  -  entirely online.</p>
               </div>
 
               {/* Treatments */}

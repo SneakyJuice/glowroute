@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Footer() {
   return (
     <footer className="bg-onyx text-white/50 px-6 py-10 mt-0 border-t border-white/[0.06]">
@@ -5,12 +7,12 @@ export default function Footer() {
         <div className="font-serif text-base font-bold text-white">Glow<span className="text-sage/80">Route</span></div>
 
         <div className="flex flex-wrap gap-x-6 gap-y-2">
-          <a href="/clinics" className="text-xs hover:text-white transition-colors">Find Clinics</a>
-          <a href="/treatments" className="text-xs hover:text-white transition-colors">Treatments</a>
-          <a href="/guides" className="text-xs hover:text-white transition-colors">Cost Guides</a>
-          <a href="/articles" className="text-xs hover:text-white transition-colors">Articles</a>
-          <a href="/claim" className="text-xs hover:text-white transition-colors">For Clinics</a>
-          <a href="/pricing" className="text-xs hover:text-white transition-colors">Pricing</a>
+          <Link href="/clinics" className="text-xs hover:text-white transition-colors">Find Clinics</Link>
+          <Link href="/treatments" className="text-xs hover:text-white transition-colors">Treatments</Link>
+          <Link href="/guides" className="text-xs hover:text-white transition-colors">Cost Guides</Link>
+          <Link href="/articles" className="text-xs hover:text-white transition-colors">Articles</Link>
+          <Link href="/claim" className="text-xs hover:text-white transition-colors">For Clinics</Link>
+          <Link href="/pricing" className="text-xs hover:text-white transition-colors">Pricing</Link>
         </div>
 
         <div className="flex flex-col items-start md:items-end gap-1">

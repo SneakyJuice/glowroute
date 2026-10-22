@@ -12,7 +12,7 @@ import { PLANS } from '@/lib/stripe'
 import ClaimCheckoutButton from './ClaimCheckoutButton'
 import { trackClaimStarted } from '@/components/PostHogClinicTracker'
 
-interface Props { params: { slug: string } }
+interface Props { params: Promise<{ slug: string }> }
 
 async function fetchClaimClinic(slug: string) {
   for (const candidate of clinicSlugLookupCandidates(slug)) {
@@ -23,15 +23,16 @@ async function fetchClaimClinic(slug: string) {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const clinic = await fetchClaimClinic(params.slug)
-  const claimOverride = getClaimSeoOverride(params.slug)
+  const { slug } = await params
+  const clinic = await fetchClaimClinic(slug)
+  const claimOverride = getClaimSeoOverride(slug)
   const title = claimOverride?.title ?? (clinic ? `Claim ${clinic.name} — GlowRoute` : 'Claim Your Listing — GlowRoute')
   const description = claimOverride?.description ?? (
     clinic
       ? `Take control of your GlowRoute listing for ${clinic.name} in ${clinic.city}, FL. Manage your profile and attract more patients.`
       : undefined
   )
-  const url = `${SITE_URL}${claimOverride?.canonicalPath ?? `/claim/${params.slug}`}`
+  const url = `${SITE_URL}${claimOverride?.canonicalPath ?? `/claim/${slug}`}`
 
   if (!clinic && !claimOverride) return { title }
 
@@ -55,10 +56,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 const PLAN_ORDER = ['starter', 'growth', 'pro'] as const
 
 export default async function ClaimSlugPage({ params }: Props) {
-  const clinic = await fetchClaimClinic(params.slug)
+  const { slug } = await params
+  const clinic = await fetchClaimClinic(slug)
   // null means the clinic is missing. Lookup errors throw and are not stored as a 404.
   if (!clinic) notFound()
-  const claimOverride = getClaimSeoOverride(params.slug)
+  const claimOverride = getClaimSeoOverride(slug)
 
   const displayCity = `${clinic.city}, FL`
   const rating = clinic.googleRating ?? 0

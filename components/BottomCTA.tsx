@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function BottomCTA() {
   return (
     <div className="relative bg-onyx rounded-2xl px-8 py-10 text-center mt-12 overflow-hidden">
@@ -5,8 +7,8 @@ export default function BottomCTA() {
       <h2 className="font-serif text-[26px] font-light text-white mb-2.5 relative">Elevate your practice. Reach your ideal clients.</h2>
       <p className="text-[15px] text-white/65 mb-6 relative">Join 4,980+ verified providers already on GlowRoute. It takes minutes.</p>
       <div className="flex gap-3 justify-center flex-wrap relative">
-        <a href="/claim" className="text-sm font-bold text-white bg-sage px-6 py-3 rounded hover:opacity-90 transition-opacity">Join the GlowRoute Network</a>
-        <a href="/pricing" className="text-sm font-semibold text-white border border-white/30 px-6 py-3 rounded hover:bg-white/10 hover:border-white/60 transition-all">Learn About Pro Plans →</a>
+        <Link href="/claim" className="text-sm font-bold text-white bg-sage px-6 py-3 rounded hover:opacity-90 transition-opacity">Join the GlowRoute Network</Link>
+        <Link href="/pricing" className="text-sm font-semibold text-white border border-white/30 px-6 py-3 rounded hover:bg-white/10 hover:border-white/60 transition-all">Learn About Pro Plans →</Link>
       </div>
     </div>
   )

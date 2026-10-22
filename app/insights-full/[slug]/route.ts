@@ -5,9 +5,10 @@ import { INSIGHTS } from '@/data/insights'
 
 export async function GET(
   _req: Request,
-  { params }: { params: { slug: string } }
+  { params }: { params: Promise<{ slug: string }> }
 ) {
-  const insight = INSIGHTS.find(i => i.slug === params.slug)
+  const { slug } = await params
+  const insight = INSIGHTS.find(i => i.slug === slug)
   if (!insight?.contentFile) {
     return new NextResponse('Not found', { status: 404 })
   }
@@ -24,7 +25,7 @@ export async function GET(
     <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" stroke-linecap="round" stroke-linejoin="round"/></svg>
     Download PDF
   </a>
-  <a href="/insights/${params.slug}#share" style="display:inline-flex;align-items:center;gap:6px;background:#4A6741;color:white;font-family:Inter,sans-serif;font-size:13px;font-weight:600;padding:8px 18px;border-radius:100px;text-decoration:none;">
+  <a href="/insights/${slug}#share" style="display:inline-flex;align-items:center;gap:6px;background:#4A6741;color:white;font-family:Inter,sans-serif;font-size:13px;font-weight:600;padding:8px 18px;border-radius:100px;text-decoration:none;">
     <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round"/></svg>
     Share Report
   </a>

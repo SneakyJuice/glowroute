@@ -1,13 +1,10 @@
 import { track } from '@vercel/analytics';
+import posthog from 'posthog-js';
 
-// Dynamic PostHog import — only runs client-side
+// PostHog capture only runs in the browser. The import is safe during SSR.
 const ph = () => {
   if (typeof window === 'undefined') return null
-  try {
-    return require('posthog-js').default
-  } catch {
-    return null
-  }
+  return posthog
 }
 
 const capture = (event: string, props?: Record<string, string>) => {

@@ -70,7 +70,7 @@ export default function HoneHealthPage() {
               {/* About */}
               <div className="bg-white rounded-xl p-6 shadow-sm">
                 <h2 className="text-2xl font-display font-light text-onyx mb-4">About Hone Health</h2>
-                <p className="text-stone-600 leading-relaxed">Hone Health is a men's hormone optimization clinic offering online TRT evaluation, personalized treatment plans, and ongoing physician monitoring  -  all from home.</p>
+                <p className="text-stone-600 leading-relaxed">Hone Health is a men&apos;s hormone optimization clinic offering online TRT evaluation, personalized treatment plans, and ongoing physician monitoring  -  all from home.</p>
               </div>
 
               {/* Treatments */}
