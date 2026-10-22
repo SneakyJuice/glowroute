@@ -7,7 +7,7 @@ import Link from 'next/link'
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://glowroute.io'
 
 interface Props {
-  params: { city: string; treatment: string }
+  params: Promise<{ city: string; treatment: string }>
 }
 
 function parseFrontmatter(content: string) {
@@ -53,25 +53,27 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const content = getPageContent(params.city, params.treatment)
+  const { city, treatment } = await params
+  const content = getPageContent(city, treatment)
   if (!content) return { title: 'GlowRoute' }
   const { meta } = parseFrontmatter(content)
   return {
     title: meta.title || 'GlowRoute',
     description: meta.description || '',
     alternates: {
-      canonical: `${SITE_URL}/locations/${params.city}/${params.treatment}`,
+      canonical: `${SITE_URL}/locations/${city}/${treatment}`,
     },
     openGraph: {
       title: meta.title,
       description: meta.description,
-      url: `${SITE_URL}/locations/${params.city}/${params.treatment}`,
+      url: `${SITE_URL}/locations/${city}/${treatment}`,
     },
   }
 }
 
-export default function TreatmentCityPage({ params }: Props) {
-  const content = getPageContent(params.city, params.treatment)
+export default async function TreatmentCityPage({ params }: Props) {
+  const { city, treatment } = await params
+  const content = getPageContent(city, treatment)
   if (!content) notFound()
 
   const { meta, body } = parseFrontmatter(content!)

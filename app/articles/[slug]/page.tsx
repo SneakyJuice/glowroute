@@ -10,7 +10,7 @@ import { ARTICLES } from '@/data/articles'
 import QuizCTA from '@/components/QuizCTA'
 
 interface PageProps {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
 export async function generateStaticParams() {
@@ -18,7 +18,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const article = ARTICLES.find(a => a.slug === params.slug)
+  const { slug } = await params
+  const article = ARTICLES.find(a => a.slug === slug)
   if (!article) return { title: 'Article Not Found | GlowRoute' }
   return {
     title: `${article.title} | The GlowRoute Edit`,
@@ -137,8 +138,9 @@ function getArticleContent(contentFile?: string): string | null {
   }
 }
 
-export default function ArticleDetailPage({ params }: PageProps) {
-  const article = ARTICLES.find(a => a.slug === params.slug)
+export default async function ArticleDetailPage({ params }: PageProps) {
+  const { slug } = await params
+  const article = ARTICLES.find(a => a.slug === slug)
   if (!article) notFound()
 
   const rawContent = getArticleContent(article.contentFile)

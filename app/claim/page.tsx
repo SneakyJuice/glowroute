@@ -27,13 +27,14 @@ export const metadata: Metadata = {
   },
 }
 
-export default function ClaimPage({
+export default async function ClaimPage({
   searchParams,
 }: {
-  searchParams: { clinic?: string; slug?: string }
+  searchParams: Promise<{ clinic?: string; slug?: string }>
 }) {
-  const prefilledClinic = searchParams.clinic || ''
-  const prefilledSlug = searchParams.slug || ''
+  const { clinic, slug } = await searchParams
+  const prefilledClinic = clinic || ''
+  const prefilledSlug = slug || ''
 
   return (
     <div className="min-h-screen bg-ivory font-sans">
