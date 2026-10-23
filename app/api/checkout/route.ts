@@ -3,7 +3,10 @@ import { getStripe, PLANS, PlanKey } from '@/lib/stripe'
 import { SITE_URL } from '@/lib/config'
 
 // GET /api/checkout?tier=starter|growth|pro
-// Allows direct links from /pricing page CTAs
+// Allows direct links from /pricing page CTAs.
+// Never cache: each request creates a new Stripe Checkout session.
+export const dynamic = 'force-dynamic'
+
 export async function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url)
   const tier = searchParams.get('tier') as PlanKey | null

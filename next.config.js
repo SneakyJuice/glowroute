@@ -5,7 +5,11 @@ const nextConfig = {
     return `build-${Date.now()}`
   },
   images: {
-    domains: ['maps.googleapis.com', 'lh3.googleusercontent.com', 'psiuknphchmhsthvhkpt.supabase.co'],
+    remotePatterns: [
+      { protocol: 'https', hostname: 'maps.googleapis.com' },
+      { protocol: 'https', hostname: 'lh3.googleusercontent.com' },
+      { protocol: 'https', hostname: 'psiuknphchmhsthvhkpt.supabase.co' },
+    ],
   },
   trailingSlash: false,
   async rewrites() {

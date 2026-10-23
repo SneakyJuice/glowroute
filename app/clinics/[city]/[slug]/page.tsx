@@ -37,11 +37,16 @@ function citySlug(city: string | undefined | null) {
 }
 
 interface PageProps {
-  params: { city: string; slug: string }
+  params: Promise<{ city: string; slug: string }>
 }
 
-/** Pre-render top-priority clinic pages at build time (ISR seed — no Supabase at build) */
+/** Pre-render top-priority clinic pages when directory credentials are available. */
 export async function generateStaticParams() {
+  // Without credentials the slug lookup throws. Skip the seed list so a
+  // credential-less build does not fail; production builds still prerender.
+  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.SUPABASE_SERVICE_ROLE_KEY) {
+    return []
+  }
   return TOP_CLINIC_PARAMS
 }
 
@@ -52,10 +57,11 @@ function truncate(str: string, maxLen: number, suffix = '…'): string {
 }
 
 export async function generateMetadata({ params }: PageProps) {
-  const clinic = await fetchClinicByExactSlug(params.slug)
+  const { city, slug } = await params
+  const clinic = await fetchClinicByExactSlug(slug)
   if (!clinic) return { title: 'Clinic Not Found | GlowRoute' }
 
-  const clinicOverride = getClinicSeoOverride(params.city, params.slug)
+  const clinicOverride = getClinicSeoOverride(city, slug)
 
   // Page title: full name (browsers handle overflow). Never prefix "Verified".
   const pageTitle = clinicOverride?.title ?? `${clinic.name} | GlowRoute`
@@ -79,7 +85,7 @@ export async function generateMetadata({ params }: PageProps) {
     clinic.logo ||
     `${SITE_URL}/og-default.jpg`
 
-  const pageUrl = `${SITE_URL}${clinicOverride?.canonicalPath ?? `/clinics/${params.city}/${params.slug}`}`
+  const pageUrl = `${SITE_URL}${clinicOverride?.canonicalPath ?? `/clinics/${city}/${slug}`}`
 
   return {
     title: pageTitle,
@@ -170,14 +176,15 @@ async function TreatmentCityPage({ city, treatment }: { city: string; treatment:
 }
 
 export default async function ClinicProfilePage({ params }: PageProps) {
+  const { city, slug } = await params
   // Disambiguate: if slug matches a treatment, show treatment page
-  if (TREATMENT_SLUGS.includes(params.slug)) {
-    return <TreatmentCityPage city={params.city} treatment={params.slug} />
+  if (TREATMENT_SLUGS.includes(slug)) {
+    return <TreatmentCityPage city={city} treatment={slug} />
   }
-  const clinic = await fetchClinicByExactSlug(params.slug)
+  const clinic = await fetchClinicByExactSlug(slug)
   // null means the clinic is missing. Lookup errors throw and are not stored as a 404.
   if (!clinic) notFound()
-  const clinicOverride = getClinicSeoOverride(params.city, params.slug)
+  const clinicOverride = getClinicSeoOverride(city, slug)
 
   const allTreatments = [
     ...(clinic.treatments || []),

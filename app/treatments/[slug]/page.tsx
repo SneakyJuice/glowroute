@@ -11,17 +11,18 @@ import { TREATMENTS, getTreatmentBySlug, TREATMENT_SLUGS } from '@/lib/treatment
 import { SITE_URL } from '@/lib/config'
 import type { Clinic } from '@/types/clinic'
 
-interface Props { params: { slug: string } }
+interface Props { params: Promise<{ slug: string }> }
 
 export async function generateStaticParams() {
   return TREATMENT_SLUGS.map(slug => ({ slug }))
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const treatment = getTreatmentBySlug(params.slug)
+  const { slug } = await params
+  const treatment = getTreatmentBySlug(slug)
   if (!treatment) return { title: 'Treatment — GlowRoute' }
 
-  const url = `${SITE_URL}/treatments/${params.slug}`
+  const url = `${SITE_URL}/treatments/${slug}`
   return {
     title: treatment.title,
     description: treatment.description,
@@ -50,8 +51,9 @@ function matchesTreatment(clinic: Clinic, keywords: string[]): boolean {
 }
 
 export default async function TreatmentPage({ params }: Props) {
+  const { slug } = await params
   const clinics = await allClinics()
-  const treatment = getTreatmentBySlug(params.slug)
+  const treatment = getTreatmentBySlug(slug)
   if (!treatment) notFound()
 
   const matchingClinics = clinics
@@ -78,7 +80,7 @@ export default async function TreatmentPage({ params }: Props) {
     description: treatment.description,
     provider: { '@type': 'Organization', name: 'GlowRoute', url: SITE_URL },
     areaServed: { '@type': 'AdministrativeArea', name: 'Southeast USA' },
-    url: `${SITE_URL}/treatments/${params.slug}`,
+    url: `${SITE_URL}/treatments/${slug}`,
   }
 
   const itemListSchema = {
@@ -176,7 +178,7 @@ export default async function TreatmentPage({ params }: Props) {
         <section className="border-t border-onyx/8 pt-8 mt-8">
           <h2 className="text-base font-bold text-onyx mb-4">Explore Other Treatments</h2>
           <div className="flex flex-wrap gap-2">
-            {TREATMENTS.filter(t => t.slug !== params.slug).map(t => (
+            {TREATMENTS.filter(t => t.slug !== slug).map(t => (
               <Link
                 key={t.slug}
                 href={`/treatments/${t.slug}`}

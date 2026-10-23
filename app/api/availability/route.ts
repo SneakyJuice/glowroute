@@ -61,3 +61,4 @@ export async function GET(req: NextRequest) {
 }
 
 export const runtime = 'nodejs' // This is a server-only API route
+export const dynamic = 'force-dynamic'

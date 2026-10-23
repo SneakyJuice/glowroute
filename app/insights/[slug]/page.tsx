@@ -11,7 +11,7 @@ import InsightActions from '@/components/InsightActions'
 import { INSIGHTS } from '@/data/insights'
 
 interface PageProps {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 
 const TYPE_LABELS: Record<string, string> = {
@@ -26,7 +26,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const insight = INSIGHTS.find(i => i.slug === params.slug)
+  const { slug } = await params
+  const insight = INSIGHTS.find(i => i.slug === slug)
   if (!insight) return { title: 'Report Not Found | GlowRoute' }
   return {
     title: `${insight.title} | GlowRoute Intelligence`,
@@ -64,14 +65,15 @@ function getInsightContent(contentFile?: string): string | null {
   }
 }
 
-export default function InsightDetailPage({ params }: PageProps) {
-  const insight = INSIGHTS.find(i => i.slug === params.slug)
+export default async function InsightDetailPage({ params }: PageProps) {
+  const { slug } = await params
+  const insight = INSIGHTS.find(i => i.slug === slug)
   if (!insight) notFound()
 
   // Full HTML reports get their own standalone renderer (preserves Chart.js, CSS, scripts)
   if (insight.contentFile?.endsWith('.html')) {
     const { permanentRedirect } = require('next/navigation')
-    permanentRedirect('/insights-full/' + params.slug)
+    permanentRedirect('/insights-full/' + slug)
   }
 
   const htmlContent = getInsightContent(insight.contentFile)
