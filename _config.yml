@@ -1,4 +1,0 @@
-# GitHub Pages publishes this repository with legacy Jekyll from / on main
-# (custom domain glowroute.sealey.ai). brand/ is not valid UTF-8 and aborts that build.
-exclude:
-  - brand
