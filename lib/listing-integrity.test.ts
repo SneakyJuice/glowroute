@@ -12,6 +12,10 @@ test('blocks credential image URLs and generic stock without blocking clinic pho
   assert.equal(publicImageUrl('https://images.unsplash.com/example'), undefined)
   assert.equal(publicImageUrl('javascript:alert(1)'), undefined)
   assert.equal(publicImageUrl('https://clinic.example/photo.jpg'), 'https://clinic.example/photo.jpg')
+  assert.equal(publicImageUrl('https://www.facebook.com/tr?id=123&ev=PageView'), undefined)
+  assert.equal(publicImageUrl('https://cdn.userway.org/widgetapp/images/spinner.svg'), undefined)
+  assert.equal(publicImageUrl('https://flagcdn.com/w320/us.png'), undefined)
+  assert.equal(publicImageUrl('https://clinic.example/portraits/userway-doctor.jpg'), 'https://clinic.example/portraits/userway-doctor.jpg')
 })
 test('converts imported markdown to text and preserves non-Latin content', () => {
   assert.equal(listingDescription('[![Logo](https://x/logo.png)](https://x) [Search](https://x/search) Skin clinic'), 'Search Skin clinic')

@@ -196,9 +196,9 @@ async function fetchDirectoryPage(cursor: DirectoryCursor | null): Promise<Direc
  */
 const loadDirectoryVersion = unstable_cache(
   async () => ({ version: String(Date.now()) }),
-  // v3 prevents older deployments' mapped ratings/prices/images from surviving this repair.
-  ['glowroute-visible-clinics-version-v3'],
-  { revalidate: DIRECTORY_REVALIDATE_SECONDS },
+  // Tag invalidation publishes reviewed data repairs without waiting for the hourly snapshot.
+  ['glowroute-visible-clinics-version-v4'],
+  { revalidate: DIRECTORY_REVALIDATE_SECONDS, tags: ['glowroute-directory'] },
 )
 
 const loadVersionedDirectoryPage = unstable_cache(
@@ -208,8 +208,8 @@ const loadVersionedDirectoryPage = unstable_cache(
     }
     return fetchDirectoryPage(decodeDirectoryCursor(cursorKey))
   },
-  ['glowroute-visible-clinics-page-v3'],
-  { revalidate: DIRECTORY_PAGE_REVALIDATE_SECONDS },
+  ['glowroute-visible-clinics-page-v4'],
+  { revalidate: DIRECTORY_PAGE_REVALIDATE_SECONDS, tags: ['glowroute-directory'] },
 )
 
 async function loadVisibleClinics(version: string): Promise<Clinic[]> {
