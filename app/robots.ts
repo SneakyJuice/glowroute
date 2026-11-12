@@ -6,7 +6,8 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      disallow: ['/api/', '/_next/'],
+      // Google needs the Next.js scripts, styles and image optimizer to render pages.
+      disallow: ['/api/'],
     },
     sitemap: `${SITE_URL}/sitemap.xml`,
   }

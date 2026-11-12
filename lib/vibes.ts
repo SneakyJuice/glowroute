@@ -9,8 +9,11 @@ const WEIGHT_KEYWORDS = ['semaglutide', 'ozempic', 'tirzepatide', 'glp-1', 'weig
 const LASER_KEYWORDS = ['laser', 'ipl', 'photofacial', 'laser hair', 'laser skin', 'coolsculpting']
 
 function matchesAny(haystack: string, keywords: string[]) {
-  const lower = haystack.toLowerCase()
-  return keywords.some(k => lower.includes(k))
+  const lower = haystack.toLowerCase().replace(/[’‘]/g, "'").replace(/-/g, ' ')
+  return keywords.some(keyword => {
+    const escaped = keyword.replace(/-/g, ' ').replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+    return new RegExp(`\\b${escaped}\\b`, 'i').test(lower)
+  })
 }
 
 export function getVibeTags(clinic: Clinic): VibeTag[] {
@@ -89,21 +92,36 @@ const BOOKING_PLATFORMS: Array<{ domain: string; label: string; platform: string
 ]
 
 export function detectBookingPlatform(clinic: Clinic): BookingPlatform | null {
-  const urls = [clinic.bookingUrl, clinic.website].filter(Boolean) as string[]
+  const bookingUrl = safeHttpUrl(clinic.bookingUrl)
+  const urls = [bookingUrl, safeHttpUrl(clinic.website)].filter((url): url is string => Boolean(url))
 
   for (const url of urls) {
+    const hostname = new URL(url).hostname.toLowerCase()
     for (const p of BOOKING_PLATFORMS) {
-      if (url.toLowerCase().includes(p.domain)) {
+      if (hostname === p.domain || hostname.endsWith(`.${p.domain}`)) {
         return { label: p.label, platform: p.platform, url }
       }
     }
   }
 
-  if (clinic.bookingUrl) {
-    return { label: 'Online Booking Available', platform: 'generic', url: clinic.bookingUrl }
+  if (bookingUrl) {
+    return { label: 'Online Booking Available', platform: 'generic', url: bookingUrl }
   }
 
   return null
+}
+
+/** Accept public web destinations, never executable or credential-bearing URLs. */
+export function safeHttpUrl(value?: string): string | null {
+  if (!value?.trim()) return null
+  try {
+    const input = value.trim()
+    const url = new URL(input.includes(':') ? input : `https://${input}`)
+    if (!['http:', 'https:'].includes(url.protocol) || url.username || url.password || !url.hostname.includes('.')) return null
+    return url.href
+  } catch {
+    return null
+  }
 }
 
 // ── Vibe tag styling ──────────────────────────────────────────────────────────

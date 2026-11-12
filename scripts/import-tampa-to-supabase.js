@@ -9,6 +9,7 @@
 const fs = require('fs');
 const path = require('path');
 const https = require('https');
+const { sourceLocation } = require('./lib/source-integrity.cjs');
 
 // Load .env.local or .keys.env for Supabase creds
 function loadEnv() {
@@ -45,11 +46,12 @@ function slugify(name, city) {
 }
 
 function mapToRow(clinic) {
+  const location = sourceLocation(clinic, 'Tampa', 'FL');
   return {
     slug: clinic.slug || slugify(clinic.name, clinic.city),
     name: clinic.name,
-    city: clinic.city,
-    state: clinic.state || 'FL',
+    city: location.city,
+    state: location.state,
     address: clinic.address || null,
     phone: clinic.phone || null,
     website: clinic.website || null,
@@ -61,7 +63,9 @@ function mapToRow(clinic) {
     review_count: clinic.review_count || clinic.reviewCount || 0,
     hero_image_url: clinic.hero_image_url || clinic.imageUrl || null,
     description: clinic.description || null,
-    visibility: 'visible',
+    visibility: location.needs_review ? 'hidden' : 'visible',
+    needs_review: location.needs_review,
+    review_reason: location.review_reason,
     is_verified: false,
     is_claimed: false,
     is_featured: false,
@@ -81,7 +85,8 @@ async function supabaseUpsert(rows) {
         'Content-Length': Buffer.byteLength(body),
         'apikey': SUPABASE_KEY,
         'Authorization': `Bearer ${SUPABASE_KEY}`,
-        'Prefer': 'resolution=merge-duplicates,return=representation',
+        // Insert-only intake preserves existing ownership, moderation and verified facts.
+        'Prefer': 'resolution=ignore-duplicates,return=representation',
       }
     };
     const req = https.request(opts, res => {

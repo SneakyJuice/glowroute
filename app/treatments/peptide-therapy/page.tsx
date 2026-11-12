@@ -12,12 +12,12 @@ export const dynamic = 'force-dynamic' // ISR replaced — build-time fetch time
 
 export const metadata: Metadata = {
   title: 'Peptide Therapy Clinics Near You — GlowRoute',
-  description: 'Find verified peptide therapy clinics offering BPC-157, sermorelin, semaglutide, TRT, NAD+, and hormone optimization. Compare clinics, read reviews, book consultations.',
+  description: 'Explore clinic listings for peptide therapy and related services. Confirm treatment availability, qualifications, and details directly with providers.',
   keywords: 'peptide therapy, BPC-157, sermorelin, semaglutide, TRT, hormone optimization, NAD+ therapy, peptide clinic near me',
   alternates: { canonical: `${SITE_URL}/treatments/peptide-therapy` },
   openGraph: {
     title: 'Peptide Therapy Clinics Near You — GlowRoute',
-    description: 'Find verified peptide therapy clinics near you. BPC-157, TRT, GLP-1, sermorelin, NAD+ and more.',
+    description: 'Explore peptide therapy clinic listings and confirm services directly with providers.',
     url: `${SITE_URL}/treatments/peptide-therapy`,
     type: 'website',
     siteName: 'GlowRoute',
@@ -194,14 +194,14 @@ export default async function PeptideTherapyPage({
           </div>
 
           <p className="text-white/65 text-base leading-relaxed max-w-2xl mb-6">
-            {peptideClinics.length.toLocaleString()} verified providers offering peptide therapy, TRT, hormone optimization &amp; GLP-1 weight loss.
+            {peptideClinics.length.toLocaleString()} provider listings matched to peptide therapy and related services. Confirm availability with each clinic.
             Filter by health goal to find the right clinic for your protocol.
           </p>
 
           {/* Stats row */}
           <div className="flex flex-wrap gap-8">
             {[
-              { label: 'Verified Providers', value: peptideClinics.length.toLocaleString() },
+              { label: 'Provider Listings', value: peptideClinics.length.toLocaleString() },
               { label: 'Top City', value: topCities[0]?.[0] ?? 'Tampa' },
               { label: 'Goal Categories', value: '7 Specialties' },
               { label: 'Legal Status', value: '14 Peptides Cat-1' },
@@ -387,12 +387,12 @@ export default async function PeptideTherapyPage({
             stimulate tissue repair, optimize hormone levels, support immune function, enhance cognitive clarity, or accelerate fat metabolism.
           </p>
           <p className="mt-3">
-            The most sought-after peptides — BPC-157 for injury recovery, sermorelin for growth hormone optimization, semaglutide for metabolic health,
-            and NAD+ for cellular energy — are now available through licensed 503A compounding pharmacies following the February 2026 FDA reclassification.
+            Treatment availability, evidence, and regulatory status vary by compound. Compounded drugs are not FDA-approved.
+            Review the <a href="https://www.fda.gov/drugs/human-drug-compounding/understanding-risks-compounded-drugs" className="underline">FDA information on compounded drugs</a> and discuss treatment decisions with a licensed clinician.
           </p>
           <p className="mt-3">
             GlowRoute surfaces clinics offering physician-supervised peptide protocols across Florida, Texas, Arizona, Georgia, and beyond.
-            Every clinic in our directory has been verified for location, contact information, and service offerings.
+            Listing information comes from public sources and may need correction. Contact each provider to confirm its location, qualifications, and services.
           </p>
         </section>
       </div>

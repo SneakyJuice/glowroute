@@ -15,9 +15,6 @@ export default function Footer() {
 
         <div className="flex flex-col items-start md:items-end gap-1">
           <div className="text-[11px]">© 2026 GlowRoute. Not medical advice.</div>
-          <div className="flex gap-4">
-            {['Privacy', 'Terms'].map(l => <a key={l} href="#" className="text-[11px] hover:text-white transition-colors">{l}</a>)}
-          </div>
         </div>
       </div>
     </footer>

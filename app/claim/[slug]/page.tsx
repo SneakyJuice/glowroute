@@ -139,8 +139,7 @@ export default async function ClaimSlugPage({ params }: Props) {
           <div className="flex-1">
             <p className="text-sm text-onyx leading-relaxed">
               <strong className="text-sage">Your listing is live.</strong>{' '}
-              430+ high-intent patients searched for medspas in your area last month.
-              Claim it before a competitor does.
+              Keep your clinic information accurate and help patients contact your practice.
             </p>
           </div>
           <a

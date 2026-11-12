@@ -102,11 +102,11 @@ export default async function CityPage({ params }: Props) {
         '@type': 'LocalBusiness',
         name: c.name,
         address: { '@type': 'PostalAddress', addressLocality: c.city, addressRegion: (c.state || region), addressCountry: 'US' },
-        aggregateRating: {
+        ...(c.googleRating > 0 && c.googleReviewCount > 0 ? { aggregateRating: {
           '@type': 'AggregateRating',
           ratingValue: c.googleRating,
           reviewCount: c.googleReviewCount,
-        },
+        } } : {}),
       },
     })),
   }
@@ -136,14 +136,14 @@ export default async function CityPage({ params }: Props) {
             Medical Spas in {cityState}
           </h1>
           <p className="text-white/65 text-base leading-relaxed max-w-2xl mb-5">
-            Discover {count} verified medical spas and aesthetic clinics in {cityState}.
-            Compare services, read real patient reviews, and book your appointment today.
+            Explore {count} medical spa and aesthetic clinic listings in {cityState}.
+            Compare listed services and contact providers to confirm details and availability.
           </p>
           {/* Stats row */}
           <div className="flex flex-wrap gap-6">
             {[
               { label: 'Listings', value: count.toString() },
-              { label: 'Avg Rating', value: `★ ${avgRating}` },
+              { label: 'Verification', value: 'Check each profile' },
               { label: 'City', value: cityState },
             ].map(({ label, value }) => (
               <div key={label}>
@@ -159,7 +159,7 @@ export default async function CityPage({ params }: Props) {
       <main className="max-w-5xl mx-auto px-4 py-10">
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-base font-bold text-onyx">
-            Top-Rated Clinics in {displayCity}
+            Explore Clinics in {displayCity}
           </h2>
           <Link
             href={seo.viewAllHref}

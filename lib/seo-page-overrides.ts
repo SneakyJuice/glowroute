@@ -319,7 +319,7 @@ export function isClaimSlugInSitemap(_slug: string): boolean {
 }
 
 export const DEFAULT_CLINIC_CLAIM_PROMO =
-  '430+ patients searched your area last month. Claim your listing to capture leads.'
+  'Claim your listing to keep your clinic details accurate and help patients contact your practice.'
 
 export const LOCKED_CLINIC_CLAIM_PROMO = 'Claim your listing to capture leads.'
 

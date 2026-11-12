@@ -1,335 +1,120 @@
 'use client'
-import { useState, useMemo, useEffect, Suspense } from 'react'
-import { useSearchParams, useRouter } from 'next/navigation'
-import { GOALS } from '@/lib/goals'
+
+import { useEffect, useRef, useState } from 'react'
 import Navbar from '@/components/Navbar'
 import HeroSearch from '@/components/HeroSearch'
-import { isPeptideClinic } from '@/lib/peptide'
-import { resolveCity } from '@/lib/metro-aliases'
-import { calculateGlowScore } from '@/lib/glowscore'
 import FilterSidebar from '@/components/FilterSidebar'
 import ResultsHeader from '@/components/ResultsHeader'
 import ClinicCard, { FeaturedClinicCard } from '@/components/ClinicCard'
 import MapStrip from '@/components/MapStrip'
-import Pagination from '@/components/Pagination'
 import BottomCTA from '@/components/BottomCTA'
 import QuizCTA from '@/components/QuizCTA'
 import Footer from '@/components/Footer'
-import { FilterState, Clinic } from '@/types/clinic'
-import { CATEGORIES, matchCategories } from '@/data/categories'
-import taxonomy from '@/lib/taxonomy.json'
-import type { CategorySlug } from '@/data/categories'
-import { haversine } from '@/lib/geo'
+import type { FilterState } from '@/types/clinic'
+import { DIRECTORY_DEFAULT_FILTERS, parseDirectoryQuery, serializeDirectoryQuery } from '@/lib/directory-search'
+import type { DirectoryPage, DirectoryQuery } from '@/lib/directory-search'
 
-const DEFAULT_FILTERS: FilterState = {
-  treatmentTypes: [],
-  goals: [],
-  distanceMiles: 25,
-  minRating: 0,
-  priceTiers: [],
-  verifiedOnly: false,
-  onlineBooking: false,
-  telehealth: false,
-  membershipPlans: false,
-  freeConsultation: false,
-}
+export interface ClinicsClientProps { initialPage: DirectoryPage; totalCount: number }
 
-const ITEMS_PER_PAGE = 20
+/** SSR and hydration use the same first page, with no hidden duplicate tree. */
+export default function ClinicsClient({ initialPage, totalCount }: ClinicsClientProps) {
+  const [result, setResult] = useState(initialPage)
+  const [query, setQuery] = useState(initialPage.query)
+  const [view, setView] = useState<'grid' | 'list'>('grid')
+  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState('')
+  const [retry, setRetry] = useState(0)
+  const resultHeading = useRef<HTMLDivElement>(null)
+  const initialKey = useRef(serializeDirectoryQuery(initialPage.query).toString())
+  const queryKey = serializeDirectoryQuery(query).toString()
 
-interface ClinicsClientProps {
-  allClinics: Clinic[];       // Full dataset — used as filter/search pool
-  displayClinics?: Clinic[]; // Paginated display list (optional, from infinite scroll)
-  initialClinics: Clinic[];
-  featuredClinic: Clinic | null;
-  totalCount?: number;
-}
-
-function ClinicsPageInner({ allClinics, initialClinics, featuredClinic, totalCount }: ClinicsClientProps) {
-  // Hide the SSR preview once the client component mounts
   useEffect(() => {
-    const ssrPreview = document.getElementById('ssr-clinic-preview')
-    if (ssrPreview) ssrPreview.style.display = 'none'
+    const restore = () => {
+      try { setQuery(parseDirectoryQuery(new URLSearchParams(window.location.search))) }
+      catch { setError('This search link contains invalid filters. Clear the search to continue.') }
+    }
+    window.addEventListener('popstate', restore)
+    return () => window.removeEventListener('popstate', restore)
   }, [])
 
-  const router = useRouter()
-  const searchParams = useSearchParams()
-  const specialtyParam = searchParams.get('specialty') as CategorySlug | null
-  const activeSpecialty = specialtyParam
-    ? CATEGORIES.find(c => c.slug === specialtyParam) ?? null
-    : null
-
-  // Pre-seed goal filter from ?goal= URL param
-  const goalParam = searchParams.get('goal')
-  const [filters, setFilters] = useState<FilterState>({
-    ...DEFAULT_FILTERS,
-    goals: goalParam ? [goalParam] : [],
-  })
-  const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false)
-  const [view, setView] = useState<'grid' | 'list'>('grid')
-  const [sort, setSort] = useState('GlowScore™')
-  const [page, setPage] = useState(1)
-  const [searchTreatment, setSearchTreatment] = useState('')
-  const [searchCity, setSearchCity] = useState('Miami')
-  const [searchDistance, setSearchDistance] = useState('25')
-  const [userLat, setUserLat] = useState<number | null>(null)
-  const [userLng, setUserLng] = useState<number | null>(null)
-
-  const handleNearMe = async (lat: number, lng: number) => {
-    setUserLat(lat)
-    setUserLng(lng)
-    setSort('Nearest First')
-    setPage(1)
-    // Reverse geocode to get city name and filter results
-    try {
-      const res = await fetch(
-        `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${lat}&longitude=${lng}&localityLanguage=en`
-      )
-      const data = await res.json()
-      const city = data.city || data.locality || ''
-      if (city) {
-        const resolved = resolveCity(city)
-        setSearchCity(resolved.toLowerCase().trim())
-      }
-    } catch { /* silent fail — lat/lng sort still applies */ }
-  }
-
-  const handleSearch = (treatment: string, city: string) => {
-    setSearchTreatment(treatment.toLowerCase().trim())
-    // Resolve metro aliases: "boca" → "Boca Raton", "south beach" → "Miami Beach", etc.
-    const resolved = resolveCity(city)
-    setSearchCity(resolved.toLowerCase().replace(',', '').trim())
-    setPage(1)
-  }
-
-  const filteredClinics = useMemo(() => {
-    let result = allClinics.filter(c => c.city && c.slug) // exclude clinics with no city/slug (broken batch records)
-
-    // SPECIALTY FILTER — pre-filter by category slug from ?specialty= param
-    if (activeSpecialty) {
-      result = result.filter(c => {
-        const treatments = [...(c.treatments || []), ...(c.specialtyTreatments || [])]
-        return matchCategories(treatments).includes(activeSpecialty.slug as CategorySlug)
+  useEffect(() => {
+    if (queryKey === initialKey.current && retry === 0) return
+    const controller = new AbortController()
+    setLoading(true)
+    setError('')
+    fetch('/api/clinics?' + queryKey, { signal: controller.signal })
+      .then(async response => {
+        const payload = await response.json()
+        if (!response.ok) throw new Error(payload.error || 'Clinic directory is temporarily unavailable. Please try again.')
+        return payload as DirectoryPage
       })
-    }
-
-    // TEXT SEARCH — treatment keyword against name, treatments, services, description
-    if (searchTreatment) {
-      result = result.filter(c => {
-        const hay = [
-          c.name,
-          ...(c.treatments || []),
-          ...(c.specialtyTreatments || []),
-          c.description || '',
-        ].join(' ').toLowerCase()
-        return hay.includes(searchTreatment)
+      .then(payload => {
+        if (controller.signal.aborted) return
+        setResult(payload)
+        resultHeading.current?.focus({ preventScroll: true })
       })
-    }
+      .catch(reason => { if (!controller.signal.aborted) setError(reason instanceof Error ? reason.message : 'Search could not be loaded.') })
+      .finally(() => { if (!controller.signal.aborted) setLoading(false) })
+    return () => controller.abort()
+  }, [queryKey, retry])
 
-    // CITY FILTER — match against clinic city field
-    if (searchCity && searchCity !== 'florida' && searchCity !== 'fl') {
-      result = result.filter(c => {
-        // Normalize both sides: strip ", FL", replace hyphens with spaces, lowercase
-        const normalize = (s: string) => s.toLowerCase()
-          .replace(/,?\s*(fl|florida)\s*/gi, '')
-          .replace(/-/g, ' ')
-          .replace(/st\.?\s+pete(rsburg)?/gi, 'st. petersburg')
-          .trim()
-        const clinicCity = normalize(c.city || '')
-        const searchLower = normalize(searchCity)
-        return clinicCity.includes(searchLower) || searchLower.includes(clinicCity)
-      })
-    }
-
-    // Filter to clinics with real GMB ratings (glow_score > 1 = has actual star rating)
-    result = result.filter(c => c.googleRating > 1)
-
-    // Existing filters (rating, price, verified, treatment type)
-    if (filters.minRating > 0) {
-      result = result.filter(c => c.googleRating >= filters.minRating)
-    }
-    if (filters.priceTiers.length > 0) {
-      result = result.filter(c => c.priceTier && filters.priceTiers.includes(c.priceTier))
-    }
-    if (filters.verifiedOnly) {
-      result = result.filter(c => c.verified)
-    }
-    // SERVICE FILTER — match canonical slugs against clinic.services (normalized) + alias fallback
-    if (filters.treatmentTypes.length > 0) {
-      result = result.filter(c => matchesServiceFilter(c, filters.treatmentTypes))
-    }
-    // Goal filter — powered by taxonomy goals layer
-    if (filters.goals.length > 0) {
-      result = result.filter(c =>
-        filters.goals.some(g => (c.goals || []).includes(g))
-      )
-    }
-
-    // Sort
-    if (sort === 'GlowScore™') {
-      result.sort((a, b) => calculateGlowScore(b).total - calculateGlowScore(a).total)
-    } else if (sort === 'Highest Rated') {
-      // Weighted score: penalises high rating with 0 reviews (fake/placeholder data)
-      const score = (c: { googleRating: number; googleReviewCount: number }) =>
-        c.googleRating * Math.log10(c.googleReviewCount + 2)
-      result.sort((a, b) => score(b) - score(a))
-    } else if (sort === 'Most Reviewed') {
-      result.sort((a, b) => b.googleReviewCount - a.googleReviewCount)
-    } else if (sort === 'Nearest First') {
-      if (userLat !== null && userLng !== null) {
-        result.sort((a, b) => {
-          const distA = a.lat != null && a.lng != null ? haversine(userLat, userLng, a.lat, a.lng) : 9999
-          const distB = b.lat != null && b.lng != null ? haversine(userLat, userLng, b.lat, b.lng) : 9999
-          return distA - distB
-        })
-      } else {
-        result.sort((a, b) => {
-          const distA = parseFloat(a.distance || '99')
-          const distB = parseFloat(b.distance || '99')
-          return distA - distB
-        })
-      }
-    }
-
-    return result
-  }, [filters, sort, searchTreatment, searchCity, userLat, userLng, activeSpecialty, allClinics])
-
-  // Featured clinic — show for Miami (default) or Tampa
-  // Only show featured if it has real review data AND city matches current search
-  const showFeatured = featuredClinic &&
-    (featuredClinic.googleRating ?? 0) > 0 &&
-    (featuredClinic.googleReviewCount ?? 0) > 0 &&
-    (!searchCity || searchCity.toLowerCase().includes((featuredClinic.city ?? '').toLowerCase().split(',')[0].trim()))
-  const resultCount = filteredClinics.length + (showFeatured ? 1 : 0)
-
-  const totalPages = Math.ceil(filteredClinics.length / ITEMS_PER_PAGE)
-  const pagedClinics = filteredClinics.slice((page - 1) * ITEMS_PER_PAGE, page * ITEMS_PER_PAGE)
-
-  const handleFilterChange = (newFilters: FilterState) => {
-    setFilters(newFilters)
-    setPage(1)
+  function changeQuery(next: DirectoryQuery) {
+    const normalized = parseDirectoryQuery(serializeDirectoryQuery(next))
+    initialKey.current = ''
+    setQuery(normalized)
+    window.history.pushState(null, '', window.location.pathname + '?' + serializeDirectoryQuery(normalized))
+    resultHeading.current?.scrollIntoView({ block: 'start', behavior: 'instant' })
   }
-
-  const handleSortChange = (newSort: string) => {
-    setSort(newSort)
-    setPage(1)
+  function clearSearch() {
+    changeQuery({ ...query, q: '', specialty: '', page: 1, filters: { ...DIRECTORY_DEFAULT_FILTERS, distanceMiles: query.distance ?? 0 } })
   }
-
-  // Display-friendly city label for UI components
-  const displayCity = searchCity
-    ? searchCity.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ') + ', FL'
-    : 'Miami, FL'
+  function changeFilters(filters: FilterState) {
+    changeQuery({ ...query, filters, distance: filters.distanceMiles || null, page: 1 })
+  }
+  const filtersActive = !!(query.q || query.specialty || query.filters.goals.length || query.filters.treatmentTypes.length || query.filters.minRating || query.filters.verifiedOnly || query.filters.onlineBooking)
+  const currentResultMatches = serializeDirectoryQuery(result.query).toString() === queryKey
+  const available = !error && (!loading || currentResultMatches)
+  const pages = Array.from({ length: Math.min(result.totalPages, 5) }, (_, index) => Math.max(1, Math.min(result.page - 2, result.totalPages - 4)) + index)
 
   return (
     <div className="min-h-screen bg-ivory font-sans">
       <Navbar />
-      <HeroSearch clinicCount={totalCount ?? allClinics.length} defaultCity="Miami, FL" onSearch={handleSearch} onNearMe={handleNearMe} />
+      <HeroSearch key={[query.city, query.q, query.distance].join(':')} clinicCount={totalCount} defaultCity={query.city} defaultTreatment={query.q} defaultDistance={query.distance === null ? 'any' : String(query.distance)}
+        onSearch={(q, city, distance) => changeQuery({ ...query, q, city, distance: distance === 'any' ? null : Number(distance), lat: undefined, lng: undefined, page: 1 })}
+        onNearMe={(lat, lng) => changeQuery({ ...query, city: '', lat, lng, sort: 'Nearest First', page: 1 })} />
       <QuizCTA variant="banner" />
-
       <main className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
-        {/* Mobile filter toggle */}
         <div className="flex md:hidden justify-between items-center mb-4">
-          <span className="text-sm text-stone font-medium">{filteredClinics.length + (showFeatured ? 1 : 0)} providers</span>
-          <button
-            onClick={() => setMobileFiltersOpen(v => !v)}
-            className="flex items-center gap-2 text-sm font-semibold text-onyx border border-gray-300 rounded-full px-4 py-2 bg-white shadow-sm"
-          >
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4h18M7 8h10M11 12h2" /></svg>
-            Filters {Object.values(filters).some(v => v === true || (Array.isArray(v) && v.length > 0) || (typeof v === 'number' && v > 0)) ? '•' : ''}
-          </button>
+          <span className="text-sm text-stone">{loading ? 'Searching…' : result.total.toLocaleString() + ' providers'}</span>
+          <button type="button" aria-expanded={mobileFiltersOpen} aria-controls="mobile-directory-filters" onClick={() => setMobileFiltersOpen(v => !v)} className="text-sm font-semibold border border-gray-300 rounded-full px-4 py-2 bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-sage">Filters{filtersActive ? ' · Active' : ''}</button>
         </div>
-
-        {/* Mobile filter drawer */}
-        {mobileFiltersOpen && (
-          <div className="md:hidden mb-4">
-            <div className="bg-white rounded-2xl border border-gray-200 p-4">
-              <FilterSidebar filters={filters} onChange={(f) => { handleFilterChange(f); setMobileFiltersOpen(false) }} />
-            </div>
-          </div>
-        )}
-
+        {mobileFiltersOpen && <div id="mobile-directory-filters" className="md:hidden mb-4"><FilterSidebar filters={query.filters} onChange={changeFilters} onClear={clearSearch} /></div>}
         <div className="flex flex-col md:flex-row gap-6">
-          {/* Sidebar — desktop only */}
-          <div className="hidden md:block w-64 flex-shrink-0">
-            <FilterSidebar filters={filters} onChange={handleFilterChange} />
-          </div>
-
-          {/* Main content */}
+          <div className="hidden md:block w-64 flex-shrink-0"><FilterSidebar filters={query.filters} onChange={changeFilters} onClear={clearSearch} /></div>
           <div className="flex-1 min-w-0">
-            {activeSpecialty && (
-              <div className="mb-4 flex items-center gap-2.5">
-                <span className="text-2xl">{activeSpecialty.icon}</span>
-                <div>
-                  <p className="text-xs text-stone uppercase tracking-wider font-medium">Showing results for</p>
-                  <p className="text-base font-semibold text-onyx">{activeSpecialty.label}</p>
-                </div>
-                <a href="/clinics" className="ml-auto text-xs text-stone hover:text-sage border border-stone/20 hover:border-sage/40 rounded-full px-3 py-1 transition-colors">
-                  Clear filter ✕
-                </a>
-              </div>
-            )}
-
-            <MapStrip city={displayCity} radius={filters.distanceMiles} />
-
-            <ResultsHeader
-              count={resultCount}
-              city={displayCity}
-              view={view}
-              sort={sort}
-              onViewChange={setView}
-              onSortChange={handleSortChange}
-            />
-
-            <div className={`grid gap-5 ${view === 'grid' ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3' : 'grid-cols-1'}`}>
-              {/* Featured card — only shown when city context matches Tampa */}
-              {showFeatured && featuredClinic && <FeaturedClinicCard clinic={featuredClinic} />}
-
-              {/* Standard clinic cards */}
-              {pagedClinics.map((clinic: Clinic) => {
-                const distMi = userLat !== null && userLng !== null && clinic.lat != null && clinic.lng != null
-                  ? haversine(userLat, userLng, clinic.lat, clinic.lng)
-                  : undefined
-                return <ClinicCard key={clinic.id} clinic={clinic} distanceMi={distMi} />
-              })}
+            <div ref={resultHeading} tabIndex={-1} className="scroll-mt-24 outline-none" aria-busy={loading}>
+              <MapStrip city={result.cityLabel} radius={result.distanceApplied ? result.query.distance : null} locationNote={!result.distanceApplied && result.query.distance !== null ? 'Showing city matches; distance data unavailable' : undefined} />
+              <ResultsHeader count={result.total} city={result.cityLabel} view={view} sort={query.sort} onViewChange={setView} onSortChange={sort => changeQuery({ ...query, sort, page: 1 })} />
             </div>
-
-            {totalPages > 1 && (
-              <Pagination
-                currentPage={page}
-                totalPages={totalPages}
-                onChange={setPage}
-              />
-            )}
-
+            {filtersActive && <div className="flex items-center justify-between gap-3 mb-4 text-sm text-stone"><span>Filters applied{query.q ? ': ' + query.q : ''}</span><button type="button" className="underline text-sage" onClick={clearSearch}>Clear search filters</button></div>}
+            <div role="status" aria-live="polite" className="text-sm text-stone">{loading ? 'Loading matching providers…' : !error ? result.total.toLocaleString() + ' matching providers. Page ' + result.page + ' of ' + Math.max(result.totalPages, 1) + '.' : ''}</div>
+            {error && <div role="alert" className="my-5 rounded-xl border border-stone/30 p-5 bg-white"><p>{error}</p><button type="button" onClick={() => setRetry(v => v + 1)} className="mt-3 text-sage underline">Try again</button><button type="button" onClick={clearSearch} className="mt-3 ml-5 text-sage underline">Clear filters</button></div>}
+            {available && result.total === 0 && <div className="my-6 rounded-2xl border border-gray-200 bg-white p-8"><h2 className="font-serif text-2xl text-onyx">No providers match this search</h2><p className="text-stone mt-2">Try a different treatment, a nearby city, or a wider distance.</p><button type="button" onClick={clearSearch} className="mt-5 bg-sage text-white rounded px-4 py-2">Clear search filters</button></div>}
+            {available && <div className={'grid gap-5 mt-4 ' + (view === 'grid' ? 'grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3' : 'grid-cols-1')}>
+              {result.featuredClinic && <FeaturedClinicCard clinic={result.featuredClinic} />}
+              {result.data.map(clinic => <ClinicCard key={clinic.id} clinic={clinic} />)}
+            </div>}
+            {available && result.totalPages > 1 && <nav aria-label="Provider result pages" className="flex flex-wrap items-center justify-center gap-2 mt-8">
+              {result.page > 1 && <a href={'?' + serializeDirectoryQuery({ ...query, page: result.page - 1 })} onClick={event => { event.preventDefault(); changeQuery({ ...query, page: result.page - 1 }) }} className="px-3 py-2 border rounded bg-white">Previous</a>}
+              {pages.map(page => <a key={page} href={'?' + serializeDirectoryQuery({ ...query, page })} aria-current={result.page === page ? 'page' : undefined} onClick={event => { event.preventDefault(); changeQuery({ ...query, page }) }} className={'px-3 py-2 border rounded ' + (result.page === page ? 'bg-onyx text-white' : 'bg-white')}>{page}</a>)}
+              {result.page < result.totalPages && <a href={'?' + serializeDirectoryQuery({ ...query, page: result.page + 1 })} onClick={event => { event.preventDefault(); changeQuery({ ...query, page: result.page + 1 }) }} className="px-3 py-2 border rounded bg-white">Next</a>}
+            </nav>}
             <BottomCTA />
           </div>
         </div>
       </main>
-
       <Footer />
     </div>
-  )
-}
-
-// ── Service alias lookup — built from taxonomy.serviceFilters ──────────────
-const SERVICE_ALIAS_MAP: Record<string, string[]> = {};
-((taxonomy as any).serviceFilters || []).forEach((f: { slug: string; aliases: string[] }) => {
-  SERVICE_ALIAS_MAP[f.slug] = f.aliases.map((a: string) => a.toLowerCase());
-});
-
-function matchesServiceFilter(clinic: Clinic, slugs: string[]): boolean {
-  if (!slugs || !slugs.length) return true;
-  const clinicServices = [...(clinic.services || []), ...(clinic.treatments || [])].map(s => s.toLowerCase());
-  return slugs.some(slug => {
-    const aliases = SERVICE_ALIAS_MAP[slug] || [slug.toLowerCase()];
-    return clinicServices.some(s => aliases.some(a => s === a || s.includes(a)));
-  });
-}
-// ─────────────────────────────────────────────────────────────────────────────
-
-export default function ClinicsPage(props: ClinicsClientProps) {
-  return (
-    <Suspense fallback={<div className="min-h-screen bg-ivory flex items-center justify-center"><p className="text-stone">Loading...</p></div>}>
-      <ClinicsPageInner {...props} />
-    </Suspense>
   )
 }

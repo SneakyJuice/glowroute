@@ -34,6 +34,11 @@ module.exports = {
         ivory: '#FAF8F5',
         stone: '#8C8279',
         sage: '#4A6741',
+        // Legacy components still use these names. Keep their roles aligned
+        // with the active palette so contact/claim controls remain visible.
+        navy: '#0D0D0D',
+        teal: '#4A6741',
+        gold: '#C9A96E',
       },
       fontFamily: {
         sans: ['DM Sans', 'system-ui', 'sans-serif'],

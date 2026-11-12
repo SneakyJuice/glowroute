@@ -133,8 +133,8 @@ export function filterClinicsForCitySlug<T extends CityClinic>(clinics: readonly
     .join(' ')
   const exact = clinics.filter((clinic) => clinic.city === displayName)
   if (exact.length > 0) return [...exact]
-  const pattern = displayName.replace(/-/g, '%')
-  return clinics.filter((clinic) => sqlIlikeMatch(clinic.city, pattern))
+  const normalizedSlug = (city: string) => city.toLowerCase().trim().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '').replace(/-+/g, '-')
+  return clinics.filter((clinic) => normalizedSlug(clinic.city || '') === normalizedSlug(citySlug))
 }
 
 export type DirectoryPageBatch<T> = {

@@ -174,6 +174,10 @@ describe('directory page collection', () => {
 })
 
 describe('city filter', () => {
+  it('resolves punctuation-normalized city slugs advertised by the sitemap', () => {
+    const clinics = [{ id: 'stp', slug: 'clinic', city: 'St. Petersburg' }]
+    assert.equal(filterClinicsForCitySlug(clinics, 'st-petersburg').length, 1)
+  })
   const clinics = [
     { id: '1', slug: 'a', city: 'Miami Beach', glowScore: 5 },
     { id: '2', slug: 'b', city: 'Miami', glowScore: 4 },

@@ -8,6 +8,7 @@ const fs = require('fs');
 const path = require('path');
 const { createClient } = require('@supabase/supabase-js');
 const { v4: uuidv4 } = require('uuid');
+const { sourceLocation } = require('./lib/source-integrity.cjs');
 
 // Load .keys.env
 const keysEnvPath = path.join(process.env.HOME, '.openclaw/workspace/.keys.env');
@@ -100,7 +101,9 @@ async function run() {
     glow_score: r.rating ? Math.min(5, Math.round(r.rating)) : null,
     review_count: r.review_count || null,
     source: 'apify-google-maps',
-    visibility: 'visible',
+    needs_review: r.needs_review || sourceLocation({ ...r, address: r.raw_address || r.address }, r.discovery_city || r.city, r.discovery_state || r.state).needs_review,
+    review_reason: r.review_reason || sourceLocation({ ...r, address: r.raw_address || r.address }, r.discovery_city || r.city, r.discovery_state || r.state).review_reason,
+    visibility: r.needs_review || sourceLocation({ ...r, address: r.raw_address || r.address }, r.discovery_city || r.city, r.discovery_state || r.state).needs_review ? 'hidden' : 'visible',
     created_at: new Date().toISOString(),
     updated_at: new Date().toISOString(),
   }));

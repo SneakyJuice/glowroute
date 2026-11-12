@@ -1,140 +1,25 @@
-import { unstable_cache } from 'next/cache'
-import { DIRECTORY_REVALIDATE_SECONDS } from '@/lib/clinic-directory'
-import { getSupabaseAdmin } from '@/lib/supabase'
+import { fetchAllClinicsFromSupabase } from '@/data/supabase-clinics'
 
-/** Google allows 50k URLs per file; stay well under for payload size. */
+/** Use the same publication checks and deterministic snapshot as the rendered directory. */
 export const SITEMAP_CHUNK_SIZE = 5000
-/** PostgREST/Supabase default max-rows is 1000; page under that inside each chunk. */
-const SITEMAP_PAGE_SIZE = 1000
-
-export type SitemapClinic = {
-  id: string | number
-  slug: string
-  city: string
-}
-
+export type SitemapClinic = { id: string | number; slug: string; city: string }
 export class SitemapDataError extends Error {
-  constructor(message: string) {
-    super(message)
-    this.name = 'SitemapDataError'
-  }
+  constructor(message: string) { super(message); this.name = 'SitemapDataError' }
 }
-
 export function citySlug(city: string): string {
-  return city
-    .toLowerCase()
-    .trim()
-    .replace(/\s+/g, '-')
-    .replace(/[^a-z0-9-]/g, '')
-    .replace(/-+/g, '-')
+  return city.toLowerCase().trim().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '').replace(/-+/g, '-')
 }
-
-function requireSupabase() {
-  const supabase = getSupabaseAdmin()
-  if (!supabase) {
-    throw new SitemapDataError('Supabase is not configured for sitemap generation')
-  }
-  return supabase
+async function publishedClinics() {
+  return (await fetchAllClinicsFromSupabase()).filter(c => c.slug && c.city)
 }
-
-/**
- * Count the deduplicated sitemap view. The index and chunk routes are both
- * dynamic, so this count cannot drift from the routes that actually exist.
- */
-async function fetchSitemapClinicCountUncached(): Promise<number> {
-  const supabase = requireSupabase()
-  const { count, error } = await supabase
-    .from('sitemap_clinics')
-    .select('id', { count: 'exact', head: true })
-
-  if (error) throw new SitemapDataError(`Sitemap count failed: ${error.message}`)
-  return count ?? 0
+export async function fetchSitemapClinicCount(): Promise<number> {
+  return (await publishedClinics()).length
 }
-
-/** One deterministic, globally deduplicated chunk: only id + slug + city. */
-async function fetchSitemapClinicChunkUncached(chunkIndex: number): Promise<SitemapClinic[]> {
-  if (!Number.isInteger(chunkIndex) || chunkIndex < 0) {
-    throw new SitemapDataError(`Invalid sitemap chunk: ${chunkIndex}`)
-  }
-
-  const supabase = requireSupabase()
-  const from = chunkIndex * SITEMAP_CHUNK_SIZE
-  const to = from + SITEMAP_CHUNK_SIZE - 1
-  const rows: SitemapClinic[] = []
-
-  for (let start = from; start <= to; start += SITEMAP_PAGE_SIZE) {
-    const end = Math.min(start + SITEMAP_PAGE_SIZE - 1, to)
-    const { data, error } = await supabase
-      .from('sitemap_clinics')
-      .select('id, slug, city')
-      // The id tie-breaker makes range pagination stable when scores are equal.
-      .order('glow_score', { ascending: false, nullsFirst: false })
-      .order('id', { ascending: true })
-      .range(start, end)
-
-    if (error) throw new SitemapDataError(`Sitemap chunk failed: ${error.message}`)
-    if (!data || data.length === 0) break
-
-    for (const row of data) {
-      if (!row.slug || !row.city) continue
-      rows.push({
-        id: row.id,
-        slug: String(row.slug).replace(/^\/+/, ''),
-        city: String(row.city),
-      })
-    }
-    if (data.length < end - start + 1) break
-  }
-
-  return rows
+export async function fetchSitemapClinicChunk(chunkIndex: number): Promise<SitemapClinic[]> {
+  if (!Number.isSafeInteger(chunkIndex) || chunkIndex < 0) throw new SitemapDataError('Invalid sitemap chunk')
+  return (await publishedClinics()).slice(chunkIndex * SITEMAP_CHUNK_SIZE, (chunkIndex + 1) * SITEMAP_CHUNK_SIZE)
+    .map(({ id, slug, city }) => ({ id, slug, city }))
 }
-
-/** Unique city slugs for /clinics/{city} pages. */
-async function fetchSitemapCitiesUncached(): Promise<string[]> {
-  const supabase = requireSupabase()
-  const BATCH = 1000
-  const cities = new Set<string>()
-  let page = 0
-
-  while (true) {
-    const from = page * BATCH
-    const to = from + BATCH - 1
-    const { data, error } = await supabase
-      .from('sitemap_clinics')
-      .select('id, city')
-      .order('city', { ascending: true })
-      .order('id', { ascending: true })
-      .range(from, to)
-
-    if (error) throw new SitemapDataError(`Sitemap cities failed: ${error.message}`)
-    if (!data || data.length === 0) break
-
-    for (const row of data) {
-      if (row.city) cities.add(citySlug(String(row.city)))
-    }
-    if (data.length < BATCH) break
-    page++
-  }
-
-  return Array.from(cities).filter(Boolean)
+export async function fetchSitemapCities(): Promise<string[]> {
+  return Array.from(new Set((await publishedClinics()).map(c => citySlug(c.city)))).filter(Boolean).sort()
 }
-
-const sitemapCache = { revalidate: DIRECTORY_REVALIDATE_SECONDS }
-
-export const fetchSitemapClinicCount = unstable_cache(
-  fetchSitemapClinicCountUncached,
-  ['sitemap-clinic-count-v1'],
-  sitemapCache,
-)
-
-export const fetchSitemapClinicChunk = unstable_cache(
-  fetchSitemapClinicChunkUncached,
-  ['sitemap-clinic-chunk-v1'],
-  sitemapCache,
-)
-
-export const fetchSitemapCities = unstable_cache(
-  fetchSitemapCitiesUncached,
-  ['sitemap-clinic-cities-v1'],
-  sitemapCache,
-)
