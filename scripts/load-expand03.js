@@ -8,7 +8,7 @@ const fs = require('fs');
 const path = require('path');
 const { createClient } = require('@supabase/supabase-js');
 const { v4: uuidv4 } = require('uuid');
-const { sourceLocation } = require('./lib/source-integrity.cjs');
+const { sourceLocation, hasReviewHold, isAliasSource, loadSuppressedAliases } = require('./lib/source-integrity.cjs');
 
 // Load .keys.env
 const keysEnvPath = path.join(process.env.HOME, '.openclaw/workspace/.keys.env');
@@ -56,6 +56,7 @@ function normalizeTreatments(services) {
 }
 
 async function run() {
+  const aliases = await loadSuppressedAliases(supabase);
   const rawDir = path.join(__dirname, '../data/leads/raw');
   const files = fs.readdirSync(rawDir)
     .filter(f => f.startsWith('2026-04-10') && f.endsWith('.json'))
@@ -86,7 +87,7 @@ async function run() {
   console.log(`🔄 After dedup: ${deduped.length} unique records`);
 
   // Transform to Supabase schema
-  const rows = deduped.map(r => ({
+  const rows = deduped.filter(row => !isAliasSource(row, aliases)).map(r => ({
     id: uuidv4(),
     name: r.clinic_name || r.name || 'Unknown Clinic',
     slug: slugify(r.clinic_name || r.name || 'unknown') + '-' + slugify(r.city || '') + '-' + slugify(r.state || ''),
@@ -101,12 +102,12 @@ async function run() {
     glow_score: r.rating ? Math.min(5, Math.round(r.rating)) : null,
     review_count: r.review_count || null,
     source: 'apify-google-maps',
-    needs_review: r.needs_review || sourceLocation({ ...r, address: r.raw_address || r.address }, r.discovery_city || r.city, r.discovery_state || r.state).needs_review,
+    needs_review: hasReviewHold(r) || ['hidden', 'removed', 'needs_review'].includes(r.visibility) || sourceLocation({ ...r, address: r.raw_address || r.address }, r.discovery_city || r.city, r.discovery_state || r.state).needs_review,
     review_reason: r.review_reason || sourceLocation({ ...r, address: r.raw_address || r.address }, r.discovery_city || r.city, r.discovery_state || r.state).review_reason,
-    visibility: r.needs_review || sourceLocation({ ...r, address: r.raw_address || r.address }, r.discovery_city || r.city, r.discovery_state || r.state).needs_review ? 'hidden' : 'visible',
+    visibility: hasReviewHold(r) || ['hidden', 'removed', 'needs_review'].includes(r.visibility) || sourceLocation({ ...r, address: r.raw_address || r.address }, r.discovery_city || r.city, r.discovery_state || r.state).needs_review ? 'hidden' : 'visible',
     created_at: new Date().toISOString(),
     updated_at: new Date().toISOString(),
-  }));
+  })).filter(row => !isAliasSource(row, aliases));
 
   console.log(`\n🚀 Upserting ${rows.length} clinics to Supabase...`);
 

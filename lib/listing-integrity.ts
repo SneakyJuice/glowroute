@@ -14,6 +14,9 @@ export function publicImageUrl(value?: string | null): string | undefined {
     if (url.protocol !== 'https:' || url.username || url.password) return undefined
     if (Array.from(url.searchParams.keys()).some(key => /^(key|api[_-]?key|token|access_token)$/i.test(key))) return undefined
     if (/(^|\.)sitescout\.com$/.test(url.hostname)) return undefined
+    if (/(^|\.)facebook\.com$/.test(url.hostname) && /^\/tr\/?$/i.test(url.pathname)) return undefined
+    if (/(^|\.)userway\.org$/.test(url.hostname) && /spinner/i.test(url.pathname)) return undefined
+    if (/(^|\.)flagcdn\.com$/.test(url.hostname)) return undefined
     if (/(^|\.)(unsplash\.com|pexels\.com|pixabay\.com)$/.test(url.hostname)) return undefined
     return value
   } catch { return undefined }

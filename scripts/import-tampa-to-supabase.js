@@ -9,7 +9,8 @@
 const fs = require('fs');
 const path = require('path');
 const https = require('https');
-const { sourceLocation } = require('./lib/source-integrity.cjs');
+const { sourceLocation, hasReviewHold, isAliasSource, loadSuppressedAliases } = require('./lib/source-integrity.cjs');
+const { createClient } = require('@supabase/supabase-js');
 
 // Load .env.local or .keys.env for Supabase creds
 function loadEnv() {
@@ -47,6 +48,7 @@ function slugify(name, city) {
 
 function mapToRow(clinic) {
   const location = sourceLocation(clinic, 'Tampa', 'FL');
+  const reviewHold = hasReviewHold(clinic) || ['hidden', 'removed', 'needs_review'].includes(clinic.visibility);
   return {
     slug: clinic.slug || slugify(clinic.name, clinic.city),
     name: clinic.name,
@@ -63,9 +65,9 @@ function mapToRow(clinic) {
     review_count: clinic.review_count || clinic.reviewCount || 0,
     hero_image_url: clinic.hero_image_url || clinic.imageUrl || null,
     description: clinic.description || null,
-    visibility: location.needs_review ? 'hidden' : 'visible',
-    needs_review: location.needs_review,
-    review_reason: location.review_reason,
+    visibility: reviewHold || location.needs_review ? 'hidden' : 'visible',
+    needs_review: reviewHold || location.needs_review,
+    review_reason: clinic.review_reason || location.review_reason,
     is_verified: false,
     is_claimed: false,
     is_featured: false,
@@ -135,6 +137,7 @@ async function getCount(city) {
 }
 
 async function main() {
+  const aliases = await loadSuppressedAliases(createClient(SUPABASE_URL, SUPABASE_KEY, { auth: { persistSession: false } }));
   const jsonPath = path.join(__dirname, '../output/enriched-clinics.json');
   if (!fs.existsSync(jsonPath)) {
     console.error(`❌ File not found: ${jsonPath}`);
@@ -155,7 +158,8 @@ async function main() {
   let errors = 0;
 
   for (let i = 0; i < tampa.length; i += BATCH) {
-    const batch = tampa.slice(i, i + BATCH).map(mapToRow);
+    const batch = tampa.slice(i, i + BATCH).filter(row => !isAliasSource(row, aliases)).map(mapToRow).filter(row => !isAliasSource(row, aliases));
+    if (!batch.length) continue;
     try {
       const result = await supabaseUpsert(batch);
       imported += result.length;

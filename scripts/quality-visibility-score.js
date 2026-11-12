@@ -53,6 +53,7 @@
 const { createClient } = require('@supabase/supabase-js');
 const path = require('path');
 const fs = require('fs');
+const { preservePublicationVisibility, isAliasSource, loadSuppressedAliases } = require('./lib/source-integrity.cjs');
 
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://psiuknphchmhsthvhkpt.supabase.co';
 const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
@@ -90,17 +91,13 @@ function calcGlowScore(qualityScore) {
   return 0;
 }
 
-function calcVisibility(clinic, qualityScore, currentVisibility) {
-  if (currentVisibility === 'needs_review') return 'needs_review';
+function calcVisibility(clinic, qualityScore, currentVisibility, aliases) {
+  if (isAliasSource(clinic, aliases)) return currentVisibility === 'removed' ? 'removed' : 'hidden';
+  const proposed = qualityScore >= 35 ? 'visible' : 'hidden';
+  const preserved = preservePublicationVisibility(clinic, proposed, aliases);
+  if (preserved !== proposed) return preserved;
   if (clinic.is_verified || clinic.is_claimed) return currentVisibility;
-  if (clinic.needs_review) return currentVisibility;
-  // Never touch manually managed states
-  if (currentVisibility === 'removed') return 'removed';
-  if (currentVisibility === 'hidden')  return 'hidden';
-
-  if (qualityScore >= 55) return 'visible';
-  if (qualityScore >= 35) return 'visible'; // partial but still show — glow_score handles ranking
-  return 'hidden'; // stub — suppress
+  return preserved;
 }
 
 // ── Main ──────────────────────────────────────────────────────────────────────
@@ -108,6 +105,7 @@ function calcVisibility(clinic, qualityScore, currentVisibility) {
 async function main() {
   console.log(`\n🏥 GlowRoute Quality & Visibility Scorer`);
   console.log(`Mode: ${REPORT_ONLY ? 'REPORT ONLY' : DRY_RUN ? 'DRY RUN' : 'LIVE'}\n`);
+  const aliases = await loadSuppressedAliases(sb);
 
   // Fetch all clinics (paginate)
   let allClinics = [];
@@ -115,7 +113,7 @@ async function main() {
   while (true) {
     const { data, error } = await sb
       .from('clinics')
-      .select('id, name, hero_image_url, phone, address, website, description, visibility, status, data_quality_score, is_verified, is_claimed, needs_review')
+      .select('id, slug, name, hero_image_url, phone, address, website, description, visibility, status, data_quality_score, is_verified, is_claimed, needs_review, review_reason')
       .order('id', { ascending: true })
       .range(offset, offset + BATCH_SIZE - 1);
     if (error) throw error;
@@ -139,7 +137,7 @@ async function main() {
   for (const clinic of allClinics) {
     const qualityScore = calcQualityScore(clinic);
     const glowScore = calcGlowScore(qualityScore);
-    const newVisibility = calcVisibility(clinic, qualityScore, clinic.visibility);
+    const newVisibility = calcVisibility(clinic, qualityScore, clinic.visibility, aliases);
 
     // Track stats
     stats.scoreDistribution[glowScore]++;
