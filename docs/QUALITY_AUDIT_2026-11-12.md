@@ -115,3 +115,5 @@ This audit establishes verified defects and a tested repair. It does not certify
 ## Publication and checks
 
 The repair is published for review in [draft PR #37](https://github.com/SneakyJuice/glowroute/pull/37). Its first GitHub Directory quality run passed. Vercel requires a GitHub-verified commit before building; retain that protection and confirm the latest preview and CI checks before merging. The application tree matches the locally tested repair. Production rollout and the database migration remain separate steps.
+
+Release acceptance requires a successful preview build and the production HTTP checks recorded above before merging into main.
