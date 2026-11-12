@@ -111,3 +111,7 @@ Artifacts in ../audit: http-evidence.json, connected-evidence.json, visual-direc
 GitHub and Vercel connectors and the connected Supabase/Search Console tools were used. The OpenSEO connector was not available in the tool catalog; no paid ranking, keyword-demand or backlink estimates were invented. Search-result absence was not treated as proof of non-indexing. Runtime error logs had no matches in the available recent 30-minute window; that is not a historical reliability assessment.
 
 This audit establishes verified defects and a tested repair. It does not certify every provider, guarantee indexing, or claim production rollout has happened.
+
+## Publication and checks
+
+The repair is published for review in [draft PR #37](https://github.com/SneakyJuice/glowroute/pull/37). Its first GitHub Directory quality run passed. Vercel requires a GitHub-verified commit before building; retain that protection and confirm the latest preview and CI checks before merging. The application tree matches the locally tested repair. Production rollout and the database migration remain separate steps.
