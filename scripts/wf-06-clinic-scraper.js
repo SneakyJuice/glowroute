@@ -15,6 +15,7 @@ const fs = require('fs');
 const path = require('path');
 const https = require('https');
 const http = require('http');
+const { sourceLocation } = require('./lib/source-integrity.cjs');
 
 // ─── Load API keys from .keys.env ───────────────────────────────────────────
 function loadKeys() {
@@ -211,8 +212,7 @@ async function discoverClinics(city, state, maxItems) {
       .map(p => ({
         name: p.title || p.name || '',
         address: p.address || p.street || '',
-        city: city,
-        state: state,
+        ...sourceLocation(p, city, state),
         phone: p.phone || '',
         website: p.website || '',
         rating: p.totalScore || p.rating || null,
@@ -323,6 +323,10 @@ async function scrapeClinicWebsite(clinic) {
         scraped_at: new Date().toISOString(),
         source_city: clinic.city,
         source_state: clinic.state,
+        discovery_city: clinic.discovery_city,
+        discovery_state: clinic.discovery_state,
+        needs_review: clinic.needs_review || false,
+        review_reason: clinic.review_reason || null,
         raw_address: clinic.address,
         rating: clinic.rating,
         review_count: clinic.reviewCount,

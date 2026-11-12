@@ -30,18 +30,18 @@ export function xmlResponse(body: string): Response {
   return new Response(body, { status: 200, headers: SITEMAP_XML_HEADERS })
 }
 
-export function renderUrlset(urls: string[], lastmod: string): string {
+export function renderUrlset(urls: string[], _lastmod?: string): string {
   const entries = urls
-    .map((url) => `  <url>\n    <loc>${escapeXml(url)}</loc>\n    <lastmod>${lastmod}</lastmod>\n  </url>`)
+    .map((url) => `  <url>\n    <loc>${escapeXml(url)}</loc>\n  </url>`)
     .join('\n')
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${entries}\n</urlset>`
 }
 
-export function renderSitemapIndex(chunkIds: number[], lastmod: string): string {
+export function renderSitemapIndex(chunkIds: number[], _lastmod?: string): string {
   const entries = chunkIds
     .map(
       (id) =>
-        `  <sitemap>\n    <loc>${SITE_URL}/sitemap/${id}.xml</loc>\n    <lastmod>${lastmod}</lastmod>\n  </sitemap>`,
+        `  <sitemap>\n    <loc>${SITE_URL}/sitemap/${id}.xml</loc>\n  </sitemap>`,
     )
     .join('\n')
   return `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${entries}\n</sitemapindex>`
@@ -95,24 +95,25 @@ export async function serveSitemapIndex(): Promise<Response> {
   } catch (error) {
     const message = error instanceof SitemapDataError ? error.message : 'Unexpected sitemap failure'
     console.error('[sitemap-index] failed:', message)
-    return xmlResponse(renderSitemapIndex([0], lastmod))
+    return new Response('Sitemap temporarily unavailable', { status: 503, headers: { 'Cache-Control': 'no-store', 'Retry-After': '60' } })
   }
 }
 
 export async function serveSitemapChunk(idParam: string): Promise<Response> {
   const lastmod = new Date().toISOString().split('T')[0]
   if (!/^\d+$/.test(idParam)) {
-    return xmlResponse(renderUrlset([], lastmod))
+    return new Response('Not found', { status: 404 })
   }
 
   const chunkId = Number(idParam)
   try {
+    const chunkIds = await sitemapIndexChunkIds()
+    if (!Number.isSafeInteger(chunkId) || !chunkIds.includes(chunkId)) return new Response('Not found', { status: 404 })
     const urls = await buildChunkUrls(chunkId)
     return xmlResponse(renderUrlset(urls, lastmod))
   } catch (error) {
     const message = error instanceof SitemapDataError ? error.message : 'Unexpected sitemap failure'
     console.error(`[sitemap] chunk ${chunkId} failed:`, message)
-    const fallback = chunkId === 0 ? staticSitemapUrls() : []
-    return xmlResponse(renderUrlset(fallback, lastmod))
+    return new Response('Sitemap temporarily unavailable', { status: 503, headers: { 'Cache-Control': 'no-store', 'Retry-After': '60' } })
   }
 }

@@ -324,7 +324,7 @@ describe('Miami Plastic Surgery clinic SEO', () => {
     assert.equal(showClinicVerifiedPromo(undefined), true)
 
     const defaultCopy = clinicClaimPromoCopy(undefined)
-    assert.match(defaultCopy ?? '', /430\+/)
+    assert.doesNotMatch(defaultCopy ?? '', /430\+/)
 
     const page = readFileSync(new URL('../app/clinics/[city]/[slug]/page.tsx', import.meta.url), 'utf8')
     assert.match(page, /clinicClaimPromoCopy/)

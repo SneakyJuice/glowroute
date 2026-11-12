@@ -1,8 +1,9 @@
 import { Clinic } from '@/types/clinic'
-import { getSupabaseAdmin } from '@/lib/supabase'
+import { getSupabaseReadClient as getSupabaseAdmin } from '@/lib/supabase'
 import { cache } from 'react'
 import { unstable_cache, unstable_noStore } from 'next/cache'
 import { aggregateLiveCityHubs, type LiveCityHub } from '@/lib/seo-page-overrides'
+import { hasAddressStateConflict, listingDescription, publicImageUrl } from '@/lib/listing-integrity'
 import {
   DIRECTORY_PAGE_SIZE,
   DIRECTORY_REVALIDATE_SECONDS,
@@ -52,14 +53,13 @@ function generateDescription(clinic: Clinic): string {
 
 /** Clean a clinic record — strip garbled descriptions, normalize nulls */
 export function clean(clinic: Clinic): Clinic {
-  const descGarbled =
-    clinic.description && isGarbledDescription(clinic.description)
-
   return {
     ...clinic,
-    description: descGarbled
-      ? generateDescription(clinic)
-      : clinic.description || generateDescription(clinic),
+    imageUrl: publicImageUrl(clinic.imageUrl),
+    heroImageUrl: publicImageUrl(clinic.heroImageUrl),
+    logo: publicImageUrl(clinic.logo),
+    description: listingDescription(clinic.description) ||
+      `View contact and location details for ${clinic.name} in ${clinic.city}${clinic.state ? ', ' + clinic.state : ''}.`,
   }
 }
 
@@ -74,10 +74,11 @@ export function mapSupabaseRow(row: any): Clinic {
     slug: (row.slug || '').replace(/^\/+/, ''), // strip leading slashes that break Next.js routing
     name: row.name,
     city: row.city,
-    state: row.state || 'FL',
+    state: row.state || undefined,
     neighborhood: undefined,
     distance: undefined,
-    googleRating: row.glow_score ?? 0,         // GMB star rating (0.0-5.0)
+    // Legacy jobs write completeness scores into glow_score. It cannot prove Google stars.
+    googleRating: 0,
     glowScore: row.glow_score ?? 0,            // Quality tier (0-5)
     dataQualityScore: row.data_quality_score ?? 0, // Completeness score (0-100)
     googleReviewCount: row.review_count ?? 0,  // Real GMB review count — backfilled 2026-03-31
@@ -92,7 +93,7 @@ export function mapSupabaseRow(row: any): Clinic {
     featured: row.is_featured || false,
     heroImageUrl: row.hero_image_url || undefined, // alias for imageUrl — kept for backward compat
     isNew: false,
-    priceTier: '$$', // TODO: map claim_tier if possible
+    priceTier: undefined,
     availability: undefined,
     imageUrl: row.hero_image_url || undefined, // single canonical image field
     images: [], // images[] is no longer a 1-element echo of imageUrl; populate only when multi-image gallery exists
@@ -108,8 +109,8 @@ export function mapSupabaseRow(row: any): Clinic {
     icalUrl: undefined,
     mapsUrl: undefined,
     brandValues: [],
-    lat: row.lat || undefined,
-    lng: row.lng || undefined,
+    lat: row.lat ?? undefined,
+    lng: row.lng ?? undefined,
   }
 }
 
@@ -195,7 +196,8 @@ async function fetchDirectoryPage(cursor: DirectoryCursor | null): Promise<Direc
  */
 const loadDirectoryVersion = unstable_cache(
   async () => ({ version: String(Date.now()) }),
-  ['glowroute-visible-clinics-version-v2'],
+  // v3 prevents older deployments' mapped ratings/prices/images from surviving this repair.
+  ['glowroute-visible-clinics-version-v3'],
   { revalidate: DIRECTORY_REVALIDATE_SECONDS },
 )
 
@@ -206,7 +208,7 @@ const loadVersionedDirectoryPage = unstable_cache(
     }
     return fetchDirectoryPage(decodeDirectoryCursor(cursorKey))
   },
-  ['glowroute-visible-clinics-page-v2'],
+  ['glowroute-visible-clinics-page-v3'],
   { revalidate: DIRECTORY_PAGE_REVALIDATE_SECONDS },
 )
 
@@ -221,7 +223,7 @@ async function loadVisibleClinics(version: string): Promise<Clinic[]> {
     },
   )
 
-  const unique = dedupeClinicsBySlug(pages)
+  const unique = dedupeClinicsBySlug(pages).filter((clinic) => !hasAddressStateConflict(clinic))
   unique.sort((a, b) =>
     compareDirectoryOrder(
       { glowScore: a.glowScore ?? null, id: a.id },
@@ -235,8 +237,8 @@ async function loadVisibleClinics(version: string): Promise<Clinic[]> {
 export const fetchAllClinicsFromSupabase = cache(async (): Promise<Clinic[]> => {
   const supabase = getSupabaseAdmin()
   if (!supabase) {
-    console.warn('[supabase-clinics] Supabase admin client not available, returning empty array')
-    return []
+    unstable_noStore()
+    throw new Error('[supabase-clinics] Supabase directory client not configured')
   }
 
   try {
@@ -255,7 +257,7 @@ export const fetchAllClinicsFromSupabase = cache(async (): Promise<Clinic[]> => 
     return clinics
   } catch (err) {
     console.error('[supabase-clinics] Unexpected error:', err)
-    if (directoryMemo && directoryMemo.clinics.length > 0) {
+    if (directoryMemo && directoryMemo.clinics.length > 0 && Date.now() - directoryMemo.at < DIRECTORY_CACHE_TTL_MS * 2) {
       console.warn('[supabase-clinics] Serving the last good directory list after a fetch error')
       return directoryMemo.clinics
     }
@@ -301,7 +303,7 @@ export const fetchClinicsByCity = cache(async (citySlug: string): Promise<Clinic
  * A database error throws, and the response is not stored, so ISR cannot
  * keep that outage as a 404.
  */
-export async function fetchClinicByExactSlug(slug: string): Promise<Clinic | null> {
+export const fetchClinicByExactSlug = cache(async (slug: string): Promise<Clinic | null> => {
   if (!slug) return null
   const supabase = getSupabaseAdmin()
   if (!supabase) {
@@ -313,6 +315,8 @@ export async function fetchClinicByExactSlug(slug: string): Promise<Clinic | nul
     .from('clinics')
     .select(DIRECTORY_SELECT)
     .eq('slug', slug)
+    .eq('visibility', 'visible')
+    .order('glow_score', { ascending: false, nullsFirst: false })
     .order('id', { ascending: true })
     .limit(1)
 
@@ -320,9 +324,9 @@ export async function fetchClinicByExactSlug(slug: string): Promise<Clinic | nul
     unstable_noStore()
     throw new Error(`[supabase-clinics] Error fetching clinic: ${error.message}`)
   }
-  if (!data || data.length === 0) return null
+  if (!data || data.length === 0 || hasAddressStateConflict(data[0] as unknown as { address?: string; state?: string })) return null
   return clean(mapSupabaseRow(data[0]))
-}
+})
 
 /** Featured clinic from the cached visible directory, else the first row in directory order. */
 export async function fetchFeaturedClinic(): Promise<Clinic | null> {

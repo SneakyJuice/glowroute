@@ -34,6 +34,10 @@ export function getSupabaseAdmin() {
 }
 
 export type ClinicPlan = 'free' | 'basic' | 'pro'
+/** Directory reads need no write credentials; public column grants and RLS apply. */
+export function getSupabaseReadClient() {
+  return getSupabaseClient() ?? getSupabaseAdmin()
+}
 
 export interface ClinicSubscription {
   plan: ClinicPlan

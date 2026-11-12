@@ -3,10 +3,10 @@ import { SITE_URL } from '@/lib/config'
 
 export const metadata: Metadata = {
   title: 'Find Med Spas & Aesthetic Clinics Near You | GlowRoute',
-  description: 'Browse 3,500+ verified med spas and aesthetic clinics across the Southeast. Filter by treatment, location, and rating.',
+  description: 'Compare med spas and aesthetic clinics by treatment and location. Check listing details, contact providers, and see which listings are verified.',
   openGraph: {
     title: 'Find Med Spas & Aesthetic Clinics Near You | GlowRoute',
-    description: 'Browse 3,500+ verified med spas and aesthetic clinics across the Southeast. Filter by treatment, location, and rating.',
+    description: 'Compare med spas and aesthetic clinics by treatment and location. Check listing details and contact providers.',
     type: 'website',
     url: `${SITE_URL}/clinics`,
     siteName: 'GlowRoute',
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Find Med Spas & Aesthetic Clinics Near You | GlowRoute',
-    description: 'Browse 3,500+ verified med spas and aesthetic clinics across the Southeast.',
+    description: 'Compare med spas and aesthetic clinics by treatment and location.',
     images: [`${SITE_URL}/og-default.jpg`],
   },
   alternates: {

@@ -1,8 +1,11 @@
 // ISR: pre-render top 923 priority clinics; long tail generated on-demand then cached 24h
-export const revalidate = 86400
+// Render canonical redirects directly; ISR on a cold redirect can duplicate Location headers.
+export const dynamic = 'force-dynamic'
 export const dynamicParams = true
 
-import { notFound } from 'next/navigation'
+import { notFound, permanentRedirect } from 'next/navigation'
+import ClinicImage from '@/components/ClinicImage'
+import { clinicPath } from '@/lib/listing-integrity'
 import Link from 'next/link'
 import { fetchClinicByExactSlug, fetchClinicsByCity } from '@/data/supabase-clinics'
 import type { Clinic } from '@/types/clinic'
@@ -47,7 +50,7 @@ export async function generateStaticParams() {
   if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.SUPABASE_SERVICE_ROLE_KEY) {
     return []
   }
-  return TOP_CLINIC_PARAMS
+  return []
 }
 
 /** Truncate a string to maxLen, appending suffix if cut */
@@ -58,6 +61,13 @@ function truncate(str: string, maxLen: number, suffix = '…'): string {
 
 export async function generateMetadata({ params }: PageProps) {
   const { city, slug } = await params
+  if (TREATMENT_SLUGS.includes(slug)) {
+    return {
+      title: `${TREATMENTS.find(t => t.slug === slug)?.name ?? slug} in ${city.replace(/-/g, ' ')} | GlowRoute`,
+      alternates: { canonical: `${SITE_URL}/clinics/${city}/${slug}` },
+      robots: { index: false, follow: true },
+    }
+  }
   const clinic = await fetchClinicByExactSlug(slug)
   if (!clinic) return { title: 'Clinic Not Found | GlowRoute' }
 
@@ -85,7 +95,7 @@ export async function generateMetadata({ params }: PageProps) {
     clinic.logo ||
     `${SITE_URL}/og-default.jpg`
 
-  const pageUrl = `${SITE_URL}${clinicOverride?.canonicalPath ?? `/clinics/${city}/${slug}`}`
+  const pageUrl = `${SITE_URL}${clinicPath(clinic.city, clinic.slug)}`
 
   return {
     title: pageTitle,
@@ -135,7 +145,7 @@ function StarRating({ rating }: { rating: number }) {
 // ─── Treatment City Page (disambiguation) ────────────────────────────────────
 async function TreatmentCityPage({ city, treatment }: { city: string; treatment: string }) {
   const treatmentInfo = TREATMENTS.find(t => t.slug === treatment)
-  const rated = (await fetchClinicsByCity(city)).filter((clinic) => (clinic.googleRating ?? 0) > 0)
+  const rated = await fetchClinicsByCity(city)
   const matched = rated.filter((clinic) =>
     (clinic.services ?? []).includes(treatment) || (clinic.treatments ?? []).includes(treatment),
   )
@@ -152,7 +162,7 @@ async function TreatmentCityPage({ city, treatment }: { city: string; treatment:
             {treatmentInfo?.name ?? treatment} Providers
           </h1>
           <p className="text-stone text-base">
-            {clinics.length} verified clinic{clinics.length !== 1 ? 's' : ''} in the area
+            {clinics.length} clinic listing{clinics.length !== 1 ? 's' : ''} in the area
           </p>
         </div>
       </section>
@@ -184,6 +194,8 @@ export default async function ClinicProfilePage({ params }: PageProps) {
   const clinic = await fetchClinicByExactSlug(slug)
   // null means the clinic is missing. Lookup errors throw and are not stored as a 404.
   if (!clinic) notFound()
+  const canonicalPath = clinicPath(clinic.city, clinic.slug)
+  if (`/clinics/${city}/${slug}` !== canonicalPath) permanentRedirect(canonicalPath)
   const clinicOverride = getClinicSeoOverride(city, slug)
 
   const allTreatments = [
@@ -201,9 +213,9 @@ export default async function ClinicProfilePage({ params }: PageProps) {
       clinic.name + ' ' + (clinic.address || clinic.city)
     )}`
 
-  const isUnclaimed = !clinic.verified
+  const isUnclaimed = !clinic.isClaimed
 
-  const pageUrl = `${SITE_URL}/clinics/${citySlug(clinic.city)}/${clinic.slug}`
+  const pageUrl = `${SITE_URL}${canonicalPath}`
   const socialProfiles: string[] = []
   if (clinic.instagramHandle) {
     socialProfiles.push(`https://instagram.com/${clinic.instagramHandle.replace('@', '')}`)
@@ -315,33 +327,14 @@ export default async function ClinicProfilePage({ params }: PageProps) {
       />
 
       {/* Hero Image Banner */}
-      <div className="w-full h-[260px] md:h-[340px] relative overflow-hidden bg-gradient-to-br from-[#0D1B2E] to-[#1a2e4a]">
-        {primaryImage ? (
-          <img
-            src={primaryImage}
-            alt={clinic.name}
-            className="w-full h-full object-cover opacity-80"
-          />
-        ) : clinic.logo ? (
-          <div className="w-full h-full flex items-center justify-center">
-            <img
-              src={clinic.logo}
-              alt={clinic.name}
-              className="max-h-[120px] max-w-[60%] object-contain opacity-60"
-            />
-          </div>
-        ) : (
-          <div className="w-full h-full flex items-center justify-center">
-            <span className="text-7xl opacity-30">✨</span>
-          </div>
-        )}
+      <div className="w-full h-[260px] md:h-[340px] relative overflow-hidden bg-ivory border-b border-gray-200">
+        <ClinicImage src={primaryImage || clinic.logo} alt={clinic.name} priority isLogo={!primaryImage && !!clinic.logo} />
         {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0D1B2E]/80 via-transparent to-transparent" />
         {/* Breadcrumb */}
         <div className="absolute top-4 left-4 md:left-8">
           <Link
             href={clinicOverride?.backHref ?? '/clinics'}
-            className="text-white/70 text-xs hover:text-white transition-colors flex items-center gap-1"
+            className="bg-white/95 rounded-full px-3 py-2 text-onyx text-sm hover:text-sage transition-colors flex items-center gap-1"
           >
             <svg
               className="w-3 h-3"
@@ -422,11 +415,7 @@ export default async function ClinicProfilePage({ params }: PageProps) {
                   </div>
                   <h1 className="text-2xl font-bold text-navy leading-tight">{clinic.name}</h1>
                   <div className="flex items-center gap-2 mt-1.5">
-                    <StarRating rating={clinic.googleRating} />
-                    <span className="font-bold text-navy">{clinic.googleRating}</span>
-                    <span className="text-sm text-gray-400">
-                      ({clinic.googleReviewCount.toLocaleString()} Google reviews)
-                    </span>
+                    {clinic.googleRating > 0 ? <><StarRating rating={clinic.googleRating} /><span className="font-bold text-navy">{clinic.googleRating}</span></> : <span className="text-sm text-gray-500">Rating not verified</span>}
                   </div>
                   {clinic.address && (
                     <a
@@ -645,11 +634,9 @@ export default async function ClinicProfilePage({ params }: PageProps) {
                   </div>
                 )}
                 <div className="flex items-center justify-between">
-                  <span className="text-gray-500">Google Rating</span>
+                  <span className="text-gray-500">Rating</span>
                   <div className="flex items-center gap-1">
-                    <span className="text-gold">★</span>
-                    <span className="font-bold text-navy">{clinic.googleRating}</span>
-                    <span className="text-gray-400 text-xs">({clinic.googleReviewCount.toLocaleString()})</span>
+                    <span className="text-gray-500 text-xs">{clinic.googleRating > 0 ? clinic.googleRating : 'Not verified'}</span>
                   </div>
                 </div>
                 <div className="flex items-center justify-between">

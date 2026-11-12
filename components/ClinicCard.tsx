@@ -1,22 +1,21 @@
 'use client'
-import { useState } from 'react'
-import { Clinic } from '@/types/clinic'
+import type { Clinic } from '@/types/clinic'
 import TreatmentTag, { getTagVariant } from './TreatmentTag'
 import VerifiedBadge from './VerifiedBadge'
-import { getCardVibeTags, VIBE_STYLES } from '@/lib/vibes'
+import { detectBookingPlatform, getCardVibeTags, safeHttpUrl, VIBE_STYLES } from '@/lib/vibes'
 import type { VibeTag } from '@/lib/vibes'
 import { detectInfluencer, getInfluencerTier } from '@/lib/influencer'
 import CreatorBadge from './CreatorBadge'
 import { calculateGlowScore } from '@/lib/glowscore'
 import { GlowScoreCardBadge } from './GlowScoreBadge'
+import ClinicImage from './ClinicImage'
 
 function getMapUrl(clinic: Clinic): string {
-  const lat = (clinic as any).lat
-  const lng = (clinic as any).lng
-  if (lat != null && lng != null) {
+  const { lat, lng } = clinic
+  if (lat != null && lng != null && Number.isFinite(lat) && Number.isFinite(lng) && Math.abs(lat) <= 90 && Math.abs(lng) <= 180) {
     return `https://maps.google.com/?q=${lat},${lng}`
   }
-  const query = clinic.address || `${clinic.name} ${clinic.city} FL`
+  const query = [clinic.name, clinic.address || `${clinic.city} ${clinic.state || ''}`].join(' ')
   return `https://maps.google.com/?q=${encodeURIComponent(query)}`
 }
 
@@ -27,8 +26,8 @@ function ViewOnMapButton({ clinic, className = '' }: { clinic: Clinic; className
       target="_blank"
       rel="noopener noreferrer"
       className={`flex items-center justify-center text-stone hover:text-sage transition-colors ${className}`}
-      title="View on Google Maps"
-      aria-label="View on Google Maps"
+      title={`View ${clinic.name} on Google Maps`}
+      aria-label={`View ${clinic.name} on Google Maps (opens in a new tab)`}
     >
       <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
         <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/>
@@ -47,7 +46,7 @@ interface ClinicCardProps { clinic: Clinic; distanceMi?: number }
 
 function StarRating({ rating }: { rating: number }) {
   return (
-    <div className="flex gap-0.5">
+    <div className="flex gap-0.5" aria-hidden="true">
       {[1,2,3,4,5].map(i => (
         <span key={i} className={`text-[13px] ${i <= Math.floor(rating) ? 'text-champagne' : i - 0.5 <= rating ? 'text-champagne opacity-60' : 'text-gray-200'}`}>★</span>
       ))}
@@ -55,39 +54,45 @@ function StarRating({ rating }: { rating: number }) {
   )
 }
 
+function ClinicRating({ clinic }: { clinic: Clinic }) {
+  if (!Number.isFinite(clinic.googleRating) || clinic.googleRating <= 0) {
+    return <span className="text-xs text-stone">Rating not verified</span>
+  }
+  return (
+    <>
+      <StarRating rating={clinic.googleRating} />
+      <span className="text-sm font-bold text-onyx" aria-label={`Rated ${clinic.googleRating} out of 5`}>{clinic.googleRating}</span>
+      {clinic.googleReviewCount > 0 && <span className="text-xs text-stone">({clinic.googleReviewCount.toLocaleString()} reviews)</span>}
+    </>
+  )
+}
+
 export function FeaturedClinicCard({ clinic }: ClinicCardProps) {
-  const [saved, setSaved] = useState(false)
+  const booking = detectBookingPlatform(clinic)
+  const website = safeHttpUrl(clinic.website)
+  const profileUrl = `/clinics/${citySlug(clinic.city)}/${clinic.slug}`
+  const image = clinic.imageUrl || clinic.images?.[0] || clinic.logo
   return (
     <div className="col-span-full">
-      <div className="bg-white rounded-2xl border border-champagne/35 shadow-featured hover:shadow-featured-hover hover:-translate-y-0.5 transition-all overflow-hidden grid grid-cols-1 md:grid-cols-[300px_1fr]">
-        <div className="h-[220px] bg-gradient-to-br from-[#bdd4e7] to-[#d4ecf5] flex items-center justify-center text-5xl">
-          {clinic.imageUrl || clinic.images?.[0]
-            ? <img src={clinic.imageUrl || clinic.images?.[0]} alt={clinic.name} className="w-full h-full object-cover" />
-            : clinic.logo
-              ? <img src={clinic.logo} alt={clinic.name} className="max-w-[60%] max-h-[60%] object-contain opacity-80" />
-              : '✨'
-          }
-        </div>
+      <div className="bg-white rounded-2xl border border-champagne/35 shadow-featured hover:shadow-featured-hover transition-shadow overflow-hidden grid grid-cols-1 md:grid-cols-[300px_1fr]">
+        <a href={profileUrl} className="block h-[220px]" aria-label={`View ${clinic.name} profile`}>
+          <ClinicImage src={image} alt={clinic.name} isLogo={image === clinic.logo} />
+        </a>
         <div className="p-5 flex flex-col gap-2.5">
           <div className="flex items-start justify-between gap-3">
             <div>
               <div className="flex items-center gap-2 mb-1.5">
-                <VerifiedBadge className="static" />
-                <span className="bg-champagne text-white text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full">⭐ Featured</span>
+                {(clinic.isVerified ?? clinic.verified) && <VerifiedBadge className="static" />}
+                <span className="bg-champagne/20 text-onyx text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full">Featured</span>
               </div>
               <div className="text-lg font-bold text-onyx tracking-tight">
                 <a href={`/clinics/${citySlug(clinic.city)}/${clinic.slug}`} className="hover:text-sage transition-colors">{clinic.name}</a>
               </div>
             </div>
-            <button onClick={() => setSaved(!saved)} className={`w-9 h-9 rounded-full bg-white border border-gray-200 flex items-center justify-center transition-colors flex-shrink-0 ${saved ? 'text-red-400' : 'text-gray-400 hover:text-red-400'}`}>
-              <svg className="w-4 h-4" viewBox="0 0 24 24" fill={saved ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-            </button>
           </div>
           <div className="flex items-center gap-2">
-            <StarRating rating={clinic.googleRating} />
-            <span className="text-sm font-bold text-onyx">{clinic.googleRating}</span>
-            {clinic.googleReviewCount > 0 && <span className="text-xs text-gray-400">({clinic.googleReviewCount.toLocaleString()} reviews)</span>}
-            {clinic.availability && <span className="flex items-center gap-1 text-[11px] font-medium text-green-600"><span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" />{clinic.availability}</span>}
+            <ClinicRating clinic={clinic} />
+            {clinic.availability && <span className="text-[11px] font-medium text-sage">{clinic.availability}</span>}
           </div>
           {clinic.address && (
             <div className="flex items-center gap-1 text-xs text-gray-500">
@@ -107,15 +112,12 @@ export function FeaturedClinicCard({ clinic }: ClinicCardProps) {
             ))}
           </div>
           {clinic.description && <p className="text-sm text-gray-500 leading-relaxed flex-1">{clinic.description}</p>}
-          <div className="flex items-center gap-2.5 mt-auto">
+          <div className="flex flex-wrap items-center gap-2.5 mt-auto">
             <a href={`/clinics/${citySlug(clinic.city)}/${clinic.slug}`} className="inline-block bg-sage text-white text-sm font-semibold px-5 py-2.5 rounded hover:bg-onyx transition-colors">View Full Profile</a>
-            {clinic.bookingUrl
-              ? <a href={clinic.bookingUrl} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-sage bg-sage/[0.08] border border-sage/20 px-4 py-2.5 rounded hover:bg-sage/[0.15] transition-colors">Reserve Consultation</a>
-              : <button className="text-sm font-semibold text-sage bg-sage/[0.08] border border-sage/20 px-4 py-2.5 rounded hover:bg-sage/[0.15] transition-colors">Reserve Consultation</button>
-            }
+            <a href={booking?.url || `${profileUrl}#lead-form`} target={booking ? '_blank' : undefined} rel={booking ? 'noopener noreferrer' : undefined} aria-label={booking ? `Book with ${clinic.name} (opens in a new tab)` : `Request an appointment with ${clinic.name}`} className="text-sm font-semibold text-sage bg-sage/[0.08] border border-sage/20 px-4 py-2.5 rounded hover:bg-sage/[0.15] transition-colors">{booking ? 'Book Online' : 'Request Appointment'}</a>
             <ViewOnMapButton clinic={clinic} className="w-9 h-9 border border-stone/20 rounded hover:border-sage/40 hover:bg-sage/5" />
-            {clinic.website && (
-              <a href={clinic.website} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-gray-400 hover:text-sage transition-colors ml-auto" title="Visit website">
+            {website && (
+              <a href={website} target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center text-sm font-semibold text-stone hover:text-sage transition-colors ml-auto" title="Visit website" aria-label={`Visit ${clinic.name} website (opens in a new tab)`}>
                 <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
               </a>
             )}
@@ -128,24 +130,24 @@ export function FeaturedClinicCard({ clinic }: ClinicCardProps) {
 }
 
 export default function ClinicCard({ clinic, distanceMi }: ClinicCardProps) {
-  const [saved, setSaved] = useState(false)
+  const booking = detectBookingPlatform(clinic)
+  const website = safeHttpUrl(clinic.website)
+  const profileUrl = `/clinics/${citySlug(clinic.city)}/${clinic.slug}`
+  const image = clinic.imageUrl || clinic.images?.[0] || clinic.logo
   return (
-    <div className={`bg-white rounded-2xl overflow-hidden flex flex-col transition-all hover:-translate-y-[3px] ${
+    <div className={`bg-white rounded-2xl overflow-hidden flex flex-col transition-shadow ${
       clinic.featured
         ? 'border border-champagne/35 shadow-featured hover:shadow-featured-hover'
         : 'border border-gray-200 shadow-sm hover:shadow-lg hover:border-sage/25'
     }`}>
-      <div className="h-[168px] relative overflow-hidden bg-gradient-to-br from-[#c9d8e8] to-[#e0eff7]">
-        {clinic.imageUrl || clinic.images?.[0]
-          ? <img src={clinic.imageUrl || clinic.images?.[0]} alt={clinic.name} className="w-full h-full object-cover" />
-          : clinic.logo
-            ? <img src={clinic.logo} alt={clinic.name} className="w-full h-full object-contain p-8" />
-            : <div className="w-full h-full flex items-center justify-center text-4xl">🏥</div>
-        }
-        {clinic.verified && <VerifiedBadge className="absolute top-2.5 left-2.5" />}
-        {clinic.featured && <span className="absolute top-2.5 right-2.5 bg-champagne text-white text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full">⭐ Featured</span>}
+      <div className="h-[168px] relative overflow-hidden bg-stone/10">
+        <a href={profileUrl} className="block h-full" aria-label={`View ${clinic.name} profile`}>
+          <ClinicImage src={image} alt={clinic.name} isLogo={image === clinic.logo} />
+        </a>
+        {(clinic.isVerified ?? clinic.verified) && <VerifiedBadge className="absolute top-2.5 left-2.5" />}
+        {clinic.featured && <span className="absolute top-2.5 right-2.5 bg-champagne/20 text-onyx text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full">Featured</span>}
         {clinic.isNew && !clinic.featured && <span className="absolute top-2.5 right-2.5 bg-onyx text-white text-[10px] font-bold uppercase tracking-wide px-2 py-0.5 rounded-full">New</span>}
-        {!clinic.verified && !clinic.featured && !clinic.isNew && (
+        {!clinic.isClaimed && !clinic.featured && !clinic.isNew && (
           <span className="absolute top-2.5 right-2.5 bg-white/90 border border-gray-200 text-gray-400 text-[10px] font-medium px-2 py-0.5 rounded-full">Unclaimed</span>
         )}
         {clinic.instagramHandle && (
@@ -156,22 +158,18 @@ export default function ClinicCard({ clinic, distanceMi }: ClinicCardProps) {
             onClick={e => e.stopPropagation()}
             className="absolute bottom-2.5 left-2.5 w-6 h-6 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-sm text-pink-500 hover:text-pink-600 transition-colors"
             title={`@${clinic.instagramHandle.replace('@', '')} on Instagram`}
+            aria-label={`View ${clinic.name} on Instagram (opens in a new tab)`}
           >
             <svg className="w-3 h-3" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
           </a>
         )}
-        <button onClick={() => setSaved(!saved)} className={`absolute bottom-2.5 right-2.5 w-8 h-8 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center shadow-sm transition-colors ${saved ? 'text-red-400' : 'text-gray-400 hover:text-red-400'}`}>
-          <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill={saved ? 'currentColor' : 'none'} stroke="currentColor" strokeWidth="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-        </button>
       </div>
       <div className="p-4 flex-1 flex flex-col gap-2.5">
         <div className="text-[15px] font-bold text-onyx tracking-tight leading-snug">
           <a href={`/clinics/${citySlug(clinic.city)}/${clinic.slug}`} className="hover:text-sage transition-colors">{clinic.name}</a>
         </div>
         <div className="flex items-center gap-1.5 flex-wrap">
-          <StarRating rating={clinic.googleRating} />
-          <span className="text-sm font-bold text-onyx">{clinic.googleRating}</span>
-          {clinic.googleReviewCount > 0 && <span className="text-xs text-gray-400">({clinic.googleReviewCount.toLocaleString()})</span>}
+          <ClinicRating clinic={clinic} />
           {distanceMi != null && (
             <span className="text-xs text-stone font-medium bg-stone/10 px-2 py-0.5 rounded-full">
               {distanceMi.toFixed(1)} mi
@@ -192,7 +190,7 @@ export default function ClinicCard({ clinic, distanceMi }: ClinicCardProps) {
         {/* Vibe tags + booking availability dot + creator badge */}
         {(() => {
           const vibeTags = getCardVibeTags(clinic)
-          const hasBooking = !!clinic.bookingUrl
+          const hasBooking = Boolean(booking)
           const isCreator = detectInfluencer(clinic)
           const tier = isCreator ? getInfluencerTier(clinic) : null
           return (
@@ -208,7 +206,7 @@ export default function ClinicCard({ clinic, distanceMi }: ClinicCardProps) {
               {isCreator && tier && <CreatorBadge tier={tier} variant="card" />}
               <span className={`flex items-center gap-1 text-[10px] font-medium ${hasBooking ? 'text-green-600' : 'text-gray-400'}`}>
                 <span className={`w-1.5 h-1.5 rounded-full ${hasBooking ? 'bg-green-500' : 'bg-gray-300'}`} />
-                {hasBooking ? 'Online Booking' : 'Contact Only'}
+                {booking?.label || 'Request Appointment'}
               </span>
             </div>
           )
@@ -217,20 +215,19 @@ export default function ClinicCard({ clinic, distanceMi }: ClinicCardProps) {
           <p className="text-xs text-gray-500 leading-relaxed line-clamp-2 flex-1">{clinic.description}</p>
         )}
       </div>
-      <div className="flex items-center gap-2 px-4 py-3 border-t border-gray-100">
-        <a href={`/clinics/${citySlug(clinic.city)}/${clinic.slug}`} className="flex-1 text-center text-sm font-semibold text-white bg-sage px-3.5 py-2 rounded hover:bg-onyx transition-colors">View Profile</a>
-        {clinic.bookingUrl
-          ? <a href={clinic.bookingUrl} target="_blank" rel="noopener noreferrer" className="text-sm font-semibold text-sage bg-sage/[0.08] border border-sage/20 px-3.5 py-2 rounded hover:bg-sage/[0.15] transition-colors">Reserve</a>
-          : <button className="text-sm font-semibold text-sage bg-sage/[0.08] border border-sage/20 px-3.5 py-2 rounded hover:bg-sage/[0.15] transition-colors">Reserve</button>
-        }
-        <ViewOnMapButton clinic={clinic} className="w-8 h-8 border border-stone/20 rounded hover:border-sage/40 hover:bg-sage/5" />
-        {clinic.website && (
-          <a href={clinic.website} target="_blank" rel="noopener noreferrer" className="w-8 h-8 flex items-center justify-center text-gray-400 hover:text-sage transition-colors" title="Visit website">
+      <div className="grid grid-cols-2 items-center gap-2 px-4 py-3 border-t border-gray-100">
+        <a href={profileUrl} className="text-center text-sm font-semibold text-white bg-sage px-3.5 py-2 rounded hover:bg-onyx transition-colors">View Profile</a>
+        <a href={booking?.url || `${profileUrl}#lead-form`} target={booking ? '_blank' : undefined} rel={booking ? 'noopener noreferrer' : undefined} aria-label={booking ? `Book with ${clinic.name} (opens in a new tab)` : `Request an appointment with ${clinic.name}`} className="text-center text-sm font-semibold text-sage bg-sage/[0.08] border border-sage/20 px-3.5 py-2 rounded hover:bg-sage/[0.15] transition-colors">{booking ? 'Book' : 'Enquire'}</a>
+        <div className="col-span-2 flex items-center gap-2">
+        <ViewOnMapButton clinic={clinic} className="w-10 h-10 border border-stone/20 rounded hover:border-sage/40 hover:bg-sage/5" />
+        {website && (
+          <a href={website} target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center text-stone hover:text-sage transition-colors" title="Visit website" aria-label={`Visit ${clinic.name} website (opens in a new tab)`}>
             <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
           </a>
         )}
         {clinic.priceTier && <span className="text-xs text-gray-500"><strong className="text-onyx font-semibold">{clinic.priceTier}</strong></span>}
         <span className="ml-auto"><GlowScoreCardBadge score={calculateGlowScore(clinic)} /></span>
+        </div>
       </div>
     </div>
   )

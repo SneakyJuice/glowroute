@@ -19,7 +19,7 @@
  *   partial  → score 35-54 (has phone + address but missing image AND website) — still visible, ranked lower via glow_score
  *   hidden   → score < 35  (missing phone or address — not useful to a searcher)
  * 
- * glow_score (0-5):
+ * Report-only completeness band (0-5; never written to glow_score):
  *   Full profile (score 80-100) → 5
  *   Strong (score 65-79)        → 4
  *   Good (score 50-64)          → 3
@@ -28,7 +28,7 @@
  *   Stub (score < 20)           → 0
  * 
  * Usage:
- *   node scripts/quality-visibility-score.js           # live run
+ *   node scripts/quality-visibility-score.js --apply   # explicit live run
  *   node scripts/quality-visibility-score.js --dry-run # preview only
  *   node scripts/quality-visibility-score.js --report  # stats only, no writes
  */
@@ -64,7 +64,8 @@ if (!SUPABASE_KEY) {
 
 const sb = createClient(SUPABASE_URL, SUPABASE_KEY);
 
-const DRY_RUN = process.argv.includes('--dry-run');
+// Reporting is the default. A live data change requires an explicit --apply.
+const DRY_RUN = !process.argv.includes('--apply') || process.argv.includes('--dry-run');
 const REPORT_ONLY = process.argv.includes('--report');
 const BATCH_SIZE = 500;
 
@@ -90,6 +91,9 @@ function calcGlowScore(qualityScore) {
 }
 
 function calcVisibility(clinic, qualityScore, currentVisibility) {
+  if (currentVisibility === 'needs_review') return 'needs_review';
+  if (clinic.is_verified || clinic.is_claimed) return currentVisibility;
+  if (clinic.needs_review) return currentVisibility;
   // Never touch manually managed states
   if (currentVisibility === 'removed') return 'removed';
   if (currentVisibility === 'hidden')  return 'hidden';
@@ -111,7 +115,8 @@ async function main() {
   while (true) {
     const { data, error } = await sb
       .from('clinics')
-      .select('id, name, hero_image_url, phone, address, website, description, visibility, status, glow_score, data_quality_score')
+      .select('id, name, hero_image_url, phone, address, website, description, visibility, status, data_quality_score, is_verified, is_claimed, needs_review')
+      .order('id', { ascending: true })
       .range(offset, offset + BATCH_SIZE - 1);
     if (error) throw error;
     if (!data || data.length === 0) break;
@@ -156,7 +161,6 @@ async function main() {
     // Queue update if anything changed
     const changed = (
       clinic.data_quality_score !== qualityScore ||
-      clinic.glow_score !== glowScore ||
       clinic.visibility !== newVisibility
     );
 
@@ -164,7 +168,6 @@ async function main() {
       updates.push({
         id: clinic.id,
         data_quality_score: qualityScore,
-        glow_score: glowScore,
         visibility: newVisibility,
         updated_at: new Date().toISOString()
       });
@@ -205,7 +208,7 @@ async function main() {
 
   if (DRY_RUN) {
     console.log(`\n🔍 Dry run — no writes. Sample of changes:`);
-    updates.slice(0, 10).forEach(u => console.log(`  ${u.id}: quality=${u.data_quality_score} glow=${u.glow_score} visibility=${u.visibility}`));
+    updates.slice(0, 10).forEach(u => console.log(`  ${u.id}: quality=${u.data_quality_score} visibility=${u.visibility}`));
     return;
   }
 
@@ -221,13 +224,13 @@ async function main() {
     // so we group by identical score combos to minimize round trips
     const groups = {};
     for (const u of batch) {
-      const key = `${u.data_quality_score}|${u.glow_score}|${u.visibility}`;
-      if (!groups[key]) groups[key] = { data_quality_score: u.data_quality_score, glow_score: u.glow_score, visibility: u.visibility, updated_at: u.updated_at, ids: [] };
+      const key = `${u.data_quality_score}|${u.visibility}`;
+      if (!groups[key]) groups[key] = { data_quality_score: u.data_quality_score, visibility: u.visibility, updated_at: u.updated_at, ids: [] };
       groups[key].ids.push(u.id);
     }
     for (const [, g] of Object.entries(groups)) {
       const { error } = await sb.from('clinics')
-        .update({ data_quality_score: g.data_quality_score, glow_score: g.glow_score, visibility: g.visibility, updated_at: g.updated_at })
+        .update({ data_quality_score: g.data_quality_score, visibility: g.visibility, updated_at: g.updated_at })
         .in('id', g.ids);
       if (error) {
         console.error(`  ❌ Update failed:`, error.message);
