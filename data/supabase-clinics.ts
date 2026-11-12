@@ -298,7 +298,8 @@ export const fetchClinicsByCity = cache(async (citySlug: string): Promise<Clinic
  * Featured clinic: first clinic with featured flag, or first clinic.
  */
 /**
- * Single-row slug lookup. Uses the directory columns, not select=*.
+ * Resolve a current slug or a historical alias to its visible canonical clinic.
+ * Uses the directory columns, not select=*.
  * Returns null only when the slug is empty or no row exists.
  * A database error throws, and the response is not stored, so ISR cannot
  * keep that outage as a 404.
@@ -324,8 +325,37 @@ export const fetchClinicByExactSlug = cache(async (slug: string): Promise<Clinic
     unstable_noStore()
     throw new Error(`[supabase-clinics] Error fetching clinic: ${error.message}`)
   }
-  if (!data || data.length === 0 || hasAddressStateConflict(data[0] as unknown as { address?: string; state?: string })) return null
-  return clean(mapSupabaseRow(data[0]))
+  if (data?.[0] && !hasAddressStateConflict(data[0] as unknown as { address?: string; state?: string })) {
+    return clean(mapSupabaseRow(data[0]))
+  }
+
+  // Suppressed duplicates keep their old URLs. Returning the canonical record
+  // lets the profile route issue its existing permanent redirect to that record.
+  const { data: alias, error: aliasError } = await supabase
+    .from('clinic_aliases')
+    .select('canonical_clinic_id')
+    .eq('alias_slug', slug)
+    .maybeSingle()
+
+  if (aliasError) {
+    unstable_noStore()
+    throw new Error(`[supabase-clinics] Error resolving clinic alias: ${aliasError.message}`)
+  }
+  if (!alias) return null
+
+  const { data: canonical, error: canonicalError } = await supabase
+    .from('clinics')
+    .select(DIRECTORY_SELECT)
+    .eq('id', alias.canonical_clinic_id)
+    .eq('visibility', 'visible')
+    .maybeSingle()
+
+  if (canonicalError) {
+    unstable_noStore()
+    throw new Error(`[supabase-clinics] Error fetching canonical clinic: ${canonicalError.message}`)
+  }
+  if (!canonical || hasAddressStateConflict(canonical as unknown as { address?: string; state?: string })) return null
+  return clean(mapSupabaseRow(canonical))
 })
 
 /** Featured clinic from the cached visible directory, else the first row in directory order. */
