@@ -19,19 +19,16 @@ import {
   type DirectoryCursor,
 } from '@/lib/clinic-directory'
 
-/** Returns true if a description contains garbled/binary/non-Latin encoded text */
+/** Reject damaged text without treating legitimate non-Latin writing as corruption. */
 function isGarbledDescription(desc: string): boolean {
   if (!desc || desc.length < 5) return false
-  // Count high-unicode chars (>1000 codepoint = likely foreign script / corruption)
-  let highUnicode = 0
   let hasControl = false
   for (let i = 0; i < desc.length; i++) {
     const code = desc.charCodeAt(i)
-    if (code > 1000) highUnicode++
     if (code < 32 && code !== 9 && code !== 10 && code !== 13) hasControl = true
   }
   const hasReplacement = desc.includes('\ufffd')
-  return highUnicode > 3 || hasReplacement || hasControl
+  return hasReplacement || hasControl
 }
 
 /** Generate a clean fallback description from structured data */
@@ -43,9 +40,9 @@ function generateDescription(clinic: Clinic): string {
     .filter((t, i, arr) => arr.indexOf(t) === i)
     .slice(0, 4)
 
-  const base = `${clinic.name} is a med spa and aesthetic wellness clinic in ${clinic.city}${clinic.state ? ", " + clinic.state : ""}.`
+  const base = `${clinic.name} is listed in the GlowRoute directory for ${clinic.city}${clinic.state ? ", " + clinic.state : ""}.`
   const services = treatments.length
-    ? ` Services include ${treatments.join(', ')}.`
+    ? ` Listed services: ${treatments.join(', ')}.`
     : ''
   const booking = clinic.bookingUrl ? ' Online booking available.' : ''
   return base + services + booking
@@ -196,8 +193,8 @@ async function fetchDirectoryPage(cursor: DirectoryCursor | null): Promise<Direc
  */
 const loadDirectoryVersion = unstable_cache(
   async () => ({ version: String(Date.now()) }),
-  // Tag invalidation publishes reviewed data repairs without waiting for the hourly snapshot.
-  ['glowroute-visible-clinics-version-v4'],
+  // Refresh mapped descriptions after the source-neutral fallback repair.
+  ['glowroute-visible-clinics-version-v6'],
   { revalidate: DIRECTORY_REVALIDATE_SECONDS, tags: ['glowroute-directory'] },
 )
 
@@ -208,7 +205,7 @@ const loadVersionedDirectoryPage = unstable_cache(
     }
     return fetchDirectoryPage(decodeDirectoryCursor(cursorKey))
   },
-  ['glowroute-visible-clinics-page-v4'],
+  ['glowroute-visible-clinics-page-v6'],
   { revalidate: DIRECTORY_PAGE_REVALIDATE_SECONDS, tags: ['glowroute-directory'] },
 )
 

@@ -8,6 +8,12 @@ function clinic(overrides: Partial<Clinic> = {}): Clinic {
 }
 
 describe('clinic service tags', () => {
+  it('describes service signals without claiming medical certification or specialist status', () => {
+    const tags = getVibeTags(clinic({treatments:['peptide-therapy','laser-hair-removal']}))
+    assert.ok(tags.includes('Peptide therapy'))
+    assert.ok(tags.includes('Laser services'))
+    assert.ok(tags.every(tag => !/grade|specialist/i.test(tag)))
+  })
   it('does not classify female or women’s descriptions as men-focused', () => {
     for (const description of ['Female-focused wellness', "Women's health and skincare", 'Women’s aesthetic treatment', 'Treatments for women']) {
       assert.equal(getVibeTags(clinic({ description })).includes('Men-Focused'), false, description)
@@ -21,7 +27,7 @@ describe('clinic service tags', () => {
   })
 
   it('recognizes hyphenated canonical service labels', () => {
-    assert.ok(getVibeTags(clinic({ treatments: ['iv-therapy'] })).includes('Medical-Grade'))
+    assert.ok(getVibeTags(clinic({ treatments: ['iv-therapy'] })).includes('Medical services'))
     assert.ok(getVibeTags(clinic({ treatments: ['weight-loss-ozempic'] })).includes('Weight Loss'))
   })
 })

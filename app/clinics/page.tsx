@@ -2,7 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { SITE_URL } from '@/lib/config'
 import { fetchAllClinicsFromSupabase } from '@/data/supabase-clinics'
-import { DirectoryQueryError, parseDirectoryQuery, searchDirectory, serializeDirectoryQuery } from '@/lib/directory-search'
+import { DirectoryQueryError, parseDirectoryPageQuery, searchDirectory, serializeDirectoryQuery } from '@/lib/directory-search'
+import { aggregateLiveCityHubs, citySlugToDisplay } from '@/lib/seo-page-overrides'
 import ClinicsClient from './ClinicsClient'
 
 export const dynamic = 'force-dynamic'
@@ -21,10 +22,26 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
 export default async function ClinicsPage({ searchParams }: PageProps) {
   const params = await searchParams
   try {
-    const query = parseDirectoryQuery(params)
+    const query = parseDirectoryPageQuery(params)
     const pool = await fetchAllClinicsFromSupabase()
     const initialPage = searchDirectory(pool, query)
-    return <ClinicsClient key={serializeDirectoryQuery(initialPage.query).toString()} initialPage={initialPage} totalCount={pool.length} />
+    const routable = pool.filter(clinic => clinic.city && clinic.slug)
+    const cityCounts = new Map<string, number>()
+    for (const clinic of routable) {
+      const key = clinic.city.toLowerCase().trim().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '').replace(/-+/g, '-')
+      cityCounts.set(key, (cityCounts.get(key) ?? 0) + 1)
+    }
+    const hubs = aggregateLiveCityHubs(routable)
+      .sort((a, b) => (cityCounts.get(b.slug) ?? 0) - (cityCounts.get(a.slug) ?? 0) || a.slug.localeCompare(b.slug))
+      .slice(0, 12)
+    const browse = <section aria-labelledby="browse-city-heading" className="mb-8 border-b border-onyx/10 pb-8">
+      <h2 id="browse-city-heading" className="font-serif text-2xl text-onyx mb-3">Browse clinics by city</h2>
+      <p className="max-w-3xl text-sm leading-relaxed text-stone mb-5">Start with a local directory, then compare provider profiles, listed treatments, and contact details. Listings include unclaimed and unverified records; confirm services and credentials with the clinic before booking.</p>
+      <nav aria-label="City directories" className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-x-5 gap-y-3">
+        {hubs.map(hub => <Link key={hub.slug} href={`/clinics/${hub.slug}`} className="text-sm text-sage underline underline-offset-4 rounded focus-visible:outline focus-visible:outline-2 focus-visible:outline-sage">{citySlugToDisplay(hub.slug)}{hub.state ? `, ${hub.state}` : ''}</Link>)}
+      </nav>
+    </section>
+    return <ClinicsClient key={serializeDirectoryQuery(initialPage.query).toString()} initialPage={initialPage} totalCount={routable.length} directoryMode browse={browse} />
   } catch (error) {
     if (!(error instanceof DirectoryQueryError)) throw error
     return <main className="max-w-3xl mx-auto px-6 py-16">

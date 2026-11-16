@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
       // Google needs the Next.js scripts, styles and image optimizer to render pages.
       disallow: ['/api/'],
     },
-    sitemap: `${SITE_URL}/sitemap.xml`,
+    sitemap: [`${SITE_URL}/sitemap.xml`, `${SITE_URL}/sitemap-priority.xml`],
   }
 }

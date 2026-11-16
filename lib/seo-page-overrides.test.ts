@@ -29,7 +29,7 @@ describe('Miami city hub SEO', () => {
   it('locks Miami title, description, keywords, and view-all', () => {
     const miami = getCitySeoOverride('miami')
     assert.ok(miami)
-    assert.equal(miami.title, 'Best MedSpas in Miami, FL — GlowRoute')
+    assert.equal(miami.title, 'Medical Spas in Miami, FL — GlowRoute')
     assert.equal(
       miami.description,
       'Find medical spas and aesthetic clinics in Miami, FL. Compare Botox, HydraFacial, laser, and more on GlowRoute.',
@@ -71,7 +71,7 @@ describe('Miami city hub SEO', () => {
     const miamiBeach = getCitySeoOverride('miami-beach', { stateAbbr: 'FL' })
     assert.ok(tampa)
     assert.ok(miamiBeach)
-    assert.equal(tampa.title, 'Best MedSpas in Tampa, FL — GlowRoute')
+    assert.equal(tampa.title, 'Medical Spas in Tampa, FL — GlowRoute')
     assert.equal(miamiBeach.canonicalPath, '/clinics/miami-beach')
     assert.notEqual(tampa.nearbyHubs, MIAMI_NEARBY_HUBS)
   })
@@ -137,7 +137,7 @@ describe('City hub SEO template', () => {
 
     for (const sample of samples) {
       const seo = buildCityHubSeo(sample.slug, { stateAbbr: sample.state })
-      assert.equal(seo.title, `Best MedSpas in ${sample.city}, ${sample.state} — GlowRoute`)
+      assert.equal(seo.title, `Medical Spas in ${sample.city}, ${sample.state} — GlowRoute`)
       assert.equal(
         seo.description,
         `Find medical spas and aesthetic clinics in ${sample.city}, ${sample.state}. Compare Botox, HydraFacial, laser, and more on GlowRoute.`,
@@ -171,7 +171,7 @@ describe('City hub SEO template', () => {
 
   it('omits state from title and description when state is unknown', () => {
     const seo = buildCityHubSeo('denver')
-    assert.equal(seo.title, 'Best MedSpas in Denver — GlowRoute')
+    assert.equal(seo.title, 'Medical Spas in Denver — GlowRoute')
     assert.equal(
       seo.description,
       'Find medical spas and aesthetic clinics in Denver. Compare Botox, HydraFacial, laser, and more on GlowRoute.',

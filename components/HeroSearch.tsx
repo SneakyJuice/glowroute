@@ -3,15 +3,18 @@ import { useId, useState } from 'react'
 import { trackEvent } from '@/lib/analytics'
 
 interface HeroSearchProps {
+  heading?: string
+  description?: string
   clinicCount?: number
   defaultCity?: string
+  cityPlaceholder?: string
   defaultTreatment?: string
   defaultDistance?: string
   onSearch?: (treatment: string, city: string, distance: string) => void
   onNearMe?: (lat: number, lng: number) => void
 }
 
-export default function HeroSearch({ clinicCount, defaultCity = 'Tampa, FL', defaultTreatment = '', defaultDistance = '25', onSearch, onNearMe }: HeroSearchProps) {
+export default function HeroSearch({ heading, description, clinicCount, defaultCity = 'Tampa, FL', cityPlaceholder = 'Tampa, FL', defaultTreatment = '', defaultDistance = '25', onSearch, onNearMe }: HeroSearchProps) {
   const searchId = useId()
   const [treatment, setTreatment] = useState(defaultTreatment)
   const [city, setCity] = useState(defaultCity)
@@ -53,11 +56,10 @@ export default function HeroSearch({ clinicCount, defaultCity = 'Tampa, FL', def
           {typeof clinicCount === 'number' ? `${clinicCount.toLocaleString('en-US')} clinic listings` : 'Explore clinic listings'}
         </div>
         <h1 className="font-serif text-[clamp(28px,5vw,48px)] font-light text-white leading-[1.18] tracking-tight mb-3.5">
-          Discover your{' '}
-          <em className="font-normal text-champagne italic">aesthetic wellness.</em>
+          {heading ?? <>Discover your{' '}<em className="font-normal text-champagne italic">aesthetic wellness.</em></>}
         </h1>
         <p className="text-base text-white/65 max-w-[520px] mx-auto mb-8 leading-relaxed">
-          Explore medspas and aesthetic clinics. Compare listed services and find your next provider.
+          {description ?? 'Explore medspas and aesthetic clinics. Compare listed services and find your next provider.'}
         </p>
         <form action="/clinics" method="get" role="search" aria-label="Find clinics" onSubmit={event => { if (onSearch) { event.preventDefault(); handleSearch() } }} className="bg-white rounded-2xl shadow-lg flex flex-col md:flex-row overflow-hidden">
           <div className="flex-1 min-w-0 flex items-center gap-2.5 px-4 border-b border-gray-200 md:border-b-0 md:border-r focus-within:ring-2 focus-within:ring-inset focus-within:ring-sage">
@@ -82,7 +84,7 @@ export default function HeroSearch({ clinicCount, defaultCity = 'Tampa, FL', def
               value={city}
               onChange={e => setCity(e.target.value)}
               className="flex-1 w-full border-none text-base text-onyx bg-transparent py-[18px] placeholder:text-gray-500 min-w-0"
-              placeholder="Tampa, FL"
+              placeholder={cityPlaceholder}
             />
             <datalist id={`${searchId}-cities`}>
               <option value="Tampa, FL" />

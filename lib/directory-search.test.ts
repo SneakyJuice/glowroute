@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict'
 import { describe, it } from 'node:test'
 import { readFileSync } from 'node:fs'
-import { DirectoryQueryError, parseDirectoryCity, parseDirectoryQuery, searchDirectory, serializeDirectoryQuery } from './directory-search.ts'
+import { DirectoryQueryError, parseDirectoryCity, parseDirectoryQuery, parseDirectoryPageQuery, searchDirectory, serializeDirectoryQuery } from './directory-search.ts'
 import type { Clinic } from '../types/clinic.ts'
 
 function clinic(id: string, overrides: Partial<Clinic> = {}): Clinic {
@@ -12,6 +12,18 @@ function clinic(id: string, overrides: Partial<Clinic> = {}): Clinic {
 const query = (value = '') => parseDirectoryQuery(new URLSearchParams(value))
 
 describe('directory query validation and city parsing', () => {
+  it('opens the directory nationwide while preserving local home/API defaults and explicit searches', () => {
+    const national = parseDirectoryPageQuery({})
+    assert.equal(national.city, 'all')
+    assert.equal(national.distance, null)
+    assert.equal(parseDirectoryQuery({}).city, 'Miami')
+    const pool = [clinic('miami'), clinic('tampa', {city:'Tampa',lat:27.95,lng:-82.46})]
+    assert.equal(searchDirectory(pool, national).total, 2)
+    const local = parseDirectoryPageQuery({city:'Tampa'})
+    assert.equal(searchDirectory(pool, local).total, 1)
+    assert.equal(searchDirectory(pool, local).data[0].city, 'Tampa')
+    assert.deepEqual(parseDirectoryPageQuery(serializeDirectoryQuery(national)), national)
+  })
   it('handles real city/state suffixes without stripping letters from city names', () => {
     assert.deepEqual(parseDirectoryCity('Miami, FL'), {city: 'Miami', state: 'FL'})
     assert.deepEqual(parseDirectoryCity('miami, fl'), {city: 'miami', state: 'FL'})

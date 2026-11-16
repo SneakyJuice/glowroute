@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit --incremental false",
-    "test": "node --experimental-strip-types --test lib/seo-page-overrides.test.ts lib/clinic-directory.test.ts lib/rls-policies.test.ts lib/directory-search.test.ts lib/listing-integrity.test.ts lib/vibes.test.ts scripts/source-integrity.test.cjs"
+    "test": "node --experimental-strip-types --test lib/seo-page-overrides.test.ts lib/clinic-directory.test.ts lib/rls-policies.test.ts lib/directory-search.test.ts lib/listing-integrity.test.ts lib/claim-page.test.ts lib/vibes.test.ts scripts/source-integrity.test.cjs"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",

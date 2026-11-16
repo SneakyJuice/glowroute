@@ -34,7 +34,7 @@ export const MIAMI_NEARBY_HUBS = [
 export const MIAMI_VIEW_ALL_HREF = '/clinics?city=Miami'
 
 export const MIAMI_CITY_METADATA = {
-  title: 'Best MedSpas in Miami, FL — GlowRoute',
+  title: 'Medical Spas in Miami, FL — GlowRoute',
   description:
     'Find medical spas and aesthetic clinics in Miami, FL. Compare Botox, HydraFacial, laser, and more on GlowRoute.',
   keywords: [
@@ -292,7 +292,7 @@ export function buildCityHubSeo(city: string, context: CityHubSeoContext = {}): 
   const nearbyHubs = city === 'miami' ? MIAMI_NEARBY_HUBS : (context.nearbyHubs ?? [])
 
   return {
-    title: `Best MedSpas in ${cityState} — GlowRoute`,
+    title: `Medical Spas in ${cityState} — GlowRoute`,
     description: `Find medical spas and aesthetic clinics in ${cityState}. Compare Botox, HydraFacial, laser, and more on GlowRoute.`,
     keywords: cityHubKeywords(displayCity),
     viewAllHref: cityHubViewAllHref(displayCity),
