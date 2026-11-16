@@ -90,6 +90,16 @@ export function parseDirectoryQuery(input: Params): DirectoryQuery {
   }
 }
 
+/** The national directory has its own empty-URL intent; home/API keep their local defaults. */
+export function parseDirectoryPageQuery(input: Params): DirectoryQuery {
+  const params = directoryParams(input)
+  if (params.size === 0) {
+    params.set('city', 'all')
+    params.set('distance', 'any')
+  }
+  return parseDirectoryQuery(params)
+}
+
 export function serializeDirectoryQuery(query: DirectoryQuery): URLSearchParams {
   const p = new URLSearchParams({ city: query.city, distance: query.distance === null ? 'any' : String(query.distance), page: String(query.page) })
   if (query.q) p.set('q', query.q)

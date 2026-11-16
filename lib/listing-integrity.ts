@@ -28,9 +28,26 @@ export function listingDescription(value?: string | null): string | undefined {
     .replace(/\[\s*\]\([^)]*\)/g, '')
     .replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F\uFFFD]/g, '')
     .replace(/\s+/g, ' ').trim()
+  // Consent, browser and anti-copy chrome is not a provider biography.
+  if (/^(?:by using this (?:web)?site.*cookies|this (?:web)?site (?:has limited support for your browser|uses cookies)|we use cookies|you cannot copy content|your ip (?:address )?is being recorded)/i.test(text)) return undefined
   return text ? text.slice(0, 1600) : undefined
 }
 export function clinicPath(city: string, slug: string): string {
   const normalized = city.toLowerCase().trim().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '').replace(/-+/g, '-')
   return `/clinics/${normalized}/${slug.replace(/^\/+/, '')}`
+}
+
+/** Avoid repeating the same named location in a short city preview; keep all source profiles. */
+export function distinctClinicLocations<T extends { slug: string; name: string; address?: string }>(clinics: readonly T[]): T[] {
+  const seen = new Set<string>()
+  const punctuation = new RegExp('[^\\p{L}\\p{N}]', 'gu')
+  const normalize = (value: string) => value.normalize('NFKC').toLowerCase().replace(punctuation, '')
+  return clinics.filter(clinic => {
+    const address = normalize(clinic.address ?? '')
+    if (!address) return true
+    const key = normalize(clinic.name) + '|' + address
+    if (seen.has(key)) return false
+    seen.add(key)
+    return true
+  })
 }

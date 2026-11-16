@@ -1,6 +1,6 @@
 import type { Clinic } from '@/types/clinic'
 
-export type VibeTag = 'Medical-Grade' | 'Luxury' | 'Men-Focused' | 'Budget-Friendly' | 'Peptide Clinic' | 'Weight Loss' | 'Laser Specialist'
+export type VibeTag = 'Medical services' | 'Luxury' | 'Men-Focused' | 'Budget-Friendly' | 'Peptide therapy' | 'Weight Loss' | 'Laser services'
 
 const MEDICAL_KEYWORDS = ['peptide', 'trt', 'testosterone', 'hormone', 'bpc-157', 'sermorelin', 'semaglutide', 'tirzepatide', 'glp-1', 'iv therapy', 'regenerative', 'medical']
 const MENS_KEYWORDS = ["men's health", "men's", 'testosterone', 'trt', 'male', 'prostate', 'andropause', 'biodesign']
@@ -25,14 +25,14 @@ export function getVibeTags(clinic: Clinic): VibeTag[] {
     clinic.description ?? '',
   ].join(' ')
 
-  // Medical-Grade — peptide/hormone/IV signals
+  // Medical services — peptide/hormone/IV signals
   if ((clinic as any).peptide || matchesAny(blob, MEDICAL_KEYWORDS)) {
-    tags.push('Medical-Grade')
+    tags.push('Medical services')
   }
 
-  // Peptide Clinic — specific peptide keywords
+  // Peptide therapy — specific peptide keywords
   if (matchesAny(blob, PEPTIDE_KEYWORDS)) {
-    tags.push('Peptide Clinic')
+    tags.push('Peptide therapy')
   }
 
   // Weight Loss specialist
@@ -40,9 +40,9 @@ export function getVibeTags(clinic: Clinic): VibeTag[] {
     tags.push('Weight Loss')
   }
 
-  // Laser Specialist
+  // Laser services
   if (matchesAny(blob, LASER_KEYWORDS)) {
-    tags.push('Laser Specialist')
+    tags.push('Laser services')
   }
 
   // Men-Focused
@@ -59,7 +59,7 @@ export function getVibeTags(clinic: Clinic): VibeTag[] {
   if (
     (clinic.priceTier === '$' || clinic.priceTier === '$$') &&
     !tags.includes('Luxury') &&
-    !tags.includes('Medical-Grade')
+    !tags.includes('Medical services')
   ) {
     tags.push('Budget-Friendly')
   }
@@ -126,11 +126,11 @@ export function safeHttpUrl(value?: string): string | null {
 
 // ── Vibe tag styling ──────────────────────────────────────────────────────────
 export const VIBE_STYLES: Record<VibeTag, string> = {
-  'Medical-Grade':   'bg-blue-50 border-blue-200 text-blue-700',
+  'Medical services':   'bg-blue-50 border-blue-200 text-blue-700',
   'Luxury':          'bg-amber-50 border-amber-200 text-amber-700',
   'Men-Focused':     'bg-slate-50 border-slate-300 text-slate-700',
   'Budget-Friendly': 'bg-green-50 border-green-200 text-green-700',
-  'Peptide Clinic':  'bg-purple-50 border-purple-200 text-purple-700',
+  'Peptide therapy':  'bg-purple-50 border-purple-200 text-purple-700',
   'Weight Loss':     'bg-teal/5 border-teal/20 text-teal',
-  'Laser Specialist':'bg-rose-50 border-rose-200 text-rose-700',
+  'Laser services':'bg-rose-50 border-rose-200 text-rose-700',
 }
