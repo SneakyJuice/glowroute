@@ -46,7 +46,7 @@ describe('directory column projection', () => {
     assert.match(source, /DIRECTORY_SELECT/)
     assert.match(source, /directoryKeysetFilter/)
     assert.match(source, /unstable_cache/)
-    assert.match(source, /glowroute-visible-clinics-version-v4/)
+    assert.match(source, /glowroute-visible-clinics-version-v6/)
     assert.match(source, /tags: \['glowroute-directory'\]/)
     assert.match(source, /loadVersionedDirectoryPage\(version/)
     assert.match(source, /DIRECTORY_MEMO_MAX_CLINICS/)

@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import type { ReactNode } from 'react'
 import Navbar from '@/components/Navbar'
 import HeroSearch from '@/components/HeroSearch'
 import FilterSidebar from '@/components/FilterSidebar'
@@ -11,13 +12,13 @@ import BottomCTA from '@/components/BottomCTA'
 import QuizCTA from '@/components/QuizCTA'
 import Footer from '@/components/Footer'
 import type { FilterState } from '@/types/clinic'
-import { DIRECTORY_DEFAULT_FILTERS, parseDirectoryQuery, serializeDirectoryQuery } from '@/lib/directory-search'
+import { DIRECTORY_DEFAULT_FILTERS, parseDirectoryQuery, parseDirectoryPageQuery, serializeDirectoryQuery } from '@/lib/directory-search'
 import type { DirectoryPage, DirectoryQuery } from '@/lib/directory-search'
 
-export interface ClinicsClientProps { initialPage: DirectoryPage; totalCount: number }
+export interface ClinicsClientProps { initialPage: DirectoryPage; totalCount: number; directoryMode?: boolean; browse?: ReactNode }
 
 /** SSR and hydration use the same first page, with no hidden duplicate tree. */
-export default function ClinicsClient({ initialPage, totalCount }: ClinicsClientProps) {
+export default function ClinicsClient({ initialPage, totalCount, directoryMode = false, browse }: ClinicsClientProps) {
   const [result, setResult] = useState(initialPage)
   const [query, setQuery] = useState(initialPage.query)
   const [view, setView] = useState<'grid' | 'list'>('grid')
@@ -31,12 +32,12 @@ export default function ClinicsClient({ initialPage, totalCount }: ClinicsClient
 
   useEffect(() => {
     const restore = () => {
-      try { setQuery(parseDirectoryQuery(new URLSearchParams(window.location.search))) }
+      try { setQuery((directoryMode ? parseDirectoryPageQuery : parseDirectoryQuery)(new URLSearchParams(window.location.search))) }
       catch { setError('This search link contains invalid filters. Clear the search to continue.') }
     }
     window.addEventListener('popstate', restore)
     return () => window.removeEventListener('popstate', restore)
-  }, [])
+  }, [directoryMode])
 
   useEffect(() => {
     if (queryKey === initialKey.current && retry === 0) return
@@ -80,11 +81,14 @@ export default function ClinicsClient({ initialPage, totalCount }: ClinicsClient
   return (
     <div className="min-h-screen bg-ivory font-sans">
       <Navbar />
-      <HeroSearch key={[query.city, query.q, query.distance].join(':')} clinicCount={totalCount} defaultCity={query.city} defaultTreatment={query.q} defaultDistance={query.distance === null ? 'any' : String(query.distance)}
-        onSearch={(q, city, distance) => changeQuery({ ...query, q, city, distance: distance === 'any' ? null : Number(distance), lat: undefined, lng: undefined, page: 1 })}
+      <HeroSearch key={[query.city, query.q, query.distance].join(':')} clinicCount={totalCount} defaultCity={directoryMode && query.city === 'all' ? '' : query.city} cityPlaceholder={directoryMode ? 'All cities' : undefined} defaultTreatment={query.q} defaultDistance={query.distance === null ? 'any' : String(query.distance)}
+        heading={directoryMode ? 'Find med spas by city and treatment' : undefined}
+        description={directoryMode ? 'Browse aesthetic clinic listings across the United States. Choose a city, compare listed services, and confirm details directly with each provider.' : undefined}
+        onSearch={(q, city, distance) => changeQuery({ ...query, q, city: directoryMode && !city.trim() ? 'all' : city, distance: distance === 'any' ? null : Number(distance), lat: undefined, lng: undefined, page: 1 })}
         onNearMe={(lat, lng) => changeQuery({ ...query, city: '', lat, lng, sort: 'Nearest First', page: 1 })} />
-      <QuizCTA variant="banner" />
+      {!directoryMode && <QuizCTA variant="banner" />}
       <main className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+        {query.city === 'all' && query.page === 1 && !filtersActive && browse}
         <div className="flex md:hidden justify-between items-center mb-4">
           <span className="text-sm text-stone">{loading ? 'Searching…' : result.total.toLocaleString() + ' providers'}</span>
           <button type="button" aria-expanded={mobileFiltersOpen} aria-controls="mobile-directory-filters" onClick={() => setMobileFiltersOpen(v => !v)} className="text-sm font-semibold border border-gray-300 rounded-full px-4 py-2 bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-sage">Filters{filtersActive ? ' · Active' : ''}</button>
@@ -94,7 +98,7 @@ export default function ClinicsClient({ initialPage, totalCount }: ClinicsClient
           <div className="hidden md:block w-64 flex-shrink-0"><FilterSidebar filters={query.filters} onChange={changeFilters} onClear={clearSearch} /></div>
           <div className="flex-1 min-w-0">
             <div ref={resultHeading} tabIndex={-1} className="scroll-mt-24 outline-none" aria-busy={loading}>
-              <MapStrip city={result.cityLabel} radius={result.distanceApplied ? result.query.distance : null} locationNote={!result.distanceApplied && result.query.distance !== null ? 'Showing city matches; distance data unavailable' : undefined} />
+              {result.cityLabel !== 'All cities' && <MapStrip city={result.cityLabel} radius={result.distanceApplied ? result.query.distance : null} locationNote={!result.distanceApplied && result.query.distance !== null ? 'Showing city matches; distance data unavailable' : undefined} />}
               <ResultsHeader count={result.total} city={result.cityLabel} view={view} sort={query.sort} onViewChange={setView} onSortChange={sort => changeQuery({ ...query, sort, page: 1 })} />
             </div>
             {filtersActive && <div className="flex items-center justify-between gap-3 mb-4 text-sm text-stone"><span>Filters applied{query.q ? ': ' + query.q : ''}</span><button type="button" className="underline text-sage" onClick={clearSearch}>Clear search filters</button></div>}

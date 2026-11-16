@@ -11,6 +11,7 @@ import ClinicCard from '@/components/ClinicCard'
 import { fetchClinicsByCity, fetchLiveCityHubs } from '@/data/supabase-clinics'
 import { TOP_CITY_PARAMS } from '@/data/seo-priority-params'
 import { SITE_URL } from '@/lib/config'
+import { distinctClinicLocations } from '@/lib/listing-integrity'
 import {
   buildCityHubSeo,
   cityHubCentroid,
@@ -75,8 +76,8 @@ export default async function CityPage({ params }: Props) {
   const stateAbbr = (sortedCityClinics.find(c => c.state)?.state || '').toUpperCase()
   const region = stateAbbr || 'US'
   const cityState = stateAbbr ? `${displayCity}, ${stateAbbr}` : displayCity
-  const topClinics = sortedCityClinics.slice(0, 6)
-  const avgRating = (sortedCityClinics.reduce((s, c) => s + c.googleRating, 0) / count).toFixed(1)
+  const previewClinics = distinctClinicLocations(sortedCityClinics)
+  const topClinics = previewClinics.slice(0, 6)
   const seo = buildCityHubSeo(city, {
     stateAbbr,
     nearbyHubs: selectNearbyCityHubs(city, liveHubs, {
@@ -89,11 +90,11 @@ export default async function CityPage({ params }: Props) {
   const itemListSchema = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: `Best MedSpas in ${cityState}`,
-    description: `Top-rated medical spas and aesthetic clinics in ${cityState}`,
+    name: `Medical Spas in ${cityState}`,
+    description: `Medical spa and aesthetic clinic listings in ${cityState}`,
     url: `${SITE_URL}/clinics/${city}`,
-    numberOfItems: Math.min(5, sortedCityClinics.length),
-    itemListElement: sortedCityClinics.slice(0, 5).map((c, i) => ({
+    numberOfItems: Math.min(5, previewClinics.length),
+    itemListElement: previewClinics.slice(0, 5).map((c, i) => ({
       '@type': 'ListItem',
       position: i + 1,
       name: c.name,
@@ -176,10 +177,10 @@ export default async function CityPage({ params }: Props) {
         </div>
 
         {/* Show more if more clinics exist */}
-        {sortedCityClinics.length > 6 && (
+        {previewClinics.length > 6 && (
           <div className="text-center py-6 border-t border-onyx/8">
             <p className="text-stone text-sm mb-3">
-              Showing 6 of {sortedCityClinics.length} clinics in {displayCity}
+              Showing {topClinics.length} clinic locations from {count} listings in {displayCity}
             </p>
             <Link
               href={seo.viewAllHref}

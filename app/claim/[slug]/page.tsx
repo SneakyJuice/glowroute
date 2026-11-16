@@ -10,9 +10,18 @@ import { SITE_URL } from '@/lib/config'
 import { clinicSlugLookupCandidates, getClaimSeoOverride } from '@/lib/seo-page-overrides'
 import { PLANS } from '@/lib/stripe'
 import ClaimCheckoutButton from './ClaimCheckoutButton'
-import { trackClaimStarted } from '@/components/PostHogClinicTracker'
 
 interface Props { params: Promise<{ slug: string }> }
+
+const CLAIM_PAGE_ROBOTS: Metadata['robots'] = {
+  index: false,
+  follow: true,
+  googleBot: { index: false, follow: true },
+}
+
+function claimLocation(clinic: { city: string; state?: string }): string {
+  return [clinic.city, clinic.state].map(part => part?.trim()).filter(Boolean).join(', ')
+}
 
 async function fetchClaimClinic(slug: string) {
   for (const candidate of clinicSlugLookupCandidates(slug)) {
@@ -26,19 +35,21 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const clinic = await fetchClaimClinic(slug)
   const claimOverride = getClaimSeoOverride(slug)
+  const location = clinic ? claimLocation(clinic) : ''
   const title = claimOverride?.title ?? (clinic ? `Claim ${clinic.name} — GlowRoute` : 'Claim Your Listing — GlowRoute')
   const description = claimOverride?.description ?? (
     clinic
-      ? `Take control of your GlowRoute listing for ${clinic.name} in ${clinic.city}, FL. Manage your profile and attract more patients.`
+      ? `Take control of your GlowRoute listing for ${clinic.name}${location ? ` in ${location}` : ''}. Manage your profile and attract more patients.`
       : undefined
   )
   const url = `${SITE_URL}${claimOverride?.canonicalPath ?? `/claim/${slug}`}`
 
-  if (!clinic && !claimOverride) return { title }
+  if (!clinic && !claimOverride) return { title, robots: CLAIM_PAGE_ROBOTS }
 
   return {
     title,
     description,
+    robots: CLAIM_PAGE_ROBOTS,
     keywords: claimOverride ? [...claimOverride.keywords] : undefined,
     alternates: { canonical: url },
     openGraph: {
@@ -62,7 +73,7 @@ export default async function ClaimSlugPage({ params }: Props) {
   if (!clinic) notFound()
   const claimOverride = getClaimSeoOverride(slug)
 
-  const displayCity = `${clinic.city}, FL`
+  const displayCity = claimLocation(clinic)
   const rating = clinic.googleRating ?? 0
   const reviewCount = clinic.googleReviewCount ?? 0
 
