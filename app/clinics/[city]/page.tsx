@@ -1,6 +1,7 @@
-// ISR: pre-render top 40 city pages; long tail generated on-demand then cached 24h
+// On-demand ISR. City pages render on first request, then stay cached for 24h.
 export const revalidate = 86400
 export const dynamicParams = true
+export const maxDuration = 30
 
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
@@ -9,7 +10,6 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import ClinicCard from '@/components/ClinicCard'
 import { fetchClinicsByCity, fetchLiveCityHubs } from '@/data/supabase-clinics'
-import { TOP_CITY_PARAMS } from '@/data/seo-priority-params'
 import { SITE_URL } from '@/lib/config'
 import { distinctClinicLocations } from '@/lib/listing-integrity'
 import {
@@ -21,14 +21,9 @@ import {
 
 interface Props { params: Promise<{ city: string }> }
 
-/** Pre-render top 40 city pages when directory credentials are available. */
-export async function generateStaticParams() {
-  // An empty directory makes every seeded city call notFound() during SSG.
-  // Skip the seed list unless the directory can actually be read.
-  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.SUPABASE_SERVICE_ROLE_KEY) {
-    return []
-  }
-  return TOP_CITY_PARAMS
+/** On-demand ISR. Building these pages reads the directory and fails closed when the database is down. */
+export function generateStaticParams() {
+  return []
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

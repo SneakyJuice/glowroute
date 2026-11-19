@@ -13,7 +13,7 @@ import {
 
 export const SITEMAP_XML_HEADERS = {
   'Content-Type': 'application/xml; charset=utf-8',
-  'Cache-Control': 'public, max-age=0, s-maxage=3600, stale-while-revalidate=86400',
+  'Cache-Control': 'public, max-age=0, s-maxage=86400, stale-while-revalidate=86400, stale-if-error=86400',
 }
 
 function escapeXml(value: string): string {
@@ -65,20 +65,30 @@ export function staticSitemapUrls(): string[] {
   ]
 }
 
-export async function buildChunkUrls(chunkId: number): Promise<string[]> {
-  const clinicRows = await fetchSitemapClinicChunk(chunkId)
+/** Same chunk contents as before: static URLs, sorted city hubs, then clinic URLs. */
+export function assembleChunkUrls(
+  chunkId: number,
+  clinicRows: readonly { slug: string; city: string }[],
+  cities: readonly string[],
+): string[] {
   const clinicUrls = clinicRows.map(
     (clinic) => `${SITE_URL}/clinics/${citySlug(clinic.city)}/${clinic.slug}`,
   )
 
   if (chunkId !== 0) return clinicUrls
 
-  const cities = await fetchSitemapCities()
   return [
     ...staticSitemapUrls(),
     ...cities.map((city) => `${SITE_URL}/clinics/${city}`),
     ...clinicUrls,
   ]
+}
+
+export async function buildChunkUrls(chunkId: number): Promise<string[]> {
+  const clinicRows = await fetchSitemapClinicChunk(chunkId)
+  if (chunkId !== 0) return assembleChunkUrls(chunkId, clinicRows, [])
+  const cities = await fetchSitemapCities()
+  return assembleChunkUrls(chunkId, clinicRows, cities)
 }
 
 export async function sitemapIndexChunkIds(): Promise<number[]> {
@@ -95,7 +105,8 @@ export async function serveSitemapIndex(): Promise<Response> {
   } catch (error) {
     const message = error instanceof SitemapDataError ? error.message : 'Unexpected sitemap failure'
     console.error('[sitemap-index] failed:', message)
-    return new Response('Sitemap temporarily unavailable', { status: 503, headers: { 'Cache-Control': 'no-store', 'Retry-After': '60' } })
+    // Throw so a failed revalidation does not replace the cached sitemap.
+    throw error
   }
 }
 
@@ -114,6 +125,7 @@ export async function serveSitemapChunk(idParam: string): Promise<Response> {
   } catch (error) {
     const message = error instanceof SitemapDataError ? error.message : 'Unexpected sitemap failure'
     console.error(`[sitemap] chunk ${chunkId} failed:`, message)
-    return new Response('Sitemap temporarily unavailable', { status: 503, headers: { 'Cache-Control': 'no-store', 'Retry-After': '60' } })
+    // Throw so a failed revalidation does not replace the cached sitemap.
+    throw error
   }
 }

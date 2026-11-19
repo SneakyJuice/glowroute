@@ -1,14 +1,14 @@
-// ISR: pre-render top 923 priority clinics; long tail generated on-demand then cached 24h
-// Render canonical redirects directly; ISR on a cold redirect can duplicate Location headers.
-export const dynamic = 'force-dynamic'
+// On-demand ISR. Unknown profiles render on the first request and are then cached.
+// A thrown database error keeps the last good page; do not render an empty profile.
+export const revalidate = 3600
 export const dynamicParams = true
+export const maxDuration = 30
 
 import { notFound, permanentRedirect } from 'next/navigation'
 import ClinicImage from '@/components/ClinicImage'
 import { clinicPath } from '@/lib/listing-integrity'
 import Link from 'next/link'
-import { fetchClinicByExactSlug, fetchClinicsByCity } from '@/data/supabase-clinics'
-import type { Clinic } from '@/types/clinic'
+import { fetchClinicByExactSlug, fetchNearbyClinics, fetchRelatedClinics } from '@/data/supabase-clinics'
 import TreatmentTag, { getTagVariant } from '@/components/TreatmentTag'
 import VerifiedBadge from '@/components/VerifiedBadge'
 import Navbar from '@/components/Navbar'
@@ -31,7 +31,6 @@ import { calculateGlowScore } from '@/lib/glowscore'
 import { GlowScoreProfileCard } from '@/components/GlowScoreBadge'
 import { PostHogClinicTracker } from '@/components/PostHogClinicTracker'
 import { TREATMENTS, TREATMENT_SLUGS } from '@/lib/treatments'
-import { TOP_CLINIC_PARAMS } from '@/data/seo-priority-params'
 import ClinicCard from '@/components/ClinicCard'
 
 /** Normalize a city name to a URL-safe slug */
@@ -43,13 +42,8 @@ interface PageProps {
   params: Promise<{ city: string; slug: string }>
 }
 
-/** Pre-render top-priority clinic pages when directory credentials are available. */
-export async function generateStaticParams() {
-  // Without credentials the slug lookup throws. Skip the seed list so a
-  // credential-less build does not fail; production builds still prerender.
-  if (!process.env.NEXT_PUBLIC_SUPABASE_URL || !process.env.SUPABASE_SERVICE_ROLE_KEY) {
-    return []
-  }
+/** Render on demand, then cache. Do not prerender against the database at build time. */
+export function generateStaticParams() {
   return []
 }
 
@@ -145,11 +139,7 @@ function StarRating({ rating }: { rating: number }) {
 // ─── Treatment City Page (disambiguation) ────────────────────────────────────
 async function TreatmentCityPage({ city, treatment }: { city: string; treatment: string }) {
   const treatmentInfo = TREATMENTS.find(t => t.slug === treatment)
-  const rated = await fetchClinicsByCity(city)
-  const matched = rated.filter((clinic) =>
-    (clinic.services ?? []).includes(treatment) || (clinic.treatments ?? []).includes(treatment),
-  )
-  const clinics = (matched.length > 0 ? matched : rated).slice(0, 50)
+  const clinics = await fetchRelatedClinics(city, treatment)
   return (
     <div className="min-h-screen bg-ivory font-sans">
       <Navbar />
@@ -310,7 +300,7 @@ export default async function ClinicProfilePage({ params }: PageProps) {
     ],
   }
 
-  const nearbyClinics: import('@/types/clinic').Clinic[] = [] // Supabase query TBD
+  const nearbyClinics = await fetchNearbyClinics(clinic.city, clinic.slug)
 
   return (
     <div className="min-h-screen bg-[#F8F6F1] font-sans">

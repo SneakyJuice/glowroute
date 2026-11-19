@@ -1,12 +1,17 @@
 import { NextRequest } from 'next/server'
 import { serveSitemapChunk } from '@/lib/sitemap-build'
+import { skipUnreachableDatabasePrerender } from '@/lib/skip-build-prerender'
 
 export const runtime = 'nodejs'
-export const dynamic = 'force-dynamic'
-export const revalidate = 0
+export const revalidate = 86400
 export const maxDuration = 30
 
 export async function GET(_request: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   const { id } = await params
-  return serveSitemapChunk(id)
+  try {
+    return await serveSitemapChunk(id)
+  } catch (error) {
+    skipUnreachableDatabasePrerender()
+    throw error
+  }
 }

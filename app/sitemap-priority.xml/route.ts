@@ -1,7 +1,8 @@
 import { SITE_URL } from '@/lib/config'
 import { renderUrlset, xmlResponse } from '@/lib/sitemap-build'
 
-export const dynamic = 'force-dynamic'
+export const revalidate = 86400
+export const maxDuration = 30
 
 /** A small cohort for Search Console recovery checks, separate from all known URLs. */
 export async function GET() {

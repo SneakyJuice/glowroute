@@ -1,4 +1,6 @@
-export const dynamic = 'force-dynamic'
+export const revalidate = 3600
+export const dynamicParams = true
+export const maxDuration = 30
 
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
@@ -62,7 +64,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-// generateStaticParams removed — force-dynamic handles routing at request time
+/** Render on demand, then cache. Do not prerender claim pages at build time. */
+export function generateStaticParams() {
+  return []
+}
 
 const PLAN_ORDER = ['starter', 'growth', 'pro'] as const
 

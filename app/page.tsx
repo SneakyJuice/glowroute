@@ -3,9 +3,11 @@ import Link from 'next/link'
 import { SITE_URL } from '@/lib/config'
 import { fetchAllClinicsFromSupabase } from '@/data/supabase-clinics'
 import { DirectoryQueryError, parseDirectoryQuery, searchDirectory, serializeDirectoryQuery } from '@/lib/directory-search'
+import { skipUnreachableDatabasePrerender } from '@/lib/skip-build-prerender'
 import ClinicsClient from '@/app/clinics/ClinicsClient'
 
-export const dynamic = 'force-dynamic'
+export const revalidate = 900
+export const maxDuration = 30
 type PageProps = { searchParams: Promise<Record<string, string | string[] | undefined>> }
 
 export async function generateMetadata({ searchParams }: PageProps): Promise<Metadata> {
@@ -32,7 +34,10 @@ export default async function HomePage({ searchParams }: PageProps) {
       <ClinicsClient key={serializeDirectoryQuery(initialPage.query).toString()} initialPage={initialPage} totalCount={pool.length} />
     </>
   } catch (error) {
-    if (!(error instanceof DirectoryQueryError)) throw error
+    if (!(error instanceof DirectoryQueryError)) {
+      skipUnreachableDatabasePrerender()
+      throw error
+    }
     return <main className="max-w-3xl mx-auto px-6 py-16">
       <h1 className="font-serif text-3xl">Check your search filters</h1>
       <p role="alert" className="mt-4">{error.message}</p>
