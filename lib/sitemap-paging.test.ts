@@ -4,6 +4,7 @@ import { describe, it } from 'node:test'
 import {
   SITEMAP_DB_PAGE_SIZE,
   SITEMAP_SELECT,
+  SITEMAP_VIEW_COLUMNS,
   SitemapDataError,
   citySlug,
   loadSitemapRows,
@@ -21,21 +22,15 @@ function mockClient(pages: SitemapRow[][], onCall?: (from: number, to: number) =
           assert.equal(columns, SITEMAP_SELECT)
           return {
             order(column, options) {
-              assert.equal(column, 'city')
+              assert.equal(column, 'id')
               assert.equal(options?.ascending, true)
               return {
-                order(innerColumn, innerOptions) {
-                  assert.equal(innerColumn, 'slug')
-                  assert.equal(innerOptions?.ascending, true)
-                  return {
-                    async range(from, to) {
-                      onCall?.(from, to)
-                      const index = from / SITEMAP_DB_PAGE_SIZE
-                      const data = pages[index] ?? []
-                      assert.equal(to - from + 1, SITEMAP_DB_PAGE_SIZE)
-                      return { data, error: null } satisfies SitemapPageResult
-                    },
-                  }
+                async range(from, to) {
+                  onCall?.(from, to)
+                  const index = from / SITEMAP_DB_PAGE_SIZE
+                  const data = pages[index] ?? []
+                  assert.equal(to - from + 1, SITEMAP_DB_PAGE_SIZE)
+                  return { data, error: null } satisfies SitemapPageResult
                 },
               }
             },
@@ -47,8 +42,23 @@ function mockClient(pages: SitemapRow[][], onCall?: (from: number, to: number) =
 }
 
 function row(city: string, slug: string, index: number): SitemapRow {
-  return { city, slug, updated_at: `2026-01-01T00:00:${String(index % 60).padStart(2, '0')}Z` }
+  return { id: index, city, slug }
 }
+
+describe('sitemap view columns', () => {
+  it('selects only columns that exist on sitemap_clinics', () => {
+    const selected = SITEMAP_SELECT.split(',').map((column) => column.trim())
+    assert.deepEqual(selected, ['id', 'slug', 'city'])
+    for (const column of selected) {
+      assert.equal(SITEMAP_VIEW_COLUMNS.includes(column as (typeof SITEMAP_VIEW_COLUMNS)[number]), true, column)
+    }
+    assert.equal(selected.includes('updated_at'), false)
+    assert.equal(selected.includes('glow_score'), false)
+    const paging = readFileSync(new URL('./sitemap-paging.ts', import.meta.url), 'utf8')
+    assert.doesNotMatch(paging, /updated_at/)
+    assert.match(paging, /SITEMAP_SELECT = 'id, slug, city'/)
+  })
+})
 
 describe('sitemap view paging', () => {
   it('pages sitemap_clinics with range() in pages of 1000 and keeps order', async () => {
@@ -70,6 +80,40 @@ describe('sitemap view paging', () => {
     assert.equal(rows.some((item) => !item.slug || !item.city), false)
   })
 
+  it('walks id order without skipping or repeating rows', async () => {
+    const all = Array.from({ length: 2500 }, (_, id) => row('Miami', `clinic-${id}`, id))
+    const seenRanges: Array<[number, number]> = []
+    const client: SitemapRangeClient = {
+      from() {
+        return {
+          select(columns) {
+            assert.equal(columns, 'id, slug, city')
+            return {
+              order(column, options) {
+                assert.equal(column, 'id')
+                assert.equal(options?.ascending, true)
+                return {
+                  async range(from, to) {
+                    seenRanges.push([from, to])
+                    return { data: all.slice(from, to + 1), error: null }
+                  },
+                }
+              },
+            }
+          },
+        }
+      },
+    }
+    const rows = await loadSitemapRows(client)
+    assert.deepEqual(seenRanges, [
+      [0, 999],
+      [1000, 1999],
+      [2000, 2999],
+    ])
+    assert.deepEqual(rows.map((item) => item.id), all.map((item) => item.id))
+    assert.equal(new Set(rows.map((item) => item.id)).size, rows.length)
+  })
+
   it('does not return a partial sitemap when a later page fails', async () => {
     let calls = 0
     const client: SitemapRangeClient = {
@@ -77,18 +121,15 @@ describe('sitemap view paging', () => {
         return {
           select() {
             return {
-              order() {
+              order(column) {
+                assert.equal(column, 'id')
                 return {
-                  order() {
-                    return {
-                      async range() {
-                        calls += 1
-                        if (calls === 1) {
-                          return { data: [row('Austin', 'ok', 1)], error: null }
-                        }
-                        return { data: null, error: { message: 'PGRST003' } }
-                      },
+                  async range() {
+                    calls += 1
+                    if (calls === 1) {
+                      return { data: [row('Austin', 'ok', 1)], error: null }
                     }
+                    return { data: null, error: { message: 'PGRST003' } }
                   },
                 }
               },
@@ -118,8 +159,10 @@ describe('sitemap url assembly', () => {
     assert.doesNotMatch(build, /\?city=/)
     const paging = readFileSync(new URL('./sitemap-paging.ts', import.meta.url), 'utf8')
     assert.match(paging, /sitemap_clinics/)
-    assert.match(paging, /slug, city, updated_at/)
+    assert.match(paging, /\.order\('id'/)
     assert.match(paging, /\.range\(/)
+    const buildSource = readFileSync(new URL('./sitemap-build.ts', import.meta.url), 'utf8')
+    assert.doesNotMatch(buildSource, /<lastmod>/)
     const data = readFileSync(new URL('./sitemap-data.ts', import.meta.url), 'utf8')
     assert.match(data, /loadSitemapRows/)
     assert.match(data, /revalidate: SITEMAP_REVALIDATE_SECONDS/)

@@ -1,10 +1,12 @@
 export const SITEMAP_DB_PAGE_SIZE = 1000
-export const SITEMAP_SELECT = 'slug, city, updated_at'
+/** Columns on public.sitemap_clinics. The read uses id, slug, and city only. */
+export const SITEMAP_VIEW_COLUMNS = ['id', 'slug', 'city', 'glow_score'] as const
+export const SITEMAP_SELECT = 'id, slug, city'
 
 export type SitemapRow = {
+  id: string | number
   slug: string
   city: string
-  updated_at?: string | null
 }
 
 export type SitemapPageResult = {
@@ -16,9 +18,7 @@ export type SitemapRangeClient = {
   from(table: string): {
     select(columns: string): {
       order(column: string, options?: { ascending?: boolean }): {
-        order(column: string, options?: { ascending?: boolean }): {
-          range(from: number, to: number): PromiseLike<SitemapPageResult>
-        }
+        range(from: number, to: number): PromiseLike<SitemapPageResult>
       }
     }
   }
@@ -37,8 +37,7 @@ export function citySlug(city: string): string {
 
 /**
  * Read the deduped sitemap view in inclusive PostgREST pages.
- * Order is city then slug, matching the view's distinct key, so each range
- * continues where the previous page stopped.
+ * Order is id so each range continues where the previous page stopped.
  * A failed page throws and does not return the rows already collected.
  */
 export async function loadSitemapRows(
@@ -56,8 +55,7 @@ export async function loadSitemapRows(
     const { data, error } = await client
       .from('sitemap_clinics')
       .select(SITEMAP_SELECT)
-      .order('city', { ascending: true })
-      .order('slug', { ascending: true })
+      .order('id', { ascending: true })
       .range(from, from + pageSize - 1)
 
     if (error) throw new SitemapDataError(error.message)
