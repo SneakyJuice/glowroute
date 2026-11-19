@@ -63,8 +63,19 @@ describe('directory column projection', () => {
     assert.doesNotMatch(profile, /fetchAllClinicsFromSupabase|fetchClinicsByCity/)
     assert.match(profile, /fetchClinicByExactSlug/)
     assert.match(profile, /fetchRelatedClinics|fetchNearbyClinics/)
-    assert.match(profile, /export const revalidate = 3600/)
-    assert.doesNotMatch(profile, /force-dynamic/)
+    // Keep cold canonical redirects on the known-good dynamic rendering path.
+    assert.match(profile, /export const dynamic = 'force-dynamic'/)
+    assert.match(profile, /permanentRedirect\(/)
+    assert.doesNotMatch(profile, /generateStaticParams/)
+  })
+
+  it('keeps sitemap eligibility tied to the same filtered directory snapshot', () => {
+    const sitemap = readFileSync(new URL('./sitemap-data.ts', import.meta.url), 'utf8')
+    const build = readFileSync(new URL('./sitemap-build.ts', import.meta.url), 'utf8')
+    assert.match(sitemap, /await fetchAllClinicsFromSupabase\(\)/)
+    assert.match(sitemap, /filter\(c => c.slug && c.city\)/)
+    assert.match(build, /stale-if-error=86400/)
+    assert.doesNotMatch(build, /return xmlResponse\(renderUrlset\(\[\]/)
   })
 
   it('shows a branded unavailable page and a 503 for the clinics API', () => {

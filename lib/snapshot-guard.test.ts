@@ -28,6 +28,7 @@ describe('directory snapshot guard', () => {
     const first = guard.get()
     const second = guard.get()
     const third = guard.get()
+    await Promise.resolve()
     assert.equal(calls, 1)
     gate.resolve(['miami'])
     assert.deepEqual(await Promise.all([first, second, third]), [['miami'], ['miami'], ['miami']])
@@ -85,6 +86,28 @@ describe('directory snapshot guard', () => {
     now = 60_000
     await assert.rejects(() => guard.get(), /PGRST003/)
     assert.equal(calls, 2)
+  })
+
+  it('recovers after a synchronous loader failure and the cooldown expires', async () => {
+    let now = 0
+    let calls = 0
+    const guard = createSnapshotGuard({
+      openMs: 60_000,
+      now: () => now,
+      load: () => {
+        calls += 1
+        if (calls === 1) throw new Error('sync failure')
+        return Promise.resolve(['recovered'])
+      },
+    })
+
+    await assert.rejects(guard.get(), /sync failure/)
+    await assert.rejects(guard.get(), /sync failure/)
+    assert.equal(calls, 1)
+    now = 60_000
+    assert.deepEqual(await guard.get(), ['recovered'])
+    assert.equal(calls, 2)
+    assert.equal(guard.isOpen(), false)
   })
 
   it('lets an outside failure trip the breaker without starting another load', async () => {

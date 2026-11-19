@@ -328,7 +328,7 @@ export async function fetchRelatedClinics(citySlug: string, treatment: string, l
     const displayName = citySlugToDisplay(citySlug)
     const matched = await selectCityClinics(displayName, treatment, limit)
     if (matched.length > 0) return matched
-    return selectCityClinics(displayName, null, limit)
+    return await selectCityClinics(displayName, null, limit)
   } catch (error) {
     const snapshot = directoryGuard.snapshot()
     if (snapshot && snapshot.length > 0) return relatedFromSnapshot(snapshot, citySlug, treatment, limit)
@@ -338,18 +338,19 @@ export async function fetchRelatedClinics(citySlug: string, treatment: string, l
 
 /** A few other visible clinics in the same city, for a profile sidebar. */
 export async function fetchNearbyClinics(city: string, slug: string, limit = NEARBY_CLINIC_LIMIT): Promise<Clinic[]> {
-  const cached = directorySnapshotIfOpen()
-  if (cached) {
-    return cached.filter((clinic) => clinic.city === city && clinic.slug !== slug).slice(0, limit)
-  }
+  const fromSnapshot = () =>
+    (directoryGuard.snapshot() ?? [])
+      .filter((clinic) => clinic.city === city && clinic.slug !== slug)
+      .slice(0, limit)
+
+  if (directoryGuard.isOpen()) return fromSnapshot()
+
   try {
     return await selectCityClinics(city, null, limit, slug)
   } catch (error) {
-    const snapshot = directoryGuard.snapshot()
-    if (snapshot && snapshot.length > 0) {
-      return snapshot.filter((clinic) => clinic.city === city && clinic.slug !== slug).slice(0, limit)
-    }
-    throw error
+    // Recommendations are optional. Do not fail a profile that loaded successfully.
+    console.warn('[supabase-clinics] Nearby clinics unavailable:', error)
+    return fromSnapshot()
   }
 }
 

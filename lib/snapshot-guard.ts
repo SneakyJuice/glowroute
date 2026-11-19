@@ -61,7 +61,8 @@ export function createSnapshotGuard<T>(options: {
       }
       if (inflight) return inflight
 
-      const run = (async () => {
+      // Record the promise before calling the loader, which can throw synchronously.
+      const run = Promise.resolve().then(async () => {
         try {
           const value = await options.load()
           const loadedAt = now()
@@ -83,7 +84,7 @@ export function createSnapshotGuard<T>(options: {
         } finally {
           inflight = null
         }
-      })()
+      })
 
       inflight = run
       return run

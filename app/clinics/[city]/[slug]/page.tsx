@@ -1,7 +1,6 @@
-// On-demand ISR. Unknown profiles render on the first request and are then cached.
-// A thrown database error keeps the last good page; do not render an empty profile.
-export const revalidate = 3600
-export const dynamicParams = true
+// Preserve a single Location header on cold permanent canonical redirects.
+// Keep the bounded profile lookups without enabling route-level ISR here.
+export const dynamic = 'force-dynamic'
 export const maxDuration = 30
 
 import { notFound, permanentRedirect } from 'next/navigation'
@@ -40,11 +39,6 @@ function citySlug(city: string | undefined | null) {
 
 interface PageProps {
   params: Promise<{ city: string; slug: string }>
-}
-
-/** Render on demand, then cache. Do not prerender against the database at build time. */
-export function generateStaticParams() {
-  return []
 }
 
 /** Truncate a string to maxLen, appending suffix if cut */
