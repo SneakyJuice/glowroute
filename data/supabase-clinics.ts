@@ -1,8 +1,9 @@
 import { Clinic } from '@/types/clinic'
 import { getSupabaseReadClient as getSupabaseAdmin } from '@/lib/supabase'
 import { cache } from 'react'
-import { unstable_cache, unstable_noStore } from 'next/cache'
-import { aggregateLiveCityHubs, type LiveCityHub } from '@/lib/seo-page-overrides'
+import { unstable_cache } from 'next/cache'
+import { createSnapshotGuard } from '@/lib/snapshot-guard'
+import { aggregateLiveCityHubs, citySlugToDisplay, type LiveCityHub } from '@/lib/seo-page-overrides'
 import { hasAddressStateConflict, listingDescription, publicImageUrl } from '@/lib/listing-integrity'
 import {
   DIRECTORY_PAGE_SIZE,
@@ -116,34 +117,13 @@ export function mapSupabaseRow(row: any): Clinic {
  * One shared cached list: narrow columns, keyset pages, glow_score then id.
  */
 
-const DIRECTORY_CACHE_TTL_MS = DIRECTORY_REVALIDATE_SECONDS * 1000
 const MAX_DIRECTORY_PAGES = 200
 /** Single in-process snapshot. The cap stops the memo from growing with each page. */
 const DIRECTORY_MEMO_MAX_CLINICS = MAX_DIRECTORY_PAGES * DIRECTORY_PAGE_SIZE
-/**
- * Page entries outlive the version key. A page is not refreshed on its own
- * while that version is still the one being served.
- */
-const DIRECTORY_PAGE_REVALIDATE_SECONDS = DIRECTORY_REVALIDATE_SECONDS * 2
-
-type DirectoryMemo = {
-  version: string
-  at: number
-  clinics: Clinic[]
-}
-
-let directoryMemo: DirectoryMemo | null = null
-
-function rememberDirectory(version: string, clinics: Clinic[]) {
-  if (clinics.length === 0) return
-  if (clinics.length > DIRECTORY_MEMO_MAX_CLINICS) {
-    console.warn(
-      `[supabase-clinics] Skipping the in-memory directory memo; ${clinics.length} clinics exceeds ${DIRECTORY_MEMO_MAX_CLINICS}`,
-    )
-    return
-  }
-  directoryMemo = { version, at: Date.now(), clinics }
-}
+/** After a database failure, skip the pool for one minute. */
+export const DIRECTORY_BREAKER_OPEN_MS = 60_000
+const RELATED_CLINIC_LIMIT = 50
+const NEARBY_CLINIC_LIMIT = 4
 
 type DirectoryPage = {
   clinics: Clinic[]
@@ -186,32 +166,24 @@ async function fetchDirectoryPage(cursor: DirectoryCursor | null): Promise<Direc
 }
 
 /**
- * One version key for the whole directory snapshot.
- * Each page key includes that version, and page entries outlive it, so pages
- * from two versions are never combined when a clinic's glow_score changes.
+ * Stable page cache. The key does not include a timestamp, so an hourly
+ * revalidation refreshes the same entries instead of orphaning them.
  * Pages stay under the Next.js 2MB data-cache entry limit.
  */
-const loadDirectoryVersion = unstable_cache(
-  async () => ({ version: String(Date.now()) }),
-  // Refresh mapped descriptions after the source-neutral fallback repair.
-  ['glowroute-visible-clinics-version-v6'],
+const loadCachedDirectoryPage = unstable_cache(
+  async (cursorKey: string) => fetchDirectoryPage(decodeDirectoryCursor(cursorKey)),
+  ['glowroute-visible-clinics-v7'],
   { revalidate: DIRECTORY_REVALIDATE_SECONDS, tags: ['glowroute-directory'] },
 )
 
-const loadVersionedDirectoryPage = unstable_cache(
-  async (version: string, cursorKey: string) => {
-    if (!version) {
-      throw new Error('[supabase-clinics] Directory cache version is missing')
-    }
-    return fetchDirectoryPage(decodeDirectoryCursor(cursorKey))
-  },
-  ['glowroute-visible-clinics-page-v6'],
-  { revalidate: DIRECTORY_PAGE_REVALIDATE_SECONDS, tags: ['glowroute-directory'] },
-)
+async function loadVisibleClinics(): Promise<Clinic[]> {
+  const supabase = getSupabaseAdmin()
+  if (!supabase) {
+    throw new Error('[supabase-clinics] Supabase directory client not configured')
+  }
 
-async function loadVisibleClinics(version: string): Promise<Clinic[]> {
   const pages = await collectDirectoryPages(
-    (cursorKey) => loadVersionedDirectoryPage(version, cursorKey),
+    (cursorKey) => loadCachedDirectoryPage(cursorKey),
     MAX_DIRECTORY_PAGES,
     (maxPages) => {
       console.warn(
@@ -227,38 +199,45 @@ async function loadVisibleClinics(version: string): Promise<Clinic[]> {
       { glowScore: b.glowScore ?? null, id: b.id },
     ),
   )
+  if (unique.length > DIRECTORY_MEMO_MAX_CLINICS) {
+    console.warn(
+      `[supabase-clinics] Skipping the in-memory directory memo; ${unique.length} clinics exceeds ${DIRECTORY_MEMO_MAX_CLINICS}`,
+    )
+  }
   console.log(`[supabase-clinics] Returning ${unique.length} clinics`)
   return unique
 }
 
+const directoryGuard = createSnapshotGuard<Clinic[]>({
+  openMs: DIRECTORY_BREAKER_OPEN_MS,
+  freshMs: DIRECTORY_REVALIDATE_SECONDS * 1000,
+  isUsable: (clinics) => clinics.length > 0 && clinics.length <= DIRECTORY_MEMO_MAX_CLINICS,
+  load: loadVisibleClinics,
+  onServeStale: () => {
+    console.warn('[supabase-clinics] Serving the last good directory list after a fetch error')
+  },
+})
+
+function failFastIfBreakerOpen(): void {
+  if (!directoryGuard.isOpen()) return
+  const error = directoryGuard.lastError()
+  if (error instanceof Error) throw error
+  throw new Error('[supabase-clinics] Circuit breaker open')
+}
+
+function directorySnapshotIfOpen(): Clinic[] | null {
+  if (!directoryGuard.isOpen()) return null
+  const snapshot = directoryGuard.snapshot()
+  if (snapshot && snapshot.length > 0) return snapshot
+  failFastIfBreakerOpen()
+  return null
+}
+
 export const fetchAllClinicsFromSupabase = cache(async (): Promise<Clinic[]> => {
-  const supabase = getSupabaseAdmin()
-  if (!supabase) {
-    unstable_noStore()
-    throw new Error('[supabase-clinics] Supabase directory client not configured')
-  }
-
   try {
-    const { version } = await loadDirectoryVersion()
-    if (
-      directoryMemo &&
-      directoryMemo.version === version &&
-      directoryMemo.clinics.length <= DIRECTORY_MEMO_MAX_CLINICS &&
-      Date.now() - directoryMemo.at < DIRECTORY_CACHE_TTL_MS
-    ) {
-      return directoryMemo.clinics
-    }
-
-    const clinics = await loadVisibleClinics(version)
-    rememberDirectory(version, clinics)
-    return clinics
+    return await directoryGuard.get()
   } catch (err) {
     console.error('[supabase-clinics] Unexpected error:', err)
-    if (directoryMemo && directoryMemo.clinics.length > 0 && Date.now() - directoryMemo.at < DIRECTORY_CACHE_TTL_MS * 2) {
-      console.warn('[supabase-clinics] Serving the last good directory list after a fetch error')
-      return directoryMemo.clinics
-    }
-    unstable_noStore()
     throw err
   }
 })
@@ -294,20 +273,96 @@ export const fetchClinicsByCity = cache(async (citySlug: string): Promise<Clinic
 /**
  * Featured clinic: first clinic with featured flag, or first clinic.
  */
+function throwDirectoryReadError(error: { message: string }, label: string): never {
+  const wrapped = new Error(`[supabase-clinics] ${label}: ${error.message}`)
+  directoryGuard.trip(wrapped)
+  throw wrapped
+}
+
+function requireDirectoryClient() {
+  failFastIfBreakerOpen()
+  const supabase = getSupabaseAdmin()
+  if (!supabase) {
+    throwDirectoryReadError({ message: 'Supabase directory client not configured' }, 'Error fetching clinic')
+  }
+  return supabase
+}
+
+/**
+ * One city, bounded. Profiles use this instead of the national directory.
+ * A database error throws so ISR can keep the last good page.
+ */
+async function selectCityClinics(cityName: string, treatment: string | null, limit: number, excludeSlug?: string): Promise<Clinic[]> {
+  const supabase = requireDirectoryClient()
+  let query = supabase
+    .from('clinics')
+    .select(DIRECTORY_SELECT)
+    .eq('visibility', 'visible')
+    .ilike('city', cityName)
+  if (treatment) query = query.contains('services', [treatment])
+  if (excludeSlug) query = query.neq('slug', excludeSlug)
+  const { data, error } = await query
+    .order('glow_score', { ascending: false, nullsFirst: false })
+    .order('id', { ascending: true })
+    .limit(limit)
+
+  if (error) throwDirectoryReadError(error, 'Error fetching city clinics')
+  return (data ?? [])
+    .filter((row) => !hasAddressStateConflict(row as unknown as { address?: string; state?: string }))
+    .map((row) => clean(mapSupabaseRow(row)))
+}
+
+function relatedFromSnapshot(clinics: readonly Clinic[], citySlug: string, treatment: string, limit: number): Clinic[] {
+  const cityClinics = filterClinicsForCitySlug(clinics, citySlug)
+  const matched = cityClinics.filter((clinic) =>
+    (clinic.services ?? []).includes(treatment) || (clinic.treatments ?? []).includes(treatment),
+  )
+  return (matched.length > 0 ? matched : cityClinics).slice(0, limit)
+}
+
+/** Treatment and related cards for one city. Does not load the national directory. */
+export async function fetchRelatedClinics(citySlug: string, treatment: string, limit = RELATED_CLINIC_LIMIT): Promise<Clinic[]> {
+  const cached = directorySnapshotIfOpen()
+  if (cached) return relatedFromSnapshot(cached, citySlug, treatment, limit)
+  try {
+    const displayName = citySlugToDisplay(citySlug)
+    const matched = await selectCityClinics(displayName, treatment, limit)
+    if (matched.length > 0) return matched
+    return await selectCityClinics(displayName, null, limit)
+  } catch (error) {
+    const snapshot = directoryGuard.snapshot()
+    if (snapshot && snapshot.length > 0) return relatedFromSnapshot(snapshot, citySlug, treatment, limit)
+    throw error
+  }
+}
+
+/** A few other visible clinics in the same city, for a profile sidebar. */
+export async function fetchNearbyClinics(city: string, slug: string, limit = NEARBY_CLINIC_LIMIT): Promise<Clinic[]> {
+  const fromSnapshot = () =>
+    (directoryGuard.snapshot() ?? [])
+      .filter((clinic) => clinic.city === city && clinic.slug !== slug)
+      .slice(0, limit)
+
+  if (directoryGuard.isOpen()) return fromSnapshot()
+
+  try {
+    return await selectCityClinics(city, null, limit, slug)
+  } catch (error) {
+    // Recommendations are optional. Do not fail a profile that loaded successfully.
+    console.warn('[supabase-clinics] Nearby clinics unavailable:', error)
+    return fromSnapshot()
+  }
+}
+
 /**
  * Resolve a current slug or a historical alias to its visible canonical clinic.
  * Uses the directory columns, not select=*.
  * Returns null only when the slug is empty or no row exists.
- * A database error throws, and the response is not stored, so ISR cannot
- * keep that outage as a 404.
+ * A database error throws so ISR keeps the last good page instead of storing a 404.
  */
 export const fetchClinicByExactSlug = cache(async (slug: string): Promise<Clinic | null> => {
   if (!slug) return null
-  const supabase = getSupabaseAdmin()
-  if (!supabase) {
-    unstable_noStore()
-    throw new Error('[supabase-clinics] Supabase admin client not available')
-  }
+  const supabase = requireDirectoryClient()
 
   const { data, error } = await supabase
     .from('clinics')
@@ -318,10 +373,7 @@ export const fetchClinicByExactSlug = cache(async (slug: string): Promise<Clinic
     .order('id', { ascending: true })
     .limit(1)
 
-  if (error) {
-    unstable_noStore()
-    throw new Error(`[supabase-clinics] Error fetching clinic: ${error.message}`)
-  }
+  if (error) throwDirectoryReadError(error, 'Error fetching clinic')
   if (data?.[0] && !hasAddressStateConflict(data[0] as unknown as { address?: string; state?: string })) {
     return clean(mapSupabaseRow(data[0]))
   }
@@ -334,10 +386,7 @@ export const fetchClinicByExactSlug = cache(async (slug: string): Promise<Clinic
     .eq('alias_slug', slug)
     .maybeSingle()
 
-  if (aliasError) {
-    unstable_noStore()
-    throw new Error(`[supabase-clinics] Error resolving clinic alias: ${aliasError.message}`)
-  }
+  if (aliasError) throwDirectoryReadError(aliasError, 'Error resolving clinic alias')
   if (!alias) return null
 
   const { data: canonical, error: canonicalError } = await supabase
@@ -347,10 +396,7 @@ export const fetchClinicByExactSlug = cache(async (slug: string): Promise<Clinic
     .eq('visibility', 'visible')
     .maybeSingle()
 
-  if (canonicalError) {
-    unstable_noStore()
-    throw new Error(`[supabase-clinics] Error fetching canonical clinic: ${canonicalError.message}`)
-  }
+  if (canonicalError) throwDirectoryReadError(canonicalError, 'Error fetching canonical clinic')
   if (!canonical || hasAddressStateConflict(canonical as unknown as { address?: string; state?: string })) return null
   return clean(mapSupabaseRow(canonical))
 })
