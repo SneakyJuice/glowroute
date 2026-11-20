@@ -1,7 +1,9 @@
 import assert from 'node:assert/strict'
 import { describe, it } from 'node:test'
 import { readFileSync } from 'node:fs'
-import { DirectoryQueryError, parseDirectoryCity, parseDirectoryQuery, parseDirectoryPageQuery, searchDirectory, serializeDirectoryQuery } from './directory-search.ts'
+import { cityQueryRedirectPath, knownCitySlugsFromNames } from './city-query-redirect.ts'
+import { DirectoryQueryError, directoryPaginationHref, parseDirectoryCity, parseDirectoryQuery, parseDirectoryPageQuery, searchDirectory, serializeDirectoryQuery } from './directory-search.ts'
+import { isExcludedSitemapPath, PAUSED_INDEX_PATHS } from './indexing-pause.ts'
 import type { Clinic } from '../types/clinic.ts'
 
 function clinic(id: string, overrides: Partial<Clinic> = {}): Clinic {
@@ -145,5 +147,48 @@ describe('directory rendering architecture', () => {
     assert.doesNotMatch(source, /IntersectionObserver|ssr-clinic-preview|allClinics/)
     assert.match(source, /useState\(initialPage\)/)
     assert.match(source, /AbortController/)
+    assert.doesNotMatch(source, /[?&]city=/)
+  })
+})
+
+describe('city query redirects', () => {
+  const known = knownCitySlugsFromNames(['Dallas', 'Miami', 'New York', 'Coral Gables', 'Saint Petersburg'])
+
+  it('sends a single known city to its hub', () => {
+    assert.equal(cityQueryRedirectPath({ city: 'Dallas' }, known), '/clinics/dallas')
+    assert.equal(cityQueryRedirectPath({ city: 'dallas' }, known), '/clinics/dallas')
+    assert.equal(cityQueryRedirectPath({ city: 'Dallas, TX' }, known), '/clinics/dallas')
+    assert.equal(cityQueryRedirectPath({ city: 'New York' }, known), '/clinics/new-york')
+    assert.equal(cityQueryRedirectPath({ city: 'Wynwood' }, known), '/clinics/miami')
+    assert.equal(cityQueryRedirectPath({ city: 'Coral Gables' }, known), '/clinics/coral-gables')
+  })
+
+  it('leaves unknown cities and mixed queries on the directory', () => {
+    assert.equal(cityQueryRedirectPath({ city: 'Not A Real City' }, known), null)
+    assert.equal(cityQueryRedirectPath({ city: 'Dallas', page: '2' }, known), null)
+    assert.equal(cityQueryRedirectPath({ city: ['Dallas', 'Miami'] }, known), null)
+    assert.equal(cityQueryRedirectPath({ city: 'all' }, known), null)
+    assert.equal(cityQueryRedirectPath({}, known), null)
+  })
+
+  it('omits the city parameter from directory pagination hrefs', () => {
+    const national = directoryPaginationHref(parseDirectoryPageQuery({}))
+    const local = directoryPaginationHref(parseDirectoryQuery({}))
+    assert.equal(national.includes('city='), false)
+    assert.equal(local.includes('city='), false)
+    assert.match(national, /page=1/)
+    assert.match(local, /distance=25/)
+  })
+})
+
+describe('sitemap exclusions', () => {
+  it('drops claim URLs and the pause list', () => {
+    assert.equal(isExcludedSitemapPath('/claim'), true)
+    assert.equal(isExcludedSitemapPath('/claim/skinlocal-dadeland-miami'), true)
+    assert.equal(isExcludedSitemapPath('https://glowroute.io/claim'), true)
+    for (const path of PAUSED_INDEX_PATHS) assert.equal(isExcludedSitemapPath(path), true)
+    assert.equal(isExcludedSitemapPath('/clinics/miami'), false)
+    assert.equal(isExcludedSitemapPath('/articles/medspa-unmasked'), false)
+    assert.equal(isExcludedSitemapPath('/guides/botox-cost'), false)
   })
 })

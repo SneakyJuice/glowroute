@@ -18,9 +18,6 @@ export const metadata: Metadata = {
     description: 'Compare med spas and aesthetic clinics by treatment and location.',
     images: [`${SITE_URL}/og-default.jpg`],
   },
-  alternates: {
-    canonical: `${SITE_URL}/clinics`,
-  },
 }
 
 export default function ClinicsLayout({ children }: { children: React.ReactNode }) {

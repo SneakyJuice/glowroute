@@ -31,7 +31,7 @@ export const MIAMI_NEARBY_HUBS = [
   'pembroke-pines',
 ] as const
 
-export const MIAMI_VIEW_ALL_HREF = '/clinics?city=Miami'
+export const MIAMI_VIEW_ALL_HREF = '/clinics/miami'
 
 export const MIAMI_CITY_METADATA = {
   title: 'Medical Spas in Miami, FL — GlowRoute',
@@ -176,7 +176,7 @@ export function cityHubKeywords(displayCity: string): string[] {
 }
 
 export function cityHubViewAllHref(displayCity: string): string {
-  return `/clinics?city=${encodeURIComponent(displayCity)}`
+  return `/clinics/${toCitySlug(displayCity)}`
 }
 
 export function cityHubCentroid(
@@ -313,7 +313,7 @@ export function getClaimSeoOverride(slug: string): ClaimSeoOverride | undefined 
   return CLAIM_SLUG_OVERRIDES[stripFlSuffix(slug)]
 }
 
-/** Claim hub `/claim` may be indexed; individual `/claim/{slug}` pages must not. */
+/** No claim URL is indexed or added to a sitemap. */
 export function isClaimSlugInSitemap(_slug: string): boolean {
   return false
 }

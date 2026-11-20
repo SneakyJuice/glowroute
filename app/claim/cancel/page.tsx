@@ -1,7 +1,17 @@
+import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Suspense } from 'react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import { SITE_URL } from '@/lib/config'
+import { NOINDEX_FOLLOW_ROBOTS } from '@/lib/indexing-pause'
+
+export const metadata: Metadata = {
+  title: 'Checkout cancelled — GlowRoute',
+  description: 'No charge was made. You can return and claim your listing whenever you are ready.',
+  robots: NOINDEX_FOLLOW_ROBOTS,
+  alternates: { canonical: `${SITE_URL}/claim/cancel` },
+}
 
 function CancelContent() {
   return (

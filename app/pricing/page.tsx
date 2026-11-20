@@ -1,10 +1,12 @@
 import Link from 'next/link'
 import { PLANS } from '@/lib/stripe'
 import { CheckIcon } from '@heroicons/react/24/solid'
+import { SITE_URL } from '@/lib/config'
 
 export const metadata = {
   title: 'Pricing — GlowRoute',
   description: 'Choose the right plan to grow your medspa. Starter $99/mo, Growth $249/mo, Pro $499/mo. No contracts, cancel anytime.',
+  alternates: { canonical: `${SITE_URL}/pricing` },
 }
 
 const faqs = [

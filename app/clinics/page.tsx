@@ -1,7 +1,9 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { permanentRedirect } from 'next/navigation'
 import { SITE_URL } from '@/lib/config'
 import { fetchAllClinicsFromSupabase } from '@/data/supabase-clinics'
+import { cityQueryRedirectPath, knownCitySlugsFromNames } from '@/lib/city-query-redirect'
 import { DirectoryQueryError, parseDirectoryPageQuery, searchDirectory, serializeDirectoryQuery } from '@/lib/directory-search'
 import { aggregateLiveCityHubs, citySlugToDisplay } from '@/lib/seo-page-overrides'
 import { skipUnreachableDatabasePrerender } from '@/lib/skip-build-prerender'
@@ -26,6 +28,10 @@ export default async function ClinicsPage({ searchParams }: PageProps) {
   try {
     const query = parseDirectoryPageQuery(params)
     const pool = await fetchAllClinicsFromSupabase()
+    const destination = cityQueryRedirectPath(params, knownCitySlugsFromNames(
+      pool.filter(clinic => clinic.city && clinic.slug && (!clinic.visibility || clinic.visibility === 'visible')).map(clinic => clinic.city),
+    ))
+    if (destination) permanentRedirect(destination)
     const initialPage = searchDirectory(pool, query)
     const routable = pool.filter(clinic => clinic.city && clinic.slug)
     const cityCounts = new Map<string, number>()

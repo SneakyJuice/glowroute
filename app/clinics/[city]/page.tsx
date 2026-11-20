@@ -11,6 +11,7 @@ import Footer from '@/components/Footer'
 import ClinicCard from '@/components/ClinicCard'
 import { fetchClinicsByCity, fetchLiveCityHubs } from '@/data/supabase-clinics'
 import { SITE_URL } from '@/lib/config'
+import { NOINDEX_FOLLOW_ROBOTS } from '@/lib/indexing-pause'
 import { distinctClinicLocations } from '@/lib/listing-integrity'
 import {
   buildCityHubSeo,
@@ -19,27 +20,51 @@ import {
   selectNearbyCityHubs,
 } from '@/lib/seo-page-overrides'
 
-interface Props { params: Promise<{ city: string }> }
+interface Props {
+  params: Promise<{ city: string }>
+  searchParams: Promise<Record<string, string | string[] | undefined>>
+}
+
+const HUB_PREVIEW = 6
+const HUB_PAGE_SIZE = 24
+
+function hubPage(searchParams: Record<string, string | string[] | undefined>): number {
+  const raw = searchParams.page
+  const value = Array.isArray(raw) ? '' : (raw ?? '')
+  if (!/^[1-9]\d*$/.test(value)) return 1
+  const page = Number(value)
+  return Number.isSafeInteger(page) ? page : 1
+}
+
+function hubPageSlice<T>(items: readonly T[], page: number): T[] {
+  if (page <= 1) return items.slice(0, HUB_PREVIEW)
+  const start = HUB_PREVIEW + (page - 2) * HUB_PAGE_SIZE
+  return items.slice(start, start + HUB_PAGE_SIZE)
+}
 
 /** On-demand ISR. Building these pages reads the directory and fails closed when the database is down. */
 export function generateStaticParams() {
   return []
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params, searchParams }: Props): Promise<Metadata> {
   const { city } = await params
+  const query = await searchParams
   const cityClinics = await fetchClinicsByCity(city)
-  if (cityClinics.length === 0 && city !== 'miami') return { title: 'Clinics — GlowRoute' }
+  if (cityClinics.length === 0 && city !== 'miami') return { title: 'Clinics — GlowRoute', robots: NOINDEX_FOLLOW_ROBOTS }
 
   const stateAbbr = (cityClinics.find(c => c.state)?.state || '').toUpperCase()
   const seo = buildCityHubSeo(city, { stateAbbr })
   const url = `${SITE_URL}${seo.canonicalPath}`
+  const page = hubPage(query)
+  const hasQuery = Object.values(query).some((value) => value !== undefined)
 
   return {
     title: seo.title,
     description: seo.description,
     keywords: [...seo.keywords],
     alternates: { canonical: url },
+    ...(hasQuery || page > 1 ? { robots: NOINDEX_FOLLOW_ROBOTS } : {}),
     openGraph: {
       title: seo.title,
       description: seo.description,
@@ -52,8 +77,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-export default async function CityPage({ params }: Props) {
+export default async function CityPage({ params, searchParams }: Props) {
   const { city } = await params
+  const query = await searchParams
+  const page = hubPage(query)
   const displayCity = citySlugToDisplay(city)
   // City rows come from the cached visible directory, not a separate full-table read.
   const [cityClinics, liveHubs] = await Promise.all([
@@ -72,7 +99,9 @@ export default async function CityPage({ params }: Props) {
   const region = stateAbbr || 'US'
   const cityState = stateAbbr ? `${displayCity}, ${stateAbbr}` : displayCity
   const previewClinics = distinctClinicLocations(sortedCityClinics)
-  const topClinics = previewClinics.slice(0, 6)
+  const topClinics = hubPageSlice(previewClinics, page)
+  const nextStart = page <= 1 ? HUB_PREVIEW : HUB_PREVIEW + (page - 1) * HUB_PAGE_SIZE
+  if (page > 1 && topClinics.length === 0) notFound()
   const seo = buildCityHubSeo(city, {
     stateAbbr,
     nearbyHubs: selectNearbyCityHubs(city, liveHubs, {
@@ -80,6 +109,9 @@ export default async function CityPage({ params }: Props) {
       state: stateAbbr,
     }),
   })
+  const directoryHref = previewClinics.length > HUB_PREVIEW && page <= 1
+    ? `${seo.canonicalPath}?page=2`
+    : seo.viewAllHref
 
   // ItemList schema for top 5 clinics
   const itemListSchema = {
@@ -158,7 +190,7 @@ export default async function CityPage({ params }: Props) {
             Explore Clinics in {displayCity}
           </h2>
           <Link
-            href={seo.viewAllHref}
+            href={directoryHref}
             className="text-sm font-semibold text-sage hover:underline"
           >
             View all clinics →
@@ -172,17 +204,29 @@ export default async function CityPage({ params }: Props) {
         </div>
 
         {/* Show more if more clinics exist */}
-        {previewClinics.length > 6 && (
+        {(page <= 1 ? previewClinics.length > HUB_PREVIEW : true) && (
           <div className="text-center py-6 border-t border-onyx/8">
             <p className="text-stone text-sm mb-3">
               Showing {topClinics.length} clinic locations from {count} listings in {displayCity}
             </p>
-            <Link
-              href={seo.viewAllHref}
-              className="inline-block bg-sage text-white text-sm font-semibold px-6 py-2.5 rounded-xl hover:bg-onyx transition-colors"
-            >
-              View All {sortedCityClinics.length} Clinics →
-            </Link>
+            <div className="flex flex-wrap items-center justify-center gap-3">
+              {page > 1 && (
+                <Link
+                  href={page === 2 ? seo.canonicalPath : `${seo.canonicalPath}?page=${page - 1}`}
+                  className="inline-block border border-onyx/15 text-onyx text-sm font-semibold px-6 py-2.5 rounded-xl hover:border-sage hover:text-sage transition-colors"
+                >
+                  Previous
+                </Link>
+              )}
+              {nextStart < previewClinics.length && (
+                <Link
+                  href={`${seo.canonicalPath}?page=${page + 1}`}
+                  className="inline-block bg-sage text-white text-sm font-semibold px-6 py-2.5 rounded-xl hover:bg-onyx transition-colors"
+                >
+                  View All {sortedCityClinics.length} Clinics →
+                </Link>
+              )}
+            </div>
           </div>
         )}
 

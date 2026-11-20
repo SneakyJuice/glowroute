@@ -9,6 +9,7 @@ import ClinicCard from '@/components/ClinicCard'
 import { allClinics } from '@/data/all-clinics'
 import { TREATMENTS, getTreatmentBySlug, TREATMENT_SLUGS } from '@/lib/treatments'
 import { SITE_URL } from '@/lib/config'
+import { isPausedIndexPath, NOINDEX_FOLLOW_ROBOTS } from '@/lib/indexing-pause'
 import type { Clinic } from '@/types/clinic'
 
 interface Props { params: Promise<{ slug: string }> }
@@ -23,11 +24,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!treatment) return { title: 'Treatment — GlowRoute' }
 
   const url = `${SITE_URL}/treatments/${slug}`
+  const paused = isPausedIndexPath(`/treatments/${slug}`)
   return {
     title: treatment.title,
     description: treatment.description,
     keywords: `${treatment.name}, medspa, aesthetic clinic, ${treatment.matchKeywords.slice(0, 4).join(', ')}`,
     alternates: { canonical: url },
+    ...(paused ? { robots: NOINDEX_FOLLOW_ROBOTS } : {}),
     openGraph: {
       title: treatment.title,
       description: treatment.description,
@@ -178,7 +181,7 @@ export default async function TreatmentPage({ params }: Props) {
         <section className="border-t border-onyx/8 pt-8 mt-8">
           <h2 className="text-base font-bold text-onyx mb-4">Explore Other Treatments</h2>
           <div className="flex flex-wrap gap-2">
-            {TREATMENTS.filter(t => t.slug !== slug).map(t => (
+            {TREATMENTS.filter(t => t.slug !== slug && !isPausedIndexPath(`/treatments/${t.slug}`)).map(t => (
               <Link
                 key={t.slug}
                 href={`/treatments/${t.slug}`}

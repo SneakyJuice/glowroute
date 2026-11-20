@@ -8,10 +8,12 @@ import { matchCategories } from '@/data/categories'
 import { allClinics } from '@/data/all-clinics'
 import type { CategorySlug } from '@/data/categories'
 import SpecialtyGrid from '@/components/SpecialtyGrid'
+import { SITE_URL } from '@/lib/config'
 
 export const metadata: Metadata = {
   title: 'Browse by Specialty | GlowRoute',
   description: 'Browse med spas and aesthetic clinics by specialty. Find the exact treatment you need from verified providers.',
+  alternates: { canonical: `${SITE_URL}/specialties` },
   openGraph: {
     title: 'Browse by Specialty | GlowRoute',
     description: 'Browse med spas and aesthetic clinics by specialty. Find the exact treatment you need from verified providers.',

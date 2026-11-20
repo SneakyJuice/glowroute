@@ -749,7 +749,7 @@ export default async function ClinicProfilePage({ params }: PageProps) {
                   ))}
                 </div>
                 <Link
-                  href={`/clinics?city=${encodeURIComponent(clinic.city)}`}
+                  href={`/clinics/${citySlug(clinic.city)}`}
                   className="block text-center text-xs font-semibold text-teal mt-4 hover:underline"
                 >
                   View all {clinic.city} clinics →
