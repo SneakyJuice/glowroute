@@ -8,6 +8,7 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { ARTICLES } from '@/data/articles'
 import QuizCTA from '@/components/QuizCTA'
+import { isPausedIndexPath, NOINDEX_FOLLOW_ROBOTS } from '@/lib/indexing-pause'
 
 interface PageProps {
   params: Promise<{ slug: string }>
@@ -21,9 +22,11 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params
   const article = ARTICLES.find(a => a.slug === slug)
   if (!article) return { title: 'Article Not Found | GlowRoute' }
+  const paused = isPausedIndexPath(`/articles/${article.slug}`)
   return {
     title: `${article.title} | The GlowRoute Edit`,
     description: article.excerpt,
+    ...(paused ? { robots: NOINDEX_FOLLOW_ROBOTS } : {}),
     alternates: {
       canonical: `https://glowroute.io/articles/${article.slug}`,
     },

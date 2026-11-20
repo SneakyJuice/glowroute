@@ -43,10 +43,10 @@ describe('Miami city hub SEO', () => {
       'HydraFacial Miami',
       'aesthetic clinic Miami',
     ])
-    assert.equal(miami.viewAllHref, '/clinics?city=Miami')
+    assert.equal(miami.viewAllHref, '/clinics/miami')
     assert.equal(miami.canonicalPath, '/clinics/miami')
-    assert.equal(MIAMI_VIEW_ALL_HREF, '/clinics?city=Miami')
-    assert.equal(MIAMI_CITY_METADATA.viewAllHref, '/clinics?city=Miami')
+    assert.equal(MIAMI_VIEW_ALL_HREF, '/clinics/miami')
+    assert.equal(MIAMI_CITY_METADATA.viewAllHref, '/clinics/miami')
   })
 
   it('lists only the locked live nearby hubs', () => {
@@ -145,7 +145,7 @@ describe('City hub SEO template', () => {
       assert.equal(seo.description.includes('verified'), false)
       assert.match(seo.description, /^[^\d]*$/)
       assert.equal(seo.canonicalPath, `/clinics/${sample.slug}`)
-      assert.equal(seo.viewAllHref, `/clinics?city=${encodeURIComponent(sample.city)}`)
+      assert.equal(seo.viewAllHref, `/clinics/${sample.slug}`)
       assertCityLocalKeywords(seo.keywords, sample.city)
     }
   })
@@ -160,12 +160,12 @@ describe('City hub SEO template', () => {
     )
   })
 
-  it('uses display-name view-all query params only', () => {
-    assert.equal(cityHubViewAllHref('Miami'), '/clinics?city=Miami')
-    assert.equal(cityHubViewAllHref('Orlando'), '/clinics?city=Orlando')
-    assert.equal(cityHubViewAllHref('New York'), '/clinics?city=New%20York')
-    assert.equal(cityHubViewAllHref('Los Angeles'), '/clinics?city=Los%20Angeles')
-    assert.equal(cityHubViewAllHref('Miami').includes('/clinics/miami'), false)
+  it('links view-all to the city hub path', () => {
+    assert.equal(cityHubViewAllHref('Miami'), '/clinics/miami')
+    assert.equal(cityHubViewAllHref('Orlando'), '/clinics/orlando')
+    assert.equal(cityHubViewAllHref('New York'), '/clinics/new-york')
+    assert.equal(cityHubViewAllHref('Los Angeles'), '/clinics/los-angeles')
+    assert.equal(cityHubViewAllHref('Miami').includes('city='), false)
     assert.notEqual(cityHubViewAllHref('Tampa'), '/clinics')
   })
 
@@ -176,7 +176,7 @@ describe('City hub SEO template', () => {
       seo.description,
       'Find medical spas and aesthetic clinics in Denver. Compare Botox, HydraFacial, laser, and more on GlowRoute.',
     )
-    assert.equal(seo.viewAllHref, '/clinics?city=Denver')
+    assert.equal(seo.viewAllHref, '/clinics/denver')
   })
 })
 
@@ -377,7 +377,8 @@ describe('Quiz and Botox guide SEO', () => {
     assert.match(sitemapBuild, /SITEMAP0_LOCKED_PATHS/)
     assert.doesNotMatch(sitemapBuild, /\/claim\/\$\{/)
     assert.match(sitemapBuild, /\$\{SITE_URL\}\/quiz/)
-    assert.match(sitemapBuild, /\$\{SITE_URL\}\/claim/)
+    assert.doesNotMatch(sitemapBuild, /\$\{SITE_URL\}\/claim/)
+    assert.match(sitemapBuild, /isExcludedSitemapPath/)
   })
 })
 
@@ -397,7 +398,7 @@ describe('Claim hub SEO', () => {
     assert.notEqual(CLAIM_HUB_METADATA.canonicalPath, '/')
   })
 
-  it('ships a server-rendered hub with existing claim-flow links and no noindex', () => {
+  it('ships a server-rendered hub that is noindex and absent from sitemaps', () => {
     const page = readFileSync(new URL('../app/claim/page.tsx', import.meta.url), 'utf8')
     assert.doesNotMatch(page, /^['"]use client['"]/m)
     assert.match(page, /export const metadata/)
@@ -407,14 +408,16 @@ describe('Claim hub SEO', () => {
     assert.match(page, /href=["']\/clinics["']/)
     assert.match(page, /href=["']#start-claim["']/)
     assert.match(page, /<main/)
-    assert.doesNotMatch(page, /noindex/)
+    assert.match(page, /NOINDEX_FOLLOW_ROBOTS/)
     assert.doesNotMatch(page, /Loading…/)
     assert.doesNotMatch(page, /useSearchParams/)
     assert.doesNotMatch(page, /verified clinics/i)
     assert.doesNotMatch(page, /\b\d{3,}\+/)
     const sitemapBuild = readFileSync(new URL('./sitemap-build.ts', import.meta.url), 'utf8')
-    assert.match(sitemapBuild, /\$\{SITE_URL\}\/claim/)
+    const priority = readFileSync(new URL('../app/sitemap-priority.xml/route.ts', import.meta.url), 'utf8')
+    assert.doesNotMatch(sitemapBuild, /\$\{SITE_URL\}\/claim/)
     assert.doesNotMatch(sitemapBuild, /\/claim\/\$\{/)
+    assert.doesNotMatch(priority, /\/claim/)
     assert.equal(SITEMAP0_LOCKED_PATHS.some((path) => path.startsWith('/claim/')), false)
   })
 })

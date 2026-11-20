@@ -12,7 +12,7 @@ import BottomCTA from '@/components/BottomCTA'
 import QuizCTA from '@/components/QuizCTA'
 import Footer from '@/components/Footer'
 import type { FilterState } from '@/types/clinic'
-import { DIRECTORY_DEFAULT_FILTERS, parseDirectoryQuery, parseDirectoryPageQuery, serializeDirectoryQuery } from '@/lib/directory-search'
+import { DIRECTORY_DEFAULT_FILTERS, directoryPaginationHref, parseDirectoryQuery, parseDirectoryPageQuery, serializeDirectoryQuery } from '@/lib/directory-search'
 import type { DirectoryPage, DirectoryQuery } from '@/lib/directory-search'
 
 export interface ClinicsClientProps { initialPage: DirectoryPage; totalCount: number; directoryMode?: boolean; browse?: ReactNode }
@@ -110,9 +110,9 @@ export default function ClinicsClient({ initialPage, totalCount, directoryMode =
               {result.data.map(clinic => <ClinicCard key={clinic.id} clinic={clinic} />)}
             </div>}
             {available && result.totalPages > 1 && <nav aria-label="Provider result pages" className="flex flex-wrap items-center justify-center gap-2 mt-8">
-              {result.page > 1 && <a href={'?' + serializeDirectoryQuery({ ...query, page: result.page - 1 })} onClick={event => { event.preventDefault(); changeQuery({ ...query, page: result.page - 1 }) }} className="px-3 py-2 border rounded bg-white">Previous</a>}
-              {pages.map(page => <a key={page} href={'?' + serializeDirectoryQuery({ ...query, page })} aria-current={result.page === page ? 'page' : undefined} onClick={event => { event.preventDefault(); changeQuery({ ...query, page }) }} className={'px-3 py-2 border rounded ' + (result.page === page ? 'bg-onyx text-white' : 'bg-white')}>{page}</a>)}
-              {result.page < result.totalPages && <a href={'?' + serializeDirectoryQuery({ ...query, page: result.page + 1 })} onClick={event => { event.preventDefault(); changeQuery({ ...query, page: result.page + 1 }) }} className="px-3 py-2 border rounded bg-white">Next</a>}
+              {result.page > 1 && <a href={directoryPaginationHref({ ...query, page: result.page - 1 })} onClick={event => { event.preventDefault(); changeQuery({ ...query, page: result.page - 1 }) }} className="px-3 py-2 border rounded bg-white">Previous</a>}
+              {pages.map(page => <a key={page} href={directoryPaginationHref({ ...query, page })} aria-current={result.page === page ? 'page' : undefined} onClick={event => { event.preventDefault(); changeQuery({ ...query, page }) }} className={'px-3 py-2 border rounded ' + (result.page === page ? 'bg-onyx text-white' : 'bg-white')}>{page}</a>)}
+              {result.page < result.totalPages && <a href={directoryPaginationHref({ ...query, page: result.page + 1 })} onClick={event => { event.preventDefault(); changeQuery({ ...query, page: result.page + 1 }) }} className="px-3 py-2 border rounded bg-white">Next</a>}
             </nav>}
             <BottomCTA />
           </div>

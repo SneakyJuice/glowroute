@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { SITE_URL } from '@/lib/config'
+import { NOINDEX_FOLLOW_ROBOTS } from '@/lib/indexing-pause'
 import { CLAIM_HUB_METADATA } from '@/lib/seo-page-overrides'
 import ClaimHubForm from './ClaimHubForm'
 
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
   title: CLAIM_HUB_METADATA.title,
   description: CLAIM_HUB_METADATA.description,
   keywords: [...CLAIM_HUB_METADATA.keywords],
+  robots: NOINDEX_FOLLOW_ROBOTS,
   alternates: { canonical: claimUrl },
   openGraph: {
     title: CLAIM_HUB_METADATA.title,

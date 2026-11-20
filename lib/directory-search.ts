@@ -100,6 +100,14 @@ export function parseDirectoryPageQuery(input: Params): DirectoryQuery {
   return parseDirectoryQuery(params)
 }
 
+/** Pagination links omit the city query so hubs use /clinics/<slug> instead. */
+export function directoryPaginationHref(query: DirectoryQuery): string {
+  const params = serializeDirectoryQuery(query)
+  params.delete('city')
+  const qs = params.toString()
+  return qs ? `?${qs}` : '?'
+}
+
 export function serializeDirectoryQuery(query: DirectoryQuery): URLSearchParams {
   const p = new URLSearchParams({ city: query.city, distance: query.distance === null ? 'any' : String(query.distance), page: String(query.page) })
   if (query.q) p.set('q', query.q)

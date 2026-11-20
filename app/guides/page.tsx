@@ -1,9 +1,14 @@
 import Link from 'next/link'
 import { COST_GUIDES } from '@/lib/cost-guides'
+import { SITE_URL } from '@/lib/config'
+import { isPausedIndexPath } from '@/lib/indexing-pause'
+
+const publishedGuides = COST_GUIDES.filter((guide) => !isPausedIndexPath(`/guides/${guide.slug}`))
 
 export const metadata = {
   title: 'Medspa Treatment Cost Guides — GlowRoute',
   description: 'How much does Botox, semaglutide, HydraFacial, laser hair removal, and more cost? Real pricing data from verified medspa providers.',
+  alternates: { canonical: `${SITE_URL}/guides` },
 }
 
 export default function GuidesPage() {
@@ -21,7 +26,7 @@ export default function GuidesPage() {
 
       <section className="px-6 pb-24 max-w-3xl mx-auto">
         <div className="grid gap-4">
-          {COST_GUIDES.map(guide => (
+          {publishedGuides.map(guide => (
             <Link
               key={guide.slug}
               href={`/guides/${guide.slug}`}

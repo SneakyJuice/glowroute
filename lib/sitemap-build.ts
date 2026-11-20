@@ -1,5 +1,6 @@
 import { ARTICLES } from '@/data/articles'
 import { SITE_URL } from '@/lib/config'
+import { isExcludedSitemapPath } from '@/lib/indexing-pause'
 import { SITEMAP0_LOCKED_PATHS } from '@/lib/seo-page-overrides'
 import { TREATMENT_SLUGS } from '@/lib/treatments'
 import {
@@ -47,12 +48,11 @@ export function renderSitemapIndex(chunkIds: number[], _lastmod?: string): strin
   return `<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${entries}\n</sitemapindex>`
 }
 
-/** Live 200 surfaces only. No /shop, /products, claim slugs, or 308 insight articles. */
+/** Live indexable surfaces only. No /shop, /products, /claim, paused URLs, or 308 insight articles. */
 export function staticSitemapUrls(): string[] {
   return [
     SITE_URL,
     `${SITE_URL}/clinics`,
-    `${SITE_URL}/claim`,
     `${SITE_URL}/treatments`,
     `${SITE_URL}/articles`,
     `${SITE_URL}/insights`,
@@ -62,7 +62,7 @@ export function staticSitemapUrls(): string[] {
     ...SITEMAP0_LOCKED_PATHS.map((path) => `${SITE_URL}${path}`),
     ...TREATMENT_SLUGS.map((slug) => `${SITE_URL}/treatments/${slug}`),
     ...ARTICLES.map((article) => `${SITE_URL}/articles/${article.slug}`),
-  ]
+  ].filter((url) => !isExcludedSitemapPath(new URL(url).pathname))
 }
 
 /** Same chunk contents as before: static URLs, sorted city hubs, then clinic URLs. */

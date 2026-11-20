@@ -4,6 +4,7 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { TREATMENTS } from '@/lib/treatments'
 import { SITE_URL } from '@/lib/config'
+import { isPausedIndexPath } from '@/lib/indexing-pause'
 
 export const metadata: Metadata = {
   title: 'Medspa Treatments Near You — GlowRoute',
@@ -45,7 +46,7 @@ export default function TreatmentsPage() {
       </section>
       <main className="max-w-4xl mx-auto px-4 py-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {TREATMENTS.map(t => (
+          {TREATMENTS.filter(t => !isPausedIndexPath(`/treatments/${t.slug}`)).map(t => (
             <Link
               key={t.slug}
               href={`/treatments/${t.slug}`}

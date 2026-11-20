@@ -5,6 +5,7 @@ import Footer from '@/components/Footer'
 import ClinicCard from '@/components/ClinicCard'
 import { fetchAllClinicsFromSupabase } from '@/data/supabase-clinics'
 import { SITE_URL } from '@/lib/config'
+import { NOINDEX_FOLLOW_ROBOTS } from '@/lib/indexing-pause'
 import { GOALS, type GoalDef } from '@/lib/goals'
 import type { Clinic } from '@/types/clinic'
 
@@ -15,6 +16,7 @@ export const metadata: Metadata = {
   description: 'Explore clinic listings for peptide therapy and related services. Confirm treatment availability, qualifications, and details directly with providers.',
   keywords: 'peptide therapy, BPC-157, sermorelin, semaglutide, TRT, hormone optimization, NAD+ therapy, peptide clinic near me',
   alternates: { canonical: `${SITE_URL}/treatments/peptide-therapy` },
+  robots: NOINDEX_FOLLOW_ROBOTS,
   openGraph: {
     title: 'Peptide Therapy Clinics Near You — GlowRoute',
     description: 'Explore peptide therapy clinic listings and confirm services directly with providers.',
@@ -221,8 +223,7 @@ export default async function PeptideTherapyPage({
           <svg className="w-4 h-4 text-sage flex-shrink-0 mt-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
           <span>
             <strong className="text-onyx">February 2026:</strong> RFK Jr. announced FDA reclassification of 14 peptides from Category 2 → Category 1 (compounding legal with Rx).
-            Formal FDA publication pending Q2 2026. GlowRoute surfaces <strong>compliant-first</strong> clinics. {' '}
-            <Link href="/articles/14-peptides-update" className="text-sage hover:underline">Learn more →</Link>
+            Formal FDA publication pending Q2 2026. GlowRoute surfaces <strong>compliant-first</strong> clinics.
           </span>
         </div>
       </div>
@@ -280,7 +281,7 @@ export default async function PeptideTherapyPage({
           {topCities.map(([city, count]) => (
             <Link
               key={city}
-              href={`/treatments/peptide-therapy?${activeGoalSlug !== 'all' ? `goal=${activeGoalSlug}&` : ''}city=${citySlug(city)}`}
+              href={`/clinics/${citySlug(city)}`}
               className={`text-[12px] px-2.5 py-1 rounded-full border transition-all ${
                 cityFilter === citySlug(city)
                   ? 'bg-sage text-white border-sage'
@@ -322,7 +323,7 @@ export default async function PeptideTherapyPage({
         {displayCount > showCount && (
           <div className="text-center mb-10">
             <Link
-              href={`/clinics?goal=${activeGoalSlug !== 'all' ? activeGoalSlug : 'recovery-repair'}${cityFilter ? `&city=${cityFilter}` : ''}`}
+              href={cityFilter ? `/clinics/${cityFilter}` : '/clinics'}
               className="inline-block bg-onyx text-white text-sm font-semibold px-8 py-3 rounded-xl hover:bg-sage transition-colors"
             >
               View All {displayCount.toLocaleString()} Clinics →
@@ -366,7 +367,7 @@ export default async function PeptideTherapyPage({
             {topCities.map(([city, count]) => (
               <Link
                 key={city}
-                href={`/treatments/peptide-therapy?city=${citySlug(city)}`}
+                href={`/clinics/${citySlug(city)}`}
                 className="bg-white rounded-xl border border-gray-200 p-3.5 hover:border-sage/40 hover:shadow-sm transition-all group"
               >
                 <p className="text-sm font-semibold text-onyx group-hover:text-sage transition-colors">{city}</p>

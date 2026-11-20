@@ -12,6 +12,5 @@ export async function GET() {
     `${SITE_URL}/clinics/miami`,
     `${SITE_URL}/clinics/tampa`,
     `${SITE_URL}/clinics/miami/skinlocal-dadeland-miami`,
-    `${SITE_URL}/claim`,
   ]))
 }

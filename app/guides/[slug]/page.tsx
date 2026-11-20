@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Script from 'next/script'
 import { COST_GUIDES, getGuideBySlug } from '@/lib/cost-guides'
 import { SITE_URL } from '@/lib/config'
+import { isPausedIndexPath, NOINDEX_FOLLOW_ROBOTS } from '@/lib/indexing-pause'
 import { GUIDE_YEAR } from '@/lib/seo-page-overrides'
 import type { Metadata } from 'next'
 
@@ -33,11 +34,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const title = `How Much Does ${guide.treatment} Cost? (${GUIDE_YEAR} Guide) — GlowRoute`
   const description = `${guide.treatment} pricing guide: low end ${guide.avgLow}, average ${guide.avgMid}. What affects cost and what to look for in a provider.`
   const url = `${SITE_URL}/guides/${guide.slug}`
+  const paused = isPausedIndexPath(`/guides/${guide.slug}`)
   return {
     title,
     description,
     keywords: `${guide.treatment} cost, ${guide.treatment} price, how much does ${guide.treatment} cost, medspa pricing`,
     alternates: { canonical: url },
+    ...(paused ? { robots: NOINDEX_FOLLOW_ROBOTS } : {}),
     openGraph: {
       title,
       description,
@@ -196,7 +199,7 @@ export default async function CostGuidePage({ params }: { params: Promise<{ slug
             <div className="text-lg font-bold mb-2">Find {guide.treatment} providers near you</div>
             <p className="text-sm text-[#888] mb-6">Browse verified clinics, compare GlowScore™ ratings, and book directly.</p>
             <Link
-              href={`/treatments/${guide.relatedTreatmentSlug}`}
+              href={isPausedIndexPath(`/treatments/${guide.relatedTreatmentSlug}`) ? '/clinics' : `/treatments/${guide.relatedTreatmentSlug}`}
               className="inline-block bg-[#028090] hover:bg-[#03a0b3] text-white font-semibold text-sm px-6 py-3 rounded-xl transition-colors"
             >
               Browse {guide.treatment} Clinics →
