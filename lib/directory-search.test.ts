@@ -187,6 +187,15 @@ describe('sitemap exclusions', () => {
     assert.equal(isExcludedSitemapPath('/claim/skinlocal-dadeland-miami'), true)
     assert.equal(isExcludedSitemapPath('https://glowroute.io/claim'), true)
     for (const path of PAUSED_INDEX_PATHS) assert.equal(isExcludedSitemapPath(path), true)
+    for (const path of [
+      '/articles/peptides-mainstream-npr-politico',
+      '/articles/miami-4beauty-peptide-compliance',
+      '/articles/batch-006-01-fda-peptide-reclassification',
+      '/articles/batch-006-08-peptide-reactivation',
+    ]) {
+      assert.equal(isExcludedSitemapPath(path), true)
+      assert.equal(PAUSED_INDEX_PATHS.includes(path), true)
+    }
     assert.equal(isExcludedSitemapPath('/clinics/miami'), false)
     assert.equal(isExcludedSitemapPath('/articles/medspa-unmasked'), false)
     assert.equal(isExcludedSitemapPath('/guides/botox-cost'), false)
